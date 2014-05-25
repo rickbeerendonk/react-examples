@@ -1,0 +1,1 @@
+lein cljsbuild once basic1
