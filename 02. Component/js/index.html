@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>02. Component (js)</title>
+        <script src="http://fb.me/react-0.11.1.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/javascript">
+            var HelloReact = React.createClass({
+                render: function () {
+                    return React.DOM.h1(null, 'Hello React!');
+                }
+            });
+
+            React.renderComponent(
+                HelloReact(),
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>

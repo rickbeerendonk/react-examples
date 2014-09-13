@@ -1,4 +1,4 @@
-(ns basic1.core
+(ns component.core
   (:require [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]))
 
@@ -8,6 +8,8 @@
 
 (om/root
   (fn [app owner]
-    (dom/h1 nil (:text app)))
+    (reify om/IRender
+      (render [_]
+        (dom/h1 nil (:text app)))))
   app-state
   {:target (. js/document (getElementById "app"))})
