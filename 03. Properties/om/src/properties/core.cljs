@@ -3,9 +3,8 @@
             [om.dom :as dom :include-macros true]))
 
 (defn hello-react [data owner]
-  (reify om/IRender
-    (render [_]
-      (dom/h1 nil (str "Hello " (:name data) "!")))))
+  (om/component
+    (dom/h1 nil (str "Hello " (:name data) "!"))))
 
 (om/root
   hello-react
