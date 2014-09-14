@@ -2,14 +2,12 @@
   (:require [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]))
 
-(enable-console-print!)
-
-(def app-state (atom {:text "Hello Om!"}))
+(defn hello-react [app owner]
+  (reify om/IRender
+    (render [_]
+      (dom/h1 nil "Hello Om!"))))
 
 (om/root
-  (fn [app owner]
-    (reify om/IRender
-      (render [_]
-        (dom/h1 nil (:text app)))))
-  app-state
+  hello-react
+  nil
   {:target (. js/document (getElementById "app"))})
