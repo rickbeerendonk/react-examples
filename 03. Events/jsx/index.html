@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>03. Properties (jsx)</title>
+        <title>03. Events (jsx)</title>
         <script src="http://fb.me/react-0.11.2.js"></script>
         <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
     </head>
@@ -11,16 +11,17 @@
         <script type="text/jsx">
             /** @jsx React.DOM */
 
-            var HelloMessage = React.createClass({
+            var HelloReact = React.createClass({
+                onChange: function (e) {
+                    alert('Event handled. Target: ' + e.target);
+                },
                 render: function () {
-                    return (
-                        <h1>Hello {this.props.name}!</h1>
-                    );
+                    return <input onChange={this.onChange} value='Hello React!' />;
                 }
             });
 
             React.renderComponent(
-                <HelloMessage name="React" />,
+                <HelloReact />,
                 document.getElementById('app')
             );
         </script>

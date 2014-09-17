@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>05. Multiple Components (jsx)</title>
+        <title>06. Multiple Components (js)</title>
         <script src="http://fb.me/react-0.11.2.js"></script>
-        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
-        <script type="text/jsx">
-            /** @jsx React.DOM */
-
+        <script type="text/javascript">
             var NameInput = React.createClass({
                 render: function () {
-                    return (
-                        <input onChange={this.props.onChange} value={this.props.name} />
-                        );
+                    return React.DOM.div(null,
+                                         React.DOM.input({onChange: this.props.onChange, value: this.props.name})
+                                        );
                 }
             });
 
             var Hello = React.createClass({
-                render: function() {
-                    return (
-                        <h1>Hello {this.props.name}!</h1>
-                        );
+                render: function () {
+                    return React.DOM.h1(null, 'Hello ', this.props.name, "!");
                 }
             });
 
@@ -35,12 +30,10 @@
                     this.setState({name: e.target.value});
                 },
                 render: function () {
-                    return (
-                        <div>
-                            <NameInput onChange={this.onChange} name={this.state.name} />
-                            <Hello name={this.state.name} />
-                        </div>
-                    );
+                    return React.DOM.div(null,
+                                         NameInput({onChange: this.onChange, name: this.state.name}),
+                                         Hello({name: this.state.name})
+                                        );
                 }
             });
 

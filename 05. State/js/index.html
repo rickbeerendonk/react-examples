@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>04. State (jsx)</title>
+        <title>05. State (js)</title>
         <script src="http://fb.me/react-0.11.2.js"></script>
-        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
-        <script type="text/jsx">
-            /** @jsx React.DOM */
-
+        <script type="text/javascript">
             var HelloMessage = React.createClass({
                 getInitialState: function () {
                     return {name: 'React'};
@@ -19,12 +16,10 @@
                     this.setState({name: e.target.value});
                 },
                 render: function () {
-                    return (
-                        <div>
-                            <input onChange={this.onChange} value={this.state.name} />
-                            <h1>Hello {this.state.name}!</h1>
-                        </div>
-                    );
+                    return React.DOM.div(null,
+                                         React.DOM.input({onChange: this.onChange, value: this.state.name}),
+                                         React.DOM.h1(null, 'Hello ', this.state.name, "!")
+                                        );
                 }
             });
 

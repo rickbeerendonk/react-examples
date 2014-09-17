@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>03. Properties (js)</title>
+        <title>04. Properties (jsx)</title>
         <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
-        <script type="text/javascript">
+        <script type="text/jsx">
+            /** @jsx React.DOM */
+
             var HelloMessage = React.createClass({
                 render: function () {
-                    return React.DOM.h1(null, 'Hello ', this.props.name, "!");
+                    return (
+                        <h1>Hello {this.props.name}!</h1>
+                    );
                 }
             });
 
             React.renderComponent(
-                HelloMessage({name: "React"}),
+                <HelloMessage name="React" />,
                 document.getElementById('app')
             );
         </script>

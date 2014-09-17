@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>03. Events (js)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/javascript">
+            var HelloReact = React.createClass({
+                onChange: function (e) {
+                    alert('Event handled. Target: ' + e.target);
+                },
+                render: function () {
+                    return React.DOM.input({onChange: this.onChange, value: 'Hello React!'});
+                }
+            });
+
+            React.renderComponent(
+                HelloReact(),
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
