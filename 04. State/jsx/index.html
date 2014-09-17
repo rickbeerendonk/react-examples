@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>04. State (jsx)</title>
-        <script src="http://fb.me/react-0.11.1.js"></script>
-        <script src="http://fb.me/JSXTransformer-0.11.1.js"></script>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
@@ -25,12 +25,6 @@
                             <h1>Hello {this.state.name}!</h1>
                         </div>
                     );
-
-
-                    React.DOM.div(null,
-                                         React.DOM.input({onChange: this.onChange, value: this.state.name}),
-                                         React.DOM.h1(null, 'Hello ', this.state.name, "!")
-                                        );
                 }
             });
 
