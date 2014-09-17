@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Extra 01. getDOMNode (jsx)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/jsx">
+            /** @jsx React.DOM */
+
+            var HelloReact = React.createClass({
+                componentDidMount: function () {
+                    this.getDOMNode().innerHTML = 'Hello <i>world</i>!!!';
+                },
+                render: function () {
+                    return (
+                        <h1>Hello React!</h1>
+                    );
+                }
+            });
+
+            React.renderComponent(
+                <HelloReact />,
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
