@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>05. Multiple Components (jsx)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/jsx">
+            /** @jsx React.DOM */
+
+            var NameInput = React.createClass({
+                render: function () {
+                    return (
+                        <input onChange={this.props.onChange} value={this.props.name} />
+                        );
+                }
+            });
+
+            var Hello = React.createClass({
+                render: function() {
+                    return (
+                        <h1>Hello {this.props.name}!</h1>
+                        );
+                }
+            });
+
+            var HelloMessage = React.createClass({
+                getInitialState: function () {
+                    return {name: 'React'};
+                },
+                onChange: function (e) {
+                    this.setState({name: e.target.value});
+                },
+                render: function () {
+                    return (
+                        <div>
+                            <NameInput onChange={this.onChange} name={this.state.name} />
+                            <Hello name={this.state.name} />
+                        </div>
+                    );
+                }
+            });
+
+            React.renderComponent(
+                HelloMessage(),
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
