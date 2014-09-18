@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Extra 03. JSX Compiler (jsx)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/jsx">
+            /** @jsx React.DOM */
+
+			var textareaStyle = {
+				width: '400px',
+				height: '400px' 
+			};
+			
+            var JsxCompiler = React.createClass({
+               jsx: '/** @jsx React.DOM */\n\
+var HelloMessage = React.createClass({\n\
+  render: function() {\n\
+    return <div>Hello {this.props.name}</div>;\n\
+  }\n\
+});\n\
+\n\
+React.renderComponent(<HelloMessage name="John" />, mountNode);',
+                getInitialState: function () {
+					return {code: ''};
+				},
+                onChange: function (e) {
+                    this.setState({code: JSXTransformer.transform(e.target.value).code});
+                },
+                render: function () {
+                    return (<div>
+                            <textarea style={textareaStyle} onChange={this.onChange} defaultValue={this.jsx} />
+                            <textarea style={textareaStyle} readOnly="readOnly" value={this.state.code} />
+                        </div>);
+                }
+            });
+
+            React.renderComponent(
+                <JsxCompiler />,
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
