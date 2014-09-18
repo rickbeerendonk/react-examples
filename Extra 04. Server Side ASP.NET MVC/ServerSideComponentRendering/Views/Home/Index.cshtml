@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <!-- This will render the component server-side -->
+    @Html.React("ClickMe", new { })
+
+    <script src="http://fb.me/react-0.11.2.js"></script>
+    <script src="@Url.Content("~/Scripts/ClickMe.jsx")"></script>
+    @Html.ReactInitJavaScript()
+</body>
+</html>
