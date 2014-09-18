@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>04a. Default Properties (jsx)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/jsx">
+            /** @jsx React.DOM */
+
+            var HelloMessage = React.createClass({
+                getDefaultProps: function () {
+                    return {name: "React"};
+                },
+                render: function () {
+                    return (
+                        <h1>Hello {this.props.name}!</h1>
+                    );
+                }
+            });
+
+            React.renderComponent(
+                <HelloMessage />,
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
