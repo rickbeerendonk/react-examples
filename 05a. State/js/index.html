@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>05. State (js)</title>
+        <script src="http://fb.me/react-0.11.2.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/javascript">
+            var ClickMe = React.createClass({
+                getInitialState: function () {
+                    return {count: 0};
+                },
+                onClick: function (e) {
+                    this.setState({count: this.state.count + 1});
+                },
+                render: function () {
+                    return React.DOM.a({onClick: this.onClick},
+                        'This link has been clicked ',
+                        this.state.count,
+                        ' times'
+                        );
+                }
+            });
+
+            React.renderComponent(
+                ClickMe(),
+                document.getElementById('app')
+            );
+        </script>
+    </body>
+</html>
