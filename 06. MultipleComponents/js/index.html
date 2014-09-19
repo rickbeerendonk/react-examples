@@ -11,8 +11,8 @@
             var NameInput = React.createClass({
                 render: function () {
                     return React.DOM.div(null,
-                                         React.DOM.input({onChange: this.props.onChange, value: this.props.name})
-                                        );
+                        React.DOM.input({onChange: this.props.onChange, value: this.props.name})
+                    );
                 }
             });
 
@@ -31,9 +31,9 @@
                 },
                 render: function () {
                     return React.DOM.div(null,
-                                         NameInput({onChange: this.onChange, name: this.state.name}),
-                                         Hello({name: this.state.name})
-                                        );
+                        NameInput({onChange: this.onChange, name: this.state.name}),
+                        Hello({name: this.state.name})
+                    );
                 }
             });
 

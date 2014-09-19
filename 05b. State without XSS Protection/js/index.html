@@ -16,10 +16,11 @@
                     this.setState({name: e.target.value});
                 },
                 render: function () {
-                    return React.DOM.div(null,
-                                         React.DOM.input({onChange: this.onChange, value: this.state.name}),
-                                         React.DOM.h1(null, 'Hello ', React.DOM.span({dangerouslySetInnerHTML: {__html: this.state.name}}), "!")
-                                        );
+                    return React.DOM.div(
+                        null,
+                        React.DOM.input({onChange: this.onChange, value: this.state.name}),
+                        React.DOM.h1(null, 'Hello ', React.DOM.span({dangerouslySetInnerHTML: {__html: this.state.name}}), "!")
+                    );
                 }
             });
 

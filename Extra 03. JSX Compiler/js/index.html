@@ -30,10 +30,11 @@ React.renderComponent(<HelloMessage name="John" />, mountNode);',
                     this.setState({code: JSXTransformer.transform(e.target.value).code});
                 },
                 render: function () {
-                    return React.DOM.div(null, 
-                            React.DOM.textarea({style: textareaStyle, onChange: this.onChange, defaultValue: this.jsx}),
-                            React.DOM.textarea({style: textareaStyle, readOnly: "readOnly", value: this.state.code})
-                        );
+                    return React.DOM.div(
+                        null,
+                        React.DOM.textarea({style: textareaStyle, onChange: this.onChange, defaultValue: this.jsx}),
+                        React.DOM.textarea({style: textareaStyle, readOnly: "readOnly", value: this.state.code})
+                    );
                 }
             });
 

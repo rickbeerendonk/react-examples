@@ -32,7 +32,8 @@ React.renderComponent(<HelloMessage name="John" />, mountNode);',
                     this.setState({code: JSXTransformer.transform(e.target.value).code});
                 },
                 render: function () {
-                    return (<div>
+                    return (
+                        <div>
                             <textarea style={textareaStyle} onChange={this.onChange} defaultValue={this.jsx} />
                             <textarea style={textareaStyle} readOnly="readOnly" value={this.state.code} />
                         </div>);
