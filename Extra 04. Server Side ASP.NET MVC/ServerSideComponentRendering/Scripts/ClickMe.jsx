@@ -1,6 +1,4 @@
-﻿/** @jsx React.DOM */
-
-var ClickMe = React.createClass({
+﻿var ClickMe = React.createClass({
     getInitialState: function () {
         return {count: 0};
     },

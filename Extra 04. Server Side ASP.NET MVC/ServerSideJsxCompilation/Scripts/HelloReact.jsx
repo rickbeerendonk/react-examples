@@ -1,6 +1,4 @@
-﻿/** @jsx React.DOM */
-
-var HelloReact = React.createClass({
+﻿var HelloReact = React.createClass({
     render: function () {
         return (
             <h1>Hello React!</h1>
@@ -8,7 +6,7 @@ var HelloReact = React.createClass({
     }
 });
 
-React.renderComponent(
+React.render(
     <HelloReact />,
     document.getElementById('app')
 );
