@@ -2,20 +2,21 @@
 <html>
     <head>
         <title>02. Component (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var HelloReact = React.createClass({
+                displayName: "HelloReact",
                 render: function () {
-                    return React.DOM.h1(null, 'Hello React!');
+                    return React.createElement('h1', null, 'Hello React!');
                 }
             });
 
-            React.renderComponent(
-                HelloReact(),
+            React.render(
+                React.createElement(HelloReact),
                 document.getElementById('app')
             );
         </script>

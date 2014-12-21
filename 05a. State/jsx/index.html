@@ -2,15 +2,13 @@
 <html>
     <head>
         <title>05a. State (jsx)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
-        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/jsx">
-            /** @jsx React.DOM */
-
             var ClickMe = React.createClass({
                 getInitialState: function () {
                     return {count: 0};
@@ -25,7 +23,7 @@
                 }
             });
 
-            React.renderComponent(
+            React.render(
                 <ClickMe />,
                 document.getElementById('app')
             );

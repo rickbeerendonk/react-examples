@@ -2,49 +2,50 @@
 <html>
     <head>
         <title>Extra 02. ComponentLifecycle (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
-
         <script type="text/javascript">
             var Hello = React.createClass({
-                render: function () { alert('render()'); return React.DOM.h1(null, 'Hello ', this.props.name, '!'); },
+                displayName: "Hello",
+                render: function () { console.log('render()'); return React.createElement('h1', null, 'Hello ', this.props.name, '!'); },
 
                 // Mounting
                 getInitialState: function () {
-                    alert('getInitialState(): {}'); return null;
+                    console.log('getInitialState(): {}'); return null;
                 },
                 componentWillMount: function () {
-                    alert('componentWillMount()');
+                    console.log('componentWillMount()');
                 },
                 componentDidMount: function () {
-                    alert('componentDidMount()');
+                    console.log('componentDidMount()');
                 },
 
                 // Updating
                 componentWillReceiveProps: function (nextProps) {
-                    alert('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')');
+                    console.log('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')');
                 },
                 shouldComponentUpdate: function (nextProps, nextState) {
-                    alert('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean');
+                    console.log('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean');
                     return true;
                 },
                 componentWillUpdate: function (nextProps, nextState) {
-                    alert('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')');
+                    console.log('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')');
                 },
                 componentDidUpdate: function (prevProps, prevState) {
-                    alert('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
+                    console.log('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
                 },
 
                 // Unmounting
                 componentWillUnmount: function () {
-                    alert('componentWillUnmount()');
+                    console.log('componentWillUnmount()');
                 }
             });
 
             var App = React.createClass({
-                getInitialState: function() {
+                displayName: "App",
+                getInitialState: function () {
                     return {
                         name: 'Number One'
                     }
@@ -53,12 +54,12 @@
                     this.setState({name: 'Number Two'});
                 },
                 render: function() {
-                    return Hello({name: this.state.name});
+                    return React.createElement(Hello, {name: this.state.name});
                 }
             });
 
-            React.renderComponent(
-                App(),
+            React.render(
+                React.createElement(App),
                 document.getElementById('app')
             );
 

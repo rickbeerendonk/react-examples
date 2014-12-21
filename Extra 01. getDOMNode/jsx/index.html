@@ -2,16 +2,15 @@
 <html>
     <head>
         <title>Extra 01. getDOMNode (jsx)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
-        <script src="http://fb.me/JSXTransformer-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/jsx">
-            /** @jsx React.DOM */
-
             var HelloReact = React.createClass({
+                displayName: "HelloReact",
                 componentDidMount: function () {
                     this.getDOMNode().innerHTML = 'Hello <i>world</i>!!!';
                 },
@@ -22,7 +21,7 @@
                 }
             });
 
-            React.renderComponent(
+            React.render(
                 <HelloReact />,
                 document.getElementById('app')
             );

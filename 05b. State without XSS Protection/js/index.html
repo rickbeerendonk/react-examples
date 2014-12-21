@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>05b. State without XSS Protection (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var HelloMessage = React.createClass({
+                displayName: "HelloMessage",
                 getInitialState: function () {
                     return {name: 'React'};
                 },
@@ -16,16 +17,17 @@
                     this.setState({name: e.target.value});
                 },
                 render: function () {
-                    return React.DOM.div(
+                    return React.createElement(
+                        'div',
                         null,
-                        React.DOM.input({onChange: this.onChange, value: this.state.name}),
-                        React.DOM.h1(null, 'Hello ', React.DOM.span({dangerouslySetInnerHTML: {__html: this.state.name}}), "!")
+                        React.createElement('input', {onChange: this.onChange, value: this.state.name}),
+                        React.createElement('h1', null, 'Hello ', React.createElement('span', {dangerouslySetInnerHTML: {__html: this.state.name}}), "!")
                     );
                 }
             });
 
-            React.renderComponent(
-                HelloMessage(),
+            React.render(
+                React.createElement(HelloMessage),
                 document.getElementById('app')
             );
         </script>

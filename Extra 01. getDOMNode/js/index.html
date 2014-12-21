@@ -2,23 +2,24 @@
 <html>
     <head>
         <title>Extra 01. getDOMNode (jsx)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var HelloReact = React.createClass({
+                displayName: "HelloReact",
                 componentDidMount: function () {
                     this.getDOMNode().innerHTML = 'Hello <i>world</i>!!!';
                 },
                 render: function () {
-                    return React.DOM.h1(null, 'Hello React!');
+                    return React.createElement('h1', null, 'Hello React!');
                 }
             });
 
-            React.renderComponent(
-                HelloReact(),
+            React.render(
+                React.createElement(HelloReact),
                 document.getElementById('app')
             );
         </script>

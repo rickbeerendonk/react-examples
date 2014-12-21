@@ -2,27 +2,30 @@
 <html>
     <head>
         <title>06. Multiple Components (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var NameInput = React.createClass({
+                displayName: "NameInput",
                 render: function () {
-                    return React.DOM.div(null,
-                        React.DOM.input({onChange: this.props.onChange, value: this.props.name})
+                    return React.createElement('div', null,
+                        React.createElement('input', {onChange: this.props.onChange, value: this.props.name})
                     );
                 }
             });
 
             var Hello = React.createClass({
+                displayName: "Hello",
                 render: function () {
-                    return React.DOM.h1(null, 'Hello ', this.props.name, "!");
+                    return React.createElement('h1', null, 'Hello ', this.props.name, "!");
                 }
             });
 
             var HelloMessage = React.createClass({
+                displayName: "HelloMessage",
                 getInitialState: function () {
                     return {name: 'React'};
                 },
@@ -30,15 +33,15 @@
                     this.setState({name: e.target.value});
                 },
                 render: function () {
-                    return React.DOM.div(null,
-                        NameInput({onChange: this.onChange, name: this.state.name}),
-                        Hello({name: this.state.name})
+                    return React.createElement('div', null,
+                        React.createElement(NameInput, {onChange: this.onChange, name: this.state.name}),
+                        React.createElement(Hello, {name: this.state.name})
                     );
                 }
             });
 
-            React.renderComponent(
-                HelloMessage(),
+            React.render(
+                React.createElement(HelloMessage),
                 document.getElementById('app')
             );
         </script>

@@ -2,23 +2,24 @@
 <html>
     <head>
         <title>04b. Property Validation (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var HelloMessage = React.createClass({
+                displayName: "HelloMessage",
                 propTypes: {
                     name: React.PropTypes.string.isRequired
                 },
                 render: function () {
-                    return React.DOM.h1(null, 'Hello ', this.props.name, "!");
+                    return React.createElement('h1', null, 'Hello ', this.props.name, "!");
                 }
             });
 
-            React.renderComponent(
-                HelloMessage({name: "React"}),
+            React.render(
+                React.createElement(HelloMessage, {name: "React"}),
                 document.getElementById('app')
             );
         </script>

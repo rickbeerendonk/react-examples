@@ -2,23 +2,24 @@
 <html>
     <head>
         <title>03. Events (js)</title>
-        <script src="http://fb.me/react-0.11.2.js"></script>
+        <script src="http://fb.me/react-0.12.2.js"></script>
     </head>
     <body>
         <div id="app"></div>
 
         <script type="text/javascript">
             var HelloReact = React.createClass({
+                displayName: "HelloReact",
                 onChange: function (e) {
                     alert('Event handled. Target: ' + e.target);
                 },
                 render: function () {
-                    return React.DOM.input({onChange: this.onChange, value: 'Hello React!'});
+                    return React.createElement('input', {onChange: this.onChange, value: 'Hello React!'});
                 }
             });
 
-            React.renderComponent(
-                HelloReact(),
+            React.render(
+                React.createElement(HelloReact),
                 document.getElementById('app')
             );
         </script>
