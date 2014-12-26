@@ -9,11 +9,21 @@
         <script type="text/javascript">
             var Hello = React.createClass({
                 displayName: "Hello",
-                render: function () { console.log('render()'); return React.createElement('h1', null, 'Hello ', this.props.name, '!'); },
+                render: function () {
+                    console.log('render() - props: ' + JSON.stringify(this.props) + " state: " + JSON.stringify(this.state));
+                    return React.createElement('h1', null, 'Hello ', this.props.name, '! ', this.state.count, ' time');
+                },
 
                 // Mounting
+                getDefaultProps: function () {
+                    var result = null;
+                    console.log('getDefaultProps(): ' + JSON.stringify(result));
+                    return result;
+                },
                 getInitialState: function () {
-                    console.log('getInitialState(): {}'); return null;
+                    var result = {count: 1};
+                    console.log('getInitialState(): ' + JSON.stringify(result));
+                    return result;
                 },
                 componentWillMount: function () {
                     console.log('componentWillMount()');
@@ -35,6 +45,9 @@
                 },
                 componentDidUpdate: function (prevProps, prevState) {
                     console.log('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
+                    if (prevProps.name === "Number One") {
+                        this.setState({count: this.state.count + 1});
+                    }
                 },
 
                 // Unmounting
