@@ -6,53 +6,64 @@
     </head>
     <body>
         <div id="app"></div>
+        <ol id="events"></ol>
+
         <script type="text/javascript">
+            function logEvent(value) {
+                var events = document.getElementById('events');
+                var newEvent = document.createTextNode(value);
+                var item = document.createElement('li');
+                item.appendChild(newEvent);
+                events.appendChild(item);
+            }
+
             var Hello = React.createClass({
                 displayName: "Hello",
                 render: function () {
-                    console.log('render() - props: ' + JSON.stringify(this.props) + " state: " + JSON.stringify(this.state));
+                    logEvent('render() - props: ' + JSON.stringify(this.props) + " state: " + JSON.stringify(this.state));
                     return React.createElement('h1', null, 'Hello ', this.props.name, '! ', this.state.count, ' time');
                 },
 
                 // Mounting
                 getDefaultProps: function () {
                     var result = null;
-                    console.log('getDefaultProps(): ' + JSON.stringify(result));
+                    logEvent('getDefaultProps(): ' + JSON.stringify(result));
                     return result;
                 },
                 getInitialState: function () {
                     var result = {count: 1};
-                    console.log('getInitialState(): ' + JSON.stringify(result));
+                    logEvent('getInitialState(): ' + JSON.stringify(result));
                     return result;
                 },
                 componentWillMount: function () {
-                    console.log('componentWillMount()');
+                    logEvent('componentWillMount()');
                 },
                 componentDidMount: function () {
-                    console.log('componentDidMount()');
+                    logEvent('componentDidMount()');
                 },
 
                 // Updating
                 componentWillReceiveProps: function (nextProps) {
-                    console.log('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')');
+                    logEvent('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')');
                 },
                 shouldComponentUpdate: function (nextProps, nextState) {
-                    console.log('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean');
+                    logEvent('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean');
                     return true;
                 },
                 componentWillUpdate: function (nextProps, nextState) {
-                    console.log('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')');
+                    logEvent('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')');
                 },
                 componentDidUpdate: function (prevProps, prevState) {
-                    console.log('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
+                    logEvent('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
                     if (prevProps.name === "Number One") {
+                        logEvent('-- new state --');
                         this.setState({count: this.state.count + 1});
                     }
                 },
 
                 // Unmounting
                 componentWillUnmount: function () {
-                    console.log('componentWillUnmount()');
+                    logEvent('componentWillUnmount()');
                 }
             });
 
@@ -64,6 +75,7 @@
                     }
                 },
                 componentDidMount: function() {
+                    logEvent('-- new prop --');
                     this.setState({name: 'Number Two'});
                 },
                 render: function() {
