@@ -14,3 +14,8 @@
         );
     }
 };
+
+React.render(
+    <ClickMe />,
+    document.getElementById('app')
+);
