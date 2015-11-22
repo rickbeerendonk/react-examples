@@ -1,1 +1,0 @@
-babel default.jsx -w --out-file default.js

@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Extra 03. JSX Compiler (js)</title>
-        <script src="../../fb.me/react-0.13.3.js"></script>
-        <script src="../../fb.me/JSXTransformer-0.13.3.js"></script>
-    </head>
-    <body>
-        <div id="app"></div>
+<head>
+  <title>Extra 03. JSX Compiler (js)</title>
+  <script src="../../fb.me/react-0.14.3.js"></script>
+  <script src="../../fb.me/react-dom-0.14.3.js"></script>
+  <script src="../../babel-core/5.8.33/browser.js"></script>
+</head>
+<body>
+  <div id="app"></div>
 
-        <script type="text/javascript">
-			var textareaStyle = {
-				width: '400px',
-				height: '400px' 
-			};
-			
-			var JsxCompiler = React.createClass({
-                displayName: "JsxCompiler",
-                jsx: 'var HelloMessage = React.createClass({\n\
+  <script type="text/javascript">
+   var textareaStyle = {
+    width: '400px',
+    height: '400px' 
+  };
+
+  var JsxCompiler = React.createClass({
+    displayName: "JsxCompiler",
+    jsx: 'var HelloMessage = React.createClass({\n\
   render: function() {\n\
     return <div>Hello {this.props.name}</div>;\n\
   }\n\
 });\n\
 \n\
 React.render(<HelloMessage name="John" />, mountNode);',
-                getInitialState: function () {
-					return {code: ''};
-				},
-                onChange: function (e) {
-                    this.setState({code: JSXTransformer.transform(e.target.value).code});
-                },
-                render: function () {
-                    return React.createElement(
-                        'div',
-                        null,
-                        React.createElement('textarea', {style: textareaStyle, onChange: this.onChange, defaultValue: this.jsx}),
-                        React.createElement('textarea', {style: textareaStyle, readOnly: "readOnly", value: this.state.code})
-                    );
-                }
-            });
+    getInitialState: function () {
+     return {code: ''};
+    },
+    onChange: function (e) {
+      this.setState({code: babel.transform(e.target.value).code});
+    },
+    render: function () {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement('textarea', {style: textareaStyle, onChange: this.onChange, defaultValue: this.jsx}),
+        React.createElement('textarea', {style: textareaStyle, readOnly: "readOnly", value: this.state.code})
+        );
+    }
+    });
 
-            React.render(
-                React.createElement(JsxCompiler),
-                document.getElementById('app')
-            );
-        </script>
-    </body>
+    ReactDOM.render(
+      React.createElement(JsxCompiler),
+      document.getElementById('app')
+      );
+  </script>
+</body>
 </html>
