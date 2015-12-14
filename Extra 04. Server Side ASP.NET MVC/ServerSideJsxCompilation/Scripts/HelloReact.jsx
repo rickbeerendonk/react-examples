@@ -6,7 +6,7 @@
     }
 };
 
-React.render(
+ReactDOM.render(
     <HelloReact />,
     document.getElementById('app')
 );
