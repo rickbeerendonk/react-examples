@@ -10,22 +10,12 @@
   <div id="app"></div>
 
   <script type="text/babel">
-    class ListItemWrapper extends React.Component {
-      render() {
-        return (
-         <li>{this.props.data}</li>
-         );
-      }
-    };
-
     class Hello extends React.Component {
       render() {
         return (
-          <ul>{
-            this.props.children.map(function (child, i) {
-              return <ListItemWrapper key={i} data={child} />
-            })
-          }</ul>
+          <ul>
+            <li>{this.props.children}</li>
+          </ul>
           );
       }
     };
