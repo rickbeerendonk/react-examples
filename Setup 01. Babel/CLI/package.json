@@ -1,0 +1,9 @@
+{
+  "name": "component",
+  "description": "component",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13"
+  }
+}
