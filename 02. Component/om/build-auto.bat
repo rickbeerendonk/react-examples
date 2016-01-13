@@ -1,1 +1,0 @@
-lein cljsbuild auto dev
