@@ -1,3 +1,3 @@
-# React & Om Examples
+# React Examples
 
-Examples for [React](http://facebook.github.io/react) and [Om](https://github.com/swannodette/om).
+Examples for [React](http://facebook.github.io/react).
