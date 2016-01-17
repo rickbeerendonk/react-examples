@@ -2,4 +2,4 @@
 # First:
 # npm install
 
-./node_modules/.bin/babel --watch site/src/ --out-dir site/lib/ --source-maps
+./node_modules/.bin/babel site/src/ --out-dir site/lib/ --watch --source-maps

@@ -1,9 +1,9 @@
 {
   "name": "react-babel-cli",
-  "description": "Using react with Babel CLI",
+  "description": "Using React with Babel CLI",
   "scripts": {
     "build": "babel site/src --out-dir site/lib --source-maps",
-    "watch": "babel --watch site/src --out-dir site/lib --source-maps"
+    "watch": "babel site/src --out-dir site/lib --watch --source-maps"
   },
   "dependencies": {},
   "devDependencies": {
