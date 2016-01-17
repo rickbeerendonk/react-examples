@@ -5,10 +5,10 @@ To be able to compile React ES2015 source code with [Babel](http://babeljs.io), 
 First we've created a website in the `site` folder. This folder has the following structure:
 ```
 site
-├── index.html
-├── lib
-└── src
-    └── app.jsx
+├─ index.html
+├─ lib
+└─ src
+    └─ app.jsx
 ```
 
 After compilation, the `lib` folder will contain:
@@ -22,6 +22,7 @@ This folder already contains all that is needed to compile.
 ###package.json
 
 Babel CLI and the ES2015 and React presets are installed into `package.json`:
+
 1. [Babel CLI](http://babeljs.io/docs/setup/#babel_cli)
 2. [Babel ES2015 preset](http://babeljs.io/docs/plugins/preset-es2015/)
 3. [Babel React preset](http://babeljs.io/docs/plugins/preset-react/)
