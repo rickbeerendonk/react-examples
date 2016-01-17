@@ -1,0 +1,15 @@
+{
+    "version": "0.1.0",
+    "command": "${workspaceRoot}/node_modules/.bin/babel",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "args": ["site/src", "--out-dir", "site/lib", "--watch", "--source-maps"],
+            "taskName": "watch",
+            "suppressTaskName": false,
+            "isBuildCommand": true,
+            "isWatching": true
+        }
+    ]
+}
