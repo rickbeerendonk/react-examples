@@ -8,7 +8,7 @@ site
 ├─ index.html
 ├─ lib
 └─ src
-    └─ app.jsx
+   └─ app.jsx
 ```
 
 After compilation, the `lib` folder will contain:
