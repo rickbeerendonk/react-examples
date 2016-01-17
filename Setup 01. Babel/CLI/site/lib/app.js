@@ -34,3 +34,4 @@ var HelloReact = function (_React$Component) {
 ;
 
 ReactDOM.render(React.createElement(HelloReact, null), document.getElementById('app'));
+//# sourceMappingURL=app.js.map

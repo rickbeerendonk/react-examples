@@ -1,5 +1,4 @@
 REM First:
-REM npm install -g babel-cli
 REM npm install
 
-babel --watch src/ --out-dir lib/
+./node_modules/.bin/babel --watch site/src/ --out-dir site/lib/ --source-maps
