@@ -7,7 +7,7 @@
         {
             "args": ["site/src", "--out-dir", "site/lib", "--watch", "--source-maps"],
             "taskName": "watch",
-            "suppressTaskName": false,
+            "suppressTaskName": true,
             "isBuildCommand": true,
             "isWatching": true
         }
