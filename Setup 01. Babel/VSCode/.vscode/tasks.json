@@ -3,6 +3,7 @@
     "command": "${workspaceRoot}/node_modules/.bin/babel",
     "isShellCommand": true,
     "showOutput": "always",
+    "echoCommand" : true,
     "tasks": [
         {
             "args": ["site/src", "--out-dir", "site/lib", "--watch", "--source-maps"],
