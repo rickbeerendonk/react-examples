@@ -1,20 +1,20 @@
 {
-    "version": "0.1.0",
-    "command": "${workspaceRoot}/node_modules/.bin/webpack",
-    "isShellCommand": true,
-    "showOutput": "always",
+  "version": "0.1.0",
+  "command": "${workspaceRoot}/node_modules/.bin/webpack",
+  "isShellCommand": true,
+  "showOutput": "always",
 	"args": [
 		"--display-modules",
 		"--progress"
 	],
 	"echoCommand": true,
-    "tasks": [
-        {
-            "args": ["-d"],
-            "taskName": "webpack dev",
-            "suppressTaskName": true,
-            "isBuildCommand": true,
-            "isWatching": true
-        }
-    ]
+  "tasks": [
+    {
+      "args": ["-d"],
+      "taskName": "webpack dev",
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "isWatching": true
+    }
+  ]
 }

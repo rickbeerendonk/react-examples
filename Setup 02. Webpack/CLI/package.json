@@ -1,7 +1,10 @@
 {
   "name": "react-webpack-babel",
   "description": "Using React with Webpack & Babel (CLI)",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-core": "^6.4.0",

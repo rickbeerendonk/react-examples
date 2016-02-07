@@ -1,12 +1,8 @@
-"use strict";
+'use strict';
 
-class HelloReact extends React.Component {
-  render() {
-    return (
-      <h1>Hello React!</h1>
-      );
-  }
-};
+import React from 'react';
+import ReactDOM from 'react-dom';
+import HelloReact from './HelloReact.jsx';
 
 ReactDOM.render(
   <HelloReact />,
