@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>09. With Context (jsx ES2015)</title>
+  <script src="../../fb.me/react-0.14.7.js"></script>
+  <script src="../../fb.me/react-dom-0.14.7.js"></script>
+  <script src="../../babel-core/5.8.33/browser.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    class Three extends React.Component {
+      render() {
+        return <h1 style={{color: this.context.color}}>Three</h1>;
+      }
+    }
+    Three.contextTypes = {
+      color: React.PropTypes.string
+    }
+    
+    class Two extends React.Component {
+      render() { 
+        return <Three />;
+      }
+    }
+
+    class One extends React.Component {
+      getChildContext() {
+        return {color: this.props.color};
+      }
+      render() {
+        return <Two />;
+      }
+    }
+    One.childContextTypes = {
+      color: React.PropTypes.string
+    };    
+
+    ReactDOM.render(
+      <One color="red" />,
+      document.getElementById('app')
+      );
+  </script>
+</body>
+</html>
