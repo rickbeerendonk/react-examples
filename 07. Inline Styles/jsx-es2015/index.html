@@ -10,17 +10,19 @@
   <div id="app"></div>
 
   <script type="text/babel">
-    let myStyle = {
-      background: 'yellow',
-      color: 'purple',
-      fontStyle: 'italic',  // font-style in CSS
-      marginTop: '100px',  //margin-top in CSS
+    const style = {
+      header: {
+        background: 'yellow',
+        color: 'purple',
+        fontStyle: 'italic',  // font-style in CSS
+        marginTop: '100px',  // margin-top in CSS
+      }
     };  
   
     class HelloReact extends React.Component {
       render() {
         return (
-          <h1 style={myStyle}>Hello React!</h1>
+          <h1 style={style.header}>Hello React!</h1>
         );
       }
     };
