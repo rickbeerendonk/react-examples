@@ -42,9 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!**************************!*\
-  !*** ./site/src/app.jsx ***!
-  \**************************/
+/*!*****************!*\
+  !*** ./app.jsx ***!
+  \*****************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -69,9 +69,9 @@
 
 /***/ },
 /* 1 */
-/*!**************************!*\
-  !*** ./~/react/react.js ***!
-  \**************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/react.js ***!
+  \******************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -81,9 +81,9 @@
 
 /***/ },
 /* 2 */
-/*!******************************!*\
-  !*** ./~/react/lib/React.js ***!
-  \******************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/React.js ***!
+  \**********************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -129,9 +129,9 @@
 
 /***/ },
 /* 3 */
-/*!*********************************!*\
-  !*** ./~/react/lib/ReactDOM.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOM.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -226,13 +226,13 @@
 	}
 	
 	module.exports = React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 4 */
-/*!******************************!*\
-  !*** ./~/process/browser.js ***!
-  \******************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js ***!
+  \**********************************************************************************************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -330,9 +330,9 @@
 
 /***/ },
 /* 5 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactCurrentOwner.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactCurrentOwner.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -368,9 +368,9 @@
 
 /***/ },
 /* 6 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDOMTextComponent.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMTextComponent.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -500,13 +500,13 @@
 	});
 	
 	module.exports = ReactDOMTextComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 7 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/DOMChildrenOperations.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/DOMChildrenOperations.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -638,13 +638,13 @@
 	});
 	
 	module.exports = DOMChildrenOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 8 */
-/*!*******************************!*\
-  !*** ./~/react/lib/Danger.js ***!
-  \*******************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/Danger.js ***!
+  \***********************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -792,13 +792,13 @@
 	};
 	
 	module.exports = Danger;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 9 */
-/*!********************************************!*\
-  !*** ./~/fbjs/lib/ExecutionEnvironment.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/ExecutionEnvironment.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -840,9 +840,9 @@
 
 /***/ },
 /* 10 */
-/*!*********************************************!*\
-  !*** ./~/fbjs/lib/createNodesFromMarkup.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/createNodesFromMarkup.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -929,13 +929,13 @@
 	}
 	
 	module.exports = createNodesFromMarkup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 11 */
-/*!********************************************!*\
-  !*** ./~/fbjs/lib/createArrayFromMixed.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/createArrayFromMixed.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1026,9 +1026,9 @@
 
 /***/ },
 /* 12 */
-/*!*******************************!*\
-  !*** ./~/fbjs/lib/toArray.js ***!
-  \*******************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/toArray.js ***!
+  \***********************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1088,13 +1088,13 @@
 	}
 	
 	module.exports = toArray;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 13 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/invariant.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/invariant.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1147,13 +1147,13 @@
 	}
 	
 	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 14 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/getMarkupWrap.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/getMarkupWrap.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1251,13 +1251,13 @@
 	}
 	
 	module.exports = getMarkupWrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 15 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/emptyFunction.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/emptyFunction.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1301,9 +1301,9 @@
 
 /***/ },
 /* 16 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactMultiChildUpdateTypes.js ***!
-  \***************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactMultiChildUpdateTypes.js ***!
+  \*******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1341,9 +1341,9 @@
 
 /***/ },
 /* 17 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/keyMirror.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/keyMirror.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1394,13 +1394,13 @@
 	};
 	
 	module.exports = keyMirror;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 18 */
-/*!**********************************!*\
-  !*** ./~/react/lib/ReactPerf.js ***!
-  \**********************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactPerf.js ***!
+  \**************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1499,13 +1499,13 @@
 	}
 	
 	module.exports = ReactPerf;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 19 */
-/*!*************************************!*\
-  !*** ./~/react/lib/setInnerHTML.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/setInnerHTML.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1601,9 +1601,9 @@
 
 /***/ },
 /* 20 */
-/*!***************************************!*\
-  !*** ./~/react/lib/setTextContent.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/setTextContent.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1649,9 +1649,9 @@
 
 /***/ },
 /* 21 */
-/*!****************************************************!*\
-  !*** ./~/react/lib/escapeTextContentForBrowser.js ***!
-  \****************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/escapeTextContentForBrowser.js ***!
+  \********************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1695,9 +1695,9 @@
 
 /***/ },
 /* 22 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/DOMPropertyOperations.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/DOMPropertyOperations.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1925,13 +1925,13 @@
 	});
 	
 	module.exports = DOMPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 23 */
-/*!************************************!*\
-  !*** ./~/react/lib/DOMProperty.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/DOMProperty.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2168,13 +2168,13 @@
 	};
 	
 	module.exports = DOMProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 24 */
-/*!******************************************************!*\
-  !*** ./~/react/lib/quoteAttributeValueForBrowser.js ***!
-  \******************************************************/
+/*!**********************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/quoteAttributeValueForBrowser.js ***!
+  \**********************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2206,9 +2206,9 @@
 
 /***/ },
 /* 25 */
-/*!*******************************!*\
-  !*** ./~/fbjs/lib/warning.js ***!
-  \*******************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/warning.js ***!
+  \***********************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2268,13 +2268,13 @@
 	}
 	
 	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 26 */
-/*!*********************************************************!*\
-  !*** ./~/react/lib/ReactComponentBrowserEnvironment.js ***!
-  \*********************************************************/
+/*!*************************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactComponentBrowserEnvironment.js ***!
+  \*************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2321,9 +2321,9 @@
 
 /***/ },
 /* 27 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactDOMIDOperations.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMIDOperations.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2420,13 +2420,13 @@
 	});
 	
 	module.exports = ReactDOMIDOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 28 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactMount.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactMount.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3279,13 +3279,13 @@
 	});
 	
 	module.exports = ReactMount;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 29 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/ReactBrowserEventEmitter.js ***!
-  \*************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactBrowserEventEmitter.js ***!
+  \*****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3615,9 +3615,9 @@
 
 /***/ },
 /* 30 */
-/*!***************************************!*\
-  !*** ./~/react/lib/EventConstants.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EventConstants.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3715,9 +3715,9 @@
 
 /***/ },
 /* 31 */
-/*!***************************************!*\
-  !*** ./~/react/lib/EventPluginHub.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EventPluginHub.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3999,13 +3999,13 @@
 	};
 	
 	module.exports = EventPluginHub;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 32 */
-/*!********************************************!*\
-  !*** ./~/react/lib/EventPluginRegistry.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EventPluginRegistry.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4228,13 +4228,13 @@
 	};
 	
 	module.exports = EventPluginRegistry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 33 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/EventPluginUtils.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EventPluginUtils.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4439,13 +4439,13 @@
 	};
 	
 	module.exports = EventPluginUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 34 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactErrorUtils.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactErrorUtils.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4525,13 +4525,13 @@
 	}
 	
 	module.exports = ReactErrorUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 35 */
-/*!***************************************!*\
-  !*** ./~/react/lib/accumulateInto.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/accumulateInto.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4593,13 +4593,13 @@
 	}
 	
 	module.exports = accumulateInto;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 36 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/forEachAccumulated.js ***!
-  \*******************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/forEachAccumulated.js ***!
+  \***********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4634,9 +4634,9 @@
 
 /***/ },
 /* 37 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactEventEmitterMixin.js ***!
-  \***********************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactEventEmitterMixin.js ***!
+  \***************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4680,9 +4680,9 @@
 
 /***/ },
 /* 38 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ViewportMetrics.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ViewportMetrics.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4715,9 +4715,9 @@
 
 /***/ },
 /* 39 */
-/*!**************************************!*\
-  !*** ./~/react/lib/Object.assign.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/Object.assign.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4770,9 +4770,9 @@
 
 /***/ },
 /* 40 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/isEventSupported.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/isEventSupported.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4838,9 +4838,9 @@
 
 /***/ },
 /* 41 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactDOMFeatureFlags.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMFeatureFlags.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4864,9 +4864,9 @@
 
 /***/ },
 /* 42 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactElement.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactElement.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5116,13 +5116,13 @@
 	};
 	
 	module.exports = ReactElement;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 43 */
-/*!******************************************!*\
-  !*** ./~/react/lib/canDefineProperty.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/canDefineProperty.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5149,13 +5149,13 @@
 	}
 	
 	module.exports = canDefineProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 44 */
-/*!****************************************************!*\
-  !*** ./~/react/lib/ReactEmptyComponentRegistry.js ***!
-  \****************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactEmptyComponentRegistry.js ***!
+  \********************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -5209,9 +5209,9 @@
 
 /***/ },
 /* 45 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactInstanceHandles.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactInstanceHandles.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5516,13 +5516,13 @@
 	};
 	
 	module.exports = ReactInstanceHandles;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 46 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactRootIndex.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactRootIndex.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -5557,9 +5557,9 @@
 
 /***/ },
 /* 47 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactInstanceMap.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactInstanceMap.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -5612,9 +5612,9 @@
 
 /***/ },
 /* 48 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactMarkupChecksum.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactMarkupChecksum.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5665,9 +5665,9 @@
 
 /***/ },
 /* 49 */
-/*!********************************!*\
-  !*** ./~/react/lib/adler32.js ***!
-  \********************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/adler32.js ***!
+  \************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -5715,9 +5715,9 @@
 
 /***/ },
 /* 50 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactReconciler.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactReconciler.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5830,9 +5830,9 @@
 
 /***/ },
 /* 51 */
-/*!*********************************!*\
-  !*** ./~/react/lib/ReactRef.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactRef.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5916,9 +5916,9 @@
 
 /***/ },
 /* 52 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactOwner.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactOwner.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6012,13 +6012,13 @@
 	};
 	
 	module.exports = ReactOwner;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 53 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactUpdateQueue.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactUpdateQueue.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6278,13 +6278,13 @@
 	};
 	
 	module.exports = ReactUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 54 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactUpdates.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactUpdates.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6510,13 +6510,13 @@
 	};
 	
 	module.exports = ReactUpdates;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 55 */
-/*!**************************************!*\
-  !*** ./~/react/lib/CallbackQueue.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/CallbackQueue.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6612,13 +6612,13 @@
 	PooledClass.addPoolingTo(CallbackQueue);
 	
 	module.exports = CallbackQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 56 */
-/*!************************************!*\
-  !*** ./~/react/lib/PooledClass.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/PooledClass.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6740,13 +6740,13 @@
 	};
 	
 	module.exports = PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 57 */
-/*!************************************!*\
-  !*** ./~/react/lib/Transaction.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/Transaction.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6980,13 +6980,13 @@
 	};
 	
 	module.exports = Transaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 58 */
-/*!***********************************!*\
-  !*** ./~/fbjs/lib/emptyObject.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/emptyObject.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7009,13 +7009,13 @@
 	}
 	
 	module.exports = emptyObject;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 59 */
-/*!************************************!*\
-  !*** ./~/fbjs/lib/containsNode.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/containsNode.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7076,9 +7076,9 @@
 
 /***/ },
 /* 60 */
-/*!**********************************!*\
-  !*** ./~/fbjs/lib/isTextNode.js ***!
-  \**********************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/isTextNode.js ***!
+  \**************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7109,9 +7109,9 @@
 
 /***/ },
 /* 61 */
-/*!******************************!*\
-  !*** ./~/fbjs/lib/isNode.js ***!
-  \******************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/isNode.js ***!
+  \**********************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -7140,9 +7140,9 @@
 
 /***/ },
 /* 62 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/instantiateReactComponent.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/instantiateReactComponent.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7257,13 +7257,13 @@
 	}
 	
 	module.exports = instantiateReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 63 */
-/*!************************************************!*\
-  !*** ./~/react/lib/ReactCompositeComponent.js ***!
-  \************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactCompositeComponent.js ***!
+  \****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7960,13 +7960,13 @@
 	};
 	
 	module.exports = ReactCompositeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 64 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/ReactComponentEnvironment.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactComponentEnvironment.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8020,13 +8020,13 @@
 	};
 	
 	module.exports = ReactComponentEnvironment;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 65 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactPropTypeLocations.js ***!
-  \***********************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactPropTypeLocations.js ***!
+  \***************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8054,9 +8054,9 @@
 
 /***/ },
 /* 66 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactPropTypeLocationNames.js ***!
-  \***************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactPropTypeLocationNames.js ***!
+  \*******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8083,13 +8083,13 @@
 	}
 	
 	module.exports = ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 67 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/shouldUpdateReactComponent.js ***!
-  \***************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/shouldUpdateReactComponent.js ***!
+  \*******************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -8138,9 +8138,9 @@
 
 /***/ },
 /* 68 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactEmptyComponent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactEmptyComponent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8197,9 +8197,9 @@
 
 /***/ },
 /* 69 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactNativeComponent.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactNativeComponent.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8296,13 +8296,13 @@
 	};
 	
 	module.exports = ReactNativeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 70 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/validateDOMNesting.js ***!
-  \*******************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/validateDOMNesting.js ***!
+  \***********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8668,13 +8668,13 @@
 	}
 	
 	module.exports = validateDOMNesting;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 71 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDefaultInjection.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDefaultInjection.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8774,13 +8774,13 @@
 	module.exports = {
 	  inject: inject
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 72 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/BeforeInputEventPlugin.js ***!
-  \***********************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/BeforeInputEventPlugin.js ***!
+  \***************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9191,9 +9191,9 @@
 
 /***/ },
 /* 73 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/EventPropagators.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EventPropagators.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9331,13 +9331,13 @@
 	};
 	
 	module.exports = EventPropagators;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 74 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/FallbackCompositionState.js ***!
-  \*************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/FallbackCompositionState.js ***!
+  \*****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9438,9 +9438,9 @@
 
 /***/ },
 /* 75 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/getTextContentAccessor.js ***!
-  \***********************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getTextContentAccessor.js ***!
+  \***************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9479,9 +9479,9 @@
 
 /***/ },
 /* 76 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/SyntheticCompositionEvent.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticCompositionEvent.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9524,9 +9524,9 @@
 
 /***/ },
 /* 77 */
-/*!***************************************!*\
-  !*** ./~/react/lib/SyntheticEvent.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticEvent.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9709,13 +9709,13 @@
 	PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 	
 	module.exports = SyntheticEvent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 78 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticInputEvent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticInputEvent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9759,9 +9759,9 @@
 
 /***/ },
 /* 79 */
-/*!*****************************!*\
-  !*** ./~/fbjs/lib/keyOf.js ***!
-  \*****************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/keyOf.js ***!
+  \*********************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9802,9 +9802,9 @@
 
 /***/ },
 /* 80 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ChangeEventPlugin.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ChangeEventPlugin.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10131,9 +10131,9 @@
 
 /***/ },
 /* 81 */
-/*!***************************************!*\
-  !*** ./~/react/lib/getEventTarget.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getEventTarget.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10168,9 +10168,9 @@
 
 /***/ },
 /* 82 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/isTextInputElement.js ***!
-  \*******************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/isTextInputElement.js ***!
+  \***********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10216,9 +10216,9 @@
 
 /***/ },
 /* 83 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ClientReactRootIndex.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ClientReactRootIndex.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10247,9 +10247,9 @@
 
 /***/ },
 /* 84 */
-/*!************************************************!*\
-  !*** ./~/react/lib/DefaultEventPluginOrder.js ***!
-  \************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/DefaultEventPluginOrder.js ***!
+  \****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10282,9 +10282,9 @@
 
 /***/ },
 /* 85 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/EnterLeaveEventPlugin.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/EnterLeaveEventPlugin.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10414,9 +10414,9 @@
 
 /***/ },
 /* 86 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticMouseEvent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticMouseEvent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10495,9 +10495,9 @@
 
 /***/ },
 /* 87 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/SyntheticUIEvent.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticUIEvent.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10563,9 +10563,9 @@
 
 /***/ },
 /* 88 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/getEventModifierState.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getEventModifierState.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10615,9 +10615,9 @@
 
 /***/ },
 /* 89 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/HTMLDOMPropertyConfig.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/HTMLDOMPropertyConfig.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10853,9 +10853,9 @@
 
 /***/ },
 /* 90 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactBrowserComponentMixin.js ***!
-  \***************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactBrowserComponentMixin.js ***!
+  \*******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10894,13 +10894,13 @@
 	};
 	
 	module.exports = ReactBrowserComponentMixin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 91 */
-/*!************************************!*\
-  !*** ./~/react/lib/findDOMNode.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/findDOMNode.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10952,13 +10952,13 @@
 	}
 	
 	module.exports = findDOMNode;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 92 */
-/*!*****************************************************!*\
-  !*** ./~/react/lib/ReactDefaultBatchingStrategy.js ***!
-  \*****************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDefaultBatchingStrategy.js ***!
+  \*********************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11031,9 +11031,9 @@
 
 /***/ },
 /* 93 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMComponent.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMComponent.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -11998,13 +11998,13 @@
 	assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mixin);
 	
 	module.exports = ReactDOMComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 94 */
-/*!***************************************!*\
-  !*** ./~/react/lib/AutoFocusUtils.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/AutoFocusUtils.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12046,9 +12046,9 @@
 
 /***/ },
 /* 95 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/focusNode.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/focusNode.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12080,9 +12080,9 @@
 
 /***/ },
 /* 96 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/CSSPropertyOperations.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/CSSPropertyOperations.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12260,13 +12260,13 @@
 	});
 	
 	module.exports = CSSPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 97 */
-/*!************************************!*\
-  !*** ./~/react/lib/CSSProperty.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/CSSProperty.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12411,9 +12411,9 @@
 
 /***/ },
 /* 98 */
-/*!*****************************************!*\
-  !*** ./~/fbjs/lib/camelizeStyleName.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/camelizeStyleName.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12459,9 +12459,9 @@
 
 /***/ },
 /* 99 */
-/*!********************************!*\
-  !*** ./~/fbjs/lib/camelize.js ***!
-  \********************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/camelize.js ***!
+  \************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12499,9 +12499,9 @@
 
 /***/ },
 /* 100 */
-/*!********************************************!*\
-  !*** ./~/react/lib/dangerousStyleValue.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/dangerousStyleValue.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12562,9 +12562,9 @@
 
 /***/ },
 /* 101 */
-/*!******************************************!*\
-  !*** ./~/fbjs/lib/hyphenateStyleName.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/hyphenateStyleName.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12609,9 +12609,9 @@
 
 /***/ },
 /* 102 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/hyphenate.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/hyphenate.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12650,9 +12650,9 @@
 
 /***/ },
 /* 103 */
-/*!*****************************************!*\
-  !*** ./~/fbjs/lib/memoizeStringOnly.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/memoizeStringOnly.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12689,9 +12689,9 @@
 
 /***/ },
 /* 104 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMButton.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMButton.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12747,9 +12747,9 @@
 
 /***/ },
 /* 105 */
-/*!**************************************!*\
-  !*** ./~/react/lib/ReactDOMInput.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMInput.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12905,13 +12905,13 @@
 	}
 	
 	module.exports = ReactDOMInput;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 106 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/LinkedValueUtils.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/LinkedValueUtils.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13048,13 +13048,13 @@
 	};
 	
 	module.exports = LinkedValueUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 107 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactPropTypes.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactPropTypes.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13416,9 +13416,9 @@
 
 /***/ },
 /* 108 */
-/*!**************************************!*\
-  !*** ./~/react/lib/getIteratorFn.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getIteratorFn.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -13464,9 +13464,9 @@
 
 /***/ },
 /* 109 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMOption.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMOption.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13558,13 +13558,13 @@
 	};
 	
 	module.exports = ReactDOMOption;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 110 */
-/*!**************************************!*\
-  !*** ./~/react/lib/ReactChildren.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactChildren.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13752,9 +13752,9 @@
 
 /***/ },
 /* 111 */
-/*!********************************************!*\
-  !*** ./~/react/lib/traverseAllChildren.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/traverseAllChildren.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13946,13 +13946,13 @@
 	}
 	
 	module.exports = traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 112 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMSelect.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMSelect.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14143,13 +14143,13 @@
 	}
 	
 	module.exports = ReactDOMSelect;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 113 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactDOMTextarea.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMTextarea.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14265,13 +14265,13 @@
 	}
 	
 	module.exports = ReactDOMTextarea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 114 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactMultiChild.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactMultiChild.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14770,13 +14770,13 @@
 	};
 	
 	module.exports = ReactMultiChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 115 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactChildReconciler.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactChildReconciler.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14901,13 +14901,13 @@
 	};
 	
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 116 */
-/*!****************************************!*\
-  !*** ./~/react/lib/flattenChildren.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/flattenChildren.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14958,13 +14958,13 @@
 	}
 	
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 117 */
-/*!************************************!*\
-  !*** ./~/fbjs/lib/shallowEqual.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/shallowEqual.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -15020,9 +15020,9 @@
 
 /***/ },
 /* 118 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/ReactEventListener.js ***!
-  \*******************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactEventListener.js ***!
+  \***********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15239,9 +15239,9 @@
 
 /***/ },
 /* 119 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/EventListener.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/EventListener.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15328,13 +15328,13 @@
 	};
 	
 	module.exports = EventListener;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 120 */
-/*!**************************************************!*\
-  !*** ./~/fbjs/lib/getUnboundedScrollPosition.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/getUnboundedScrollPosition.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -15378,9 +15378,9 @@
 
 /***/ },
 /* 121 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactInjection.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactInjection.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15424,9 +15424,9 @@
 
 /***/ },
 /* 122 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactClass.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactClass.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16200,13 +16200,13 @@
 	};
 	
 	module.exports = ReactClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 123 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactComponent.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactComponent.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16331,13 +16331,13 @@
 	}
 	
 	module.exports = ReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 124 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactNoopUpdateQueue.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactNoopUpdateQueue.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16458,13 +16458,13 @@
 	};
 	
 	module.exports = ReactNoopUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 125 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/ReactReconcileTransaction.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactReconcileTransaction.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16621,9 +16621,9 @@
 
 /***/ },
 /* 126 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactInputSelection.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactInputSelection.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16753,9 +16753,9 @@
 
 /***/ },
 /* 127 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMSelection.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMSelection.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16973,9 +16973,9 @@
 
 /***/ },
 /* 128 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/getNodeForCharacterOffset.js ***!
-  \**************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getNodeForCharacterOffset.js ***!
+  \******************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17054,9 +17054,9 @@
 
 /***/ },
 /* 129 */
-/*!****************************************!*\
-  !*** ./~/fbjs/lib/getActiveElement.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/getActiveElement.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17097,9 +17097,9 @@
 
 /***/ },
 /* 130 */
-/*!******************************************!*\
-  !*** ./~/react/lib/SelectEventPlugin.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SelectEventPlugin.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17306,9 +17306,9 @@
 
 /***/ },
 /* 131 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ServerReactRootIndex.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ServerReactRootIndex.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17343,9 +17343,9 @@
 
 /***/ },
 /* 132 */
-/*!******************************************!*\
-  !*** ./~/react/lib/SimpleEventPlugin.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SimpleEventPlugin.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17935,13 +17935,13 @@
 	};
 	
 	module.exports = SimpleEventPlugin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 133 */
-/*!************************************************!*\
-  !*** ./~/react/lib/SyntheticClipboardEvent.js ***!
-  \************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticClipboardEvent.js ***!
+  \****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17986,9 +17986,9 @@
 
 /***/ },
 /* 134 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticFocusEvent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticFocusEvent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18031,9 +18031,9 @@
 
 /***/ },
 /* 135 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/SyntheticKeyboardEvent.js ***!
-  \***********************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticKeyboardEvent.js ***!
+  \***************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18124,9 +18124,9 @@
 
 /***/ },
 /* 136 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/getEventCharCode.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getEventCharCode.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -18182,9 +18182,9 @@
 
 /***/ },
 /* 137 */
-/*!************************************!*\
-  !*** ./~/react/lib/getEventKey.js ***!
-  \************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/getEventKey.js ***!
+  \****************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18293,9 +18293,9 @@
 
 /***/ },
 /* 138 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/SyntheticDragEvent.js ***!
-  \*******************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticDragEvent.js ***!
+  \***********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18338,9 +18338,9 @@
 
 /***/ },
 /* 139 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticTouchEvent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticTouchEvent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18392,9 +18392,9 @@
 
 /***/ },
 /* 140 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticWheelEvent.js ***!
-  \********************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SyntheticWheelEvent.js ***!
+  \************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18455,9 +18455,9 @@
 
 /***/ },
 /* 141 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/SVGDOMPropertyConfig.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/SVGDOMPropertyConfig.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18590,9 +18590,9 @@
 
 /***/ },
 /* 142 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactDefaultPerf.js ***!
-  \*****************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDefaultPerf.js ***!
+  \*********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18835,9 +18835,9 @@
 
 /***/ },
 /* 143 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/ReactDefaultPerfAnalysis.js ***!
-  \*************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDefaultPerfAnalysis.js ***!
+  \*****************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19044,9 +19044,9 @@
 
 /***/ },
 /* 144 */
-/*!**************************************!*\
-  !*** ./~/fbjs/lib/performanceNow.js ***!
-  \**************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/performanceNow.js ***!
+  \******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19086,9 +19086,9 @@
 
 /***/ },
 /* 145 */
-/*!***********************************!*\
-  !*** ./~/fbjs/lib/performance.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/performance.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19117,9 +19117,9 @@
 
 /***/ },
 /* 146 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactVersion.js ***!
-  \*************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactVersion.js ***!
+  \*****************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -19139,9 +19139,9 @@
 
 /***/ },
 /* 147 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/renderSubtreeIntoContainer.js ***!
-  \***************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/renderSubtreeIntoContainer.js ***!
+  \*******************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19163,9 +19163,9 @@
 
 /***/ },
 /* 148 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMServer.js ***!
-  \***************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMServer.js ***!
+  \*******************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19197,9 +19197,9 @@
 
 /***/ },
 /* 149 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactServerRendering.js ***!
-  \*********************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactServerRendering.js ***!
+  \*************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19285,13 +19285,13 @@
 	  renderToString: renderToString,
 	  renderToStaticMarkup: renderToStaticMarkup
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 150 */
-/*!****************************************************!*\
-  !*** ./~/react/lib/ReactServerBatchingStrategy.js ***!
-  \****************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactServerBatchingStrategy.js ***!
+  \********************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -19320,9 +19320,9 @@
 
 /***/ },
 /* 151 */
-/*!********************************************************!*\
-  !*** ./~/react/lib/ReactServerRenderingTransaction.js ***!
-  \********************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactServerRenderingTransaction.js ***!
+  \************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19415,9 +19415,9 @@
 
 /***/ },
 /* 152 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactIsomorphic.js ***!
-  \****************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactIsomorphic.js ***!
+  \********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19494,13 +19494,13 @@
 	};
 	
 	module.exports = React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 153 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMFactories.js ***!
-  \******************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactDOMFactories.js ***!
+  \**********************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19680,13 +19680,13 @@
 	}, createDOMFactory);
 	
 	module.exports = ReactDOMFactories;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 154 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactElementValidator.js ***!
-  \**********************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/ReactElementValidator.js ***!
+  \**************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19970,13 +19970,13 @@
 	};
 	
 	module.exports = ReactElementValidator;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 155 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/mapObject.js ***!
-  \*********************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/fbjs/lib/mapObject.js ***!
+  \*************************************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -20033,9 +20033,9 @@
 
 /***/ },
 /* 156 */
-/*!**********************************!*\
-  !*** ./~/react/lib/onlyChild.js ***!
-  \**********************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/onlyChild.js ***!
+  \**************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20071,13 +20071,13 @@
 	}
 	
 	module.exports = onlyChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 157 */
-/*!***********************************!*\
-  !*** ./~/react/lib/deprecated.js ***!
-  \***********************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react/lib/deprecated.js ***!
+  \***************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20128,13 +20128,13 @@
 	}
 	
 	module.exports = deprecated;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/process/browser.js */ 4)))
 
 /***/ },
 /* 158 */
-/*!******************************!*\
-  !*** ./~/react-dom/index.js ***!
-  \******************************/
+/*!**********************************************************************************************************!*\
+  !*** /Users/rickbeerendonk/Documents/Git/react-om-examples/Setup 03. ESLint/VSCode/~/react-dom/index.js ***!
+  \**********************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20144,9 +20144,9 @@
 
 /***/ },
 /* 159 */
-/*!*********************************!*\
-  !*** ./site/src/HelloReact.jsx ***!
-  \*********************************/
+/*!************************!*\
+  !*** ./HelloReact.jsx ***!
+  \************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
