@@ -10,7 +10,15 @@
   <div id="app"></div>
 
   <script type="text/babel">
-    const style = {
+    class HelloReact extends React.Component {
+      render() {
+        return (
+          <h1 style={styles.header}>Hello React!</h1>
+        );
+      }
+    };
+
+    const styles = {
       header: {
         background: 'yellow',
         color: 'purple',
@@ -19,14 +27,6 @@
       }
     };  
   
-    class HelloReact extends React.Component {
-      render() {
-        return (
-          <h1 style={style.header}>Hello React!</h1>
-        );
-      }
-    };
-
     ReactDOM.render(
       <HelloReact />,
       document.getElementById('app')

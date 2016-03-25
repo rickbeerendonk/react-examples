@@ -9,19 +9,21 @@
   <div id="app"></div>
 
   <script type="text/javascript">
-    var myStyle = {
-      background: 'yellow',
-      color: 'purple',
-      fontStyle: 'italic',  // font-style in CSS
-      marginTop: '100px',  //margin-top in CSS
-    };  
-
     var HelloReact = React.createClass({
       displayName: 'HelloReact',
       render: function () {
-        return React.createElement('h1', {style: myStyle}, 'Hello React!');
+        return React.createElement('h1', {style: styles.header}, 'Hello React!');
       }
     });
+
+    var styles = {
+      header: {
+        background: 'yellow',
+        color: 'purple',
+        fontStyle: 'italic',  // font-style in CSS
+        marginTop: '100px',  //margin-top in CSS
+      }
+    };  
 
     ReactDOM.render(
       React.createElement(HelloReact),

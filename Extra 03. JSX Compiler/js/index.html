@@ -10,35 +10,37 @@
   <div id="app"></div>
 
   <script type="text/javascript">
-   var textareaStyle = {
-    width: '400px',
-    height: '400px' 
-  };
-
-  var JsxCompiler = React.createClass({
-    displayName: 'JsxCompiler',
-    jsx: 'var HelloMessage = React.createClass({\n\
+    var JsxCompiler = React.createClass({
+      displayName: 'JsxCompiler',
+      jsx: 'var HelloMessage = React.createClass({\n\
   render: function() {\n\
     return <div>Hello {this.props.name}</div>;\n\
   }\n\
 });\n\
 \n\
 React.render(<HelloMessage name="John" />, mountNode);',
-    getInitialState: function () {
-     return {code: ''};
-    },
-    onChange: function (e) {
-      this.setState({code: babel.transform(e.target.value).code});
-    },
-    render: function () {
-      return React.createElement(
-        'div',
-        null,
-        React.createElement('textarea', {style: textareaStyle, onChange: this.onChange, defaultValue: this.jsx}),
-        React.createElement('textarea', {style: textareaStyle, readOnly: 'readOnly', value: this.state.code})
-        );
-    }
-    });
+      getInitialState: function () {
+      return {code: ''};
+      },
+      onChange: function (e) {
+        this.setState({code: babel.transform(e.target.value).code});
+      },
+      render: function () {
+        return React.createElement(
+          'div',
+          null,
+          React.createElement('textarea', {style: styles.textarea, onChange: this.onChange, defaultValue: this.jsx}),
+          React.createElement('textarea', {style: styles.textarea, readOnly: 'readOnly', value: this.state.code})
+          );
+      }
+      });
+
+    var styles = {
+      textarea: {
+        width: '400px',
+        height: '400px' 
+      }
+    };
 
     ReactDOM.render(
       React.createElement(JsxCompiler),
