@@ -1,8 +1,10 @@
 'use strict';
 
-import React from 'react';
+import React, {
+  Component
+} from 'react';
 
-export default class HelloReact extends React.Component {
+export default class HelloReact extends Component {
   render() {
     return (
       <h1>Hello React!</h1>
