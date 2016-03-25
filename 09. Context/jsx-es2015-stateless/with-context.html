@@ -10,12 +10,12 @@
   <div id="app"></div>
 
   <script type="text/babel">
-    let Three = (props, context) => <h1 style={{color: context.color}}>Three</h1>;
+    const Three = (props, context) => <h1 style={{color: context.color}}>Three</h1>;
     Three.contextTypes = {
       color: React.PropTypes.string
     }
 
-    let Two = () => <Three />;
+    const Two = () => <Three />;
 
     class One extends React.Component {
       getChildContext() {

@@ -12,9 +12,9 @@
 
   <script type="text/babel">
     function logEvent(value) {
-      var events = document.getElementById('events');
-      var newEvent = document.createTextNode(value);
-      var item = document.createElement('li');
+      const events = document.getElementById('events');
+      const newEvent = document.createTextNode(value);
+      const item = document.createElement('li');
       item.appendChild(newEvent);
       events.appendChild(item);
     }

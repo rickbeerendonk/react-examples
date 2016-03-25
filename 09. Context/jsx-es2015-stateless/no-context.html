@@ -10,11 +10,11 @@
   <div id="app"></div>
 
   <script type="text/babel">
-    let Three = (props) => <h1 style={{color: props.color}}>Three</h1>;
+    const Three = (props) => <h1 style={{color: props.color}}>Three</h1>;
 
-    let Two = ({color}) => <Three color={color} />;
+    const Two = ({color}) => <Three color={color} />;
 
-    let One = ({color}) => <Two color={color} />;
+    const One = ({color}) => <Two color={color} />;
 
     ReactDOM.render(
       <One color="red" />,
