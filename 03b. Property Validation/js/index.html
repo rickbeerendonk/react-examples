@@ -10,17 +10,17 @@
 
   <script type="text/javascript">
     var HelloMessage = React.createClass({
-      displayName: "HelloMessage",
+      displayName: 'HelloMessage',
       propTypes: {
         name: React.PropTypes.string.isRequired
       },
       render: function () {
-        return React.createElement('h1', null, 'Hello ', this.props.name, "!");
+        return React.createElement('h1', null, 'Hello ', this.props.name, '!');
       }
     });
 
     ReactDOM.render(
-      React.createElement(HelloMessage, {name: "React"}),
+      React.createElement(HelloMessage, {name: 'React'}),
       document.getElementById('app')
     );
   </script>

@@ -10,12 +10,12 @@
 
   <script>
     var Hello = React.createClass({
-      displayName: "Hello",
+      displayName: 'Hello',
       render: function () {
         return (
-          React.createElement("ul", null,
+          React.createElement('ul', null,
             this.props.children.map(function (child, i) {
-              return React.createElement("li", {key: i}, child)
+              return React.createElement('li', {key: i}, child)
             })
             )
           );
@@ -24,9 +24,9 @@
 
     ReactDOM.render(
       React.createElement(Hello, null,
-        React.createElement("span", null, "Maria"),
-        React.createElement("span", null, "Peter"),
-        React.createElement("span", null, "John")
+        React.createElement('span', null, 'Maria'),
+        React.createElement('span', null, 'Peter'),
+        React.createElement('span', null, 'John')
         ),
       document.getElementById('app')
       );

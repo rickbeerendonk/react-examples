@@ -10,7 +10,7 @@
 
   <script type="text/javascript">
     var HelloMessage = React.createClass({
-      displayName: "HelloMessage",
+      displayName: 'HelloMessage',
       getInitialState: function () {
         return {name: 'React'};
       },
@@ -22,7 +22,7 @@
           'div',
           null,
           React.createElement('input', {onChange: this.onChange, value: this.state.name}),
-          React.createElement('h1', null, 'Hello ', this.state.name, "!")
+          React.createElement('h1', null, 'Hello ', this.state.name, '!')
           );
       }
     });

@@ -19,9 +19,9 @@
     }
 
     var Hello = React.createClass({
-      displayName: "Hello",
+      displayName: 'Hello',
       render: function () {
-        logEvent('render() - props: ' + JSON.stringify(this.props) + " state: " + JSON.stringify(this.state));
+        logEvent('render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state));
         return React.createElement('h1', null, 'Hello ', this.props.name, '! ', this.state.count, ' time');
       },
 
@@ -56,7 +56,7 @@
       },
       componentDidUpdate: function (prevProps, prevState) {
         logEvent('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
-        if (prevProps.name === "Number One") {
+        if (prevProps.name === 'Number One') {
           logEvent('-- new state --');
           this.setState({count: this.state.count + 1});
         }
@@ -69,7 +69,7 @@
     });
 
     var App = React.createClass({
-      displayName: "App",
+      displayName: 'App',
       getInitialState: function () {
         return {
           name: 'Number One'

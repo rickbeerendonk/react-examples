@@ -10,16 +10,16 @@
 
   <script type="text/javascript">
     var ImportantLink = React.createClass({
-      displayName: "ImportantLink",
+      displayName: 'ImportantLink',
       render: function render() {
-        return React.createElement("a", this.props, "=> ", this.props.children, " <=");
+        return React.createElement('a', this.props, '=> ', this.props.children, ' <=');
       }
     });
     
     ReactDOM.render(React.createElement(
       ImportantLink,
-      { href: "http://www.reactjs.com", target: "_blank" },
-      "React website"
+      { href: 'http://www.reactjs.com', target: '_blank' },
+      'React website'
     ), document.getElementById('app'));
   </script>
 </body>

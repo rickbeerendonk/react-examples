@@ -22,11 +22,11 @@
       // Mounting
       getDefaultProps: function () {
         logEvent('Mixin1: getDefaultProps()');
-        return { prop1: "Mixin1" /* Not allowed multiple times: prop2: "Mixin1",  prop3: "Mixin1"*/ };
+        return { prop1: 'Mixin1' /* Not allowed multiple times: prop2: 'Mixin1', prop3: 'Mixin1' */ };
       },
       getInitialState: function () {
         logEvent('Mixin1: getInitialState()');
-        return { state1: "Mixin1" /* Not allowed multiple times: state2: "Mixin1", state3: "Mixin1"*/ };
+        return { state1: 'Mixin1' /* Not allowed multiple times: state2: 'Mixin1', state3: 'Mixin1' */ };
       },
       componentWillMount: function () {
         logEvent('Mixin1: componentWillMount()');
@@ -62,11 +62,11 @@
       // Mounting
       getDefaultProps: function () {
         logEvent('Mixin2: getDefaultProps()');
-        return { prop2: "Mixin2" /* Not allowed multiple times: prop3: "Mixin2" */ };
+        return { prop2: 'Mixin2' /* Not allowed multiple times: prop3: 'Mixin2' */ };
       },
       getInitialState: function () {
         logEvent('Mixin2: getInitialState()');
-        return { state2: "Mixin2" /* Not allowed multiple times: state3: "Mixin2" */ };
+        return { state2: 'Mixin2' /* Not allowed multiple times: state3: 'Mixin2' */ };
       },
       componentWillMount: function () {
         logEvent('Mixin2: componentWillMount()');
@@ -99,20 +99,21 @@
     };
 
     var Hello = React.createClass({
+      displayName: 'Hello',
       mixins: [Mixin1, Mixin2],
       render: function () {
-        logEvent('Component: render() - props: ' + JSON.stringify(this.props) + " state: " + JSON.stringify(this.state));
+        logEvent('Component: render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state));
         return React.createElement('h1', null, 'Hello ', this.props.name, '!');
       },
 
       // Mounting
       getDefaultProps: function () {
         logEvent('Component: getDefaultProps()');
-        return { prop3: "Component" };
+        return { prop3: 'Component' };
       },
       getInitialState: function () {
         logEvent('Component: getInitialState()');
-        return { state3: "Component" };
+        return { state3: 'Component' };
       },
       componentWillMount: function () {
         logEvent('Component: componentWillMount()');
@@ -134,7 +135,7 @@
       },
       componentDidUpdate: function (prevProps, prevState) {
         logEvent('Component: componentDidUpdate(prevProps, prevState)');
-        if (prevProps.name === "Number One") {
+        if (prevProps.name === 'Number One') {
           logEvent('-- new state --');
           this.setState({ newState: true });
         }
@@ -147,6 +148,7 @@
     });
 
     var App = React.createClass({
+      displayName: 'App',
       getInitialState: function() {
         return {
           name: 'Number One'

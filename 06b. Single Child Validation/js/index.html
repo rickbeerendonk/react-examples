@@ -10,14 +10,14 @@
 
   <script type="text/javascript">
     var Hello = React.createClass({
-      displayName: "Hello",
+      displayName: 'Hello',
       propTypes: {
         children: React.PropTypes.element.isRequired
       },
       render: function () {
         return (
-          React.createElement("ul", null,
-            React.createElement("li", null, this.props.children)
+          React.createElement('ul', null,
+            React.createElement('li', null, this.props.children)
           )
         );
       }
@@ -25,8 +25,8 @@
 
     ReactDOM.render(
       React.createElement(Hello, null,
-        React.createElement("span", null, "Maria"),
-        React.createElement("span", null, "One to many")
+        React.createElement('span', null, 'Maria'),
+        React.createElement('span', null, 'One too many')
         ),
       document.getElementById('app')
       );
