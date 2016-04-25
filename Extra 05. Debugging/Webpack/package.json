@@ -2,8 +2,8 @@
   "name": "debug-react-webpack",
   "description": "Debug React with Webpack & Babel (Visual Studio Code)",
   "dependencies": {
-    "react": "^15.0.0-rc.1",
-    "react-dom": "^15.0.0-rc.1"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",
