@@ -11,6 +11,11 @@
       "suppressTaskName": true,
       "isBuildCommand": true,
       "isWatching": true
+    },
+    {
+      "args": ["run", "start"],
+      "taskName": "npm run start",
+      "suppressTaskName": true
     }
   ]
 }
