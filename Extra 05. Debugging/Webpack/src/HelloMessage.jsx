@@ -1,14 +1,8 @@
 'use strict';
 
 import React from 'react';
-
-var NameInput = ({onChange, name}) => (
-  <input onChange={onChange} value={name} />
-);
-
-var Hello = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
+import Hello from './Hello.jsx';
+import NameInput from './NameInput.jsx';
 
 export default class HelloMessage extends React.Component {
   constructor(props) {
