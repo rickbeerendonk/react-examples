@@ -9,12 +9,12 @@ expect.extend(expectJSX);
 
 describe('HelloReact', () => {
   it('should show Hello React in a H1', () => {
-    const expected = '<h1> Hello React! </h1>';
+    const expected = '<h1>\n  Hello React!\n</h1>';
     
     const renderer = TestUtils.createRenderer();
     renderer.render(<HelloReact />);
     const actual = renderer.getRenderOutput();
     
-    expect(actual).toIncludeJSX(expected);
+    expect(actual).toEqualJSX(expected);
   });
 });
