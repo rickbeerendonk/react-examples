@@ -4277,7 +4277,7 @@
 	
 	'use strict';
 	
-	module.exports = '15.1.0';
+	module.exports = '15.3.1';
 
 /***/ },
 /* 37 */
