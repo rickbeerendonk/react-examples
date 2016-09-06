@@ -1,0 +1,27 @@
+{
+  "name": "babel-standalone",
+  "homepage": "https://github.com/Daniel15/babel-standalone",
+  "authors": [
+    "Daniel Lo Nigro <daniel@dan.cx>"
+  ],
+  "description": "Standalone build of Babel for use in non-Node.js environments, including browsers. Similar to the (now deprecated) babel-browser.",
+  "main": "babel.js",
+  "keywords": [
+    "babel",
+    "babeljs",
+    "6to5",
+    "transpile",
+    "transpiler"
+  ],
+  "license": "MIT",
+  "version": "6.14.0",
+  "_release": "6.14.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.14.0",
+    "commit": "17a7721247b4a068fbe51f06301ed49ba3215561"
+  },
+  "_source": "https://github.com/Daniel15/babel-standalone-bower.git",
+  "_target": "~6.14.0",
+  "_originalSource": "babel-standalone"
+}
