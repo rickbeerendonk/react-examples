@@ -22,6 +22,8 @@
       constructor(props) {
         super(props);
         this.state = {name: 'React'};
+
+        this.onChange = this.onChange.bind(this);
       }
       onChange(e) {
         this.setState({name: e.target.value});
@@ -29,7 +31,7 @@
       render() {
         return (
           <div>
-            <NameInput onChange={this.onChange.bind(this)} name={this.state.name} />
+            <NameInput onChange={this.onChange} name={this.state.name} />
             <Hello name={this.state.name} />                
           </div>
           );
