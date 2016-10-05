@@ -1,0 +1,28 @@
+{
+  "name": "react-examples",
+  "version": "1.0.0",
+  "description": "Examples for [React](http://facebook.github.io/react) and [ReactJS.NET](http://reactjs.net/).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/react-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.0",
+    "eslint-plugin-react": "^6.3.0",
+    "rimraf": "latest"
+  },
+  "dependencies": {
+    "babel-core": "5.8.38",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}

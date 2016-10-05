@@ -1,0 +1,21 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "component",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "babel site/src --out-dir site/lib --source-maps",
+    "watch": "babel site/src --out-dir site/lib --watch --source-maps"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1"
+  }
+}
