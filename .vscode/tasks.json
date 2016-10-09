@@ -16,6 +16,11 @@
       "args": ["install"]
     },
     {
+      "taskName": "open",
+      "args": ["run", "open", "--", "${file}"],
+      "isBuildCommand": true
+    },
+    {
       "taskName": "update",
       "args": ["update"]
     }

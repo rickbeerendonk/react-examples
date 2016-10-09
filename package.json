@@ -13,10 +13,11 @@
   },
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "scripts": {
-    "clean": "rimraf node_modules"
+    "clean": "rimraf node_modules",
+    "open": "open"
   },
   "devDependencies": {
-    "eslint": "^3.6.0",
+    "eslint": "^3.7.1",
     "eslint-plugin-react": "^6.3.0",
     "rimraf": "latest"
   },
