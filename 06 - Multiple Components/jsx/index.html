@@ -3,16 +3,17 @@
 <!-- Copyright © 2016 Rick Beerendonk -->
 <html>
 <head>
+  <meta charset="utf-8" />
   <meta name="author" content="Rick Beerendonk">
 
   <title>Multiple Components (jsx)</title>
   <script src="../../node_modules/react/dist/react.js"></script>
   <script src="../../node_modules/react-dom/dist/react-dom.js"></script>
-  <script src="../../node_modules/babel-core/browser.js"></script>
+  <script src="../../node_modules/babel-standalone/babel.js"></script>
 </head>
 <body>
   <div id="app"></div>
 
-  <script type="text/babel" src="app.jsx"></script>
+  <script src="app.jsx" type="text/babel" data-presets="react"></script>
 </body>
 </html>
