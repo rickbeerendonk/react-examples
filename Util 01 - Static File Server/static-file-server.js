@@ -5,7 +5,8 @@
 // - Install node.js (version 6 or later)
 // - Open command line / terminal and type: node static-file-server.js
 
-/* global require, process, console */
+/* global require, process */
+/* eslint-disable no-console */
 
 let fs = require("fs");
 let http = require("http");
