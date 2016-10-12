@@ -18,6 +18,11 @@
     {
       "taskName": "open",
       "args": ["run", "open", "--", "${file}"],
+      "isBuildCommand": false
+    },
+    {
+      "taskName": "openserver",
+      "args": ["run", "openserver", "--", "${fileDirname}"],
       "isBuildCommand": true
     },
     {

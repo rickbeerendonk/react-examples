@@ -14,7 +14,8 @@
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "scripts": {
     "clean": "rimraf node_modules",
-    "open": "open"
+    "open": "open",
+    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
     "eslint": "^3.7.1",
