@@ -1,6 +1,11 @@
-// To run:
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2016 Rick Beerendonk   !*/
+
+// TO RUN:
 // - Install node.js (version 6 or later)
 // - Open command line / terminal and type: node static-file-server.js
+
+/* global require, process, console */
 
 let fs = require("fs");
 let http = require("http");
