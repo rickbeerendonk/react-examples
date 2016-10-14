@@ -4,10 +4,11 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-function logEvent(value) {
+function logEvent(value, className) {
   var events = document.getElementById('events');
   var newEvent = document.createTextNode(value);
   var item = document.createElement('li');
+  item.className = className;
   item.appendChild(newEvent);
   events.appendChild(item);
 }
@@ -15,11 +16,11 @@ function logEvent(value) {
 var Hello = React.createClass({
   displayName: 'Hello',
   render: function () {
-    logEvent('render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state));
+    logEvent('render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state), 'rendering');
     return React.createElement('h1', null, 'Hello ', this.props.name, '! ', this.state.count, ' time');
   },
 
-  // Mounting
+  // Initializing
   getDefaultProps: function () {
     var result = null;
     logEvent('getDefaultProps(): ' + JSON.stringify(result));
@@ -30,35 +31,37 @@ var Hello = React.createClass({
     logEvent('getInitialState(): ' + JSON.stringify(result));
     return result;
   },
+
+  // Mounting
   componentWillMount: function () {
-    logEvent('componentWillMount()');
+    logEvent('componentWillMount()', 'mounting');
   },
   componentDidMount: function () {
-    logEvent('componentDidMount()');
+    logEvent('componentDidMount()', 'mounting');
   },
 
   // Updating
   componentWillReceiveProps: function (nextProps) {
-    logEvent('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')');
+    logEvent('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')', 'updating');
   },
   shouldComponentUpdate: function (nextProps, nextState) {
-    logEvent('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean');
+    logEvent('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean', 'updating');
     return true;
   },
   componentWillUpdate: function (nextProps, nextState) {
-    logEvent('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')');
+    logEvent('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')', 'updating');
   },
   componentDidUpdate: function (prevProps, prevState) {
-    logEvent('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')');
+    logEvent('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')', 'updating');
     if (prevProps.name === 'Number One') {
-      logEvent('-- new state --');
+      logEvent('-- new state --', 'action');
       this.setState({ count: this.state.count + 1 });
     }
   },
 
   // Unmounting
   componentWillUnmount: function () {
-    logEvent('componentWillUnmount()');
+    logEvent('componentWillUnmount()', 'unmounting');
   }
 });
 
@@ -70,7 +73,7 @@ var App = React.createClass({
     }
   },
   componentDidMount: function () {
-    logEvent('-- new prop --');
+    logEvent('-- new prop --', 'action');
     this.setState({ name: 'Number Two' });
   },
   render: function () {
@@ -78,11 +81,13 @@ var App = React.createClass({
   }
 });
 
+logEvent('-- add component --', 'action');
 ReactDOM.render(
   React.createElement(App),
   document.getElementById('app')
 );
 
+logEvent('-- remove component --', 'action');
 ReactDOM.unmountComponentAtNode(
   document.getElementById('app')
 );
