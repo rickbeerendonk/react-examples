@@ -8,6 +8,9 @@ class HelloMessage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
+
+    // Bind all non-react methods to this.
+    this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
     this.setState({ name: e.target.value });
@@ -15,11 +18,15 @@ class HelloMessage extends React.Component {
   render() {
     return (
       <div>
-        {/* Not controlled by React */}
-        <input onChange={this.onChange.bind(this)} defaultValue={this.state.name} />
+        <div>
+          Not controlled by React:
+          <input onChange={this.onChange} defaultValue={this.state.name} />
+        </div>
 
-        {/* Controlled by React */}
-        <input onChange={this.onChange.bind(this)} value={this.state.name} />
+        <div>
+          Controlled by React:
+          <input onChange={this.onChange} value={this.state.name} />
+        </div>
       </div>
     );
   }

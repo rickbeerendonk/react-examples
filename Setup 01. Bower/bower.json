@@ -12,7 +12,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "babel-standalone": "~6.15.0",
-    "react": "~15.3.1"
+    "babel-standalone": "~6.19.0",
+    "react": "~15.4.2"
   }
 }

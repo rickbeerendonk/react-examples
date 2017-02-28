@@ -1,7 +1,7 @@
 {
   "name": "react-examples",
   "version": "1.0.0",
-  "description": "Examples for [React](http://facebook.github.io/react) and [ReactJS.NET](http://reactjs.net/).",
+  "description": "Examples for [React](http://reactjs.com) and [ReactJS.NET](http://reactjs.net/).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
@@ -18,13 +18,13 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
-    "eslint": "^3.12.1",
-    "eslint-plugin-react": "^6.8.0",
+    "eslint": "^3.16.1",
+    "eslint-plugin-react": "^6.10.0",
     "rimraf": "latest"
   },
   "dependencies": {
-    "babel-standalone": "6.19.0",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "babel-standalone": "6.23.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }

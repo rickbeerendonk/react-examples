@@ -17,7 +17,7 @@ class GreetingEditor extends React.Component {
   render() {
     return (
       <div>
-        <input onChange={this.onChange } value={this.state.name} />
+        <input onChange={this.onChange} value={this.state.name} />
         <h1>Hello {this.state.name}!</h1>
       </div>
     );

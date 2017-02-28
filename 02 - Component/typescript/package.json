@@ -13,12 +13,12 @@
     "watch": "./node_modules/typescript/bin/tsc --watch"
   },
   "dependencies": {
-    "@types/react": "^0.14.37",
-    "@types/react-dom": "^0.14.17",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "@types/react": "^15.0.12",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "typescript": "^2.0.3"
+    "typescript": "^2.2.1"
   }
 }

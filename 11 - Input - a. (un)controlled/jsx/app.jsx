@@ -14,11 +14,15 @@ var HelloMessage = React.createClass({
   render() {
     return (
       <div>
-        {/* Not controlled by React */}
-        <input onChange={this.onChange} defaultValue={this.state.name} />
+        <div>
+          Not controlled by React:
+          <input onChange={this.onChange} defaultValue={this.state.name} />
+        </div>
 
-        {/* Controlled by React */}
-        <input onChange={this.onChange} value={this.state.name} />
+        <div>
+          Controlled by React:
+          <input onChange={this.onChange} value={this.state.name} />
+        </div>
       </div>
     );
   }
