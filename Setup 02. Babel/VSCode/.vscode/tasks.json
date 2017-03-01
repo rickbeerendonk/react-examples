@@ -10,7 +10,7 @@
             "taskName": "watch",
             "suppressTaskName": true,
             "isBuildCommand": true,
-            "isWatching": true
+            "isBackground": true
         }
     ]
 }

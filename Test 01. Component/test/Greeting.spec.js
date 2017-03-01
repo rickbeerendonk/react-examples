@@ -1,4 +1,7 @@
-import HelloReact from '../src/HelloReact.jsx'
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2017 Rick Beerendonk   !*/
+
+import Greeting from '../src/Greeting.jsx'
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
@@ -7,12 +10,12 @@ import expectJSX from 'expect-jsx';
 
 expect.extend(expectJSX);
 
-describe('HelloReact', () => {
-  it('should render Hello React in a H1', () => {
-    const expected = '<h1>\n  Hello React!\n</h1>';
+describe('Greeting', () => {
+  it('should render Hello World in a H1', () => {
+    const expected = '<h1>\n  Hello World!\n</h1>';
     
     const renderer = TestUtils.createRenderer();
-    renderer.render(<HelloReact />);
+    renderer.render(<Greeting />);
     const actual = renderer.getRenderOutput();
     
     expect(actual).toEqualJSX(expected);

@@ -1,4 +1,10 @@
-"use strict";
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2017 Rick Beerendonk   !*/
+
+/* global React, ReactDOM */
+/* eslint react/prop-types:"off" */
+
+'use strict';
 
 class HelloReact extends React.Component {
   render() {
@@ -6,7 +12,7 @@ class HelloReact extends React.Component {
       <h1>Hello React!</h1>
       );
   }
-};
+}
 
 ReactDOM.render(
   <HelloReact />,
