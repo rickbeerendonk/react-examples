@@ -1,0 +1,27 @@
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2017 Rick Beerendonk   !*/
+
+.item {
+  background: orange;
+  margin: 1px;
+  height: 100px;
+  width: 100px;
+};
+
+.example-enter {
+  height: 0;
+}
+
+.example-enter.example-enter-active {
+  height: 100px;
+  transition: height 500ms ease-out;
+}
+
+.example-leave {
+  height: 100px;
+}
+
+.example-leave.example-leave-active {
+  height: 0;
+  transition: height 500ms ease-in;
+}	  

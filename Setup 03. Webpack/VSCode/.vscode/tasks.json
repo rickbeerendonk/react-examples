@@ -14,7 +14,7 @@
       "taskName": "webpack dev",
       "suppressTaskName": true,
       "isBuildCommand": true,
-      "isWatching": true
+      "isBackground": true
     }
   ]
 }

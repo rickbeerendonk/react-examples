@@ -6,15 +6,14 @@
   ],
   "ignore": [],
   "homepage": "https://github.com/facebook/react-bower",
-  "version": "15.3.1",
-  "_release": "15.3.1",
+  "version": "15.4.2",
+  "_release": "15.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "v15.3.1",
-    "commit": "4a2f923c09b6a90836589827ed2857d28a180717"
+    "tag": "v15.4.2",
+    "commit": "fb585ecef0da6d49b01c8f7621f7a56dee52aab0"
   },
   "_source": "https://github.com/facebook/react-bower.git",
-  "_target": "~15.3.1",
-  "_originalSource": "react",
-  "_direct": true
+  "_target": "~15.4.2",
+  "_originalSource": "react"
 }

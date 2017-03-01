@@ -1,12 +1,13 @@
-'use strict';
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2017 Rick Beerendonk   !*/
 
-/*eslint no-unused-vars: 0*/
+'use strict';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloReact from './HelloReact.jsx';
+import Greeting from './Greeting.jsx';
 
 ReactDOM.render(
-  <HelloReact />,
+  <Greeting />,
   document.getElementById('app')
   );

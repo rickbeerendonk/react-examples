@@ -14,14 +14,14 @@
     "transpiler"
   ],
   "license": "MIT",
-  "version": "6.14.0",
-  "_release": "6.14.0",
+  "version": "6.19.0",
+  "_release": "6.19.0",
   "_resolution": {
     "type": "version",
-    "tag": "v6.14.0",
-    "commit": "17a7721247b4a068fbe51f06301ed49ba3215561"
+    "tag": "v6.19.0",
+    "commit": "46f257874a944fa63b648df6cd1570458330940d"
   },
   "_source": "https://github.com/Daniel15/babel-standalone-bower.git",
-  "_target": "~6.14.0",
+  "_target": "~6.19.0",
   "_originalSource": "babel-standalone"
 }

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "none",
+        "target": "es3",
+        "jsx": "react",
+        "noLib": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "outDir": "./site/lib/",
+        "sourceMap": true
+    },
+    "files": [
+        "./site/src/app.tsx"
+    ]
+}
