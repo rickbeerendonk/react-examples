@@ -4,23 +4,22 @@
 /* global React, ReactDOM */
 
 var ClickMe = React.createClass({
-  displayName: 'ClickMe',
   getInitialState: function () {
     return { count: 0 };
   },
   onClick: function () {
-    this.setState({ count: this.state.count + 1 });
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   },
   render: function () {
-    return React.createElement('a', { onClick: this.onClick },
-      'This link has been clicked ',
-      this.state.count,
-      ' times'
+    return (
+      <a onClick={this.onClick}>
+        {'This link has been clicked ' + this.state.count + ' times'}
+      </a>
     );
   }
 });
 
 ReactDOM.render(
-  React.createElement(ClickMe),
+  <ClickMe />,
   document.getElementById('app')
 );

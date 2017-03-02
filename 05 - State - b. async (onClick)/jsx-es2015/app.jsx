@@ -12,7 +12,7 @@ class ClickMe extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
   onClick() {
-    this.setState({ count: this.state.count + 1 });
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   }
   render() {
     return (
