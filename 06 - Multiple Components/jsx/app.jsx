@@ -5,9 +5,12 @@
 /* eslint react/prop-types:"off" */
 
 var EditBox = React.createClass({
+  onChange(e) {
+    this.props.onChange(e.target.value);
+  },
   render: function () {
     return (
-      <input onChange={this.props.onChange} value={this.props.name} />
+      <input onChange={this.onChange} value={this.props.name} />
     );
   }
 });
@@ -24,8 +27,8 @@ var GreetingEditor = React.createClass({
   getInitialState: function () {
     return { name: 'World' };
   },
-  onChange: function (e) {
-    this.setState({ name: e.target.value });
+  onChange: function (newName) {
+    this.setState({ name: newName });
   },
   render: function () {
     return (

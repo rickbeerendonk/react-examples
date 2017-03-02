@@ -6,8 +6,11 @@
 
 var EditBox = React.createClass({
   displayName: 'EditBox',
+  onChange(e) {
+    this.props.onChange(e.target.value);
+  },
   render: function () {
-    return React.createElement('input', { onChange: this.props.onChange, value: this.props.name });
+    return React.createElement('input', { onChange: this.onChange, value: this.props.name });
   }
 });
 
@@ -23,8 +26,8 @@ var GreetingEditor = React.createClass({
   getInitialState: function () {
     return { name: 'World' };
   },
-  onChange: function (e) {
-    this.setState({ name: e.target.value });
+  onChange: function (newName) {
+    this.setState({ name: newName });
   },
   render: function () {
     return React.createElement('div', null,

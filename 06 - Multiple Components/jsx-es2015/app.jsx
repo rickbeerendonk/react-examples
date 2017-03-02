@@ -5,7 +5,7 @@
 /* eslint react/prop-types:"off" */
 
 const EditBox = ({onChange, name}) => (
-  <input onChange={onChange} value={name} />
+  <input onChange={e => onChange(e.target.value)} value={name} />
 );
 
 const Greeting = ({name}) => (
@@ -19,8 +19,8 @@ class GreetingEditor extends React.Component {
 
     this.onChange = this.onChange.bind(this);
   }
-  onChange(e) {
-    this.setState({ name: e.target.value });
+  onChange(newName) {
+    this.setState({ name: newName });
   }
   render() {
     return (
