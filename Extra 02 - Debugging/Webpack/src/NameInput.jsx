@@ -8,6 +8,8 @@
 
 import React from 'react';
 
-export default ({onChange, name}) => (
+const NameInput = ({onChange, name}) => (
   <input onChange={onChange} value={name} />
 );
+
+export default NameInput;

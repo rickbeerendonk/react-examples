@@ -8,6 +8,8 @@
 
 import React from 'react';
 
-export default ({name}) => (
+const Hello = ({name}) => (
   <h1>Hello {name}!</h1>
 );
+
+export default Hello;
