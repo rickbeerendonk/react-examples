@@ -1,0 +1,17 @@
+{
+  "name": "zeit-next-demo",
+  "version": "1.0.0",
+  "description": "Server Side Rendering with Zeit Next",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "next": "^1.2.3"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
