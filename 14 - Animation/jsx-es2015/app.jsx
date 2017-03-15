@@ -20,10 +20,10 @@ class App extends React.Component {
 
   handleAdd() {
     let newLastId = this.state.lastId + 1;
-    this.setState({
-      items: [...this.state.items, newLastId],
+    this.setState(prevState => ({
+      items: [...prevState.items, newLastId],
       lastId: newLastId
-    });
+    }));
   }
 
   handleRemove(key) {
