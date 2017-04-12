@@ -1,10 +1,9 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
-
-const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+import React from 'react';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -40,7 +39,7 @@ class App extends React.Component {
       <div>
         <button onClick={this.handleAdd}>Add</button>
         <hr />
-        <ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+        <CSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
           {this.state.items.map(key => {
             return (
               <div
@@ -51,13 +50,10 @@ class App extends React.Component {
               </div>
             );
           })}
-        </ReactCSSTransitionGroup>
+        </CSSTransitionGroup>
       </div>
     )
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+export default App;

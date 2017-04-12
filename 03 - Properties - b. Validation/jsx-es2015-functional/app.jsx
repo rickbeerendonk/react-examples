@@ -1,13 +1,13 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global React, ReactDOM, PropTypes */
 
 const Greeting = props => (
   <h1>Hello {props.name}!</h1>
 );
 Greeting.propTypes = {
-  name: React.PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
 };
 
 ReactDOM.render(

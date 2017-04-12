@@ -4,7 +4,7 @@
 import Greeting from '../src/Greeting.jsx'
 
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import expect from 'expect';
 import expectJSX from 'expect-jsx';
 
@@ -14,7 +14,7 @@ describe('Greeting', () => {
   it('should render Hello World in a H1', () => {
     const expected = '<h1>\n  Hello World!\n</h1>';
     
-    const renderer = TestUtils.createRenderer();
+    const renderer = createRenderer();
     renderer.render(<Greeting />);
     const actual = renderer.getRenderOutput();
     

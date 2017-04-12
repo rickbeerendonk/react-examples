@@ -1,11 +1,11 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global React, ReactDOM, PropTypes */
 
 var Greeting = React.createClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
   },
   render: function () {
     return (

@@ -1,13 +1,13 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
 var List = React.createClass({
   displayName: 'List',
   propTypes: {
-    children: React.PropTypes.element.isRequired
+    children: PropTypes.element.isRequired
   },
   render: function () {
     return (

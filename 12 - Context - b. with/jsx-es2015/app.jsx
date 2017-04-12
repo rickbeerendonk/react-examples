@@ -1,7 +1,7 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
 class Three extends React.Component {
@@ -10,7 +10,7 @@ class Three extends React.Component {
   }
 }
 Three.contextTypes = {
-  color: React.PropTypes.string
+  color: PropTypes.string
 }
 
 class Two extends React.Component {
@@ -28,7 +28,7 @@ class One extends React.Component {
   }
 }
 One.childContextTypes = {
-  color: React.PropTypes.string
+  color: PropTypes.string
 };
 
 ReactDOM.render(

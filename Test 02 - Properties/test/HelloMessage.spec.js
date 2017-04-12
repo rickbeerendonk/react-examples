@@ -4,7 +4,7 @@
 import HelloMessage from '../src/HelloMessage.jsx'
 
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { createRenderer } from 'react-test-renderer/shallow';
 import expect from 'expect';
 import expectJSX from 'expect-jsx';
 
@@ -14,7 +14,7 @@ describe('HelloMessage', () => {
   it('should render name in message', () => {
     const expected = 'Hello React!';
     
-    const renderer = TestUtils.createRenderer();
+    const renderer = createRenderer();
     renderer.render(<HelloMessage name="React" />);
     const actual = renderer.getRenderOutput();
     
