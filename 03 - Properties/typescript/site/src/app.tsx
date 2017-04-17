@@ -8,7 +8,7 @@ interface IGreeting {
   name: string
 }
 
-class Greeting extends React.Component<IGreeting, {}> {
+class Greeting extends React.Component<IGreeting, undefined> {
   render() {
     return (
       <h1>Hello {this.props.name}!</h1>
