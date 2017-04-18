@@ -3,11 +3,15 @@
 
 /* global React, ReactDOM */
 
-const Greeting = () => (
-  <input onChange={e => alert(`Event handled.
+const Greeting = () => { 
+  let changed = (e) => alert(`Event handled.
 Target: ${e.target}
-Value: ${e.target.value}`)} value='Hello World!' />
-);
+Value: ${e.target.value}`);
+
+  return (
+    <input onChange={changed} value='Hello World!' />
+  )
+};
 
 ReactDOM.render(
   <Greeting />,
