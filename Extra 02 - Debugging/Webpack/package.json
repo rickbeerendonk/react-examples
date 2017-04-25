@@ -17,11 +17,11 @@
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
   },
   "scripts": {
     "build": "webpack -d --progress",
-    "dev-server": "webpack-dev-server --content-base lib/"
+    "dev-server": "webpack-dev-server --content-base site/"
   }
 }
