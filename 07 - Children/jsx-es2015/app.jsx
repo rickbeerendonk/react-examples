@@ -16,9 +16,10 @@ class List extends React.Component {
   render() {
     return (
       <ul>{
-        this.props.children.map(function (child, i) {
-          return <li key={i}>{child}</li>
-        })
+        React.Children.map(
+          this.props.children, 
+          (child, i) => <li key={i}>{child}</li>
+        )
       }</ul>
     );
   }

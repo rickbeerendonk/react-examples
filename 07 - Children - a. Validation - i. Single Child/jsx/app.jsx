@@ -11,9 +11,12 @@ var List = React.createClass({
   render: function () {
     return (
       <ul>{
-        this.props.children.map(function (child, i) {
-          return <li key={i}>{child}</li>
-        })
+        React.Children.map(
+          this.props.children, 
+          function (child, i) {
+            return <li key={i}>{child}</li>
+          }
+        )
       }</ul>
     );
   }
