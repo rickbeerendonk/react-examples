@@ -9,7 +9,7 @@ let Post = ({title}) => <li>{title}</li>;
 class Posts extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { posts: [], error: 'test' };
+    this.state = { posts: [], error: '' };
   }
   componentDidMount() {
     fetch('http://jsonplaceholder.typicode.com/posts')
@@ -25,9 +25,9 @@ class Posts extends React.Component {
   render() {
     return (
       <div>
-        <div style={{color: 'red'}}>{this.state.error}</div>
+        {this.state.error ? <div style={{color: 'red'}}>{this.state.error}</div> : null}
         <ul>{
-          this.state.posts.map((post, i) => <Post key={i} title={post.title} />)
+          this.state.posts.map((post) => <Post key={post.id} title={post.title} />)
         }</ul>
       </div>
     );
