@@ -1,0 +1,171 @@
+exports[`test renders 0 snapshot (enzyme) 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <a
+    onClick={[Function]}>
+    This link has been clicked 0 times
+</a>,
+  "nodes": Array [
+    <a
+      onClick={[Function]}>
+      This link has been clicked 0 times
+</a>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <ClickMe />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": ClickMe {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "onClick": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "count": 0,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <a
+          onClick={[Function]}>
+          This link has been clicked 0 times
+</a>,
+        "_debugID": 2,
+        "_renderedOutput": <a
+          onClick={[Function]}>
+          This link has been clicked 0 times
+</a>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ClickMe />,
+}
+`;
+
+exports[`test renders 0 snapshot (react-test-renderer) 1`] = `
+<a
+  onClick={[Function]}>
+  This link has been clicked 0 times
+</a>
+`;
+
+exports[`test renders 1 after click snapshot (enzyme) 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <a
+    onClick={[Function]}>
+    This link has been clicked 1 times
+</a>,
+  "nodes": Array [
+    <a
+      onClick={[Function]}>
+      This link has been clicked 1 times
+</a>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <ClickMe />,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": ClickMe {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "onClick": [Function],
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "count": 1,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <a
+          onClick={[Function]}>
+          This link has been clicked 1 times
+</a>,
+        "_debugID": 4,
+        "_renderedOutput": <a
+          onClick={[Function]}>
+          This link has been clicked 1 times
+</a>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ClickMe />,
+}
+`;
+
+exports[`test renders 1 after click snapshot (react-test-renderer) 1`] = `
+<a
+  onClick={[Function]}>
+  This link has been clicked 1 times
+</a>
+`;
