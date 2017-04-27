@@ -20,8 +20,8 @@ class Hello extends React.Component {
     logEvent(`constructor(props: ${JSON.stringify(props)}, context: ${JSON.stringify(context)}) - state: ${JSON.stringify(this.state)}`);
   }
   render() {
-    logEvent(`render() - props: ${JSON.stringify(this.props)} state: ${JSON.stringify(this.state)}`, 'rendering');
-    return (<h1>Hello {this.props.name}! ({this.state.count}time)</h1>);
+    logEvent(`render() - props: ${JSON.stringify(this.props)} state: ${JSON.stringify(this.state)} context: ${JSON.stringify(this.context)}`, 'rendering');
+    return (<h1>Hello {this.props.name}! ({this.state.count} time) ({this.context.value} = context)</h1>);
   }
 
   // Mounting
