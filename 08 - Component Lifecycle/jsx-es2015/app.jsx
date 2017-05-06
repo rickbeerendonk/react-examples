@@ -5,9 +5,9 @@
 /* eslint react/prop-types:"off" */
 
 function logEvent(value, className) {
-  var events = document.getElementById('events');
-  var newEvent = document.createTextNode(value);
-  var item = document.createElement('li');
+  let events = document.getElementById('events');
+  let newEvent = document.createTextNode(value);
+  let item = document.createElement('li');
   item.className = className;
   item.appendChild(newEvent);
   events.appendChild(item);
