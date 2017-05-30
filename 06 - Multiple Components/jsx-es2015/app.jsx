@@ -20,7 +20,7 @@ class GreetingEditor extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   onChange(newName) {
-    this.setState({ name: newName });
+    this.setState(() => ({ name: newName }));
   }
   render() {
     return (
