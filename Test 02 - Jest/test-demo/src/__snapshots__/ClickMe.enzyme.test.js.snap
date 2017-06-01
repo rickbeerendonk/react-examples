@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 0 snapshot (enzyme) 1`] = `
+<a
+  onClick={[Function]}
+>
+  This link has been clicked 0 times
+</a>
+`;
+
+exports[`renders 1 after click snapshot (enzyme) 1`] = `
+<a
+  onClick={[Function]}
+>
+  This link has been clicked 1 times
+</a>
+`;

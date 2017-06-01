@@ -1,7 +1,9 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Greeting from './Greeting';
+
+/* eslint-env jest */
 
 /// Enzyme ///
 
@@ -21,14 +23,5 @@ it('renders hello world message (enzyme)', () => {
 
 it('renders hello world snapshot (enzyme)', () => {
   const wrapper = shallow(<Greeting />);
-  expect(wrapper).toMatchSnapshot();
+  expect(toJson(wrapper)).toMatchSnapshot();
 });
-
-/// React Test Renderer ///
-
-it('renders hello world snapshot (react-test-renderer)', () => {
-  const component = renderer.create(<Greeting />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
