@@ -8,6 +8,6 @@ import React from 'react';
 /* eslint react/prop-types:"off" */
 /* eslint react/display-name:"off" */
 
-export default ({name}) => (
-  <h1>Hello {name}!</h1>
+export default ({onChange, name}) => (
+  <input onChange={e => onChange(e.target.value)} value={name} />
 );

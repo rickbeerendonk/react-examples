@@ -18,15 +18,15 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-react": "^6.10.3",
+    "eslint": "^4.0.0",
+    "eslint-plugin-react": "^7.1.0",
     "rimraf": "^2.6.1"
   },
   "dependencies": {
-    "babel-standalone": "6.24.0",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-transition-group": "^1.1.2"
+    "babel-standalone": "6.25.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-transition-group": "^1.2.0"
   }
 }

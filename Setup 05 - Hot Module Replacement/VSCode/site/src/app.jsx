@@ -5,9 +5,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeting from './Greeting.jsx';
+import GreetingEditor from './GreetingEditor.jsx';
 
 ReactDOM.render(
-  <Greeting />,
+  <GreetingEditor />,
   document.getElementById('app')
-  );
+);
