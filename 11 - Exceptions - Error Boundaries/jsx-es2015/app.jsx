@@ -37,9 +37,8 @@ class GreetingEditor extends React.Component {
 }
 
 class ErrorBoundary extends React.Component {
-  state = {error: null};
-  // TODO Rename before final v16 release:
-  unstable_handleError(error) {
+  state = {error: null, info: null};
+  componentDidCatch(error, info) {
     this.setState({error});
   }
   render() {
@@ -48,6 +47,8 @@ class ErrorBoundary extends React.Component {
         <div style={{color: 'red'}}>
           <h1>{this.state.error.message}</h1>
           <p>{this.state.error.stack}</p>
+          <h1>Info</h1>
+          <p>{this.state.info}</p>
         </div>
       );
     }
