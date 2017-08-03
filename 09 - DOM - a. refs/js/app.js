@@ -3,15 +3,14 @@
 
 /* global React, ReactDOM */
 
-var HelloWorld = React.createClass({
-  displayName: 'HelloWorld',
-  componentDidMount: function () {
+class HelloWorld extends React.Component {
+  componentDidMount() {
     this.myH1.innerHTML = 'Hello <i>React</i>!!!';
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement('h1', { ref: (ref) => this.myH1 = ref }, 'Hello World!');
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(HelloWorld),

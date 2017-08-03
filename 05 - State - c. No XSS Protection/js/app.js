@@ -3,15 +3,17 @@
 
 /* global React, ReactDOM */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  getInitialState: function () {
-    return { name: 'World' };
-  },
-  onChange: function (e) {
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'World' };
+
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(e) {
     this.setState({ name: e.target.value });
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement(
       'div',
       null,
@@ -19,7 +21,7 @@ var Greeting = React.createClass({
       React.createElement('h1', null, 'Hello ', React.createElement('span', { dangerouslySetInnerHTML: { __html: this.state.name } }), '!')
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(Greeting),

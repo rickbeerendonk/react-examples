@@ -3,15 +3,18 @@
 
 /* global React, ReactDOM */
 
-var GreetingEditor = React.createClass({
-  displayName: 'GreetingEditor',
-  getInitialState: function () {
-    return { name: 'World' };
-  },
-  onChange: function (e) {
+class GreetingEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'World' };
+
+    // Bind all non-react methods to this.
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(e) {
     this.setState({ name: e.target.value });
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement(
       'div',
       null,
@@ -19,7 +22,7 @@ var GreetingEditor = React.createClass({
       React.createElement('h1', null, 'Hello ', this.state.name, '!')
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(GreetingEditor),

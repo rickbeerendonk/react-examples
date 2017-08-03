@@ -4,13 +4,17 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var HelloMessage = React.createClass({
-  getInitialState: function () {
-    return { name: 'World' };
-  },
+class HelloMessage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'World' };
+
+    // Bind all non-react methods to this.
+    this.onChange = this.onChange.bind(this);
+  }
   onChange(e) {
     this.setState({ name: e.target.value });
-  },
+  }
   render() {
     return React.createElement('div', null,
       React.createElement('div', null,
@@ -26,7 +30,7 @@ var HelloMessage = React.createClass({
       )
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(HelloMessage),

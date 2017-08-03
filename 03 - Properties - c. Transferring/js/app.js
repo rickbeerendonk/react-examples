@@ -4,12 +4,11 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var ImportantAnchor = React.createClass({
-  displayName: 'ImportantAnchor',
-  render: function render() {
+class ImportantAnchor extends React.Component {
+  render() {
     return React.createElement('a', this.props, '!!! ', this.props.children, ' !!!');
   }
-});
+}
 
 ReactDOM.render(React.createElement(
   ImportantAnchor,

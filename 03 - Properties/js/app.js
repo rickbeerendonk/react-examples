@@ -4,12 +4,11 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  render: function () {
+class Greeting extends React.Component {
+  render() {
     return React.createElement('h1', null, 'Hello ', this.props.name, '!');
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(Greeting, { name: 'World' }),

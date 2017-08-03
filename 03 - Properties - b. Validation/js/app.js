@@ -3,15 +3,14 @@
 
 /* global React, ReactDOM, PropTypes */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  propTypes: {
-    name: PropTypes.string.isRequired
-  },
-  render: function () {
+class Greeting extends React.Component {
+  render() {
     return React.createElement('h1', null, 'Hello ', this.props.name, '!');
   }
-});
+}
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
+};
 
 ReactDOM.render(
   React.createElement(Greeting, { name: 'World' }),

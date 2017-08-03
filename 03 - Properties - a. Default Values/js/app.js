@@ -4,15 +4,12 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  getDefaultProps: function () {
-    return { name: 'World' };
-  },
-  render: function () {
+class Greeting extends React.Component {
+  render() {
     return React.createElement('h1', null, 'Hello ', this.props.name, '!');
   }
-});
+}
+Greeting.defaultProps = { name: 'World' };
 
 ReactDOM.render(
   React.createElement(Greeting),

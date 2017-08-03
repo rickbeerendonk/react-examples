@@ -4,38 +4,29 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var EditBox = React.createClass({
-  displayName: 'EditBox',
-  onChange(e) {
-    this.props.onChange(e.target.value);
-  },
-  render: function () {
-    return React.createElement('input', { onChange: this.onChange, value: this.props.name });
-  }
-});
+const EditBox = ({onChange, name}) =>
+  React.createElement('input', { onChange: e => onChange(e.target.value), value: name });
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  render: function () {
-    return React.createElement('h1', null, 'Hello ', this.props.name, '!');
-  }
-});
+const Greeting = ({name}) =>
+  React.createElement('h1', null, 'Hello ', name, '!');
 
-var GreetingEditor = React.createClass({
-  displayName: 'GreetingEditor',
-  getInitialState: function () {
-    return { name: 'World' };
-  },
-  onChange: function (newName) {
-    this.setState({ name: newName });
-  },
-  render: function () {
+class GreetingEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'World' };
+
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(newName) {
+    this.setState(() => ({ name: newName }));
+  }
+  render() {
     return React.createElement('div', null,
       React.createElement(EditBox, { onChange: this.onChange, name: this.state.name }),
       React.createElement(Greeting, { name: this.state.name })
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(GreetingEditor),

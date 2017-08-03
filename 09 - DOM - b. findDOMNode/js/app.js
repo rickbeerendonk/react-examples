@@ -4,15 +4,14 @@
 /* global React, ReactDOM */
 /* eslint react/no-find-dom-node:"off" */
 
-var HelloWorld = React.createClass({
-  displayName: 'HelloWorld',
-  componentDidMount: function () {
+class HelloWorld extends React.Component {
+  componentDidMount() {
     ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement('h1', null, 'Hello World!');
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(HelloWorld),

@@ -4,16 +4,14 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  render: function () {
+class Greeting extends React.Component {
+  render() {
     return React.createElement('i', null, 'Hello ', this.props.name, '!');
   }
-});
+}
 
-var List = React.createClass({
-  displayName: 'List',
-  render: function () {
+class List extends React.Component {
+  render() {
     return (
       React.createElement('ul', null,
         React.Children.map(
@@ -25,7 +23,7 @@ var List = React.createClass({
       )
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(List, null,

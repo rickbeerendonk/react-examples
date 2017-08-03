@@ -4,12 +4,8 @@
 /* global React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
-var List = React.createClass({
-  displayName: 'List',
-  propTypes: {
-    children: PropTypes.element.isRequired
-  },
-  render: function () {
+class List extends React.Component {
+  render() {
     return (
       React.createElement('ul', null,
         React.Children.map(
@@ -21,7 +17,10 @@ var List = React.createClass({
       )
     );
   }
-});
+}
+List.propTypes = {
+  children: PropTypes.element.isRequired
+};
 
 ReactDOM.render(
   React.createElement(List, null,

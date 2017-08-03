@@ -3,15 +3,14 @@
 
 /* global React, ReactDOM */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  onChange: function (e) {
+class Greeting extends React.Component {
+  onChange(e) {
     alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement('input', { onChange: this.onChange, value: 'Hello World!' });
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(Greeting),

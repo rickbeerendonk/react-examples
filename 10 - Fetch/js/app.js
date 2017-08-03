@@ -4,18 +4,13 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Post = React.createClass({
-  displayName: 'Post',
-  render: function () {
-    return React.createElement('li', null, this.props.title);
-  }
-});
+let Post = ({title}) => React.createElement('li', null, title);
 
-var Posts = React.createClass({
-  displayName: 'Posts',
-  getInitialState: function () {
-    return { posts: [] };
-  },
+class Posts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { posts: [], error: '' };
+  }
   componentDidMount() {
     var self = this;
     var xhr = new XMLHttpRequest();
@@ -26,7 +21,7 @@ var Posts = React.createClass({
     };
     xhr.open('GET', 'http://jsonplaceholder.typicode.com/posts', true);
     xhr.send();
-  },
+  }
   render() {
     return (
       React.createElement('ul', null,
@@ -36,7 +31,7 @@ var Posts = React.createClass({
       )
     );
   }
-});
+}
 
 ReactDOM.render(
   React.createElement(Posts),

@@ -4,22 +4,26 @@
 /* global Babel, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var JsxCompiler = React.createClass({
-  displayName: 'JsxCompiler',
-  jsx: 'var HelloMessage = React.createClass({\n\
+class JsxCompiler extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { code: '' };
+
+    this.jsx = `var HelloMessage = React.createClass({\n\
   render: function() {\n\
     return <div>Hello {this.props.name}</div>;\n\
   }\n\
 });\n\
 \n\
-React.render(<HelloMessage name="John" />, mountNode);',
-  getInitialState: function () {
-    return { code: '' };
-  },
-  onChange: function (e) {
+React.render(<HelloMessage name="John" />, mountNode);`;
+
+    // Bind all non-react methods to this.
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(e) {
     this.setState({ code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] }).code });
-  },
-  render: function () {
+  }
+  render() {
     return React.createElement(
       'div',
       null,
@@ -27,7 +31,7 @@ React.render(<HelloMessage name="John" />, mountNode);',
       React.createElement('textarea', { style: styles.textarea, readOnly: 'readOnly', value: this.state.code })
     );
   }
-});
+}
 
 var styles = {
   textarea: {

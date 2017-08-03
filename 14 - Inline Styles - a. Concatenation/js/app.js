@@ -4,13 +4,12 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
-  displayName: 'Greeting',
-  render: function () {
+class Greeting extends React.Component {
+  render() {
     return React.createElement('h1', { style: Object.assign({}, styles.header, this.props.style) }, 'Hello World!');
     /* React Native: return React.createElement('h1', {style: [styles.header, this.props.style]}, 'Hello World!'); */
   }
-});
+}
 
 var styles = {
   header: {
