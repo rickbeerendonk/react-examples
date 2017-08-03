@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
+var Greeting = createReactClass({
   render: function () {
     return (
       <h1 style={styles.header}>Hello World!</h1>

@@ -1,7 +1,7 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
 function logEvent(value, className) {
@@ -13,7 +13,7 @@ function logEvent(value, className) {
   events.appendChild(item);
 }
 
-var Hello = React.createClass({
+var Hello = createReactClass({
   render: function () {
     logEvent('render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state), 'rendering');
     return (<h1>Hello {this.props.name}! ({this.state.count}time)</h1>);
@@ -64,7 +64,7 @@ var Hello = React.createClass({
   }
 });
 
-var App = React.createClass({
+var App = createReactClass({
   getInitialState: function () {
     return {
       name: 'Number One'

@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/no-find-dom-node:"off" */
 
-var HelloWorld = React.createClass({
+var HelloWorld = createReactClass({
   componentDidMount: function () {
     ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
   },

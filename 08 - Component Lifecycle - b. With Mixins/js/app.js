@@ -1,7 +1,7 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
 function logEvent(value, className) {
@@ -97,7 +97,7 @@ var Mixin2 = {
   }
 };
 
-var Hello = React.createClass({
+var Hello = createReactClass({
   displayName: 'Hello',
   mixins: [Mixin1, Mixin2],
   render: function () {
@@ -148,7 +148,7 @@ var Hello = React.createClass({
   }
 });
 
-var App = React.createClass({
+var App = createReactClass({
   displayName: 'App',
   getInitialState: function () {
     return {

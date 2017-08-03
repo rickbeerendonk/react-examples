@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var Greeting = React.createClass({
+var Greeting = createReactClass({
   render: function () {
     return (
       <i>Hello {this.props.name}!</i>
@@ -12,7 +12,7 @@ var Greeting = React.createClass({
   }
 });
 
-var List = React.createClass({
+var List = createReactClass({
   render: function () {
     return (
       <ul>{

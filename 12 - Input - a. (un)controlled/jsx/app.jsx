@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var HelloMessage = React.createClass({
+var HelloMessage = createReactClass({
   getInitialState: function () {
     return { name: 'World' };
   },

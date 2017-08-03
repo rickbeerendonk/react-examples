@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-/* global Babel, React, ReactDOM */
+/* global Babel, createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var JsxCompiler = React.createClass({
+var JsxCompiler = createReactClass({
   jsx: 'var HelloMessage = React.createClass({\n\
   render: function() {\n\
     return <div>Hello {this.props.name}</div>;\n\

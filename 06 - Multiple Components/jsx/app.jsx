@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-var EditBox = React.createClass({
+var EditBox = createReactClass({
   onChange(e) {
     this.props.onChange(e.target.value);
   },
@@ -15,7 +15,7 @@ var EditBox = React.createClass({
   }
 });
 
-var Greeting = React.createClass({
+var Greeting = createReactClass({
   render: function () {
     return (
       <h1>Hello {this.props.name}!</h1>
@@ -23,7 +23,7 @@ var Greeting = React.createClass({
   }
 });
 
-var GreetingEditor = React.createClass({
+var GreetingEditor = createReactClass({
   getInitialState: function () {
     return { name: 'World' };
   },

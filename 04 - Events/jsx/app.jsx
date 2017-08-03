@@ -1,9 +1,9 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 
-var Greeting = React.createClass({
+var Greeting = createReactClass({
   onChange: function (e) {
     alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
   },

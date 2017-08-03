@@ -1,7 +1,7 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
 function logEvent(value, className) {
@@ -97,7 +97,7 @@ var Mixin2 = {
   }
 };
 
-var Hello = React.createClass({
+var Hello = createReactClass({
   mixins: [Mixin1, Mixin2],
   render: function () {
     logEvent('Component: render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state), 'rendering');
@@ -147,7 +147,7 @@ var Hello = React.createClass({
   }
 });
 
-var App = React.createClass({
+var App = createReactClass({
   getInitialState: function () {
     return {
       name: 'Number One'

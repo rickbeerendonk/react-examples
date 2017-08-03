@@ -1,10 +1,10 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM, PropTypes */
+/* global createReactClass, React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
-var List = React.createClass({
+var List = createReactClass({
   propTypes: {
     children: PropTypes.element.isRequired
   },

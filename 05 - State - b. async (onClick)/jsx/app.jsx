@@ -1,9 +1,9 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* global createReactClass, React, ReactDOM */
 
-var ClickMe = React.createClass({
+var ClickMe = createReactClass({
   getInitialState: function () {
     return { count: 0 };
   },
