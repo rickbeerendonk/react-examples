@@ -27,12 +27,10 @@ class GreetingEditor extends React.Component {
       throw new Error('render exception');
     }
 
-    return (
-      <div>
-        <input onChange={this.onChange} value={this.state.name} />
-        <h1>Hello {this.state.name}!</h1>
-      </div>
-    );
+    return [
+      <input onChange={this.onChange} value={this.state.name} />,
+      <h1>Hello {this.state.name}!</h1>
+    ];
   }
 }
 
