@@ -7,6 +7,8 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
+
+    this.onChange = this.onChange.bind(this);    
   }
   onChange(e) {
     this.setState({ name: e.target.value });
@@ -14,7 +16,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <div>
-        <input onChange={this.onChange.bind(this) } value={this.state.name} />
+        <input onChange={this.onChange} value={this.state.name} />
         <h1>Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!</h1>
       </div>
     );
