@@ -32,7 +32,7 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
         <textarea style={styles.textarea} readOnly="readOnly" value={this.state.code} />
       </div>);
   }
-};
+}
 
 var styles = {
   textarea: {
