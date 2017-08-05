@@ -18,6 +18,7 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "eslint": "^4.3.0",
     "eslint-plugin-react": "^7.1.0",
     "rimraf": "latest"
