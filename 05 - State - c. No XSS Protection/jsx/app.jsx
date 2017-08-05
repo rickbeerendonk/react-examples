@@ -7,7 +7,8 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
-
+    
+    // Bind all non-react methods to this.
     this.onChange = this.onChange.bind(this);    
   }
   onChange(e) {

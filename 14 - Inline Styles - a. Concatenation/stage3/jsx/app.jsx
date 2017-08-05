@@ -12,7 +12,7 @@ class Greeting extends React.Component {
       /* React Native: <h1 style={[styles.header, this.props.style]}>Hello World!</h1> */
     );
   }
-};
+}
 
 const styles = {
   header: {

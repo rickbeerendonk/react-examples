@@ -5,7 +5,8 @@
 /* eslint react/prop-types:"off" */
 
 class Greeting extends React.Component {
-  // See: https://github.com/tc39/proposal-class-fields
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   static defaultProps = {
     name: 'World'
   }

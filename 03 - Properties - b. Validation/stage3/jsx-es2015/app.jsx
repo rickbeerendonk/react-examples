@@ -4,7 +4,8 @@
 /* global React, ReactDOM, PropTypes */
 
 class Greeting extends React.Component {
-  // See: https://github.com/tc39/proposal-class-fields
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   static propTypes = {
     name: PropTypes.string.isRequired
   }

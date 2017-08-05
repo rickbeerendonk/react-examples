@@ -23,6 +23,7 @@
     {
       "taskName": "openserver",
       "args": ["run", "openserver", "--", "${fileDirname}"],
+      "isBackground": true,
       "isBuildCommand": true
     },
     {

@@ -5,17 +5,14 @@
 /* eslint react/prop-types:"off" */
 
 class GreetingEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'World' };
-
-    // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(e) {
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  state = { name: 'World' };
+  onChange = (e) => {
     const value = e.target.value;
     this.setState(() => ({ name: value }));
-  }  
+  };
+
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.name === 'Error') {
       throw new Error('Error');
@@ -36,10 +33,10 @@ class GreetingEditor extends React.Component {
 }
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {error: null, info: null};
-  }
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  state = {error: null, info: null};
+
   componentDidCatch(error, info) {
     this.setState({error, info});
   }

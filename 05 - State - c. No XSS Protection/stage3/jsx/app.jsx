@@ -3,25 +3,25 @@
 
 /* global React, ReactDOM */
 
-class GreetingEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'World' };
-  }
+class Greeting extends React.Component {
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  state = { name: 'World' };
   onChange = (e) => {
     this.setState({ name: e.target.value });
   }
+
   render() {
     return (
       <div>
         <input onChange={this.onChange} value={this.state.name} />
-        <h1>Hello {this.state.name}!</h1>
+        <h1>Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!</h1>
       </div>
     );
   }
 }
 
 ReactDOM.render(
-  <GreetingEditor />,
+  <Greeting />,
   document.getElementById('app')
 );
