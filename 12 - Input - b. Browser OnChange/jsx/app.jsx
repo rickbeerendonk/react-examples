@@ -19,8 +19,10 @@ class MyInput extends React.Component {
     this.myInput.removeEventListener('change', this.browserChanged);
   }
   render() {
+    /* eslint no-unused-vars:"off" */
+    const {onBrowserChanged: deleted, ...passthroughProps} = this.props;
     return (
-      <input {...this.props} ref={(ref) => this.myInput = ref}>{this.props.children}</input>
+      <input {...passthroughProps} ref={(ref) => this.myInput = ref}>{passthroughProps.children}</input>
     );
   }
 }
