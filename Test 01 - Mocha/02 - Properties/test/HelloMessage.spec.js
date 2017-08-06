@@ -1,6 +1,8 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
+/* global describe, it */
+
 import HelloMessage from '../src/HelloMessage.jsx'
 
 import React from 'react';

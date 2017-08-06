@@ -3,6 +3,8 @@
 
 'use strict';
 
+/* eslint react/prop-types:"off" */
+
 import React from 'react';
 
 export default class HelloMessage extends React.Component {
