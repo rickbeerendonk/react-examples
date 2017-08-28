@@ -7,8 +7,10 @@ class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
+
+    this.onChange = this.onChange.bind(this);
   }
-  onChange = (e) => {
+  onChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
