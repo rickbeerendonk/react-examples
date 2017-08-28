@@ -3,9 +3,7 @@
 
 /* global React, ReactDOM */
 
-const Greeting = () => (
-  'Hello World!'
-);
+const Greeting = () => 'Hello World!';
 
 ReactDOM.render(
   <Greeting />,
