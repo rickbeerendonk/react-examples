@@ -9,7 +9,7 @@ class HelloWorld extends React.Component {
   }
   render() {
     return (
-      <h1 ref={(ref) => this.myH1 = ref}>Hello World!</h1>
+      <h1 ref={ref => this.myH1 = ref}>Hello World!</h1>
     );
   }
 }

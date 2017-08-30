@@ -4,7 +4,7 @@
 /* global React, ReactDOM */
 
 let HelloWorld = () => 
-  <h1 ref={(ref) => ref.innerHTML = 'Hello <i>React</i>!!!'}>Hello World!</h1>
+  <h1 ref={ref => ref.innerHTML = 'Hello <i>React</i>!!!'}>Hello World!</h1>
 
 ReactDOM.render(
   <HelloWorld />,
