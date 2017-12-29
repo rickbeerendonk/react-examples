@@ -12,15 +12,22 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   devtool: 'source-map',
   module: {
-    preLoaders: [
-      { test: /\.jsx?$/, loader: 'eslint-loader', exclude: /node_modules/ }
-    ],    
-    loaders: [
-      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
+    rules: [
+      {
+        enforce: 'pre', 
+        test: /\.jsx?$/, 
+        loader: 'eslint-loader', 
+        exclude: /node_modules/
+      },
+      { 
+        test: /\.jsx?$/, 
+        loader: 'babel-loader', 
+        exclude: /node_modules/ 
+      }
     ]
   }
 };
