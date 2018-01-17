@@ -6,9 +6,9 @@
 class Greeting extends React.Component {
   render() {
     return [
-      <h1>Hello World!</h1>,
+      <h1 key="heading">Hello World!</h1>,
       'What do you think about React?',
-      <div>It looks amazing.</div>
+      <div key="enthusiasm">It looks amazing.</div>
     ];
   }
 }

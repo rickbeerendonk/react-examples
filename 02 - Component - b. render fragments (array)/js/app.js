@@ -6,9 +6,9 @@
 class Greeting extends React.Component {
   render() {
     return [
-      React.createElement('h1', null, 'Hello World!'),
+      React.createElement('h1', {key: 'heading'}, 'Hello World!'),
       'What do you think about React?',
-      React.createElement('div', null, 'It looks amazing.')
+      React.createElement('div', {key: 'enthusiasm'}, 'It looks amazing.')
     ];
   }
 }
