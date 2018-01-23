@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rick Beerendonk">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Fetch (js)</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../../../../node_modules/systemjs/dist/system.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    SystemJS.import('main').catch(function(err){ console.error(err); });
+  </script>
+</body>
+</html>
