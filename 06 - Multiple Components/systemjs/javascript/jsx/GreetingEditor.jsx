@@ -15,13 +15,13 @@ export default class GreetingEditor extends React.Component {
 
     this.onChange = this.onChange.bind(this);
   }
-  onChange(newName) {
-    this.setState(() => ({ name: newName }));
+  onChange(name) {
+    this.setState(() => ({ name }));
   }
   render() {
     return (
       <div>
-        <EditBox onChange={this.onChange} name={this.state.name} />
+        <EditBox onChange={this.onChange} value={this.state.name} />
         <Greeting name={this.state.name} />
       </div>
     );

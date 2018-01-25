@@ -4,8 +4,8 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const EditBox = ({onChange, name}) =>
-  React.createElement('input', { onChange: e => onChange(e.target.value), value: name });
+const EditBox = ({onChange, value}) =>
+  React.createElement('input', { onChange: e => onChange(e.target.value), value: value });
 
 const Greeting = ({name}) =>
   React.createElement('h1', null, 'Hello ', name, '!');
@@ -17,12 +17,12 @@ class GreetingEditor extends React.Component {
 
     this.onChange = this.onChange.bind(this);
   }
-  onChange(newName) {
-    this.setState(() => ({ name: newName }));
+  onChange(name) {
+    this.setState(() => ({ name }));
   }
   render() {
     return React.createElement('div', null,
-      React.createElement(EditBox, { onChange: this.onChange, name: this.state.name }),
+      React.createElement(EditBox, { onChange: this.onChange, value: this.state.name }),
       React.createElement(Greeting, { name: this.state.name })
     );
   }

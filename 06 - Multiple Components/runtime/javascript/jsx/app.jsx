@@ -4,8 +4,8 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const EditBox = ({onChange, name}) => (
-  <input onChange={e => onChange(e.target.value)} value={name} />
+const EditBox = ({onChange, value}) => (
+  <input onChange={e => onChange(e.target.value)} value={value} />
 );
 
 const Greeting = ({name}) => (
@@ -19,13 +19,13 @@ class GreetingEditor extends React.Component {
 
     this.onChange = this.onChange.bind(this);
   }
-  onChange(newName) {
-    this.setState(() => ({ name: newName }));
+  onChange(name) {
+    this.setState(() => ({ name }));
   }
   render() {
     return (
       <div>
-        <EditBox onChange={this.onChange} name={this.state.name} />
+        <EditBox onChange={this.onChange} value={this.state.name} />
         <Greeting name={this.state.name} />
       </div>
     );
