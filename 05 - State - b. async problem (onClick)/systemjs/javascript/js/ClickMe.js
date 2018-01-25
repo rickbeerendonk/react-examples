@@ -15,7 +15,7 @@ export default class ClickMe extends React.Component {
   }
   onClick() {
     // Updates are batched for performance reasons.
-    // Therfor this won't work:
+    // Therefore this won't work:
     this.setState({ count: this.state.count + 0.5 });
     this.setState({ count: this.state.count + 0.5 });
   }

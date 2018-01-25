@@ -8,8 +8,10 @@ class ClickMe extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { count: 0 };
   onClick = () => {
-    // this.state may be updated asynchronously:
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+    // Updates are batched for performance reasons.
+    // Therefore this should be used:
+    this.setState(prevState => ({ count: prevState.count + 0.5 }));
+    this.setState(prevState => ({ count: prevState.count + 0.5 }));
   };
 
   render() {

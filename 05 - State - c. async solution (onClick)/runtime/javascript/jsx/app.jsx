@@ -12,8 +12,10 @@ class ClickMe extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
   onClick() {
-    // this.state may be updated asynchronously:
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+    // Updates are batched for performance reasons.
+    // Therefore this should be used:
+    this.setState(prevState => ({ count: prevState.count + 0.5 }));
+    this.setState(prevState => ({ count: prevState.count + 0.5 }));
   }
   render() {
     return (
