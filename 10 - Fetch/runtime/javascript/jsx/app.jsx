@@ -24,8 +24,9 @@ class Posts extends React.Component {
         }
         return response.json()
       })
-      .then(json => { this.setState({ posts: json, isFetching: false }); })
-      .catch(error => { this.setState({ error: error.message, isFetching: false }); });
+      .then(json => { this.setState({ posts: json }); })
+      .catch(error => { this.setState({ error: error.message }); })
+      .finally(() => { this.setState({ isFetching: false }); });
   }
   render() {
     return (
