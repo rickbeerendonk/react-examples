@@ -15,7 +15,8 @@
   "scripts": {
     "clean": "rimraf node_modules",
     "open": "open",
-    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
+    "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8080",
+    "openserverold": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -26,6 +27,7 @@
   "dependencies": {
     "babel-standalone": "6.26.0",
     "create-react-class": "15.6.2",
+    "http-server": "0.11.1",
     "prop-types": "^15.6.0",
     "react": "next",
     "react-dom": "next",
