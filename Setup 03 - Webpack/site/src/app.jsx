@@ -10,4 +10,4 @@ import Greeting from './Greeting.jsx';
 ReactDOM.render(
   <Greeting />,
   document.getElementById('app')
-  );
+);

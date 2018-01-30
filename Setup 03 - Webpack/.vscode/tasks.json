@@ -1,17 +1,19 @@
 {
   "version": "0.1.0",
-  "command": "${workspaceRoot}/node_modules/.bin/webpack",
+  "command": "npm",
   "isShellCommand": true,
   "showOutput": "always",
-	"args": [
-		"--display-modules",
-		"--progress"
-	],
 	"echoCommand": true,
   "tasks": [
     {
-      "args": ["-d"],
-      "taskName": "webpack dev",
+      "args": ["run", "build"],
+      "taskName": "build",
+      "suppressTaskName": true,
+      "isBuildCommand": false
+    },
+    {
+      "args": ["run", "watch"],
+      "taskName": "watch",
       "suppressTaskName": true,
       "isBuildCommand": true,
       "isBackground": true
