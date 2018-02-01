@@ -1,9 +1,0 @@
-# Ignore built files
-/site/lib/**
-
-# Ignore Webpack config
-webpack.config.dev.js
-webpack.config.prod.js
-
-# Ignore devServer
-devServer.js
