@@ -19,7 +19,7 @@ export default class Posts extends React.Component {
   async componentDidMount() {
     this.setState({isFetching: true});
     try {
-      const response = await fetch('http://jsonplaceholder.typicode.com/posts');
+      const response = await fetch('posts.json');
       if (!response.ok) {
         throw Error(response.statusText);
       }

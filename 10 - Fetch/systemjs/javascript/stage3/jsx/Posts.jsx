@@ -14,7 +14,7 @@ export default class Posts extends React.Component {
 
   componentDidMount() {
     this.setState({isFetching: true});
-    fetch('http://jsonplaceholder.typicode.com/posts')
+    fetch('posts.json')
       .then(response => {
         if (!response.ok) {
           throw Error(response.statusText);

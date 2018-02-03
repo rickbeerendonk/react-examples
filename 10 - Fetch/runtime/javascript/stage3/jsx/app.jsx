@@ -12,8 +12,8 @@ class Posts extends React.Component {
   state = { posts: [], error: '', isFetching: false };
 
   componentDidMount() {
-    this.setState({isFetching: true});
-    fetch('http://jsonplaceholder.typicode.com/posts')
+    this.setState({ isFetching: true });
+    fetch('posts.json')
       .then(response => {
         if (!response.ok) {
           throw Error(response.statusText);

@@ -20,20 +20,34 @@ export default class Posts extends React.Component {
     var self = this;
     self.setState({ isFetching: true });
     var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+      self.setState({ isFetching: false });
+    }
     xhr.onerror = function () {
-      self.setState({ error: 'An error occurred.', isFetching: false });
+      self.setState({ error: 'An error occurred.' });
+    }
+    xhr.ontimeout = function () {
+      self.setState({ error: 'Timeout.' });
     }
     xhr.onreadystatechange = function () {
-      if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        self.setState({ posts: JSON.parse(xhr.responseText), isFetching: false });
-      }
+      if (this.readyState == XMLHttpRequest.DONE) {
+        if (this.status == 200) {
+          self.setState({ posts: JSON.parse(xhr.responseText) });
+        } else {
+          self.setState({ error: this.statusText });
+        }
+      }  
     };
-    xhr.open('GET', 'http://jsonplaceholder.typicode.com/posts', true);
+    xhr.open('GET', 'posts.json', true);
     xhr.send();
   }
   render() {
     if (this.state.isFetching) {
       return "Fetching...";
+    }
+
+    if (this.state.error) {
+      return React.createElement('div', {style: {color: 'red'}}, this.state.error);
     }
 
     return (
