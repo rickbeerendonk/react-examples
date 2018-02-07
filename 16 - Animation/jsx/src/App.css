@@ -17,11 +17,11 @@
   transition: height 500ms ease-out;
 }
 
-.example-leave {
+.example-exit {
   height: 100px;
 }
 
-.example-leave.example-leave-active {
+.example-exit.example-exit-active {
   height: 0;
   transition: height 500ms ease-in;
 }	  

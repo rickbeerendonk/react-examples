@@ -2,7 +2,7 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 import React from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 
 class App extends React.Component {
@@ -39,18 +39,23 @@ class App extends React.Component {
       <div>
         <button onClick={this.handleAdd}>Add</button>
         <hr />
-        <CSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+        <TransitionGroup>
           {this.state.items.map(key => {
             return (
-              <div
-                onClick={this.handleRemove.bind(null, key)}
+              <CSSTransition
                 key={key}
-                className='item'>
-                {key}
-              </div>
+                classNames="example"
+                timeout={{ enter: 500, exit: 500 }}
+              >
+                <div
+                  onClick={this.handleRemove.bind(null, key)}
+                  className='item'>
+                  {key}
+                </div>
+              </CSSTransition>
             );
           })}
-        </CSSTransitionGroup>
+        </TransitionGroup>
       </div>
     )
   }
