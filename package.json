@@ -20,23 +20,23 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
-    "eslint": "^4.16.0",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-react": "^7.6.1",
     "rimraf": "latest"
   },
   "dependencies": {
-    "@types/react": "^16.0.35",
+    "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "babel-standalone": "6.26.0",
-    "create-react-class": "15.6.2",
+    "create-react-class": "15.6.3",
     "http-server": "0.11.1",
     "prop-types": "^15.6.0",
     "react": "next",
     "react-dom": "next",
     "react-transition-group": "^2.2.1",
-    "systemjs": "0.20.19",
+    "systemjs": "0.21.0",
     "systemjs-plugin-babel": "^0.0.25",
-    "typescript": "^2.6.2",
+    "typescript": "^2.7.1",
     "plugin-typescript": "8.0.0"
   }
 }
