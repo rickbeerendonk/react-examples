@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import ImportantAnchor from './ImportantAnchor';
 
 ReactDOM.render(
-  <ImportantAnchor href="http://www.reactjs.com" target="_blank" title="Everything about React">
+  <ImportantAnchor href="http://www.reactjs.com" rel="noopener" target="_blank" title="Everything about React">
     React website
   </ImportantAnchor>,
   document.getElementById('app')

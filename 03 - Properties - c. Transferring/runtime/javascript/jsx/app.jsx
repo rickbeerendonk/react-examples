@@ -13,7 +13,7 @@ class ImportantAnchor extends React.Component {
 }
 
 ReactDOM.render(
-  <ImportantAnchor href="http://www.reactjs.com" target="_blank" title="Everything about React">
+  <ImportantAnchor href="http://www.reactjs.com" rel="noopener" target="_blank" title="Everything about React">
     React website
   </ImportantAnchor>,
   document.getElementById('app')
