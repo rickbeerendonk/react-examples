@@ -10,7 +10,7 @@ export default class Three extends React.Component {
   render() {
     return (
       <ColorContext.Consumer>
-        {color => <h1 style={{ color }}>Three</h1>}
+        {context => <h1 style={{ color: context.color }}>Three</h1>}
       </ColorContext.Consumer>
     );
   }

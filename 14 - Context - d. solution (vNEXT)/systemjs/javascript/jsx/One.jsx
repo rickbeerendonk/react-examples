@@ -20,7 +20,7 @@ export default class One extends React.Component {
   }
   render() {
     return (
-      <ColorContext.Provider value={this.state.color}>
+      <ColorContext.Provider value={{color: this.state.color}}>
         <Two />
         <button onClick={this.onSwitch}>Switch color</button>
       </ColorContext.Provider>
