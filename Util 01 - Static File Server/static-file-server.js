@@ -8,15 +8,16 @@
 /* global require, process */
 /* eslint-disable no-console */
 
-let fs = require("fs");
-let http = require("http");
-let path = require("path");
-let url = require("url");
-let childProcess = require("child_process");
+const fs = require("fs");
+const http = require("http");
+const mime = require("mime-types");
+const path = require("path");
+const url = require("url");
+const childProcess = require("child_process");
 
-let port = process.argv[2] || 8080;
+const basePath = process.cwd();
+const port = process.argv[2] || 8080;
 let filePath = process.argv[3];
-let basePath = process.cwd();
 
 http.createServer(function(request, response) {
   let uri = url.parse(request.url).pathname;
@@ -43,7 +44,8 @@ http.createServer(function(request, response) {
         return;
       }
 
-      response.writeHead(200);
+      const mimetype = mime.contentType(path.extname(filename));
+      response.writeHead(200, { "Content-Type": mimetype});
       response.write(file, "binary");
       response.end();
     });
