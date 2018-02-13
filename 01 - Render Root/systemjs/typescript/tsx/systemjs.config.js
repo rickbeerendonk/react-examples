@@ -16,26 +16,23 @@ SystemJS.config({
     'typescript': 'npm:typescript'
   },
   packages: {
-    ".": {
-      "defaultExtension": "tsx",
+    '.': {
+      'defaultExtension': 'tsx',
     },
-    "ts": {
-      "main": "lib/plugin.js"
+    'ts': {
+      'main': 'lib/plugin.js'
     },
-    "typescript": {
-      "main": "lib/typescript.js",
-      "meta": {
-        "lib/typescript.js": {
-          "exports": "ts"
+    'typescript': {
+      'main': 'lib/typescript.js',
+      'meta': {
+        'lib/typescript.js': {
+          'exports': 'ts'
         }
       }
     }
   },
   transpiler: 'ts',
   typescriptOptions: {
-    module: "system",
-    noImplicitAny: true,
-    jsx: "react",
-    tsconfig: false
+    tsconfig: true
   }
 });
