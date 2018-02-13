@@ -10,14 +10,19 @@
 
   <title>Component Lifecycle (js)</title>
   <link rel="stylesheet" href="style.css">
-<body>
-  <div id="app"></div>
-  <ol id="events"></ol>
+  <body>
+    <div id="app"></div>
+    <ol id="events"></ol>
 
-  <script src="../../../../node_modules/systemjs/dist/system.js"></script>
-  <script src="systemjs.config.js"></script>
-  <script>
-    SystemJS.import('main').catch(function(err) { console.error(err); });
-  </script>
-</body>
+    <script src="../../../../node_modules/systemjs/dist/system.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      SystemJS.import('main').catch(function (err) { 
+        console.error(err); 
+        document.body.style.backgroundColor = 'red'; 
+        document.body.style.color = 'white'; 
+        document.body.innerText = err; 
+      });
+    </script>
+  </body>
 </html>
