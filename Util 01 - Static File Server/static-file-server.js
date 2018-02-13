@@ -8,12 +8,12 @@
 /* global require, process */
 /* eslint-disable no-console */
 
-const fs = require("fs");
-const http = require("http");
-const mime = require("mime-types");
-const path = require("path");
-const url = require("url");
-const childProcess = require("child_process");
+const fs = require('fs');
+const http = require('http');
+const mime = require('mime-types');
+const path = require('path');
+const url = require('url');
+const childProcess = require('child_process');
 
 const basePath = process.cwd();
 const port = process.argv[2] || 8080;
@@ -23,32 +23,37 @@ http.createServer(function(request, response) {
   let uri = url.parse(request.url).pathname;
   let decodeUri = decodeURIComponent(uri);
   let filename = path.join(basePath, decodeUri);
-  
-  fs.exists(filename, function(exists) {
-    if (!exists) {
-      response.writeHead(404, { "Content-Type": "text/plain" });
-      response.write("404 Not Found\n");
+
+  if (fs.existsSync(filename) && fs.statSync(filename).isDirectory()) {
+    filename = path.join(filename, 'index.html');
+    if (!fs.existsSync(filename) && (uri.length > 1)) {
+      response.writeHead(302, {
+        'Location': '..'
+      });
+      response.end();
+      return;
+    }
+  }
+
+  if (!fs.existsSync(filename)) {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.write('404 Not Found\n');
+    response.end();
+    return;
+  }
+
+  fs.readFile(filename, 'binary', function(err, file) {
+    if (err) {        
+      response.writeHead(500, { 'Content-Type': 'text/plain' });
+      response.write(err + '\n');
       response.end();
       return;
     }
 
-    if (fs.statSync(filename).isDirectory()) {
-      filename = path.join(filename, 'index.html');
-    }
-
-    fs.readFile(filename, "binary", function(err, file) {
-      if (err) {        
-        response.writeHead(500, { "Content-Type": "text/plain" });
-        response.write(err + "\n");
-        response.end();
-        return;
-      }
-
-      const mimetype = mime.contentType(path.extname(filename));
-      response.writeHead(200, { "Content-Type": mimetype});
-      response.write(file, "binary");
-      response.end();
-    });
+    const mimetype = mime.contentType(path.extname(filename));
+    response.writeHead(200, { 'Content-Type': mimetype});
+    response.write(file, 'binary');
+    response.end();
   });
 }).listen(parseInt(port, 10));
 
@@ -68,8 +73,8 @@ if (filePath.startsWith(basePath)) {
   let extraPath = filePath.substring(basePath.length);
   let extraUri = `${serverUri}${extraPath}`;
 
-  let command = process.platform === "win32" ? `start "" "${extraUri}"` :
-                /* process.platform === "darwin" */ `open "${extraUri}"`;
+  let command = process.platform === 'win32' ? `start '' '${extraUri}'` :
+                /* process.platform === 'darwin' */ `open '${extraUri}'`;
   
   childProcess.exec(command, () => { process.exit; });
 }
