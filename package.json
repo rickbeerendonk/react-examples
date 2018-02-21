@@ -25,19 +25,19 @@
     "rimraf": "latest"
   },
   "dependencies": {
-    "@types/react": "^16.0.36",
-    "@types/react-dom": "^16.0.3",
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
     "babel-standalone": "6.26.0",
     "create-react-class": "15.6.3",
     "http-server": "0.11.1",
-    "mime-types": "^2.1.17",
+    "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
     "prop-types": "^15.6.0",
-    "react": "16.3.0-alpha.0",
-    "react-dom": "16.3.0-alpha.0",
+    "react": "16.3.0-alpha.1",
+    "react-dom": "16.3.0-alpha.1",
     "react-transition-group": "^2.2.1",
     "systemjs": "0.21.0",
     "systemjs-plugin-babel": "^0.0.25",
-    "typescript": "^2.7.1"
+    "typescript": "^2.7.2"
   }
 }
