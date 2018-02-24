@@ -19,10 +19,10 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.17.0",
-    "eslint-plugin-react": "^7.6.1",
-    "rimraf": "latest"
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-plugin-react": "^7.7.0",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "@types/react": "^16.0.38",
