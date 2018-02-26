@@ -24,7 +24,8 @@
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.0.0"
   },
   "scripts": {
     "build": "webpack",
