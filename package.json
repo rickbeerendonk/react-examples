@@ -32,7 +32,7 @@
     "http-server": "0.11.1",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.1",
     "react": "16.3.0-alpha.1",
     "react-dom": "16.3.0-alpha.1",
     "react-transition-group": "^2.2.1",
