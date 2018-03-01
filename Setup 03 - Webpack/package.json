@@ -8,8 +8,8 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "scripts": {
-    "build": "./node_modules/.bin/webpack -d --progress",
-    "watch": "./node_modules/.bin/webpack -d --progress --watch"
+    "build": "webpack -d --progress",
+    "watch": "webpack -d --progress --watch"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -21,7 +21,7 @@
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.3",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^4.0.0",
+    "webpack": "^4.0.1",
     "webpack-cli": "^2.0.8"
   }
 }
