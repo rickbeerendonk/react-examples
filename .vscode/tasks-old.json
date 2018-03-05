@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0",
+  "command": "npm",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "suppressTaskName": true,
+  "tasks": [
+    {
+      "taskName": "clean",
+      "args": ["run", "clean"]
+    },
+    {
+      "taskName": "install",
+      "args": ["install"]
+    },
+    {
+      "taskName": "openserver",
+      "args": ["run", "openserver", "--", "${fileDirname}"],
+      "isBackground": true,
+      "isBuildCommand": true
+    },
+    {
+      "taskName": "update",
+      "args": ["update"]
+    }
+  ]
+}
