@@ -34,7 +34,7 @@ if (filePath.startsWith(basePath)) {
 
   // See: https://github.com/indexzero/http-server/
 
-  const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp]);
+  const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1']);
 
   const command = process.platform === "win32" ? `start "" "${extraUri}"` :
                 /* process.platform === "darwin" */ `open "${extraUri}"`;
