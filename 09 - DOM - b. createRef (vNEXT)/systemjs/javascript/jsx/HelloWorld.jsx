@@ -11,7 +11,7 @@ export default class HelloWorld extends React.Component {
     this.myH1 = React.createRef();
   }
   componentDidMount() {
-    this.myH1.value.innerHTML = 'Hello <i>React</i>!!!';
+    this.myH1.current.innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
     return (
