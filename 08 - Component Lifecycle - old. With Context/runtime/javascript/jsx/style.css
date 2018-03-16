@@ -1,0 +1,24 @@
+body {
+  font-family: arial, sans-serif;
+  line-height: 1.5em;
+}
+
+.action {
+  color: darkgray
+}
+
+.mounting {
+  color: green;
+}
+
+.unmounting {
+  color: red;
+}
+
+.updating {
+  color: blue;
+}
+
+.rendering {
+  font-weight: bold;
+}

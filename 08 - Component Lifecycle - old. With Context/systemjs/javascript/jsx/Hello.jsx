@@ -1,19 +1,14 @@
 /*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2016 Rick Beerendonk   !*/
+/*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
-function logEvent(value, className) {
-  let events = document.getElementById('events');
-  let newEvent = document.createTextNode(value);
-  let item = document.createElement('li');
-  item.className = className;
-  item.appendChild(newEvent);
-  events.appendChild(item);
-}
+import PropTypes from 'prop-types';
+import React from 'react';
 
-class Hello extends React.Component {
+import { logEvent } from 'utils';
+
+export default class Hello extends React.Component {
   constructor(props, context) {
     super(props);
     this.state = { count: 1 };
@@ -25,7 +20,7 @@ class Hello extends React.Component {
   }
 
   // Mounting
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     logEvent('componentWillMount()', 'mounting');
   }
   componentDidMount() {
@@ -33,14 +28,14 @@ class Hello extends React.Component {
   }
 
   // Updating
-  componentWillReceiveProps(nextProps, nextContext) {
+  UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
     logEvent(`componentWillReceiveProps(nextProps: ${JSON.stringify(nextProps)}, nextContext: ${JSON.stringify(nextContext)})`, 'updating');
   }
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     logEvent(`shouldComponentUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}, nextContext: ${JSON.stringify(nextContext)}): boolean`, 'updating');
     return true;
   }
-  componentWillUpdate(nextProps, nextState, nextContext) {
+  UNSAFE_componentWillUpdate(nextProps, nextState, nextContext) {
     logEvent(`componentWillUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}, nextContext: ${JSON.stringify(nextContext)})`, 'updating');
   }
   componentDidUpdate(prevProps, prevState, prevContext) {
@@ -59,42 +54,3 @@ class Hello extends React.Component {
 Hello.contextTypes = {
   value: PropTypes.string
 }
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'Number One', value: 'Context One' };
-  }
-  getChildContext() {
-    // Never change context, as it can have problems:
-    // https://facebook.github.io/react/docs/context.html
-    return { value: this.state.value };
-  }
-  componentDidMount() {
-    logEvent('-- new prop --', 'action');
-    this.setState({ name: 'Number Two' });
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.name === 'Number One' && this.state.name == 'Number Two') {
-      logEvent('-- new context --', 'action');
-      this.setState({ value: 'Context Two' });
-    }
-  }
-  render() {
-    return <Hello name={this.state.name} />;
-  }
-}
-App.childContextTypes = {
-  value: PropTypes.string
-};
-
-logEvent('-- add component --', 'action');
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
-
-logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(
-  document.getElementById('app')
-);

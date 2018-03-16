@@ -25,18 +25,23 @@ class Hello extends React.Component {
   }
 
   // Mounting
+  UNSAFE_componentWillMount() {
+    logEvent('componentWillMount()', 'mounting');
+  }
   componentDidMount() {
     logEvent('componentDidMount()', 'mounting');
   }
 
   // Updating
-  static getDerivedStateFromProps(nextProps, prevState) {
-    logEvent(`static getDerivedStateFromProps(nextProps: ${JSON.stringify(nextProps)}, prevState: ${JSON.stringify(prevState)}): newState | null`, 'updating');
-    return null; // Or return new state
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    logEvent(`componentWillReceiveProps(nextProps: ${JSON.stringify(nextProps)})`, 'updating');
   }
   shouldComponentUpdate(nextProps, nextState) {
     logEvent(`shouldComponentUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}): boolean`, 'updating');
     return true;
+  }
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    logEvent(`componentWillUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)})`, 'updating');
   }
   componentDidUpdate(prevProps, prevState) {
     logEvent(`componentDidUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)})`, 'updating');

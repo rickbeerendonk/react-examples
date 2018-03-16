@@ -21,22 +21,27 @@ class Hello extends React.Component {
   }
   render() {
     logEvent(`render() - props: ${JSON.stringify(this.props)} state: ${JSON.stringify(this.state)}`, 'rendering');
-    return (<h1>Hello {this.props.name}! ({this.state.count}time)</h1>);
+    return React.createElement('h1', null, 'Hello ', this.props.name, '! ', this.state.count, ' time');
   }
 
   // Mounting
+  UNSAFE_componentWillMount() {
+    logEvent('componentWillMount()', 'mounting');
+  }
   componentDidMount() {
     logEvent('componentDidMount()', 'mounting');
   }
 
   // Updating
-  static getDerivedStateFromProps(nextProps, prevState) {
-    logEvent(`static getDerivedStateFromProps(nextProps: ${JSON.stringify(nextProps)}, prevState: ${JSON.stringify(prevState)}): newState | null`, 'updating');
-    return null; // Or return new state
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    logEvent(`componentWillReceiveProps(nextProps: ${JSON.stringify(nextProps)})`, 'updating');
   }
   shouldComponentUpdate(nextProps, nextState) {
     logEvent(`shouldComponentUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}): boolean`, 'updating');
     return true;
+  }
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    logEvent(`componentWillUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)})`, 'updating');
   }
   componentDidUpdate(prevProps, prevState) {
     logEvent(`componentDidUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)})`, 'updating');
@@ -62,13 +67,13 @@ class App extends React.Component {
     this.setState({ name: 'Number Two' });
   }
   render() {
-    return <Hello name={this.state.name} />;
+    return React.createElement(Hello, { name: this.state.name });
   }
 }
 
 logEvent('-- add component --', 'action');
 ReactDOM.render(
-  <App />,
+  React.createElement(App),
   document.getElementById('app')
 );
 
