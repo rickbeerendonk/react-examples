@@ -38,6 +38,9 @@ class Hello extends React.Component {
     logEvent(`shouldComponentUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}): boolean`, 'updating');
     return true;
   }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    logEvent(`getSnapshotBeforeUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)}): boolean`, 'updating');
+  }
   componentDidUpdate(prevProps, prevState) {
     logEvent(`componentDidUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)})`, 'updating');
     if (prevProps.name === 'Number One') {
