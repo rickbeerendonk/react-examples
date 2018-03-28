@@ -38,8 +38,13 @@ class Hello extends React.Component {
     logEvent(`shouldComponentUpdate(nextProps: ${JSON.stringify(nextProps)}, nextState: ${JSON.stringify(nextState)}): boolean`, 'updating');
     return true;
   }
-  componentDidUpdate(prevProps, prevState) {
-    logEvent(`componentDidUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)})`, 'updating');
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    const result = {random: Math.random()};
+    logEvent(`getSnapshotBeforeUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)}): $Shape<State> | null: ${JSON.stringify(result)}`, 'updating');
+    return result;
+  }
+  componentDidUpdate(prevProps, prevState, userState) {
+    logEvent(`componentDidUpdate(prevProps: ${JSON.stringify(prevProps)}, prevState: ${JSON.stringify(prevState)}, workInProgress: ${JSON.stringify(userState)})`, 'updating');
     if (prevProps.name === 'Number One') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
