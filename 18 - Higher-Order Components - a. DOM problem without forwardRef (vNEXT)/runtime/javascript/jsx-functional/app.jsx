@@ -6,17 +6,11 @@
 
 // Higher-Order Component
 function withExtras(WrappedComponent) {
-  return class extends React.Component {
-    render() {
-      return (
-        <WrappedComponent {...this.props} />
-      );
-    }
-  }
+  return props => <WrappedComponent {...props} />;
 }
 
 const Greeting = (props) => (
-  <h1>Hello {props.name}!</h1>
+  <h1 ref={props.forwardedRef}>Hello {props.name}!</h1>
 );
 
 const GreetingWithExtras = withExtras(Greeting);
@@ -27,11 +21,11 @@ class App extends React.Component {
     this.myGreeting = React.createRef();
   }
   componentDidMount() {
-    this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
+    this.myGreeting.current.innerHTML = 'Hi <i>React</i>!!!';
   }
   render() {
     return (
-      <GreetingWithExtras name="World" ref={this.myGreeting} />
+      <GreetingWithExtras name="World <- Should be replaced" ref={this.myGreeting} />
     );
   }
 }

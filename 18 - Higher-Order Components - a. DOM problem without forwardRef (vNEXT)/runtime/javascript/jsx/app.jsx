@@ -2,21 +2,22 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/display-name:"off" */
+/* eslint react/prop-types:"off", react/display-name:"off" */
 
 // Higher-Order Component
 function withExtras(WrappedComponent) {
   return class extends React.Component {
     render() {
       return (
-        React.createElement(WrappedComponent,  this.props)
+        <WrappedComponent {...this.props} />
       );
     }
   }
 }
-const Greeting = React.forwardRef((props, ref) => (
-  React.createElement('h1', { ref }, 'Hello ', props.name, '!')
-));
+
+const Greeting = (props) => (
+  <h1 ref={props.forwardedRef}>Hello {props.name}!</h1>
+);
 
 const GreetingWithExtras = withExtras(Greeting);
 
@@ -26,14 +27,16 @@ class App extends React.Component {
     this.myGreeting = React.createRef();
   }
   componentDidMount() {
-    this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
+    this.myGreeting.current.innerHTML = 'Hi <i>React</i>!!!';
   }
   render() {
-    return React.createElement(GreetingWithExtras, { ref: this.myGreeting, name: 'World'});
+    return (
+      <GreetingWithExtras name="World <- Should be replaced" ref={this.myGreeting} />
+    );
   }
 }
 
 ReactDOM.render(
-  React.createElement(App),
+  <App />,
   document.getElementById('app')
 );
