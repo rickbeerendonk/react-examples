@@ -4,8 +4,9 @@
 /* global process, require */
 /* eslint-disable no-console */
 
-const childProcess = require("child_process");
-const fs = require("fs");
+const childProcess = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const portHttp = process.argv[2] || 8080;
 const portRest = +portHttp + 1;
@@ -17,28 +18,29 @@ const basePath = process.cwd();
 //console.log('filePath: ' + filePath);
 //console.log('basePath: ' + basePath);
 
-// Extra
-// If a filePath is given, open a browser at this location.
-if (filePath.startsWith(basePath)) {
-  if (fs.statSync(filePath).isDirectory()) {
-    filePath += '/';
-  }
-
-  const serverUri = `http://localhost:${portHttp}`;
-  const extraPath = filePath.substring(basePath.length);
-  const extraUri = `${serverUri}${extraPath}`;
-
-  //console.log('serverUri: ' + serverUri);
-  //console.log('extraPath: ' + extraPath);
-  //console.log('extraUri: ' + extraUri);
-
-  // See: https://github.com/indexzero/http-server/
-
-  const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1']);
-
-  const command = process.platform === "win32" ? `start "" "${extraUri}"` :
-                /* process.platform === "darwin" */ `open "${extraUri}"`;
-
-  childProcess.exec(command);
-  //childProcess.exec(command, () => { console.log('exit'); process.exit(); });
+// Exit if no filePath is given
+if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
+  console.warn('No file path to open.');
+  process.exit();
 }
+
+const serverUri = `http://localhost:${portHttp}`;
+const extraPath = filePath.substring(basePath.length);
+const extraUri = extraPath.split('\\').join('/');
+const totalUri = `${serverUri}${extraUri}`;
+
+//console.log('serverUri: ' + serverUri);
+//console.log('extraPath: ' + extraPath);
+//console.log('extraUri: ' + extraUri);
+//console.log('totalUri: ' + totalUri);
+
+// Start server
+// See: https://github.com/indexzero/http-server/
+const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1'], {shell: true, stdio: 'inherit'});
+
+// Open browser
+const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
+              /* process.platform === "darwin" */ `open "${totalUri}"`;
+childProcess.exec(command);
+
+//childProcess.exec(command, () => { console.log('exit'); process.exit(); });
