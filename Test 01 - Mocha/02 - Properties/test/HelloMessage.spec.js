@@ -6,20 +6,16 @@
 import HelloMessage from '../src/HelloMessage.jsx'
 
 import React from 'react';
-import { createRenderer } from 'react-test-renderer/shallow';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import expect from 'expect';
-import expectJSX from 'expect-jsx';
-
-expect.extend(expectJSX);
 
 describe('HelloMessage', () => {
   it('should render name in message', () => {
-    const expected = 'Hello React!';
-    
-    const renderer = createRenderer();
+    const renderer = new ShallowRenderer();
     renderer.render(<HelloMessage name="React" />);
     const actual = renderer.getRenderOutput();
     
-    expect(actual).toIncludeJSX(expected);
+    expect(actual.type).toBe('h1');
+    expect(actual.props.children).toEqual(['Hello ', 'React', '!']);
   });
 });

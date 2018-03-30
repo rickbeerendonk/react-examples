@@ -6,20 +6,18 @@
 import Greeting from '../src/Greeting.jsx'
 
 import React from 'react';
-import { createRenderer } from 'react-test-renderer/shallow';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import expect from 'expect';
-import expectJSX from 'expect-jsx';
-
-expect.extend(expectJSX);
 
 describe('Greeting', () => {
   it('should render Hello World in a H1', () => {
     const expected = '<h1>\n  Hello World!\n</h1>';
     
-    const renderer = createRenderer();
+    const renderer = new ShallowRenderer();
     renderer.render(<Greeting />);
     const actual = renderer.getRenderOutput();
-    
-    expect(actual).toEqualJSX(expected);
+
+    expect(actual.type).toBe('h1');
+    expect(actual.props.children).toEqual('Hello World!');
   });
 });

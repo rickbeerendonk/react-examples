@@ -12,8 +12,8 @@
     "watch": "webpack -d --progress --watch"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,7 +21,7 @@
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   }
 }
