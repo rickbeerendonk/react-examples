@@ -20,9 +20,9 @@ class MyInput extends React.Component {
   }
   render() {
     /* eslint no-unused-vars:"off" */
-    const {onBrowserChanged: deleted, ...passthroughProps} = this.props;
+    const {onBrowserChanged: deleted, children, ...passthroughProps} = this.props;
     return (
-      <input {...passthroughProps} ref={(ref) => this.myInput = ref}>{passthroughProps.children}</input>
+      <input {...passthroughProps} ref={(ref) => this.myInput = ref}>{children}</input>
     );
   }
 }
