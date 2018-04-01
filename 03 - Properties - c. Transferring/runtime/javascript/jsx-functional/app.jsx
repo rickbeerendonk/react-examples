@@ -4,8 +4,8 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const ImportantAnchor = props => (
-  <a {...props}>!!! {props.children} !!!</a>
+const ImportantAnchor = ({children, ...props}) => (
+  <a {...props}>!!! {children} !!!</a>
 );
 
 ReactDOM.render(

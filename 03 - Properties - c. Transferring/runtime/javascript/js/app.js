@@ -6,7 +6,8 @@
 
 class ImportantAnchor extends React.Component {
   render() {
-    return React.createElement('a', this.props, '!!! ', this.props.children, ' !!!');
+    const {children, ...props} = this.props;
+    return React.createElement('a', props, '!!! ', children, ' !!!');
   }
 }
 
