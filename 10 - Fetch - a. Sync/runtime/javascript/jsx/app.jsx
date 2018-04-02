@@ -6,7 +6,15 @@
 
 const Post = ({title}) => <li>{title}</li>;
 
-class Posts extends React.Component {
+const PostList = ({posts}) =>  (
+  <ul>{
+    posts.map(post => <Post key={post.id} title={post.title} />)
+  }</ul>
+);
+
+// Container pattern:
+// Container fetches data, then renders the sub-component.
+class PostListContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -30,18 +38,17 @@ class Posts extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error ? <div style={{color: 'red'}}>{this.state.error}</div> : null}
-        <ul>{
-          this.state.posts.map((post) => <Post key={post.id} title={post.title} />)
-        }</ul>
-      </div>
+        {this.state.error
+          ? <div style={{color: 'red'}}>{this.state.error}</div> 
+          : <PostList posts={this.state.posts} />}
+      </React.Fragment>
     );
   }
 }
 
 ReactDOM.render(
-  <Posts />,
+  <PostListContainer />,
   document.getElementById('app')
 );

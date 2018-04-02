@@ -6,7 +6,16 @@
 
 const Post = ({title}) => React.createElement('li', null, title);
 
-class Posts extends React.Component {
+const PostList = ({posts}) =>  (
+  React.createElement('ul', null,
+  posts.map(function (post, i) {
+    return React.createElement(Post, { key: i, title: post.title })
+  })
+));
+
+// Container pattern:
+// Container fetches data, then renders the sub-component.
+class PostListContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -50,16 +59,12 @@ class Posts extends React.Component {
     }
 
     return (
-      React.createElement('ul', null,
-        this.state.posts.map(function (post, i) {
-          return React.createElement(Post, { key: i, title: post.title })
-        })
-      )
+      React.createElement(PostList, {posts: this.state.posts})
     );
   }
 }
 
 ReactDOM.render(
-  React.createElement(Posts),
+  React.createElement(PostListContainer),
   document.getElementById('app')
 );

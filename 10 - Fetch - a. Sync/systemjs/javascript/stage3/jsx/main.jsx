@@ -4,9 +4,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Posts from './Posts';
+import PostListContainer from './PostListContainer';
 
 ReactDOM.render(
-  <Posts />,
+  <PostListContainer />,
   document.getElementById('app')
 );

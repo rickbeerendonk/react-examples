@@ -5,8 +5,10 @@
 
 import React from 'react';
 
-import Post from './Post';
+import PostList from './PostList';
 
+// Container pattern:
+// Container fetches data, then renders the sub-component.
 export default class Posts extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
@@ -29,13 +31,12 @@ export default class Posts extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error ? <div style={{color: 'red'}}>{this.state.error}</div> : null}
-        <ul>{
-          this.state.posts.map((post) => <Post key={post.id} title={post.title} />)
-        }</ul>
-      </div>
+        {this.state.error
+          ? <div style={{color: 'red'}}>{this.state.error}</div> 
+          : <PostList posts={this.state.posts} />}
+      </React.Fragment>
     );
   }
 }
