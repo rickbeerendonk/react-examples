@@ -3,8 +3,6 @@
 
 /* eslint react/prop-types:"off" */
 
-'use strict';
-
 import React from 'react';
 import Hello from './Hello.jsx';
 import NameInput from './NameInput.jsx';

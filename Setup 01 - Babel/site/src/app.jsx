@@ -4,8 +4,6 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-'use strict';
-
 class HelloReact extends React.Component {
   render() {
     return (

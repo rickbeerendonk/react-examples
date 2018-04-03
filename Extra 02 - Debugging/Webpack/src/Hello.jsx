@@ -4,8 +4,6 @@
 /* eslint react/display-name:"off" */
 /* eslint react/prop-types:"off" */
 
-'use strict';
-
 import React from 'react';
 
 const Hello = ({name}) => (

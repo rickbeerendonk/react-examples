@@ -3,8 +3,6 @@
 
 /* eslint react/prop-types:"off" */
 
-'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HelloMessage from './HelloMessage.jsx';
