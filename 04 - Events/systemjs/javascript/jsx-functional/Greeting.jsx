@@ -6,7 +6,7 @@
 import React from 'react';
 
 const Greeting = () => { 
-  let changed = (e) => alert(`Event handled.
+  const changed = (e) => alert(`Event handled.
 Target: ${e.target}
 Value: ${e.target.value}`);
 
