@@ -22,10 +22,10 @@ class GreetingEditor extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <EditBox onChange={this.onChange} value={this.state.name} />
         <Greeting name={this.state.name} />
-      </div>
+      </React.Fragment>
     );
   }
 }
