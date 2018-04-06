@@ -20,14 +20,18 @@ class GreetingEditor extends React.Component {
     return true;
   }
   render() {
-    if (this.state.name === 'renderException') {
+    const { name } = this.state;
+
+    if (name === 'renderException') {
       throw new Error('render exception');
     }
 
-    return [
-      <input key="input" onChange={this.onChange} value={this.state.name} />,
-      <h1 key="output">Hello {this.state.name}!</h1>
-    ];
+    return (
+      <React.Fragment>
+        <input key="input" onChange={this.onChange} value={name} />
+        {name && <h1 key="output">Hello {name}!</h1>}
+      </React.Fragment>
+    );
   }
 }
 
