@@ -17,7 +17,7 @@ export default class GreetingEditor extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <input onChange={this.onChange} value={this.state.name} />
         {
           // Change render based on name:
@@ -26,7 +26,7 @@ export default class GreetingEditor extends React.Component {
             : <h1 style={{color: 'red'}}>No name provided.</h1>
           )
         }
-      </div>
+      </React.Fragment>
     );
   }
 }
