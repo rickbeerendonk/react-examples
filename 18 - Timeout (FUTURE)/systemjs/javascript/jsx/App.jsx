@@ -8,6 +8,7 @@ import AsyncResult from './AsyncResult';
 export default class App extends React.Component {
   render() {
     return (
+      // This is future functionality (using a special alpha version of React):
       <React.Timeout>
         {
           didTimeout =>
