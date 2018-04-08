@@ -7,20 +7,15 @@ import ReactDOM from 'react-dom';
 import AsyncResult from './AsyncResult';
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: false };
-
-    // Bind all non-react methods to this.
-    this.load = this.load.bind(this);
-  }
-
-  load() {
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  state = { loading: false };
+  load = () => {
     // Perform an update with low priority
     ReactDOM.unstable_deferredUpdates(() => {
       this.setState({ loading: true });
     });
-  }
+  };
 
   render() {
     return (
