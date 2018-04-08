@@ -2,6 +2,7 @@
 <!-- Mozilla Public License Version 2.0 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="Rick Beerendonk">
@@ -9,8 +10,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>Component Lifecycle (jsx)</title>
+  <link rel="stylesheet" href="../../../../resources/oblicum.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="app"></div>
   <ol id="events"></ol>
@@ -18,12 +21,13 @@
   <script src="../../../../node_modules/systemjs/dist/system.js"></script>
   <script src="systemjs.config.js"></script>
   <script>
-    SystemJS.import('main').catch(function (err) { 
-      console.error(err); 
-      document.body.style.backgroundColor = 'red'; 
-      document.body.style.color = 'white'; 
-      document.body.innerText = err; 
+    SystemJS.import('main').catch(function (err) {
+      console.error(err);
+      document.body.style.backgroundColor = 'red';
+      document.body.style.color = 'white';
+      document.body.innerText = err;
     });
   </script>
 </body>
+
 </html>
