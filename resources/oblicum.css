@@ -20,9 +20,10 @@ body > :first-child::before {
   display: block;
   position: fixed;
   bottom: 0px;
+  left: 0px;
   margin: 10px;
   height: calc(1rem + 10px);
-  width: calc(100% - 20px);
+  width: calc(100% - 10px);
   background-image: url("oblicum-logo.svg");
   background-repeat: no-repeat;
   background-position-x: calc(100% - 10px);
