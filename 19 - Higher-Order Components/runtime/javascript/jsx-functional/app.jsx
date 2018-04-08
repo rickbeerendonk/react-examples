@@ -6,11 +6,10 @@
 
 // HOC
 function withExtras(WrappedComponent) {
-  class withExtras extends React.Component {
-    render() {
+  return props => {
       // Filter out extra props that are specific to this HOC and shouldn't be
       // passed through
-      const { extraColor, ...passThroughProps } = this.props;
+      const { extraColor, ...passThroughProps } = props;
 
       return (
         <div style={{ color: extraColor }}>
@@ -20,22 +19,11 @@ function withExtras(WrappedComponent) {
     }
   }
 
-  return withExtras;
-}
-
-const Greeting = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
+const Greeting = ({name}) => <h1>Hello {name}!</h1>;
 
 const GreetingWithExtras = withExtras(Greeting);
 
-class App extends React.Component {
-  render() {
-    return (
-      <GreetingWithExtras extraColor="red" name="World" />
-    );
-  }
-}
+const App = () => <GreetingWithExtras extraColor="red" name="World" />;
 
 ReactDOM.render(
   <App />,

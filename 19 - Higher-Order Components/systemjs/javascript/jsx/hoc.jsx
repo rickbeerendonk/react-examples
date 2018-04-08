@@ -1,11 +1,12 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
-/* eslint react/prop-types:"off", react/display-name:"off" */
+/* eslint react/prop-types:"off" */
+
+import React from 'react';
 
 // HOC
-function withExtras(WrappedComponent) {
+export function withExtras(WrappedComponent) {
   class withExtras extends React.Component {
     render() {
       // Filter out extra props that are specific to this HOC and shouldn't be
@@ -22,22 +23,3 @@ function withExtras(WrappedComponent) {
 
   return withExtras;
 }
-
-const Greeting = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
-
-const GreetingWithExtras = withExtras(Greeting);
-
-class App extends React.Component {
-  render() {
-    return (
-      <GreetingWithExtras extraColor="red" name="World" />
-    );
-  }
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
