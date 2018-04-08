@@ -5,11 +5,9 @@
 /* eslint-disable no-console */
 
 const childProcess = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 const portHttp = process.argv[2] || 8080;
-const portRest = +portHttp + 1;
+//const portRest = +portHttp + 1;
 let filePath = process.argv[3];
 const basePath = process.cwd();
 
@@ -18,15 +16,14 @@ const basePath = process.cwd();
 //console.log('filePath: ' + filePath);
 //console.log('basePath: ' + basePath);
 
-// Exit if no filePath is given
-if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
-  console.warn('No file path to open.');
-  process.exit();
+// If filePath is given, we'll open that path in the browser
+let extraUri = '';
+if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
+  const extraPath = filePath.substring(basePath.length);
+  extraUri = extraPath.split('\\').join('/');
 }
 
 const serverUri = `http://localhost:${portHttp}`;
-const extraPath = filePath.substring(basePath.length);
-const extraUri = extraPath.split('\\').join('/');
 const totalUri = `${serverUri}${extraUri}`;
 
 //console.log('serverUri: ' + serverUri);
@@ -41,6 +38,6 @@ const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1'
 // Open browser
 const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
               /* process.platform === "darwin" */ `open "${totalUri}"`;
-childProcess.exec(command);
+const browserChild = childProcess.spawn(command, {shell: true, stdio: 'inherit'});
 
 //childProcess.exec(command, () => { console.log('exit'); process.exit(); });
