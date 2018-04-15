@@ -27,10 +27,21 @@ body > :first-child::before {
   margin: 10px;
   height: calc(1rem + 10px);
   width: calc(100% - 10px);
+  background-color: white;
   background-image: url("oblicum-logo.svg");
   background-repeat: no-repeat;
   background-position-x: calc(100% - 10px);
   opacity: 0.7;
   z-index: 99;
   zoom: 50%;
+}
+
+.oblicum-spinner {
+  animation: oblicum-spin infinite 1s linear;
+  height: 1em;
+}
+
+@keyframes oblicum-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
