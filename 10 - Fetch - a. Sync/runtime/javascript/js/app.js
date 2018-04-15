@@ -51,7 +51,10 @@ class PostListContainer extends React.Component {
   }
   render() {
     if (this.state.isFetching) {
-      return "Fetching...";
+      return React.createElement(React.Fragment, null,
+          React.createElement('img', {src: "../../../../resources/oblicum-square.svg", className: "oblicum-spinner", alt: "Fetching..."}),
+          'Fetching...'
+        );
     }
 
     if (this.state.error) {

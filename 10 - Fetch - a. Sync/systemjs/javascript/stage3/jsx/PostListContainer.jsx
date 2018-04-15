@@ -15,7 +15,7 @@ export default class PostListContainer extends React.Component {
   state = { posts: [], error: '', isFetching: false };
 
   componentDidMount() {
-    this.setState({isFetching: true});
+    this.setState({ isFetching: true });
     fetch('posts.json')
       .then(response => {
         if (!response.ok) {
@@ -30,9 +30,15 @@ export default class PostListContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error 
-          ? <div style={{color: 'red'}}>{this.state.error}</div> 
+        {this.state.isFetching &&
+          <div>
+            <img src="../../../../../resources/oblicum-square.svg" className="oblicum-spinner" />
+            Fetching...
+      </div>
+        }
+
+        {this.state.error
+          ? <div style={{ color: 'red' }}>{this.state.error}</div>
           : <PostList posts={this.state.posts} />}
       </React.Fragment>
     );

@@ -4,9 +4,9 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const Post = ({title}) => <li>{title}</li>;
+const Post = ({ title }) => <li>{title}</li>;
 
-const PostList = ({posts}) =>  (
+const PostList = ({ posts }) => (
   <ul>{
     posts.map(post => <Post key={post.id} title={post.title} />)
   }</ul>
@@ -17,10 +17,10 @@ const PostList = ({posts}) =>  (
 class PostListContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      posts: [], 
-      error: '', 
-      isFetching: false 
+    this.state = {
+      posts: [],
+      error: '',
+      isFetching: false
     };
   }
   componentDidMount() {
@@ -39,9 +39,15 @@ class PostListContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.isFetching && <div>Fetching...</div>}
+        {this.state.isFetching &&
+          <div>
+            <img src="../../../../resources/oblicum-square.svg" className="oblicum-spinner" />
+            Fetching...
+          </div>
+        }
+
         {this.state.error
-          ? <div style={{color: 'red'}}>{this.state.error}</div> 
+          ? <div style={{ color: 'red' }}>{this.state.error}</div>
           : <PostList posts={this.state.posts} />}
       </React.Fragment>
     );
