@@ -5,6 +5,10 @@
 
 import React from 'react';
 
-const Greeting = ({name}) => <h1>Hello {name}!</h1>;
-
-export default Greeting;
+export default class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello {this.props.name}!</h1>
+    );
+  }
+}

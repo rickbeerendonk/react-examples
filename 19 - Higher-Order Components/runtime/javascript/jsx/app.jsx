@@ -23,9 +23,13 @@ function withExtras(WrappedComponent) {
   return withExtras;
 }
 
-const Greeting = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello {this.props.name}!</h1>
+    );
+  }
+}
 
 const GreetingWithExtras = withExtras(Greeting);
 
