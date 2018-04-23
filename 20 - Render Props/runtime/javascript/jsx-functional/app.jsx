@@ -32,27 +32,16 @@ class MouseOver extends React.Component {
   }
 }
 
-class Greeting extends React.Component {
-  render() {
-    return (
-      <h1 style={this.props.highlight ? {color: 'red'} : null}>Hello {this.props.name}!</h1>
-    );
-  }
-}
-
-class App extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <MouseOver render={mouseIsOver => (<Greeting name="First" highlight={mouseIsOver} />)} />
-        <Greeting name="Second" />
-        <MouseOver render={mouseIsOver => (<h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>)} />
-      </React.Fragment>
-    );
-  }
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+const Greeting = ({ name, highlight }) => (
+  <h1 style={highlight ? { color: "red" } : null}>Hello {name}!</h1>
 );
+
+const App = () => (
+  <React.Fragment>
+    <MouseOver render={mouseIsOver => <Greeting name="First" highlight={mouseIsOver} />} />
+    <Greeting name="Second" />
+    <MouseOver render={mouseIsOver => <h2>Subtitle{mouseIsOver && " (with mouse)"}</h2>} />
+  </React.Fragment>
+);
+
+ReactDOM.render(<App />, document.getElementById("app"));

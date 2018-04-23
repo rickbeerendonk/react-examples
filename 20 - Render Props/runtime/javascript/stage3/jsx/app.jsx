@@ -6,19 +6,16 @@
 
 // Component with render prop
 class MouseOver extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { mouseIsOver: false };
-
-    this.onMouseEnter = this.onMouseEnter.bind(this);
-    this.onMouseLeave = this.onMouseLeave.bind(this);
-  }
-  onMouseEnter() {
+  // Proposal: https://github.com/tc39/proposal-class-fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  state = { mouseIsOver: false };
+  onMouseEnter = () => {
     this.setState({ mouseIsOver: true });
   }
-  onMouseLeave() {
+  onMouseLeave = () => {
     this.setState({ mouseIsOver: false });
   }
+  
   render() {
     return (
       <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
