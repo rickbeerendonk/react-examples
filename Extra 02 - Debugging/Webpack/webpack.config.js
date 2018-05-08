@@ -1,6 +1,8 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
+/* global __dirname, module, require */
+
 const path = require('path');
 
 module.exports = {

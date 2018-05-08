@@ -1,3 +1,5 @@
+/* global __dirname, module */
+
 module.exports = {
   entry: "./site/src/app.jsx",
   output: {
