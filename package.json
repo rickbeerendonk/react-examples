@@ -20,12 +20,12 @@
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react": "^7.9.1",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@types/react": "^16.3.13",
-    "@types/react-dom": "^16.0.5",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
     "babel-polyfill": "6.26.0",
     "babel-standalone": "6.26.0",
     "create-react-class": "15.6.3",
@@ -33,11 +33,11 @@
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
     "prop-types": "^15.6.1",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
     "react-transition-group": "^2.3.1",
-    "systemjs": "0.21.3",
+    "systemjs": "0.21.4",
     "systemjs-plugin-babel": "^0.0.25",
-    "typescript": "^2.8.3"
+    "typescript": "^2.9.1"
   }
 }

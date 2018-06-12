@@ -1,8 +1,8 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-import React from 'react';
 import { hot } from 'react-hot-loader';
+import React from 'react';
 
 import EditBox from './EditBox.jsx';
 import Greeting from './Greeting.jsx';
@@ -22,10 +22,10 @@ class GreetingEditor extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <EditBox onChange={this.onChange} name={this.state.name} />
         <Greeting name={this.state.name} />
-      </div>
+      </React.Fragment>
     );
   }
 }
