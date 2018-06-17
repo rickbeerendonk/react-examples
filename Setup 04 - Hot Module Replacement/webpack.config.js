@@ -25,12 +25,12 @@ module.exports = {
         enforce: 'pre',
         test: /\.jsx?$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
+        exclude: /node_modules|packages/
       },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules|packages/
       }
     ]
   },
@@ -40,4 +40,7 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin()
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
 };

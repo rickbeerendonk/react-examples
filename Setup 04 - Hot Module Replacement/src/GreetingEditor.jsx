@@ -1,11 +1,11 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-import { hot } from 'react-hot-loader';
 import React from 'react';
+import { hot } from 'react-hot-loader';
 
-import EditBox from './EditBox.jsx';
-import Greeting from './Greeting.jsx';
+import EditBox from './EditBox';
+import Greeting from './Greeting';
 
 /* eslint react/prop-types:"off" */
 /* global module */

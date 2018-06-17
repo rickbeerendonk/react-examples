@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GreetingEditor from './GreetingEditor.jsx';
+import GreetingEditor from './GreetingEditor';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
