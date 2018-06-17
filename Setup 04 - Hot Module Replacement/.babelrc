@@ -5,9 +5,7 @@
     "stage-0"
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-decorators",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements"
+    "react-hot-loader/babel",
+    "transform-class-properties"
   ]
 }
