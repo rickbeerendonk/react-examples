@@ -3,9 +3,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeting from './Greeting.jsx';
+import Greeting from './Greeting';
+
+const root = document.createElement('div');
+document.body.appendChild(root);
 
 ReactDOM.render(
   <Greeting />,
-  document.getElementById('app')
+  root
 );
