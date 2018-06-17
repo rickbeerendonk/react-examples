@@ -4,8 +4,8 @@
 /* eslint react/prop-types:"off" */
 
 import React from 'react';
-import Hello from './Hello.jsx';
-import NameInput from './NameInput.jsx';
+import Hello from './Hello';
+import NameInput from './NameInput';
 
 export default class HelloMessage extends React.Component {
   constructor(props) {

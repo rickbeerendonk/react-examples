@@ -5,9 +5,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloMessage from './HelloMessage.jsx';
+import HelloMessage from './HelloMessage';
+
+const root = document.createElement('div');
+document.body.appendChild(root);
 
 ReactDOM.render(
-  <HelloMessage name="React" />,
-  document.getElementById('app')
-  );
+  <HelloMessage name="World" />,
+  root
+);
