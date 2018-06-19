@@ -53,4 +53,4 @@ export default class Hello extends React.Component {
 }
 Hello.contextTypes = {
   value: PropTypes.string
-}
+};

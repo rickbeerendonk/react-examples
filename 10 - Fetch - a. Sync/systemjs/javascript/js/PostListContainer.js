@@ -24,13 +24,13 @@ export default class PostListContainer extends React.Component {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
       self.setState({ isFetching: false });
-    }
+    };
     xhr.onerror = function () {
       self.setState({ error: 'An error occurred.' });
-    }
+    };
     xhr.ontimeout = function () {
       self.setState({ error: 'Timeout.' });
-    }
+    };
     xhr.onreadystatechange = function () {
       if (this.readyState == XMLHttpRequest.DONE) {
         if (this.status == 200) {

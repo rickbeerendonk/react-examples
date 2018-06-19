@@ -20,6 +20,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "react/jsx-no-undef": [2, { "allowGlobals": true }]
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "semi": [2, "always"]
   }
 }

@@ -30,7 +30,7 @@ class PostListContainer extends React.Component {
         if (!response.ok) {
           throw Error(response.statusText);
         }
-        return response.json()
+        return response.json();
       })
       .then(json => { this.setState({ posts: json }); })
       .catch(error => { this.setState({ error: error.message }); })
