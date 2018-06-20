@@ -29,7 +29,7 @@ export default class PostListContainer extends React.Component {
       })
       .then(json => { this.setState({ posts: json }); })
       .catch(error => { this.setState({ error: error.message }); })
-      .finally(() => { this.setState({ isFetching: true }); });
+      .finally(() => { this.setState({ isFetching: false }); });
   }
   render() {
     return (
