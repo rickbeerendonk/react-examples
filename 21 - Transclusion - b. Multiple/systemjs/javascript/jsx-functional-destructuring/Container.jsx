@@ -8,12 +8,12 @@ import React from 'react';
 const containerStyle = {
   backgroundColor: 'lightgray',
   padding: 10
-}
+};
 
 const contentStyle = {
   backgroundColor: 'white',
   padding: 10
-}
+};
 
 const Container = ({slot1, slot2}) => (
   <div style={containerStyle}>
