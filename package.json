@@ -18,7 +18,7 @@
     "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.5",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
     "rimraf": "^2.6.2"
@@ -26,13 +26,16 @@
   "dependencies": {
     "@types/react": "^16.3.18",
     "@types/react-dom": "^16.0.6",
-    "babel-polyfill": "6.26.0",
-    "babel-standalone": "6.26.0",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "@babel/standalone": "^7.0.0-beta.51",
     "create-react-class": "15.6.3",
     "http-server": "0.11.1",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",
     "react-transition-group": "^2.3.1",
