@@ -12,6 +12,10 @@ Example:
 Examples:
 * https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab
 
+## Future
+
+* Profiles component: https://github.com/reactjs/rfcs/pull/51
+
 ---
 
 Copyright © 2018 Rick Beerendonk
