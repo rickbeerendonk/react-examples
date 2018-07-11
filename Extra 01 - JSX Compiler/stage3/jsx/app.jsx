@@ -40,11 +40,11 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
   render() {
     return (
       <div style={styles.div}>
-        <textarea onChange={this.onChange} defaultValue={this.jsx} />
+        <textarea className="code" onChange={this.onChange} defaultValue={this.jsx} />
         {
           this.state.error
-          ? <textarea readOnly="readOnly" style={styles.error} value={this.state.error} />
-          : <textarea readOnly="readOnly" value={this.state.code} />
+          ? <textarea className="code" readOnly="readOnly" style={styles.error} value={this.state.error} />
+          : <textarea className="code" readOnly="readOnly" value={this.state.code} />
         }
       </div>);
   }

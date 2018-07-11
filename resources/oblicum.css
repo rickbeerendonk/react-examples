@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Anonymous%20Pro');
 
 * {
   font-family: Montserrat;
@@ -34,6 +35,10 @@ body > :first-child::before {
   opacity: 0.7;
   z-index: 99;
   zoom: 50%;
+}
+
+.code {
+  font-family: 'Anonymous Pro';
 }
 
 .oblicum-spinner {
