@@ -28,17 +28,19 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
   render() {
     return React.createElement(
       'div',
-      null,
-      React.createElement('textarea', { style: styles.textarea, onChange: this.onChange, defaultValue: this.jsx }),
-      React.createElement('textarea', { style: styles.textarea, readOnly: 'readOnly', value: this.state.code })
+      { style: styles.div },
+      React.createElement('textarea', { onChange: this.onChange, defaultValue: this.jsx }),
+      React.createElement('textarea', { readOnly: 'readOnly', value: this.state.code })
     );
   }
 }
 
 var styles = {
-  textarea: {
-    width: '400px',
-    height: '400px'
+  div: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: '45vh',
+    gridGap: '0.5vw'
   }
 };
 
