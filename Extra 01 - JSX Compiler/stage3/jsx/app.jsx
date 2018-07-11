@@ -8,6 +8,16 @@ function jsxTransform(source) {
   return Babel.transform(source, { presets: ['react'] }).code;
 }
 
+function jsxTransformSafe(source) {
+  try {
+    const code = jsxTransform(source);
+    return { code, error: null };
+  }
+  catch (error) {
+    return { code: null, error };
+  }
+}
+
 class JsxCompiler extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
@@ -21,17 +31,21 @@ const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
 
 React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
 
-  state = { code: jsxTransform(this.jsx) };
+  state = jsxTransformSafe(this.jsx);
 
   onChange = (e) => {
-    this.setState({ code: jsxTransform(e.target.value) });
+    this.setState(jsxTransformSafe(e.target.value));
   };
   
   render() {
     return (
       <div style={styles.div}>
         <textarea onChange={this.onChange} defaultValue={this.jsx} />
-        <textarea readOnly="readOnly" value={this.state.code} />
+        {
+          this.state.error
+          ? <textarea readOnly="readOnly" style={styles.error} value={this.state.error} />
+          : <textarea readOnly="readOnly" value={this.state.code} />
+        }
       </div>);
   }
 }
@@ -42,6 +56,9 @@ var styles = {
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '45vh',
     gridGap: '0.5vw'
+  },
+  error: {
+    color: 'red'
   }
 };
 

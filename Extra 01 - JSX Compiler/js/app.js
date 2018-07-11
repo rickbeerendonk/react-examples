@@ -8,6 +8,16 @@ function jsxTransform(source) {
   return Babel.transform(source, { presets: ['react'] }).code;
 }
 
+function jsxTransformSafe(source) {
+  try {
+    const code = jsxTransform(source);
+    return { code, error: null };
+  }
+  catch (error) {
+    return { code: null, error };
+  }
+}
+
 class JsxCompiler extends React.Component {
   constructor(props) {
     super(props);
@@ -22,20 +32,22 @@ const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
 
 React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
 
-    this.state = { code: jsxTransform(this.jsx) };
+    this.state = jsxTransformSafe(this.jsx);
 
     // Bind all non-react methods to this.
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
-    this.setState({ code: jsxTransform(e.target.value) });
+    this.setState(jsxTransformSafe(e.target.value));
   }
   render() {
     return React.createElement(
       'div',
       { style: styles.div },
       React.createElement('textarea', { onChange: this.onChange, defaultValue: this.jsx }),
-      React.createElement('textarea', { readOnly: 'readOnly', value: this.state.code })
+      this.state.error
+      ? React.createElement('textarea', { readOnly: 'readOnly', style: styles.error, value: this.state.error })
+      : React.createElement('textarea', { readOnly: 'readOnly', value: this.state.code })
     );
   }
 }
@@ -46,6 +58,9 @@ var styles = {
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '45vh',
     gridGap: '0.5vw'
+  },
+  error: {
+    color: 'red'
   }
 };
 
