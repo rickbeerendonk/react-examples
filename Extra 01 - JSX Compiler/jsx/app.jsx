@@ -23,7 +23,7 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
-    this.setState({ code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] }).code });
+    this.setState({ code: Babel.transform(e.target.value, { presets: ['react'] }).code });
   }
   render() {
     return (

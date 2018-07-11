@@ -18,7 +18,7 @@ const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
 
 React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
   onChange = (e) => {
-    this.setState({ code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] }).code });
+    this.setState({ code: Babel.transform(e.target.value, { presets: ['react'] }).code });
   };
   
   render() {

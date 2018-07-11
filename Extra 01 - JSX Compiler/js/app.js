@@ -9,19 +9,21 @@ class JsxCompiler extends React.Component {
     super(props);
     this.state = { code: '' };
 
-    this.jsx = `var HelloMessage = React.createClass({\n\
-  render: function() {\n\
-    return <div>Hello {this.props.name}</div>;\n\
-  }\n\
-});\n\
-\n\
-React.render(<HelloMessage name="John" />, mountNode);`;
+    this.jsx = `class HelloMessageClass extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
+
+const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
+
+React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
 
     // Bind all non-react methods to this.
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
-    this.setState({ code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] }).code });
+    this.setState({ code: Babel.transform(e.target.value, { presets: ['react'] }).code });
   }
   render() {
     return React.createElement(
