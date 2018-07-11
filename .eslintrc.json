@@ -21,6 +21,7 @@
   ],
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "no-debugger": "warn",
     "semi": [2, "always"]
   }
 }
