@@ -4,10 +4,13 @@
 /* global Babel, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
+function jsxTransform(source) {
+  return Babel.transform(source, { presets: ['react'] }).code;
+}
+
 class JsxCompiler extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { code: '' };
 
     this.jsx = `class HelloMessageClass extends React.Component {
   render() {
@@ -19,11 +22,13 @@ const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
 
 React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
 
+    this.state = { code: jsxTransform(this.jsx) };
+
     // Bind all non-react methods to this.
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
-    this.setState({ code: Babel.transform(e.target.value, { presets: ['react'] }).code });
+    this.setState({ code: jsxTransform(e.target.value) });
   }
   render() {
     return React.createElement(

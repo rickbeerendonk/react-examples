@@ -4,10 +4,13 @@
 /* global Babel, React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
+function jsxTransform(source) {
+  return Babel.transform(source, { presets: ['react'] }).code;
+}
+
 class JsxCompiler extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
-  state = { code: '' };
   jsx = `class HelloMessageClass extends React.Component {
   render() {
     return <div>Hello {this.props.name}</div>;
@@ -17,8 +20,11 @@ class JsxCompiler extends React.Component {
 const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
 
 React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
+
+  state = { code: jsxTransform(this.jsx) };
+
   onChange = (e) => {
-    this.setState({ code: Babel.transform(e.target.value, { presets: ['react'] }).code });
+    this.setState({ code: jsxTransform(e.target.value) });
   };
   
   render() {
