@@ -32,6 +32,7 @@
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
     "create-react-class": "15.6.3",
+    "htmltojsx": "^0.3.0",
     "http-server": "0.11.1",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
