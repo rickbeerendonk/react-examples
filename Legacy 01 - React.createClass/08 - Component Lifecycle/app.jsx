@@ -32,7 +32,7 @@ var Hello = createReactClass({
   },
 
   // Mounting
-  componentWillMount: function () {
+  UNSAFE_componentWillMount: function () {
     logEvent('componentWillMount()', 'mounting');
   },
   componentDidMount: function () {
@@ -40,14 +40,14 @@ var Hello = createReactClass({
   },
 
   // Updating
-  componentWillReceiveProps: function (nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     logEvent('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')', 'updating');
   },
   shouldComponentUpdate: function (nextProps, nextState) {
     logEvent('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean', 'updating');
     return true;
   },
-  componentWillUpdate: function (nextProps, nextState) {
+  UNSAFE_componentWillUpdate: function (nextProps, nextState) {
     logEvent('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')', 'updating');
   },
   componentDidUpdate: function (prevProps, prevState) {
@@ -68,7 +68,7 @@ var App = createReactClass({
   getInitialState: function () {
     return {
       name: 'Number One'
-    }
+    };
   },
   componentDidMount: function () {
     logEvent('-- new prop --', 'action');

@@ -115,7 +115,7 @@ var Hello = createReactClass({
   },
 
   // Mounting
-  componentWillMount: function () {
+  UNSAFE_componentWillMount: function () {
     logEvent('Component: componentWillMount()', 'mounting');
   },
   componentDidMount: function () {
@@ -123,14 +123,14 @@ var Hello = createReactClass({
   },
 
   // Updating
-  componentWillReceiveProps: function (nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     logEvent('Component: componentWillReceiveProps(nextProps)', 'updating');
   },
   shouldComponentUpdate: function (nextProps, nextState) {
     logEvent('Component: shouldComponentUpdate(nextProps, nextState): boolean', 'updating');
     return true;
   },
-  componentWillUpdate: function (nextProps, nextState) {
+  UNSAFE_componentWillUpdate: function (nextProps, nextState) {
     logEvent('Component: componentWillUpdate(nextProps, nextState)', 'updating');
   },
   componentDidUpdate: function (prevProps, prevState) {

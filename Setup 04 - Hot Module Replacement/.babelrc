@@ -1,11 +1,6 @@
 {
   "presets": [
-    "env",
-    "react",
-    "stage-0"
-  ],
-  "plugins": [
-    "react-hot-loader/babel",
-    "transform-class-properties"
+    "@babel/preset-env", 
+    "@babel/preset-react"
   ]
 }

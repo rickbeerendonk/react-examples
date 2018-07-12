@@ -2,9 +2,9 @@
     "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true,
-            "experimentalObjectRestSpread": true
-        }       
+            "jsx": true 
+        },
+        "ecmaVersion": 2018
     },  
     "rules": {
         "indent": [
