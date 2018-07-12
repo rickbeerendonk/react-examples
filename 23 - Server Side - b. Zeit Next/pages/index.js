@@ -4,6 +4,8 @@
 import React from 'react';
 import MyText from './MyText.js';
 
-/* eslint react/display-name:"off" */
+const Index = () => (
+  <h1>Hello <MyText text="world" />!</h1>
+);
 
-export default () => <h1>Hello <MyText text="world" />!</h1>
+export default Index;

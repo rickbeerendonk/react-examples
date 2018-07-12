@@ -9,7 +9,7 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "dependencies": {
-    "next": "^6.0.3"
+    "next": "^6.1.1"
   },
   "scripts": {
     "dev": "next"
