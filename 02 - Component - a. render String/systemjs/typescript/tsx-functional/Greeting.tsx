@@ -3,8 +3,6 @@
 
 import React from 'react';
 
-const Greeting = (): JSX.Element => (
-  <h1>Hello World!</h1>
-);
+const Greeting = (): string => 'Hello World!';
 
 export default Greeting;

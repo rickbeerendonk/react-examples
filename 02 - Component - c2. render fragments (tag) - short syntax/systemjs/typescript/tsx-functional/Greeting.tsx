@@ -4,7 +4,11 @@
 import React from 'react';
 
 const Greeting = (): JSX.Element => (
-  <h1>Hello World!</h1>
+  <>
+    <h1>Hello World!</h1>
+    What do you think about React?
+    <div>It looks amazing.</div>
+  </>
 );
 
 export default Greeting;
