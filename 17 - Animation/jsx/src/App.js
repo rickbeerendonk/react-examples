@@ -36,7 +36,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <button onClick={this.handleAdd}>Add</button>
         <hr />
         <TransitionGroup>
@@ -44,8 +44,9 @@ class App extends React.Component {
             return (
               <CSSTransition
                 key={key}
-                classNames="example"
+                classNames="item"
                 timeout={{ enter: 500, exit: 500 }}
+                unmountOnExit
               >
                 <div
                   onClick={this.handleRemove.bind(null, key)}
@@ -56,7 +57,7 @@ class App extends React.Component {
             );
           })}
         </TransitionGroup>
-      </div>
+      </React.Fragment>
     );
   }
 }
