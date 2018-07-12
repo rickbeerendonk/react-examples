@@ -17,7 +17,7 @@ var List = createReactClass({
     return (
       <ul>{
         React.Children.map(this.props.children, function (child, i) {
-          return <li key={i}>{child}</li>
+          return <li key={i}>{child}</li>;
         })
       }</ul>
     );
