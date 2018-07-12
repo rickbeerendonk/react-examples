@@ -57,7 +57,7 @@ class App extends React.Component {
           })}
         </TransitionGroup>
       </div>
-    )
+    );
   }
 }
 
