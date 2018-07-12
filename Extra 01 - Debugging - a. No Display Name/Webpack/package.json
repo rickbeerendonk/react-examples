@@ -1,0 +1,30 @@
+{
+  "name": "debug-react-webpack",
+  "description": "Debug React with Webpack & Babel (Visual Studio Code)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.53",
+    "@babel/polyfill": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0-beta.53",
+    "babel-loader": "^8.0.0-beta",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "scripts": {
+    "build": "webpack -d --progress",
+    "watch": "webpack -d --progress --watch",
+    "start": "webpack-dev-server --open"
+  }
+}
