@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const Greeting = (): JSX.Element => (
+const Greeting: React.SFC = () => (
   <h1>Hello World!</h1>
 );
 
