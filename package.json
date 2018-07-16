@@ -14,12 +14,13 @@
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "scripts": {
     "clean": "rimraf node_modules",
-    "eslint": "eslint . --ext .js,.jsx",
-    "eslint-fix": "eslint . --ext .js,.jsx --fix",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8040",
     "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,ts,tsx}'",
-    "prettier-fix": "prettier --write '**/*.{json,js,jsx,ts,tsx}'"
+    "prettier-fix": "prettier --write '**/*.{json,js,jsx,ts,tsx}'",
+    "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
