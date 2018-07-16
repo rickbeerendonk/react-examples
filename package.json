@@ -12,6 +12,12 @@
     "url": "https://github.com/rickbeerendonk/react-examples/issues"
   },
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate",
+      "pre-push": "npm run validate"
+    }
+  },
   "scripts": {
     "clean": "rimraf node_modules",
     "eslint": "eslint . --ext .js,.jsx --cache",
@@ -26,6 +32,7 @@
     "babel-eslint": "^8.2.5",
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
+    "husky": "^1.0.0-rc.13",
     "prettier": "^1.13.7",
     "rimraf": "^2.6.2"
   },
