@@ -5,6 +5,7 @@
 
 import React from 'react';
 
-const Greeting = ({ name }) => React.createElement('h1', null, 'Hello ', name, '!');
+const Greeting = ({ name }) =>
+  React.createElement('h1', null, 'Hello ', name, '!');
 
 export default Greeting;

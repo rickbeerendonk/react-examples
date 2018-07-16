@@ -5,6 +5,6 @@
 
 import React from 'react';
 
-const Post = ({title}) => React.createElement('li', null, title);
+const Post = ({ title }) => React.createElement('li', null, title);
 
 export default Post;

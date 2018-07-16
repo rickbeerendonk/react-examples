@@ -8,29 +8,25 @@ var EditBox = createReactClass({
   onChange(e) {
     this.props.onChange(e.target.value);
   },
-  render: function () {
-    return (
-      <input onChange={this.onChange} value={this.props.name} />
-    );
+  render: function() {
+    return <input onChange={this.onChange} value={this.props.name} />;
   }
 });
 
 var Greeting = createReactClass({
-  render: function () {
-    return (
-      <h1>Hello {this.props.name}!</h1>
-    );
+  render: function() {
+    return <h1>Hello {this.props.name}!</h1>;
   }
 });
 
 var GreetingEditor = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return { name: 'World' };
   },
-  onChange: function (newName) {
+  onChange: function(newName) {
     this.setState({ name: newName });
   },
-  render: function () {
+  render: function() {
     return (
       <div>
         <EditBox onChange={this.onChange} name={this.state.name} />
@@ -40,7 +36,4 @@ var GreetingEditor = createReactClass({
   }
 });
 
-ReactDOM.render(
-  <GreetingEditor />,
-  document.getElementById('app')
-);
+ReactDOM.render(<GreetingEditor />, document.getElementById('app'));

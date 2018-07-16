@@ -9,13 +9,8 @@ class HelloWorld extends React.Component {
     ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
-    return (
-      <h1>Hello World!</h1>
-    );
+    return <h1>Hello World!</h1>;
   }
 }
 
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('app')
-);
+ReactDOM.render(<HelloWorld />, document.getElementById('app'));

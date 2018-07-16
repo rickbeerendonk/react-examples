@@ -12,18 +12,15 @@ class Greeting extends React.Component {
     const showHandled = () => {
       alert(`Event handled.
 Target: ${e.target}
-Value: ${e.target.value}`)
+Value: ${e.target.value}`);
     };
 
     setTimeout(showHandled, 1000);
   }
-  
+
   render() {
-    return <input onChange={this.onChange} value='Hello World!' />;
+    return <input onChange={this.onChange} value="Hello World!" />;
   }
 }
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

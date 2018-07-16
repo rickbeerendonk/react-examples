@@ -6,9 +6,7 @@
 
 class Greeting extends React.Component {
   render() {
-    return (
-      <h1 style={styles.header}>Hello World!</h1>
-    );
+    return <h1 style={styles.header}>Hello World!</h1>;
   }
 }
 
@@ -16,12 +14,9 @@ const styles = {
   header: {
     background: '#444',
     color: 'orchid',
-    fontStyle: 'italic',  // font-style in CSS
-    marginTop: '75px',  // margin-top in CSS
+    fontStyle: 'italic', // font-style in CSS
+    marginTop: '75px' // margin-top in CSS
   }
 };
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

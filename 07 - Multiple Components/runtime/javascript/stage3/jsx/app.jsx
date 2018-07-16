@@ -4,13 +4,11 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const EditBox = ({onChange, value}) => (
+const EditBox = ({ onChange, value }) => (
   <input onChange={e => onChange(e.target.value)} value={value} />
 );
 
-const Greeting = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
+const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 
 class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
@@ -18,7 +16,7 @@ class GreetingEditor extends React.Component {
   state = { name: 'World' };
   onChange = name => {
     this.setState({ name });
-  }
+  };
 
   render() {
     return (
@@ -30,7 +28,4 @@ class GreetingEditor extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <GreetingEditor />,
-  document.getElementById('app')
-);
+ReactDOM.render(<GreetingEditor />, document.getElementById('app'));

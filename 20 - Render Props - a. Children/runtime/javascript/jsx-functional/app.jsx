@@ -33,19 +33,19 @@ class MouseOver extends React.Component {
 }
 
 const Greeting = ({ name, highlight }) => (
-  <h1 style={highlight ? { color: "red" } : null}>Hello {name}!</h1>
+  <h1 style={highlight ? { color: 'red' } : null}>Hello {name}!</h1>
 );
 
 const App = () => (
   <React.Fragment>
     <MouseOver>
-      {mouseIsOver => (<Greeting name="First" highlight={mouseIsOver} />)}
+      {mouseIsOver => <Greeting name="First" highlight={mouseIsOver} />}
     </MouseOver>
     <Greeting name="Second" />
     <MouseOver>
-      {mouseIsOver => (<h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>)}
+      {mouseIsOver => <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>}
     </MouseOver>
   </React.Fragment>
 );
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));

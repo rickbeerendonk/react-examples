@@ -3,10 +3,8 @@
 
 /* global React, ReactDOM */
 
-const HelloWorld = () => 
-  <h1 ref={ref => ref.innerHTML = 'Hello <i>React</i>!!!'}>Hello World!</h1>
-
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('app')
+const HelloWorld = () => (
+  <h1 ref={ref => (ref.innerHTML = 'Hello <i>React</i>!!!')}>Hello World!</h1>
 );
+
+ReactDOM.render(<HelloWorld />, document.getElementById('app'));

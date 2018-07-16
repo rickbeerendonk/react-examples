@@ -13,10 +13,10 @@ export function withExtras(WrappedComponent) {
       // passed through
       const { extraColor, ...passThroughProps } = this.props;
 
-      return (
-        React.createElement('div', { style: { color: extraColor } },
-          React.createElement(WrappedComponent, { ...passThroughProps })
-        )
+      return React.createElement(
+        'div',
+        { style: { color: extraColor } },
+        React.createElement(WrappedComponent, { ...passThroughProps })
       );
     }
   }

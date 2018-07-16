@@ -9,7 +9,4 @@ const Greeting = () => [
   <div key="enthusiasm">It looks amazing.</div>
 ];
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

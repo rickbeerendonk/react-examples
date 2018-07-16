@@ -19,9 +19,7 @@ class Container extends React.Component {
     return (
       <div style={containerStyle}>
         The only item:
-        <div style={contentStyle}>
-          {this.props.children}
-        </div>
+        <div style={contentStyle}>{this.props.children}</div>
       </div>
     );
   }

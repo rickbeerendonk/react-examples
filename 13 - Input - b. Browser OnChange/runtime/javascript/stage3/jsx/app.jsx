@@ -7,7 +7,7 @@
 class MyInput extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
-  browserChanged = (e) => {
+  browserChanged = e => {
     this.props.onBrowserChanged(e);
   };
 
@@ -19,9 +19,15 @@ class MyInput extends React.Component {
   }
   render() {
     /* eslint no-unused-vars:"off" */
-    const {onBrowserChanged: deleted, children, ...passthroughProps} = this.props;
+    const {
+      onBrowserChanged: deleted,
+      children,
+      ...passthroughProps
+    } = this.props;
     return (
-      <input {...passthroughProps} ref={(ref) => this.myInput = ref}>{children}</input>
+      <input {...passthroughProps} ref={ref => (this.myInput = ref)}>
+        {children}
+      </input>
     );
   }
 }
@@ -30,10 +36,10 @@ class HelloMessage extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
-  onBrowserChanged = (e) => {
+  onBrowserChanged = e => {
     alert(e.target.value);
   };
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ name: e.target.value });
   };
 
@@ -45,22 +51,21 @@ class HelloMessage extends React.Component {
           <MyInput
             onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            defaultValue={this.state.name} />
+            defaultValue={this.state.name}
+          />
         </div>
 
         <div>
           Controlled by React:
-          <MyInput 
-            onChange={this.onChange} 
+          <MyInput
+            onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            value={this.state.name} />
+            value={this.state.name}
+          />
         </div>
       </div>
     );
   }
 }
 
-ReactDOM.render(
-  <HelloMessage />,
-  document.getElementById('app')
-);
+ReactDOM.render(<HelloMessage />, document.getElementById('app'));

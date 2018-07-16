@@ -3,17 +3,13 @@
 
 /* global React, ReactDOM */
 
-const Greeting = () => { 
-  const changed = (e) => alert(`Event handled.
+const Greeting = () => {
+  const changed = e =>
+    alert(`Event handled.
 Target: ${e.target}
 Value: ${e.target.value}`);
 
-  return (
-    <input onChange={changed} value='Hello World!' />
-  )
+  return <input onChange={changed} value="Hello World!" />;
 };
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

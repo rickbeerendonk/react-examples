@@ -21,19 +21,14 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <button onClick={this.load}>Load</button>
-        {
-          // This is future functionality (using a special alpha version of React):
-          this.state.loading
-          && <React.Timeout ms={1000}>
-            {
-              didTimeout => (
-                <div>
-                  {didTimeout ? 'Loading...' : <AsyncResult />}
-                </div>
-              )
-            }
+        {// This is future functionality (using a special alpha version of React):
+        this.state.loading && (
+          <React.Timeout ms={1000}>
+            {didTimeout => (
+              <div>{didTimeout ? 'Loading...' : <AsyncResult />}</div>
+            )}
           </React.Timeout>
-        }
+        )}
       </React.Fragment>
     );
   }

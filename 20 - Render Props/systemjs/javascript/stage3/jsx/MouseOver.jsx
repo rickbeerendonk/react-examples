@@ -12,11 +12,11 @@ export default class MouseOver extends React.Component {
   state = { mouseIsOver: false };
   onMouseEnter = () => {
     this.setState({ mouseIsOver: true });
-  }
+  };
   onMouseLeave = () => {
     this.setState({ mouseIsOver: false });
-  }
-  
+  };
+
   render() {
     return (
       <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>

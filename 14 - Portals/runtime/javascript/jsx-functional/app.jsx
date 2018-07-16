@@ -7,21 +7,18 @@
 const App = () => (
   <React.Fragment>
     This is the React App.
-        <Invisible />
+    <Invisible />
   </React.Fragment>
 );
 
 const Invisible = () =>
-  ReactDOM.createPortal(
-    <Visible />,
-    document.getElementById('portal')
-  );
+  ReactDOM.createPortal(<Visible />, document.getElementById('portal'));
 
 const Visible = () => (
-  <h3>I am a visible portal, shown outside the react root by an invisible component!</h3>
+  <h3>
+    I am a visible portal, shown outside the react root by an invisible
+    component!
+  </h3>
 );
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

@@ -5,18 +5,13 @@
 //import * as ReactDOM from 'react-dom';
 
 interface IGreeting {
-  name: string
+  name: string;
 }
 
 class Greeting extends React.Component<IGreeting, undefined> {
   render() {
-    return (
-      <h1>Hello {this.props.name}!</h1>
-      );
+    return <h1>Hello {this.props.name}!</h1>;
   }
 }
 
-ReactDOM.render(
-  <Greeting name="World" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));

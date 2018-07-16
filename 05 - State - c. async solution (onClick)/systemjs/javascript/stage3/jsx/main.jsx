@@ -6,7 +6,4 @@ import ReactDOM from 'react-dom';
 
 import ClickMe from './ClickMe';
 
-ReactDOM.render(
-  <ClickMe />,
-  document.getElementById('app')
-);
+ReactDOM.render(<ClickMe />, document.getElementById('app'));

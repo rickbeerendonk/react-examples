@@ -3,7 +3,7 @@
 
 /* global describe, it */
 
-import Greeting from '../src/Greeting.jsx'
+import Greeting from '../src/Greeting.jsx';
 
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
@@ -11,8 +11,6 @@ import expect from 'expect';
 
 describe('Greeting', () => {
   it('should render Hello World in a H1', () => {
-    const expected = '<h1>\n  Hello World!\n</h1>';
-    
     const renderer = new ShallowRenderer();
     renderer.render(<Greeting />);
     const actual = renderer.getRenderOutput();

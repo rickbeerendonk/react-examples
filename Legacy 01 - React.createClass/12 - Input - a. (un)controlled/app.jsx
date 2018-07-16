@@ -5,7 +5,7 @@
 /* eslint react/prop-types:"off" */
 
 var HelloMessage = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return { name: 'World' };
   },
   onChange(e) {
@@ -28,7 +28,4 @@ var HelloMessage = createReactClass({
   }
 });
 
-ReactDOM.render(
-  <HelloMessage />,
-  document.getElementById('app')
-);
+ReactDOM.render(<HelloMessage />, document.getElementById('app'));

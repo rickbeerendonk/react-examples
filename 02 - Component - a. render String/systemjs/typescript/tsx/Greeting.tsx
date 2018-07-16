@@ -5,8 +5,6 @@ import React from 'react';
 
 export default class Greeting extends React.Component<undefined, undefined> {
   render() {
-    return (
-      'Hello World!'
-    );
+    return 'Hello World!';
   }
 }

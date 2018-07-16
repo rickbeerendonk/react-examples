@@ -3,14 +3,9 @@
 
 /* global React, ReactDOM, PropTypes */
 
-const Greeting = ({name}) => (
-  <h1>Hello {name}!</h1>
-);
+const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 Greeting.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-ReactDOM.render(
-  <Greeting name="World" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));

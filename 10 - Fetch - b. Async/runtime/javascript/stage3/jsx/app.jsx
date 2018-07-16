@@ -4,12 +4,10 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const Post = ({title}) => <li>{title}</li>;
+const Post = ({ title }) => <li>{title}</li>;
 
-const PostList = ({posts}) =>  (
-  <ul>{
-    posts.map(post => <Post key={post.id} title={post.title} />)
-  }</ul>
+const PostList = ({ posts }) => (
+  <ul>{posts.map(post => <Post key={post.id} title={post.title} />)}</ul>
 );
 
 // Container pattern:
@@ -38,15 +36,14 @@ class PostListContainer extends React.Component {
     return (
       <React.Fragment>
         {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error
-          ? <div style={{color: 'red'}}>{this.state.error}</div> 
-          : <PostList posts={this.state.posts} />}
+        {this.state.error ? (
+          <div style={{ color: 'red' }}>{this.state.error}</div>
+        ) : (
+          <PostList posts={this.state.posts} />
+        )}
       </React.Fragment>
     );
   }
 }
 
-ReactDOM.render(
-  <PostListContainer />,
-  document.getElementById('app')
-);
+ReactDOM.render(<PostListContainer />, document.getElementById('app'));

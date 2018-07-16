@@ -7,6 +7,6 @@ import React from 'react';
 
 import Three from './Three';
 
-const Two = ({color}) => <Three color={color} />;
+const Two = ({ color }) => <Three color={color} />;
 
 export default Two;

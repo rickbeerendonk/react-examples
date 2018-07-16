@@ -12,4 +12,3 @@ export default class Two extends React.PureComponent {
     return <Three />;
   }
 }
-

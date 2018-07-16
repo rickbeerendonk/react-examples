@@ -18,9 +18,10 @@ SystemJS.config({
   },
   map: {
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
-    'systemjs-babel-build': 'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
+    'systemjs-babel-build':
+      'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     'prop-types': 'npm:prop-types/prop-types.js',
-    'react': 'npm:react/umd/react.development.js',
+    react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js'
   },
   packages: {

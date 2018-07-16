@@ -5,17 +5,12 @@
 /* eslint react/prop-types:"off" */
 
 var Greeting = createReactClass({
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return { name: 'World' };
   },
-  render: function () {
-    return (
-      <h1>Hello {this.props.name}!</h1>
-    );
+  render: function() {
+    return <h1>Hello {this.props.name}!</h1>;
   }
 });
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

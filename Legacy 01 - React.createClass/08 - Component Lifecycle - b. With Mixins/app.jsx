@@ -15,25 +15,31 @@ function logEvent(value, className) {
 
 var Mixin1 = {
   // Initializing
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     logEvent('Mixin1: getDefaultProps()', 'mixin1 initializing');
-    return { prop1: 'Mixin1' /* Not allowed multiple times: prop2: 'Mixin1', prop3: 'Mixin1' */ };
+    return {
+      prop1:
+        'Mixin1' /* Not allowed multiple times: prop2: 'Mixin1', prop3: 'Mixin1' */
+    };
   },
-  getInitialState: function () {
+  getInitialState: function() {
     logEvent('Mixin1: getInitialState()', 'mixin1 initializing');
-    return { state1: 'Mixin1' /* Not allowed multiple times: state2: 'Mixin1', state3: 'Mixin1' */ };
+    return {
+      state1:
+        'Mixin1' /* Not allowed multiple times: state2: 'Mixin1', state3: 'Mixin1' */
+    };
   },
 
   // Mounting
-  componentWillMount: function () {
+  componentWillMount: function() {
     logEvent('Mixin1: componentWillMount()', 'mixin1 mounting');
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('Mixin1: componentDidMount()', 'mixin1 mounting');
   },
 
   // Updating
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(/* nextProps */) {
     logEvent('Mixin1: componentWillReceiveProps(nextProps)', 'mixin1 updating');
   },
   /*** Not allowed multiple times ***
@@ -42,40 +48,50 @@ var Mixin1 = {
       return true;
   },
   */
-  componentWillUpdate: function (nextProps, nextState) {
-    logEvent('Mixin1: componentWillUpdate(nextProps, nextState)', 'mixin1 updating');
+  componentWillUpdate: function(/* nextProps, nextState */) {
+    logEvent(
+      'Mixin1: componentWillUpdate(nextProps, nextState)',
+      'mixin1 updating'
+    );
   },
-  componentDidUpdate: function (prevProps, prevState) {
-    logEvent('Mixin1: componentDidUpdate(prevProps, prevState)', 'mixin1 updating');
+  componentDidUpdate: function(/* prevProps, prevState */) {
+    logEvent(
+      'Mixin1: componentDidUpdate(prevProps, prevState)',
+      'mixin1 updating'
+    );
   },
 
   // Unmounting
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     logEvent('Mixin1: componentWillUnmount()', 'mixin1 unmounting');
   }
 };
 
 var Mixin2 = {
   // Initializing
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     logEvent('Mixin2: getDefaultProps()', 'mixin2 initializing');
-    return { prop2: 'Mixin2' /* Not allowed multiple times: prop3: 'Mixin2' */ };
+    return {
+      prop2: 'Mixin2' /* Not allowed multiple times: prop3: 'Mixin2' */
+    };
   },
-  getInitialState: function () {
+  getInitialState: function() {
     logEvent('Mixin2: getInitialState()', 'mixin2 initializing');
-    return { state2: 'Mixin2' /* Not allowed multiple times: state3: 'Mixin2' */ };
+    return {
+      state2: 'Mixin2' /* Not allowed multiple times: state3: 'Mixin2' */
+    };
   },
 
   // Mounting
-  componentWillMount: function () {
+  componentWillMount: function() {
     logEvent('Mixin2: componentWillMount()', 'mixin2 mounting');
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('Mixin2: componentDidMount()', 'mixin2 mounting');
   },
 
   // Updating
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(/* nextProps */) {
     logEvent('Mixin2: componentWillReceiveProps(nextProps)', 'mixin2 updating');
   },
   /*** Not allowed multiple times ***
@@ -84,56 +100,74 @@ var Mixin2 = {
       return true;
   },
   */
-  componentWillUpdate: function (nextProps, nextState) {
-    logEvent('Mixin2: componentWillUpdate(nextProps, nextState)', 'mixin2 updating');
+  componentWillUpdate: function(/* nextProps, nextState */) {
+    logEvent(
+      'Mixin2: componentWillUpdate(nextProps, nextState)',
+      'mixin2 updating'
+    );
   },
-  componentDidUpdate: function (prevProps, prevState) {
-    logEvent('Mixin2: componentDidUpdate(prevProps, prevState)', 'mixin2 updating');
+  componentDidUpdate: function(/* prevProps, prevState */) {
+    logEvent(
+      'Mixin2: componentDidUpdate(prevProps, prevState)',
+      'mixin2 updating'
+    );
   },
 
   // Unmounting
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     logEvent('Mixin2: componentWillUnmount()', 'mixin2 unmounting');
   }
 };
 
 var Hello = createReactClass({
   mixins: [Mixin1, Mixin2],
-  render: function () {
-    logEvent('Component: render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state), 'rendering');
-    return (<h1>Hello {this.props.name}!</h1>);
+  render: function() {
+    logEvent(
+      'Component: render() - props: ' +
+        JSON.stringify(this.props) +
+        ' state: ' +
+        JSON.stringify(this.state),
+      'rendering'
+    );
+    return <h1>Hello {this.props.name}!</h1>;
   },
 
   // Initializing
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     logEvent('Component: getDefaultProps()', 'initializing');
     return { prop3: 'Component' };
   },
-  getInitialState: function () {
+  getInitialState: function() {
     logEvent('Component: getInitialState()', 'initializing');
     return { state3: 'Component' };
   },
 
   // Mounting
-  UNSAFE_componentWillMount: function () {
+  UNSAFE_componentWillMount: function() {
     logEvent('Component: componentWillMount()', 'mounting');
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('Component: componentDidMount()', 'mounting');
   },
 
   // Updating
-  UNSAFE_componentWillReceiveProps: function (nextProps) {
+  UNSAFE_componentWillReceiveProps: function(/* nextProps */) {
     logEvent('Component: componentWillReceiveProps(nextProps)', 'updating');
   },
-  shouldComponentUpdate: function (nextProps, nextState) {
-    logEvent('Component: shouldComponentUpdate(nextProps, nextState): boolean', 'updating');
+  shouldComponentUpdate: function(/* nextProps, nextState */) {
+    logEvent(
+      'Component: shouldComponentUpdate(nextProps, nextState): boolean',
+      'updating'
+    );
     return true;
   },
-  UNSAFE_componentWillUpdate: function (nextProps, nextState) {
-    logEvent('Component: componentWillUpdate(nextProps, nextState)', 'updating');
+  UNSAFE_componentWillUpdate: function(/* nextProps, nextState */) {
+    logEvent(
+      'Component: componentWillUpdate(nextProps, nextState)',
+      'updating'
+    );
   },
-  componentDidUpdate: function (prevProps, prevState) {
+  componentDidUpdate: function(prevProps /* , prevState */) {
     logEvent('Component: componentDidUpdate(prevProps, prevState)', 'updating');
     if (prevProps.name === 'Number One') {
       logEvent('-- new state --', 'action');
@@ -142,33 +176,28 @@ var Hello = createReactClass({
   },
 
   // Unmounting
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     logEvent('Component: componentWillUnmount()', 'unmounting');
   }
 });
 
 var App = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return {
       name: 'Number One'
-    }
+    };
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('-- new prop --', 'action');
     this.setState({ name: 'Number Two' });
   },
-  render: function () {
+  render: function() {
     return <Hello name={this.state.name} />;
   }
 });
 
 logEvent('-- add component --', 'action');
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
 
 logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(
-  document.getElementById('app')
-);
+ReactDOM.unmountComponentAtNode(document.getElementById('app'));

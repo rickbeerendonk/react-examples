@@ -9,9 +9,7 @@ function withExtras(WrappedComponent) {
   return props => <WrappedComponent {...props} />;
 }
 
-const Greeting = (props) => (
-  <h1 ref={props.forwardedRef}>Hello {props.name}!</h1>
-);
+const Greeting = props => <h1 ref={props.forwardedRef}>Hello {props.name}!</h1>;
 
 const GreetingWithExtras = withExtras(Greeting);
 
@@ -25,12 +23,12 @@ class App extends React.Component {
   }
   render() {
     return (
-      <GreetingWithExtras name="World <- Should be replaced" ref={this.myGreeting} />
+      <GreetingWithExtras
+        name="World <- Should be replaced"
+        ref={this.myGreeting}
+      />
     );
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

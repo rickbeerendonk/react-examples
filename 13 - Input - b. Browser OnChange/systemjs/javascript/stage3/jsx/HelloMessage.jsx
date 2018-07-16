@@ -11,10 +11,10 @@ export default class HelloMessage extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
-  onBrowserChanged = (e) => {
+  onBrowserChanged = e => {
     alert(e.target.value);
   };
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ name: e.target.value });
   };
 
@@ -26,15 +26,17 @@ export default class HelloMessage extends React.Component {
           <MyInput
             onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            defaultValue={this.state.name} />
+            defaultValue={this.state.name}
+          />
         </div>
 
         <div>
           Controlled by React:
-          <MyInput 
-            onChange={this.onChange} 
+          <MyInput
+            onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            value={this.state.name} />
+            value={this.state.name}
+          />
         </div>
       </div>
     );

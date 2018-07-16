@@ -6,8 +6,12 @@
 
 class App extends React.Component {
   render() {
-    return React.createElement(React.Fragment, null, 'This is the React App.',
-      React.createElement(Invisible));
+    return React.createElement(
+      React.Fragment,
+      null,
+      'This is the React App.',
+      React.createElement(Invisible)
+    );
   }
 }
 
@@ -22,11 +26,12 @@ class Invisible extends React.Component {
 
 class Visible extends React.Component {
   render() {
-    return React.createElement('h3', null, 'I am a visible portal, shown outside the react root by an invisible component!');
+    return React.createElement(
+      'h3',
+      null,
+      'I am a visible portal, shown outside the react root by an invisible component!'
+    );
   }
 }
 
-ReactDOM.render(
-  React.createElement(App),
-  document.getElementById('app')
-);
+ReactDOM.render(React.createElement(App), document.getElementById('app'));

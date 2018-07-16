@@ -14,44 +14,78 @@ function logEvent(value, className) {
 }
 
 var Hello = createReactClass({
-  render: function () {
-    logEvent('render() - props: ' + JSON.stringify(this.props) + ' state: ' + JSON.stringify(this.state), 'rendering');
-    return (<h1>Hello {this.props.name}! ({this.state.count}time)</h1>);
+  render: function() {
+    logEvent(
+      'render() - props: ' +
+        JSON.stringify(this.props) +
+        ' state: ' +
+        JSON.stringify(this.state),
+      'rendering'
+    );
+    return (
+      <h1>
+        Hello {this.props.name}! ({this.state.count}time)
+      </h1>
+    );
   },
 
   // Initializing
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     var result = null;
     logEvent('getDefaultProps(): ' + JSON.stringify(result));
     return result;
   },
-  getInitialState: function () {
+  getInitialState: function() {
     var result = { count: 1 };
     logEvent('getInitialState(): ' + JSON.stringify(result));
     return result;
   },
 
   // Mounting
-  UNSAFE_componentWillMount: function () {
+  UNSAFE_componentWillMount: function() {
     logEvent('componentWillMount()', 'mounting');
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('componentDidMount()', 'mounting');
   },
 
   // Updating
-  UNSAFE_componentWillReceiveProps: function (nextProps) {
-    logEvent('componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')', 'updating');
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
+    logEvent(
+      'componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')',
+      'updating'
+    );
   },
-  shouldComponentUpdate: function (nextProps, nextState) {
-    logEvent('shouldComponentUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + '): boolean', 'updating');
+  shouldComponentUpdate: function(nextProps, nextState) {
+    logEvent(
+      'shouldComponentUpdate(nextProps: ' +
+        JSON.stringify(nextProps) +
+        ', nextState: ' +
+        JSON.stringify(nextState) +
+        '): boolean',
+      'updating'
+    );
     return true;
   },
-  UNSAFE_componentWillUpdate: function (nextProps, nextState) {
-    logEvent('componentWillUpdate(nextProps: ' + JSON.stringify(nextProps) + ', nextState: ' + JSON.stringify(nextState) + ')', 'updating');
+  UNSAFE_componentWillUpdate: function(nextProps, nextState) {
+    logEvent(
+      'componentWillUpdate(nextProps: ' +
+        JSON.stringify(nextProps) +
+        ', nextState: ' +
+        JSON.stringify(nextState) +
+        ')',
+      'updating'
+    );
   },
-  componentDidUpdate: function (prevProps, prevState) {
-    logEvent('componentDidUpdate(prevProps: ' + JSON.stringify(prevProps) + ', prevState: ' + JSON.stringify(prevState) + ')', 'updating');
+  componentDidUpdate: function(prevProps, prevState) {
+    logEvent(
+      'componentDidUpdate(prevProps: ' +
+        JSON.stringify(prevProps) +
+        ', prevState: ' +
+        JSON.stringify(prevState) +
+        ')',
+      'updating'
+    );
     if (prevProps.name === 'Number One') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
@@ -59,33 +93,28 @@ var Hello = createReactClass({
   },
 
   // Unmounting
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     logEvent('componentWillUnmount()', 'unmounting');
   }
 });
 
 var App = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return {
       name: 'Number One'
     };
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('-- new prop --', 'action');
     this.setState({ name: 'Number Two' });
   },
-  render: function () {
+  render: function() {
     return <Hello name={this.state.name} />;
   }
 });
 
 logEvent('-- add component --', 'action');
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
 
 logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(
-  document.getElementById('app')
-);
+ReactDOM.unmountComponentAtNode(document.getElementById('app'));

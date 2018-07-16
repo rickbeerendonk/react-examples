@@ -3,7 +3,7 @@
   "command": "npm",
   "isShellCommand": true,
   "showOutput": "always",
-	"echoCommand": true,
+  "echoCommand": true,
   "tasks": [
     {
       "args": ["run", "build"],

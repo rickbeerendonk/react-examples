@@ -8,7 +8,9 @@ import Greeting from './Greeting';
 import List from './List';
 
 ReactDOM.render(
-  React.createElement(List, null,
+  React.createElement(
+    List,
+    null,
     React.createElement(Greeting, { name: 'Alexandra' }),
     React.createElement(Greeting, { name: 'Benjamin' }),
     React.createElement(Greeting, { name: 'Charlotte' })

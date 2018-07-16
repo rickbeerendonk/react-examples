@@ -4,11 +4,6 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const Greeting = ({name = 'World'}) => (
-  <h1>Hello {name}!</h1>
-);
+const Greeting = ({ name = 'World' }) => <h1>Hello {name}!</h1>;
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

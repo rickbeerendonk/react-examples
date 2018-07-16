@@ -17,16 +17,11 @@ class GreetingEditor extends React.Component {
     return (
       <React.Fragment>
         <input onChange={this.onChange} value={this.state.name} />
-        {
-          // Only render when a name is truthy:
-          this.state.name && <h1>Hello {this.state.name}!</h1>
-        }
+        {// Only render when a name is truthy:
+        this.state.name && <h1>Hello {this.state.name}!</h1>}
       </React.Fragment>
     );
   }
 }
 
-ReactDOM.render(
-  <GreetingEditor />,
-  document.getElementById('app')
-);
+ReactDOM.render(<GreetingEditor />, document.getElementById('app'));

@@ -6,7 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Greeting from './Greeting';
 
-ReactDOM.render(
-  <Greeting name="World" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));

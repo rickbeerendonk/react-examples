@@ -17,17 +17,29 @@ export default class HelloMessage extends React.Component {
     this.setState({ name: e.target.value });
   }
   render() {
-    return React.createElement('div', null,
-      React.createElement('div', null,
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        null,
         /* Not controlled by React */
         React.createElement('span', null, 'Not controlled by React:'),
-        React.createElement('input', { onChange: this.onChange, defaultValue: this.state.name })
+        React.createElement('input', {
+          onChange: this.onChange,
+          defaultValue: this.state.name
+        })
       ),
 
-      React.createElement('div', null,
+      React.createElement(
+        'div',
+        null,
         /* Controlled by React */
         React.createElement('span', null, 'Controlled by React:'),
-        React.createElement('input', { onChange: this.onChange, value: this.state.name })
+        React.createElement('input', {
+          onChange: this.onChange,
+          value: this.state.name
+        })
       )
     );
   }

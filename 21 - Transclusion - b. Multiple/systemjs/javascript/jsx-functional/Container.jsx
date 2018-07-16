@@ -18,13 +18,9 @@ const contentStyle = {
 const Container = props => (
   <div style={containerStyle}>
     The 1st item:
-    <div style={contentStyle}>
-      {props.slot1}
-    </div>
+    <div style={contentStyle}>{props.slot1}</div>
     The 2nd item:
-    <div style={contentStyle}>
-      {props.slot2}
-    </div>
+    <div style={contentStyle}>{props.slot2}</div>
   </div>
 );
 

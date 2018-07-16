@@ -33,11 +33,20 @@ const totalUri = `${serverUri}${extraUri}`;
 
 // Start server
 // See: https://github.com/indexzero/http-server/
-const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1'], {shell: true, stdio: 'inherit'});
+/*const httpChild =*/ childProcess.spawn(
+  'http-server',
+  ['.', '-p', portHttp, '-c-1'],
+  { shell: true, stdio: 'inherit' }
+);
 
 // Open browser
-const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
-              /* process.platform === "darwin" */ `open "${totalUri}"`;
-const browserChild = childProcess.spawn(command, {shell: true, stdio: 'inherit'});
+const command =
+  process.platform === 'win32'
+    ? `start "" "${totalUri}"`
+    : /* process.platform === "darwin" */ `open "${totalUri}"`;
+/*const browserChild =*/ childProcess.spawn(command, {
+  shell: true,
+  stdio: 'inherit'
+});
 
 //childProcess.exec(command, () => { console.log('exit'); process.exit(); });

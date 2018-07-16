@@ -20,13 +20,9 @@ export default class Container extends React.Component {
     return (
       <div style={containerStyle}>
         The 1st item:
-        <div style={contentStyle}>
-          {this.props.slot1}
-        </div>
+        <div style={contentStyle}>{this.props.slot1}</div>
         The 2nd item:
-        <div style={contentStyle}>
-          {this.props.slot2}
-        </div>
+        <div style={contentStyle}>{this.props.slot2}</div>
       </div>
     );
   }

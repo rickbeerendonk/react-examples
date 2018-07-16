@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-const ImportantAnchor = ({children, ...props}) => (
+const ImportantAnchor = ({ children, ...props }) => (
   <a {...props}>!!! {children} !!!</a>
 );
 

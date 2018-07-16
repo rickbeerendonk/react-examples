@@ -20,7 +20,9 @@ export default class ClickMe extends React.Component {
     this.setState({ count: this.state.count + 0.5 });
   }
   render() {
-    return React.createElement('a', { onClick: this.onClick },
+    return React.createElement(
+      'a',
+      { onClick: this.onClick },
       'This link has been clicked ',
       this.state.count,
       ' times'

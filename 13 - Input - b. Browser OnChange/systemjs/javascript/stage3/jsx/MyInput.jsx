@@ -8,7 +8,7 @@ import React from 'react';
 export default class MyInput extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
-  browserChanged = (e) => {
+  browserChanged = e => {
     this.props.onBrowserChanged(e);
   };
 
@@ -20,9 +20,15 @@ export default class MyInput extends React.Component {
   }
   render() {
     /* eslint no-unused-vars:"off" */
-    const {onBrowserChanged: deleted, children, ...passthroughProps} = this.props;
+    const {
+      onBrowserChanged: deleted,
+      children,
+      ...passthroughProps
+    } = this.props;
     return (
-      <input {...passthroughProps} ref={(ref) => this.myInput = ref}>{children}</input>
+      <input {...passthroughProps} ref={ref => (this.myInput = ref)}>
+        {children}
+      </input>
     );
   }
 }

@@ -4,10 +4,10 @@
 /* global React, ReactDOM, PropTypes */
 /* eslint react/prop-types:"off" */
 
-const List = ({children}) => (
-  <ul>{
-    React.Children.map(children, (child, i) => <li key={i}>{child}</li>)
-  }</ul>
+const List = ({ children }) => (
+  <ul>
+    {React.Children.map(children, (child, i) => <li key={i}>{child}</li>)}
+  </ul>
 );
 List.propTypes = {
   children: PropTypes.element.isRequired

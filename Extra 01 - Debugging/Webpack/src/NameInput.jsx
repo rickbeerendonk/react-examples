@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-const NameInput = ({onChange, name}) => (
+const NameInput = ({ onChange, name }) => (
   <input onChange={onChange} value={name} />
 );
 

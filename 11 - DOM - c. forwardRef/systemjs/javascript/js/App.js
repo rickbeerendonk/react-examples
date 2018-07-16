@@ -14,6 +14,9 @@ export default class App extends React.Component {
     this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
-    return React.createElement(Greeting, { ref: this.myGreeting, name: 'World'});
+    return React.createElement(Greeting, {
+      ref: this.myGreeting,
+      name: 'World'
+    });
   }
 }

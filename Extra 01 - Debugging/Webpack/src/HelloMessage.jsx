@@ -10,20 +10,20 @@ import NameInput from './NameInput';
 export default class HelloMessage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: props.name};
+    this.state = { name: props.name };
 
     // Bind all non-react methods to this.
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
-    this.setState({name: e.target.value});
+    this.setState({ name: e.target.value });
   }
   render() {
     return (
       <div>
         <NameInput onChange={this.onChange} name={this.state.name} />
-        <Hello name={this.state.name} />                
+        <Hello name={this.state.name} />
       </div>
-      );
+    );
   }
 }

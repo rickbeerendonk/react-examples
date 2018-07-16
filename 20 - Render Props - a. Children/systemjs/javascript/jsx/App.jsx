@@ -13,11 +13,11 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <MouseOver>
-          {mouseIsOver => (<Greeting name="First" highlight={mouseIsOver} />)}
+          {mouseIsOver => <Greeting name="First" highlight={mouseIsOver} />}
         </MouseOver>
         <Greeting name="Second" />
         <MouseOver>
-          {mouseIsOver => (<h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>)}
+          {mouseIsOver => <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>}
         </MouseOver>
       </React.Fragment>
     );

@@ -5,8 +5,6 @@
 
 import React from 'react';
 
-const Greeting = props => (
-  <i>Hello {props.name}</i>
-);
+const Greeting = props => <i>Hello {props.name}</i>;
 
 export default Greeting;

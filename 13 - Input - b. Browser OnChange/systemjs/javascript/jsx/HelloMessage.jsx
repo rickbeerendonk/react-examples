@@ -30,15 +30,17 @@ export default class HelloMessage extends React.Component {
           <MyInput
             onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            defaultValue={this.state.name} />
+            defaultValue={this.state.name}
+          />
         </div>
 
         <div>
           Controlled by React:
-          <MyInput 
-            onChange={this.onChange} 
+          <MyInput
+            onChange={this.onChange}
             onBrowserChanged={this.onBrowserChanged}
-            value={this.state.name} />
+            value={this.state.name}
+          />
         </div>
       </div>
     );

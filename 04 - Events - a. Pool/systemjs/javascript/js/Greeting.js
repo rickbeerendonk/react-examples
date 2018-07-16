@@ -12,12 +12,17 @@ export default class Greeting extends React.Component {
     e.persist();
 
     const showHandled = () => {
-      alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
+      alert(
+        'Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value
+      );
     };
 
     setTimeout(showHandled, 1000);
   }
   render() {
-    return React.createElement('input', { onChange: this.onChange, value: 'Hello World!' });
+    return React.createElement('input', {
+      onChange: this.onChange,
+      value: 'Hello World!'
+    });
   }
 }

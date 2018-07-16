@@ -3,7 +3,7 @@
 
 /* global describe, it */
 
-import HelloMessage from '../src/HelloMessage.jsx'
+import HelloMessage from '../src/HelloMessage.jsx';
 
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
@@ -14,7 +14,7 @@ describe('HelloMessage', () => {
     const renderer = new ShallowRenderer();
     renderer.render(<HelloMessage name="React" />);
     const actual = renderer.getRenderOutput();
-    
+
     expect(actual.type).toBe('h1');
     expect(actual.props.children).toEqual(['Hello ', 'React', '!']);
   });

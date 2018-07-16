@@ -5,15 +5,17 @@
 /* eslint react/prop-types:"off" */
 
 var ImportantAnchor = createReactClass({
-  render: function () {
-    return (
-      <a {...this.props}>!!! {this.props.children} !!!</a>
-    );
+  render: function() {
+    return <a {...this.props}>!!! {this.props.children} !!!</a>;
   }
 });
 
 ReactDOM.render(
-  <ImportantAnchor href="http://www.reactjs.com" target="_blank" title="Everything about React">
+  <ImportantAnchor
+    href="http://www.reactjs.com"
+    target="_blank"
+    title="Everything about React"
+  >
     React website
   </ImportantAnchor>,
   document.getElementById('app')

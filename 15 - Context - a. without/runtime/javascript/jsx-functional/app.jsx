@@ -4,13 +4,10 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const Three = props => <h1 style={{color: props.color}}>Three</h1>;
+const Three = props => <h1 style={{ color: props.color }}>Three</h1>;
 
-const Two = ({color}) => <Three color={color} />;
+const Two = ({ color }) => <Three color={color} />;
 
-const One = ({color}) => <Two color={color} />;
+const One = ({ color }) => <Two color={color} />;
 
-ReactDOM.render(
-  <One color="red" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<One color="red" />, document.getElementById('app'));

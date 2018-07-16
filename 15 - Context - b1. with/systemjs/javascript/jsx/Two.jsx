@@ -17,4 +17,3 @@ export default class Two extends React.Component {
     return <Three />;
   }
 }
-

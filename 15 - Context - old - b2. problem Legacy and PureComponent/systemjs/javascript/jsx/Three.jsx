@@ -13,4 +13,4 @@ export default class Three extends React.PureComponent {
 }
 Three.contextTypes = {
   color: PropTypes.string
-}
+};

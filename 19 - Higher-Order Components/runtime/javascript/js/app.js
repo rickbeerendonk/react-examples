@@ -12,10 +12,10 @@ function withExtras(WrappedComponent) {
       // passed through
       const { extraColor, ...passThroughProps } = this.props;
 
-      return (
-        React.createElement('div', { style: { color: extraColor } },
-          React.createElement(WrappedComponent, { ...passThroughProps })
-        )
+      return React.createElement(
+        'div',
+        { style: { color: extraColor } },
+        React.createElement(WrappedComponent, { ...passThroughProps })
       );
     }
   }
@@ -23,17 +23,18 @@ function withExtras(WrappedComponent) {
   return WithExtras;
 }
 
-const Greeting = ({ name }) => React.createElement('h1', null, 'Hello ', name, '!');
+const Greeting = ({ name }) =>
+  React.createElement('h1', null, 'Hello ', name, '!');
 
 const GreetingWithExtras = withExtras(Greeting);
 
 class App extends React.Component {
   render() {
-    return React.createElement(GreetingWithExtras, { extraColor: 'red', name: 'World' });
+    return React.createElement(GreetingWithExtras, {
+      extraColor: 'red',
+      name: 'World'
+    });
   }
 }
 
-ReactDOM.render(
-  React.createElement(App),
-  document.getElementById('app')
-);
+ReactDOM.render(React.createElement(App), document.getElementById('app'));

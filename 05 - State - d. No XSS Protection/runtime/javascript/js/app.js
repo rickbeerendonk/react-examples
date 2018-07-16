@@ -17,8 +17,19 @@ class GreetingEditor extends React.Component {
     return React.createElement(
       'div',
       null,
-      React.createElement('input', { onChange: this.onChange, value: this.state.name }),
-      React.createElement('h1', null, 'Hello ', React.createElement('span', { dangerouslySetInnerHTML: { __html: this.state.name } }), '!')
+      React.createElement('input', {
+        onChange: this.onChange,
+        value: this.state.name
+      }),
+      React.createElement(
+        'h1',
+        null,
+        'Hello ',
+        React.createElement('span', {
+          dangerouslySetInnerHTML: { __html: this.state.name }
+        }),
+        '!'
+      )
     );
   }
 }

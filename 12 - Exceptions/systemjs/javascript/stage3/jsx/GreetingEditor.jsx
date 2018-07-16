@@ -9,7 +9,7 @@ export default class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
-  onChange = (e) => {
+  onChange = e => {
     const value = e.target.value;
     this.setState(() => ({ name: value }));
   };

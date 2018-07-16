@@ -5,7 +5,10 @@
 
 import React from 'react';
 
-const EditBox = ({onChange, value}) =>
-  React.createElement('input', { onChange: e => onChange(e.target.value), value: value });
+const EditBox = ({ onChange, value }) =>
+  React.createElement('input', {
+    onChange: e => onChange(e.target.value),
+    value: value
+  });
 
 export default EditBox;

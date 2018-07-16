@@ -8,16 +8,13 @@ var List = createReactClass({
   propTypes: {
     children: PropTypes.element.isRequired
   },
-  render: function () {
+  render: function() {
     return (
-      <ul>{
-        React.Children.map(
-          this.props.children, 
-          function (child, i) {
-            return <li key={i}>{child}</li>;
-          }
-        )
-      }</ul>
+      <ul>
+        {React.Children.map(this.props.children, function(child, i) {
+          return <li key={i}>{child}</li>;
+        })}
+      </ul>
     );
   }
 });

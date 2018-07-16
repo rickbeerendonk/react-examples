@@ -5,14 +5,13 @@
 
 import React from 'react';
 
-const Greeting = () => { 
-  const changed = (e) => alert(`Event handled.
+const Greeting = () => {
+  const changed = e =>
+    alert(`Event handled.
 Target: ${e.target}
 Value: ${e.target.value}`);
 
-  return (
-    <input onChange={changed} value='Hello World!' />
-  )
+  return <input onChange={changed} value="Hello World!" />;
 };
 
 export default Greeting;

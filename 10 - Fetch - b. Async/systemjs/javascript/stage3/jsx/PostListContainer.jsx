@@ -15,7 +15,7 @@ export default class Posts extends React.Component {
   state = { posts: [], error: '', isFetching: false };
 
   async componentDidMount() {
-    this.setState({isFetching: true});
+    this.setState({ isFetching: true });
     try {
       const response = await fetch('posts.json');
       if (!response.ok) {
@@ -33,9 +33,11 @@ export default class Posts extends React.Component {
     return (
       <React.Fragment>
         {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error
-          ? <div style={{color: 'red'}}>{this.state.error}</div> 
-          : <PostList posts={this.state.posts} />}
+        {this.state.error ? (
+          <div style={{ color: 'red' }}>{this.state.error}</div>
+        ) : (
+          <PostList posts={this.state.posts} />
+        )}
       </React.Fragment>
     );
   }

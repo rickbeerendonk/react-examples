@@ -6,7 +6,15 @@ import React from 'react';
 export default class Greeting extends React.Component {
   render() {
     return (
-      <h1 style={{transform: 'rotate(10deg)', msTransform: 'rotate(10deg)', WebkitTransform: 'rotate(10deg)'}}>Hello World!</h1>
+      <h1
+        style={{
+          transform: 'rotate(10deg)',
+          msTransform: 'rotate(10deg)',
+          WebkitTransform: 'rotate(10deg)'
+        }}
+      >
+        Hello World!
+      </h1>
     );
   }
 }

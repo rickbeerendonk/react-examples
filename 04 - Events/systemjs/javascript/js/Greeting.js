@@ -10,6 +10,9 @@ export default class Greeting extends React.Component {
     alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
   }
   render() {
-    return React.createElement('input', { onChange: this.onChange, value: 'Hello World!' });
+    return React.createElement('input', {
+      onChange: this.onChange,
+      value: 'Hello World!'
+    });
   }
 }

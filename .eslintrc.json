@@ -12,13 +12,8 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "react"
-  ],
-  "extends": [
-    "eslint:recommended", 
-    "plugin:react/recommended"
-  ],
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "no-debugger": "warn",

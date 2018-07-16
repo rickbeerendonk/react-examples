@@ -7,6 +7,10 @@ import React from 'react';
 
 export default class Visible extends React.Component {
   render() {
-    return React.createElement('h3', null, 'I am a visible portal, shown outside the react root by an invisible component!');
+    return React.createElement(
+      'h3',
+      null,
+      'I am a visible portal, shown outside the react root by an invisible component!'
+    );
   }
 }

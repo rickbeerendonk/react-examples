@@ -19,8 +19,13 @@ export default class GreetingEditor extends React.Component {
     this.setState(() => ({ name }));
   }
   render() {
-    return React.createElement(React.Fragment, null,
-      React.createElement(EditBox, { onChange: this.onChange, value: this.state.name }),
+    return React.createElement(
+      React.Fragment,
+      null,
+      React.createElement(EditBox, {
+        onChange: this.onChange,
+        value: this.state.name
+      }),
       React.createElement(Greeting, { name: this.state.name })
     );
   }

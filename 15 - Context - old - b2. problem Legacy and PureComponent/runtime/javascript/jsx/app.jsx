@@ -11,7 +11,7 @@ class Three extends React.PureComponent {
 }
 Three.contextTypes = {
   color: PropTypes.string
-}
+};
 
 class Two extends React.PureComponent {
   render() {
@@ -30,7 +30,9 @@ class One extends React.Component {
     return { color: this.state.color };
   }
   onSwitch() {
-    this.setState(prevState => ({ color: prevState.color === 'red' ? 'green' : 'red' }));
+    this.setState(prevState => ({
+      color: prevState.color === 'red' ? 'green' : 'red'
+    }));
   }
   render() {
     return (
@@ -45,7 +47,4 @@ One.childContextTypes = {
   color: PropTypes.string
 };
 
-ReactDOM.render(
-  <One color="red" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<One color="red" />, document.getElementById('app'));

@@ -20,7 +20,10 @@ export default class GreetingEditor extends React.Component {
     return React.createElement(
       React.Fragment,
       null,
-      React.createElement('input', { onChange: this.onChange, value: this.state.name }),
+      React.createElement('input', {
+        onChange: this.onChange,
+        value: this.state.name
+      }),
       React.createElement('h1', null, 'Hello ', this.state.name, '!')
     );
   }

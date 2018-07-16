@@ -12,8 +12,7 @@ function jsxTransformSafe(source) {
   try {
     const code = jsxTransform(source);
     return { code, error: null };
-  }
-  catch (error) {
+  } catch (error) {
     return { code: null, error };
   }
 }
@@ -44,10 +43,23 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
     return React.createElement(
       'div',
       { style: styles.div },
-      React.createElement('textarea', { className: 'code', onChange: this.onChange, defaultValue: this.jsx }),
+      React.createElement('textarea', {
+        className: 'code',
+        onChange: this.onChange,
+        defaultValue: this.jsx
+      }),
       this.state.error
-      ? React.createElement('textarea', { className: 'code', readOnly: 'readOnly', style: styles.error, value: this.state.error })
-      : React.createElement('textarea', { className: 'code', readOnly: 'readOnly', value: this.state.code })
+        ? React.createElement('textarea', {
+            className: 'code',
+            readOnly: 'readOnly',
+            style: styles.error,
+            value: this.state.error
+          })
+        : React.createElement('textarea', {
+            className: 'code',
+            readOnly: 'readOnly',
+            value: this.state.code
+          })
     );
   }
 }

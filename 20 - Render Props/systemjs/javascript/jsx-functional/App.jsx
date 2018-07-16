@@ -10,9 +10,13 @@ import MouseOver from './MouseOver';
 
 const App = () => (
   <React.Fragment>
-    <MouseOver render={mouseIsOver => (<Greeting name="First" highlight={mouseIsOver} />)} />
+    <MouseOver
+      render={mouseIsOver => <Greeting name="First" highlight={mouseIsOver} />}
+    />
     <Greeting name="Second" />
-    <MouseOver render={mouseIsOver => (<h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>)} />
+    <MouseOver
+      render={mouseIsOver => <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>}
+    />
   </React.Fragment>
 );
 

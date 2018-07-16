@@ -18,9 +18,7 @@ const contentStyle = {
 const Container = props => (
   <div style={containerStyle}>
     The only item:
-    <div style={contentStyle}>
-      {props.children}
-    </div>
+    <div style={contentStyle}>{props.children}</div>
   </div>
 );
 

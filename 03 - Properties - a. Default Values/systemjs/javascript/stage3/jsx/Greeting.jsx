@@ -10,10 +10,8 @@ export default class Greeting extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   static defaultProps = {
     name: 'World'
-  }
+  };
   render() {
-    return (
-      <h1>Hello {this.props.name}!</h1>
-    );
+    return <h1>Hello {this.props.name}!</h1>;
   }
 }

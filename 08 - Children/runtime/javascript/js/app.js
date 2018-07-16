@@ -12,21 +12,20 @@ class Greeting extends React.Component {
 
 class List extends React.Component {
   render() {
-    return (
-      React.createElement('ul', null,
-        React.Children.map(
-          this.props.children,
-          function (child, i) {
-            return React.createElement('li', { key: i }, child)
-          }
-        )
-      )
+    return React.createElement(
+      'ul',
+      null,
+      React.Children.map(this.props.children, function(child, i) {
+        return React.createElement('li', { key: i }, child);
+      })
     );
   }
 }
 
 ReactDOM.render(
-  React.createElement(List, null,
+  React.createElement(
+    List,
+    null,
     React.createElement(Greeting, { name: 'Alexandra' }),
     React.createElement(Greeting, { name: 'Benjamin' }),
     React.createElement(Greeting, { name: 'Charlotte' })

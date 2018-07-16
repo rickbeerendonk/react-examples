@@ -12,8 +12,7 @@ function jsxTransformSafe(source) {
   try {
     const code = jsxTransform(source);
     return { code, error: null };
-  }
-  catch (error) {
+  } catch (error) {
     return { code: null, error };
   }
 }
@@ -21,7 +20,7 @@ function jsxTransformSafe(source) {
 class JsxCompiler extends React.Component {
   constructor(props) {
     super(props);
-  
+
     this.jsx = `class HelloMessageClass extends React.Component {
   render() {
     return <div>Hello {this.props.name}</div>;
@@ -43,13 +42,27 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
   render() {
     return (
       <div style={styles.div}>
-        <textarea className="code" onChange={this.onChange} defaultValue={this.jsx} />
-        {
-          this.state.error
-          ? <textarea className="code" readOnly="readOnly" style={styles.error} value={this.state.error} />
-          : <textarea className="code" readOnly="readOnly" value={this.state.code} />
-        }
-      </div>);
+        <textarea
+          className="code"
+          onChange={this.onChange}
+          defaultValue={this.jsx}
+        />
+        {this.state.error ? (
+          <textarea
+            className="code"
+            readOnly="readOnly"
+            style={styles.error}
+            value={this.state.error}
+          />
+        ) : (
+          <textarea
+            className="code"
+            readOnly="readOnly"
+            value={this.state.code}
+          />
+        )}
+      </div>
+    );
   }
 }
 
@@ -65,7 +78,4 @@ var styles = {
   }
 };
 
-ReactDOM.render(
-  <JsxCompiler />,
-  document.getElementById('app')
-);
+ReactDOM.render(<JsxCompiler />, document.getElementById('app'));

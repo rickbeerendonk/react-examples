@@ -10,7 +10,7 @@ import Invisible from './Invisible';
 const App = () => (
   <React.Fragment>
     This is the React App.
-        <Invisible />
+    <Invisible />
   </React.Fragment>
 );
 

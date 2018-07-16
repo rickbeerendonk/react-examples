@@ -14,13 +14,16 @@
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "scripts": {
     "clean": "rimraf node_modules",
+    "eslint": "eslint . --ext .js,.jsx",
     "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8040",
-    "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
+    "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080",
+    "prettier": "prettier --write '**/*.{json,js,jsx,ts,tsx}'"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
+    "prettier": "^1.13.7",
     "rimraf": "^2.6.2"
   },
   "dependencies": {

@@ -7,9 +7,7 @@
 const Post = ({ title }) => <li>{title}</li>;
 
 const PostList = ({ posts }) => (
-  <ul>{
-    posts.map(post => <Post key={post.id} title={post.title} />)
-  }</ul>
+  <ul>{posts.map(post => <Post key={post.id} title={post.title} />)}</ul>
 );
 
 // Container pattern:
@@ -32,29 +30,37 @@ class PostListContainer extends React.Component {
         }
         return response.json();
       })
-      .then(json => { this.setState({ posts: json }); })
-      .catch(error => { this.setState({ error: error.message }); })
-      .finally(() => { this.setState({ isFetching: false }); });
+      .then(json => {
+        this.setState({ posts: json });
+      })
+      .catch(error => {
+        this.setState({ error: error.message });
+      })
+      .finally(() => {
+        this.setState({ isFetching: false });
+      });
   }
   render() {
     return (
       <React.Fragment>
-        {this.state.isFetching &&
+        {this.state.isFetching && (
           <div>
-            <img src="../../../../resources/oblicum-square.svg" className="oblicum-spinner" />
+            <img
+              src="../../../../resources/oblicum-square.svg"
+              className="oblicum-spinner"
+            />
             Fetching...
           </div>
-        }
+        )}
 
-        {this.state.error
-          ? <div style={{ color: 'red' }}>{this.state.error}</div>
-          : <PostList posts={this.state.posts} />}
+        {this.state.error ? (
+          <div style={{ color: 'red' }}>{this.state.error}</div>
+        ) : (
+          <PostList posts={this.state.posts} />
+        )}
       </React.Fragment>
     );
   }
 }
 
-ReactDOM.render(
-  <PostListContainer />,
-  document.getElementById('app')
-);
+ReactDOM.render(<PostListContainer />, document.getElementById('app'));

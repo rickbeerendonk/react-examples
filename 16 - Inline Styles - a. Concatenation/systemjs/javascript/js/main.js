@@ -7,9 +7,8 @@ import ReactDOM from 'react-dom';
 import Greeting from './Greeting';
 
 ReactDOM.render(
-  React.createElement(
-    Greeting,
-    { style: { background: 'orange', color: 'blue' } }
-  ),
+  React.createElement(Greeting, {
+    style: { background: 'orange', color: 'blue' }
+  }),
   document.getElementById('app')
 );

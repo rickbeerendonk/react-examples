@@ -6,7 +6,7 @@ import React from 'react';
 export default class Greeting extends React.Component {
   render() {
     return React.createElement(
-      React.Fragment, 
+      React.Fragment,
       null,
       React.createElement('h1', null, 'Hello World!'),
       'What do you think about React?',

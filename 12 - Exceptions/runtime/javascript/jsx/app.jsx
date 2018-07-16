@@ -14,7 +14,7 @@ class GreetingEditor extends React.Component {
   onChange(e) {
     const value = e.target.value;
     this.setState(() => ({ name: value }));
-  }  
+  }
   shouldComponentUpdate(nextProps, nextState) {
     if (nextState.name === 'Error') {
       throw new Error('Error');
@@ -38,7 +38,4 @@ class GreetingEditor extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <GreetingEditor />,
-  document.getElementById('app')
-);
+ReactDOM.render(<GreetingEditor />, document.getElementById('app'));

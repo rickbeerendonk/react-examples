@@ -14,8 +14,6 @@ export default class App extends React.Component {
     this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
-    return (
-      <Greeting ref={this.myGreeting} name="World" />
-    );
+    return <Greeting ref={this.myGreeting} name="World" />;
   }
 }

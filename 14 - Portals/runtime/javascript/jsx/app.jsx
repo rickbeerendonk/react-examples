@@ -26,11 +26,13 @@ class Invisible extends React.Component {
 
 class Visible extends React.Component {
   render() {
-    return <h3>I am a visible portal, shown outside the react root by an invisible component!</h3>
+    return (
+      <h3>
+        I am a visible portal, shown outside the react root by an invisible
+        component!
+      </h3>
+    );
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

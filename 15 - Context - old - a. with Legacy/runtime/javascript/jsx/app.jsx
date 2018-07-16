@@ -11,7 +11,7 @@ class Three extends React.Component {
 }
 Three.contextTypes = {
   color: PropTypes.string
-}
+};
 
 class Two extends React.Component {
   render() {
@@ -31,7 +31,4 @@ One.childContextTypes = {
   color: PropTypes.string
 };
 
-ReactDOM.render(
-  <One color="red" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<One color="red" />, document.getElementById('app'));

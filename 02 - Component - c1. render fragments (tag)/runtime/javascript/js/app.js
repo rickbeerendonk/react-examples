@@ -6,7 +6,7 @@
 class Greeting extends React.Component {
   render() {
     return React.createElement(
-      React.Fragment, 
+      React.Fragment,
       null,
       React.createElement('h1', null, 'Hello World!'),
       'What do you think about React?',
@@ -15,7 +15,4 @@ class Greeting extends React.Component {
   }
 }
 
-ReactDOM.render(
-  React.createElement(Greeting),
-  document.getElementById('app')
-);
+ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));

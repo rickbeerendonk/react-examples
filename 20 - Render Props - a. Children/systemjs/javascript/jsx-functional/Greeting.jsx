@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-const Greeting = ({name, highlight}) => (
-  <h1 style={highlight ? {color: 'red'} : null}>Hello {name}!</h1>
+const Greeting = ({ name, highlight }) => (
+  <h1 style={highlight ? { color: 'red' } : null}>Hello {name}!</h1>
 );
 
 export default Greeting;

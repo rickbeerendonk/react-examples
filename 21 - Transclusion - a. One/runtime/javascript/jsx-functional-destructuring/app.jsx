@@ -14,12 +14,10 @@ const contentStyle = {
   padding: 10
 };
 
-const Container = ({children}) => (
+const Container = ({ children }) => (
   <div style={containerStyle}>
     The only item:
-    <div style={contentStyle}>
-      {children}
-    </div>
+    <div style={contentStyle}>{children}</div>
   </div>
 );
 

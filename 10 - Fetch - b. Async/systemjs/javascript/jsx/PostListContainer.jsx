@@ -12,14 +12,14 @@ import PostList from './PostList';
 export default class PostListContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      posts: [], 
-      error: '', 
-      isFetching: false 
+    this.state = {
+      posts: [],
+      error: '',
+      isFetching: false
     };
   }
   async componentDidMount() {
-    this.setState({isFetching: true});
+    this.setState({ isFetching: true });
     try {
       const response = await fetch('posts.json');
       if (!response.ok) {
@@ -37,9 +37,11 @@ export default class PostListContainer extends React.Component {
     return (
       <React.Fragment>
         {this.state.isFetching && <div>Fetching...</div>}
-        {this.state.error
-          ? <div style={{color: 'red'}}>{this.state.error}</div> 
-          : <PostList posts={this.state.posts} />}
+        {this.state.error ? (
+          <div style={{ color: 'red' }}>{this.state.error}</div>
+        ) : (
+          <PostList posts={this.state.posts} />
+        )}
       </React.Fragment>
     );
   }

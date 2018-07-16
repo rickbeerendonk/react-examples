@@ -23,7 +23,4 @@ class ClickMe extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <ClickMe />,
-  document.getElementById('app')
-);
+ReactDOM.render(<ClickMe />, document.getElementById('app'));

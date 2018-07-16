@@ -6,7 +6,10 @@
 import React from 'react';
 
 const Visible = () => (
-  <h3>I am a visible portal, shown outside the react root by an invisible component!</h3>
+  <h3>
+    I am a visible portal, shown outside the react root by an invisible
+    component!
+  </h3>
 );
 
 export default Visible;

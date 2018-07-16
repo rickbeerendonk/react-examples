@@ -7,7 +7,7 @@ import React from 'react';
 
 export default class ImportantAnchor extends React.Component {
   render() {
-    const {children, ...props} = this.props;
+    const { children, ...props } = this.props;
     return React.createElement('a', props, '!!! ', children, ' !!!');
   }
 }

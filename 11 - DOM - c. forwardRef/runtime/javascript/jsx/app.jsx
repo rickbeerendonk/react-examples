@@ -19,13 +19,8 @@ class App extends React.Component {
     this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
-    return (
-      <Greeting name="World" ref={this.myGreeting} />
-    );
+    return <Greeting name="World" ref={this.myGreeting} />;
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

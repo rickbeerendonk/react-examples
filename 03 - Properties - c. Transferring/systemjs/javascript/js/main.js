@@ -9,7 +9,12 @@ import ImportantAnchor from './ImportantAnchor';
 ReactDOM.render(
   React.createElement(
     ImportantAnchor,
-    { href: 'http://www.reactjs.com', rel: 'noopener', target: '_blank', title: 'Everything about React' },
+    {
+      href: 'http://www.reactjs.com',
+      rel: 'noopener',
+      target: '_blank',
+      title: 'Everything about React'
+    },
     'React website'
   ),
   document.getElementById('app')

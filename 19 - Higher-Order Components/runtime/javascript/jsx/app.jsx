@@ -25,9 +25,7 @@ function withExtras(WrappedComponent) {
 
 class Greeting extends React.Component {
   render() {
-    return (
-      <h1>Hello {this.props.name}!</h1>
-    );
+    return <h1>Hello {this.props.name}!</h1>;
   }
 }
 
@@ -35,13 +33,8 @@ const GreetingWithExtras = withExtras(Greeting);
 
 class App extends React.Component {
   render() {
-    return (
-      <GreetingWithExtras extraColor="red" name="World" />
-    );
+    return <GreetingWithExtras extraColor="red" name="World" />;
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

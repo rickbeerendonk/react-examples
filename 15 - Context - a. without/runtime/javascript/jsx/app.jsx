@@ -22,7 +22,4 @@ class One extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <One color="red" />,
-  document.getElementById('app')
-);
+ReactDOM.render(<One color="red" />, document.getElementById('app'));

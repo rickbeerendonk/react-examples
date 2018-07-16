@@ -4,23 +4,22 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return { name: 'World' };
   },
-  onChange: function (e) {
+  onChange: function(e) {
     this.setState({ name: e.target.value });
   },
-  render: function () {
+  render: function() {
     return (
       <div>
         <input onChange={this.onChange} value={this.state.name} />
-        <h1>Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!</h1>
+        <h1>
+          Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!
+        </h1>
       </div>
     );
   }
 });
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

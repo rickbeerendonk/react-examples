@@ -16,11 +16,13 @@ export default class One extends React.Component {
     this.onSwitch = this.onSwitch.bind(this);
   }
   onSwitch() {
-      this.setState(prevState => ({ color: prevState.color === 'red' ? 'green' : 'red' }));
+    this.setState(prevState => ({
+      color: prevState.color === 'red' ? 'green' : 'red'
+    }));
   }
   render() {
     return (
-      <ColorContext.Provider value={{color: this.state.color}}>
+      <ColorContext.Provider value={{ color: this.state.color }}>
         <Two />
         <button onClick={this.onSwitch}>Switch color</button>
       </ColorContext.Provider>

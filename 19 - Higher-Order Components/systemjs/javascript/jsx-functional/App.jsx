@@ -9,4 +9,4 @@ import GreetingWithExtras from './GreetingWithExtras';
 
 const App = () => <GreetingWithExtras extraColor="red" name="World" />;
 
-export default App
+export default App;

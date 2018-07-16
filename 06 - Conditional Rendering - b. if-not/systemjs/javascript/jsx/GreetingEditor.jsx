@@ -19,10 +19,8 @@ export default class GreetingEditor extends React.Component {
     return (
       <React.Fragment>
         <input onChange={this.onChange} value={this.state.name} />
-        {
-          // Only render when a not-name is falsy:
-          !this.state.name || <h1>Hello {this.state.name}!</h1>
-        }
+        {// Only render when a not-name is falsy:
+        !this.state.name || <h1>Hello {this.state.name}!</h1>}
       </React.Fragment>
     );
   }

@@ -8,19 +8,25 @@
 function withExtras(WrappedComponent) {
   class WithExtras extends React.Component {
     render() {
-      return (
-        React.createElement(WrappedComponent, this.props)
-      );
+      return React.createElement(WrappedComponent, this.props);
     }
   }
 
   return React.forwardRef((props, ref) =>
-    React.createElement(WithExtras, Object.assign({}, props, {forwardedRef: ref}))
+    React.createElement(
+      WithExtras,
+      Object.assign({}, props, { forwardedRef: ref })
+    )
   );
 }
-const Greeting = (props) => (
-  React.createElement('h1', { ref: props.forwardedRef }, 'Hello ', props.name, '!')
-);
+const Greeting = props =>
+  React.createElement(
+    'h1',
+    { ref: props.forwardedRef },
+    'Hello ',
+    props.name,
+    '!'
+  );
 
 const GreetingWithExtras = withExtras(Greeting);
 
@@ -33,11 +39,11 @@ class App extends React.Component {
     this.myGreeting.current.innerHTML = 'Hi <i>React</i>!!!';
   }
   render() {
-    return React.createElement(GreetingWithExtras, { ref: this.myGreeting, name: 'World <- Should be replaced'});
+    return React.createElement(GreetingWithExtras, {
+      ref: this.myGreeting,
+      name: 'World <- Should be replaced'
+    });
   }
 }
 
-ReactDOM.render(
-  React.createElement(App),
-  document.getElementById('app')
-);
+ReactDOM.render(React.createElement(App), document.getElementById('app'));

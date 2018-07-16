@@ -4,17 +4,12 @@
 /* global createReactClass, React, ReactDOM */
 
 var HelloWorld = createReactClass({
-  componentDidMount: function () {
+  componentDidMount: function() {
     this.myH1.innerHTML = 'Hello <i>React</i>!!!';
   },
-  render: function () {
-    return (
-      <h1 ref={(ref) => this.myH1 = ref}>Hello World!</h1>
-    );
+  render: function() {
+    return <h1 ref={ref => (this.myH1 = ref)}>Hello World!</h1>;
   }
 });
 
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('app')
-);
+ReactDOM.render(<HelloWorld />, document.getElementById('app'));

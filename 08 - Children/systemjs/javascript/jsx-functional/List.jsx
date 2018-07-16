@@ -6,9 +6,9 @@
 import React from 'react';
 
 const List = props => (
-  <ul>{
-    React.Children.map(props.children, (child, i) => <li key={i}>{child}</li>)
-  }</ul>
+  <ul>
+    {React.Children.map(props.children, (child, i) => <li key={i}>{child}</li>)}
+  </ul>
 );
 
 export default List;

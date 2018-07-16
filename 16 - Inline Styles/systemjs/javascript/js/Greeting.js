@@ -9,8 +9,8 @@ const styles = {
   header: {
     background: '#444',
     color: 'orchid',
-    fontStyle: 'italic',  // font-style in CSS
-    marginTop: '75px',  //margin-top in CSS
+    fontStyle: 'italic', // font-style in CSS
+    marginTop: '75px' //margin-top in CSS
   }
 };
 

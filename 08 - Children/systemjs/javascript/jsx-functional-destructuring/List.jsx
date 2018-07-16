@@ -5,10 +5,10 @@
 
 import React from 'react';
 
-const List = ({children}) => (
-  <ul>{
-    React.Children.map(children, (child, i) => <li key={i}>{child}</li>)
-  }</ul>
+const List = ({ children }) => (
+  <ul>
+    {React.Children.map(children, (child, i) => <li key={i}>{child}</li>)}
+  </ul>
 );
 
 export default List;

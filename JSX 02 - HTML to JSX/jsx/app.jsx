@@ -6,7 +6,7 @@
 
 function jsxTransform(source) {
   const converter = new HTMLtoJSX({
-    createClass: false,
+    createClass: false
   });
   return converter.convert(source);
 }
@@ -15,8 +15,7 @@ function jsxTransformSafe(source) {
   try {
     const code = jsxTransform(source);
     return { code, error: null };
-  }
-  catch (error) {
+  } catch (error) {
     return { code: null, error };
   }
 }
@@ -24,7 +23,7 @@ function jsxTransformSafe(source) {
 class JsxCompiler extends React.Component {
   constructor(props) {
     super(props);
-  
+
     this.html = `<!-- Hello world -->
 <div class="awesome" style="border: 1px solid red">
   <label for="name">Enter your name: </label>
@@ -43,13 +42,27 @@ class JsxCompiler extends React.Component {
   render() {
     return (
       <div style={styles.div}>
-        <textarea className="code" onChange={this.onChange} defaultValue={this.html} />
-        {
-          this.state.error
-          ? <textarea className="code" readOnly="readOnly" style={styles.error} value={this.state.error} />
-          : <textarea className="code" readOnly="readOnly" value={this.state.code} />
-        }
-      </div>);
+        <textarea
+          className="code"
+          onChange={this.onChange}
+          defaultValue={this.html}
+        />
+        {this.state.error ? (
+          <textarea
+            className="code"
+            readOnly="readOnly"
+            style={styles.error}
+            value={this.state.error}
+          />
+        ) : (
+          <textarea
+            className="code"
+            readOnly="readOnly"
+            value={this.state.code}
+          />
+        )}
+      </div>
+    );
   }
 }
 
@@ -65,7 +78,4 @@ var styles = {
   }
 };
 
-ReactDOM.render(
-  <JsxCompiler />,
-  document.getElementById('app')
-);
+ReactDOM.render(<JsxCompiler />, document.getElementById('app'));

@@ -14,27 +14,16 @@ const contentStyle = {
   padding: 10
 };
 
-const Container = ({slot1, slot2}) => (
+const Container = ({ slot1, slot2 }) => (
   <div style={containerStyle}>
     The 1st item:
-    <div style={contentStyle}>
-      {slot1}
-    </div>
+    <div style={contentStyle}>{slot1}</div>
     The 2nd item:
-    <div style={contentStyle}>
-      {slot2}
-    </div>
+    <div style={contentStyle}>{slot2}</div>
   </div>
 );
 
 ReactDOM.render(
-  <Container
-    slot1={
-      <em>First</em>
-    }
-    slot2={
-      <b>Second</b>
-    }
-  />,
+  <Container slot1={<em>First</em>} slot2={<b>Second</b>} />,
   document.getElementById('app')
 );

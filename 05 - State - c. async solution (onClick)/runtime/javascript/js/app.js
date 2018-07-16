@@ -18,7 +18,9 @@ class ClickMe extends React.Component {
     this.setState(prevState => ({ count: prevState.count + 0.5 }));
   }
   render() {
-    return React.createElement('a', { onClick: this.onClick },
+    return React.createElement(
+      'a',
+      { onClick: this.onClick },
       'This link has been clicked ',
       this.state.count,
       ' times'
@@ -26,7 +28,4 @@ class ClickMe extends React.Component {
   }
 }
 
-ReactDOM.render(
-  React.createElement(ClickMe),
-  document.getElementById('app')
-);
+ReactDOM.render(React.createElement(ClickMe), document.getElementById('app'));

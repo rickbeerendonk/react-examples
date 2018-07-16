@@ -6,7 +6,7 @@
 
 class ImportantAnchor extends React.Component {
   render() {
-    const {children, ...props} = this.props;
+    const { children, ...props } = this.props;
     return React.createElement('a', props, '!!! ', children, ' !!!');
   }
 }
@@ -14,7 +14,12 @@ class ImportantAnchor extends React.Component {
 ReactDOM.render(
   React.createElement(
     ImportantAnchor,
-    { href: 'http://www.reactjs.com', rel: 'noopener', target: '_blank', title: 'Everything about React' },
+    {
+      href: 'http://www.reactjs.com',
+      rel: 'noopener',
+      target: '_blank',
+      title: 'Everything about React'
+    },
     'React website'
   ),
   document.getElementById('app')

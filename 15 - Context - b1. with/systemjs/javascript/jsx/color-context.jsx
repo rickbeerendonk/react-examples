@@ -3,6 +3,6 @@
 
 import React from 'react';
 
-const ColorContext = React.createContext({color: 'black'});
+const ColorContext = React.createContext({ color: 'black' });
 
 export default ColorContext;

@@ -9,24 +9,24 @@ SystemJS.config({
     'npm:': '../../../../node_modules/'
   },
   map: {
-    'react': 'npm:react/umd/react.development.js',
+    react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
 
-    'ts': 'npm:plugin-typescript',
-    'typescript': 'npm:typescript'
+    ts: 'npm:plugin-typescript',
+    typescript: 'npm:typescript'
   },
   packages: {
     '.': {
-      'defaultExtension': 'tsx',
+      defaultExtension: 'tsx'
     },
-    'ts': {
-      'main': 'lib/plugin.js'
+    ts: {
+      main: 'lib/plugin.js'
     },
-    'typescript': {
-      'main': 'lib/typescript.js',
-      'meta': {
+    typescript: {
+      main: 'lib/typescript.js',
+      meta: {
         'lib/typescript.js': {
-          'exports': 'ts'
+          exports: 'ts'
         }
       }
     }

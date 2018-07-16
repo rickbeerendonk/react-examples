@@ -6,21 +6,18 @@
 
 class Greeting extends React.Component {
   render() {
-    return (
-      <i>Hello {this.props.name}</i>
-    );
+    return <i>Hello {this.props.name}</i>;
   }
 }
 
 class List extends React.Component {
   render() {
     return (
-      <ul>{
-        React.Children.map(
-          this.props.children, 
-          (child, i) => <li key={i}>{child}</li>
-        )
-      }</ul>
+      <ul>
+        {React.Children.map(this.props.children, (child, i) => (
+          <li key={i}>{child}</li>
+        ))}
+      </ul>
     );
   }
 }

@@ -13,4 +13,4 @@ export default class Three extends React.Component {
 }
 Three.contextTypes = {
   color: PropTypes.string
-}
+};

@@ -5,6 +5,6 @@
 
 import React from 'react';
 
-const Post = ({title}) => <li>{title}</li>;
+const Post = ({ title }) => <li>{title}</li>;
 
 export default Post;

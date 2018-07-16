@@ -5,11 +5,8 @@
 /* eslint react/prop-types:"off" */
 
 const Greeting = props => {
-  props = Object.assign({name: 'World'}, props);
-  return (<h1>Hello {props.name}!</h1>);
+  props = Object.assign({ name: 'World' }, props);
+  return <h1>Hello {props.name}!</h1>;
 };
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

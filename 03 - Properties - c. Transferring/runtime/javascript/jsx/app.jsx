@@ -6,15 +6,18 @@
 
 class ImportantAnchor extends React.Component {
   render() {
-    const {children, ...props} = this.props;
-    return (
-      <a {...props}>!!! {children} !!!</a>
-    );
+    const { children, ...props } = this.props;
+    return <a {...props}>!!! {children} !!!</a>;
   }
 }
 
 ReactDOM.render(
-  <ImportantAnchor href="http://www.reactjs.com" rel="noopener" target="_blank" title="Everything about React">
+  <ImportantAnchor
+    href="http://www.reactjs.com"
+    rel="noopener"
+    target="_blank"
+    title="Everything about React"
+  >
     React website
   </ImportantAnchor>,
   document.getElementById('app')

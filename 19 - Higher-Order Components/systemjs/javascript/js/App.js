@@ -9,6 +9,9 @@ import GreetingWithExtras from './GreetingWithExtras';
 
 export default class App extends React.Component {
   render() {
-    return React.createElement(GreetingWithExtras, { extraColor: 'red', name: 'World' });
+    return React.createElement(GreetingWithExtras, {
+      extraColor: 'red',
+      name: 'World'
+    });
   }
 }

@@ -14,8 +14,7 @@ const AsyncResult = () => {
   if (!promise) {
     promise = new Promise(function(resolve) {
       setTimeout(() => resolve('Result!'), 3000);
-    })
-    .then(value => result = value);
+    }).then(value => (result = value));
   }
 
   // "Return" the promise

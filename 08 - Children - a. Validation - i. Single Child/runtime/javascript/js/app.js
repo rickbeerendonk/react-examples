@@ -6,15 +6,12 @@
 
 class List extends React.Component {
   render() {
-    return (
-      React.createElement('ul', null,
-        React.Children.map(
-          this.props.children, 
-          function (child, i) {
-            return React.createElement('li', { key: i }, child)
-          }
-        )
-      )
+    return React.createElement(
+      'ul',
+      null,
+      React.Children.map(this.props.children, function(child, i) {
+        return React.createElement('li', { key: i }, child);
+      })
     );
   }
 }
@@ -23,7 +20,9 @@ List.propTypes = {
 };
 
 ReactDOM.render(
-  React.createElement(List, null,
+  React.createElement(
+    List,
+    null,
     React.createElement('span', null, 'Legal'),
     React.createElement('span', null, 'Illegal')
   ),

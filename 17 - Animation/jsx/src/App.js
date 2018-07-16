@@ -50,7 +50,8 @@ class App extends React.Component {
               >
                 <div
                   onClick={this.handleRemove.bind(null, key)}
-                  className='item'>
+                  className="item"
+                >
                   {key}
                 </div>
               </CSSTransition>

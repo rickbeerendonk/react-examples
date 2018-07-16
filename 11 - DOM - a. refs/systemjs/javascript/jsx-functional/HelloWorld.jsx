@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-const HelloWorld = () => 
-  <h1 ref={ref => ref.innerHTML = 'Hello <i>React</i>!!!'}>Hello World!</h1>
-
+const HelloWorld = () => (
+  <h1 ref={ref => (ref.innerHTML = 'Hello <i>React</i>!!!')}>Hello World!</h1>
+);
 
 export default HelloWorld;

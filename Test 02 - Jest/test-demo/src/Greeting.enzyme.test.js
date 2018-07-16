@@ -20,7 +20,7 @@ it('renders hello world message (enzyme)', () => {
   expect(wrapper.type()).toEqual('h1');
   expect(wrapper.children().length).toEqual(1);
   expect(wrapper.childAt(0).text()).toEqual('Hello World!');
-  
+
   expect(wrapper.html()).toEqual('<h1>Hello World!</h1>');
 });
 

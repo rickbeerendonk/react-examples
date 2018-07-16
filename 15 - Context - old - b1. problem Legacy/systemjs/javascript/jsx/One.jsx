@@ -19,7 +19,9 @@ export default class One extends React.Component {
     return { color: this.state.color };
   }
   onSwitch() {
-    this.setState(prevState => ({ color: prevState.color === 'red' ? 'green' : 'red' }));
+    this.setState(prevState => ({
+      color: prevState.color === 'red' ? 'green' : 'red'
+    }));
   }
   render() {
     return (

@@ -11,8 +11,6 @@ export default class HelloWorld extends React.Component {
     ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
-    return (
-      <h1>Hello World!</h1>
-    );
+    return <h1>Hello World!</h1>;
   }
 }

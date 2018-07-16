@@ -3,8 +3,6 @@
 
 import React from 'react';
 
-const Greeting: React.SFC = () => (
-  <h1>Hello World!</h1>
-);
+const Greeting: React.SFC = () => <h1>Hello World!</h1>;
 
 export default Greeting;

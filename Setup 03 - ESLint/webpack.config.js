@@ -41,6 +41,6 @@ module.exports = {
     new webpack.NamedModulesPlugin()
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-  },
+    extensions: ['.js', '.jsx', '.json']
+  }
 };

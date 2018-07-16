@@ -10,7 +10,4 @@ import HelloMessage from './HelloMessage';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(
-  <HelloMessage name="World" />,
-  root
-);
+ReactDOM.render(<HelloMessage name="World" />, root);

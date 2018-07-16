@@ -6,13 +6,8 @@
 
 class Greeting extends React.Component<undefined, undefined> {
   render() {
-    return (
-      <h1>Hello World!</h1>
-      );
+    return <h1>Hello World!</h1>;
   }
 }
 
-ReactDOM.render(
-  <Greeting />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Greeting />, document.getElementById('app'));

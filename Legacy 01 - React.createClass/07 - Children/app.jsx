@@ -5,21 +5,19 @@
 /* eslint react/prop-types:"off" */
 
 var Greeting = createReactClass({
-  render: function () {
-    return (
-      <i>Hello {this.props.name}!</i>
-    );
+  render: function() {
+    return <i>Hello {this.props.name}!</i>;
   }
 });
 
 var List = createReactClass({
-  render: function () {
+  render: function() {
     return (
-      <ul>{
-        React.Children.map(this.props.children, function (child, i) {
+      <ul>
+        {React.Children.map(this.props.children, function(child, i) {
           return <li key={i}>{child}</li>;
-        })
-      }</ul>
+        })}
+      </ul>
     );
   }
 });

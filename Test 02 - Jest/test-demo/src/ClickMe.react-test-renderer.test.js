@@ -19,4 +19,3 @@ it('renders 1 after click snapshot (react-test-renderer)', () => {
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-

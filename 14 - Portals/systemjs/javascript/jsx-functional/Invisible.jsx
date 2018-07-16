@@ -9,9 +9,6 @@ import ReactDOM from 'react-dom';
 import Visible from './Visible';
 
 const Invisible = () =>
-  ReactDOM.createPortal(
-    <Visible />,
-    document.getElementById('portal')
-  );
+  ReactDOM.createPortal(<Visible />, document.getElementById('portal'));
 
 export default Invisible;

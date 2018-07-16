@@ -4,13 +4,13 @@
 /* global createReactClass, React, ReactDOM */
 
 var GreetingEditor = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return { name: 'World' };
   },
-  onChange: function (e) {
+  onChange: function(e) {
     this.setState({ name: e.target.value });
   },
-  render: function () {
+  render: function() {
     return (
       <div>
         <input onChange={this.onChange} value={this.state.name} />
@@ -20,7 +20,4 @@ var GreetingEditor = createReactClass({
   }
 });
 
-ReactDOM.render(
-  <GreetingEditor />,
-  document.getElementById('app')
-);
+ReactDOM.render(<GreetingEditor />, document.getElementById('app'));

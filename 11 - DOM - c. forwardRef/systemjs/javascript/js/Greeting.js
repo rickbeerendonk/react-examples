@@ -3,10 +3,12 @@
 
 import React from 'react';
 
-const Greeting = React.forwardRef((props, ref) => (
-  React.createElement('div', { className: 'hello' },
+const Greeting = React.forwardRef((props, ref) =>
+  React.createElement(
+    'div',
+    { className: 'hello' },
     React.createElement('h1', { ref }, 'Hello ', props.name, '!')
   )
-));
+);
 
 export default Greeting;
