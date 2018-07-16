@@ -15,9 +15,11 @@
   "scripts": {
     "clean": "rimraf node_modules",
     "eslint": "eslint . --ext .js,.jsx",
+    "eslint-fix": "eslint . --ext .js,.jsx --fix",
     "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8040",
     "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080",
-    "prettier": "prettier --write '**/*.{json,js,jsx,ts,tsx}'"
+    "prettier": "prettier --list-different '**/*.{json,js,jsx,ts,tsx}'",
+    "prettier-fix": "prettier --write '**/*.{json,js,jsx,ts,tsx}'"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
