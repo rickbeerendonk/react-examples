@@ -9,6 +9,7 @@ class HelloWorld extends React.Component {
     this.myH1 = React.createRef();
   }
   componentDidMount() {
+    // this.myH1.current contains a reference to the real DOM node.
     this.myH1.current.innerHTML = 'Hello <i>React</i>!!!';
   }
   render() {
