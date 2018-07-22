@@ -6,9 +6,9 @@ import React from 'react';
 const Greeting = () => (
   <h1
     style={{
-      transform: 'rotate(10deg)',
-      msTransform: 'rotate(10deg)',
-      WebkitTransform: 'rotate(10deg)'
+      transform: 'rotate(10deg) translateY(100px)',
+      msTransform: 'rotate(10deg) translateY(100px)',
+      WebkitTransform: 'rotate(10deg) translateY(100px)'
     }}
   >
     Hello World!

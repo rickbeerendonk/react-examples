@@ -4,11 +4,11 @@
 //import * as React from 'react';
 //import * as ReactDOM from 'react-dom';
 
-interface IGreeting {
+interface IGreetingProps {
   name: string;
 }
 
-class Greeting extends React.Component<IGreeting, undefined> {
+class Greeting extends React.Component<IGreetingProps, undefined> {
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }

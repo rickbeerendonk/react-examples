@@ -82,6 +82,7 @@ export default class Hello extends React.Component {
     );
     if (
       prevProps.name === 'Number Two' &&
+      prevContext &&
       prevContext.value === 'Context One'
     ) {
       logEvent('-- new state --', 'action');

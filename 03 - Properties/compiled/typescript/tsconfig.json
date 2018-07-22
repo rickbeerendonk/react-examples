@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "none",
+    "module": "commonjs",
     "target": "es3",
     "jsx": "react",
     "noLib": false,
@@ -9,5 +9,5 @@
     "outDir": "./site/lib/",
     "sourceMap": true
   },
-  "files": ["./site/src/app.tsx"]
+  "files": ["./site/src/index.tsx"]
 }
