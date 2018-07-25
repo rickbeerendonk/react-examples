@@ -15,8 +15,7 @@ export default class Parent extends React.Component {
     this.state = { name: '' };
     this.nameChanged = this.nameChanged.bind(this);
   }
-  nameChanged(e) {
-    const name = e.target.value;
+  nameChanged({ target: { value: name } }) {
     this.obj.name = name;
     this.setState({ name });
   }

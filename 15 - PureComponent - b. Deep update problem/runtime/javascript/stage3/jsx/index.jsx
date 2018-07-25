@@ -21,8 +21,7 @@ class Parent extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   obj = {};
   state = { name: '' };
-  nameChanged = e => {
-    const name = e.target.value;
+  nameChanged = ({ target: { value: name } }) => {
     this.obj.name = name;
     this.setState({ name });
   };
