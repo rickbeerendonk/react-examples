@@ -10,8 +10,7 @@ class App extends React.Component {
 
     this.onKeyUp = this.onKeyUp.bind(this);
   }
-  onKeyUp(e) {
-    const key = e.key;
+  onKeyUp({ key }) {
     this.setState(prevState => ({ pressed: prevState.pressed + key }));
   }
   render() {

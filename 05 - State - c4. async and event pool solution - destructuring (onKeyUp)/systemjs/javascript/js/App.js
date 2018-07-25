@@ -1,17 +1,18 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* eslint react/prop-types:"off" */
 
-class App extends React.Component {
+import React from 'react';
+
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { pressed: '' };
 
     this.onKeyUp = this.onKeyUp.bind(this);
   }
-  onKeyUp(e) {
-    const key = e.key;
+  onKeyUp({ key }) {
     this.setState(prevState => ({ pressed: prevState.pressed + key }));
   }
   render() {
@@ -25,5 +26,3 @@ class App extends React.Component {
     );
   }
 }
-
-ReactDOM.render(React.createElement(App), document.getElementById('app'));

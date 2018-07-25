@@ -7,8 +7,8 @@ class App extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { pressed: '' };
-  onKeyUp = e => {
-    this.setState(prevState => ({ pressed: prevState.pressed + e.key }));
+  onKeyUp = ({ key }) => {
+    this.setState(prevState => ({ pressed: prevState.pressed + key }));
   };
 
   render() {

@@ -1,14 +1,16 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+/* eslint react/prop-types:"off" */
 
-class App extends React.Component {
+import React from 'react';
+
+export default class App extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { pressed: '' };
-  onKeyUp = e => {
-    this.setState(prevState => ({ pressed: prevState.pressed + e.key }));
+  onKeyUp = ({ key }) => {
+    this.setState(prevState => ({ pressed: prevState.pressed + key }));
   };
 
   render() {
@@ -20,5 +22,3 @@ class App extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById('app'));
