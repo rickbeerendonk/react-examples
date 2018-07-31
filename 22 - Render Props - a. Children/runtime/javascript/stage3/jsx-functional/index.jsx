@@ -40,7 +40,12 @@ const App = () => (
     </MouseOver>
     <Greeting name="Second" />
     <MouseOver>
-      {mouseIsOver => <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>}
+      {mouseIsOver => (
+        <h2>
+          Subtitle
+          {mouseIsOver && ' (with mouse)'}
+        </h2>
+      )}
     </MouseOver>
   </React.Fragment>
 );

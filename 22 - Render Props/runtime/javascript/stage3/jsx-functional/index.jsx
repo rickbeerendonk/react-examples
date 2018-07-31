@@ -40,7 +40,12 @@ const App = () => (
     />
     <Greeting name="Second" />
     <MouseOver
-      render={mouseIsOver => <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>}
+      render={mouseIsOver => (
+        <h2>
+          Subtitle
+          {mouseIsOver && ' (with mouse)'}
+        </h2>
+      )}
     />
   </React.Fragment>
 );

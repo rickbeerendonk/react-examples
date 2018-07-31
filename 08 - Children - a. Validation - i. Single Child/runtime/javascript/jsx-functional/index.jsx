@@ -6,7 +6,9 @@
 
 const List = props => (
   <ul>
-    {React.Children.map(props.children, (child, i) => <li key={i}>{child}</li>)}
+    {React.Children.map(props.children, (child, i) => (
+      <li key={i}>{child}</li>
+    ))}
   </ul>
 );
 List.propTypes = {

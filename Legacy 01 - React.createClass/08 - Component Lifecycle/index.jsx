@@ -24,7 +24,8 @@ var Hello = createReactClass({
     );
     return (
       <h1>
-        Hello {this.props.name}! ({this.state.count}time)
+        Hello {this.props.name}! ({this.state.count}
+        time)
       </h1>
     );
   },

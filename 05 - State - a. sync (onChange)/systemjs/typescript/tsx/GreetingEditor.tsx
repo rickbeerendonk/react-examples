@@ -13,7 +13,7 @@ export default class GreetingEditor extends React.Component<
   undefined,
   IGreetingEditorState
 > {
-  constructor(props: any) {
+  constructor(props: unknown) {
     super(props);
     this.state = { name: 'World' };
 

@@ -26,7 +26,8 @@ export default class Hello extends React.Component {
     );
     return (
       <h1>
-        Hello {this.props.name}! ({this.state.count}time)
+        Hello {this.props.name}! ({this.state.count}
+        time)
       </h1>
     );
   }

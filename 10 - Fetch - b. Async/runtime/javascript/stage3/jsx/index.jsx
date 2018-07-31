@@ -7,7 +7,11 @@
 const Post = ({ title }) => <li>{title}</li>;
 
 const PostList = ({ posts }) => (
-  <ul>{posts.map(post => <Post key={post.id} title={post.title} />)}</ul>
+  <ul>
+    {posts.map(post => (
+      <Post key={post.id} title={post.title} />
+    ))}
+  </ul>
 );
 
 // Container pattern:

@@ -54,7 +54,10 @@ class App extends React.Component {
         <Greeting name="Second" />
         <MouseOver
           render={mouseIsOver => (
-            <h2>Subtitle{mouseIsOver && ' (with mouse)'}</h2>
+            <h2>
+              Subtitle
+              {mouseIsOver && ' (with mouse)'}
+            </h2>
           )}
         />
       </React.Fragment>
