@@ -10,8 +10,20 @@ Use an existing DOM element as the root for the React application.
 <div id="app"></div>
 ```
 
-### JSX
+### Synchronous
+
+#### JSX
 
 ```JSX
 ReactDOM.render(<h1>Hello World!</h1> document.getElementById('app'));
+```
+
+### Asynchronous (unstable)
+
+#### JSX
+
+```JSX
+ReactDOM.unstable_createRoot(document.getElementById('app')).render(
+  <h1>Hello World!</h1>
+);
 ```
