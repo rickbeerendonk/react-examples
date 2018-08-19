@@ -8,6 +8,6 @@ const app = document.createElement('div');
 document.body.appendChild(app);
 
 ReactDOM.render(
-  React.createElement('h1', null, 'Hello World!'),
+  React.createElement('h1', null, 'Hello React ', React.version, '!'),
   app
 );

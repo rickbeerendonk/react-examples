@@ -5,5 +5,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.unstable_createRoot(document.getElementById('app')).render(
-  <h1>Hello World!</h1>
+  <h1>Hello React {React.version}!</h1>
 );

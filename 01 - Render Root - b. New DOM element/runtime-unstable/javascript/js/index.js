@@ -7,5 +7,5 @@ const app = document.createElement('div');
 document.body.appendChild(app);
 
 ReactDOM.unstable_createRoot(app).render(
-  React.createElement('h1', null, 'Hello World!')
+  React.createElement('h1', null, 'Hello React ', React.version, '!')
 );

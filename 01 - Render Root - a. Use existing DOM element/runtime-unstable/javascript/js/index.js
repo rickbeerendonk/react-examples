@@ -4,5 +4,5 @@
 /* global React, ReactDOM */
 
 ReactDOM.unstable_createRoot(document.getElementById('app')).render(
-  React.createElement('h1', null, 'Hello World!')
+  React.createElement('h1', null, 'Hello React ', React.version, '!')
 );

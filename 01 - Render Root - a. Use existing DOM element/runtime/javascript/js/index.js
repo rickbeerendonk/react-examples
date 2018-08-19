@@ -4,6 +4,6 @@
 /* global React, ReactDOM */
 
 ReactDOM.render(
-  React.createElement('h1', null, 'Hello World!'),
+  React.createElement('h1', null, 'Hello React ', React.version, '!'),
   document.getElementById('app')
 );

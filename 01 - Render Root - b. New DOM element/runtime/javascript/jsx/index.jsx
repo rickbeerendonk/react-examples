@@ -6,4 +6,4 @@
 const app = document.createElement('div');
 document.body.appendChild(app);
 
-ReactDOM.render(<h1>Hello World!</h1>, app);
+ReactDOM.render(<h1>Hello React {React.version}!</h1>, app);
