@@ -10,7 +10,7 @@ interface IGreetingEditorState {
 }
 
 export default class GreetingEditor extends React.Component<
-  undefined,
+  unknown,
   IGreetingEditorState
 > {
   constructor(props: unknown) {
