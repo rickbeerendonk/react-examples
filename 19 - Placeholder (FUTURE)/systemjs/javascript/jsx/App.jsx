@@ -9,7 +9,7 @@ import AsyncResult from './AsyncResult';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false };
+    this.state = { isLoading: false };
 
     // Bind all non-react methods to this.
     this.load = this.load.bind(this);
@@ -18,7 +18,7 @@ export default class App extends React.Component {
   load() {
     // Perform an update with low priority
     ReactDOM.unstable_deferredUpdates(() => {
-      this.setState({ loading: true });
+      this.setState({ isLoading: true });
     });
   }
 
@@ -26,13 +26,13 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <button onClick={this.load}>Load</button>
-        {// This is future functionality (using a special alpha version of React):
-        this.state.loading && (
-          <React.Timeout ms={1000}>
-            {didTimeout => (
-              <div>{didTimeout ? 'Loading...' : <AsyncResult />}</div>
-            )}
-          </React.Timeout>
+        {// This is future functionality (using a special version of React):
+        this.state.isLoading && (
+          <React.Placeholder delayMs={1500} fallback={<div>Loading...</div>}>
+            <div>
+              <AsyncResult />
+            </div>
+          </React.Placeholder>
         )}
       </React.Fragment>
     );
