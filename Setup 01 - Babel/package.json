@@ -16,10 +16,10 @@
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-rc.2",
-    "@babel/core": "^7.0.0-rc.2",
-    "@babel/polyfill": "^7.0.0-rc.2",
-    "@babel/preset-env": "^7.0.0-rc.2",
-    "@babel/preset-react": "^7.0.0-rc.2"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }
