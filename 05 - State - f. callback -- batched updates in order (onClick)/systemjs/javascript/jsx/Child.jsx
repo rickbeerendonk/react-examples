@@ -31,6 +31,10 @@ export default class Child extends React.Component {
     );
   }
   render() {
+    /* eslint no-console:"off" */
+    // Render will be called once!
+    console.log('Child rendered: ' + Date());
+
     return (
       <a onClick={this.onClick}>
         <div>{`Parent count: ${this.props.count}`}</div>
