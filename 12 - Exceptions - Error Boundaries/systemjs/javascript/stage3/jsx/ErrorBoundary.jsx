@@ -16,6 +16,7 @@ export default class ErrorBoundary extends React.Component {
     // Rethrow
     //throw error;
   }
+
   render() {
     if (this.state.error) {
       return (

@@ -10,12 +10,14 @@ export default class ErrorBoundary extends React.Component {
     super(props);
     this.state = { error: null, info: null };
   }
+
   componentDidCatch(error, info) {
     this.setState({ error, info });
 
     // Rethrow
     //throw error;
   }
+
   render() {
     if (this.state.error) {
       return (
