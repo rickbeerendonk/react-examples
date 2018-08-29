@@ -11,6 +11,10 @@
 
 * React.unstable_Profiler
 
+### other
+
+* enableGetDerivedStateFromCatch
+
 ## ReactDOM
 
 ### async
