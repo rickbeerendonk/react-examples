@@ -36,7 +36,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup Hot Module Replacement, Webpack, ESLint & Babel'
+      title: 'Setup Styled Components'
     }),
     new webpack.NamedModulesPlugin()
   ],

@@ -1,6 +1,6 @@
 {
-  "name": "react-hmr-eslint-webpack-babel",
-  "description": "Using React with Hot Module Replacement, ESLint, Webpack & Babel",
+  "name": "react-styled-components-hmr-eslint-webpack-babel",
+  "description": "Using React with Styled Components, Hot Module Replacement, ESLint, Webpack & Babel",
   "version": "1.0.0",
   "repository": {
     "type": "git",
