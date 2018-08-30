@@ -8,4 +8,6 @@ import { StyledH1 } from './styled';
 /* eslint react/prop-types:"off" */
 /* eslint react/display-name:"off" */
 
-export default ({ name }) => <StyledH1>Hello {name}!</StyledH1>;
+const Greeting = ({ name }) => <StyledH1>Hello {name}!</StyledH1>;
+
+export default Greeting;
