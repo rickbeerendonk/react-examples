@@ -5,6 +5,7 @@
 
 const StyledButton = styled.default.button`
   color: ${props => (props.disabled ? 'red' : 'green')};
+  margin: 1em;
 `;
 
 class App extends React.Component {

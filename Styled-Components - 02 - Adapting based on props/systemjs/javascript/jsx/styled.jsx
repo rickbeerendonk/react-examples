@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 export const StyledButton = styled.button`
   color: ${props => (props.disabled ? 'red' : 'green')};
+  margin: 1em;
 `;
 
 export default {
