@@ -7,7 +7,7 @@ import { StyledButton } from './styled';
 
 /* eslint react/prop-types:"off" */
 
-class Greeting extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <React.Fragment>
@@ -18,4 +18,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default Greeting;
+export default Main;

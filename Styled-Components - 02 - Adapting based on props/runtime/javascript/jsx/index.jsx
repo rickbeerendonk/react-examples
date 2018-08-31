@@ -7,7 +7,7 @@ const StyledButton = styled.default.button`
   color: ${props => (props.disabled ? 'red' : 'green')};
 `;
 
-class Greeting extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <React.Fragment>
@@ -18,4 +18,4 @@ class Greeting extends React.Component {
   }
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

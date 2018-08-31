@@ -3,9 +3,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeting from './Greeting';
+import Main from './Main';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<Greeting name="World" />, root);
+ReactDOM.render(<Main />, root);
