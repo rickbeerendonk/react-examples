@@ -23,7 +23,7 @@ export default class App extends React.Component {
         <button onClick={this.load}>Load</button>
         {// This is future functionality (using a special version of React):
         this.state.isLoading && (
-          <React.Placeholder delayMs={1500} fallback={<div>Loading...</div>}>
+          <React.Placeholder delayMs={1000} fallback={<div>Loading...</div>}>
             <div>
               <AsyncResult />
             </div>
