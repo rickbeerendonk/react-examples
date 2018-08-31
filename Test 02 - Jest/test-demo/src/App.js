@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Greeting />
+        <Greeting name="World" />
         <hr />
         <ClickMe />
       </div>
