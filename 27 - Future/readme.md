@@ -14,6 +14,7 @@
 ### other
 
 * enableGetDerivedStateFromCatch
+* Lifecycle method: getDerivedStateFromCatch
 
 ## ReactDOM
 
