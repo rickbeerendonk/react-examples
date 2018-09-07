@@ -9,8 +9,8 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-hot-loader": "^4.3.5"
   },
   "devDependencies": {

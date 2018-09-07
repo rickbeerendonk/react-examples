@@ -15,8 +15,8 @@
   "dependencies": {
     "@types/react": "16.4.7",
     "@types/react-dom": "16.0.6",
-    "react": "16.4.2",
-    "react-dom": "16.4.2"
+    "react": "16.5.0",
+    "react-dom": "16.5.0"
   },
   "devDependencies": {
     "typescript": "^3.0.3"
