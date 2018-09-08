@@ -5,6 +5,8 @@
 
 import React from 'react';
 
+import ErrorMessage from './ErrorMessage';
+import Fetching from './Fetching';
 import PostList from './PostList';
 
 // Container pattern:
@@ -32,9 +34,10 @@ export default class Posts extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.isFetching && <div>Fetching...</div>}
+        {this.state.isFetching && <Fetching />}
+
         {this.state.error ? (
-          <div style={{ color: 'red' }}>{this.state.error}</div>
+          <ErrorMessage message={this.state.error} />
         ) : (
           <PostList posts={this.state.posts} />
         )}

@@ -14,6 +14,21 @@ const PostList = ({ posts }) => (
   </ul>
 );
 
+const ErrorMessage = ({ message }) => (
+  <div style={{ color: 'red' }}>{message}</div>
+);
+
+const Fetching = () => (
+  <React.Fragment>
+    <img
+      src="../../../../../resources/oblicum-square.svg"
+      className="oblicum-spinner"
+      alt="Fetching..."
+    />
+    Fetching...
+  </React.Fragment>
+);
+
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 class PostListContainer extends React.Component {
@@ -39,9 +54,10 @@ class PostListContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.isFetching && <div>Fetching...</div>}
+        {this.state.isFetching && <Fetching />}
+
         {this.state.error ? (
-          <div style={{ color: 'red' }}>{this.state.error}</div>
+          <ErrorMessage message={this.state.error} />
         ) : (
           <PostList posts={this.state.posts} />
         )}
