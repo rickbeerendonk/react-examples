@@ -5,6 +5,8 @@
 
 import React from 'react';
 
+import ErrorMessage from './ErrorMessage';
+import Fetching from './Fetching';
 import PostList from 'PostList';
 
 // Container pattern:
@@ -45,24 +47,11 @@ export default class PostListContainer extends React.Component {
   }
   render() {
     if (this.state.isFetching) {
-      return React.createElement(
-        React.Fragment,
-        null,
-        React.createElement('img', {
-          src: '../../../../resources/oblicum-square.svg',
-          className: 'oblicum-spinner',
-          alt: 'Fetching...'
-        }),
-        'Fetching...'
-      );
+      return React.createElement(Fetching);
     }
 
     if (this.state.error) {
-      return React.createElement(
-        'div',
-        { style: { color: 'red' } },
-        this.state.error
-      );
+      return React.createElement(ErrorMessage, { message: this.state.error });
     }
 
     return React.createElement(PostList, { posts: this.state.posts });
