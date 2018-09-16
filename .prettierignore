@@ -5,6 +5,7 @@
 build/
 dist/
 docs/
+future_dist/
 lib/
 Issues/
 

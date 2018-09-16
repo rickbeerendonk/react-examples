@@ -14,7 +14,7 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'dist:': '../../../../dist/',
+    'dist:': '../../../../future_dist/',
     'npm:': '../../../../../node_modules/'
   },
   map: {
@@ -24,7 +24,8 @@ SystemJS.config({
     //react: 'npm:react/umd/react.development.js',
     react: 'dist:react.development.js',
     //'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-dom': 'dist:react-dom.development.js'
+    'react-dom': 'dist:react-dom.development.js',
+    schedule: 'npm:schedule/umd/schedule.development.js'
   },
   packages: {
     '.': {

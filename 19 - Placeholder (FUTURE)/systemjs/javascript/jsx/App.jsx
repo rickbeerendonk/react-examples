@@ -2,7 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Schedule from 'schedule';
 
 import AsyncResult from './AsyncResult';
 
@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
   load() {
     // Perform an update with low priority
-    ReactDOM.unstable_deferredUpdates(() => {
+    Schedule.unstable_scheduleWork(() => {
       this.setState({ isLoading: true });
     });
   }

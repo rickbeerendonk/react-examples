@@ -1,5 +1,6 @@
 **/build/**
 **/coverage/**
 **/dist/**
+**/future_dist/**
 **/lib/**
 **/node_modules/**
