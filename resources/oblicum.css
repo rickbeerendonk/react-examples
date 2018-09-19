@@ -30,7 +30,6 @@ body > :first-child::before {
   background-position-x: calc(100% - 10px);
   opacity: 0.7;
   z-index: 99;
-  zoom: 50%;
 }
 
 .code {
