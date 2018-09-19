@@ -4,10 +4,10 @@
 /* eslint react/prop-types:"off" */
 
 import React from 'react';
-import Hello from './Hello';
-import NameInput from './NameInput';
+import Greeting from './Greeting';
+import EditBox from './EditBox';
 
-export default class HelloMessage extends React.Component {
+export default class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: props.name };
@@ -21,8 +21,8 @@ export default class HelloMessage extends React.Component {
   render() {
     return (
       <div>
-        <NameInput onChange={this.onChange} name={this.state.name} />
-        <Hello name={this.state.name} />
+        <EditBox onChange={this.onChange} name={this.state.name} />
+        <Greeting name={this.state.name} />
       </div>
     );
   }

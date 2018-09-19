@@ -5,9 +5,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloMessage from './HelloMessage';
+
+import GreetingEditor from './GreetingEditor';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<HelloMessage name="World" />, root);
+ReactDOM.render(<GreetingEditor name="World" />, root);
