@@ -1,4 +1,4 @@
-/** @license React v16.5.1
+/** @license React v16.5.2
  * react-dom-test-utils.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.

@@ -1,4 +1,4 @@
-/** @license React v16.5.1
+/** @license React v16.5.2
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -5397,7 +5397,7 @@ function getModernOffsetsFromPoints(outerNode, anchorNode, anchorOffset, focusNo
  */
 function setOffsets(node, offsets) {
   var doc = node.ownerDocument || document;
-  var win = doc ? doc.defaultView : window;
+  var win = doc && doc.defaultView || window;
   var selection = win.getSelection();
   var length = node.textContent.length;
   var start = Math.min(offsets.start, length);
@@ -6081,6 +6081,7 @@ function initWrapperState$2(element, props) {
 function updateWrapper$1(element, props) {
   var node = element;
   var value = getToStringValue(props.value);
+  var defaultValue = getToStringValue(props.defaultValue);
   if (value != null) {
     // Cast `value` to a string to ensure the value is set correctly. While
     // browsers typically do this as necessary, jsdom doesn't.
@@ -6089,12 +6090,12 @@ function updateWrapper$1(element, props) {
     if (newValue !== node.value) {
       node.value = newValue;
     }
-    if (props.defaultValue == null) {
+    if (props.defaultValue == null && node.defaultValue !== newValue) {
       node.defaultValue = newValue;
     }
   }
-  if (props.defaultValue != null) {
-    node.defaultValue = toString(getToStringValue(props.defaultValue));
+  if (defaultValue != null) {
+    node.defaultValue = toString(defaultValue);
   }
 }
 
@@ -8612,7 +8613,7 @@ var updatedAncestorInfo = function () {};
 
 var ReactInternals$1 = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
-var _ReactInternals$Sched = ReactInternals$1.Schedule;
+var _ReactInternals$Sched = ReactInternals$1.Scheduler;
 var unstable_cancelScheduledWork = _ReactInternals$Sched.unstable_cancelScheduledWork;
 var unstable_now = _ReactInternals$Sched.unstable_now;
 var unstable_scheduleWork = _ReactInternals$Sched.unstable_scheduleWork;
@@ -10184,7 +10185,7 @@ function assignFiberPropertiesInDEV(target, source) {
 
 var ReactInternals$2 = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
-var _ReactInternals$Sched$1 = ReactInternals$2.ScheduleTracing;
+var _ReactInternals$Sched$1 = ReactInternals$2.SchedulerTracing;
 var __interactionsRef = _ReactInternals$Sched$1.__interactionsRef;
 var __subscriberRef = _ReactInternals$Sched$1.__subscriberRef;
 var unstable_clear = _ReactInternals$Sched$1.unstable_clear;
@@ -17698,7 +17699,7 @@ function flushControlled(fn) {
   } finally {
     isBatchingUpdates = previousIsBatchingUpdates;
     if (!isBatchingUpdates && !isRendering) {
-      performWork(Sync, null);
+      performSyncWork();
     }
   }
 }
@@ -17875,7 +17876,7 @@ implementation) {
 
 // TODO: this is special because it gets imported during build.
 
-var ReactVersion = '16.5.1';
+var ReactVersion = '16.5.2';
 
 // TODO: This type is shared between the reconciler and ReactDOM, but will
 // eventually be lifted out to the renderer.
