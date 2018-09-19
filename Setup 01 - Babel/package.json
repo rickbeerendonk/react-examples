@@ -12,14 +12,14 @@
     "watch": "babel site/src --out-dir site/lib --watch --source-maps"
   },
   "dependencies": {
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.1",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
     "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0"
   }
 }
