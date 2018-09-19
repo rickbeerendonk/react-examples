@@ -18,5 +18,10 @@
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "no-debugger": "warn",
     "semi": [2, "always"]
+  },
+  "settings": {
+    "react": {
+      "version": "16.5.1"
+    }
   }
 }
