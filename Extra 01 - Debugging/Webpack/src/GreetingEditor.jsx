@@ -20,10 +20,10 @@ export default class GreetingEditor extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <EditBox onChange={this.onChange} name={this.state.name} />
         <Greeting name={this.state.name} />
-      </div>
+      </React.Fragment>
     );
   }
 }
