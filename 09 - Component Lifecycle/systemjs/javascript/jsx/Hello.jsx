@@ -72,9 +72,9 @@ export default class Hello extends React.Component {
     logEvent(
       `componentDidUpdate(prevProps: ${JSON.stringify(
         prevProps
-      )}, prevState: ${JSON.stringify(
-        prevState
-      )}, workInProgress: ${JSON.stringify(snapshot)})`,
+      )}, prevState: ${JSON.stringify(prevState)}, snapshot: ${JSON.stringify(
+        snapshot
+      )})`,
       'updating'
     );
     if (prevProps.name === 'Number One') {
