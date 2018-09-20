@@ -5,8 +5,15 @@
 
 import React from 'react';
 
+import Greeting from './Greeting';
+
 export default class Child extends React.Component {
   render() {
-    return <h2>Child: {this.props.obj.name}</h2>;
+    return (
+      <h2>
+        <span>Child: </span>
+        <Greeting name={this.props.obj.name} />
+      </h2>
+    );
   }
 }

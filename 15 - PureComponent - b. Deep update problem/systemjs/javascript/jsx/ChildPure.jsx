@@ -5,8 +5,15 @@
 
 import React from 'react';
 
+import Greeting from './Greeting';
+
 export default class ChildPure extends React.PureComponent {
   render() {
-    return <h2>Child (Pure): {this.props.obj.name}</h2>;
+    return (
+      <h2>
+        <span>Child (Pure): </span>
+        <Greeting name={this.props.obj.name} />
+      </h2>
+    );
   }
 }
