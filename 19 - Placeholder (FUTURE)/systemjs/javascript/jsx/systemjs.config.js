@@ -14,7 +14,7 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'dist:': '../../../future_dist/',
+    'dist:': '../../../../future_dist/',
     'npm:': '../../../../node_modules/'
   },
   map: {
