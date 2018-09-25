@@ -2,11 +2,12 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off", react/display-name:"off" */
+/* eslint react/prop-types:"off" */
 
 // Higher-Order Component
 function withExtras(WrappedComponent) {
-  return props => <WrappedComponent {...props} />;
+  const WithExtras = props => <WrappedComponent {...props} />;
+  return WithExtras;
 }
 
 const Greeting = props => <h1 ref={props.forwardedRef}>Hello {props.name}!</h1>;

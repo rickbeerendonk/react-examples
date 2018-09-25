@@ -7,7 +7,7 @@ import React from 'react';
 
 // HOC
 export function withExtras(WrappedComponent) {
-  class withExtras extends React.Component {
+  class WithExtras extends React.Component {
     render() {
       // Filter out extra props that are specific to this HOC and shouldn't be
       // passed through
@@ -21,5 +21,5 @@ export function withExtras(WrappedComponent) {
     }
   }
 
-  return withExtras;
+  return WithExtras;
 }

@@ -2,11 +2,11 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off", react/display-name:"off" */
+/* eslint react/prop-types:"off" */
 
 // Higher-Order Component
 function withExtras(WrappedComponent) {
-  return class extends React.Component {
+  return class WithExtras extends React.Component {
     render() {
       return <WrappedComponent {...this.props} />;
     }

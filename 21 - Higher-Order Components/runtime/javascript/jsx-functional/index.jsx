@@ -2,11 +2,11 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off", react/display-name:"off" */
+/* eslint react/prop-types:"off" */
 
 // HOC
 function withExtras(WrappedComponent) {
-  return props => {
+  const WithExtras = props => {
     // Filter out extra props that are specific to this HOC and shouldn't be
     // passed through
     const { extraColor, ...passThroughProps } = props;
@@ -17,6 +17,8 @@ function withExtras(WrappedComponent) {
       </div>
     );
   };
+
+  return WithExtras;
 }
 
 const Greeting = ({ name }) => <h1>Hello {name}!</h1>;

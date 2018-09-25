@@ -6,7 +6,6 @@ import React from 'react';
 import { StyledH1 } from './styled';
 
 /* eslint react/prop-types:"off" */
-/* eslint react/display-name:"off" */
 
 const Greeting = ({ name }) => <StyledH1>Hello {name}!</StyledH1>;
 

@@ -4,8 +4,9 @@
 import React from 'react';
 
 /* eslint react/prop-types:"off" */
-/* eslint react/display-name:"off" */
 
-export default ({ onChange, name }) => (
+const EditBox = ({ onChange, name }) => (
   <input onChange={e => onChange(e.target.value)} value={name} />
 );
+
+export default EditBox;

@@ -2,11 +2,11 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off", react/display-name:"off" */
+/* eslint react/prop-types:"off" */
 
 // HOC
 function withExtras(WrappedComponent) {
-  class withExtras extends React.Component {
+  class WithExtras extends React.Component {
     render() {
       // Filter out extra props that are specific to this HOC and shouldn't be
       // passed through
@@ -20,7 +20,7 @@ function withExtras(WrappedComponent) {
     }
   }
 
-  return withExtras;
+  return WithExtras;
 }
 
 class Greeting extends React.Component {
