@@ -12,9 +12,9 @@ Example:
 Examples:
 * https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab
 
-## Future
+## React 16.5+
 
-* Profiles component: https://github.com/reactjs/rfcs/pull/51
+* Profiler component: https://github.com/reactjs/rfcs/pull/51
 
 ---
 
