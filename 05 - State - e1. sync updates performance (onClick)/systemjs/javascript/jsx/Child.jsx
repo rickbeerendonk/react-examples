@@ -26,7 +26,7 @@ export default class Child extends React.Component {
   }
   render() {
     /* eslint no-console:"off" */
-    // Render will be called once!
+    // Render will be called on every parent render!
     console.log('Child rendered: ' + Date());
 
     return (
