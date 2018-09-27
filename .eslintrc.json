@@ -16,8 +16,8 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
-    "react/no-did-mount-set-state": "warn",
-    "no-debugger": "warn",
+    "react/no-did-mount-set-state": 2,
+    "no-debugger": 1,
     "semi": [2, "always"]
   },
   "settings": {

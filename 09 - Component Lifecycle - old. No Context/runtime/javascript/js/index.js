@@ -2,7 +2,7 @@
 /*! Copyright © 2014 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
+/* eslint react/prop-types:"off", react/no-did-mount-set-state:"off" */
 
 function logEvent(value, className) {
   let events = document.getElementById('events');

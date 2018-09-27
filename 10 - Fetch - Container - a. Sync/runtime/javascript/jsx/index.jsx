@@ -39,8 +39,14 @@ class PostListContainer extends React.Component {
       error: '',
       isFetching: false
     };
+
+    // Bind this for methods we create ourselves
+    this.fetchPosts = this.fetchPosts.bind(this);
   }
   componentDidMount() {
+    this.fetchPosts();
+  }
+  fetchPosts() {
     this.setState({ isFetching: true });
     fetch('posts.json')
       .then(response => {

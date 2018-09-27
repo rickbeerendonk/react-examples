@@ -1,11 +1,11 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
+/* eslint no-console:"off" */
+
 import React from 'react';
 
 import Child from './Child';
-
-/* eslint no-console:"off" */
 
 export default class Parent extends React.Component {
   componentWillUnmount() {

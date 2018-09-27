@@ -19,8 +19,14 @@ export default class PostListContainer extends React.Component {
       error: '',
       isFetching: false
     };
+
+    // Bind this for methods we create ourselves
+    this.fetchPosts = this.fetchPosts.bind(this);
   }
   componentDidMount() {
+    this.fetchPosts();
+  }
+  fetchPosts() {
     var self = this;
     self.setState({ isFetching: true });
     var xhr = new XMLHttpRequest();

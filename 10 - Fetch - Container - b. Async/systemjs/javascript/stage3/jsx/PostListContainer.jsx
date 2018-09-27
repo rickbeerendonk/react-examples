@@ -17,6 +17,9 @@ export default class Posts extends React.Component {
   state = { posts: [], error: '', isFetching: false };
 
   async componentDidMount() {
+    await this.fetchPosts();
+  }
+  fetchPosts = async () => {
     this.setState({ isFetching: true });
     try {
       const response = await fetch('posts.json');
@@ -30,7 +33,7 @@ export default class Posts extends React.Component {
     } finally {
       this.setState({ isFetching: false });
     }
-  }
+  };
   render() {
     return (
       <React.Fragment>

@@ -1,6 +1,8 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
+/* eslint react/no-did-mount-set-state:"off" */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
