@@ -5,11 +5,11 @@ import React from 'react';
 
 /* eslint no-console:"off" */
 
-export default class Greeting extends React.Component {
+export default class Child extends React.Component {
   componentWillUnmount() {
-    console.log('-- unmount --');
+    console.log('-- unmount Child --');
   }
   render() {
-    return <h1>Hello World!</h1>;
+    return <h1>Child</h1>;
   }
 }

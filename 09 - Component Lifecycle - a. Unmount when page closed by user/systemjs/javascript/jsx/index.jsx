@@ -4,11 +4,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Greeting from './Greeting';
+import Parent from './Parent';
 
 const node = document.getElementById('app');
 
-ReactDOM.render(<Greeting />, node);
+ReactDOM.render(<Parent />, node);
 
 window.addEventListener('beforeunload', () =>
   ReactDOM.unmountComponentAtNode(node)
