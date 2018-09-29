@@ -4,6 +4,7 @@
 /* eslint react/prop-types:"off" */
 
 import React from 'react';
+import { fetch } from 'slow-fetch';
 
 import ErrorMessage from './ErrorMessage';
 import Fetching from './Fetching';

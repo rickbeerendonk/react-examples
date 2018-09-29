@@ -16,10 +16,12 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'npm:': '../../../../../node_modules/'
+    'npm:': '../../../../../node_modules/',
+    'utils:': '../../../../../utils/'
   },
   map: {
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
+    'slow-fetch': 'utils:slow-fetch.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
