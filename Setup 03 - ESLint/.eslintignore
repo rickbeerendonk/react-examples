@@ -1,5 +1,2 @@
-# Ignore built files
-/site/lib/**
-
 # Ignore Webpack config
 webpack.config.js
