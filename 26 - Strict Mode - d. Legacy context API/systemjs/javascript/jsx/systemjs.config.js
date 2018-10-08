@@ -14,7 +14,7 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'dist:': '../../../../future_dist/',
+    'dist:': '../../../../future_node_modules/',
     'npm:': '../../../../node_modules/'
   },
   map: {
@@ -23,9 +23,9 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     'prop-types': 'npm:prop-types/prop-types.js',
     //react: 'npm:react/umd/react.development.js',
-    react: 'dist:react.development.js',
+    react: 'dist:react/umd/react.development.js',
     //'react-dom': 'npm:react-dom/umd/react-dom.development.js'
-    'react-dom': 'dist:react-dom.development.js'
+    'react-dom': 'dist:react-dom/umd/react-dom.development.js'
   },
   packages: {
     '.': {

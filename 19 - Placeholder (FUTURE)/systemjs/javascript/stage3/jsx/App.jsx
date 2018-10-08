@@ -3,10 +3,10 @@
 
 import React from 'react';
 
-//import { unstable_scheduleWork } from 'schedule';
-const unstable_scheduleWork =
+//import { unstable_scheduleCallback } from 'scheduler';
+const unstable_scheduleCallback =
   React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.Scheduler
-    .unstable_scheduleWork;
+    .unstable_scheduleCallback;
 
 import AsyncResult from './AsyncResult';
 
@@ -16,7 +16,7 @@ export default class App extends React.Component {
   state = { isLoading: false };
   load = () => {
     // Perform an update with low priority
-    unstable_scheduleWork(() => {
+    unstable_scheduleCallback(() => {
       this.setState({ isLoading: true });
     });
   };

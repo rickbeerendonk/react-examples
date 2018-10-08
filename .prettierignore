@@ -5,7 +5,7 @@
 build/
 dist/
 docs/
-future_dist/
+future_node_modules/
 lib/
 Issues/
 
