@@ -23,10 +23,8 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     //react: 'npm:react/umd/react.development.js',
     react: 'future:react/umd/react.development.js',
-    //'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-dom': 'future:react-dom/umd/react-dom.development.js',
-    //schedule: 'npm:schedule/umd/schedule.development.js'
-    schedule: 'future:schedule/umd/schedule.development.js'
+    //'react-dom': 'npm:react-dom/umd/react-dom.development.js'
+    'react-dom': 'future:react-dom/umd/react-dom.development.js'
   },
   packages: {
     '.': {
