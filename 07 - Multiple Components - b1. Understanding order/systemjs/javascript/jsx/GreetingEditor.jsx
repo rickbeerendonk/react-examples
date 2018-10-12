@@ -27,6 +27,14 @@ export default class GreetingEditor extends React.Component {
       return { name };
     });
 
+    /*
+
+    function setState(func) {
+      batch.add(func);
+    }
+
+    */
+
     /***/ console.log('GreetingEditor - onChange() <end>');
   }
   render() {
