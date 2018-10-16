@@ -1,4 +1,4 @@
-/** @license React v16.5.2
+/** @license React v16.6.0-alpha.8af6728
  * scheduler-tracing.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -16,11 +16,6 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
-
-// Exports ReactDOM.createRoot
-
-
-// Suspense
 
 // Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
 

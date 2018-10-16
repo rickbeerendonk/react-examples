@@ -3,6 +3,9 @@
 
 import React from 'react';
 
+// import { unstable_Suspense as Suspense } from 'react';
+const Suspense = React.unstable_Suspense;
+
 //import { unstable_scheduleCallback } from 'scheduler';
 const unstable_scheduleCallback =
   React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.Scheduler
@@ -27,11 +30,11 @@ export default class App extends React.Component {
         <button onClick={this.load}>Load</button>
         {// This is future functionality (using a special version of React):
         this.state.isLoading && (
-          <React.Placeholder delayMs={1000} fallback={<div>Loading...</div>}>
+          <Suspense maxDuration={1000} fallback={<div>Loading...</div>}>
             <div>
               <AsyncResult />
             </div>
-          </React.Placeholder>
+          </Suspense>
         )}
       </React.Fragment>
     );
