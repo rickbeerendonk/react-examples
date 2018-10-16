@@ -27,6 +27,17 @@
 * ReactDOM.unstable_interactiveUpdates
 * ReactDOM.unstable_renderSubtreeIntoContainer
 
+## React Cache
+
+### Resource / createResource
+
+Non-primitive keys *do* require a hash function:
+* createResource(loadResource: (K) => Promise<V>, hash?: (K) => H): Resource<K, V>;
+
+Resource:
+* read(cache, key)
+* preload(cache, key)
+
 ### other
 
 * ReactDOM.unstable_createPortal (deprecated, removed in 17+)
