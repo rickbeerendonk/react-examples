@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM, styled */
 
-const StyledH1 = styled.default.h1`
+const StyledH1 = styled.h1`
   text-align: center;
   color: blue;
 `;

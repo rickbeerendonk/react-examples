@@ -8,7 +8,7 @@ const Greeting = ({ className, name }) => (
   <h1 className={className}>Hello {name}</h1>
 );
 
-const StyledGreeting = styled.default(Greeting)`
+const StyledGreeting = styled(Greeting)`
   color: blue;
 `;
 

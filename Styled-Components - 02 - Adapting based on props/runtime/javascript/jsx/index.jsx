@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM, styled */
 
-const StyledButton = styled.default.button`
+const StyledButton = styled.button`
   color: ${props => (props.disabled ? 'red' : 'green')};
   margin: 1em;
 `;
