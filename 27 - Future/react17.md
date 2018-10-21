@@ -1,6 +1,6 @@
 # What to expect in React 17 (or 16.6?)
 
-With the [React Conference (25-26 October 2018)](https://conf.reactjs.org/) approaching quickly, there are a lot of changes in the React repo to suspect we are getting near React 17. In this article I'll try to sum up some of the changes we can expect.
+With the [React Conference (25-26 October 2018)](https://conf.reactjs.org/) approaching quickly, there are a lot of changes in the React repo to suspect we are getting near React 17. During my React training sessions around Europe I try to prepare my students as good as possible and cover these changes already. In this article I'll try to sum up some of the expected changes for you.
 
 ## Root
 
@@ -20,11 +20,11 @@ Functional Components will be called Function Components from now on.
 
 ## MemoComponent
 
-PureComponent will be renamed as MemoComponent.
+PureComponent will be renamed as MemoComponent. The MemoComponent is implementing the [memoization optimization technique](https://en.wikipedia.org/wiki/Memoization).
 
 ## memo() Higher-Order Component
 
-There was no solution for using Function Components as pure, eh... memo components. You could rewrite it as a Class Component extending React.PureComponent, but that involved some work. There will be a new Higher-Order Component (HOC) called memo() for use with Function Components:
+There was no solution for using Function Components as pure, eh... memo components. You could rewrite it as a Class Component extending React.MemoComponent, but that involved some work. There will be a new Higher-Order Component (HOC) called memo() for use with Function Components:
 
 ```jsx
 const Greeting = ({ name }) => <h1>Hello { name }!</h1>;
@@ -84,4 +84,16 @@ And it will contain some helper functions
 
 At the time of writing, all function names have a "unstable_" prefix, so the names might change.
 
+## Deprecated Factory Components
 
+Factory Components will be removed due to lack of use.
+
+```js
+const FactoryComponent = () => {
+  return {
+    render: function() {
+      return <div>foo</div>;
+    },
+  };
+};
+```
