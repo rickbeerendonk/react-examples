@@ -84,6 +84,10 @@ And it will contain some helper functions
 
 At the time of writing, all function names have a "unstable_" prefix, so the names might change.
 
+## Error Boundaries
+
+...(split)...
+
 ## Deprecated Factory Components
 
 Factory Components will be removed due to lack of use.
