@@ -14,8 +14,8 @@ class ClickMe extends React.Component {
   onClick() {
     // Updates are batched for performance reasons.
     // Therefore this should be used:
-    this.setState(prevState => ({ count: prevState.count + 0.5 }));
-    this.setState(prevState => ({ count: prevState.count + 0.5 }));
+    this.setState(state => ({ count: state.count + 0.5 }));
+    this.setState(state => ({ count: state.count + 0.5 }));
   }
   render() {
     return React.createElement(

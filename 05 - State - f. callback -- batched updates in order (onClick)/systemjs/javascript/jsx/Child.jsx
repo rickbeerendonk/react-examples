@@ -17,7 +17,7 @@ export default class Child extends React.Component {
   onClick() {
     // Batched:
     this.setState(
-      prevState => ({ count: prevState.count + 0.5 }),
+      state => ({ count: state.count + 0.5 }),
       () => console.log('child - first')
     );
 
@@ -26,7 +26,7 @@ export default class Child extends React.Component {
     }
 
     this.setState(
-      prevState => ({ count: prevState.count + 0.5 }),
+      state => ({ count: state.count + 0.5 }),
       () => console.log('child - second')
     );
   }

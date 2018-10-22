@@ -21,25 +21,25 @@ export default class ClickMe extends React.Component {
 
     // Updates are batched for performance reasons.
     // Therefore this should be used:
-    this.setState(prevState => {
+    this.setState(state => {
       /***/ console.log(
         'onClick() - callback 1 setState: ' +
           JSON.stringify(this.state) +
-          ' [prevState: ' +
-          JSON.stringify(prevState) +
+          ' [state in callback: ' +
+          JSON.stringify(state) +
           ']'
       );
-      return { count: prevState.count + 0.5 };
+      return { count: state.count + 0.5 };
     });
-    this.setState(prevState => {
+    this.setState(state => {
       /***/ console.log(
         'onClick() - callback 2 setState: ' +
           JSON.stringify(this.state) +
-          ' [prevState: ' +
-          JSON.stringify(prevState) +
+          ' [state in callback: ' +
+          JSON.stringify(state) +
           ']'
       );
-      return { count: prevState.count + 0.5 };
+      return { count: state.count + 0.5 };
     });
 
     /***/ console.log('onClick() <end>: ' + JSON.stringify(this.state));

@@ -19,7 +19,7 @@ export default class ClicParentkMe extends React.Component {
   onClick() {
     // Batched:
     this.setState(
-      prevState => ({ count: prevState.count + 1 }),
+      state => ({ count: state.count + 1 }),
       () => console.log('parent')
     );
   }

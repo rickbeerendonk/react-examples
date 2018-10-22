@@ -13,7 +13,7 @@ export default class App extends React.Component {
     this.onKeyUp = this.onKeyUp.bind(this);
   }
   onKeyUp(e) {
-    this.setState(prevState => ({ pressed: prevState.pressed + e.key }));
+    this.setState(state => ({ pressed: state.pressed + e.key }));
   }
   render() {
     return React.createElement(

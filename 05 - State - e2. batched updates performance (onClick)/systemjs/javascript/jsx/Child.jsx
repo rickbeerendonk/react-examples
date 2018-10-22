@@ -15,7 +15,7 @@ export default class Child extends React.Component {
   }
   onClick() {
     // Batched:
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+    this.setState(state => ({ count: state.count + 1 }));
 
     if (this.props.onClick) {
       this.props.onClick();

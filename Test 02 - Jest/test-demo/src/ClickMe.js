@@ -10,7 +10,7 @@ class ClickMe extends React.Component {
   }
   onClick() {
     // this.state may be updated asynchronously:
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+    this.setState(state => ({ count: state.count + 1 }));
   }
   render() {
     return (

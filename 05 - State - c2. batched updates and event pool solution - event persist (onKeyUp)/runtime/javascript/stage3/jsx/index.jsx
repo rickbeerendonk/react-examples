@@ -9,7 +9,7 @@ class App extends React.Component {
   state = { pressed: '' };
   onKeyUp = e => {
     e.persist();
-    this.setState(prevState => ({ pressed: prevState.pressed + e.key }));
+    this.setState(state => ({ pressed: state.pressed + e.key }));
   };
 
   render() {

@@ -10,7 +10,7 @@ export default class App extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { pressed: '' };
   onKeyUp = ({ key }) => {
-    this.setState(prevState => ({ pressed: prevState.pressed + key }));
+    this.setState(state => ({ pressed: state.pressed + key }));
   };
 
   render() {

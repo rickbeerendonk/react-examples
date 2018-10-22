@@ -11,7 +11,7 @@ export default class App extends React.Component {
   state = { pressed: '' };
   onKeyUp = e => {
     const key = e.key;
-    this.setState(prevState => ({ pressed: prevState.pressed + key }));
+    this.setState(state => ({ pressed: state.pressed + key }));
   };
 
   render() {

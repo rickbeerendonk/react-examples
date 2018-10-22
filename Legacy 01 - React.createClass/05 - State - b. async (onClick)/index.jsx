@@ -9,7 +9,7 @@ var ClickMe = createReactClass({
   },
   onClick: function() {
     // this.state may be updated asynchronously:
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+    this.setState(state => ({ count: state.count + 1 }));
   },
   render: function() {
     return (
