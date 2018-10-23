@@ -8,7 +8,7 @@ import React from 'react';
 
 import Child from './Child';
 
-export default class ClicParentkMe extends React.Component {
+export default class Parent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -19,7 +19,7 @@ export default class ClicParentkMe extends React.Component {
   onClick() {
     // Batched:
     this.setState(
-      state => ({ count: state.count + 1 }),
+      prevState => ({ count: prevState.count + 1 }),
       () => console.log('parent')
     );
   }
