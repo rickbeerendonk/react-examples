@@ -1,6 +1,6 @@
-# What to expect in React 17 (or 16.6?)
+# What to expect in React 16.6 (or 17?)
 
-With the [React Conference (25-26 October 2018)](https://conf.reactjs.org/) approaching quickly, there are a lot of changes in the React repo to suspect we are getting near React 17. During my React training sessions around Europe I try to prepare my students as good as possible and cover these changes already. In this article I'll try to sum up some of the expected changes for you.
+With the [React Conference (25-26 October 2018)](https://conf.reactjs.org/) approaching quickly, there are a lot of changes in the React repo to suspect we are getting near React 16.6 and maybe even 17. During my React training sessions around Europe I try to prepare my students as good as possible and cover these changes already. In this article I'll try to sum up some of the expected changes for you.
 
 ## Root
 
@@ -22,9 +22,9 @@ Functional Components will be called Function Components from now on.
 
 PureComponent will be renamed as MemoComponent. The MemoComponent is implementing the [memoization optimization technique](https://en.wikipedia.org/wiki/Memoization).
 
-## memo() Higher-Order Component
+## memo()
 
-There was no solution for using Function Components as pure, eh... memo components. You could rewrite it as a Class Component extending React.MemoComponent, but that involved some work. There will be a new Higher-Order Component (HOC) called memo() for use with Function Components:
+There was no solution for using Function Components as pure, eh... memo components. You could rewrite it as a Class Component extending React.MemoComponent, but that involved some work. There will be a new function called memo() (looks like a Higher Order Component, but isn't) for use with Function Components:
 
 ```jsx
 const Greeting = ({ name }) => <h1>Hello { name }!</h1>;
@@ -42,10 +42,7 @@ const memoGreeting = memo(Greeting, (oldProps, newProps) => oldProps.name === ne
 
 ### Not limited to Function Components
 
-The memo HOC is not limited to wrap Function Components, but can be used on any type of component.
-
-
-...chaining memo HOC (greet, name)?...
+The memo function is not limited to wrap Function Components, but can be used on any type of component.
 
 
 ## Suspense
