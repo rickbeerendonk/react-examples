@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component {
+class Greeting extends React.Component {
   render() {
     return [
       React.createElement('h1', { key: 'heading' }, 'Hello World!'),
@@ -12,3 +12,5 @@ export default class Greeting extends React.Component {
     ];
   }
 }
+
+export default Greeting;

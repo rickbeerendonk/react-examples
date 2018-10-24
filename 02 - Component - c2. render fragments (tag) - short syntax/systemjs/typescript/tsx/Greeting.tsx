@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component<undefined, undefined> {
+class Greeting extends React.Component<undefined, undefined> {
   render() {
     return (
       <>
@@ -14,3 +14,5 @@ export default class Greeting extends React.Component<undefined, undefined> {
     );
   }
 }
+
+export default Greeting;

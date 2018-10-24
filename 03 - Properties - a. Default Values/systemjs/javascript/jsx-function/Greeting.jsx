@@ -5,9 +5,9 @@
 
 import React from 'react';
 
-const Greeting = props => {
+function Greeting(props) {
   return <h1>Hello {props.name}!</h1>;
-};
+}
 Greeting.defaultProps = { name: 'World' };
 
 export default Greeting;

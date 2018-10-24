@@ -5,9 +5,11 @@
 
 import React from 'react';
 
-export default class ImportantAnchor extends React.Component {
+class ImportantAnchor extends React.Component {
   render() {
     const { children, ...props } = this.props;
     return <a {...props}>!!! {children} !!!</a>;
   }
 }
+
+export default ImportantAnchor;

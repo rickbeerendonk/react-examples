@@ -7,11 +7,10 @@ interface IGreetingProps {
   name: string;
 }
 
-export default class Greeting extends React.Component<
-  IGreetingProps,
-  undefined
-> {
+class Greeting extends React.Component<IGreetingProps, undefined> {
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }
 }
+
+export default Greeting;

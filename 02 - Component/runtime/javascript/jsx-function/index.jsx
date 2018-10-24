@@ -3,6 +3,8 @@
 
 /* global React, ReactDOM */
 
-const Greeting = () => <h1>Hello World!</h1>;
+function Greeting() {
+  return <h1>Hello World!</h1>;
+}
 
 ReactDOM.render(<Greeting />, document.getElementById('app'));

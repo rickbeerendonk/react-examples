@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-const ImportantAnchor = ({ children, ...props }) => (
-  <a {...props}>!!! {children} !!!</a>
-);
+function ImportantAnchor({ children, ...props }) {
+  return <a {...props}>!!! {children} !!!</a>;
+}
 
 export default ImportantAnchor;

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component {
+class Greeting extends React.Component {
   render() {
     return (
       <React.Fragment>
@@ -14,3 +14,5 @@ export default class Greeting extends React.Component {
     );
   }
 }
+
+export default Greeting;

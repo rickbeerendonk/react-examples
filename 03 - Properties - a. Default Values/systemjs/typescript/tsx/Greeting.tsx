@@ -4,15 +4,15 @@
 import React from 'react';
 
 interface IGreetingProps {
-  name: string;
+  name?: string;
 }
 
-export default class Greeting extends React.Component<
-  IGreetingProps,
-  undefined
-> {
+class Greeting extends React.Component<IGreetingProps, undefined> {
+  static defaultProps: IGreetingProps;
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }
 }
 Greeting.defaultProps = { name: 'World' };
+
+export default Greeting;

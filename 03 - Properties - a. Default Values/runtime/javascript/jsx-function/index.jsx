@@ -4,9 +4,9 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-const Greeting = props => {
-  props = Object.assign({ name: 'World' }, props);
+function Greeting(props) {
   return <h1>Hello {props.name}!</h1>;
-};
+}
+Greeting.defaultProps = { name: 'World' };
 
 ReactDOM.render(<Greeting />, document.getElementById('app'));

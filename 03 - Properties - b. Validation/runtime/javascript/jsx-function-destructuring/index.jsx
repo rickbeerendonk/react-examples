@@ -3,7 +3,9 @@
 
 /* global React, ReactDOM, PropTypes */
 
-const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
+function Greeting({ name }) {
+  return <h1>Hello {name}!</h1>;
+}
 Greeting.propTypes = {
   name: PropTypes.string.isRequired
 };

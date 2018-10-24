@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component {
+class Greeting extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   static defaultProps = {
@@ -15,3 +15,5 @@ export default class Greeting extends React.Component {
     return <h1>Hello {this.props.name}!</h1>;
   }
 }
+
+export default Greeting;

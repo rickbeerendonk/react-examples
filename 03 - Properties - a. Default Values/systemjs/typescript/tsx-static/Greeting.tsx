@@ -7,14 +7,13 @@ interface IGreetingProps {
   name: string;
 }
 
-export default class Greeting extends React.Component<
-  IGreetingProps,
-  undefined
-> {
-  static defaultProps = {
+class Greeting extends React.Component<IGreetingProps, undefined> {
+  static defaultProps: IGreetingProps = {
     name: 'World'
   };
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }
 }
+
+export default Greeting;
