@@ -6,10 +6,9 @@
 import React from 'react';
 
 import AsyncResource from './AsyncResource';
-import cache from './cache';
 
 let AsyncResult = ({ id }) => {
-  let result = AsyncResource.read(cache, id);
+  let result = AsyncResource.read(id);
   return <h1>{result}</h1>;
 };
 
