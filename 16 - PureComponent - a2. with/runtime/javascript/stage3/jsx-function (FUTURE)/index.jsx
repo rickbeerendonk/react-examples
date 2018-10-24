@@ -9,7 +9,7 @@ const Child = () => {
   return <h2>Child</h2>;
 };
 
-const ChildPure = React.pure(Child /* no custom comparison (2nd parameter) */);
+const ChildPure = React.memo(Child /* no custom comparison (2nd parameter) */);
 
 class Parent extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
