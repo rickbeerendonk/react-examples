@@ -10,4 +10,4 @@ const Child = () => {
   return <h2>Child</h2>;
 };
 
-export default React.pure(Child /* no custom comparison (2nd parameter) */);
+export default React.memo(Child /* no custom comparison (2nd parameter) */);

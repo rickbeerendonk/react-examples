@@ -9,7 +9,7 @@ const Child = () => {
   return <h2>Child</h2>;
 };
 
-const ChildPure = React.memo(Child /* no custom comparison (2nd parameter) */);
+const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
 
 class Parent extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Parent extends React.Component {
         <div>
           <input onChange={this.nameChanged} value={this.state.name} />
         </div>
-        <ChildPure />
+        <ChildMemo />
       </React.Fragment>
     );
   }

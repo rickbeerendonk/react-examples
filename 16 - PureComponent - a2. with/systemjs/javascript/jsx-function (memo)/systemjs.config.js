@@ -14,18 +14,15 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'future:': '../../../../node_modules/',
+    'future:': '../../../../future_node_modules/',
     'npm:': '../../../../node_modules/'
   },
   map: {
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
-    'prop-types': 'npm:prop-types/prop-types.js',
-    //react: 'npm:react/umd/react.development.js',
-    react: 'future:react/umd/react.development.js',
-    //'react-dom': 'npm:react-dom/umd/react-dom.development.js'
-    'react-dom': 'future:react-dom/umd/react-dom.development.js'
+    react: 'npm:react/umd/react.development.js',
+    'react-dom': 'npm:react-dom/umd/react-dom.development.js'
   },
   packages: {
     '.': {
