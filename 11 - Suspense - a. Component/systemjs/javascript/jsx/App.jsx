@@ -5,9 +5,6 @@ import React from 'react';
 
 import Spinner from './Spinner';
 
-// import { unstable_Suspense as Suspense } from 'react';
-const Suspense = React.unstable_Suspense;
-
 // import { unstable_scheduleCallback } from 'scheduler';
 const unstable_scheduleCallback =
   React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.Scheduler
@@ -38,9 +35,9 @@ export default class App extends React.Component {
         {// This is future functionality (using a special version of React):
         this.state.isLoading && (
           <div>
-            <Suspense maxDuration={1000} fallback={<Spinner />}>
+            <React.Suspense maxDuration={1000} fallback={<Spinner />}>
               <AsyncResult />
-            </Suspense>
+            </React.Suspense>
           </div>
         )}
       </React.Fragment>
