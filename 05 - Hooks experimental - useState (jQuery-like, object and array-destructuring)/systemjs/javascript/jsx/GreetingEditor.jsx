@@ -45,22 +45,22 @@ function GreetingEditor() {
   // Set: setFoo(...)
   const [foo, setFoo] = useState('Foo');
 
-  // As a object
+  // As an object
   // Get: bar.value
   // Set: bar.setValue(...)
   const bar = useState('Bar');
 
-  // As a object (with destructuring )
+  // As an object (with destructuring )
   // Get: baz
   // Set: setBaz(...)
   const { value: baz, setValue: setBaz } = useState('Baz');
 
-  // As a object (with predefined get/set names)
+  // As an object (with predefined get/set names)
   // Get: qux.quux
   // Set: qux.setQuux(...)
   const qux = useState('Qux', 'quux');
 
-  // As a object (with predefined get/set names and destructuring)
+  // As an object (with predefined get/set names and destructuring)
   // Get: corge
   // Set: setCorge(...)
   const { corge, setCorge } = useState('Corge', 'corge');
