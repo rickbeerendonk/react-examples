@@ -3,10 +3,8 @@
 
 /* global React, ReactDOM */
 
-class Greeting extends React.Component {
-  render() {
-    return 'Hello World!';
-  }
+function Greeting() {
+  return 'Hello World!';
 }
 
 ReactDOM.render(<Greeting />, document.getElementById('app'));
