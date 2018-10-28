@@ -26,6 +26,9 @@ SystemJS.config({
   packages: {
     '.': {
       defaultExtension: 'jsx'
+    },
+    './ext': {
+      defaultExtension: 'js'
     }
   },
   transpiler: 'plugin-babel'
