@@ -25,8 +25,8 @@ SystemJS.config({
     react: 'future:react/umd/react.development.js',
     //'react-dom': 'npm:react-dom/umd/react-dom.development.js',
     'react-dom': 'future:react-dom/umd/react-dom.development.js',
-    //schedule: 'npm:schedule/umd/schedule.development.js'
-    scheduler: 'future:scheduler/umd/scheduler.development.js'
+    //scheduler: 'npm:scheduler/umd/schedule.development.js'
+    scheduler: 'future:scheduler/cjs/scheduler.development.js'
   },
   packages: {
     '.': {

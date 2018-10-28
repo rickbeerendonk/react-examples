@@ -2,13 +2,9 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 import React from 'react';
+import { unstable_scheduleCallback as scheduleCallback } from 'scheduler';
 
 import Spinner from './Spinner';
-
-// import scheduler from 'scheduler';
-const scheduler =
-  React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.Scheduler;
-
 import AsyncResult from './AsyncResult';
 
 export default class App extends React.Component {
@@ -22,7 +18,7 @@ export default class App extends React.Component {
 
   load() {
     // Perform an update with low priority
-    scheduler.unstable_scheduleCallback(() => {
+    scheduleCallback(() => {
       this.setState({ isLoading: true });
     });
   }

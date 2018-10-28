@@ -3,9 +3,9 @@
 
 /* eslint react/prop-types:"off" */
 
-import { unstable_createResource } from 'react-cache';
+import { unstable_createResource as createResource } from 'react-cache';
 
-const AsyncResource = unstable_createResource(
+const AsyncResource = createResource(
   id =>
     new Promise(resolve => {
       setTimeout(() => resolve(`Result ${id}!`), 3000);
