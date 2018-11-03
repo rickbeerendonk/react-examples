@@ -18,10 +18,10 @@ export default class ClickMe extends React.Component {
     // Updates are batched for performance reasons.
     // Use ReactDOM.flushSync():
     ReactDOM.flushSync(() => {
-      this.setState({ count: this.state.count + 0.5 });
+      this.setState({ count: this.state.count + 0.4 });
     });
     ReactDOM.flushSync(() => {
-      this.setState({ count: this.state.count + 0.5 });
+      this.setState({ count: this.state.count + 0.6 });
     });
   }
   render() {
