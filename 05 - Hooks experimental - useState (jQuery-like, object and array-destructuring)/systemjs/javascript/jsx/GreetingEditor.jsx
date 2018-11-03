@@ -33,7 +33,7 @@ function GreetingEditor() {
   // Set: setCorge(...)
   const { corge, setCorge } = useState('Corge', 'corge');
 
-  // As jQuery-like getters and setters
+  // As jQuery-like getters and setters (function overloading)
   // Get: jq()
   // Set: jq(...)
   const jq = useState('jQuery');
