@@ -18,9 +18,7 @@ function create$tate(val) {
     writable: false
   });
 
-  result.setValue = function(val) {
-    setValue(val);
-  };
+  result.setValue = setValue;
 
   result[Symbol.iterator] = function*() {
     yield value;
