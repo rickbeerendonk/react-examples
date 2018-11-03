@@ -14,8 +14,8 @@ function ClickMe() {
   return (
     <a
       onClick={() => {
-        setCount(count + 0.4);
-        setCount(count + 0.6);
+        setCount(c => c + 0.4);
+        setCount(c => c + 0.6);
       }}
     >
       {`This link has been clicked ${count} times`}
