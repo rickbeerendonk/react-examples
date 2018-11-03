@@ -38,6 +38,9 @@ function GreetingEditor() {
   // Set: jq(...)
   const jq = useState('jQuery');
 
+  // Idea:
+  // const [first, second, third] = useState(true, 2, 'three');
+
   return (
     <React.Fragment>
       <input onChange={e => setFoo(e.target.value)} value={foo} />
