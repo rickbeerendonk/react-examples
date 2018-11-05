@@ -3,13 +3,15 @@
 
 import React from 'react';
 
-const Greeting: React.SFC = () => {
-  const changed = (e: React.SyntheticEvent<HTMLInputElement>) =>
+class Greeting extends React.Component {
+  handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
 Value: ${e.currentTarget.value}`);
-
-  return <input onChange={changed} value="Hello World!" />;
-};
+  }
+  render() {
+    return <input onChange={this.handleChange} value="Hello World!" />;
+  }
+}
 
 export default Greeting;

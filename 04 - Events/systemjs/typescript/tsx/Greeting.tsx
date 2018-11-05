@@ -3,13 +3,14 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component<undefined, undefined> {
-  onChange(e: React.SyntheticEvent<HTMLInputElement>) {
+function Greeting(): JSX.Element {
+  function handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
 Value: ${e.currentTarget.value}`);
   }
-  render() {
-    return <input onChange={this.onChange} value="Hello World!" />;
-  }
+
+  return <input onChange={handleChange} value="Hello World!" />;
 }
+
+export default Greeting;

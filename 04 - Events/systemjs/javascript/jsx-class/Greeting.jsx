@@ -3,13 +3,15 @@
 
 import React from 'react';
 
-const Greeting = () => {
-  const changed = e =>
+class Greeting extends React.Component {
+  handleChange(e) {
     alert(`Event handled.
 Target: ${e.target}
 Value: ${e.target.value}`);
-
-  return <input onChange={changed} value="Hello World!" />;
-};
+  }
+  render() {
+    return <input onChange={this.handleChange} value="Hello World!" />;
+  }
+}
 
 export default Greeting;

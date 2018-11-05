@@ -3,16 +3,17 @@
 
 /* global React, ReactDOM */
 
-class Greeting extends React.Component {
-  onChange(e) {
-    alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
+function Greeting() {
+  function changed(e) {
+    alert(`Event handled.
+Target: ${e.target}
+Value: ${e.target.value}`);
   }
-  render() {
-    return React.createElement('input', {
-      onChange: this.onChange,
-      value: 'Hello World!'
-    });
-  }
+
+  return React.createElement('input', {
+    onChange: changed,
+    value: 'Hello World!'
+  });
 }
 
 ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));
