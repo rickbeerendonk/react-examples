@@ -7,8 +7,10 @@ interface IGreetingProps {
   name: string;
 }
 
-function Greeting({ name }: IGreetingProps): JSX.Element {
-  return <h1>Hello {name}!</h1>;
+class Greeting extends React.Component<IGreetingProps> {
+  render() {
+    return <h1>Hello {this.props.name}!</h1>;
+  }
 }
 
 export default Greeting;

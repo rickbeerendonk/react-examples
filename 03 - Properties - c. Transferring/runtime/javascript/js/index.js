@@ -4,11 +4,8 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-class ImportantAnchor extends React.Component {
-  render() {
-    const { children, ...props } = this.props;
-    return React.createElement('a', props, '!!! ', children, ' !!!');
-  }
+function ImportantAnchor({ children, ...otherProps }) {
+  return React.createElement('a', otherProps, '!!! ', children, ' !!!');
 }
 
 ReactDOM.render(

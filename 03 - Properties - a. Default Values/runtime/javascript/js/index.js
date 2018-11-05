@@ -4,10 +4,8 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-class Greeting extends React.Component {
-  render() {
-    return React.createElement('h1', null, 'Hello ', this.props.name, '!');
-  }
+function Greeting(props) {
+  return React.createElement('h1', null, 'Hello ', props.name, '!');
 }
 Greeting.defaultProps = { name: 'World' };
 

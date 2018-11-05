@@ -1,13 +1,14 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* eslint react/prop-types:"off" */
-
+import PropTypes from 'prop-types';
 import React from 'react';
 
 function Greeting(props) {
   return React.createElement('h1', null, 'Hello ', props.name, '!');
 }
-Greeting.defaultProps = { name: 'World' };
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
+};
 
 export default Greeting;

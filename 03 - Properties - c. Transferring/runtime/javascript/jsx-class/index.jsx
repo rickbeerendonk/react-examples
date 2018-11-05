@@ -4,8 +4,11 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-function ImportantAnchor({ children, ...otherProps }) {
-  return <a {...otherProps}>!!! {children} !!!</a>;
+class ImportantAnchor extends React.Component {
+  render() {
+    const { children, ...otherProps } = this.props;
+    return <a {...otherProps}>!!! {children} !!!</a>;
+  }
 }
 
 ReactDOM.render(

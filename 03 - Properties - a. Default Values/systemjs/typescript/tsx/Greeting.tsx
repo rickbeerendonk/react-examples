@@ -7,11 +7,8 @@ interface IGreetingProps {
   name?: string;
 }
 
-class Greeting extends React.Component<IGreetingProps, undefined> {
-  static defaultProps: IGreetingProps;
-  render() {
-    return <h1>Hello {this.props.name}!</h1>;
-  }
+function Greeting(props: IGreetingProps): JSX.Element {
+  return <h1>Hello {props.name}!</h1>;
 }
 Greeting.defaultProps = { name: 'World' };
 

@@ -4,8 +4,10 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off" */
 
-function Greeting(props) {
-  return <h1>Hello {props.name}!</h1>;
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello {this.props.name}!</h1>;
+  }
 }
 
 ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));

@@ -5,10 +5,8 @@
 
 import React from 'react';
 
-class Greeting extends React.Component {
-  render() {
-    return React.createElement('h1', null, 'Hello ', this.props.name, '!');
-  }
+function Greeting(props) {
+  return React.createElement('h1', null, 'Hello ', props.name, '!');
 }
 
 export default Greeting;

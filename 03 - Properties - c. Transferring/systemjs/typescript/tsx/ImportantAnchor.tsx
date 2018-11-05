@@ -3,14 +3,9 @@
 
 import React from 'react';
 
-class ImportantAnchor extends React.Component<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  undefined
-> {
-  render() {
-    const { children, ...props } = this.props;
-    return <a {...props}>!!! {children} !!!</a>;
-  }
+function ImportantAnchor(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const { children, ...otherProps } = props;
+  return <a {...otherProps}>!!! {children} !!!</a>;
 }
 
 export default ImportantAnchor;

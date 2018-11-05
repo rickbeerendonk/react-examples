@@ -5,8 +5,11 @@
 
 import React from 'react';
 
-function ImportantAnchor({ children, ...otherProps }) {
-  return React.createElement('a', otherProps, '!!! ', children, ' !!!');
+class ImportantAnchor extends React.Component {
+  render() {
+    const { children, ...otherProps } = this.props;
+    return <a {...otherProps}>!!! {children} !!!</a>;
+  }
 }
 
 export default ImportantAnchor;

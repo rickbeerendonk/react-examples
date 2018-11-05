@@ -5,9 +5,10 @@
 
 import React from 'react';
 
-function Greeting(props) {
-  return React.createElement('h1', null, 'Hello ', props.name, '!');
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello {this.props.name}!</h1>;
+  }
 }
-Greeting.defaultProps = { name: 'World' };
 
 export default Greeting;
