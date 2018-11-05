@@ -3,8 +3,6 @@
 
 import React from 'react';
 
-/* eslint react/prop-types:"off" */
-
 const MyText = ({ text }) => <i>{text}</i>;
 
 export default MyText;

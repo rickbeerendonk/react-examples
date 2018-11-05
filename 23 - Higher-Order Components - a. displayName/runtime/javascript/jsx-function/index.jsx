@@ -2,7 +2,6 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 // Helper function
 function getDisplayName(WrappedComponent) {

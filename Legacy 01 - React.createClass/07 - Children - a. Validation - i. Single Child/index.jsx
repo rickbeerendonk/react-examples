@@ -2,7 +2,6 @@
 /*! Copyright © 2015 Rick Beerendonk   !*/
 
 /* global createReactClass, React, ReactDOM, PropTypes */
-/* eslint react/prop-types:"off" */
 
 var List = createReactClass({
   propTypes: {

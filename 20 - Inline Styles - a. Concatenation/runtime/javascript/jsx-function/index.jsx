@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 const Greeting = props => (
   <h1 style={Object.assign({}, styles.header, props.style)}>Hello World!</h1>

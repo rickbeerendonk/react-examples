@@ -6,8 +6,6 @@ import React from 'react';
 import Greeting from './Greeting';
 import { StyledGreeting } from './StyledGreeting';
 
-/* eslint react/prop-types:"off" */
-
 export default class Main extends React.Component {
   render() {
     return (

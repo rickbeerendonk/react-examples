@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global React, ReactDOM, PropTypes */
-/* eslint react/prop-types:"off" */
 
 class Three extends React.Component {
   render() {

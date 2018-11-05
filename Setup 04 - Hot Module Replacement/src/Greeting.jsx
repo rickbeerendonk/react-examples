@@ -3,8 +3,6 @@
 
 import React from 'react';
 
-/* eslint react/prop-types:"off" */
-
 const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 
 export default Greeting;

@@ -2,7 +2,6 @@
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
 /* global React, ReactDOM, PropTypes */
-/* eslint react/prop-types:"off" */
 
 class List extends React.Component {
   render() {

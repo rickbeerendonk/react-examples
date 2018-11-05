@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 const Three = props => <h1 style={{ color: props.color }}>Three</h1>;
 

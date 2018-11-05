@@ -2,7 +2,6 @@
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 const Post = ({ title }) => <li>{title}</li>;
 

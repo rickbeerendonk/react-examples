@@ -2,7 +2,6 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields

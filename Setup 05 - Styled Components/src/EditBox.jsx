@@ -5,8 +5,6 @@ import React from 'react';
 
 import { StyledInput } from './styled';
 
-/* eslint react/prop-types:"off" */
-
 const EditBox = ({ onChange, name }) => (
   <StyledInput onChange={e => onChange(e.target.value)} value={name} />
 );

@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global HTMLtoJSX, React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 function jsxTransform(source) {
   const converter = new HTMLtoJSX({

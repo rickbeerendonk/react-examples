@@ -2,7 +2,6 @@
 /*! Copyright © 2014 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 function Greeting(props) {
   return <h1>Hello {props.name}!</h1>;

@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global Babel, React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 function jsxTransform(source) {
   return Babel.transform(source, { presets: ['react'] }).code;

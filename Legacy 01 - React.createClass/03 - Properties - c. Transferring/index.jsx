@@ -2,7 +2,6 @@
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
 /* global createReactClass, React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 var ImportantAnchor = createReactClass({
   render: function() {

@@ -2,7 +2,6 @@
 /*! Copyright © 2014 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 const EditBox = ({ onChange, value }) =>
   React.createElement('input', {

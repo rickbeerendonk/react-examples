@@ -2,7 +2,6 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* eslint no-console:"off" */
-/* eslint react/prop-types:"off" */
 
 import React from 'react';
 

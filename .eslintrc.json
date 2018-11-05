@@ -17,6 +17,7 @@
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react/no-did-mount-set-state": 2,
+    "react/prop-types": 0,
     "no-debugger": 1,
     "semi": [2, "always"]
   },

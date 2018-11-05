@@ -2,7 +2,6 @@
 /*! Copyright © 2015 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 function Greeting(props) {
   return React.createElement('h1', null, 'Hello ', props.name, '!');

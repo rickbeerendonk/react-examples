@@ -1,8 +1,6 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* eslint react/prop-types:"off" */
-
 import React from 'react';
 
 // SystemJS limitation (we should be able to do this directly in import)

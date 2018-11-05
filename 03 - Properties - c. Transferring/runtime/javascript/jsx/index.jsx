@@ -2,7 +2,6 @@
 /*! Copyright © 2015 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 function ImportantAnchor({ children, ...otherProps }) {
   return <a {...otherProps}>!!! {children} !!!</a>;

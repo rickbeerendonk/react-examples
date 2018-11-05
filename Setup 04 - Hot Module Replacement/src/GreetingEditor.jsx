@@ -7,7 +7,6 @@ import { hot } from 'react-hot-loader';
 import EditBox from './EditBox';
 import Greeting from './Greeting';
 
-/* eslint react/prop-types:"off" */
 /* global module */
 
 class GreetingEditor extends React.Component {

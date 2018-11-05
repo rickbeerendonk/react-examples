@@ -2,7 +2,6 @@
 /*! Copyright © 2015 Rick Beerendonk   !*/
 
 /* global createReactClass, React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 var Greeting = createReactClass({
   render: function() {

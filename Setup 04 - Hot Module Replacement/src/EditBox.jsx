@@ -3,8 +3,6 @@
 
 import React from 'react';
 
-/* eslint react/prop-types:"off" */
-
 const EditBox = ({ onChange, name }) => (
   <input onChange={e => onChange(e.target.value)} value={name} />
 );

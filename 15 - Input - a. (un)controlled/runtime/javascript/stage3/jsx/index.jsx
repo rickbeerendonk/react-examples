@@ -2,7 +2,6 @@
 /*! Copyright © 2016 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 class HelloMessage extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields

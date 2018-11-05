@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 const Greeting = ({ style }) => (
   // See: https://github.com/tc39/proposal-object-rest-spread

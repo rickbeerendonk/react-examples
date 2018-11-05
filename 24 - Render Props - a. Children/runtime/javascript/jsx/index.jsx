@@ -2,7 +2,6 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 /* global React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 // Component with render prop
 class MouseOver extends React.Component {

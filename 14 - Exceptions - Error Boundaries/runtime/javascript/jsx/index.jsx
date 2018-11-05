@@ -3,7 +3,6 @@
 
 /* global React, ReactDOM */
 /* eslint no-console:"off" */
-/* eslint react/prop-types:"off" */
 
 class GreetingEditor extends React.Component {
   constructor(props) {

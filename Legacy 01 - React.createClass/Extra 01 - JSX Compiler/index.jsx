@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
 /* global Babel, createReactClass, React, ReactDOM */
-/* eslint react/prop-types:"off" */
 
 var JsxCompiler = createReactClass({
   jsx:

@@ -5,8 +5,6 @@ import React from 'react';
 
 import { StyledButton } from './styled';
 
-/* eslint react/prop-types:"off" */
-
 class App extends React.Component {
   render() {
     return (
