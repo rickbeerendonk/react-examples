@@ -1,4 +1,3 @@
+It doesn't work with released version.
 
-It doesn't work.
-
-Alternative (no strict-mode): Build React with "export const warnAboutLegacyContextAPI = true;" in ReactFeatureFlags.js
+Alternative: Build (latest) React with "export const warnAboutLegacyContextAPI = true;" in ReactFeatureFlags.js
