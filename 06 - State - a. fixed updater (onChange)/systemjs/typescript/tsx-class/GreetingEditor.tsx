@@ -11,14 +11,19 @@ export default class GreetingEditor extends React.Component<
   unknown,
   IGreetingEditorState
 > {
-  state = { name: 'World' };
-  onChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+  constructor(props: unknown) {
+    super(props);
+    this.state = { name: 'World' };
+
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(e: React.SyntheticEvent<HTMLInputElement>) {
     this.setState({ name: e.currentTarget.value });
-  };
+  }
   render() {
     return (
       <React.Fragment>
-        <input onChange={this.onChange} value={this.state.name} />
+        <input autoFocus onChange={this.onChange} value={this.state.name} />
         <h1>Hello {this.state.name}!</h1>
       </React.Fragment>
     );

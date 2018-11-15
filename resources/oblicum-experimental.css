@@ -1,0 +1,29 @@
+/*! Copyright © 2018 Rick Beerendonk !*/
+
+body > :first-child::after {
+  content: "Experimental";
+  font-family: Comfortaa;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: block;
+  position: fixed;
+
+  color: white;
+  background-color: red;
+  border-color: red;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 2rem;
+
+  padding-left: .7rem;
+  padding-right: 1rem;
+
+  bottom: 0;
+  left: 0;
+  margin: 4rem 1rem;
+  height: 2rem;
+  width: calc(100% - 4rem);
+
+  opacity: 0.7;
+  z-index: 99;
+}

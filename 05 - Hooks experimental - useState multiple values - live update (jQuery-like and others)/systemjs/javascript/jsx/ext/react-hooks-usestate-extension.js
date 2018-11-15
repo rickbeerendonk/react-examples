@@ -5,20 +5,20 @@ import React from 'react';
 
 function create$tate(val) {
   const [value, setValue] = React.useState(val);
-  let liveValue = value;
+  const liveValue = React.useRef(value);
 
   function setLiveValue(newValue) {
     if (typeof newValue === 'function') {
-      liveValue = newValue(liveValue);
+      liveValue.current = newValue(liveValue.current);
     } else {
-      liveValue = newValue;
+      liveValue.current = newValue;
     }
     setValue(newValue);
   }
 
   let result = function(newValue) {
     if (newValue === undefined) {
-      return liveValue;
+      return liveValue.current;
     } else {
       setLiveValue(newValue);
     }
@@ -32,7 +32,7 @@ function create$tate(val) {
   result.setValue = setLiveValue;
 
   result[Symbol.iterator] = function*() {
-    yield liveValue;
+    yield liveValue.current;
     yield setLiveValue;
   };
 
@@ -40,11 +40,7 @@ function create$tate(val) {
 }
 
 export function use$tate(...val) {
-  if (!val) {
-    return null;
-  }
-
-  if (val.length === 1) {
+  if (val.length < 2) {
     return create$tate(val[0]);
   }
 
@@ -52,5 +48,6 @@ export function use$tate(...val) {
 }
 
 export default {
-  use$tate
+  use$tate,
+  useState: use$tate
 };

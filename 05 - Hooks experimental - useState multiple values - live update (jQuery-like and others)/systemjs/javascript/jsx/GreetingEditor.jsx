@@ -29,10 +29,10 @@ function GreetingEditor() {
   // Multiple jQuery like getters and setters (function overloading)
   // Get: jq()
   // Set: jq(...)
-  const [first, second, third] = use$tate(true, 2, 'three');
+  const [first, second, third, fourth] = use$tate(undefined, true, 2, 'three');
 
   // Value can also be a function, just to test it still works
-  const [fourth, fifth, sixth] = use$tate(() => false, () => 5, () => 'six');
+  const [fifth, sixth, seventh] = use$tate(() => false, () => 5, () => 'six');
 
   // Live updates
   // Get current value: live()
@@ -61,11 +61,19 @@ function GreetingEditor() {
       {` => ${first()}`}
       <br />
 
-      <input onChange={e => second(e.target.value)} value={second()} />
+      <input
+        type="checkbox"
+        onChange={e => second(e.target.checked)}
+        checked={second()}
+      />
       {` => ${second()}`}
       <br />
 
-      <input onChange={e => third(e.target.value)} value={third()} />
+      <input
+        type="number"
+        onChange={e => third(e.target.value)}
+        value={third()}
+      />
       {` => ${third()}`}
       <br />
 
@@ -73,22 +81,31 @@ function GreetingEditor() {
       {` => ${fourth()}`}
       <br />
 
-      <input onChange={e => fifth(e.target.value)} value={fifth()} />
+      <input
+        type="checkbox"
+        onChange={e => fifth(e.target.checked)}
+        checked={fifth()}
+      />
       {` => ${fifth()}`}
       <br />
 
-      <input onChange={e => sixth(e.target.value)} value={sixth()} />
+      <input
+        type="number"
+        onChange={e => sixth(e.target.value)}
+        value={sixth()}
+      />
       {` => ${sixth()}`}
+      <br />
+
+      <input onChange={e => seventh(e.target.value)} value={seventh()} />
+      {` => ${seventh()}`}
       <br />
 
       {/* live(Number(e.target.value) + live()) */}
       {/* instead of */}
       {/* live(x => Number(e.target.value) + x) */}
 
-      <input
-        onChange={e => live(Number(e.target.value) + live())}
-        value={live()}
-      />
+      <input onChange={e => live(Number(e.target.value) + live())} value={0} />
       {` => ${live()}`}
       <br />
     </React.Fragment>

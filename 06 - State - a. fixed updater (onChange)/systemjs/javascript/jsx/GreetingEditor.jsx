@@ -3,22 +3,19 @@
 
 import React from 'react';
 
-export default class GreetingEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'World' };
+function GreetingEditor() {
+  const [name, setName] = React.useState('World');
 
-    this.onChange = this.onChange.bind(this);
+  function handleChange(e) {
+    setName(e.target.value);
   }
-  onChange(e) {
-    this.setState({ name: e.target.value });
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <input onChange={this.onChange} value={this.state.name} />
-        <h1>Hello {this.state.name}!</h1>
-      </React.Fragment>
-    );
-  }
+
+  return (
+    <React.Fragment>
+      <input autoFocus onChange={handleChange} value={name} />
+      <h1>Hello {name}!</h1>
+    </React.Fragment>
+  );
 }
+
+export default GreetingEditor;

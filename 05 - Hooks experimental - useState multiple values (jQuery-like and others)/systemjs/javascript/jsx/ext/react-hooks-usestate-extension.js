@@ -29,11 +29,7 @@ function create$tate(val) {
 }
 
 export function use$tate(...val) {
-  if (!val) {
-    return null;
-  }
-
-  if (val.length === 1) {
+  if (val.length < 2) {
     return create$tate(val);
   }
 
@@ -41,5 +37,6 @@ export function use$tate(...val) {
 }
 
 export default {
-  use$tate
+  use$tate,
+  useState: use$tate
 };
