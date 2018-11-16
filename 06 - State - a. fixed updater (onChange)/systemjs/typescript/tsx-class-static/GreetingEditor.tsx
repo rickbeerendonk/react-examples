@@ -7,10 +7,7 @@ interface IGreetingEditorState {
   name: string;
 }
 
-export default class GreetingEditor extends React.Component<
-  unknown,
-  IGreetingEditorState
-> {
+class GreetingEditor extends React.Component<unknown, IGreetingEditorState> {
   state = { name: 'World' };
   onChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     this.setState({ name: e.currentTarget.value });
@@ -24,3 +21,5 @@ export default class GreetingEditor extends React.Component<
     );
   }
 }
+
+export default GreetingEditor;

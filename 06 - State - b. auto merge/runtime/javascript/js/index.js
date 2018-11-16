@@ -3,29 +3,25 @@
 
 /* global React, ReactDOM */
 
-class GreetingEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: 'World', other: 'More state' };
+function GreetingEditor() {
+  const [name, setName] = React.useState('World');
+  const [other /*, setOther */] = React.useState('More state');
 
-    // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+  function handleChange(e) {
+    setName(e.target.value);
   }
-  onChange(e) {
-    this.setState({ name: e.target.value });
-  }
-  render() {
-    return React.createElement(
-      React.Fragment,
-      null,
-      React.createElement('input', {
-        onChange: this.onChange,
-        value: this.state.name
-      }),
-      React.createElement('h1', null, 'Hello ', this.state.name, '!'),
-      React.createElement('h2', null, this.state.other)
-    );
-  }
+
+  return React.createElement(
+    React.Fragment,
+    null,
+    React.createElement('input', {
+      autoFocus: true,
+      onChange: handleChange,
+      value: name
+    }),
+    React.createElement('h1', null, 'Hello ', name, '!'),
+    React.createElement('h2', null, other)
+  );
 }
 
 ReactDOM.render(

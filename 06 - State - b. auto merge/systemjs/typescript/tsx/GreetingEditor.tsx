@@ -3,31 +3,28 @@
 
 import React from 'react';
 
-interface IGreetingEditorState {
-  name: string;
-  other: string;
+function GreetingEditor(): JSX.Element {
+  const [name, setName]: [
+    string,
+    React.Dispatch<React.SetStateAction<string>>
+  ] = React.useState('World');
+
+  const [other, setOther]: [
+    string,
+    React.Dispatch<React.SetStateAction<string>>
+  ] = React.useState('More state');
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setName(e.target.value);
+  }
+
+  return (
+    <React.Fragment>
+      <input autoFocus onChange={handleChange} value={name} />
+      <h1>Hello {name}!</h1>
+      <h2>{other}</h2>
+    </React.Fragment>
+  );
 }
 
-export default class GreetingEditor extends React.Component<
-  unknown,
-  IGreetingEditorState
-> {
-  constructor(props: unknown) {
-    super(props);
-    this.state = { name: 'World', other: 'More state' };
-
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(e: React.SyntheticEvent<HTMLInputElement>) {
-    this.setState({ name: e.currentTarget.value });
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <input onChange={this.onChange} value={this.state.name} />
-        <h1>Hello {this.state.name}!</h1>
-        <h2>{this.state.other}</h2>
-      </React.Fragment>
-    );
-  }
-}
+export default GreetingEditor;
