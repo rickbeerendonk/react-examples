@@ -30,7 +30,7 @@ function create$tate(val) {
 
 export function use$tate(...val) {
   if (val.length < 2) {
-    return create$tate(val);
+    return create$tate(val[0]);
   }
 
   return val.map(v => create$tate(v));
