@@ -3,23 +3,17 @@
 
 /* global React, ReactDOM */
 
-class Greeting extends React.Component {
-  render() {
-    return React.createElement('i', null, 'Hello ', this.props.name, '!');
-  }
-}
+const Greeting = props =>
+  React.createElement('i', null, 'Hello ', props.name, '!');
 
-class List extends React.Component {
-  render() {
-    return React.createElement(
-      'ul',
-      null,
-      React.Children.map(this.props.children, function(child, i) {
-        return React.createElement('li', { key: i }, child);
-      })
-    );
-  }
-}
+const List = props =>
+  React.createElement(
+    'ul',
+    null,
+    React.Children.map(props.children, function(child, i) {
+      return React.createElement('li', { key: i }, child);
+    })
+  );
 
 ReactDOM.render(
   React.createElement(

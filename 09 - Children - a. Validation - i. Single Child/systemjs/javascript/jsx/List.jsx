@@ -4,17 +4,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default class List extends React.Component {
-  render() {
-    return (
-      <ul>
-        {React.Children.map(this.props.children, (child, i) => (
-          <li key={i}>{child}</li>
-        ))}
-      </ul>
-    );
-  }
-}
+const List = props => (
+  <ul>
+    {React.Children.map(props.children, (child, i) => (
+      <li key={i}>{child}</li>
+    ))}
+  </ul>
+);
 List.propTypes = {
   children: PropTypes.element.isRequired
 };
+
+export default List;

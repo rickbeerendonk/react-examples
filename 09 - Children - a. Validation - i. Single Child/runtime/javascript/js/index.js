@@ -3,17 +3,14 @@
 
 /* global React, ReactDOM, PropTypes */
 
-class List extends React.Component {
-  render() {
-    return React.createElement(
-      'ul',
-      null,
-      React.Children.map(this.props.children, function(child, i) {
-        return React.createElement('li', { key: i }, child);
-      })
-    );
-  }
-}
+const List = props =>
+  React.createElement(
+    'ul',
+    null,
+    React.Children.map(props.children, function(child, i) {
+      return React.createElement('li', { key: i }, child);
+    })
+  );
 List.propTypes = {
   children: PropTypes.element.isRequired
 };

@@ -3,12 +3,10 @@
 
 import React from 'react';
 
-export default class Greeting extends React.Component {
-  render() {
-    return (
-      <i>
-        {this.props.greeting} {this.props.name}
-      </i>
-    );
-  }
-}
+const Greeting = props => (
+  <i>
+    {props.greeting} {props.name}
+  </i>
+);
+
+export default Greeting;

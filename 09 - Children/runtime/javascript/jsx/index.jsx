@@ -3,23 +3,15 @@
 
 /* global React, ReactDOM */
 
-class Greeting extends React.Component {
-  render() {
-    return <i>Hello {this.props.name}</i>;
-  }
-}
+const Greeting = props => <i>Hello {props.name}</i>;
 
-class List extends React.Component {
-  render() {
-    return (
-      <ul>
-        {React.Children.map(this.props.children, (child, i) => (
-          <li key={i}>{child}</li>
-        ))}
-      </ul>
-    );
-  }
-}
+const List = props => (
+  <ul>
+    {React.Children.map(props.children, (child, i) => (
+      <li key={i}>{child}</li>
+    ))}
+  </ul>
+);
 
 ReactDOM.render(
   <List>
