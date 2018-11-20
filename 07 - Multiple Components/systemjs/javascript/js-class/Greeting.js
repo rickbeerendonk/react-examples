@@ -3,7 +3,8 @@
 
 import React from 'react';
 
-const Greeting = ({ name }) =>
-  React.createElement('h1', null, 'Hello ', name, '!');
+function Greeting({ name }) {
+  return React.createElement('h1', null, 'Hello ', name, '!');
+}
 
 export default Greeting;

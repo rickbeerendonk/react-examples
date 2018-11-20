@@ -3,11 +3,15 @@
 
 /* global React, ReactDOM */
 
-const EditBox = ({ onChange, value }) => (
-  <input onChange={e => onChange(e.target.value)} value={value} />
-);
+function EditBox({ onChange, value }) {
+  return (
+    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
+  );
+}
 
-const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
+function Greeting({ name }) {
+  return <h1>Hello {name}!</h1>;
+}
 
 class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields

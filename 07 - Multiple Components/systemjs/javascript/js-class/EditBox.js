@@ -3,10 +3,12 @@
 
 import React from 'react';
 
-const EditBox = ({ onChange, value }) =>
-  React.createElement('input', {
+function EditBox({ onChange, value }) {
+  return React.createElement('input', {
+    autoFocus: true,
     onChange: e => onChange(e.target.value),
     value: value
   });
+}
 
 export default EditBox;

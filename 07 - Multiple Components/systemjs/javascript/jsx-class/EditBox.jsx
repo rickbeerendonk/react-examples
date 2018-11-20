@@ -5,9 +5,11 @@ import React from 'react';
 
 /* Inline function */
 
-const EditBox = ({ onChange, value }) => (
-  <input onChange={e => onChange(e.target.value)} value={value} />
-);
+function EditBox({ onChange, value }) {
+  return (
+    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
+  );
+}
 
 /* method */
 
