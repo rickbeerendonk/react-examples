@@ -9,9 +9,9 @@ export default class ClickMe extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     // Updates are batched for performance reasons.
     // Therefore this won't work:
     this.setState({ count: this.state.count + 0.4 });
@@ -19,7 +19,7 @@ export default class ClickMe extends React.Component {
   }
   render() {
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         {`This link has been clicked ${this.state.count} times`}
       </a>
     );

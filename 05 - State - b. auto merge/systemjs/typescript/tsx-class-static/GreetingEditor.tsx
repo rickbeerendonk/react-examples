@@ -13,13 +13,13 @@ export default class GreetingEditor extends React.Component<
   IGreetingEditorState
 > {
   state: IGreetingEditorState = { name: 'World', other: 'More state' };
-  onChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+  handleChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     this.setState({ name: e.currentTarget.value });
   };
   render() {
     return (
       <React.Fragment>
-        <input onChange={this.onChange} value={this.state.name} />
+        <input autoFocus onChange={this.handleChange} value={this.state.name} />
         <h1>Hello {this.state.name}!</h1>
         <h2>{this.state.other}</h2>
       </React.Fragment>

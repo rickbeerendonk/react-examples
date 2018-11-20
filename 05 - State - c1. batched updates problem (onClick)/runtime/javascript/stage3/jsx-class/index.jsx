@@ -7,7 +7,7 @@ class ClickMe extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { count: 0 };
-  onClick = () => {
+  handleClick = () => {
     // Updates are batched for performance reasons.
     // Therefore this won't work:
     this.setState({ count: this.state.count + 0.4 });
@@ -16,7 +16,7 @@ class ClickMe extends React.Component {
 
   render() {
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         {`This link has been clicked ${this.state.count} times`}
       </a>
     );

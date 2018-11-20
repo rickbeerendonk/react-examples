@@ -9,9 +9,9 @@ class ClickMe extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     // Updates are batched for performance reasons.
     // Therefore this should be used:
     this.setState(state => ({ count: state.count + 0.4 }));
@@ -20,7 +20,7 @@ class ClickMe extends React.Component {
   render() {
     return React.createElement(
       'a',
-      { onClick: this.onClick },
+      { onClick: this.handleClick },
       'This link has been clicked ',
       this.state.count,
       ' times'
