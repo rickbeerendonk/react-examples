@@ -28,7 +28,7 @@ export default class ClickMe extends React.Component {
           JSON.stringify(state) +
           ']'
       );
-      return { count: state.count + 0.5 };
+      return { count: state.count + 0.4 };
     });
     this.setState(state => {
       /***/ console.log(
@@ -38,7 +38,7 @@ export default class ClickMe extends React.Component {
           JSON.stringify(state) +
           ']'
       );
-      return { count: state.count + 0.5 };
+      return { count: state.count + 0.6 };
     });
 
     /***/ console.log('onClick() <end>: ' + JSON.stringify(this.state));
