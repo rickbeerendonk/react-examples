@@ -27,8 +27,11 @@ export default class One extends React.Component {
             <Two />
             <button onClick={this.onSwitch}>Switch color</button>
           </ColorContext.Provider>
+
           <Three />
         </ColorContext.Provider>
+
+        <Three />
       </React.Fragment>
     );
   }
