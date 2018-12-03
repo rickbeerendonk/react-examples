@@ -24,13 +24,17 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.jsx?$/,
-        loader: 'eslint-loader',
+        use: 'eslint-loader',
         exclude: /node_modules|packages/
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        use: 'babel-loader',
         exclude: /node_modules|packages/
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },

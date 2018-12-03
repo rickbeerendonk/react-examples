@@ -1,10 +1,12 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2017 Rick Beerendonk   !*/
 
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Greeting extends Component {
-  render() {
-    return <h1>Hello World!</h1>;
-  }
+import './Greeting.css';
+
+function Greeting() {
+  return <h1 className="greeting">Hello World!</h1>;
 }
+
+export default Greeting;

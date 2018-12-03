@@ -5,8 +5,8 @@ import React from 'react';
 
 import { StyledInput } from './styled';
 
-const EditBox = ({ onChange, name }) => (
-  <StyledInput onChange={e => onChange(e.target.value)} value={name} />
-);
+function EditBox({ onChange, name }) {
+  return <StyledInput onChange={e => onChange(e.target.value)} value={name} />;
+}
 
 export default EditBox;

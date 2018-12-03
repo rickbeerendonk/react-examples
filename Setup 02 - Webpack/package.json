@@ -8,8 +8,9 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "scripts": {
-    "build": "webpack -d --progress",
-    "watch": "webpack -d --progress --watch",
+    "build": "npm run clean && webpack -d --progress",
+    "build-watch": "npm run clean && webpack -d --progress --watch",
+    "clean": "rimraf dist",
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
@@ -22,8 +23,11 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.24.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   }

@@ -5,6 +5,8 @@ import React from 'react';
 
 import { StyledH1 } from './styled';
 
-const Greeting = ({ name }) => <StyledH1>Hello {name}!</StyledH1>;
+function Greeting({ name }) {
+  return name ? <StyledH1>Hello {name}!</StyledH1> : null;
+}
 
 export default Greeting;

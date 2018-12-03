@@ -3,6 +3,10 @@
 
 import React from 'react';
 
-const Greeting = ({ name }) => (name ? <h1>Hello {name}!</h1> : null);
+import './Greeting.css';
+
+function Greeting({ name }) {
+  return name ? <h1 className="greeting">Hello {name}!</h1> : null;
+}
 
 export default Greeting;
