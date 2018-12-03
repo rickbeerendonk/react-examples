@@ -29,7 +29,7 @@
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
-    "@types/react": "^16.7.7",
+    "@types/react": "^16.7.12",
     "@types/react-dom": "^16.0.11",
     "@types/systemjs": "^0.20.6",
     "babel-eslint": "^10.0.1",
@@ -41,11 +41,11 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@babel/core": "^7.1.6",
+    "@babel/core": "^7.2.0",
     "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/standalone": "^7.1.0",
+    "@babel/standalone": "^7.2.0",
     "babel-polyfill": "^6.26.0",
     "create-react-class": "15.6.3",
     "htmltojsx": "^0.3.0",
@@ -55,12 +55,12 @@
     "prop-types": "^15.6.2",
     "react": "^0.0.0-ed4c4a51c",
     "react-dom": "^0.0.0-ed4c4a51c",
-    "react-spring": "^6.1.9",
+    "react-spring": "^6.1.10",
     "react-transition-group": "^2.5.0",
     "schedule": "^0.5.0",
-    "styled-components": "^4.1.1",
+    "styled-components": "^4.1.2",
     "systemjs": "0.21.5",
     "systemjs-plugin-babel": "^0.0.25",
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.1"
   }
 }
