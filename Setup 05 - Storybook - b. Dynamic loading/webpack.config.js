@@ -40,7 +40,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup Storybook, Hot Module Replacement, Webpack, ESLint & Babel'
+      title:
+        'Setup Storybook (Dynamic), Hot Module Replacement, Webpack, ESLint & Babel'
     }),
     new webpack.NamedModulesPlugin()
   ],
