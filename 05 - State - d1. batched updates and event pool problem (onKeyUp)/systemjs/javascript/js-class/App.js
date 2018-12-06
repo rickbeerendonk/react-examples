@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { pressed: '' };
 
-    this.onKeyUp = this.onKeyUp.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
-  onKeyUp(e) {
+  handleKeyUp(e) {
     this.setState(state => ({ pressed: state.pressed + e.key }));
   }
   render() {
@@ -18,9 +18,11 @@ export default class App extends React.Component {
       React.Fragment,
       null,
       React.createElement('input', {
-        onKeyUp: this.onKeyUp
+        onKeyUp: this.handleKeyUp
       }),
       React.createElement('div', null, 'Pressed: ', this.state.pressed)
     );
   }
 }
+
+export default App;

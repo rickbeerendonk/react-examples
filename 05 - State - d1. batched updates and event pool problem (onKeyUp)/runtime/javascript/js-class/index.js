@@ -8,9 +8,9 @@ class App extends React.Component {
     super(props);
     this.state = { pressed: '' };
 
-    this.onKeyUp = this.onKeyUp.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
-  onKeyUp(e) {
+  handleKeyUp(e) {
     this.setState(state => ({ pressed: state.pressed + e.key }));
   }
   render() {
@@ -18,7 +18,7 @@ class App extends React.Component {
       React.Fragment,
       null,
       React.createElement('input', {
-        onKeyUp: this.onKeyUp
+        onKeyUp: this.handleKeyUp
       }),
       React.createElement('div', null, 'Pressed: ', this.state.pressed)
     );
