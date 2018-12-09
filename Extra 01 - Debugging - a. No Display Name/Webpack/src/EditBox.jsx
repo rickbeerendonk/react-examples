@@ -5,6 +5,6 @@
 
 import React from 'react';
 
-export default ({ onChange, name }) => (
-  <input onChange={onChange} value={name} />
-);
+export default function({ onChange, name }) {
+  return <input onChange={onChange} value={name} />;
+}

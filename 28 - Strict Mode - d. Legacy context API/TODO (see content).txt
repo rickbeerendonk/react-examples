@@ -1,3 +1,0 @@
-It doesn't work with released version.
-
-Alternative: Build (latest) React with "export const warnAboutLegacyContextAPI = true;" in ReactFeatureFlags.js

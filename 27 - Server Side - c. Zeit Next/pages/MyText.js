@@ -3,6 +3,8 @@
 
 import React from 'react';
 
-const MyText = ({ text }) => <i>{text}</i>;
+function MyText({ text }) {
+  return <i>{text}</i>;
+}
 
 export default MyText;
