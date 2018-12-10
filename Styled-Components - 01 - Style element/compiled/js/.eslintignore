@@ -1,2 +1,2 @@
-# Ignore built files
-/site/lib/**
+**/build/**
+**/node_modules/**

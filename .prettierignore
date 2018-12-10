@@ -3,7 +3,6 @@
 #################
 
 build/
-dist/
 docs/
 future_node_modules/
 lib/

@@ -10,12 +10,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/app.jsx',
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/build'),
     filename: 'bundle.js'
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     port: 9100
   },
   mode: 'development',

@@ -1,17 +1,17 @@
 #Babel CLI
 
-To be able to compile React ES2015 source code with [Babel](http://babeljs.io), a number of steps have to be taken.
+To be able to compile React ES201X source code with [Babel](http://babeljs.io), a number of steps have to be taken.
 
 First we've created a website in the `site` folder. This folder has the following structure:
 ```
 site
 ├─ index.html
-├─ lib
+├─ build
 └─ src
    └─ app.jsx
 ```
 
-After compilation, the `lib` folder will contain:
+After compilation, the `build` folder will contain:
 * `app.js`, which is used by `index.html` to run the website.
 * `app.js.map` if the `--source-maps` option is used during compile.
 
