@@ -9,8 +9,8 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "scripts": {
-    "build": "babel site/src --out-dir site/lib --source-maps",
-    "watch": "babel site/src --out-dir site/lib --watch --source-maps"
+    "build": "babel site/src --out-dir site/build --source-maps",
+    "watch": "babel site/src --out-dir site/build --watch --source-maps"
   },
   "dependencies": {},
   "devDependencies": {

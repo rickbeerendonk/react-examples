@@ -7,7 +7,7 @@
     "noLib": false,
     "noImplicitAny": true,
     "removeComments": true,
-    "outDir": "./site/lib/",
+    "outDir": "./site/build/",
     "sourceMap": true
   },
   "files": ["./site/src/index.tsx"]
