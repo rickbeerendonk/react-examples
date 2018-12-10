@@ -27,8 +27,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <button onClick={this.load}>Load</button>
-        {// This is future functionality (using a special version of React):
-        this.state.isLoading && (
+        {this.state.isLoading && (
           <div>
             <React.Suspense maxDuration={1000} fallback={<Spinner />}>
               <AsyncResult />
