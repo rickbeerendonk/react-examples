@@ -7,7 +7,7 @@ export default class App extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { pressed: '' };
-  onKeyUp = e => {
+  handleKeyUp = e => {
     const key = e.key;
     this.setState(state => ({ pressed: state.pressed + key }));
   };
@@ -15,7 +15,7 @@ export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <input autoFocus onKeyUp={this.onKeyUp} />
+        <input autoFocus onKeyUp={this.handleKeyUp} />
         <div>Pressed: {this.state.pressed}</div>
       </React.Fragment>
     );

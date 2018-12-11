@@ -8,9 +8,9 @@ class App extends React.Component {
     super(props);
     this.state = { pressed: '' };
 
-    this.onKeyUp = this.onKeyUp.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
-  onKeyUp(e) {
+  handleKeyUp(e) {
     const key = e.key;
     this.setState(state => ({ pressed: state.pressed + key }));
   }
@@ -20,7 +20,7 @@ class App extends React.Component {
       null,
       React.createElement('input', {
         autoFocus: true,
-        onKeyUp: this.onKeyUp
+        onKeyUp: this.handleKeyUp
       }),
       React.createElement('div', null, 'Pressed: ', this.state.pressed)
     );
