@@ -8,15 +8,15 @@ export default class App extends React.Component {
     super(props);
     this.state = { pressed: '' };
 
-    this.onKeyUp = this.onKeyUp.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
-  onKeyUp({ key }) {
+  handleKeyUp({ key }) {
     this.setState(state => ({ pressed: state.pressed + key }));
   }
   render() {
     return (
       <React.Fragment>
-        <input autoFocus onKeyUp={this.onKeyUp} />
+        <input autoFocus onKeyUp={this.handleKeyUp} />
         <div>Pressed: {this.state.pressed}</div>
       </React.Fragment>
     );
