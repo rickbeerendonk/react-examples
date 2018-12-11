@@ -3,6 +3,7 @@
 #################
 
 build/
+build-storybook/
 docs/
 future_node_modules/
 lib/

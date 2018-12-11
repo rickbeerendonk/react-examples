@@ -4,6 +4,7 @@
 
 .cache/
 build/
+build-storybook/
 docs/
 Issues/
 
