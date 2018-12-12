@@ -13,7 +13,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <input onKeyUp={handleKeyUp} />
+      <input autoFocus onKeyUp={handleKeyUp} />
       <div>Pressed: {pressed}</div>
     </React.Fragment>
   );

@@ -1,13 +1,14 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+import React from 'react';
 
 function App() {
   const [pressed, setPressed] = React.useState('');
 
   function handleKeyUp(e) {
-    setPressed(pressed => pressed + e.key);
+    const key = e.key;
+    setPressed(pressed => pressed + key);
   }
 
   return (
@@ -18,4 +19,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

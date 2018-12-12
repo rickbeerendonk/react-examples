@@ -7,7 +7,8 @@ function App() {
   const [pressed, setPressed] = React.useState('');
 
   function handleKeyUp(e) {
-    setPressed(pressed => pressed + e.key);
+    const key = e.key;
+    setPressed(pressed => pressed + key);
   }
 
   return (
