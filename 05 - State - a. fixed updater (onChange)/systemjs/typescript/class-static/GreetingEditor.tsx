@@ -3,11 +3,16 @@
 
 import React from 'react';
 
+interface IGreetingEditorProps {}
+
 interface IGreetingEditorState {
   name: string;
 }
 
-class GreetingEditor extends React.Component<unknown, IGreetingEditorState> {
+class GreetingEditor extends React.Component<
+  IGreetingEditorProps,
+  IGreetingEditorState
+> {
   state = { name: 'World' };
   handleChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     this.setState({ name: e.currentTarget.value });

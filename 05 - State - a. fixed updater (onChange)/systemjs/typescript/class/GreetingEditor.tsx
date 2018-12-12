@@ -3,12 +3,17 @@
 
 import React from 'react';
 
+interface IGreetingEditorProps {}
+
 interface IGreetingEditorState {
   name: string;
 }
 
-class GreetingEditor extends React.Component<unknown, IGreetingEditorState> {
-  constructor(props: unknown) {
+class GreetingEditor extends React.Component<
+  IGreetingEditorProps,
+  IGreetingEditorState
+> {
+  constructor(props: IGreetingEditorProps) {
     super(props);
     this.state = { name: 'World' };
 
