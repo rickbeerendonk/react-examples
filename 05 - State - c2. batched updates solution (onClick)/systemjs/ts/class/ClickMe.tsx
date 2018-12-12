@@ -1,10 +1,16 @@
 /*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2016 Rick Beerendonk   !*/
+/*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM */
+import React from 'react';
 
-class ClickMe extends React.Component {
-  constructor(props) {
+interface IClickMeProps {}
+
+interface IClickMeState {
+  count: number;
+}
+
+class ClickMe extends React.Component<IClickMeProps, IClickMeState> {
+  constructor(props: IClickMeProps) {
     super(props);
     this.state = { count: 0 };
 
@@ -26,4 +32,4 @@ class ClickMe extends React.Component {
   }
 }
 
-ReactDOM.render(<ClickMe />, document.getElementById('app'));
+export default ClickMe;

@@ -19,7 +19,7 @@ export default class ClickMe extends React.Component {
     /***/ console.log('onClick() <begin>');
 
     // Updates are batched for performance reasons.
-    // Therefore this should be used:
+    // Therefore a callback should be used:
     this.setState(state => {
       /***/ console.log(
         'onClick() - callback 1 setState: ' +

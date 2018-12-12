@@ -9,7 +9,7 @@ class ClickMe extends React.Component {
   state = { count: 0 };
   handleClick = () => {
     // Updates are batched for performance reasons.
-    // Therefore this should be used:
+    // Therefore a callback should be used:
     this.setState(state => ({ count: state.count + 0.4 }));
     this.setState(state => ({ count: state.count + 0.6 }));
   };
