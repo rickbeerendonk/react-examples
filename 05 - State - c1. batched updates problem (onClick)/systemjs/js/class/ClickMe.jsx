@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class ClickMe extends React.Component {
+class ClickMe extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -25,3 +25,5 @@ export default class ClickMe extends React.Component {
     );
   }
 }
+
+export default ClickMe;

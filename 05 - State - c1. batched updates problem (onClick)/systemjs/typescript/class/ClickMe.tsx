@@ -3,8 +3,14 @@
 
 import React from 'react';
 
-class ClickMe extends React.Component {
-  constructor(props) {
+interface IClickMeProps {}
+
+interface IClickMeState {
+  count: number;
+}
+
+class ClickMe extends React.Component<IClickMeProps, IClickMeState> {
+  constructor(props: IClickMeProps) {
     super(props);
     this.state = { count: 0 };
 
@@ -13,9 +19,9 @@ class ClickMe extends React.Component {
   }
   handleClick() {
     // Updates are batched for performance reasons.
-    // Therefore this should be used:
-    this.setState(state => ({ count: state.count + 0.4 }));
-    this.setState(state => ({ count: state.count + 0.6 }));
+    // Therefore this won't work:
+    this.setState({ count: this.state.count + 0.4 });
+    this.setState({ count: this.state.count + 0.6 });
   }
   render() {
     return (
