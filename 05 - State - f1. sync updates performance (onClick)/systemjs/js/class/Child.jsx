@@ -10,9 +10,9 @@ export default class Child extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     // Force sync:
     ReactDOM.flushSync(() => {
       this.setState({ count: this.state.count + 1 });
@@ -28,7 +28,7 @@ export default class Child extends React.Component {
     console.log('Child rendered: ' + Date());
 
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         <div>{`Parent count: ${this.props.count}`}</div>
         <div>{`Child count: ${this.state.count}`}</div>
       </a>

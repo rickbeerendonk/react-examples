@@ -13,9 +13,9 @@ export default class Parent extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     // Batched:
     this.setState(
       state => ({ count: state.count + 1 }),
@@ -23,6 +23,6 @@ export default class Parent extends React.Component {
     );
   }
   render() {
-    return <Child count={this.state.count} onClick={this.onClick} />;
+    return <Child count={this.state.count} onClick={this.handleClick} />;
   }
 }

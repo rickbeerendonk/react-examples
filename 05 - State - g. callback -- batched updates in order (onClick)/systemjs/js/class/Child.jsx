@@ -11,12 +11,12 @@ export default class Child extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     // Batched:
     this.setState(
-      state => ({ count: state.count + 0.5 }),
+      state => ({ count: state.count + 0.6 }),
       () => console.log('child - first')
     );
 
@@ -25,7 +25,7 @@ export default class Child extends React.Component {
     }
 
     this.setState(
-      state => ({ count: state.count + 0.5 }),
+      state => ({ count: state.count + 0.4 }),
       () => console.log('child - second')
     );
   }
@@ -35,7 +35,7 @@ export default class Child extends React.Component {
     console.log('Child rendered: ' + Date());
 
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         <div>{`Parent count: ${this.props.count}`}</div>
         <div>{`Child count: ${this.state.count}`}</div>
       </a>
