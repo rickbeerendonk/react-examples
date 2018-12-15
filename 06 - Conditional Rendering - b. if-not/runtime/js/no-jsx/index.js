@@ -9,9 +9,9 @@ class GreetingEditor extends React.Component {
     this.state = { name: 'World' };
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -20,7 +20,7 @@ class GreetingEditor extends React.Component {
       null,
       React.createElement('input', {
         autoFocus: true,
-        onChange: this.onChange,
+        onChange: this.handleChange,
         value: this.state.name
       }),
       // Only render when a not-name is falsy:
