@@ -22,7 +22,7 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-spring': 'npm:react-spring/dist/web.umd.js'
+    'react-spring': 'npm:react-spring/web.umd.js'
   },
   packages: {
     '.': {
