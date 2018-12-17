@@ -7,7 +7,7 @@ class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
-  onChange = e => {
+  handleChange = e => {
     const value = e.target.value;
     this.setState(() => ({ name: value }));
   };
@@ -28,7 +28,12 @@ class GreetingEditor extends React.Component {
 
     return (
       <React.Fragment>
-        <input autoFocus key="input" onChange={this.onChange} value={name} />
+        <input
+          autoFocus
+          key="input"
+          onChange={this.handleChange}
+          value={name}
+        />
         {name && <h1 key="output">Hello {name}!</h1>}
       </React.Fragment>
     );
