@@ -9,9 +9,9 @@ class HelloMessage extends React.Component {
     this.state = { name: 'World' };
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -24,7 +24,8 @@ class HelloMessage extends React.Component {
         /* Not controlled by React */
         React.createElement('span', null, 'Not controlled by React:'),
         React.createElement('input', {
-          onChange: this.onChange,
+          autoFocus: true,
+          onChange: this.handleChange,
           defaultValue: this.state.name
         })
       ),
@@ -35,7 +36,7 @@ class HelloMessage extends React.Component {
         /* Controlled by React */
         React.createElement('span', null, 'Controlled by React:'),
         React.createElement('input', {
-          onChange: this.onChange,
+          onChange: this.handleChange,
           value: this.state.name
         })
       )

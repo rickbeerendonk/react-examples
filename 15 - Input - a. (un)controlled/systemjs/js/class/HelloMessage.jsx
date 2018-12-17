@@ -9,9 +9,9 @@ class HelloMessage extends React.Component {
     this.state = { name: 'World' };
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -19,12 +19,16 @@ class HelloMessage extends React.Component {
       <div>
         <div>
           Not controlled by React:
-          <input onChange={this.onChange} defaultValue={this.state.name} />
+          <input
+            autoFocus
+            onChange={this.handleChange}
+            defaultValue={this.state.name}
+          />
         </div>
 
         <div>
           Controlled by React:
-          <input onChange={this.onChange} value={this.state.name} />
+          <input onChange={this.handleChange} value={this.state.name} />
         </div>
       </div>
     );

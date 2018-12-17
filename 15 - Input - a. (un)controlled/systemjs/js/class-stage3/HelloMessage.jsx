@@ -7,7 +7,7 @@ class HelloMessage extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
-  onChange = e => {
+  handleChange = e => {
     this.setState({ name: e.target.value });
   };
 
@@ -16,12 +16,16 @@ class HelloMessage extends React.Component {
       <div>
         <div>
           Not controlled by React:
-          <input onChange={this.onChange} defaultValue={this.state.name} />
+          <input
+            autoFocus
+            onChange={this.handleChange}
+            defaultValue={this.state.name}
+          />
         </div>
 
         <div>
           Controlled by React:
-          <input onChange={this.onChange} value={this.state.name} />
+          <input onChange={this.handleChange} value={this.state.name} />
         </div>
       </div>
     );

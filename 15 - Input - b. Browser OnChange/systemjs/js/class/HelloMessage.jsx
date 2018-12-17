@@ -11,13 +11,13 @@ class HelloMessage extends React.Component {
     this.state = { name: 'World' };
 
     // Bind all non-react methods to this.
-    this.onBrowserChanged = this.onBrowserChanged.bind(this);
-    this.onChange = this.onChange.bind(this);
+    this.handleBrowserChanged = this.handleBrowserChanged.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onBrowserChanged(e) {
+  handleBrowserChanged(e) {
     alert(e.target.value);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -27,8 +27,8 @@ class HelloMessage extends React.Component {
           Not controlled by React:
           <MyInput
             autoFocus
-            onChange={this.onChange}
-            onBrowserChanged={this.onBrowserChanged}
+            onChange={this.handleChange}
+            onBrowserChanged={this.handleBrowserChanged}
             defaultValue={this.state.name}
           />
         </div>
@@ -36,8 +36,8 @@ class HelloMessage extends React.Component {
         <div>
           Controlled by React:
           <MyInput
-            onChange={this.onChange}
-            onBrowserChanged={this.onBrowserChanged}
+            onChange={this.handleChange}
+            onBrowserChanged={this.handleBrowserChanged}
             value={this.state.name}
           />
         </div>
