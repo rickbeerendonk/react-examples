@@ -7,13 +7,13 @@ var Greeting = createReactClass({
   getInitialState: function() {
     return { name: 'World' };
   },
-  onChange: function(e) {
+  handleChange: function(e) {
     this.setState({ name: e.target.value });
   },
   render: function() {
     return (
       <div>
-        <input onChange={this.onChange} value={this.state.name} />
+        <input onChange={this.handleChange} value={this.state.name} />
         <h1>
           Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!
         </h1>

@@ -7,7 +7,7 @@ var HelloMessage = createReactClass({
   getInitialState: function() {
     return { name: 'World' };
   },
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   },
   render() {
@@ -15,12 +15,12 @@ var HelloMessage = createReactClass({
       <div>
         <div>
           Not controlled by React:
-          <input onChange={this.onChange} defaultValue={this.state.name} />
+          <input onChange={this.handleChange} defaultValue={this.state.name} />
         </div>
 
         <div>
           Controlled by React:
-          <input onChange={this.onChange} value={this.state.name} />
+          <input onChange={this.handleChange} value={this.state.name} />
         </div>
       </div>
     );

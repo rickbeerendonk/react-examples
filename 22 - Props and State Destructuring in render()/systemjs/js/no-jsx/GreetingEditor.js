@@ -9,9 +9,9 @@ class GreetingEditor extends React.Component {
     this.state = { name: 'World' };
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -23,7 +23,8 @@ class GreetingEditor extends React.Component {
       React.Fragment,
       null,
       React.createElement('input', {
-        onChange: this.onChange,
+        autoFocus: true,
+        onChange: this.handleChange,
         value: name
       }),
       React.createElement('h1', null, greeting, ' ', name, '!')

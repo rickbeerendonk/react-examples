@@ -33,9 +33,9 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
     this.state = jsxTransformSafe(this.jsx);
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState(jsxTransformSafe(e.target.value));
   }
   render() {
@@ -43,7 +43,7 @@ React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
       <div style={styles.div}>
         <textarea
           className="code"
-          onChange={this.onChange}
+          onChange={this.handleChange}
           defaultValue={this.jsx}
         />
         {this.state.error ? (

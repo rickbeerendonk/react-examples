@@ -6,20 +6,20 @@ import React from 'react';
 import Child from './Child';
 
 class Parent extends React.Component {
-  onRerenderClick = () => {
+  handleRerenderClick = () => {
     // Force rerender
     this.forceUpdate();
   };
-  onChildClick = () => {
+  handleChildClick = () => {
     alert('Method handler');
   };
   render() {
     return (
       <React.Fragment>
         <div>
-          <button onClick={this.onRerenderClick}>Rerender</button>
+          <button onClick={this.handleRerenderClick}>Rerender</button>
         </div>
-        <Child onClick={this.onChildClick} />
+        <Child onClick={this.handleChildClick} />
       </React.Fragment>
     );
   }

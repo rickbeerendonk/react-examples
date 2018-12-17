@@ -18,14 +18,14 @@ class EditBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.props.onChange(e.target.value);
   }
   render() {
     return (
-      <input autoFocus onChange={this.onChange} value={this.props.value} />
+      <input autoFocus onChange={this.handleChange} value={this.props.value} />
     );
   }
 }

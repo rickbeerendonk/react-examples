@@ -14,15 +14,15 @@ class GreetingEditor extends React.Component {
     super(props);
     this.state = { name: 'World' };
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(newName) {
+  handleChange(newName) {
     this.setState(() => ({ name: newName }));
   }
   render() {
     return (
       <React.Fragment>
-        <EditBox onChange={this.onChange} value={this.state.name} />
+        <EditBox onChange={this.handleChange} value={this.state.name} />
         <Greeting name={this.state.name} />
       </React.Fragment>
     );

@@ -16,7 +16,7 @@ class GreetingEditor extends React.Component<
   IGreetingEditorState
 > {
   state = { name: 'World' };
-  onChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+  handleChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     this.setState({ name: e.currentTarget.value });
   };
   render() {
@@ -26,7 +26,7 @@ class GreetingEditor extends React.Component<
 
     return (
       <React.Fragment>
-        <input onChange={this.onChange} value={name} />
+        <input autoFocus onChange={this.handleChange} value={name} />
         <h1>
           {greeting} {name}!
         </h1>

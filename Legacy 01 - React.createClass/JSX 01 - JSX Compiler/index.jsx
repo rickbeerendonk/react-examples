@@ -15,7 +15,7 @@ React.renderComponent(<HelloMessage name="John" />, mountNode);',
   getInitialState: function() {
     return { code: '' };
   },
-  onChange: function(e) {
+  handleChange: function(e) {
     this.setState({
       code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] })
         .code
@@ -26,7 +26,7 @@ React.renderComponent(<HelloMessage name="John" />, mountNode);',
       <div>
         <textarea
           style={styles.textarea}
-          onChange={this.onChange}
+          onChange={this.handleChange}
           defaultValue={this.jsx}
         />
         <textarea

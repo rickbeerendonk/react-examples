@@ -4,11 +4,11 @@
 /* global createReactClass, React, ReactDOM */
 
 var EditBox = createReactClass({
-  onChange(e) {
+  handleChange(e) {
     this.props.onChange(e.target.value);
   },
   render: function() {
-    return <input onChange={this.onChange} value={this.props.name} />;
+    return <input onChange={this.handleChange} value={this.props.name} />;
   }
 });
 
@@ -22,13 +22,13 @@ var GreetingEditor = createReactClass({
   getInitialState: function() {
     return { name: 'World' };
   },
-  onChange: function(newName) {
+  handleChange: function(newName) {
     this.setState({ name: newName });
   },
   render: function() {
     return (
       <div>
-        <EditBox onChange={this.onChange} name={this.state.name} />
+        <EditBox onChange={this.handleChange} name={this.state.name} />
         <Greeting name={this.state.name} />
       </div>
     );

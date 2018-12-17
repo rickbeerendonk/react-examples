@@ -11,15 +11,15 @@ export default class GreetingEditor extends React.Component {
     this.state = { name: props.name };
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
     return (
       <React.Fragment>
-        <EditBox onChange={this.onChange} name={this.state.name} />
+        <EditBox onChange={this.handleChange} name={this.state.name} />
         <Greeting name={this.state.name} />
       </React.Fragment>
     );

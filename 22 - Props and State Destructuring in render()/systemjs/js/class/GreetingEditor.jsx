@@ -8,9 +8,9 @@ class GreetingEditor extends React.Component {
     super(props);
     this.state = { name: 'World' };
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
   render() {
@@ -20,7 +20,7 @@ class GreetingEditor extends React.Component {
 
     return (
       <React.Fragment>
-        <input onChange={this.onChange} value={name} />
+        <input autoFocus onChange={this.handleChange} value={name} />
         <h1>
           {greeting} {name}!
         </h1>

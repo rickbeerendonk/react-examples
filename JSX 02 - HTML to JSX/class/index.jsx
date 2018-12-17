@@ -33,9 +33,9 @@ class JsxCompiler extends React.Component {
     this.state = jsxTransformSafe(this.html);
 
     // Bind all non-react methods to this.
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
+  handleChange(e) {
     this.setState(jsxTransformSafe(e.target.value));
   }
   render() {
@@ -43,7 +43,7 @@ class JsxCompiler extends React.Component {
       <div style={styles.div}>
         <textarea
           className="code"
-          onChange={this.onChange}
+          onChange={this.handleChange}
           defaultValue={this.html}
         />
         {this.state.error ? (

@@ -9,14 +9,14 @@ class ClickMe extends React.Component {
     super(props);
     this.state = { count: 0 };
 
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
+  handleClick() {
     this.setState(state => ({ count: state.count + 1 }));
   }
   render() {
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         {'This link has been clicked ' + this.state.count + ' times'}
       </a>
     );

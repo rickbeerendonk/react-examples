@@ -11,9 +11,9 @@ export default class GreetingEditor extends React.Component {
     super(props);
     this.state = { name: 'World' };
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(name) {
+  handleChange(name) {
     this.setState({ name });
   }
   render() {
@@ -21,7 +21,7 @@ export default class GreetingEditor extends React.Component {
       React.Fragment,
       null,
       React.createElement(EditBox, {
-        onChange: this.onChange,
+        onChange: this.handleChange,
         value: this.state.name
       }),
       React.createElement(Greeting, { name: this.state.name })
