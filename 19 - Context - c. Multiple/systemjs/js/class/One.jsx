@@ -12,9 +12,9 @@ class One extends React.Component {
     super(props);
     this.state = { color: this.props.color };
 
-    this.onSwitch = this.onSwitch.bind(this);
+    this.handleSwitch = this.handleSwitch.bind(this);
   }
-  onSwitch() {
+  handleSwitch() {
     this.setState(state => ({
       color: state.color === 'red' ? 'green' : 'red'
     }));
@@ -25,7 +25,7 @@ class One extends React.Component {
         <ColorContext.Provider value={{ color: 'blue' }}>
           <ColorContext.Provider value={{ color: this.state.color }}>
             <Two />
-            <button onClick={this.onSwitch}>Switch color</button>
+            <button onClick={this.handleSwitch}>Switch color</button>
           </ColorContext.Provider>
 
           <Three />
