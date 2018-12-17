@@ -15,13 +15,15 @@ export default class GreetingEditor extends React.Component {
     super(props);
     this.state = { name: 'World' };
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(name) {
-    /***/ console.log('GreetingEditor - onChange() <begin>');
+  handleChange(name) {
+    /***/ console.log('GreetingEditor - handleChange() <begin>');
 
     this.setState(() => {
-      /***/ console.log('GreetingEditor - onChange() - callback setState()');
+      /***/ console.log(
+        'GreetingEditor - handleChange() - callback setState()'
+      );
 
       return { name };
     });
@@ -34,14 +36,14 @@ export default class GreetingEditor extends React.Component {
 
     */
 
-    /***/ console.log('GreetingEditor - onChange() <end>');
+    /***/ console.log('GreetingEditor - handleChange() <end>');
   }
   render() {
     /***/ console.log('GreetingEditor - render() <begin>');
     try {
       return (
         <React.Fragment>
-          <EditBox onChange={this.onChange} value={this.state.name} />
+          <EditBox onChange={this.handleChange} value={this.state.name} />
           <Greeting name={this.state.name} />
         </React.Fragment>
       );

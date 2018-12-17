@@ -6,22 +6,22 @@ import React from 'react';
 import Child from './Child';
 
 export default class Parent extends React.Component {
-  onRerenderClick = () => {
+  handleRerenderClick = () => {
     // Force rerender
     this.forceUpdate();
   };
-  onChildClick = () => {
+  handleChildClick = () => {
     alert('Method handler');
   };
   render() {
     return (
       <React.Fragment>
         <div>
-          <button onClick={this.onRerenderClick}>Rerender</button>
+          <button onClick={this.handleRerenderClick}>Rerender</button>
         </div>
         <ul>
           <li>
-            <Child name="method" onClick={this.onChildClick} />
+            <Child name="method" onClick={this.handleChildClick} />
           </li>
           <li>
             <Child name="inline" onClick={() => alert('Inline handler')} />

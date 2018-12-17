@@ -11,10 +11,10 @@ class EditBox extends React.Component {
 
     super(props);
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  onChange(e) {
-    /***/ console.log('EditBox - onChange()');
+  handleChange(e) {
+    /***/ console.log('EditBox - handleChange()');
 
     this.props.onChange(e.target.value);
   }
@@ -22,7 +22,7 @@ class EditBox extends React.Component {
     /***/ console.log('EditBox - render()');
 
     return (
-      <input autoFocus onChange={this.onChange} value={this.props.value} />
+      <input autoFocus onChange={this.handleChange} value={this.props.value} />
     );
   }
 }

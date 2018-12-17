@@ -13,16 +13,16 @@ export default class ClickMe extends React.Component {
     this.state = { count: 0 };
 
     // Bind all non-react methods to this.
-    this.onClick = this.onClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  onClick() {
-    /***/ console.log('onClick() <begin>');
+  handleClick() {
+    /***/ console.log('handleClick() <begin>');
 
     // Updates are batched for performance reasons.
     // Therefore a callback should be used:
     this.setState(state => {
       /***/ console.log(
-        'onClick() - callback 1 setState: ' +
+        'handleClick() - callback 1 setState: ' +
           JSON.stringify(this.state) +
           ' [state in callback: ' +
           JSON.stringify(state) +
@@ -32,7 +32,7 @@ export default class ClickMe extends React.Component {
     });
     this.setState(state => {
       /***/ console.log(
-        'onClick() - callback 2 setState: ' +
+        'handleClick() - callback 2 setState: ' +
           JSON.stringify(this.state) +
           ' [state in callback: ' +
           JSON.stringify(state) +
@@ -41,13 +41,13 @@ export default class ClickMe extends React.Component {
       return { count: state.count + 0.6 };
     });
 
-    /***/ console.log('onClick() <end>: ' + JSON.stringify(this.state));
+    /***/ console.log('handleClick() <end>: ' + JSON.stringify(this.state));
   }
   render() {
     /***/ console.log('render: ' + JSON.stringify(this.state));
 
     return (
-      <a onClick={this.onClick}>
+      <a onClick={this.handleClick}>
         {`This link has been clicked ${this.state.count} times`}
       </a>
     );
