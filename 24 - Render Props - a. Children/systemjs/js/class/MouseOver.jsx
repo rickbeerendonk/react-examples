@@ -9,18 +9,21 @@ class MouseOver extends React.Component {
     super(props);
     this.state = { mouseIsOver: false };
 
-    this.onMouseEnter = this.onMouseEnter.bind(this);
-    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
-  onMouseEnter() {
+  handleMouseEnter() {
     this.setState({ mouseIsOver: true });
   }
-  onMouseLeave() {
+  handleMouseLeave() {
     this.setState({ mouseIsOver: false });
   }
   render() {
     return (
-      <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+      <div
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
         {/*
           Call the props.children function with what this component knows about the mouse:
         */}
