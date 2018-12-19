@@ -8,13 +8,13 @@ import ClickMe from './ClickMe';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = { showClickMe: true };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(state => ({ count: state.count + 1 }));
+    this.setState(state => ({ showClickMe: !state.showClickMe }));
   }
 
   render() {
@@ -22,7 +22,7 @@ class App extends React.Component {
       <React.Fragment>
         <button onClick={this.handleClick}>Click me!</button>
         <br />
-        {Boolean(this.state.count % 2) && <ClickMe />}
+        {this.state.showClickMe && <ClickMe />}
       </React.Fragment>
     );
   }
