@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default class ClickMe extends React.Component {
+class ClickMe extends React.Component {
   constructor(props) {
     /***/ console.log('constructor');
 
@@ -53,3 +53,5 @@ export default class ClickMe extends React.Component {
     );
   }
 }
+
+export default ClickMe;

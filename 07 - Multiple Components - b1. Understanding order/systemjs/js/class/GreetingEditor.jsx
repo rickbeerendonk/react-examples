@@ -8,7 +8,7 @@ import React from 'react';
 import EditBox from './EditBox';
 import Greeting from './Greeting';
 
-export default class GreetingEditor extends React.Component {
+class GreetingEditor extends React.Component {
   constructor(props) {
     /***/ console.log('GreetingEditor - constructor()');
 
@@ -52,3 +52,5 @@ export default class GreetingEditor extends React.Component {
     }
   }
 }
+
+export default GreetingEditor;
