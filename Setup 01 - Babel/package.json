@@ -12,8 +12,8 @@
     "watch": "babel site/src --out-dir site/build --watch --source-maps"
   },
   "dependencies": {
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2"
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
