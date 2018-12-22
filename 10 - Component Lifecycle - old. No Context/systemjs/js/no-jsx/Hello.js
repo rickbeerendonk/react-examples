@@ -72,7 +72,7 @@ export default class Hello extends React.Component {
       )}, prevState: ${JSON.stringify(prevState)})`,
       'updating'
     );
-    if (prevProps.name === 'Number One') {
+    if (prevProps.name === 'A') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
     }

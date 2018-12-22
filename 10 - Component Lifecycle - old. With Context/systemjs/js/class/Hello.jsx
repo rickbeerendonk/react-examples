@@ -79,7 +79,7 @@ export default class Hello extends React.Component {
       'updating'
     );
     if (
-      prevProps.name === 'Number Two' &&
+      prevProps.name === 'B' &&
       prevContext &&
       prevContext.value === 'Context One'
     ) {

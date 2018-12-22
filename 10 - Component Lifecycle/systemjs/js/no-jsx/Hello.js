@@ -78,7 +78,7 @@ class Hello extends React.Component {
       )}, workInProgress: ${JSON.stringify(snapshot)})`,
       'updating'
     );
-    if (prevProps.name === 'Number One') {
+    if (prevProps.name === 'A') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
     }

@@ -11,11 +11,11 @@ import { logEvent } from 'utils';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: 'Number One' };
+    this.state = { name: 'A' };
   }
   componentDidMount() {
     logEvent('-- new prop --', 'action');
-    this.setState({ name: 'Number Two' });
+    this.setState({ name: 'B' });
   }
   render() {
     return <Hello name={this.state.name} />;

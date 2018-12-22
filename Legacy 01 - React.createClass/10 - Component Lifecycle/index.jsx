@@ -87,7 +87,7 @@ var Hello = createReactClass({
         ')',
       'updating'
     );
-    if (prevProps.name === 'Number One') {
+    if (prevProps.name === 'A') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
     }
@@ -102,12 +102,12 @@ var Hello = createReactClass({
 var App = createReactClass({
   getInitialState: function() {
     return {
-      name: 'Number One'
+      name: 'A'
     };
   },
   componentDidMount: function() {
     logEvent('-- new prop --', 'action');
-    this.setState({ name: 'Number Two' });
+    this.setState({ name: 'B' });
   },
   render: function() {
     return <Hello name={this.state.name} />;

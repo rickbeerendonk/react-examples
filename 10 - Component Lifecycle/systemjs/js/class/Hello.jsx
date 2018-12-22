@@ -75,7 +75,7 @@ class Hello extends React.Component {
       )})`,
       'updating'
     );
-    if (prevProps.name === 'Number One') {
+    if (prevProps.name === 'A') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
     }

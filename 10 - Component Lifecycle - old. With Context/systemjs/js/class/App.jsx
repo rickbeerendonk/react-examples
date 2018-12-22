@@ -12,7 +12,7 @@ import { logEvent } from 'utils';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: 'Number One', value: 'Context One' };
+    this.state = { name: 'A', value: 'Context One' };
   }
   getChildContext() {
     // Never change context, as it can have problems:
@@ -21,10 +21,10 @@ export default class App extends React.Component {
   }
   componentDidMount() {
     logEvent('-- new prop --', 'action');
-    this.setState({ name: 'Number Two' });
+    this.setState({ name: 'B' });
   }
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.name === 'Number One' && this.state.name == 'Number Two') {
+    if (prevState.name === 'A' && this.state.name == 'B') {
       logEvent('-- new context --', 'action');
       this.setState({ value: 'Context Two' });
     }

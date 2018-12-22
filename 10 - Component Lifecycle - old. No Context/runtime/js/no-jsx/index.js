@@ -80,7 +80,7 @@ class Hello extends React.Component {
       )}, prevState: ${JSON.stringify(prevState)})`,
       'updating'
     );
-    if (prevProps.name === 'Number One') {
+    if (prevProps.name === 'A') {
       logEvent('-- new state --', 'action');
       this.setState(prevState => ({ count: prevState.count + 1 }));
     }
@@ -95,11 +95,11 @@ class Hello extends React.Component {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: 'Number One' };
+    this.state = { name: 'A' };
   }
   componentDidMount() {
     logEvent('-- new prop --', 'action');
-    this.setState({ name: 'Number Two' });
+    this.setState({ name: 'B' });
   }
   render() {
     return React.createElement(Hello, { name: this.state.name });
