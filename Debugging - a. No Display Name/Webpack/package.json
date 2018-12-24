@@ -8,8 +8,8 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "dependencies": {
-    "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2"
+    "react": "next",
+    "react-dom": "next"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
