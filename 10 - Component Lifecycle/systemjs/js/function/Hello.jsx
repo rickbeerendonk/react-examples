@@ -9,7 +9,8 @@ function Hello(props) {
   const [count, setCount] = React.useState(1);
   React.useEffect(() => {
     logEvent(
-      `useEffect - props: ${JSON.stringify(props)} - state: {count: ${count}}`
+      `useEffect - props: ${JSON.stringify(props)} - state: {count: ${count}}`,
+      'startup'
     );
 
     if (props.name === 'B' && count === 1) {
@@ -18,7 +19,7 @@ function Hello(props) {
     }
 
     return () => {
-      logEvent('useEffect cleanup');
+      logEvent('useEffect cleanup', 'cleanup');
     };
   });
 

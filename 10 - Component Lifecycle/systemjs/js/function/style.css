@@ -8,16 +8,12 @@ body {
   color: darkgray
 }
 
-.mounting {
+.startup {
   color: green;
 }
 
-.unmounting {
+.cleanup {
   color: red;
-}
-
-.updating {
-  color: blue;
 }
 
 .rendering {
