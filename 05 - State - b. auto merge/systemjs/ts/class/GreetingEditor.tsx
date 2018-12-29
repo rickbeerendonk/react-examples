@@ -10,7 +10,7 @@ interface IGreetingEditorState {
   other: string;
 }
 
-export default class GreetingEditor extends React.Component<
+class GreetingEditor extends React.Component<
   IGreetingEditorProps,
   IGreetingEditorState
 > {
@@ -33,3 +33,5 @@ export default class GreetingEditor extends React.Component<
     );
   }
 }
+
+export default GreetingEditor;

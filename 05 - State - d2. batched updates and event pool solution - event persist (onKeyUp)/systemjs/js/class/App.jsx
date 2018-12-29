@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { pressed: '' };
@@ -23,3 +23,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
