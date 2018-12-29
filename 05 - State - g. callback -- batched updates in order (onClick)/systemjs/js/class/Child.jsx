@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default class Child extends React.Component {
+class Child extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -42,3 +42,5 @@ export default class Child extends React.Component {
     );
   }
 }
+
+export default Child;
