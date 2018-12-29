@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class Child extends React.PureComponent {
+class Child extends React.PureComponent {
   render() {
     /* eslint no-console:"off" */
     console.log(`Render ${this.props.name} at ${new Date()}`);
@@ -13,3 +13,5 @@ export default class Child extends React.PureComponent {
     );
   }
 }
+
+export default Child;

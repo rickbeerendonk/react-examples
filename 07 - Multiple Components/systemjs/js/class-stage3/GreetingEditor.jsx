@@ -6,7 +6,7 @@ import React from 'react';
 import EditBox from './EditBox';
 import Greeting from './Greeting';
 
-export default class GreetingEditor extends React.Component {
+class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
@@ -23,3 +23,5 @@ export default class GreetingEditor extends React.Component {
     );
   }
 }
+
+export default GreetingEditor;

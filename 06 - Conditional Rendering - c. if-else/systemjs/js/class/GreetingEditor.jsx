@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default class GreetingEditor extends React.Component {
+class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
@@ -27,3 +27,5 @@ export default class GreetingEditor extends React.Component {
     );
   }
 }
+
+export default GreetingEditor;

@@ -5,7 +5,7 @@ import React from 'react';
 
 import Child from './Child';
 
-export default class Parent extends React.Component {
+class Parent extends React.Component {
   handleRerenderClick = () => {
     // Force rerender
     this.forceUpdate();
@@ -31,3 +31,5 @@ export default class Parent extends React.Component {
     );
   }
 }
+
+export default Parent;
