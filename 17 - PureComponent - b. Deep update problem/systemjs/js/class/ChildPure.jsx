@@ -7,7 +7,7 @@ import React from 'react';
 
 import Greeting from './Greeting';
 
-export default class ChildPure extends React.PureComponent {
+class ChildPure extends React.PureComponent {
   render() {
     return (
       <h2>
@@ -17,3 +17,5 @@ export default class ChildPure extends React.PureComponent {
     );
   }
 }
+
+export default ChildPure;

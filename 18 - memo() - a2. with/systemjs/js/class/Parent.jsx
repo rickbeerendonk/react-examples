@@ -5,7 +5,7 @@ import React from 'react';
 
 import Child from './Child';
 
-export default class Parent extends React.Component {
+class Parent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '' };
@@ -33,3 +33,5 @@ export default class Parent extends React.Component {
     );
   }
 }
+
+export default Parent;

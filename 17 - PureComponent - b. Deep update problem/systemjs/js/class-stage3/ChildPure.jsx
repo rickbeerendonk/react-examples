@@ -5,8 +5,10 @@
 
 import React from 'react';
 
-export default class ChildPure extends React.PureComponent {
+class ChildPure extends React.PureComponent {
   render() {
     return <h2>Child (Pure): {this.props.obj.name}</h2>;
   }
 }
+
+export default ChildPure;
