@@ -5,7 +5,7 @@ import React from 'react';
 
 import Child from './Child';
 
-export default class ClicParentkMe extends React.Component {
+class Parent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -21,3 +21,5 @@ export default class ClicParentkMe extends React.Component {
     return <Child count={this.state.count} onClick={this.handleClick} />;
   }
 }
+
+export default Parent;
