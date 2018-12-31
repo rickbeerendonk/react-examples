@@ -4,11 +4,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// SystemJS limitation (we should be able to do this directly in import)
-const { useState } = React;
-
 function ClickMe() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
 
   return (
     <a
