@@ -25,7 +25,6 @@ function Child(props) {
     });
   };
 
-  /* eslint no-console:"off" */
   // Render will be called once!
   console.log('render: Child');
 

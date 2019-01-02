@@ -36,7 +36,6 @@ class Child extends React.Component {
     );
   }
   render() {
-    /* eslint no-console:"off" */
     // Render will be called once!
     console.log('render: Child');
 
