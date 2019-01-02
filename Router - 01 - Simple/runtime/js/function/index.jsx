@@ -5,8 +5,6 @@
 
 const { BrowserRouter, Route, Link } = ReactRouterDOM;
 
-/// Simple ///
-
 function App() {
   return (
     <BrowserRouter basename="/Router%20-%2001%20-%20Simple/runtime/js/function">
