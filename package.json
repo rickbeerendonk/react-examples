@@ -55,6 +55,7 @@
     "react": "next",
     "react-cache": "^2.0.0-alpha.1",
     "react-dom": "next",
+    "react-router-dom": "^4.3.1",
     "react-spring": "^7.2.5",
     "react-transition-group": "^2.5.2",
     "schedule": "^0.5.0",
