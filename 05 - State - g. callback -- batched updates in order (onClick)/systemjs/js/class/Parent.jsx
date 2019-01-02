@@ -18,8 +18,11 @@ class Parent extends React.Component {
   handleClick() {
     // Batched:
     this.setState(
-      state => ({ count: state.count + 1 }),
-      () => console.log('parent')
+      state => {
+        console.log('getValue: Parent');
+        return { count: state.count + 1 };
+      },
+      () => console.log('Parent')
     );
   }
   render() {
