@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Router - Simple'
+      title: 'Router - No Match'
     }),
     new webpack.NamedModulesPlugin()
   ],
