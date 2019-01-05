@@ -12,4 +12,7 @@ class Child extends React.Component {
   }
 }
 
-export default React.memo(Child /* no custom comparison (2nd parameter) */);
+const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
+ChildMemo.displayName = 'ChildMemo';
+
+export default ChildMemo;

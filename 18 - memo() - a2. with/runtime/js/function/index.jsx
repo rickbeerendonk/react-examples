@@ -10,6 +10,7 @@ function Child() {
 }
 
 const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
+ChildMemo.displayName = 'ChildMemo';
 
 function Parent() {
   const [name, setName] = React.useState('');

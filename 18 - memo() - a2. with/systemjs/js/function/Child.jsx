@@ -10,4 +10,7 @@ function Child() {
   return <h2>Child</h2>;
 }
 
-export default React.memo(Child /* no custom comparison (2nd parameter) */);
+const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
+ChildMemo.displayName = 'ChildMemo';
+
+export default ChildMemo;

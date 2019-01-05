@@ -12,6 +12,7 @@ class Child extends React.Component {
 }
 
 const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
+ChildMemo.displayName = 'ChildMemo';
 
 class Parent extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
