@@ -8,5 +8,6 @@ const Greeting = React.forwardRef((props, ref) => (
     <h1 ref={ref}>Hello {props.name}!</h1>
   </div>
 ));
+Greeting.displayName = 'Greeting';
 
 export default Greeting;

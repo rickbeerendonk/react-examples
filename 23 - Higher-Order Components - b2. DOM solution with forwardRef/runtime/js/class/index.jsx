@@ -3,6 +3,11 @@
 
 /* global React, ReactDOM */
 
+// Helper function
+function getDisplayName(WrappedComponent) {
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
+
 // Higher-Order Component
 function withExtras(WrappedComponent) {
   class WithExtras extends React.Component {
@@ -10,10 +15,16 @@ function withExtras(WrappedComponent) {
       return <WrappedComponent {...this.props} />;
     }
   }
+  WithExtras.displayName = `WithExtras(${getDisplayName(WrappedComponent)})`;
 
-  return React.forwardRef((props, ref) => (
+  const WithExtrasForwardRef = React.forwardRef((props, ref) => (
     <WithExtras {...props} forwardedRef={ref} />
   ));
+  WithExtrasForwardRef.displayName = `WithExtrasForwardRef(${getDisplayName(
+    WrappedComponent
+  )})`;
+
+  return WithExtrasForwardRef;
 }
 
 class Greeting extends React.Component {

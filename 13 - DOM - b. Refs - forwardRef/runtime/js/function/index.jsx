@@ -10,6 +10,7 @@ const Greeting = React.forwardRef(function(props, ref) {
     </div>
   );
 });
+Greeting.displayName = 'Greeting';
 
 function App() {
   const myGreeting = React.useRef(null);
