@@ -8,7 +8,7 @@ import Page from './Page';
 
 function App() {
   return (
-    <BrowserRouter basename="/Router%20-%2003%20-%20Dynamic%20Routing/systemjs/js/function/">
+    <BrowserRouter basename="/Router%20-%2005%20-%20Dynamic%20Routing/systemjs/js/function/">
       <React.Fragment>
         <header>
           <h1>App</h1>

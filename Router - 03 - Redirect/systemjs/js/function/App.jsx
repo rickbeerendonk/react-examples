@@ -1,13 +1,16 @@
 /*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2014 Rick Beerendonk   !*/
+/*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global React, ReactDOM, ReactRouterDOM */
+import React from 'react';
+import { BrowserRouter, Route, Redirect, Switch, Link } from 'react-router-dom';
 
-const { BrowserRouter, Route, Redirect, Switch, Link } = ReactRouterDOM;
+import Home from './Home';
+import Page1 from './Page1';
+import Page2 from './Page2';
 
 function App() {
   return (
-    <BrowserRouter basename="Router%20-%2004%20-%20Redirect/runtime/js/function/">
+    <BrowserRouter basename="Router%20-%2003%20-%20Redirect/systemjs/js/function/">
       <React.Fragment>
         <header>
           <h1>App</h1>
@@ -43,19 +46,4 @@ function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function Page1() {
-  return <h2>1st page</h2>;
-}
-
-function Page2() {
-  return <h2>2nd page</h2>;
-}
-
-const root = document.createElement('div');
-document.body.appendChild(root);
-
-ReactDOM.render(<App />, root);
+export default App;

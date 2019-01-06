@@ -7,7 +7,7 @@ const { BrowserRouter, Route, Link } = ReactRouterDOM;
 
 function App() {
   return (
-    <BrowserRouter basename="/Router%20-%2003%20-%20Dynamic%20Routing/runtime/js/function/">
+    <BrowserRouter basename="/Router%20-%2005%20-%20Dynamic%20Routing/runtime/js/function/">
       <>
         <header>
           <h1>App</h1>
