@@ -7,9 +7,9 @@
     "react-dom": "next"
   },
   "devDependencies": {
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "enzyme-to-json": "^3.3.4",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "react-scripts": "1.1.5",
     "react-test-renderer": "next"
   },
