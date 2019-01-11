@@ -14,12 +14,30 @@ function Hello(props) {
     );
 
     if (props.name === 'B' && count === 1) {
-      logEvent('-- new state --', 'action');
+      logEvent('-- new state (useEffect) --', 'action');
       setCount(2);
     }
 
     return () => {
       logEvent('useEffect cleanup', 'cleanup');
+    };
+  });
+
+  React.useLayoutEffect(() => {
+    logEvent(
+      `useLayoutEffect - props: ${JSON.stringify(
+        props
+      )} - state: {count: ${count}}`,
+      'startup'
+    );
+
+    if (props.name === 'B' && count === 1) {
+      logEvent('-- new state (useLayoutEffect) --', 'action');
+      setCount(2);
+    }
+
+    return () => {
+      logEvent('useLayoutEffect cleanup', 'cleanup');
     };
   });
 
