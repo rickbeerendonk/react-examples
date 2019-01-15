@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup Webpack, ESLint & Babel'
+      title: 'Setup ESLint, Webpack & Babel'
     }),
     new webpack.NamedModulesPlugin()
   ],

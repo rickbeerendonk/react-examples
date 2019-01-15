@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-babel-vscode",
-  "description": "Using React with Webpack & Babel (Visual Studio Code)",
+  "description": "Using React with ESLint, Webpack & Babel (Visual Studio Code)",
   "version": "1.0.0",
   "repository": {
     "type": "git",
