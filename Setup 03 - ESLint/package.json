@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-babel-vscode",
+  "name": "react-eslint-webpack-babel-vscode",
   "description": "Using React with ESLint, Webpack & Babel (Visual Studio Code)",
   "version": "1.0.0",
   "repository": {
