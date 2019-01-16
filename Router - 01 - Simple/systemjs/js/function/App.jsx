@@ -30,7 +30,7 @@ function App() {
         <main>
           <Route exact path="/" component={Home} />
           <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
+          <Route path="/page2" render={props => <Page2 {...props} />} />
         </main>
 
         <footer>My copyright</footer>
