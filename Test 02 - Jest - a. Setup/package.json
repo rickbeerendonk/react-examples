@@ -1,0 +1,58 @@
+{
+  "name": "react-webpack-babel-vscode",
+  "description": "Using React with Webpack & Babel (Visual Studio Code)",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "dependencies": {
+    "react": "next",
+    "react-dom": "next"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.12.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-react": "^7.12.3",
+    "jest": "^23.6.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react-test-renderer": "next",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack -d --progress",
+    "build-watch": "npm run clean && webpack -d --progress --watch",
+    "clean": "rimraf build",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "start": "webpack-dev-server --open",
+    "test": "jest"
+  }
+}

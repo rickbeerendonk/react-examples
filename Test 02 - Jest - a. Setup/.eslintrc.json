@@ -1,0 +1,26 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "indent": [2, 2],
+    "quotes": [2, "single"],
+    "semi": [2, "always"]
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "16.7.0-alpha.2"
+    }
+  }
+}
