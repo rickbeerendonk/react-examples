@@ -13,13 +13,13 @@ class GreetingEditor extends React.Component {
     // Bind all non-react methods to this.
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(e) {
-    this.setState({ name: e.target.value });
+  handleChange(name) {
+    this.setState({ name });
   }
   render() {
     return (
       <React.Fragment>
-        <EditBox onChange={this.handleChange} name={this.state.name} />
+        <EditBox onChange={this.handleChange} value={this.state.name} />
         <Greeting name={this.state.name} />
       </React.Fragment>
     );
