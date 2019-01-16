@@ -7,9 +7,13 @@ import { logEvent } from 'utils';
 
 function Hello(props) {
   const [count, setCount] = React.useState(1);
+  const h1Ref = React.useRef(null);
+
   React.useEffect(() => {
     logEvent(
-      `useEffect - props: ${JSON.stringify(props)} - state: {count: ${count}}`,
+      `useEffect - props: ${JSON.stringify(
+        props
+      )} - state: {count: ${count}} - rendered: ${h1Ref.current.outerHTML}`,
       'startup'
     );
 
@@ -19,7 +23,10 @@ function Hello(props) {
     }
 
     return () => {
-      logEvent('useEffect cleanup', 'cleanup');
+      logEvent(
+        `useEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
+        'cleanup'
+      );
     };
   });
 
@@ -27,7 +34,7 @@ function Hello(props) {
     logEvent(
       `useLayoutEffect - props: ${JSON.stringify(
         props
-      )} - state: {count: ${count}}`,
+      )} - state: {count: ${count}} - rendered: ${h1Ref.current.outerHTML}`,
       'startup'
     );
 
@@ -37,7 +44,10 @@ function Hello(props) {
     }
 
     return () => {
-      logEvent('useLayoutEffect cleanup', 'cleanup');
+      logEvent(
+        `useLayoutEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
+        'cleanup'
+      );
     };
   });
 
@@ -47,7 +57,7 @@ function Hello(props) {
   );
 
   return (
-    <h1 style={{ display: 'none' }}>
+    <h1 ref={h1Ref}>
       Hello {props.name}! ({count} time)
     </h1>
   );
