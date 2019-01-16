@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "next",
     "react-dom": "next",
-    "react-transition-group": "^2.5.2"
+    "react-transition-group": "^2.5.3"
   },
   "devDependencies": {
     "react-scripts": "^2.1.3"
