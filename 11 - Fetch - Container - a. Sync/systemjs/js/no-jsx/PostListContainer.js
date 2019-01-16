@@ -9,7 +9,7 @@ import PostList from 'PostList';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
-export default class PostListContainer extends React.Component {
+class PostListContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,3 +61,5 @@ export default class PostListContainer extends React.Component {
     return React.createElement(PostList, { posts: this.state.posts });
   }
 }
+
+export default PostListContainer;

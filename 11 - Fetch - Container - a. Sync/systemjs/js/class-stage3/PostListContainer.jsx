@@ -10,7 +10,7 @@ import PostList from './PostList';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
-export default class PostListContainer extends React.Component {
+class PostListContainer extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { posts: [], error: '', isFetching: false };
@@ -51,3 +51,5 @@ export default class PostListContainer extends React.Component {
     );
   }
 }
+
+export default PostListContainer;
