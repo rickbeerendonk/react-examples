@@ -4,6 +4,7 @@
 
 build/
 build-storybook/
+coverage/
 docs/
 lib/
 Issues/

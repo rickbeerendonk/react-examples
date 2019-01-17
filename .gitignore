@@ -5,6 +5,7 @@
 .cache/
 build/
 build-storybook/
+coverage/
 docs/
 Issues/
 
