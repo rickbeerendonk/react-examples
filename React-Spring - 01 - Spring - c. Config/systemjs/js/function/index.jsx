@@ -4,6 +4,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Greeting from './Greeting';
+import Bars from './Bars';
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Bars />, document.getElementById('app'));
