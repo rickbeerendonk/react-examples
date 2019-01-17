@@ -18,7 +18,7 @@ class PostListContainer extends React.Component {
   componentDidMount() {
     this.fetchPosts();
   }
-  fetchPosts = () => {
+  fetchPosts() {
     this.setState({ isFetching: true });
     fetch('posts.json')
       .then(response => {
@@ -36,7 +36,7 @@ class PostListContainer extends React.Component {
       .finally(() => {
         this.setState({ isFetching: false });
       });
-  };
+  }
   render() {
     return (
       <React.Fragment>
