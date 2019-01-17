@@ -21,7 +21,6 @@ class GreetingEditor extends React.Component {
     return (
       <React.Fragment>
         <input
-          autoFocus
           onChange={this.handleChange}
           ref={this.inputRef}
           value={this.state.name}

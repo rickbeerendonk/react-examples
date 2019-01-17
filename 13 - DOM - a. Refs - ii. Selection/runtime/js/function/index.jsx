@@ -15,7 +15,7 @@ function GreetingEditor() {
 
   return (
     <React.Fragment>
-      <input autoFocus onChange={handleChange} ref={inputRef} value={name} />
+      <input onChange={handleChange} ref={inputRef} value={name} />
       {name && <h1>Hello {name}!</h1>}
     </React.Fragment>
   );

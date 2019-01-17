@@ -16,7 +16,6 @@ function GreetingEditor() {
     React.Fragment,
     null,
     React.createElement('input', {
-      autoFocus: true,
       onChange: handleChange,
       ref: inputRef,
       value: name
