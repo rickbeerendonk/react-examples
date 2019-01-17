@@ -54,6 +54,8 @@
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "start": "webpack-dev-server --open",
-    "test": "jest"
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-watch": "jest --watch"
   }
 }
