@@ -2,13 +2,13 @@
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route, Link } from 'react-router-dom';
 
 import Page from './Page';
 
 function App() {
   return (
-    <BrowserRouter basename="/Router%20-%2005%20-%20Dynamic%20Routing/systemjs/js/function/">
+    <HashRouter>
       <React.Fragment>
         <header>
           <h1>App</h1>
@@ -27,7 +27,7 @@ function App() {
 
         <footer>My copyright</footer>
       </React.Fragment>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
