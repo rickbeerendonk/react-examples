@@ -12,6 +12,18 @@ it('throws when no name is provided (react-test-renderer)', () => {
   }).toThrow();
 });
 
+it('renders hello world inline snapshot when name is world (react-test-renderer)', () => {
+  const component = renderer.create(<Greeting name="World" />);
+  let tree = component.toJSON();
+  expect(tree).toMatchInlineSnapshot(`
+<h1>
+  Hello 
+  World
+  !
+</h1>
+`);
+});
+
 it('renders hello world snapshot when name is world (react-test-renderer)', () => {
   const component = renderer.create(<Greeting name="World" />);
   let tree = component.toJSON();
