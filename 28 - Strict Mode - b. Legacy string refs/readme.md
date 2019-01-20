@@ -9,6 +9,10 @@ Object refs (createRef) is a replacement that doesn't have [the downsides](https
 Here is an example of how the warnings might look like:
 ![Legacy string refs warning](resources/legacy-string-refs-warning.png)
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk

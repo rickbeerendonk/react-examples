@@ -22,10 +22,10 @@ Install dependencies first:
 1. Run `npm run openserver`. Now the server will run and the browser will open.
 2. In the browser, browse to the folder of the example you want to run and it will open automatically.
 
-# Licence
+## Licence
 
 European Union Public Licence version 1.2
 
-# Copyright
+## Copyright
 
 Copyright © 2014-2019 Rick Beerendonk

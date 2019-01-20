@@ -16,6 +16,10 @@ Examples:
 
 * Profiler component: https://github.com/reactjs/rfcs/pull/51
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk

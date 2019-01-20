@@ -14,6 +14,10 @@ Unsafe lifecycle methods are:
 Here is an example of how the warnings might look like:
 ![Unsafe lifecycle methods warning](resources/unsafe-lifecycle-methods-warning.png)
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk

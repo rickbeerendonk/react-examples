@@ -14,3 +14,11 @@ document.body.appendChild(app);
 
 ReactDOM.render(<h1>Hello World!</h1>, app);
 ```
+
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
+
+Copyright © 2014 Rick Beerendonk

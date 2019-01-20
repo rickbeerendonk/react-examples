@@ -19,3 +19,11 @@ ReactDOM
   .createRoot(document.getElementById('app'))
   .render(<h1>Hello World!</h1>);
 ```
+
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
+
+Copyright © 2014 Rick Beerendonk
