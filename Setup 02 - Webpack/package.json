@@ -6,7 +6,7 @@
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
   },
   "author": "Rick Beerendonk",
-  "license": "MPL-2.0",
+  "license": "EUPL-1.2",
   "scripts": {
     "build": "npm run clean && webpack -d --progress",
     "build-watch": "npm run clean && webpack -d --progress --watch",

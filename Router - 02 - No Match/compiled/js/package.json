@@ -3,7 +3,7 @@
   "description": "Using React Router: No Match",
   "version": "1.0.0",
   "author": "Rick Beerendonk",
-  "license": "MPL-2.0",
+  "license": "EUPL-1.2",
   "dependencies": {
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
