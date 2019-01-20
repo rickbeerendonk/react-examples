@@ -4,8 +4,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import ClickMe from './ClickMe';
 
-/* eslint-env jest */
-
 configure({ adapter: new Adapter() });
 
 /// Enzyme ///

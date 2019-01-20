@@ -2,8 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Greeting from './Greeting';
 
-/* eslint-env jest */
-
 /// React Test Renderer ///
 
 it('renders hello world snapshot (react-test-renderer)', () => {

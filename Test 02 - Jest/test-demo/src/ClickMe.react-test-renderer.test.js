@@ -2,8 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ClickMe from './ClickMe';
 
-/* eslint-env jest */
-
 /// React Test Renderer ///
 
 it('renders 0 snapshot (react-test-renderer)', () => {
