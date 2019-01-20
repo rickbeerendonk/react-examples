@@ -2,38 +2,38 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Rick Beerendonk">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <title>React-Spring - Spring - Number</title>
-  <link rel="stylesheet" href="../../../../resources/oblicum.css">
-</head>
-<body>
-  <div id="app"></div>
+    <title>React-Spring - Spring - Number</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app"></div>
 
-  <script>
-    // Temporary: As long as the UMD build is not working with SystemJS.
-    var process = {
-      env: {
-        NODE_ENV: null
-      }
-    };
+    <script>
+      // Temporary: As long as the UMD build is not working with SystemJS.
+      var process = {
+        env: {
+          NODE_ENV: null
+        }
+      };
 
-    var global = window;
-  </script>
+      var global = window;
+    </script>
 
-  <script src="../../../../node_modules/systemjs/dist/system.js"></script>
-  <script src="systemjs.config.js"></script>
-  <script>
-    SystemJS.import('index').catch(function (err) { 
-      console.error(err); 
-      document.body.style.backgroundColor = 'red'; 
-      document.body.style.color = 'white'; 
-      document.body.innerText = err; 
-    });
-  </script>
-</body>
+    <script src="../../../../node_modules/systemjs/dist/system.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      SystemJS.import('index').catch(function(err) {
+        console.error(err);
+        document.body.style.backgroundColor = 'red';
+        document.body.style.color = 'white';
+        document.body.innerText = err;
+      });
+    </script>
+  </body>
 </html>

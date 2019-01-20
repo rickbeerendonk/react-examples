@@ -2,37 +2,29 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2017 Rick Beerendonk -->
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Rick Beerendonk">
-
-  <title>Setup Bower</title>
-  <script src="./bower_components/react/react.development.js"></script>
-  <script src="./bower_components/react/react-dom.development.js"></script>
-  <script src="./bower_components/babel-standalone/babel.js"></script>
-  <!--
+    <title>Setup Bower</title>
+    <script src="./bower_components/react/react.development.js"></script>
+    <script src="./bower_components/react/react-dom.development.js"></script>
+    <script src="./bower_components/babel-standalone/babel.js"></script>
+    <!--
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  -->
-</head>
+  --></head>
 
-<body>
-  <div id="app"></div>
+  <body>
+    <div id="app"></div>
 
-  <script type="text/babel" data-presets="es2015,react">
-    class HelloReact extends React.Component {
-      render() {
-        return (
-          <h1>Hello React!</h1>
-        );
+    <script type="text/babel" data-presets="es2015,react">
+      class HelloReact extends React.Component {
+        render() {
+          return <h1>Hello React!</h1>;
+        }
       }
-    };
-    
-    ReactDOM.render(
-      <HelloReact />,
-      document.getElementById('app')
-    );
-  </script>
-</body>
 
+      ReactDOM.render(<HelloReact />, document.getElementById('app'));
+    </script>
+  </body>
 </html>

@@ -2,23 +2,23 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2014 Rick Beerendonk -->
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Rick Beerendonk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
 
-  <title>Render Root - New DOM Element (js) [Inline]</title>
-  <link rel="stylesheet" href="../../../../../resources/oblicum.css">
-  <script src="../../../../../node_modules/react/umd/react.development.js"></script>
-  <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
-</head>
-<body>
-  <script type="text/javascript">
-    const app = document.createElement('div');
-    document.body.appendChild(app);
+    <title>Render Root - New DOM Element (js) [Inline]</title>
+    <link rel="stylesheet" href="../../../../../resources/oblicum.css" />
+    <script src="../../../../../node_modules/react/umd/react.development.js"></script>
+    <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const app = document.createElement('div');
+      document.body.appendChild(app);
 
-    ReactDOM
-      .createRoot(app)
-      .render(React.createElement('h1', null, 'Hello React ', React.version, '!'));
-  </script>
-</body>
+      ReactDOM.createRoot(app).render(
+        React.createElement('h1', null, 'Hello React ', React.version, '!')
+      );
+    </script>
+  </body>
 </html>
