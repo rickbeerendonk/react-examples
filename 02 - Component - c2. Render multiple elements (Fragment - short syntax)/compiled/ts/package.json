@@ -15,10 +15,10 @@
   "dependencies": {
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
-    "react": "next",
-    "react-dom": "next"
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1"
   },
   "devDependencies": {
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.4"
   }
 }
