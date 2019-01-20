@@ -1,5 +1,5 @@
-/*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2019 Rick Beerendonk   !*/
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
 import { Spring, config } from 'react-spring';

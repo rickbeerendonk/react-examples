@@ -1,6 +1,6 @@
-/*! Mozilla Public License Version 2.0 !*/
+/*! European Union Public License version 1.2 !*/
 
-/*! Copyright © 2018 Rick Beerendonk   !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
 /* global React, ReactDOM */
 

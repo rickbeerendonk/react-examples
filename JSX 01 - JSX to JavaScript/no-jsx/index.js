@@ -1,5 +1,5 @@
-/*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2017 Rick Beerendonk   !*/
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2017 Rick Beerendonk          !*/
 
 /* global Babel, React, ReactDOM */
 

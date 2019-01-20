@@ -1,5 +1,5 @@
-/*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2016 Rick Beerendonk   !*/
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2016 Rick Beerendonk          !*/
 
 // TO RUN:
 // - Install node.js (version 6 or later)
