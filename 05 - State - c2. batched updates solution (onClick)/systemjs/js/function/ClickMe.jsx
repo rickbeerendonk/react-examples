@@ -13,7 +13,7 @@ function ClickMe() {
         setCount(c => c + 0.6);
       }}
     >
-      {`This link has been clicked ${count} times`}
+      This link has been clicked {count} times
     </a>
   );
 }

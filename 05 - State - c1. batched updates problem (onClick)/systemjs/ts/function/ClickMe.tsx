@@ -16,9 +16,7 @@ function ClickMe(): JSX.Element {
     setCount(count + 0.6);
   };
 
-  return (
-    <a onClick={handleClick}>{`This link has been clicked ${count} times`}</a>
-  );
+  return <a onClick={handleClick}>This link has been clicked {count} times</a>;
 }
 
 export default ClickMe;

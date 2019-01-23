@@ -4,7 +4,9 @@ exports[`renders 0 snapshot (react-test-renderer) 1`] = `
 <a
   onClick={[Function]}
 >
-  This link has been clicked 0 times
+  This link has been clicked 
+  0
+   times
 </a>
 `;
 
@@ -12,6 +14,8 @@ exports[`renders 1 after click snapshot (react-test-renderer) 1`] = `
 <a
   onClick={[Function]}
 >
-  This link has been clicked 1 times
+  This link has been clicked 
+  1
+   times
 </a>
 `;
