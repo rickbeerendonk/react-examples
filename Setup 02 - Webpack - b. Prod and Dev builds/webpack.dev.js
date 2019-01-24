@@ -12,6 +12,6 @@ module.exports = merge(commonConfig, {
     contentBase: './build',
     port: 9100
   },
-  devtool: 'eval' /* fast, inline, no production */,
+  devtool: 'eval-source-map' /* fast, inline, no production */,
   mode: 'development'
 });
