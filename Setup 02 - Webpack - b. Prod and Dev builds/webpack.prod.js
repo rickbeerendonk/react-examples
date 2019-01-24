@@ -8,5 +8,6 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   devtool: 'source-maps' /* slow, external, production */,
-  mode: 'production'
+  mode:
+    'production' /* use prod-version of libs, minification (option: tree-shaking) */
 });
