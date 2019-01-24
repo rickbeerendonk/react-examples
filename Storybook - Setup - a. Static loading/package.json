@@ -34,7 +34,6 @@
   },
   "scripts": {
     "build": "npm run clean && webpack --progress",
-    "build-watch": "npm run clean && webpack -d --progress --watch",
     "clean": "rimraf build",
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
