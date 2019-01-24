@@ -32,7 +32,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "build": "npm run clean && webpack -d --progress",
+    "build": "npm run clean && webpack --progress",
     "build-watch": "npm run clean && webpack -d --progress --watch",
     "clean": "rimraf build",
     "eslint": "eslint . --ext .js,.jsx --cache",

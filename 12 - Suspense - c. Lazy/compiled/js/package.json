@@ -8,7 +8,7 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "scripts": {
-    "build": "npm run clean && webpack -d --progress",
+    "build": "npm run clean && webpack --progress",
     "build-watch": "npm run clean && webpack -d --progress --watch",
     "clean": "rimraf build",
     "start": "webpack-dev-server --open"
