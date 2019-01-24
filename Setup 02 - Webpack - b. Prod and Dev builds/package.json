@@ -8,10 +8,9 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "scripts": {
-    "build:dev": "npm run clean && webpack --env dev --progress",
-    "build:prod": "npm run clean && webpack --env prod --progress",
+    "build": "npm run clean && webpack --progress --config webpack.prod.js",
     "clean": "rimraf build",
-    "dev": "webpack-dev-server --hot --env dev",
+    "dev": "webpack-dev-server --hot --config webpack.dev.js",
     "start": "npm run dev -- --open"
   },
   "dependencies": {
