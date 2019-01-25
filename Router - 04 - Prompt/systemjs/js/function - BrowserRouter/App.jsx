@@ -10,7 +10,7 @@ import Page2 from './Page2';
 
 function App() {
   return (
-    <BrowserRouter basename="/Router%20-%2004%20-%20Prompt/systemjs/js/function/">
+    <BrowserRouter basename="/Router%20-%2004%20-%20Prompt/systemjs/js/function%20-%20BrowserRouter">
       <React.Fragment>
         <header>
           <h1>App</h1>
