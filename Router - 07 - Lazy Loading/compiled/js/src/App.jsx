@@ -28,6 +28,10 @@ function App() {
         </header>
 
         <main>
+          <div style={{ color: 'lightgray' }}>
+            <em>Show this example with a Network Latency.</em>
+          </div>
+
           <React.Suspense fallback={<div>Loading...</div>}>
             <Route exact path="/" component={Home} />
             <Route path="/page1" component={Page1} />
