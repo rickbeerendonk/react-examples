@@ -13,16 +13,11 @@ main {
 }
 
 header h1,
-header ul {
+header nav {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-header ul {
-  padding: 0;
-}
-
-header ul > li {
-  display: inline-block;
+header nav > a {
   margin-right: 0.5rem;
 }
