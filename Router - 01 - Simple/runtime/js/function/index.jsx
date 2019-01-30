@@ -3,11 +3,11 @@
 
 /* global React, ReactDOM, ReactRouterDOM */
 
-const { BrowserRouter, Route, Link } = ReactRouterDOM;
+const { HashRouter, Route, Link } = ReactRouterDOM;
 
 function App() {
   return (
-    <BrowserRouter basename="/Router%20-%2001%20-%20Simple/runtime/js/function">
+    <HashRouter>
       <>
         <header>
           <h1>App</h1>
@@ -26,7 +26,7 @@ function App() {
 
         <footer>My copyright</footer>
       </>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
