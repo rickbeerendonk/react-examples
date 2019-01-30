@@ -12,14 +12,16 @@ function Page1({ match }) {
     <React.Fragment>
       <h2>1st page</h2>
 
-      <ul>
-        <li>
-          <Link to={match.url}>Subpage 1</Link>
-        </li>
-        <li>
-          <Link to={match.url + '/sub2'}>Subpage 2</Link>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <Link to={match.url}>Subpage 1</Link>
+          </li>
+          <li>
+            <Link to={match.url + '/sub2'}>Subpage 2</Link>
+          </li>
+        </ul>
+      </nav>
 
       <Switch>
         <Route path={match.url + '/sub2'} component={SubPage2} />
