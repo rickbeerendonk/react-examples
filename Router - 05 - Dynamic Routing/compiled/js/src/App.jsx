@@ -12,13 +12,13 @@ function App() {
       <>
         <header>
           <h1>App</h1>
-          <ul>
+          <nav>
             {Array.from([1, 2, 3, 4, 5], i => (
-              <li key={i}>
-                <Link to={`/${i}`}>Page {i}</Link>
-              </li>
+              <Link key={i} to={`/${i}`}>
+                Page {i}
+              </Link>
             ))}
-          </ul>
+          </nav>
         </header>
 
         <main>
