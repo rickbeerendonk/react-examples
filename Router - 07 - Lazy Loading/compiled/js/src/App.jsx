@@ -14,17 +14,11 @@ function App() {
       <>
         <header>
           <h1>App</h1>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/page1">Page 1</Link>
-            </li>
-            <li>
-              <Link to="/page2">Page 2</Link>
-            </li>
-          </ul>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/page1">Page 1</Link>
+            <Link to="/page2">Page 2</Link>
+          </nav>
         </header>
 
         <main>
