@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
-    "react-hot-loader": "^4.6.3"
+    "react-hot-loader": "^4.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -20,7 +20,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^0.0.0",

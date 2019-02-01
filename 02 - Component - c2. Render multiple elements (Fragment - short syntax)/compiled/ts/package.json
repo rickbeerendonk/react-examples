@@ -19,6 +19,6 @@
     "react-dom": "^16.8.0-alpha.1"
   },
   "devDependencies": {
-    "typescript": "^3.2.4"
+    "typescript": "^3.3.1"
   }
 }
