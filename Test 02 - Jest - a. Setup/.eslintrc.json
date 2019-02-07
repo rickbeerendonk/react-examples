@@ -9,7 +9,8 @@
   "rules": {
     "indent": [2, 2],
     "quotes": [2, "single"],
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "react-hooks/rules-of-hooks": 2
   },
   "env": {
     "browser": true,
@@ -18,7 +19,7 @@
     "jest": true
   },
   "extends": "eslint:recommended",
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "settings": {
     "react": {
       "version": "16.8.0-alpha.1"
