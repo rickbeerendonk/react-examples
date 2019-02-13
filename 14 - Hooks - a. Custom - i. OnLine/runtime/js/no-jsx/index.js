@@ -29,15 +29,15 @@ function useIsOnLine() {
   return isOnLine;
 }
 
-function Greeting() {
+function App() {
   const isOnLine = useIsOnLine();
   return React.createElement(
     'h1',
     null,
-    'Hello ',
+    'Browser is ',
     isOnLine ? 'OnLine' : 'OffLine',
     '!'
   );
 }
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));
+ReactDOM.render(React.createElement(App), document.getElementById('app'));

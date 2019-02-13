@@ -5,9 +5,9 @@ import React from 'react';
 
 import useIsOnLine from './hooks/online';
 
-function Greeting() {
+function App() {
   const isOnLine = useIsOnLine();
-  return <h1>Hello {isOnLine ? 'OnLine' : 'OffLine'}!</h1>;
+  return <h1>Browser is {isOnLine ? 'OnLine' : 'OffLine'}!</h1>;
 }
 
-export default Greeting;
+export default App;

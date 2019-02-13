@@ -5,15 +5,15 @@ import React from 'react';
 
 import useIsOnLine from './hooks/online';
 
-function Greeting() {
+function App() {
   const isOnLine = useIsOnLine();
   return React.createElement(
     'h1',
     null,
-    'Hello ',
+    'Browser is ',
     isOnLine ? 'OnLine' : 'OffLine',
     '!'
   );
 }
 
-export default Greeting;
+export default App;
