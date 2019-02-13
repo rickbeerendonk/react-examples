@@ -8,20 +8,20 @@ function useIsOnLine() {
   const [isOnLine, setIsOnLine] = React.useState(navigator.onLine);
 
   // Functions to change state
-  function setOnLine() {
+  function handleOnLine() {
     setIsOnLine(true);
   }
-  function setOffLine() {
+  function handleOffLine() {
     setIsOnLine(false);
   }
 
   // Connect event handlers (side-effects)
   React.useEffect(() => {
-    window.addEventListener('online', setOnLine);
-    window.addEventListener('offline', setOffLine);
+    window.addEventListener('online', handleOnLine);
+    window.addEventListener('offline', handleOffLine);
     return () => {
-      window.removeEventListener('online', setOnLine);
-      window.removeEventListener('offline', setOffLine);
+      window.removeEventListener('online', handleOnLine);
+      window.removeEventListener('offline', handleOffLine);
     };
   }, []);
 
