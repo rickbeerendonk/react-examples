@@ -1,12 +1,24 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2017 Rick Beerendonk          !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import GreetingEditor from './GreetingEditor';
+import useMousePosition from './mouse-position-hook';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
+function App() {
+  const mousePosition = useMousePosition();
 
-ReactDOM.render(<GreetingEditor name="World" />, root);
+  return (
+    <React.Fragment>
+      <GreetingEditor name="World" />
+      <hr />
+      <h1>Mouse Position</h1>
+      <p>
+        X: {mousePosition.X} <br />
+        Y: {mousePosition.Y}
+      </p>
+    </React.Fragment>
+  );
+}
+
+export default App;
