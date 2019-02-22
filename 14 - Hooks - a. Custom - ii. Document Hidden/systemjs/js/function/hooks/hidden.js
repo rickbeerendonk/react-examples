@@ -14,7 +14,7 @@ function useIsHidden() {
   React.useEffect(() => {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => {
-      document.addEventListener('visibilitychange', handleVisibilityChange);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
