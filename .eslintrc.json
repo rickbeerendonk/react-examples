@@ -20,12 +20,13 @@
     "react/no-did-mount-set-state": 2,
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
     "no-debugger": 1,
     "semi": [2, "always"]
   },
   "settings": {
     "react": {
-      "version": "16.8.1"
+      "version": "16.8.2"
     }
   }
 }

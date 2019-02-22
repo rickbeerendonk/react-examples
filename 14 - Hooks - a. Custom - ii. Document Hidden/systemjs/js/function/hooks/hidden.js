@@ -16,7 +16,7 @@ function useIsHidden() {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []);
+  }, [handleVisibilityChange]);
 
   // Return current state
   return isHidden;

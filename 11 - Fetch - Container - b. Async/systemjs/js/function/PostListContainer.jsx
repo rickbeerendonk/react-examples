@@ -16,26 +16,27 @@ function PostListContainer() {
   const [isFetching, setIsFetching] = React.useState(false);
 
   React.useEffect(
-    () => {
-      fetchPosts();
-    } /* Wrap async call in {} so it isn't returned */,
+    /* Wrap async call so no Promise is returned */
+    fetchPosts,
     [] /* Do effect only once */
   );
 
-  async function fetchPosts() {
-    setIsFetching(true);
-    try {
-      const response = await fetch('posts.json');
-      if (!response.ok) {
-        throw Error(response.statusText);
+  function fetchPosts() {
+    (async () => {
+      setIsFetching(true);
+      try {
+        const response = await fetch('posts.json');
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        const json = await response.json();
+        setPosts(json);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setIsFetching(false);
       }
-      const json = await response.json();
-      setPosts(json);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setIsFetching(false);
-    }
+    })();
   }
 
   return (

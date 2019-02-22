@@ -14,15 +14,12 @@ export default function() {
   function handleMouseOver(e) {
     setMousePosition({ X: e.pageX, Y: e.pageY });
   }
-  React.useEffect(
-    () => {
-      document.addEventListener('mouseover', handleMouseOver);
-      return () => {
-        document.removeEventListener('mouseover', handleMouseOver);
-      };
-    },
-    [] /* Execute only once */
-  );
+  React.useEffect(() => {
+    document.addEventListener('mouseover', handleMouseOver);
+    return () => {
+      document.removeEventListener('mouseover', handleMouseOver);
+    };
+  }, [handleMouseOver]);
 
   // Return current state
   return mousePosition;
