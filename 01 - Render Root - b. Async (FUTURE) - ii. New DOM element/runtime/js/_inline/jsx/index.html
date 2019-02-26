@@ -8,6 +8,10 @@
 
     <title>Render Root - New DOM Element (jsx) [Inline]</title>
     <link rel="stylesheet" href="../../../../../resources/oblicum.css" />
+    <link
+      rel="stylesheet"
+      href="../../../../resources/oblicum-experimental.css"
+    />
     <script src="../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../../../../../node_modules/@babel/standalone/babel.js"></script>
@@ -17,7 +21,9 @@
       const app = document.createElement('div');
       document.body.appendChild(app);
 
-      ReactDOM.createRoot(app).render(<h1>Hello React {React.version}!</h1>);
+      ReactDOM.unstable_createRoot(app).render(
+        <h1>Hello React {React.version}!</h1>
+      );
     </script>
   </body>
 </html>

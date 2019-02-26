@@ -8,6 +8,10 @@
 
     <title>Render Root - Use Existing DOM Element (jsx) [Inline]</title>
     <link rel="stylesheet" href="../../../../../resources/oblicum.css" />
+    <link
+      rel="stylesheet"
+      href="../../../../../resources/oblicum-experimental.css"
+    />
     <script src="../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../../../../../node_modules/@babel/standalone/babel.js"></script>
@@ -16,7 +20,7 @@
     <div id="app"></div>
 
     <script type="text/babel" data-presets="react">
-      ReactDOM.createRoot(document.getElementById('app')).render(
+      ReactDOM.unstable_createRoot(document.getElementById('app')).render(
         <h1>Hello React {React.version}!</h1>
       );
     </script>
