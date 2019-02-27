@@ -20,7 +20,7 @@ class GreetingEditor extends React.Component<
 
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
+  handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     this.setState({ name: e.currentTarget.value });
   }
   render() {

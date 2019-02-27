@@ -4,7 +4,7 @@
 import React from 'react';
 
 class Greeting extends React.Component {
-  handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
+  handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
 Value: ${e.currentTarget.value}`);

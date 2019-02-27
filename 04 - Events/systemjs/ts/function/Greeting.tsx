@@ -4,7 +4,7 @@
 import React from 'react';
 
 function Greeting(): JSX.Element {
-  function handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
 Value: ${e.currentTarget.value}`);

@@ -16,7 +16,7 @@ class GreetingEditor extends React.Component<
   IGreetingEditorState
 > {
   state = { name: 'World' };
-  handleChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ name: e.currentTarget.value });
   };
   render() {
