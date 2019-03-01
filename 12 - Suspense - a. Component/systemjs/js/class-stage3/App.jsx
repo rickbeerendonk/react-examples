@@ -10,11 +10,11 @@ import AsyncResult from './AsyncResult';
 class App extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
-  state = { isLoading: false };
+  state = { buttonClicked: false };
   load = () => {
     // Perform an update with low priority
     scheduleCallback(() => {
-      this.setState({ isLoading: true });
+      this.setState({ buttonClicked: true });
     });
   };
 
@@ -22,7 +22,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <button onClick={this.load}>Load</button>
-        {this.state.isLoading && (
+        {this.state.buttonClicked && (
           <div>
             <React.Suspense maxDuration={1000} fallback={<Spinner />}>
               <AsyncResult />
