@@ -15,7 +15,6 @@ class Two extends React.Component {
     return (
       <React.Fragment>
         <Three />
-        <Three />
       </React.Fragment>
     );
   }
