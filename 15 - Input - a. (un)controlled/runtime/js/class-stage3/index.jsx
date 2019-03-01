@@ -27,6 +27,8 @@ class HelloMessage extends React.Component {
           Controlled by React:
           <input onChange={this.handleChange} value={this.state.name} />
         </div>
+
+        <div style={{ color: 'darkgray' }}>State = {this.state.name}</div>
       </div>
     );
   }

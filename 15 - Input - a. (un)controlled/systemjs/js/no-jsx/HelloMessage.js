@@ -39,6 +39,13 @@ class HelloMessage extends React.Component {
           onChange: this.handleChange,
           value: this.state.name
         })
+      ),
+
+      React.createElement(
+        'div',
+        { style: { color: 'darkgray' } },
+        'State = ',
+        this.state.name
       )
     );
   }
