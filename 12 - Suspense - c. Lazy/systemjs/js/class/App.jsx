@@ -2,6 +2,8 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
+
+//import Greeting from './Greeting';
 const Greeting = React.lazy(() => import('./Greeting'));
 
 class App extends React.Component {

@@ -3,6 +3,7 @@
 
 import React from 'react';
 
+//import Greeting from './Greeting';
 const Greeting = React.lazy(() => import('./Greeting'));
 
 function App() {
