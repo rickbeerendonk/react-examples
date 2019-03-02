@@ -6,6 +6,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 import SubPage1 from './SubPage1';
 import SubPage2 from './SubPage2';
+import SubPage3 from './SubPage3';
 
 function Page1({ match }) {
   return (
@@ -20,11 +21,15 @@ function Page1({ match }) {
           <li>
             <Link to={match.url + '/sub2'}>Subpage 2</Link>
           </li>
+          <li>
+            <Link to={match.url + '/sub3'}>Subpage 3</Link>
+          </li>
         </ul>
       </nav>
 
       <Switch>
         <Route path={match.url + '/sub2'} component={SubPage2} />
+        <Route path={match.url + '/sub3'} component={SubPage3} />
         <Route path={match.url} component={SubPage1} />
       </Switch>
     </React.Fragment>

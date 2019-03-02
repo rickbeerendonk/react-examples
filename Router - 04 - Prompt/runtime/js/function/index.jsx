@@ -8,24 +8,22 @@ const { HashRouter, Prompt, Route, Link } = ReactRouterDOM;
 function App() {
   return (
     <HashRouter>
-      <>
-        <header>
-          <h1>App</h1>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/page1">Page 1 (with prompt)</Link>
-            <Link to="/page2">Page 2</Link>
-          </nav>
-        </header>
+      <header>
+        <h1>App</h1>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/page1">Page 1 (with prompt)</Link>
+          <Link to="/page2">Page 2</Link>
+        </nav>
+      </header>
 
-        <main>
-          <Route exact path="/" component={Home} />
-          <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
-        </main>
+      <main>
+        <Route exact path="/" component={Home} />
+        <Route path="/page1" component={Page1} />
+        <Route path="/page2" component={Page2} />
+      </main>
 
-        <footer>My copyright</footer>
-      </>
+      <footer>My copyright</footer>
     </HashRouter>
   );
 }
