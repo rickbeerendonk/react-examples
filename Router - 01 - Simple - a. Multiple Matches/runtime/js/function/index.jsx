@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2014 Rick Beerendonk          !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
 
 /* global React, ReactDOM, ReactRouterDOM */
 
