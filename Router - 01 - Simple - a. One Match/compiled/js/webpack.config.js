@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2017 Rick Beerendonk          !*/
 
 /* eslint-disable */
 
@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Router - Simple'
+      title: 'Router - Simple - One Match'
     }),
     new webpack.NamedModulesPlugin()
   ],
