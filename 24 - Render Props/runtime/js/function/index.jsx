@@ -7,16 +7,16 @@
 function MouseOver({ render }) {
   const [mouseIsOver, setMouseIsOver] = React.useState(false);
 
-  function onMouseEnter() {
+  function handleMouseEnter() {
     setMouseIsOver(true);
   }
 
-  function onMouseLeave() {
+  function handleMouseLeave() {
     setMouseIsOver(false);
   }
 
   return (
-    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {/*
         Call the props.render function with what this component knows about the mouse
         (this.state can be removed if state contains more than 1 property):
