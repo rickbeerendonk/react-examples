@@ -2,7 +2,7 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 import React from 'react';
-import { hot } from 'react-hot-loader';
+import { hot } from 'react-hot-loader/root';
 
 import EditBox from './EditBox';
 import Greeting from './Greeting';

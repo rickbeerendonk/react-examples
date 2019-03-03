@@ -2,6 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
 
 import { StyledButton } from './styled';
 
@@ -16,4 +17,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(App);
