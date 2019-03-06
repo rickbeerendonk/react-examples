@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import EditBox from '../src/EditBox';
 import Greeting from '../src/Greeting';
@@ -10,7 +11,9 @@ import GreetingEditor from '../src/GreetingEditor';
 
 storiesOf('Greeting', module)
   .add('without name', () => <Greeting />)
-  .add('with name', () => <Greeting name="Storybook" />);
+  .add('with name', () => <Greeting name="Storybook" />)
+  .addDecorator(withKnobs)
+  .add('knobs', () => <Greeting name={text('Name', 'Storybook')} />);
 
 storiesOf('EditBox', module)
   .add('with value', () => <EditBox value="Test" />)
