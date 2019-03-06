@@ -10,9 +10,9 @@ import GreetingEditor from '../src/GreetingEditor';
 /* global module */
 
 storiesOf('Greeting', module)
+  .addDecorator(withKnobs)
   .add('without name', () => <Greeting />)
   .add('with name', () => <Greeting name="Storybook" />)
-  .addDecorator(withKnobs)
   .add('knobs', () => <Greeting name={text('Name', 'Storybook')} />);
 
 storiesOf('EditBox', module)
