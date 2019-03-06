@@ -1,13 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import Greeting from '../src/Greeting';
 
 /* global module */
 
 storiesOf('Greeting', module)
-  .addDecorator(withKnobs)
   .add('without name', () => <Greeting />, {
     info: {
       text: `
