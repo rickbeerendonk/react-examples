@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "enzyme-to-json": "^3.3.5",
     "react-scripts": "^2.1.5",
-    "react-test-renderer": "^16.8.3"
+    "react-test-renderer": "^16.8.4"
   },
   "scripts": {
     "start": "react-scripts start",
