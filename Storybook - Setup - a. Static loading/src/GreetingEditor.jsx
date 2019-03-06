@@ -7,7 +7,7 @@ import { hot } from 'react-hot-loader/root';
 import EditBox from './EditBox';
 import Greeting from './Greeting';
 
-class GreetingEditor extends React.Component {
+export class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
