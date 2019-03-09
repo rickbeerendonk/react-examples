@@ -9,6 +9,27 @@ function Hello(props) {
   const [count, setCount] = React.useState(1);
   const h1Ref = React.useRef(null);
 
+  React.useLayoutEffect(() => {
+    logEvent(
+      `useLayoutEffect - props: ${JSON.stringify(
+        props
+      )} - state: {count: ${count}} - rendered: ${h1Ref.current.outerHTML}`,
+      'startup'
+    );
+
+    if (props.name === 'B' && count === 1) {
+      logEvent('-- new state (useLayoutEffect) --', 'action');
+      setCount(22222);
+    }
+
+    return () => {
+      logEvent(
+        `useLayoutEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
+        'cleanup'
+      );
+    };
+  });
+
   React.useEffect(() => {
     logEvent(
       `useEffect - props: ${JSON.stringify(
@@ -25,27 +46,6 @@ function Hello(props) {
     return () => {
       logEvent(
         `useEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
-        'cleanup'
-      );
-    };
-  });
-
-  React.useLayoutEffect(() => {
-    logEvent(
-      `useLayoutEffect - props: ${JSON.stringify(
-        props
-      )} - state: {count: ${count}} - rendered: ${h1Ref.current.outerHTML}`,
-      'startup'
-    );
-
-    if (props.name === 'B' && count === 1) {
-      logEvent('-- new state (useLayoutEffect) --', 'action');
-      setCount(2);
-    }
-
-    return () => {
-      logEvent(
-        `useLayoutEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
         'cleanup'
       );
     };
