@@ -4,8 +4,9 @@
 
 ### async
 
-* React.unstable_AsyncComponent
-* React.unstable_AsyncMode
+* [old] React.unstable_AsyncComponent -> React.unstable_AsyncMode
+* [old] React.unstable_AsyncMode -> unstable_ConcurrentMode
+* React.unstable_ConcurrentMode
 
 ### profiler
 
