@@ -12,11 +12,6 @@
 
 * React.unstable_Profiler
 
-### other
-
-* enableGetDerivedStateFromCatch
-* Lifecycle method: getDerivedStateFromCatch
-
 ## ReactDOM
 
 ### async
