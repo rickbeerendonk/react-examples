@@ -38,6 +38,15 @@ Resource:
 
 * ReactDOM.unstable_createPortal (deprecated, removed in 17+)
 
+## Scheduler
+
+* unstable_scheduleCallback
+* unstable_cancelCallback
+* unstable_now
+* unstable_getFirstCallbackNode
+* unstable_pauseExecution
+* unstable_continueExecution
+
 ## ReactTestRenderer
 
 * ReactTestRenderer.unstable_yield
