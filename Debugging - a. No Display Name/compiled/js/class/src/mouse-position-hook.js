@@ -10,16 +10,15 @@ export default function() {
     Y: undefined
   });
 
-  // Function to change state
-  function handleMouseOver(e) {
-    setMousePosition({ X: e.pageX, Y: e.pageY });
-  }
   React.useEffect(() => {
+    function handleMouseOver(e) {
+      setMousePosition({ X: e.pageX, Y: e.pageY });
+    }
     document.addEventListener('mouseover', handleMouseOver);
     return () => {
       document.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [handleMouseOver]);
+  }, []);
 
   React.useDebugValue(
     /* value: */ mousePosition,

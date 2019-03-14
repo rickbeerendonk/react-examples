@@ -10,7 +10,6 @@ export default function useMousePosition() {
     Y: undefined
   });
 
-  // Function to change state
   React.useEffect(() => {
     function handleMouseOver(e) {
       setMousePosition({ X: e.pageX, Y: e.pageY });
