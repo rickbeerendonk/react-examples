@@ -6,14 +6,9 @@ import React from 'react';
 import ColorContext from './color-context';
 
 class Switch extends React.Component {
+  static contextType = ColorContext; // Alternative to using Consumer
   render() {
-    return (
-      <ColorContext.Consumer>
-        {context => (
-          <button onClick={context.handleSwitch}>Switch color</button>
-        )}
-      </ColorContext.Consumer>
-    );
+    return <button onClick={this.context.handleSwitch}>Switch color</button>;
   }
 }
 
