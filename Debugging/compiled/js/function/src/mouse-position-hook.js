@@ -21,6 +21,11 @@ export default function useMousePosition() {
     };
   }, []);
 
+  React.useDebugValue(
+    /* value: */ mousePosition,
+    /* format: */ mp => `(${mp.X}, ${mp.Y})`
+  );
+
   // Return current state
   return mousePosition;
 }
