@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 0 snapshot (react-test-renderer) 1`] = `
+exports[`renders 0 snapshot (enzyme) 1`] = `
 <a
+  className="clickme"
+  href="#"
   onClick={[Function]}
 >
   This link has been clicked 
@@ -10,8 +12,10 @@ exports[`renders 0 snapshot (react-test-renderer) 1`] = `
 </a>
 `;
 
-exports[`renders 1 after click snapshot (react-test-renderer) 1`] = `
+exports[`renders 1 after click snapshot (enzyme) 1`] = `
 <a
+  className="clickme"
+  href="#"
   onClick={[Function]}
 >
   This link has been clicked 

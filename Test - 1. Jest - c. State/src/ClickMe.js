@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './ClickMe.css';
+
 class ClickMe extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ class ClickMe extends React.Component {
   }
   render() {
     return (
-      <a onClick={this.handleClick}>
+      <a className="clickme" href="#" onClick={this.handleClick}>
         This link has been clicked {this.state.count} times
       </a>
     );
