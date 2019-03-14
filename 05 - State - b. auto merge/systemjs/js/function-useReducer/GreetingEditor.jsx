@@ -15,7 +15,10 @@ function reducer(state, action) {
 }
 
 function GreetingEditor() {
-  const [state, dispatch] = React.useReducer(reducer, { name: 'World' });
+  const [state, dispatch] = React.useReducer(reducer, {
+    name: 'World',
+    other: 'More state'
+  });
 
   function handleChange(e) {
     dispatch({
@@ -28,6 +31,7 @@ function GreetingEditor() {
     <React.Fragment>
       <input autoFocus onChange={handleChange} value={state.name} />
       <h1>Hello {state.name}!</h1>
+      <h2>{state.other}</h2>
     </React.Fragment>
   );
 }
