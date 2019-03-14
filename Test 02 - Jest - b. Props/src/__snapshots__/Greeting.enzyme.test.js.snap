@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders hello world snapshot when name is world (enzyme) 1`] = `
+<h1
+  className="greeting"
+>
+  Hello 
+  World
+  !
+</h1>
+`;
