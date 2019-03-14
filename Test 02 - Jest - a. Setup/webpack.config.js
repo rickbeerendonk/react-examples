@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup Webpack, ESLint & Babel'
+      title: 'React Tests with Jest - Setup'
     }),
     new webpack.NamedModulesPlugin()
   ],
