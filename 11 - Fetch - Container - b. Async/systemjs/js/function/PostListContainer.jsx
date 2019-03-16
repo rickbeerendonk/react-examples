@@ -18,7 +18,7 @@ function PostListContainer() {
   React.useEffect(
     /* Wrap async call so no Promise is returned */
     fetchPosts,
-    [] /* Do effect only once */
+    [] /* Do effect only once. Set functions of useState never change.  */
   );
 
   function fetchPosts() {

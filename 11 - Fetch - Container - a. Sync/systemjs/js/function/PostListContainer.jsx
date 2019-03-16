@@ -15,7 +15,10 @@ function PostListContainer() {
   const [error, setError] = React.useState(null);
   const [isFetching, setIsFetching] = React.useState(false);
 
-  React.useEffect(fetchPosts, [] /* Do effect only once */);
+  React.useEffect(
+    fetchPosts,
+    [] /* Do effect only once. Set functions of useState never change. */
+  );
 
   function fetchPosts() {
     setIsFetching(true);
