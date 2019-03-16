@@ -8,6 +8,7 @@ coverage/
 docs/
 lib/
 Issues/
+node_modules_unstable/
 
 #################
 ## npm
