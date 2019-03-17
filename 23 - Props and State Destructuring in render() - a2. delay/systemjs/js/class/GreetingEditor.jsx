@@ -24,7 +24,7 @@ class GreetingEditor extends React.Component {
         <h1>
           {greeting} {name}!
         </h1>
-        <button onClick={() => setTimeout(() => alert(this.state.name), 3000)}>
+        <button onClick={() => setTimeout(() => alert(name), 3000)}>
           Show name
         </button>
       </React.Fragment>
