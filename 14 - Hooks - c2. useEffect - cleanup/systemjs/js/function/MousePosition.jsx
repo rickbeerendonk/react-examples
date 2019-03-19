@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function OnLine() {
+function MousePosition() {
   const [mousePosition, setMousePosition] = React.useState({
     X: undefined,
     Y: undefined
@@ -27,4 +27,4 @@ function OnLine() {
   );
 }
 
-export default OnLine;
+export default MousePosition;
