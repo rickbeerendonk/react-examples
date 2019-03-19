@@ -6,4 +6,9 @@ import ReactDOM from 'react-dom';
 
 import Dangerous from './Dangerous';
 
-ReactDOM.render(<Dangerous />, document.getElementById('app'));
+ReactDOM.render(
+  <React.StrictMode>
+    <Dangerous />
+  </React.StrictMode>,
+  document.getElementById('app')
+);
