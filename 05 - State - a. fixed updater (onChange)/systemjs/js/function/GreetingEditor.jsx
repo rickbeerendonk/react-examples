@@ -4,7 +4,6 @@
 import React from 'react';
 
 function GreetingEditor() {
-  //const [name = 'World', setName] = React.useState();
   const [name, setName] = React.useState('World');
 
   function handleChange(e) {
