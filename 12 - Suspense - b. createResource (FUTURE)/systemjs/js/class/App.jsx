@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   load() {
-    // Perform an update with low priority
+    // Async
     scheduleCallback(() => {
       this.setState({ isLoading: true });
     });

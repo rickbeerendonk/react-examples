@@ -12,7 +12,7 @@ class App extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { buttonClicked: false };
   load = () => {
-    // Perform an update with low priority
+    // Async
     scheduleCallback(() => {
       this.setState({ buttonClicked: true });
     });
