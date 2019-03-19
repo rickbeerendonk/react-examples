@@ -5,11 +5,11 @@ import React from 'react';
 
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
-  const liveName = React.useRef(name);
+  const liveName = React.useRef();
+  liveName.current = name;
 
   function handleChange(e) {
     setName(e.target.value);
-    liveName.current = e.target.value;
   }
 
   function handleClick() {
