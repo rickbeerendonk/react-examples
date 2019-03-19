@@ -17,6 +17,7 @@ function reducer(state, action) {
 }
 
 function GreetingEditor() {
+  // Use 3rd parameter to lazily initialise state:
   const [state, dispatch] = React.useReducer(reducer, undefined, () =>
     slowEcho({ name: 'World' })
   );
