@@ -17,13 +17,13 @@ function reducer(state, action) {
 function GreetingEditor() {
   const [state, dispatch] = React.useReducer(reducer, { name: 'World' });
   const liveName = React.useRef(name);
+  liveName.current = state.name;
 
   function handleChange(e) {
     dispatch({
       type: CHANGE_NAME,
       payload: e.target.value
     });
-    liveName.current = e.target.value;
   }
 
   function handleClick() {
