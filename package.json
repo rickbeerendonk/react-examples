@@ -55,7 +55,7 @@
     "react": "^16.8.4",
     "react-cache": "^2.0.0-alpha.1",
     "react-dom": "^16.8.4",
-    "react-router-dom": "^4.4.0",
+    "react-router-dom": "^5.0.0",
     "react-spring": "^7.2.11",
     "react-transition-group": "^2.6.1",
     "scheduler": "^0.13.4",
