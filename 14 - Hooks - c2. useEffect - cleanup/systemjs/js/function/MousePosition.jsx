@@ -10,6 +10,7 @@ function OnLine() {
   });
 
   React.useEffect(() => {
+    // Default: Handler inside
     function handleMouseOver(e) {
       setMousePosition({ X: e.pageX, Y: e.pageY });
     }
