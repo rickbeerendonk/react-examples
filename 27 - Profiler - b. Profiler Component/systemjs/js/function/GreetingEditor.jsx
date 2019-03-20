@@ -36,9 +36,9 @@ function GreetingEditor() {
       <EditBox onChange={setName} value={name} />
 
       {/* Component(s) measured... */}
-      <React.Profiler id="myProfiler" onRender={myProfilerRendered}>
+      <React.unstable_Profiler id="myProfiler" onRender={myProfilerRendered}>
         <Greeting name={name} />
-      </React.Profiler>
+      </React.unstable_Profiler>
     </React.Fragment>
   );
 }
