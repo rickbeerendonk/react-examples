@@ -16,7 +16,7 @@ function GreetingEditor() {
     const container = containerRef.current;
     const input = document.createElement('input');
     inputRef.current = input;
-    containerRef.current.appendChild(inputRef.current);
+    container.appendChild(inputRef.current);
     return () => {
       container.removeChild(input);
     };
@@ -25,6 +25,7 @@ function GreetingEditor() {
   // Effect 2
   React.useEffect(() => {
     inputRef.current.value = name;
+    //document.querySelector('#container input').value = name;
   }, [name]);
 
   function handleChange(e) {
@@ -35,7 +36,7 @@ function GreetingEditor() {
     <React.Fragment>
       <input autoFocus onChange={handleChange} value={name} />
       <h1>Hello {name}!</h1>
-      <div ref={containerRef} />
+      <div ref={containerRef} id="container" />
     </React.Fragment>
   );
 }
