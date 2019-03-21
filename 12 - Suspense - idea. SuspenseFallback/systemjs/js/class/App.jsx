@@ -36,7 +36,7 @@ class App extends React.Component {
               fallback={<Spinner />}
               fallbackDuration={1000}
             >
-              <AsyncResult duration={1100} />
+              <AsyncResult duration={1200} />
             </SuspenseFallback>
           </div>
         )}

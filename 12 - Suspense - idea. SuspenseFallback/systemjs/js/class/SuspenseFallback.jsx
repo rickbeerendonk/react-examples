@@ -27,15 +27,19 @@ function SuspenseFallback({
     setTimeout(() => setShowFallback(false), fallbackDuration);
   }
 
-  return showFallback ? (
-    fallback
-  ) : (
-    <React.Suspense
-      maxDuration={maxDuration}
-      fallback={<FallbackDummy onShow={handleFallbackShown} />}
-    >
-      {children}
-    </React.Suspense>
+  return (
+    <React.Fragment>
+      {showFallback && fallback}
+      {/* prevent reloading of children */}
+      <div hidden={showFallback}>
+        <React.Suspense
+          maxDuration={maxDuration}
+          fallback={<FallbackDummy onShow={handleFallbackShown} />}
+        >
+          {children}
+        </React.Suspense>
+      </div>
+    </React.Fragment>
   );
 }
 SuspenseFallback.propTypes = {
