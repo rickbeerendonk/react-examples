@@ -18,9 +18,9 @@ function GreetingEditor() {
       <input autoFocus onChange={handleChange} value={name} />
       <h1>
         Hello {name}!{' '}
-        {mousePosition.X && (
+        {mousePosition.x !== undefined && (
           <span>
-            ({mousePosition.X}, {mousePosition.Y})
+            ({mousePosition.x}, {mousePosition.y})
           </span>
         )}
       </h1>
