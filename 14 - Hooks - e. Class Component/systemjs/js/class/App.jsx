@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import ComponentWithHooks from './ComponentWithHooks2';
+import ComponentWithHooks from './ComponentWithHooks3';
 import useIsOnLine from './hooks/online';
 
 class App extends ComponentWithHooks {
@@ -13,6 +13,10 @@ class App extends ComponentWithHooks {
   h1Ref = React.createRef();
   componentDidMount() {
     this.h1Ref.current.innerHTML += ' (added by componentDidMount())';
+  }
+  render() {
+    // Should be ignored
+    return 'test';
   }
   renderWithHooks() {
     const [offLineText] = React.useState('OffLine');
