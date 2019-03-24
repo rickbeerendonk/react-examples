@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-ReactDOM.render(<App browserName="Browser" />, document.getElementById('app'));
+ReactDOM.render(<App prop1="prop1" />, document.getElementById('app'));

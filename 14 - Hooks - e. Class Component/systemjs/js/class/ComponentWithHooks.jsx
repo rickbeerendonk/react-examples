@@ -3,18 +3,27 @@
 
 import React from 'react';
 
-function ComponentWithHooksRender({ render, self }) {
-  return render.apply(self);
+function componentWithHooksRender(WrappedComponent) {
+  function ComponentWithHooksRender({ render, self }) {
+    return render.apply(self);
+  }
+  ComponentWithHooksRender.displayName = `${WrappedComponent.displayName ||
+    WrappedComponent.name ||
+    WrappedComponent.constructor.name ||
+    'Component'}.renderWithHooks`;
+  return ComponentWithHooksRender;
 }
 
 class ComponentWithHooks extends React.Component {
-  render() {
-    return (
-      <ComponentWithHooksRender render={this.renderWithHooks} self={this} />
-    );
-  }
-  renderWithHooks() {
-    return null;
+  constructor(props) {
+    super(props);
+    this.componentWithHooksRender = componentWithHooksRender(this);
+    this.render = function() {
+      const proto = Object.getPrototypeOf(this);
+      return proto.render ? (
+        <this.componentWithHooksRender render={proto.render} self={this} />
+      ) : null;
+    };
   }
 }
 

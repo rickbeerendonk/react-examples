@@ -3,25 +3,38 @@
 
 import React from 'react';
 
-import ComponentWithHooks from './ComponentWithHooks4';
+import ComponentWithHooks from './ComponentWithHooks';
 import useIsOnLine from './hooks/online';
 
 class App extends ComponentWithHooks {
   state = {
-    onLineText: 'OnLine'
+    state1: 'state1'
   };
-  h1Ref = React.createRef();
+  myRef = React.createRef();
   componentDidMount() {
-    this.h1Ref.current.innerHTML += ' (added by componentDidMount())';
+    this.myRef.current.innerHTML += 'Added by lifecycle method';
   }
   render() {
-    const [offLineText] = React.useState('OffLine');
+    const [stateHook1] = React.useState('stateHook1');
     const isOnLine = useIsOnLine();
     return (
-      <h1 ref={this.h1Ref}>
-        {this.props.browserName} is{' '}
-        {isOnLine ? this.state.onLineText : offLineText}!
-      </h1>
+      <ul>
+        <li>
+          <b>Prop:</b> {this.props.prop1}
+        </li>
+        <li>
+          <b>State:</b> {this.state.state1}
+        </li>
+        <li>
+          <b>State Hook:</b> {stateHook1}
+        </li>
+        <li>
+          <b>Custom Hook, Online:</b> {String(isOnLine)}
+        </li>
+        <li ref={this.myRef}>
+          <b>Ref: </b>
+        </li>
+      </ul>
     );
   }
 }
