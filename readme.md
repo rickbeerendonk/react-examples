@@ -2,6 +2,8 @@
 
 Examples for [React](http://facebook.github.io/react) and [ReactJS.NET](http://reactjs.net/).
 
+![](https://img.shields.io/github/license/rickbeerendonk/react-examples.svg)
+
 # How to run?
 
 ## Always 
