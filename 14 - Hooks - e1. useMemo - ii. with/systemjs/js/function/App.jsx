@@ -30,7 +30,9 @@ function App() {
         <button onClick={handleClick}>Change count {count}</button>
       </div>
       <div>
-        <span>{numerator} divided by {denominator} is equal to </span>
+        <span>
+          {numerator} divided by {denominator} is equal to{' '}
+        </span>
         {memoizedResult}.
       </div>
     </React.Fragment>
