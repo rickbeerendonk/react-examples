@@ -6,7 +6,7 @@ import React from 'react';
 import Child from './Child';
 
 function Parent() {
-  const [, setCount] = React.useState(0);
+  const setCount = React.useState(0)[1];
   const handleRerenderClick = () => {
     // Force rerender
     setCount(c => c + 1);
