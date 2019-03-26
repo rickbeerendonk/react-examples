@@ -13,14 +13,14 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "scheduler": "^0.13.4"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "scheduler": "^0.13.5"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/polyfill": "^7.4.0",
-    "@babel/preset-env": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",

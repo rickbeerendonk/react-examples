@@ -20,7 +20,7 @@
   "plugins": ["react"],
   "settings": {
     "react": {
-      "version": "16.8.4"
+      "version": "16.8.5"
     }
   }
 }
