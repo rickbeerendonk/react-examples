@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import EditBox from '../src/EditBox';
+import EditBox from './EditBox';
 
 /* global module */
 

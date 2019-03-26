@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { GreetingEditor } from '../src/GreetingEditor';
+import { GreetingEditor } from './GreetingEditor';
 
 /* global module */
 
