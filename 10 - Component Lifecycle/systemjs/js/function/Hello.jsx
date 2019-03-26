@@ -10,6 +10,7 @@ function Hello(props) {
   const h1Ref = React.useRef(null);
 
   React.useLayoutEffect(() => {
+    const currentH1 = h1Ref.current;
     logEvent(
       `useLayoutEffect - props: ${JSON.stringify(
         props
@@ -24,17 +25,18 @@ function Hello(props) {
 
     return () => {
       logEvent(
-        `useLayoutEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
+        `useLayoutEffect cleanup - rendered: ${currentH1.outerHTML}`,
         'cleanup'
       );
     };
-  });
+  }, [props, count]);
 
   React.useEffect(() => {
+    const currentH1 = h1Ref.current;
     logEvent(
       `useEffect - props: ${JSON.stringify(
         props
-      )} - state: {count: ${count}} - rendered: ${h1Ref.current.outerHTML}`,
+      )} - state: {count: ${count}} - rendered: ${currentH1.outerHTML}`,
       'startup'
     );
 
@@ -45,11 +47,11 @@ function Hello(props) {
 
     return () => {
       logEvent(
-        `useEffect cleanup - rendered: ${h1Ref.current.outerHTML}`,
+        `useEffect cleanup - rendered: ${currentH1.outerHTML}`,
         'cleanup'
       );
     };
-  });
+  }, [props, count]);
 
   logEvent(
     `render() - props: ${JSON.stringify(props)} - state: {count: ${count}}`,
