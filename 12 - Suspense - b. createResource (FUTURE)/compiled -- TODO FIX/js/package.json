@@ -13,10 +13,10 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-cache": "^2.0.0-alpha.1",
-    "react-dom": "^16.8.5",
-    "scheduler": "^0.13.5"
+    "react-dom": "^16.8.6",
+    "scheduler": "^0.13.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

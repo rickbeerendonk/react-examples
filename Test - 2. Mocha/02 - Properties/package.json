@@ -12,8 +12,8 @@
     "test": "mocha --require @babel/register"
   },
   "dependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -23,6 +23,6 @@
     "@babel/register": "^7.4.0",
     "expect": "^23.6.0",
     "mocha": "^5.2.0",
-    "react-test-renderer": "^16.8.5"
+    "react-test-renderer": "^16.8.6"
   }
 }
