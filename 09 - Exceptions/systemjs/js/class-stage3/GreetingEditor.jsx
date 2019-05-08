@@ -8,6 +8,7 @@ class GreetingEditor extends React.Component {
   // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
   state = { name: 'World' };
   handleChange = e => {
+    //throw Error('wrong!');
     const value = e.target.value;
     this.setState(() => ({ name: value }));
   };

@@ -12,6 +12,7 @@ function GreetingEditor() {
   });
 
   function handleChange(e) {
+    //throw Error('wrong!');
     setName(e.target.value);
   }
 

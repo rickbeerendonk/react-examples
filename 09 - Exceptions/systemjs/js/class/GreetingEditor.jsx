@@ -12,6 +12,7 @@ class GreetingEditor extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
+    //throw Error('wrong!');
     const value = e.target.value;
     this.setState(() => ({ name: value }));
   }
