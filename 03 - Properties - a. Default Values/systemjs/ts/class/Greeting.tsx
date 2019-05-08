@@ -4,7 +4,7 @@
 import React from 'react';
 
 interface IGreetingProps {
-  name: string;
+  name?: string;
 }
 
 class Greeting extends React.Component<IGreetingProps> {
