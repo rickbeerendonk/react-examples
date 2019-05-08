@@ -8,7 +8,7 @@ function App() {
 
   function handleKeyUp(e) {
     e.persist();
-    setPressed(pressed => pressed + e.key);
+    setPressed(p => p + e.key);
   }
 
   return (
