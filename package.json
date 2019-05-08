@@ -29,7 +29,7 @@
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
-    "@types/react": "^16.8.16",
+    "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
     "@types/systemjs": "^0.20.6",
     "babel-eslint": "^10.0.1",
