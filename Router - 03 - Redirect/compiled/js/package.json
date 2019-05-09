@@ -1,6 +1,6 @@
 {
-  "name": "router-no-match",
-  "description": "Using React Router: No Match",
+  "name": "router-redirect",
+  "description": "Using React Router: Redirect",
   "version": "1.0.0",
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
