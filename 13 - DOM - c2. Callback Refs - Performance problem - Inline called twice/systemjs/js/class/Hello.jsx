@@ -15,7 +15,7 @@ class Hello extends React.Component {
     this.setSecondCallbackRef = this.setSecondCallbackRef.bind(this);
   }
   setSecondCallbackRef(ref) {
-    console.log('callback ref 2nd: ' + new Date());
+    console.log('callback ref 2nd: ' + new Date(), ref);
     this.myH2 = ref;
   }
   componentDidMount() {
@@ -27,7 +27,7 @@ class Hello extends React.Component {
       <React.Fragment>
         <h1
           ref={ref => {
-            console.log('callback ref 1st: ' + new Date());
+            console.log('callback ref 1st: ' + new Date(), ref);
             this.myH1 = ref;
           }}
         >
