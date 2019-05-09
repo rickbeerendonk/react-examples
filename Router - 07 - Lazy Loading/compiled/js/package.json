@@ -1,6 +1,6 @@
 {
-  "name": "router-simple",
-  "description": "Using React Router: Simple",
+  "name": "router-lazy-loading",
+  "description": "Using React Router: Lazy Loading",
   "version": "1.0.0",
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
