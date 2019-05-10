@@ -12,11 +12,7 @@ class Two extends React.Component {
     return false;
   }
   render() {
-    return (
-      <React.Fragment>
-        <Three />
-      </React.Fragment>
-    );
+    return <Three />;
   }
 }
 
