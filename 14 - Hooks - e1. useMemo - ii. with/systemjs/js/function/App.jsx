@@ -11,7 +11,7 @@ function App() {
   const numerator = Math.round(count / 3);
   const denominator = 2;
 
-  // Slow operation, so we don use useMemo() to memoize the result:
+  // Slow operation, so we do use useMemo() to memoize the result:
   const memoizedResult = React.useMemo(
     () => slowDivision(numerator, denominator),
     [numerator, denominator]
