@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import ColorContext from './color-context';
+import ColorContext from './ColorContext';
 
 function Switch() {
   const { handleSwitch } = React.useContext(ColorContext);

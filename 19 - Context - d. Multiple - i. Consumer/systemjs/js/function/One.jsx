@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import ColorContext from './color-context';
+import ColorContext from './ColorContext';
 import Two from './Two';
 
 function One(props) {

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import BackgroundContext from './background-context';
+import BackgroundContext from './BackgroundContext';
 import Three from './Three';
 
 class Two extends React.Component {

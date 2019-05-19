@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import ColorContext from './color-context';
+import ColorContext from './ColorContext';
 
 class Three extends React.PureComponent {
   render() {

@@ -3,8 +3,8 @@
 
 import React from 'react';
 
-import BackgroundContext from './background-context';
-import ColorContext from './color-context';
+import BackgroundContext from './BackgroundContext';
+import ColorContext from './ColorContext';
 
 function Three() {
   const background = React.useContext(BackgroundContext);
