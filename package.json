@@ -57,7 +57,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
-    "react-spring": "^8.0.20",
+    "react-spring": "^7.2.11",
     "react-transition-group": "^4.0.1",
     "redux": "^4.0.1",
     "scheduler": "0.13.0",
