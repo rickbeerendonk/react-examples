@@ -17,16 +17,20 @@ SystemJS.config({
     'npm:': '../../../../node_modules/'
   },
   map: {
+    '@babel': 'npm:@babel',
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-spring': 'npm:react-spring/web.umd.js'
+    'react-spring/renderprops': 'npm:react-spring/renderprops.js'
   },
   packages: {
     '.': {
       defaultExtension: 'jsx'
+    },
+    '@babel': {
+      defaultExtension: 'js'
     }
   },
   transpiler: 'plugin-babel'

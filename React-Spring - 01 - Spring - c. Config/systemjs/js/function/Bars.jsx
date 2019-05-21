@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
-import { Spring, config } from 'react-spring';
+import { Spring, config } from 'react-spring/renderprops';
 
 function Bars() {
   return (

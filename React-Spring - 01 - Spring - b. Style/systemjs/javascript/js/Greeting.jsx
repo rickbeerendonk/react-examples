@@ -2,7 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import React from 'react';
-import { Spring } from 'react-spring';
+import { Spring } from 'react-spring/renderprops';
 
 function Greeting() {
   return (
