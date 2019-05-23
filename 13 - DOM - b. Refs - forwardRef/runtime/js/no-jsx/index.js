@@ -17,7 +17,7 @@ function App() {
 
   React.useLayoutEffect(() => {
     // myH1.current contains a reference to the real DOM node.
-    myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
+    myGreeting.current.innerHTML = 'Hello <u>React</u>!!!';
   });
 
   return React.createElement(Greeting, {

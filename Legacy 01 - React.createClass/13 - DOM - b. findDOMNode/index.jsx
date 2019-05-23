@@ -6,7 +6,7 @@
 
 var HelloWorld = createReactClass({
   componentDidMount: function() {
-    ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
+    ReactDOM.findDOMNode(this).innerHTML = 'Hello <u>React</u>!!!';
   },
   render: function() {
     return <h1>Hello World!</h1>;

@@ -6,7 +6,7 @@
 
 class HelloWorld extends React.Component {
   componentDidMount() {
-    ReactDOM.findDOMNode(this).innerHTML = 'Hello <i>React</i>!!!';
+    ReactDOM.findDOMNode(this).innerHTML = 'Hello <u>React</u>!!!';
   }
   render() {
     return <h1>Hello World!</h1>;

@@ -21,7 +21,7 @@ class App extends React.Component {
     this.myGreeting = React.createRef();
   }
   componentDidMount() {
-    this.myGreeting.current.innerHTML = 'Hi <i>React</i>!!!';
+    this.myGreeting.current.innerHTML = 'Hi <u>React</u>!!!';
   }
   render() {
     return (

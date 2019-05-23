@@ -16,7 +16,7 @@ class App extends React.Component {
     this.myGreeting = React.createRef();
   }
   componentDidMount() {
-    this.myGreeting.current.innerHTML = 'Hello <i>React</i>!!!';
+    this.myGreeting.current.innerHTML = 'Hello <u>React</u>!!!';
   }
   render() {
     return <Greeting name="World" ref={this.myGreeting} />;

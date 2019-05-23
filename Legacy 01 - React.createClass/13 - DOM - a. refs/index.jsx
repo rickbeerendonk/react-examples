@@ -5,7 +5,7 @@
 
 var HelloWorld = createReactClass({
   componentDidMount: function() {
-    this.myH1.innerHTML = 'Hello <i>React</i>!!!';
+    this.myH1.innerHTML = 'Hello <u>React</u>!!!';
   },
   render: function() {
     return <h1 ref={ref => (this.myH1 = ref)}>Hello World!</h1>;

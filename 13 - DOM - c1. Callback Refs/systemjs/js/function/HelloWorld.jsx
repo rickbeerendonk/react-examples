@@ -5,7 +5,7 @@ import React from 'react';
 
 function HelloWorld() {
   return (
-    <h1 ref={ref => (ref.innerHTML = 'Hello <i>React</i>!!!')}>Hello World!</h1>
+    <h1 ref={ref => (ref.innerHTML = 'Hello <u>React</u>!!!')}>Hello World!</h1>
   );
 }
 
