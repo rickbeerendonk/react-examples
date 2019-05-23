@@ -6,7 +6,7 @@ import React from 'react';
 class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: ['train'] };
+    this.state = { selected: ['bike', 'train'] };
 
     this.handleChange = this.handleChange.bind(this);
   }
