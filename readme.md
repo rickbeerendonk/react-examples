@@ -21,7 +21,7 @@ Install dependencies first:
 
 ## Command Line / Terminal
 
-1. Run `npm run openserver`. Now the server will run and the browser will open.
+1. Run `npm run openserver` (or, if that fails, `npm run openserver-alt`). Now the server will run and the browser will open.
 2. In the browser, browse to the folder of the example you want to run and it will open automatically.
 
 ## Licence

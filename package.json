@@ -23,6 +23,7 @@
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8040",
+    "openserver-alt": "npx http-server -o",
     "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,ts,tsx}'",
