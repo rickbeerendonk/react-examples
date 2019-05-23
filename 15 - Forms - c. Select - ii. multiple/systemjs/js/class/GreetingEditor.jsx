@@ -11,12 +11,9 @@ class GreetingEditor extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    const val = e.target.value;
-    if (typeof val === Array) {
-      this.setState({ selected: val });
-    } else {
-      this.setState({ selected: [val] });
-    }
+    this.setState({
+      selected: [...e.target.options].filter(o => o.selected).map(o => o.value)
+    });
   }
   render() {
     return (
