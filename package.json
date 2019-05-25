@@ -22,11 +22,9 @@
     "clean": "rimraf node_modules",
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
-    "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8040",
-    "openserver-alt": "npx http-server -o",
-    "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,ts,tsx}'",
+    "start": "node \"./Util - 01 - Custom servers/server.js\" 8040",
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
@@ -49,7 +47,6 @@
     "@babel/standalone": "^7.4.5",
     "create-react-class": "15.6.3",
     "htmltojsx": "^0.3.0",
-    "http-server": "0.11.1",
     "mime-types": "^2.1.24",
     "plugin-typescript": "8.0.0",
     "prop-types": "^15.7.2",
@@ -62,6 +59,7 @@
     "react-transition-group": "^4.0.1",
     "redux": "^4.0.1",
     "scheduler": "0.13.0",
+    "serve": "^11.0.0",
     "styled-components": "^4.2.0",
     "systemjs": "^0.21.6",
     "systemjs-plugin-babel": "^0.0.25",

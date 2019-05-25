@@ -14,8 +14,8 @@
       "args": ["install"]
     },
     {
-      "taskName": "openserver",
-      "args": ["run", "openserver", "--", "${fileDirname}"],
+      "taskName": "start",
+      "args": ["run", "start", "--", "${fileDirname}"],
       "isBackground": true,
       "isBuildCommand": true
     },

@@ -1,10 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* global process, require */
+/* global __dirname, process, require */
 /* eslint-disable no-console */
 
 const childProcess = require('child_process');
+const path = require('path');
 
 const portHttp = process.argv[2] || 8080;
 //const portRest = +portHttp + 1;
@@ -24,7 +25,8 @@ if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
 }
 
 const serverUri = `http://localhost:${portHttp}`;
-const totalUri = `${serverUri}${extraUri}`;
+const totalUri = `${serverUri}${extraUri}${extraUri[extraUri.length - 1] !==
+  '/' && '/'}`;
 
 //console.log('serverUri: ' + serverUri);
 //console.log('extraPath: ' + extraPath);
@@ -32,10 +34,16 @@ const totalUri = `${serverUri}${extraUri}`;
 //console.log('totalUri: ' + totalUri);
 
 // Start server
-// See: https://github.com/indexzero/http-server/
-/*const httpChild =*/ childProcess.spawn(
-  'http-server',
-  ['.', '-p', portHttp, '-c-1'],
+// See: https://www.npmjs.com/package/serve
+/* const httpChild = */ childProcess.spawn(
+  'serve',
+  [
+    '--listen',
+    portHttp,
+    '--config',
+    //'".\\Util - 01 - Custom servers\\serve.json"'
+    `"${path.join(__dirname, 'serve.json')}"`
+  ],
   { shell: true, stdio: 'inherit' }
 );
 

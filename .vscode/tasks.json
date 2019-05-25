@@ -9,9 +9,9 @@
       "problemMatcher": []
     },
     {
-      "label": "Open Server",
+      "label": "Start",
       "type": "shell",
-      "command": "npm run openserver -- \"${fileDirname}\"",
+      "command": "npm start -- \"${fileDirname}\"",
       "problemMatcher": [],
       "group": {
         "kind": "build",
