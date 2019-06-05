@@ -35,7 +35,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "husky": "^2.3.0",
+    "husky": "^2.4.0",
     "prettier": "^1.17.1",
     "rimraf": "^2.6.3"
   },
@@ -54,15 +54,15 @@
     "react-cache": "^2.0.0-alpha.1",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
-    "react-router-dom": "^5.0.0",
-    "react-spring": "^8.0.20",
-    "react-transition-group": "^4.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-spring": "^8.0.21",
+    "react-transition-group": "^4.1.0",
     "redux": "^4.0.1",
     "scheduler": "0.13.0",
     "serve": "^11.0.1",
-    "styled-components": "^4.2.0",
+    "styled-components": "^4.2.1",
     "systemjs": "^0.21.6",
     "systemjs-plugin-babel": "^0.0.25",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.1"
   }
 }
