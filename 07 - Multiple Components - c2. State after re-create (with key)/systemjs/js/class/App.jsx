@@ -5,6 +5,9 @@ import React from 'react';
 
 import ClickMe from './ClickMe';
 
+// Observe that after clicking the button, the ClickMe component
+// is recreated, due to having a different key, with its initial state.
+
 class App extends React.Component {
   constructor(props) {
     super(props);

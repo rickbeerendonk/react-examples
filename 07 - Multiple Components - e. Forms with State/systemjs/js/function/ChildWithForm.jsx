@@ -4,6 +4,7 @@
 import React from 'react';
 
 function ChildWithForm(props) {
+  // It is not unusual to have local state in components that contain a form.
   const [name, setName] = React.useState('');
 
   function handleSubmit(e) {
