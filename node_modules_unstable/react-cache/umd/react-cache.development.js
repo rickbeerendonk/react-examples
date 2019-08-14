@@ -21,35 +21,37 @@
  * paths. Removing the logging code for production environments will keep the
  * same logic and follow the same code paths.
  */
-
 var warningWithoutStack = function () {};
 
 {
   warningWithoutStack = function (condition, format) {
-    for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
       args[_key - 2] = arguments[_key];
     }
 
     if (format === undefined) {
       throw new Error('`warningWithoutStack(condition, format, ...args)` requires a warning ' + 'message argument');
     }
+
     if (args.length > 8) {
       // Check before the condition to catch violations early.
       throw new Error('warningWithoutStack() currently supports at most 8 arguments.');
     }
+
     if (condition) {
       return;
     }
+
     if (typeof console !== 'undefined') {
       var argsWithFormat = args.map(function (item) {
         return '' + item;
       });
-      argsWithFormat.unshift('Warning: ' + format);
-
-      // We intentionally don't use spread (or .apply) directly because it
+      argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
       // breaks IE9: https://github.com/facebook/react/issues/13610
+
       Function.prototype.apply.call(console.error, console, argsWithFormat);
     }
+
     try {
       // --- Welcome to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
@@ -65,19 +67,15 @@ var warningWithoutStack = function () {};
 
 var warningWithoutStack$1 = warningWithoutStack;
 
-// Intentionally not named imports because Rollup would
 // use dynamic dispatch for CommonJS interop named imports.
+
 var scheduleCallback = Scheduler.unstable_scheduleCallback;
 var IdlePriority = Scheduler.unstable_IdlePriority;
-
-
 function createLRU(limit) {
-  var LIMIT = limit;
+  var LIMIT = limit; // Circular, doubly-linked list
 
-  // Circular, doubly-linked list
   var first = null;
   var size = 0;
-
   var cleanUpIsScheduled = false;
 
   function scheduleCleanUp() {
@@ -99,28 +97,28 @@ function createLRU(limit) {
     if (first !== null) {
       var resolvedFirst = first;
       var last = resolvedFirst.previous;
-      while (size > targetSize && last !== null) {
-        var _onDelete = last.onDelete;
-        var _previous = last.previous;
-        last.onDelete = null;
 
-        // Remove from the list
+      while (size > targetSize && last !== null) {
+        var onDelete = last.onDelete;
+        var previous = last.previous;
+        last.onDelete = null; // Remove from the list
+
         last.previous = last.next = null;
+
         if (last === first) {
           // Reached the head of the list.
           first = last = null;
         } else {
-          first.previous = _previous;
-          _previous.next = first;
-          last = _previous;
+          first.previous = previous;
+          previous.next = first;
+          last = previous;
         }
 
-        size -= 1;
-
-        // Call the destroy method after removing the entry from the list. If it
+        size -= 1; // Call the destroy method after removing the entry from the list. If it
         // throws, the rest of cache will not be deleted, but it will be in a
         // valid state.
-        _onDelete();
+
+        onDelete();
       }
     }
   }
@@ -132,6 +130,7 @@ function createLRU(limit) {
       next: null,
       previous: null
     };
+
     if (first === null) {
       entry.previous = entry.next = entry;
       first = entry;
@@ -140,12 +139,11 @@ function createLRU(limit) {
       var last = first.previous;
       last.next = entry;
       entry.previous = last;
-
       first.previous = entry;
       entry.next = first;
-
       first = entry;
     }
+
     size += 1;
     return entry;
   }
@@ -156,29 +154,28 @@ function createLRU(limit) {
 
   function access(entry) {
     var next = entry.next;
+
     if (next !== null) {
       // Entry already cached
       var resolvedFirst = first;
+
       if (first !== entry) {
         // Remove from current position
-        var _previous2 = entry.previous;
-        _previous2.next = next;
-        next.previous = _previous2;
+        var previous = entry.previous;
+        previous.next = next;
+        next.previous = previous; // Append to head
 
-        // Append to head
         var last = resolvedFirst.previous;
         last.next = entry;
         entry.previous = last;
-
         resolvedFirst.previous = entry;
         entry.next = resolvedFirst;
-
         first = entry;
       }
-    } else {
-      // Cannot access a deleted entry
+    } else {// Cannot access a deleted entry
       // TODO: Error? Warning?
     }
+
     scheduleCleanUp();
     return entry.value;
   }
@@ -199,14 +196,15 @@ function createLRU(limit) {
 var Pending = 0;
 var Resolved = 1;
 var Rejected = 2;
-
 var ReactCurrentDispatcher = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentDispatcher;
 
 function readContext(Context, observedBits) {
   var dispatcher = ReactCurrentDispatcher.current;
+
   if (dispatcher === null) {
     throw new Error('react-cache: read and preload may only be called from within a ' + "component's render. They are not supported in event handlers or " + 'lifecycle methods.');
   }
+
   return dispatcher.readContext(Context, observedBits);
 }
 
@@ -214,23 +212,25 @@ function identityHashFn(input) {
   {
     !(typeof input === 'string' || typeof input === 'number' || typeof input === 'boolean' || input === undefined || input === null) ? warningWithoutStack$1(false, 'Invalid key type. Expected a string, number, symbol, or boolean, ' + 'but instead received: %s' + '\n\nTo use non-primitive values as keys, you must pass a hash ' + 'function as the second argument to createResource().', input) : void 0;
   }
+
   return input;
 }
 
 var CACHE_LIMIT = 500;
 var lru = createLRU(CACHE_LIMIT);
-
 var entries = new Map();
-
 var CacheContext = React.createContext(null);
 
 function accessResult(resource, fetch, input, key) {
   var entriesForResource = entries.get(resource);
+
   if (entriesForResource === undefined) {
     entriesForResource = new Map();
     entries.set(resource, entriesForResource);
   }
+
   var entry = entriesForResource.get(key);
+
   if (entry === undefined) {
     var thenable = fetch(input);
     thenable.then(function (value) {
@@ -260,8 +260,10 @@ function accessResult(resource, fetch, input, key) {
 
 function deleteEntry(resource, key) {
   var entriesForResource = entries.get(resource);
+
   if (entriesForResource !== undefined) {
     entriesForResource.delete(key);
+
     if (entriesForResource.size === 0) {
       entries.delete(resource);
     }
@@ -270,7 +272,6 @@ function deleteEntry(resource, key) {
 
 function unstable_createResource(fetch, maybeHashInput) {
   var hashInput = maybeHashInput !== undefined ? maybeHashInput : identityHashFn;
-
   var resource = {
     read: function (input) {
       // react-cache currently doesn't rely on context, but it may in the
@@ -278,22 +279,26 @@ function unstable_createResource(fetch, maybeHashInput) {
       readContext(CacheContext);
       var key = hashInput(input);
       var result = accessResult(resource, fetch, input, key);
+
       switch (result.status) {
         case Pending:
           {
             var suspender = result.value;
             throw suspender;
           }
+
         case Resolved:
           {
-            var _value = result.value;
-            return _value;
+            var value = result.value;
+            return value;
           }
+
         case Rejected:
           {
             var error = result.value;
             throw error;
           }
+
         default:
           // Should be unreachable
           return undefined;
@@ -309,7 +314,6 @@ function unstable_createResource(fetch, maybeHashInput) {
   };
   return resource;
 }
-
 function unstable_setGlobalCacheLimit(limit) {
   lru.setLimit(limit);
 }
