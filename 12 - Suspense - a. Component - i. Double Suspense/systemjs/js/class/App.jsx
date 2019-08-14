@@ -30,7 +30,7 @@ class App extends React.Component {
         {this.state.buttonClicked && (
           <div>
             <React.Suspense fallback={<Spinner />}>
-              <React.Suspense maxDuration={1000}>
+              <React.Suspense>
                 <AsyncResult />
               </React.Suspense>
             </React.Suspense>
