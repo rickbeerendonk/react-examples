@@ -10,7 +10,12 @@ class LastUpdate extends React.Component {
     }, 2000);
   }
   render() {
-    return <h1>Last update: {new Date().toString() /* Side effect, don't do this in render() */}</h1>;
+    return (
+      <h1>
+        Last update:{' '}
+        {new Date().toString() /* Side effect, don't do this in render() */}
+      </h1>
+    );
   }
 }
 
