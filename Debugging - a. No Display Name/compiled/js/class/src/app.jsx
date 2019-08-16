@@ -6,6 +6,8 @@
 import React from 'react';
 import GreetingEditor from './GreetingEditor';
 import useMousePosition from './mouse-position-hook';
+import Parent from './Parent';
+import Child from './Child';
 
 export default function() {
   const mousePosition = useMousePosition();
@@ -19,6 +21,10 @@ export default function() {
         X: {mousePosition.X} <br />
         Y: {mousePosition.Y}
       </p>
+      <hr />
+      <Parent>
+        <Child />
+      </Parent>
     </React.Fragment>
   );
 }
