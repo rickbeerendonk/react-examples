@@ -11,24 +11,24 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-hot-loader": "^4.12.10",
+    "react-hot-loader": "^4.12.12",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@hot-loader/react-dom": "^16.8.6",
+    "@hot-loader/react-dom": "^16.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
-    "core-js": "^3.2.0",
+    "core-js": "^3.2.1",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-react": "^7.14.3",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
     "build": "webpack",

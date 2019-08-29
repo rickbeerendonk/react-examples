@@ -11,30 +11,30 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-hot-loader": "^4.12.10"
+    "react-hot-loader": "^4.12.12"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@hot-loader/react-dom": "^16.8.6",
-    "@storybook/addon-actions": "^5.1.10",
-    "@storybook/addon-info": "^5.1.10",
-    "@storybook/addon-knobs": "^5.1.10",
-    "@storybook/react": "^5.1.10",
+    "@hot-loader/react-dom": "^16.9.0",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "babel-loader": "^8.0.6",
-    "core-js": "^3.2.0",
+    "core-js": "^3.2.1",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-react": "^7.14.3",
     "html-webpack-plugin": "^3.2.0",
     "prop-types": "^15.7.2",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.1",
     "style-loader": "^0.23.1",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
     "build": "npm run clean && webpack --progress",
