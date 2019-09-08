@@ -5,13 +5,14 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'bundle.js'
+    filename: 'bundle.[hash:8].js'
   },
   devtool: 'source-map',
   devServer: {
@@ -22,18 +23,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.jsx?$/i,
         use: 'babel-loader',
         exclude: /node_modules|packages/
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },
   plugins: [
+    new CopyWebpackPlugin([{ from: 'public' }]),
     new HtmlWebpackPlugin({
+      template: './public/index.html',
       title: 'Setup Webpack & Babel'
     }),
     new webpack.NamedModulesPlugin()
