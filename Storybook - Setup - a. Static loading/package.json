@@ -9,19 +9,19 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-hot-loader": "^4.12.12"
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-hot-loader": "^4.12.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@hot-loader/react-dom": "^16.9.0",
-    "@storybook/addon-actions": "^5.1.11",
-    "@storybook/addon-info": "^5.1.11",
-    "@storybook/addon-knobs": "^5.1.11",
-    "@storybook/react": "^5.1.11",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-info": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "babel-loader": "^8.0.6",
     "core-js": "^3.2.1",
     "css-loader": "^2.1.1",
@@ -32,9 +32,9 @@
     "prop-types": "^15.7.2",
     "rimraf": "^2.7.1",
     "style-loader": "^0.23.1",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
     "build": "npm run clean && webpack --progress",
