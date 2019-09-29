@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM, ReactRouterDOM */
 
-const { HashRouter, Route, Link } = ReactRouterDOM;
+const { HashRouter, Route, Link, useParams } = ReactRouterDOM;
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
 
       <main>
         <Route path="/:id" component={Page} />
+        <Route path="/:id" component={PageWithHooks} />
       </main>
 
       <footer>My copyright</footer>
@@ -30,6 +31,11 @@ function App() {
 
 function Page({ match }) {
   return <h2>Page {match.params.id}</h2>;
+}
+
+function PageWithHooks() {
+  const { id } = useParams();
+  return <h2>Page {id} - with hooks</h2>;
 }
 
 const root = document.createElement('div');

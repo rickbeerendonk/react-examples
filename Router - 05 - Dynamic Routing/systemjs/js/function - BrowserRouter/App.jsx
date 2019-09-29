@@ -4,7 +4,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-import Page from './Page';
+import Page, { PageWithHooks } from './Page';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
 
       <main>
         <Route path="/:id" component={Page} />
+        <Route path="/:id" component={PageWithHooks} />
       </main>
 
       <footer>My copyright</footer>
