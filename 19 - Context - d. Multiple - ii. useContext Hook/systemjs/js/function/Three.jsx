@@ -7,10 +7,10 @@ import BackgroundContext from './BackgroundContext';
 import ColorContext from './ColorContext';
 
 function Three() {
-  const background = React.useContext(BackgroundContext);
+  const { color: background } = React.useContext(BackgroundContext);
   const { color } = React.useContext(ColorContext);
 
-  return <h1 style={{ background: background.color, color }}>Three</h1>;
+  return <h1 style={{ background, color }}>Three</h1>;
 }
 
 export default Three;
