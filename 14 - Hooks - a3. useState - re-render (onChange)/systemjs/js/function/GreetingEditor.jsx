@@ -15,6 +15,9 @@ function removeDuplicates(s) {
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
+  /* eslint no-console:"off" */
+  console.log('render(): ', name);
+
   function handleChange(e) {
     setName(removeDuplicates(e.target.value));
   }
