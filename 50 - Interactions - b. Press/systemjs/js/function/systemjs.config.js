@@ -12,8 +12,8 @@ SystemJS.config({
   map: {
     react: 'npm_unstable:react/umd/react.development.js',
     'react-dom': 'npm_unstable:react-dom/umd/react-dom.development.js',
-    'react-interactions/input':
-      'npm_unstable:react-interactions/umd/react-interactions-events/input.development.js',
+    'react-interactions/press':
+      'npm_unstable:react-interactions/umd/react-interactions-events/press-legacy.development.js',
 
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'

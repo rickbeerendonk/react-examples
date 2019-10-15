@@ -2,10 +2,10 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
-import ReactInteractions from 'react-interactions';
+import Input from 'react-interactions/input';
 
 // Workaround for not being able to do "import { useInput } from..."
-const useInput = ReactInteractions.useInput;
+const useInput = Input.useInput;
 
 function Greeting() {
   const inputListener = useInput({
