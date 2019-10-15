@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import ColorContext from './ColorContext';
+import ColorContext from './color-context';
 
 function Greeting() {
   return (
