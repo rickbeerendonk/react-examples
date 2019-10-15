@@ -7,7 +7,7 @@ import Press from 'react-interactions/press';
 /* eslint no-console:"off" */
 console.log(Press);
 
-// Workaround for not being able to do "import { usePress } from..."
+// Workaround for not being able to do "import { ... } from..."
 const useState = React.useState;
 const usePress = Press.usePress;
 

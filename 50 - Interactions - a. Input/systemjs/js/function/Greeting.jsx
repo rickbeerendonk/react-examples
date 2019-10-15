@@ -4,7 +4,7 @@
 import React from 'react';
 import Input from 'react-interactions/input';
 
-// Workaround for not being able to do "import { useInput } from..."
+// Workaround for not being able to do "import { ... } from..."
 const useInput = Input.useInput;
 
 function Greeting() {
