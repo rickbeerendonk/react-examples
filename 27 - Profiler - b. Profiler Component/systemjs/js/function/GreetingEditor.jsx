@@ -17,16 +17,17 @@ function GreetingEditor() {
     actualTime,
     baseTime,
     startTime,
-    commitTime
+    commitTime,
+    interactions
   ) {
-    // source: https://github.com/reactjs/rfcs/pull/51
     console.group('Profiler');
-    console.log('ID: ' + id);
-    console.log('Phase (mount|update): ' + phase);
-    console.log('Actual Time: ' + actualTime);
-    console.log('Base Time: ' + baseTime);
-    console.log('Start Time: ' + startTime);
-    console.log('Commit Time: ' + commitTime);
+    console.log('ID: ', id);
+    console.log('Phase (mount|update): ', phase);
+    console.log('Actual Time: ', actualTime);
+    console.log('Base Time: ', baseTime);
+    console.log('Start Time: ', startTime);
+    console.log('Commit Time: ', commitTime);
+    console.log('Interactions (empty): ', JSON.stringify(interactions));
     console.groupEnd();
   }
 
@@ -36,9 +37,9 @@ function GreetingEditor() {
       <EditBox onChange={setName} value={name} />
 
       {/* Component(s) measured... */}
-      <React.unstable_Profiler id="myProfiler" onRender={myProfilerRendered}>
+      <React.Profiler id="myProfiler" onRender={myProfilerRendered}>
         <Greeting name={name} />
-      </React.unstable_Profiler>
+      </React.Profiler>
     </React.Fragment>
   );
 }
