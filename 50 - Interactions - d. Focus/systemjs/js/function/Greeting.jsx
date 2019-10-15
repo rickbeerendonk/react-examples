@@ -9,7 +9,7 @@ const useState = React.useState;
 const useFocus = Focus.useFocus;
 
 function Greeting() {
-  const [ isFocusVisible, setFocusVisible ] = useState(false);
+  const [isFocusVisible, setFocusVisible] = useState(false);
   const focusListener = useFocus({
     // onBlur
     // onFocus
@@ -19,7 +19,11 @@ function Greeting() {
   return (
     <React.Fragment>
       Change focus using tab key:
-      <input listeners={focusListener} style={{ color: isFocusVisible ? 'red' : undefined }} defaultValue="Hallo Norway" />
+      <input
+        listeners={focusListener}
+        style={{ color: isFocusVisible ? 'red' : undefined }}
+        defaultValue="Hallo Norway"
+      />
       <input defaultValue="Hej Denmark" />
     </React.Fragment>
   );
