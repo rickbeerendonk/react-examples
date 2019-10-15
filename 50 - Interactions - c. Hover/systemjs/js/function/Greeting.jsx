@@ -11,6 +11,8 @@ const useHover = Hover.useHover;
 function Greeting() {
   const [isHovered, setHovered] = useState(false);
   const hoverListener = useHover({
+    // onHoverStart
+    // onHoverEnd
     onHoverChange: setHovered
   });
 
