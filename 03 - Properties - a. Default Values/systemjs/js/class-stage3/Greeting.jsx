@@ -4,8 +4,8 @@
 import React from 'react';
 
 class Greeting extends React.Component {
-  // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Proposal: https://github.com/tc39/proposal-static-class-features
+  // Support: http://kangax.github.io/compat-table/esnext/#test-static_class_fields
   static defaultProps = {
     name: 'World'
   };
