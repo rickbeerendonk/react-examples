@@ -28,8 +28,8 @@
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
-    "@types/react": "^16.9.5",
-    "@types/react-dom": "^16.9.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "@types/systemjs": "^0.20.6",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
@@ -44,7 +44,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/standalone": "^7.6.4",
-    "core-js": "^3.2.1",
+    "core-js": "^3.3.2",
     "create-react-class": "15.6.3",
     "htmltojsx": "^0.3.0",
     "mime-types": "^2.1.24",
