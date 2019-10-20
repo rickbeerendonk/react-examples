@@ -18,7 +18,7 @@ function jsxTransformSafe(source) {
 
 class JsxCompiler extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   jsx = `class HelloMessageClass extends React.Component {
   render() {
     return <div>Hello {this.props.name}</div>;

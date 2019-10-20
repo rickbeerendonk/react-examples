@@ -9,7 +9,7 @@ import AsyncResult from './AsyncResult';
 
 class App extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { isLoading: false };
   load = () => {
     // Async

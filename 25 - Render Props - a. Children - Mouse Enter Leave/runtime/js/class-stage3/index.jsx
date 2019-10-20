@@ -6,7 +6,7 @@
 // Component with render prop
 class MouseOver extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { mouseIsOver: false };
   handleMouseEnter = () => {
     this.setState({ mouseIsOver: true });

@@ -5,7 +5,7 @@ import React from 'react';
 
 export default class MyInput extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   browserChanged = e => {
     this.props.onBrowserChanged(e);
   };

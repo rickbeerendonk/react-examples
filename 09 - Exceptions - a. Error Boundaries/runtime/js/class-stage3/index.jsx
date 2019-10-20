@@ -6,7 +6,7 @@
 
 class GreetingEditor extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { name: 'World' };
   handleChange = e => {
     const value = e.target.value;
@@ -43,7 +43,7 @@ class GreetingEditor extends React.Component {
 
 class ErrorBoundary extends React.Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-class_fields
+  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { error: null };
 
   static getDerivedStateFromError(error) {
