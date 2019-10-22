@@ -22,6 +22,7 @@
     "clean": "rimraf node_modules",
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "install-experimental": "npm install react@experimental react-dom@experimental",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,ts,tsx}'",
     "start": "node \"./Util - 01 - Custom servers/server.js\" 8040",
