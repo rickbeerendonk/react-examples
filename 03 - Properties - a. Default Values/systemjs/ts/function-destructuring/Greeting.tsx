@@ -7,8 +7,8 @@ interface IGreetingProps {
   name?: string;
 }
 
-function Greeting({ name = 'World' }: IGreetingProps): JSX.Element {
-  return <h1>Hello {name}!</h1>;
-}
+const Greeting: React.FC<IGreetingProps> = ({ name = 'World' }) => (
+  <h1>Hello {name}!</h1>
+);
 
 export default Greeting;

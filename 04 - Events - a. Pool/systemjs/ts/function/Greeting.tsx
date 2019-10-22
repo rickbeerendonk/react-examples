@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function Greeting() {
+const Greeting: React.FC = () => {
   function handleChanged(e: React.ChangeEvent<HTMLInputElement>) {
     // Events are pooled. To prevent properties from resetting, remove the
     // event from the pool by calling event.persist(). See error in console.
@@ -20,6 +20,6 @@ Value: ${target.value}`);
   }
 
   return <input onChange={handleChanged} value="Hello World!" />;
-}
+};
 
 export default Greeting;

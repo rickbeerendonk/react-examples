@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function Greeting(): JSX.Element {
+const Greeting: React.FC = () => {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
@@ -11,6 +11,6 @@ Value: ${e.currentTarget.value}`);
   }
 
   return <input onChange={handleChange} value="Hello World!" />;
-}
+};
 
 export default Greeting;

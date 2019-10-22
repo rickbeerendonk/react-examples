@@ -3,12 +3,10 @@
 
 import React from 'react';
 
-function Greeting(): (string | JSX.Element)[] {
-  return [
-    <h1 key="heading">Hello World!</h1>,
-    'What do you think about React?',
-    <div key="enthusiasm">It looks amazing.</div>
-  ];
-}
+const Greeting: React.FC = () => [
+  <h1 key="heading">Hello World!</h1>,
+  'What do you think about React?',
+  <div key="enthusiasm">It looks amazing.</div>
+];
 
 export default Greeting;

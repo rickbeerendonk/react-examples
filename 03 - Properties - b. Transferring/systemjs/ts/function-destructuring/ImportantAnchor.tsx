@@ -3,11 +3,8 @@
 
 import React from 'react';
 
-function ImportantAnchor({
-  children,
-  ...otherProps
-}: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
-  return <a {...otherProps}>!!! {children} !!!</a>;
-}
+const ImportantAnchor: React.FC<
+  React.AnchorHTMLAttributes<HTMLAnchorElement>
+> = ({ children, ...otherProps }) => <a {...otherProps}>!!! {children} !!!</a>;
 
 export default ImportantAnchor;

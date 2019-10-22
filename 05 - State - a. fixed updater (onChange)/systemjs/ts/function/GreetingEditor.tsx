@@ -3,11 +3,8 @@
 
 import React from 'react';
 
-function GreetingEditor(): JSX.Element {
-  const [name, setName]: [
-    string,
-    React.Dispatch<React.SetStateAction<string>>
-  ] = React.useState('World');
+const GreetingEditor: React.FC = () => {
+  const [name, setName] = React.useState('World');
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
@@ -19,6 +16,6 @@ function GreetingEditor(): JSX.Element {
       <h1>Hello {name}!</h1>
     </React.Fragment>
   );
-}
+};
 
 export default GreetingEditor;

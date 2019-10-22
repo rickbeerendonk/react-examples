@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function ClickMe(): JSX.Element {
+const ClickMe: React.FC = () => {
   const [count, setCount]: [
     number,
     React.Dispatch<React.SetStateAction<number>>
@@ -14,6 +14,6 @@ function ClickMe(): JSX.Element {
       This link has been clicked {count} times
     </a>
   );
-}
+};
 
 export default ClickMe;
