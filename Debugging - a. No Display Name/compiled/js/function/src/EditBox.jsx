@@ -6,5 +6,9 @@
 import React from 'react';
 
 export default function({ onChange, value }) {
-  return <input onChange={e => onChange(e.target.value)} value={value} />;
+  function handleChange(e) {
+    onChange(e.target.value);
+  }
+
+  return <input onChange={handleChange} value={value} />;
 }
