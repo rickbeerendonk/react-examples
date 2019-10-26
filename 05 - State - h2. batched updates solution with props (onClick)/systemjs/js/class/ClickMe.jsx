@@ -13,15 +13,17 @@ class ClickMe extends React.Component {
   }
   handleClick() {
     // Updates are batched for performance reasons.
-    this.setState((state, props) => ({
-      count: state.count + 0.4 + props.value
-    }));
+    // Therefore in useState, use the props parameter (and not this.props).
 
-    this.props.onValueChange(1);
+    // Set property
+    this.props.setValue(0.4);
 
-    this.setState((state, props) => ({
-      count: state.count + 0.6 + props.value
-    }));
+    this.setState((state, props) => {
+      //debugger;
+
+      // Use property to set state
+      return { count: state.count + 0.6 + props.value };
+    });
   }
   render() {
     return (

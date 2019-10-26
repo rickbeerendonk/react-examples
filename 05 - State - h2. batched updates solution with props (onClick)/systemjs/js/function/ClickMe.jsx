@@ -3,23 +3,30 @@
 
 import React from 'react';
 
-function ClickMe({ value, onValueChange }) {
+function ClickMe({ value, setValue }) {
   const latestValue = React.useRef(null);
   latestValue.current = value;
 
   const [count, setCount] = React.useState(0);
 
-  return (
-    <a
-      onClick={() => {
-        setCount(c => c + 0.4 + latestValue.current);
-        onValueChange(1);
-        setCount(c => c + 0.6 + latestValue.current);
-      }}
-    >
-      This link has been clicked {count} times
-    </a>
-  );
+  function handleClick() {
+    // Updates are batched for performance reasons.
+    // PROBLEM:
+    // - In class components, the Parent class will render before setState callback is called
+    // - In function components, "setState" callback is called before render.
+    //   That invalidates "latestValue = useRef" as a solution.
+
+    // Set property
+    setValue(0.4);
+
+    // Use property to set state
+    setCount(c => {
+      //debugger;
+      return c + 0.6 + latestValue.current;
+    });
+  }
+
+  return <a onClick={handleClick}>This link has been clicked {count} times</a>;
 }
 
 export default ClickMe;

@@ -8,7 +8,7 @@ import ClickMe from './ClickMe';
 function Parent() {
   const [value, setValue] = React.useState(0);
 
-  return <ClickMe onValueChange={setValue} value={value} />;
+  return <ClickMe value={value} setValue={setValue} />;
 }
 
 export default Parent;

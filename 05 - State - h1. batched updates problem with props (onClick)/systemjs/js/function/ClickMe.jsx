@@ -3,20 +3,21 @@
 
 import React from 'react';
 
-function ClickMe({ value, onValueChange }) {
+function ClickMe({ value, setValue }) {
   const [count, setCount] = React.useState(0);
 
-  return (
-    <a
-      onClick={() => {
-        setCount(count + 0.4 + value);
-        onValueChange(1);
-        setCount(count + 0.6 + value);
-      }}
-    >
-      This link has been clicked {count} times
-    </a>
-  );
+  function handleClick() {
+    // Updates are batched for performance reasons.
+    // Therefore this won't work:
+
+    // Set property
+    setValue(0.4);
+
+    // Use property to set state
+    setCount(c => c + 0.6 + value);
+  }
+
+  return <a onClick={handleClick}>This link has been clicked {count} times</a>;
 }
 
 export default ClickMe;

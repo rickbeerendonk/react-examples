@@ -11,18 +11,13 @@ class Parent extends React.Component {
     this.state = { value: 0 };
 
     // Bind all non-react methods to this.
-    this.handleValueChange = this.handleValueChange.bind(this);
+    this.setValue = this.setValue.bind(this);
   }
-  handleValueChange(newValue) {
+  setValue(newValue) {
     this.setState({ value: newValue });
   }
   render() {
-    return (
-      <ClickMe
-        onValueChange={this.handleValueChange}
-        value={this.state.value}
-      />
-    );
+    return <ClickMe value={this.state.value} setValue={this.setValue} />;
   }
 }
 
