@@ -10,8 +10,12 @@ function ClickMe() {
 
   function handleClick() {
     console.log('count (before): ', count);
-    setCount(count); // Only leads to re-render if count has changed since previous render.
-    count++;
+
+    // Only leads to re-render if count has changed since previous render.
+    // - count is updated here (wrong)
+    // - count is set after call to setCount (wrong)
+    setCount(count++);
+
     console.log('count (after): ', count);
   }
 
