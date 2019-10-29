@@ -1,6 +1,6 @@
 # React Examples
 
-Examples for [React](http://facebook.github.io/react) and [ReactJS.NET](http://reactjs.net/).
+Examples for [React](http://facebook.github.io/react).
 
 ![](https://img.shields.io/github/license/rickbeerendonk/react-examples.svg)
 
