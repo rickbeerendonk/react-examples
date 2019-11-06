@@ -6,14 +6,14 @@
 SystemJS.config({
   paths: {
     // paths serve as alias
-    'npm:': '../../../../node_modules/',
-    'npm_unstable:': '../../../../node_modules_unstable/'
+    'npm:': '../../../../../node_modules/',
+    'npm_unstable:': '../../../../../node_modules_unstable/'
   },
   map: {
     react: 'npm_unstable:react/umd/react.development.js',
     'react-dom': 'npm_unstable:react-dom/umd/react-dom.development.js',
-    'react-interactions/focus':
-      'npm_unstable:react-interactions/umd/react-interactions-events/focus.development.js',
+    'react-interactions/press':
+      'npm_unstable:react-interactions/umd/react-interactions-events/press-legacy.development.js',
 
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'
