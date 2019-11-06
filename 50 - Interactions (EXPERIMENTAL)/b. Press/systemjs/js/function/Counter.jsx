@@ -23,7 +23,7 @@ function Counter() {
   return (
     <h1
       listeners={pressListener}
-      style={{ fontWeight: isPressed ? 'bold' : 'normal' }}
+      style={{ textDecoration: isPressed ? 'underline' : undefined }}
     >
       I am clicked {count} times.
     </h1>
