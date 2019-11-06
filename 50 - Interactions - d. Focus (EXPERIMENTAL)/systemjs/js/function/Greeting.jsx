@@ -4,6 +4,8 @@
 import React from 'react';
 import Focus from 'react-interactions/focus';
 
+/* eslint no-console:0 */
+
 // Workaround for not being able to do "import { ... } from..."
 const useState = React.useState;
 const useFocus = Focus.useFocus;
@@ -11,20 +13,20 @@ const useFocus = Focus.useFocus;
 function Greeting() {
   const [isFocusVisible, setFocusVisible] = useState(false);
   const focusListener = useFocus({
-    // onBlur
-    // onFocus
+    onBlur: e => console.log('blur', e),
+    onFocus: e => console.log('focus', e),
     onFocusVisibleChange: setFocusVisible
   });
 
   return (
     <React.Fragment>
       Change focus using tab key:
+      <input defaultValue="Hej Denmark" />
       <input
         listeners={focusListener}
         style={{ color: isFocusVisible ? 'red' : undefined }}
         defaultValue="Hallo Norway"
       />
-      <input defaultValue="Hej Denmark" />
     </React.Fragment>
   );
 }
