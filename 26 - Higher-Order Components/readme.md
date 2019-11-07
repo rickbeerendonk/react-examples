@@ -8,8 +8,8 @@ By convention, HOC names start with "with...".
 
 Use the display name to combine the HOC name and the original component name. React Dev Tools will use this for an alternative display.
 
-| What/Where   | Value                         | 
-| ------------ | ----------------------------- |
+| What/Where  | Value                         | 
+| ----------- | ----------------------------- |
 | displayName | WithHOC(originalComponent)    |
 | DevTools    | originalComponent \[withHOC\] |
 
