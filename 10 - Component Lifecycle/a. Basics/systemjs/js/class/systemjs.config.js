@@ -5,15 +5,16 @@
 
 SystemJS.config({
   meta: {
-    '*.js': {
+    '*.jsx': {
       babelOptions: {
-        es2015: true
+        es2015: true,
+        react: true
       }
     }
   },
   paths: {
     // paths serve as alias
-    'npm:': '../../../../node_modules/'
+    'npm:': '../../../../../node_modules/'
   },
   map: {
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
@@ -24,7 +25,7 @@ SystemJS.config({
   },
   packages: {
     '.': {
-      defaultExtension: 'js'
+      defaultExtension: 'jsx'
     }
   },
   transpiler: 'plugin-babel'
