@@ -1,6 +1,8 @@
-# Custom Hooks
+# Hooks
 
-## 3rd party packages
+## Custom Hooks
+
+### 3rd party packages
 
 * List: [Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
 
