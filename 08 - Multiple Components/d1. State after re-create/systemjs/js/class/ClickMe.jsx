@@ -1,8 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* eslint no-console:"off" */
-
 import React from 'react';
 
 class ClickMe extends React.Component {
