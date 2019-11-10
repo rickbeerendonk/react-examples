@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Debugging'
+      title: 'Debugging - No Display Name'
     }),
     new webpack.NamedModulesPlugin()
   ],
