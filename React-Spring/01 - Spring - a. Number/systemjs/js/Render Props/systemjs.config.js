@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
 /* global SystemJS */
 
@@ -14,7 +14,7 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'npm:': '../../../../node_modules/'
+    'npm:': '../../../../../node_modules/'
   },
   map: {
     '@babel': 'npm:@babel',
