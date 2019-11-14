@@ -45,6 +45,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/standalone": "^7.6.4",
+    "@reach/router": "^1.2.1",
     "core-js": "^3.3.2",
     "create-react-class": "15.6.3",
     "htmltojsx": "^0.3.0",
