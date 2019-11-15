@@ -12,7 +12,6 @@ class Child extends React.Component {
 }
 
 const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
-ChildMemo.displayName = 'ChildMemo';
 
 class Parent extends React.Component {
   constructor(props) {
