@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* global __dirname, process, require */
+/* global __dirname, process */
 /* eslint-disable no-console */
 
 const childProcess = require('child_process');

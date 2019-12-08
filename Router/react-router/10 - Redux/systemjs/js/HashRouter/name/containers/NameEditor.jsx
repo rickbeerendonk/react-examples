@@ -34,7 +34,4 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NameEditor);
+export default connect(mapStateToProps, mapDispatchToProps)(NameEditor);

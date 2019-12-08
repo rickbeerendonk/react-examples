@@ -3,9 +3,9 @@
 
 import React from 'react';
 
-const ImportantAnchor: React.FC<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>
-> = props => {
+const ImportantAnchor: React.FC<React.AnchorHTMLAttributes<
+  HTMLAnchorElement
+>> = props => {
   const { children, ...otherProps } = props;
   return <a {...otherProps}>!!! {children} !!!</a>;
 };

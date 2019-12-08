@@ -7,8 +7,6 @@ import EditBox from '../src/EditBox';
 import Greeting from '../src/Greeting';
 import { GreetingEditor } from '../src/GreetingEditor';
 
-/* global module */
-
 storiesOf('Greeting', module)
   .add('without name', () => <Greeting />, {
     info: {

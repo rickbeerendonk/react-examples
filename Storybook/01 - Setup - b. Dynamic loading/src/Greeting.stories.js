@@ -4,8 +4,6 @@ import { text } from '@storybook/addon-knobs';
 
 import Greeting from './Greeting';
 
-/* global module */
-
 storiesOf('Greeting', module)
   .add('without name', () => <Greeting />, {
     info: {

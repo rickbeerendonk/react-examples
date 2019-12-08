@@ -4,8 +4,6 @@ import { action } from '@storybook/addon-actions';
 
 import EditBox from './EditBox';
 
-/* global module */
-
 storiesOf('EditBox', module)
   .add('with value', () => <EditBox onChange={() => {}} value="Test" />)
   .add('with onChange', () => <EditBox onChange={action('editbox-change')} />);
