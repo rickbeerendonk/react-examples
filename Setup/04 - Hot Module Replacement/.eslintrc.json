@@ -2,6 +2,7 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
+      "browser": true,
       "jsx": true
     },
     "ecmaVersion": 2018
