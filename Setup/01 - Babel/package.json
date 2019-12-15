@@ -20,6 +20,6 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
-    "core-js": "^3.3.2"
+    "core-js": "^3.5.0"
   }
 }
