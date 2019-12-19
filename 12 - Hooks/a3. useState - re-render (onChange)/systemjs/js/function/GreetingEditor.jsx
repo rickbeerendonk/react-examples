@@ -19,6 +19,7 @@ function GreetingEditor() {
   console.log('render(): ', name);
 
   function handleChange(e) {
+    console.log('event');
     setName(removeDuplicates(e.target.value));
   }
 
