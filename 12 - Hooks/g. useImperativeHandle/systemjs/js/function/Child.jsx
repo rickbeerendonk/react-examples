@@ -8,7 +8,7 @@ const Child = React.forwardRef(function(props, ref) {
 
   React.useImperativeHandle(ref, () => ({
     addText: newText => {
-      // myChild.current contains a reference to the real DOM node.
+      // myH1.current contains a reference to the real DOM node.
       myH1.current.innerHTML += ' - ' + newText;
     }
   }));
