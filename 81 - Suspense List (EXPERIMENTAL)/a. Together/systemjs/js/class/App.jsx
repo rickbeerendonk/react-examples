@@ -7,6 +7,7 @@ import { unstable_scheduleCallback as scheduleCallback } from 'scheduler';
 import Spinner from './Spinner';
 import AsyncResult1 from './AsyncResult1';
 import AsyncResult2 from './AsyncResult2';
+import AsyncResult3 from './AsyncResult3';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,16 +30,25 @@ class App extends React.Component {
       <React.Fragment>
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
-          <div>
+          <ol>
             <React.SuspenseList revealOrder="together">
-              <React.Suspense fallback={<Spinner name="one" />}>
-                <AsyncResult1 name="one" time={1000} />
-              </React.Suspense>
-              <React.Suspense fallback={<Spinner name="two" />}>
-                <AsyncResult2 name="two" time={2000} />
-              </React.Suspense>
+              <li value="1">
+                <React.Suspense fallback={<Spinner name="one" />}>
+                  <AsyncResult1 name="one" time={1000} />
+                </React.Suspense>
+              </li>
+              <li value="2">
+                <React.Suspense fallback={<Spinner name="two" />}>
+                  <AsyncResult2 name="two" time={2000} />
+                </React.Suspense>
+              </li>
+              <li value="3">
+                <React.Suspense fallback={<Spinner name="three" />}>
+                  <AsyncResult3 name="three" time={3000} />
+                </React.Suspense>
+              </li>
             </React.SuspenseList>
-          </div>
+          </ol>
         )}
       </React.Fragment>
     );

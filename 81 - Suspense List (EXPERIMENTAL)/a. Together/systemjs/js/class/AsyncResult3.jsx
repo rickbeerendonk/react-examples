@@ -4,7 +4,7 @@
 let promise = null;
 let result = null;
 
-function AsyncResult2({ name, time }) {
+function AsyncResult3({ name, time }) {
   // Return result if we already have one
   if (result) {
     return result;
@@ -21,4 +21,4 @@ function AsyncResult2({ name, time }) {
   throw promise;
 }
 
-export default AsyncResult2;
+export default AsyncResult3;
