@@ -5,6 +5,11 @@ import React from 'react';
 
 import Three from './Three';
 
+function Two() {
+  return <Three />;
+}
+
+/*
 class Two extends React.Component {
   shouldComponentUpdate() {
     // Prevents legacy context changes from reaching child components.
@@ -15,5 +20,6 @@ class Two extends React.Component {
     return <Three />;
   }
 }
+*/
 
 export default Two;
