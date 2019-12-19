@@ -14,9 +14,9 @@ function MousePosition() {
     function handleMouseOver(e) {
       setMousePosition({ X: e.pageX, Y: e.pageY });
     }
-    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mousemove', handleMouseOver);
     return () => {
-      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mousemove', handleMouseOver);
     };
   }, [setMousePosition]);
 
