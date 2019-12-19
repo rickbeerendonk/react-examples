@@ -31,7 +31,7 @@ class App extends React.Component {
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
           <ol>
-            <React.SuspenseList revealOrder="together">
+            <React.SuspenseList revealOrder="forwards">
               <li value="1">
                 <React.Suspense fallback={<Spinner name="one" />}>
                   <AsyncResult1 name="one" time={1000} />
