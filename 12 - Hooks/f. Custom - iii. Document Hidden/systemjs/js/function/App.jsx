@@ -3,10 +3,10 @@
 
 import React from 'react';
 
-import useIsHidden from './hooks/hidden';
+import useIsDocumentHidden from './hooks/document-hidden';
 
 function App() {
-  const isHidden = useIsHidden();
+  const isHidden = useIsDocumentHidden();
   return <h1>Document is {isHidden ? 'Hidden' : 'Visible'}!</h1>;
 }
 

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function useIsHidden() {
+function useIsDocumentHidden() {
   // Hidden state variable
   const [isHidden, setIsHidden] = React.useState(document.hidden);
 
@@ -23,4 +23,4 @@ function useIsHidden() {
   return isHidden;
 }
 
-export default useIsHidden;
+export default useIsDocumentHidden;
