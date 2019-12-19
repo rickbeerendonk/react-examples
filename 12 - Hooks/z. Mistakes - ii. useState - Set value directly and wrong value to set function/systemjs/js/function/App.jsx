@@ -11,7 +11,7 @@ function App() {
   function handleClick() {
     console.log('value (before): ', value);
 
-    // Only leads to re-render if count has changed since previous render.
+    // Only leads to re-render if value has changed since previous render.
     // - value is updated here (wrong)
     // - setValue is called with the result of an assignment
     setValue((value = !value));
