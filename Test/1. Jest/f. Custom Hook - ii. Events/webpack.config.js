@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Tests with Jest - Custom Hook - Basics'
+      title: 'React Tests with Jest - Custom Hook - Events'
     }),
     new webpack.NamedModulesPlugin()
   ],
