@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders hello world snapshot (react-test-renderer) 1`] = `
+exports[`Greeting renders hello world snapshot (react-test-renderer) 1`] = `
 <h1
   className="greeting"
 >

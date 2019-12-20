@@ -8,8 +8,10 @@ configure({ adapter: new Adapter() });
 
 /// Enzyme ///
 
-it('renders hello world snapshot (react-test-renderer)', () => {
-  const component = shallow(<Greeting />);
-  let tree = toJson(component);
-  expect(tree).toMatchSnapshot();
+describe('Greeting', () => {
+  it('renders hello world snapshot (react-test-renderer)', () => {
+    const component = shallow(<Greeting />);
+    let tree = toJson(component);
+    expect(tree).toMatchSnapshot();
+  });
 });

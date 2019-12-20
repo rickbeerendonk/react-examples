@@ -8,38 +8,40 @@ configure({ adapter: new Adapter() });
 
 /// Enzyme ///
 
-/// -- Property -- ///
+describe('EditBox', () => {
+  /// -- Property -- ///
 
-it('Does not throw when no name is provided (enzyme)', () => {
-  const wrapper = shallow(<EditBox />);
-  expect(wrapper.html()).toEqual('<input value=""/>');
-});
+  it('Does not throw when no name is provided (enzyme)', () => {
+    const wrapper = shallow(<EditBox />);
+    expect(wrapper.html()).toEqual('<input value=""/>');
+  });
 
-it('renders name when provided (enzyme)', () => {
-  const wrapper = shallow(<EditBox value="World" />);
+  it('renders name when provided (enzyme)', () => {
+    const wrapper = shallow(<EditBox value="World" />);
 
-  expect(wrapper.type()).toEqual('input');
+    expect(wrapper.type()).toEqual('input');
 
-  // Use the property...
-  expect(wrapper.at(0).props().value).toEqual('World');
+    // Use the property...
+    expect(wrapper.at(0).props().value).toEqual('World');
 
-  // ...or the whole node
-  expect(wrapper.html()).toEqual('<input value="World"/>');
-});
+    // ...or the whole node
+    expect(wrapper.html()).toEqual('<input value="World"/>');
+  });
 
-it('renders world snapshot when name is world (enzyme)', () => {
-  const wrapper = shallow(<EditBox value="World" />);
-  expect(toJson(wrapper)).toMatchSnapshot();
-});
+  it('renders world snapshot when name is world (enzyme)', () => {
+    const wrapper = shallow(<EditBox value="World" />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
-/// -- Event -- ///
+  /// -- Event -- ///
 
-it('raises onChange event when changed (enzyme)', () => {
-  const handleChange = jest.fn();
-  const wrapper = shallow(<EditBox onChange={handleChange} name="World" />);
+  it('raises onChange event when changed (enzyme)', () => {
+    const handleChange = jest.fn();
+    const wrapper = shallow(<EditBox onChange={handleChange} name="World" />);
 
-  wrapper.find('input').simulate('change', { target: { value: 'React' } });
+    wrapper.find('input').simulate('change', { target: { value: 'React' } });
 
-  expect(handleChange).toHaveBeenCalledTimes(1);
-  expect(handleChange).toHaveBeenCalledWith('React');
+    expect(handleChange).toHaveBeenCalledTimes(1);
+    expect(handleChange).toHaveBeenCalledWith('React');
+  });
 });

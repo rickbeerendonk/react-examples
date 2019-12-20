@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 0 snapshot (enzyme) 1`] = `
+exports[`ClickMe renders 0 snapshot (enzyme) 1`] = `
 <a
   className="clickme"
   href="#"
@@ -12,7 +12,7 @@ exports[`renders 0 snapshot (enzyme) 1`] = `
 </a>
 `;
 
-exports[`renders 1 after click snapshot (enzyme) 1`] = `
+exports[`ClickMe renders 1 after click snapshot (enzyme) 1`] = `
 <a
   className="clickme"
   href="#"
