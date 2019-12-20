@@ -28,6 +28,7 @@ it('renders hello world message when name is world (enzyme)', () => {
   // ...or simply the text
   expect(wrapper.text()).toEqual('Hello World!');
 
+  // ...or the whole node
   expect(wrapper.html()).toEqual('<h1 class="greeting">Hello World!</h1>');
 });
 
