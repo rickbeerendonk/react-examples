@@ -1,6 +1,6 @@
 {
-  "name": "react-test-jest-custom-hook",
-  "description": "React Tests with Jest - Custom Hook",
+  "name": "react-test-jest-custom-hook-basics",
+  "description": "React Tests with Jest - Custom Hook - Basics",
   "version": "1.0.0",
   "repository": {
     "type": "git",
