@@ -2,9 +2,9 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import { renderHook } from '@testing-library/react-hooks';
+import { act } from 'react-test-renderer';
 
 import useBoolean from './boolean-hook';
-import { act } from 'react-test-renderer';
 
 /// React Testing Library ///
 
