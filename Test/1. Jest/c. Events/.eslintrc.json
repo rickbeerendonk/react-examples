@@ -1,0 +1,28 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "indent": [2, 2],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "react-hooks/rules-of-hooks": 2
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true,
+    "jest": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": ["react", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "16.12.0"
+    }
+  }
+}
