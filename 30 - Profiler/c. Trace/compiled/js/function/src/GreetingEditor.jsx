@@ -15,6 +15,9 @@ function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
   function handleChange(newName) {
+    // Not visible in the DevTools, why?
+    // https://gist.github.com/bvaughn/8de925562903afd2e7a12554adcdda16
+
     Tracing.unstable_trace('EditBox value change', performance.now(), () => {
       setName(newName);
     });
