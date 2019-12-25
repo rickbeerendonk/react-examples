@@ -12,7 +12,7 @@ Creating the root will change. Instead of having one function doing two things, 
 ReactDOM.createRoot(app).render(<h1>Hello React {React.version}!</h1>);
 ```
 
-At the time of writing, createRoot() has a "unstable_" prefix, so the name might change.
+At the time of writing, createRoot() has a "unstable\_" prefix, so the name might change.
 
 ## Function Components
 
@@ -27,7 +27,7 @@ PureComponent will be renamed as MemoComponent. The MemoComponent is implementin
 There was no solution for using Function Components as pure, eh... memo components. You could rewrite it as a Class Component extending React.MemoComponent, but that involved some work. There will be a new function called memo() (looks like a Higher Order Component, but isn't) for use with Function Components:
 
 ```jsx
-const Greeting = ({ name }) => <h1>Hello { name }!</h1>;
+const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 
 const memoGreeting = memo(Greeting);
 ```
@@ -35,18 +35,19 @@ const memoGreeting = memo(Greeting);
 The memo HOC can also serve the same purpose as shouldComponentUpdate() lifecycle method does for Class Components. memo() accepts a compare function as the second parameter:
 
 ```jsx
-const Greeting = ({ name }) => <h1>Hello { name }!</h1>;
+const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 
-const memoGreeting = memo(Greeting, (oldProps, newProps) => oldProps.name === newProps.name );
+const memoGreeting = memo(
+  Greeting,
+  (oldProps, newProps) => oldProps.name === newProps.name
+);
 ```
 
 ### Not limited to Function Components
 
 The memo function is not limited to wrap Function Components, but can be used on any type of component.
 
-
 ## Suspense
-
 
 ........
 
@@ -56,30 +57,29 @@ There is a npm package called react-cache for some years now, but the React team
 
 ........
 
-
 ## Scheduler
 
 There is a npm package called scheduler for many years, but the React team now has ownership of the name. See the collaborators on the npmjs.com website: https://www.npmjs.com/package/scheduler. At the time of writing though, the page is still refering to the old (non-Facebook) package.
 
 The scheduler allows you to schedule changes (think setState() calls) with different levels of priority:
 
-* scheduleCallback()
-* now()
-* runWithPriority()
+- scheduleCallback()
+- now()
+- runWithPriority()
 
 ```js
-scheduler.scheduleCallback(() => {
+scheduler.scheduleCallback(1, () => {
   this.setState({ isLoading: true });
 });
 ```
 
 And it will contain some helper functions
 
-* cancelCallback()
-* getCurrentPriorityLevel()
-* wrapCallback()
+- cancelCallback()
+- getCurrentPriorityLevel()
+- wrapCallback()
 
-At the time of writing, all function names have a "unstable_" prefix, so the names might change.
+At the time of writing, all function names have a "unstable\_" prefix, so the names might change.
 
 ## Error Boundaries
 
@@ -94,7 +94,7 @@ const FactoryComponent = () => {
   return {
     render: function() {
       return <div>foo</div>;
-    },
+    }
   };
 };
 ```

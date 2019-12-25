@@ -20,7 +20,7 @@ class App extends React.Component {
 
   load() {
     // Async
-    scheduleCallback(() => {
+    scheduleCallback(1, () => {
       this.setState({ buttonClicked: true });
     });
   }
