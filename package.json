@@ -20,8 +20,8 @@
   },
   "scripts": {
     "clean": "rimraf node_modules",
-    "eslint": "eslint . --ext .js,.jsx --cache",
-    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "eslint": "eslint . --ext .js,.jsx,.mjs --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx,.mjs --cache --fix",
     "install-experimental": "npm install react@experimental react-dom@experimental",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
