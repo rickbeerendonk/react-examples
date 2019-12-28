@@ -9,3 +9,7 @@ In files where JSX is used, the compiler will compile JSX into `React.createElem
 ...
 
 ##
+
+## Copyright
+
+Copyright © 2014-2019 Rick Beerendonk
