@@ -2,7 +2,7 @@
 
 ## Why do I have to import React, even if I don't use it?
 
-In files where JSX is used, the compiler will compile JSX into ```React.createElement()```. Hence the requirement to import React.
+In files where JSX is used, the compiler will compile JSX into `React.createElement()`. Hence the requirement to import React.
 
 ## Why do function components don't have one parameter per property?
 

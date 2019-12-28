@@ -1,7 +1,8 @@
 # Children TODO
 
 Children examples:
-* toArray
+
+- toArray
 
 ## Licence
 

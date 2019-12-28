@@ -1,7 +1,7 @@
 # Styled-Components
 
-* [Homepage](https://www.styled-components.com/)
-* [Documentation](https://www.styled-components.com/docs)
+- [Homepage](https://www.styled-components.com/)
+- [Documentation](https://www.styled-components.com/docs)
 
 ## Licence
 

@@ -23,8 +23,8 @@
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "install-experimental": "npm install react@experimental react-dom@experimental",
-    "prettier": "prettier --list-different '**/*.{json,js,jsx,html,ts,tsx}'",
-    "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,ts,tsx}'",
+    "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
+    "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "start": "node \"./Util - 01 - Custom servers/server.js\" 8040",
     "validate": "npm run eslint && npm run prettier"
   },

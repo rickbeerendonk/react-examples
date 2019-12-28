@@ -1,6 +1,6 @@
 # React-Spring
 
-* [Homepage](https://www.react-spring.io/)
+- [Homepage](https://www.react-spring.io/)
 
 ## Licence
 

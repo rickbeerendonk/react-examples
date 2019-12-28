@@ -16,4 +16,3 @@ In the string, you can write like normal CSS with CSS property names and values.
 Styled Component = Element + Style-rules
 
 **Don't** create styled components inside the render method for performance reasons.
-

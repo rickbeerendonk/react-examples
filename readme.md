@@ -6,7 +6,8 @@ More than 100 examples for [React](http://facebook.github.io/react).
 
 # How to run?
 
-## Always 
+## Always
+
 Install dependencies first:
 
 1. Open command line (Windows) or terminal (macOS) in the root folder
