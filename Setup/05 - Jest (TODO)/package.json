@@ -31,8 +31,8 @@
     "jest": "24.9.0",
     "react-test-renderer": "16.12.0",
     "rimraf": "3.0.0",
-    "style-loader": "1.1.1",
-    "webpack": "4.41.4",
+    "style-loader": "1.1.2",
+    "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.10.1"
   },
