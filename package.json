@@ -14,8 +14,7 @@
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run validate",
-      "pre-push": "npm run validate"
+      "pre-commit": "npm run validate"
     }
   },
   "scripts": {
