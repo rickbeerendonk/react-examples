@@ -52,9 +52,12 @@ const command =
   process.platform === 'win32'
     ? `start "" "${totalUri}"`
     : /* process.platform === "darwin" */ `open "${totalUri}"`;
-/*const browserChild =*/ childProcess.spawn(command, {
-  shell: true,
-  stdio: 'inherit'
-});
+// Use timeout so the server is ready.
+setTimeout(function() {
+  childProcess.spawn(command, {
+    shell: true,
+    stdio: 'inherit'
+  });
+}, 200);
 
 //childProcess.exec(command, () => { console.log('exit'); process.exit(); });
