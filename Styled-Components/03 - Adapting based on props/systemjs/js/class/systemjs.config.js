@@ -22,6 +22,7 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
+    'react-is': 'npm:react-is/umd/react-is.development.js',
     'styled-components': 'npm:styled-components/dist/styled-components.js'
   },
   packages: {
