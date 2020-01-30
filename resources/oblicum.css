@@ -8,29 +8,41 @@
   font-family: Montserrat;
 }
 
-h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 * {
+h1,
+h1 *,
+h2,
+h2 *,
+h3,
+h3 *,
+h4,
+h4 *,
+h5,
+h5 *,
+h6,
+h6 * {
   font-family: Comfortaa;
 }
 
 body > :first-child::before {
-  content: "Copyright © Rick Beerendonk";
+  content: 'Copyright © Rick Beerendonk';
   font-family: Comfortaa;
-  font-size: 1.7rem;
+  font-size: min(4vw, 1.7rem);
   font-weight: bold;
+  line-height: 2rem;
   display: block;
   position: fixed;
 
   background-color: #444;
-  background-image: url("oblicum-logo.svg");
+  background-image: url('oblicum-logo.svg');
   background-repeat: no-repeat;
-  background-position-x: calc(100% - .8rem);
+  background-position-x: calc(100% - 0.8rem);
   color: white;
   border-color: #444;
   border-width: 0.2rem;
   border-style: solid;
   border-radius: 2rem;
 
-  padding-left: .7rem;
+  padding-left: 0.7rem;
   padding-right: 1rem;
 
   bottom: 0;
@@ -57,6 +69,10 @@ body > :first-child::before {
 }
 
 @keyframes oblicum-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
