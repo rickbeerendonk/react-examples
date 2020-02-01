@@ -10,7 +10,7 @@ const Page2 = React.lazy(() => import('./Page2'));
 
 function App() {
   return (
-    <BrowserRouter basename="Router/07%20-%20Lazy%20Loading/systemjs/js/function%20-%20BrowserRouter">
+    <BrowserRouter basename="Router/react-router/07%20-%20Lazy%20Loading/systemjs/js/function%20-%20BrowserRouter">
       <header>
         <h1>App</h1>
         <nav>

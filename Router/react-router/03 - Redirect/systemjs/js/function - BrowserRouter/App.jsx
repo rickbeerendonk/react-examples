@@ -10,7 +10,7 @@ import Page2 from './Page2';
 
 function App() {
   return (
-    <BrowserRouter basename="Router/03%20-%20Redirect/systemjs/js/function%20-%20BrowserRouter">
+    <BrowserRouter basename="Router/react-router/03%20-%20Redirect/systemjs/js/function%20-%20BrowserRouter">
       <header>
         <h1>App</h1>
         <nav>

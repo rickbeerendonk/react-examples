@@ -8,7 +8,7 @@ import Page, { PageWithHooks } from './Page';
 
 function App() {
   return (
-    <BrowserRouter basename="Router/05%20-%20Dynamic%20Routing/systemjs/js/function%20-%20BrowserRouter">
+    <BrowserRouter basename="Router/react-router/05%20-%20Dynamic%20Routing/systemjs/js/function%20-%20BrowserRouter">
       <header>
         <h1>App</h1>
         <nav>

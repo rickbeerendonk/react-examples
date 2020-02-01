@@ -10,7 +10,7 @@ import Page2 from './Page2';
 
 function App() {
   return (
-    <BrowserRouter basename="Router/06%20-%20Nested%20Routes/systemjs/js/function%20-%20BrowserRouter">
+    <BrowserRouter basename="Router/react-router/06%20-%20Nested%20Routes/systemjs/js/function%20-%20BrowserRouter">
       <header>
         <h1>App</h1>
         <nav>
