@@ -2,13 +2,15 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 
 import Home from './Home';
 import Page1 from './Page1';
 import Page2 from './Page2';
 
-function App({ history }) {
+function App() {
+  const history = useHistory();
+
   function navigate(e) {
     e.preventDefault();
     history.push(e.target.dataset.url);
@@ -32,9 +34,15 @@ function App({ history }) {
       </header>
 
       <main>
-        <Route exact path="/" component={Home} />
-        <Route path="/page1" component={Page1} />
-        <Route path="/page2" render={props => <Page2 {...props} />} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
+        </Route>
       </main>
 
       <footer>My copyright</footer>
@@ -42,4 +50,4 @@ function App({ history }) {
   );
 }
 
-export default withRouter(App);
+export default App;
