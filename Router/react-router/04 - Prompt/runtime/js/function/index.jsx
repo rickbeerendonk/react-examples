@@ -18,9 +18,15 @@ function App() {
       </header>
 
       <main>
-        <Route exact path="/" component={Home} />
-        <Route path="/page1" component={Page1} />
-        <Route path="/page2" component={Page2} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
+        </Route>
       </main>
 
       <footer>My copyright</footer>
