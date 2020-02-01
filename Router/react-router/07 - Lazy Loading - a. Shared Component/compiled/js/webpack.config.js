@@ -6,6 +6,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   entry: ['./src/index.jsx'],
@@ -36,7 +38,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Router - Lazy Loading (Shared Resource)'
     }),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new BundleAnalyzerPlugin()
   ],
   resolve: {
     extensions: ['.js', '.jsx']
