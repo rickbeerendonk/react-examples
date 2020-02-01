@@ -20,8 +20,10 @@ function App() {
       </header>
 
       <main>
-        <Route path="/:id" component={PageLegacy} />
-        <Route path="/:id" component={Page} />
+        <Route path="/:id">{props => <PageLegacy {...props} />}</Route>
+        <Route path="/:id">
+          <Page />
+        </Route>
       </main>
 
       <footer>My copyright</footer>
