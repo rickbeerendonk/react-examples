@@ -19,10 +19,15 @@ function App() {
       </header>
 
       <main>
-        <div style={{ color: 'darkgray' }}>Router 5.0+</div>
-        <Route exact path="/" component={Home} />
-        <Route path={['/page1', '/page-one']} component={Page1} />
-        <Route path="/page2" render={props => <Page2 {...props} />} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path={['/page1', '/page-one']}>
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
+        </Route>
       </main>
 
       <footer>My copyright</footer>
