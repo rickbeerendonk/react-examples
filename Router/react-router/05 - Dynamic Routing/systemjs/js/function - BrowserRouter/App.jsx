@@ -4,7 +4,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-import Page, { PageWithHooks } from './Page';
+import { Page, PageLegacy } from './Page';
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
       </header>
 
       <main>
+        <Route path="/:id" component={PageLegacy} />
         <Route path="/:id" component={Page} />
-        <Route path="/:id" component={PageWithHooks} />
       </main>
 
       <footer>My copyright</footer>

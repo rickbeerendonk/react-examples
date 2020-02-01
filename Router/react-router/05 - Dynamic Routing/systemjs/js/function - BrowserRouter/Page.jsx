@@ -5,16 +5,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 // Without hooks
+// <= version 5
 
-function Page({ match }) {
-  return <h2>Page {match.params.id}</h2>;
+export function PageLegacy({ match }) {
+  return <h2>Page Legacy {match.params.id}</h2>;
 }
 
 // With hooks
+// >= version 5.1
 
-export function PageWithHooks() {
+export function Page() {
   const { id } = useParams();
-  return <h2>Page {id} - with hooks</h2>;
+  return <h2>Page {id} </h2>;
 }
-
-export default Page;
