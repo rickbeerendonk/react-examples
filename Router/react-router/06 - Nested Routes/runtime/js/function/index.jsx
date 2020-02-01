@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2014 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
 /* global React, ReactDOM, ReactRouterDOM */
 
-const { HashRouter, Route, Link, Switch } = ReactRouterDOM;
+const { HashRouter, Route, Link, Switch, useRouteMatch } = ReactRouterDOM;
 
 function App() {
   return (
@@ -18,9 +18,15 @@ function App() {
       </header>
 
       <main>
-        <Route exact path="/" component={Home} />
-        <Route path="/page1" component={Page1} />
-        <Route path="/page2" component={Page2} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
+        </Route>
       </main>
 
       <footer>My copyright</footer>
@@ -32,27 +38,38 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function Page1({ match }) {
+function Page1() {
+  const { path } = useRouteMatch();
   return (
-    <>
+    <React.Fragment>
       <h2>1st page</h2>
 
       <nav>
         <ul>
           <li>
-            <Link to={match.url}>Subpage 1</Link>
+            <Link to={path}>Subpage 1</Link>
           </li>
           <li>
-            <Link to={match.url + '/sub2'}>Subpage 2</Link>
+            <Link to={path + '/sub2'}>Subpage 2</Link>
+          </li>
+          <li>
+            <Link to={path + '/sub3'}>Subpage 3</Link>
           </li>
         </ul>
       </nav>
 
       <Switch>
-        <Route path={match.url + '/sub2'} component={SubPage2} />
-        <Route path={match.url} component={SubPage1} />
+        <Route path={path + '/sub2'}>
+          <SubPage2 />
+        </Route>
+        <Route path={path + '/sub3'}>
+          <SubPage3 />
+        </Route>
+        <Route path={path}>
+          <SubPage1 />
+        </Route>
       </Switch>
-    </>
+    </React.Fragment>
   );
 }
 
@@ -66,6 +83,10 @@ function SubPage1() {
 
 function SubPage2() {
   return <h3>Subpage 2</h3>;
+}
+
+function SubPage3() {
+  return <h3>Subpage 3</h3>;
 }
 
 const root = document.createElement('div');
