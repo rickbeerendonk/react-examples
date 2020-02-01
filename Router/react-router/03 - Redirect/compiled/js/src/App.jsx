@@ -23,9 +23,15 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/page1">
+            <Page1 />
+          </Route>
+          <Route path="/page2">
+            <Page2 />
+          </Route>
           {/* Redirect from can only be used inside Switch */}
           <Redirect from="/oldpage2" to="/page2" />
         </Switch>
