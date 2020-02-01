@@ -26,10 +26,18 @@ function App() {
         {/* A <Switch> renders the first child <Route> that matches. 
             A <Route> with no path always matches. */}
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
-          <Route component={NoMatch} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/page1">
+            <Page1 />
+          </Route>
+          <Route path="/page2">
+            <Page2 />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
         </Switch>
       </main>
 

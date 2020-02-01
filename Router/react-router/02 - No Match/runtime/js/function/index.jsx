@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM, ReactRouterDOM */
 
-const { HashRouter, Route, Switch, Link } = ReactRouterDOM;
+const { HashRouter, Route, Switch, Link, useLocation } = ReactRouterDOM;
 
 function App() {
   return (
@@ -23,10 +23,18 @@ function App() {
           {/* A <Switch> renders the first child <Route> that matches. 
             A <Route> with no path always matches. */}
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/page1" component={Page1} />
-            <Route path="/page2" component={Page2} />
-            <Route component={NoMatch} />
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/page1">
+              <Page1 />
+            </Route>
+            <Route path="/page2">
+              <Page2 />
+            </Route>
+            <Route>
+              <NoMatch />
+            </Route>
           </Switch>
         </main>
 
@@ -49,7 +57,14 @@ function Page2() {
 }
 
 function NoMatch() {
-  return <h2>No match!</h2>;
+  let location = useLocation();
+
+  return (
+    <React.Fragment>
+      <h2>No match!</h2>
+      <p>Location: {JSON.stringify(location)}</p>
+    </React.Fragment>
+  );
 }
 
 const root = document.createElement('div');
