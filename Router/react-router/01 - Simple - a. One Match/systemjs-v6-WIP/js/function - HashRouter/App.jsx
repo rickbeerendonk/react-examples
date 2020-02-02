@@ -15,8 +15,8 @@ function App() {
         <h1>App</h1>
         <nav>
           <Link to="/">Home</Link>
-          <Link to="/page1">Page 1</Link>
-          <Link to="/page2">Page 2</Link>
+          <Link to="page1">Page 1</Link>
+          <Link to="page2">Page 2</Link>
         </nav>
       </header>
 
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="page1/*" element={<Page1 />} />
-          <Route path="page2/*">{props => <Page2 {...props} />}</Route>
+          <Route path="page2/*" element={<Page2 />} />
         </Routes>
       </main>
 
