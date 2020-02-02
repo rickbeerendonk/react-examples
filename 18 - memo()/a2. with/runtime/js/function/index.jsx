@@ -4,9 +4,25 @@
 /* global React, ReactDOM */
 /* eslint react/prop-types:"off", no-console:"off" */
 
+function useFlashRef() {
+  const ref = React.useRef();
+
+  React.useEffect(() => {
+    ref.current.style.transition = 'none';
+    ref.current.style.backgroundColor = '#d676ff';
+
+    setTimeout(() => {
+      ref.current.style.transition = 'background 0.7s';
+      ref.current.style.backgroundColor = '';
+    });
+  });
+
+  return ref;
+}
+
 function Child() {
   console.log('Render Child');
-  return <h2>Child</h2>;
+  return <h2 ref={useFlashRef()}>Child</h2>;
 }
 
 const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);

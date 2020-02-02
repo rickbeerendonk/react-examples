@@ -24,6 +24,9 @@ SystemJS.config({
     'react-dom': 'npm:react-dom/umd/react-dom.development.js'
   },
   packages: {
+    hooks: {
+      defaultExtension: 'js'
+    },
     '.': {
       defaultExtension: 'jsx'
     }

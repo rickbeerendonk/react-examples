@@ -5,9 +5,11 @@
 
 import React from 'react';
 
+import useFlashRef from './hooks/flash-ref';
+
 function Child() {
   console.log('Render Child');
-  return <h2>Child</h2>;
+  return <h2 ref={useFlashRef()}>Child</h2>;
 }
 
 export default Child;
