@@ -22,7 +22,7 @@ class Parent extends React.Component {
       <React.Fragment>
         <h1>Parent</h1>
         <div style={{ color: 'darkgray' }}>
-          Observe that the child is not updated if it is a PureComponent.
+          Observe that the child is not updated if it is a memo()-Component.
         </div>
         <div>
           <input
