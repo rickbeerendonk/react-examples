@@ -10,6 +10,7 @@ const node = document.getElementById('app');
 
 ReactDOM.render(<Parent />, node);
 
+// Add this to get componentWillUnmount / useEffect-cleanup events.
 window.addEventListener('beforeunload', () =>
   ReactDOM.unmountComponentAtNode(node)
 );
