@@ -7,9 +7,7 @@ function GreetingEditor() {
   const [selected, setSelected] = React.useState(['bike', 'train']);
 
   function handleChange(e) {
-    setSelected(
-      [...e.target.options].filter(o => o.selected).map(o => o.value)
-    );
+    setSelected([...e.target.selectedOptions].map(o => o.value));
   }
 
   return (

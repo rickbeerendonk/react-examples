@@ -12,7 +12,7 @@ class GreetingEditor extends React.Component {
   }
   handleChange(e) {
     this.setState({
-      selected: [...e.target.options].filter(o => o.selected).map(o => o.value)
+      selected: [...e.target.selectedOptions].map(o => o.value)
     });
   }
   render() {
