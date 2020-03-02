@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import React from 'react';
-import { unstable_scheduleCallback as scheduleCallback } from 'scheduler';
+import Scheduler from 'scheduler';
 
 import Spinner from './Spinner';
 import AsyncResult1 from './AsyncResult1';
@@ -20,7 +20,7 @@ class App extends React.Component {
 
   load() {
     // Async
-    scheduleCallback(1, () => {
+    Scheduler.unstable_scheduleCallback(1, () => {
       this.setState({ buttonClicked: true });
     });
   }

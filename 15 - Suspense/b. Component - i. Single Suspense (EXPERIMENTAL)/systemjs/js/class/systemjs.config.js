@@ -20,10 +20,11 @@ SystemJS.config({
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
-    react: 'npm:react/umd/react.development.js',
-    'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    //scheduler: 'npm:scheduler/umd/scheduler.development.js'
-    scheduler: 'npm:scheduler/cjs/scheduler.development.js'
+    react: 'npm:react-0.0.0-experimental/umd/react.development.js',
+    'react-dom':
+      'npm:react-dom-0.0.0-experimental/umd/react-dom.development.js',
+    //scheduler: 'npm:scheduler-0.0.0-experimental/umd/scheduler.development.js'
+    scheduler: 'npm:scheduler-0.0.0-experimental/cjs/scheduler.development.js'
   },
   packages: {
     '.': {

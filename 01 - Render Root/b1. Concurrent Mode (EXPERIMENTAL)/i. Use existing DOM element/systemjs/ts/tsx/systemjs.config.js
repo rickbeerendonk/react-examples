@@ -9,9 +9,9 @@ SystemJS.config({
     'npm:': '../../../../../../node_modules/'
   },
   map: {
-    react: 'npm:react/umd/react.development.js',
-    'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-
+    react: 'npm:react-0.0.0-experimental/umd/react.development.js',
+    'react-dom':
+      'npm:react-dom-0.0.0-experimental/umd/react-dom.development.js',
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'
   },
