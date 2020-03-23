@@ -4,19 +4,19 @@
 /* global createReactClass, React, ReactDOM */
 
 var Post = createReactClass({
-  render: function() {
+  render: function () {
     return <li>{this.props.title}</li>;
   }
 });
 
 var Posts = createReactClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return { posts: [] };
   },
   componentDidMount() {
     var self = this;
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
         self.setState({ posts: JSON.parse(xhr.responseText) });
       }
@@ -27,7 +27,7 @@ var Posts = createReactClass({
   render() {
     return (
       <ul>
-        {this.state.posts.map(function(post, i) {
+        {this.state.posts.map(function (post, i) {
           return <Post key={i} title={post.title} />;
         })}
       </ul>

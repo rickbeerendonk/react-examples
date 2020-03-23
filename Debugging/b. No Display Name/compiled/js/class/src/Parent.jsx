@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default function({ children }) {
+export default function ({ children }) {
   return (
     <>
       <h2>Parent (not the owner)</h2>

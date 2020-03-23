@@ -9,7 +9,7 @@ function PostList({ posts }) {
   return React.createElement(
     'ul',
     null,
-    posts.map(function(post, i) {
+    posts.map(function (post, i) {
       return React.createElement(Post, { key: i, title: post.title });
     })
   );

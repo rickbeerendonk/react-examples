@@ -9,7 +9,7 @@ import useMousePosition from './mouse-position-hook';
 import Parent from './Parent';
 import Child from './Child';
 
-export default function() {
+export default function () {
   const mousePosition = useMousePosition();
 
   return (

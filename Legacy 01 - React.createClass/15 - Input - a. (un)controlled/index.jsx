@@ -4,7 +4,7 @@
 /* global createReactClass, React, ReactDOM */
 
 var HelloMessage = createReactClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return { name: 'World' };
   },
   handleChange(e) {

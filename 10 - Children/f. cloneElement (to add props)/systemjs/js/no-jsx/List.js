@@ -7,7 +7,7 @@ function List(props) {
   return React.createElement(
     'ul',
     null,
-    React.Children.map(props.children, function(child, i) {
+    React.Children.map(props.children, function (child, i) {
       return React.createElement(
         'li',
         { key: i },

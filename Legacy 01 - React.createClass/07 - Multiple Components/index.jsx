@@ -7,25 +7,25 @@ var EditBox = createReactClass({
   handleChange(e) {
     this.props.onChange(e.target.value);
   },
-  render: function() {
+  render: function () {
     return <input onChange={this.handleChange} value={this.props.name} />;
   }
 });
 
 var Greeting = createReactClass({
-  render: function() {
+  render: function () {
     return <h1>Hello {this.props.name}!</h1>;
   }
 });
 
 var GreetingEditor = createReactClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return { name: 'World' };
   },
-  handleChange: function(newName) {
+  handleChange: function (newName) {
     this.setState({ name: newName });
   },
-  render: function() {
+  render: function () {
     return (
       <div>
         <EditBox onChange={this.handleChange} name={this.state.name} />

@@ -9,7 +9,7 @@ function Greetings({ names }) {
       <h1>Greetings</h1>
       <ul>
         {// Prefer map (instead of for-loops):
-        (function() {
+        (function () {
           const result = [];
           for (const name of names) {
             result.push(<li key={name}>Hello {name}</li>);
