@@ -8,14 +8,16 @@ function Greetings({ names }) {
     <React.Fragment>
       <h1>Greetings</h1>
       <ul>
-        {// Prefer map (instead of for-loops):
-        (function () {
-          const result = [];
-          for (const name of names) {
-            result.push(<li key={name}>Hello {name}</li>);
-          }
-          return result;
-        })()}
+        {
+          // Prefer map (instead of for-loops):
+          (function () {
+            const result = [];
+            for (const name of names) {
+              result.push(<li key={name}>Hello {name}</li>);
+            }
+            return result;
+          })()
+        }
       </ul>
     </React.Fragment>
   );

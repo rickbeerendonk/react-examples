@@ -7,8 +7,10 @@ function Greeting({ name }) {
   return (
     <React.Fragment>
       <h3>Greeting:</h3>
-      {// Only render when a name is truthy:
-      name && <div>Hello {name}!</div>}
+      {
+        // Only render when a name is truthy:
+        name && <div>Hello {name}!</div>
+      }
     </React.Fragment>
   );
 }

@@ -8,14 +8,16 @@ function Greeting({ name }) {
     <React.Fragment>
       <h3>Greeting:</h3>
       <div>
-        {// Change render based on name:
-        name ? (
-          <React.Fragment>
-            <u>Hello</u> {name}!
-          </React.Fragment>
-        ) : (
-          <span style={{ color: 'red' }}>No name provided.</span>
-        )}
+        {
+          // Change render based on name:
+          name ? (
+            <React.Fragment>
+              <u>Hello</u> {name}!
+            </React.Fragment>
+          ) : (
+            <span style={{ color: 'red' }}>No name provided.</span>
+          )
+        }
       </div>
     </React.Fragment>
   );
