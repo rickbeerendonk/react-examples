@@ -1,8 +1,12 @@
-# Children TODO
+# Children
 
-Children examples:
+## count
 
-- count
+```js
+function List(props) {
+  return <h1>Number of children: {React.Children.count(props.children)}</h1>;
+}
+```
 
 ## Licence
 
