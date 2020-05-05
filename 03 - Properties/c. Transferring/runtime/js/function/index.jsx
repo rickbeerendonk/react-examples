@@ -10,7 +10,7 @@ function ImportantAnchor({ children, ...otherProps }) {
 ReactDOM.render(
   <ImportantAnchor
     href="http://www.reactjs.com"
-    rel="noopener"
+    rel="noopener noreferrer"
     target="_blank"
     title="Everything about React"
   >
