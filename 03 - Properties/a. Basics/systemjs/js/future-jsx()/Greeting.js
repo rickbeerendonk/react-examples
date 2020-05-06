@@ -4,7 +4,10 @@
 import React from 'react';
 
 function Greeting(props) {
-  return React.jsx('h1', { children: ['Hello ', props.name, '!'] });
+  // See: https://github.com/reactjs/rfcs/pull/107
+  return React.jsx('h1', {
+    children: ['Hello ', props.name, '!']
+  });
 }
 
 export default Greeting;

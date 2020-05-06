@@ -7,6 +7,6 @@ import ReactDOM from 'react-dom';
 import Greeting from './Greeting';
 
 ReactDOM.render(
-  React.createElement(Greeting, { name: 'World' }),
+  React.jsxs(Greeting, { name: 'World' }),
   document.getElementById('app')
 );
