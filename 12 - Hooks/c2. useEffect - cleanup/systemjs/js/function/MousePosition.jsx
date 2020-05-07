@@ -11,12 +11,12 @@ function MousePosition() {
 
   React.useEffect(() => {
     // Default: Handler inside
-    function handleMouseOver(e) {
+    function handleMouseMove(e) {
       setMousePosition({ X: e.pageX, Y: e.pageY });
     }
-    document.addEventListener('mousemove', handleMouseOver);
+    document.addEventListener('mousemove', handleMouseMove);
     return () => {
-      document.removeEventListener('mousemove', handleMouseOver);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, [setMousePosition]);
 
