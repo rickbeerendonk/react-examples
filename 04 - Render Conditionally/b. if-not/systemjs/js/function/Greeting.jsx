@@ -7,10 +7,8 @@ function Greeting(props) {
   return (
     <React.Fragment>
       <h3>Greeting:</h3>
-      {
-        // Only render when a not-name is falsy:
-        !props.name || <div>Hello {props.name}!</div>
-      }
+      {// Only render when a not-name is falsy:
+      !props.name || <div>Hello {props.name}!</div>}
     </React.Fragment>
   );
 }

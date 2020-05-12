@@ -4,7 +4,7 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  render: function () {
+  render: function() {
     return (
       <h1 style={Object.assign({}, styles.header, this.props.style)}>
         Hello World!

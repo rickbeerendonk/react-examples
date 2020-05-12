@@ -23,7 +23,7 @@ class List extends React.Component {
     return React.createElement(
       'ul',
       null,
-      React.Children.map(self.props.children, function (child, i) {
+      React.Children.map(self.props.children, function(child, i) {
         return React.createElement(
           'li',
           { key: i },

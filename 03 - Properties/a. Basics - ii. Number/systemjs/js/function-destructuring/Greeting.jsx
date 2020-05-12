@@ -4,7 +4,15 @@
 import React from 'react';
 
 function Greeting({ count, name }) {
-  return <h1>Hello {Array(count).fill(name).join(' ')}!</h1>;
+  return (
+    <h1>
+      Hello{' '}
+      {Array(count)
+        .fill(name)
+        .join(' ')}
+      !
+    </h1>
+  );
 }
 
 export default Greeting;

@@ -11,16 +11,14 @@ const Greeting: React.FC<IGreetingProps> = props => (
   <React.Fragment>
     <h3>Greeting:</h3>
     <div>
-      {
-        // Change render based on name:
-        props.name ? (
-          <React.Fragment>
-            <u>Hello</u> {props.name}!
-          </React.Fragment>
-        ) : (
-          <span style={{ color: 'red' }}>No name provided.</span>
-        )
-      }
+      {// Change render based on name:
+      props.name ? (
+        <React.Fragment>
+          <u>Hello</u> {props.name}!
+        </React.Fragment>
+      ) : (
+        <span style={{ color: 'red' }}>No name provided.</span>
+      )}
     </div>
   </React.Fragment>
 );

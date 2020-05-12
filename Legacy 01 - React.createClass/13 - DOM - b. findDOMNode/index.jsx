@@ -5,10 +5,10 @@
 /* eslint react/no-find-dom-node:"off" */
 
 var HelloWorld = createReactClass({
-  componentDidMount: function () {
+  componentDidMount: function() {
     ReactDOM.findDOMNode(this).innerHTML = 'Hello <u>React</u>!!!';
   },
-  render: function () {
+  render: function() {
     return <h1>Hello World!</h1>;
   }
 });

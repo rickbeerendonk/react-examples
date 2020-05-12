@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-export default function () {
+export default function() {
   // Hidden state variable
   const [mousePosition, setMousePosition] = React.useState({
     X: undefined,

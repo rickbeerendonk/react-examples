@@ -92,7 +92,7 @@ Factory Components will be removed due to lack of use.
 ```js
 const FactoryComponent = () => {
   return {
-    render: function () {
+    render: function() {
       return <div>foo</div>;
     }
   };

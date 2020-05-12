@@ -8,7 +8,7 @@ import React from 'react';
 function HelloWorld() {
   return {
     state: { value: 'World' },
-    render: function () {
+    render: function() {
       return <h1>Hello {this.state.value}!</h1>;
     }
   };

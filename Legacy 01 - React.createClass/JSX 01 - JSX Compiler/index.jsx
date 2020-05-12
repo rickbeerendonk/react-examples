@@ -12,16 +12,16 @@ var JsxCompiler = createReactClass({
 });\n\
 \n\
 React.renderComponent(<HelloMessage name="John" />, mountNode);',
-  getInitialState: function () {
+  getInitialState: function() {
     return { code: '' };
   },
-  handleChange: function (e) {
+  handleChange: function(e) {
     this.setState({
       code: Babel.transform(e.target.value, { presets: ['es2015', 'react'] })
         .code
     });
   },
-  render: function () {
+  render: function() {
     return (
       <div>
         <textarea

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const Child = React.forwardRef(function (props, ref) {
+const Child = React.forwardRef(function(props, ref) {
   const myH1 = React.useRef();
 
   React.useImperativeHandle(ref, () => ({

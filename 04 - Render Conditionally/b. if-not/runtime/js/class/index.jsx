@@ -8,10 +8,8 @@ class Greeting extends React.Component {
     return (
       <React.Fragment>
         <h3>Greeting:</h3>
-        {
-          // Only render when a not-name is falsy:
-          !this.props.name || <div>Hello {this.props.name}!</div>
-        }
+        {// Only render when a not-name is falsy:
+        !this.props.name || <div>Hello {this.props.name}!</div>}
       </React.Fragment>
     );
   }

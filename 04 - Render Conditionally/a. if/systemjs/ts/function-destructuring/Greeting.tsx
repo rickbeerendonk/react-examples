@@ -10,10 +10,8 @@ interface IGreetingProps {
 const Greeting: React.FC<IGreetingProps> = ({ name }) => (
   <React.Fragment>
     <h3>Greeting:</h3>
-    {
-      // Only render when a name is truthy:
-      name && <div>Hello {name}!</div>
-    }
+    {// Only render when a name is truthy:
+    name && <div>Hello {name}!</div>}
   </React.Fragment>
 );
 

@@ -8,14 +8,12 @@ class Greeting extends React.Component {
     return (
       <React.Fragment>
         <h3>Greeting:</h3>
-        {
-          // Change render based on name:
-          this.props.name ? (
-            <div>Hello {this.props.name}!</div>
-          ) : (
-            <div style={{ color: 'red' }}>No name provided.</div>
-          )
-        }
+        {// Change render based on name:
+        this.props.name ? (
+          <div>Hello {this.props.name}!</div>
+        ) : (
+          <div style={{ color: 'red' }}>No name provided.</div>
+        )}
       </React.Fragment>
     );
   }

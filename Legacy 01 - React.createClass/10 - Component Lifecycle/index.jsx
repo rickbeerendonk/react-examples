@@ -14,7 +14,7 @@ function logEvent(value, className) {
 }
 
 var Hello = createReactClass({
-  render: function () {
+  render: function() {
     logEvent(
       'render() - props: ' +
         JSON.stringify(this.props) +
@@ -31,33 +31,33 @@ var Hello = createReactClass({
   },
 
   // Initializing
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     var result = null;
     logEvent('getDefaultProps(): ' + JSON.stringify(result));
     return result;
   },
-  getInitialState: function () {
+  getInitialState: function() {
     var result = { count: 1 };
     logEvent('getInitialState(): ' + JSON.stringify(result));
     return result;
   },
 
   // Mounting
-  UNSAFE_componentWillMount: function () {
+  UNSAFE_componentWillMount: function() {
     logEvent('componentWillMount()', 'mounting');
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('componentDidMount()', 'mounting');
   },
 
   // Updating
-  UNSAFE_componentWillReceiveProps: function (nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     logEvent(
       'componentWillReceiveProps(nextProps: ' + JSON.stringify(nextProps) + ')',
       'updating'
     );
   },
-  shouldComponentUpdate: function (nextProps, nextState) {
+  shouldComponentUpdate: function(nextProps, nextState) {
     logEvent(
       'shouldComponentUpdate(nextProps: ' +
         JSON.stringify(nextProps) +
@@ -68,7 +68,7 @@ var Hello = createReactClass({
     );
     return true;
   },
-  UNSAFE_componentWillUpdate: function (nextProps, nextState) {
+  UNSAFE_componentWillUpdate: function(nextProps, nextState) {
     logEvent(
       'componentWillUpdate(nextProps: ' +
         JSON.stringify(nextProps) +
@@ -78,7 +78,7 @@ var Hello = createReactClass({
       'updating'
     );
   },
-  componentDidUpdate: function (prevProps, prevState) {
+  componentDidUpdate: function(prevProps, prevState) {
     logEvent(
       'componentDidUpdate(prevProps: ' +
         JSON.stringify(prevProps) +
@@ -94,22 +94,22 @@ var Hello = createReactClass({
   },
 
   // Unmounting
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     logEvent('componentWillUnmount()', 'unmounting');
   }
 });
 
 var App = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return {
       name: 'A'
     };
   },
-  componentDidMount: function () {
+  componentDidMount: function() {
     logEvent('-- new prop --', 'action');
     this.setState({ name: 'B' });
   },
-  render: function () {
+  render: function() {
     return <Hello name={this.state.name} />;
   }
 });

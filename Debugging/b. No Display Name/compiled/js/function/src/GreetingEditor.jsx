@@ -7,7 +7,7 @@ import React from 'react';
 import Greeting from './Greeting';
 import EditBox from './EditBox';
 
-export default function () {
+export default function() {
   const [name, setName] = React.useState('World');
 
   return (

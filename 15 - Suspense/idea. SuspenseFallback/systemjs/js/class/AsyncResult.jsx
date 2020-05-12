@@ -12,7 +12,7 @@ function AsyncResult({ duration = 3000 }) {
 
   // Create a promise if it doesn't exist yet
   if (!promise) {
-    promise = new Promise(function (resolve) {
+    promise = new Promise(function(resolve) {
       setTimeout(() => resolve('Result!'), duration);
     }).then(value => (result = value));
   }

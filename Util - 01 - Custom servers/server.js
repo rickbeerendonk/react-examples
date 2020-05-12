@@ -25,9 +25,8 @@ if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
 }
 
 const serverUri = `http://localhost:${portHttp}`;
-const totalUri = `${serverUri}${extraUri}${
-  extraUri[extraUri.length - 1] !== '/' && '/'
-}`;
+const totalUri = `${serverUri}${extraUri}${extraUri[extraUri.length - 1] !==
+  '/' && '/'}`;
 
 //console.log('serverUri: ' + serverUri);
 //console.log('extraPath: ' + extraPath);
@@ -54,7 +53,7 @@ const command =
     ? `start "" "${totalUri}"`
     : /* process.platform === "darwin" */ `open "${totalUri}"`;
 // Use timeout so the server is ready.
-setTimeout(function () {
+setTimeout(function() {
   childProcess.spawn(command, {
     shell: true,
     stdio: 'inherit'

@@ -8,7 +8,7 @@ const handlers = new Set();
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
-  const changeHandler = function (e) {
+  const changeHandler = function(e) {
     setName(e.target.value);
   };
 

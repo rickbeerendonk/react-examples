@@ -4,14 +4,14 @@
 /* global createReactClass, React, ReactDOM */
 
 var ClickMe = createReactClass({
-  getInitialState: function () {
+  getInitialState: function() {
     return { count: 0 };
   },
-  handleClick: function () {
+  handleClick: function() {
     // this.state may be updated asynchronously:
     this.setState(state => ({ count: state.count + 1 }));
   },
-  render: function () {
+  render: function() {
     return (
       <a onClick={this.handleClick}>
         {'This link has been clicked ' + this.state.count + ' times'}

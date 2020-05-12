@@ -7,14 +7,12 @@ function Greeting(props) {
   return (
     <React.Fragment>
       <h3>Greeting:</h3>
-      {
-        // Change render based on name:
-        props.name ? (
-          <div>Hello {props.name}!</div>
-        ) : (
-          <div style={{ color: 'red' }}>No name provided.</div>
-        )
-      }
+      {// Change render based on name:
+      props.name ? (
+        <div>Hello {props.name}!</div>
+      ) : (
+        <div style={{ color: 'red' }}>No name provided.</div>
+      )}
     </React.Fragment>
   );
 }

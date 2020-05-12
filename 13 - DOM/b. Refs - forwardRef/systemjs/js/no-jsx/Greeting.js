@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const Greeting = React.forwardRef(function (props, ref) {
+const Greeting = React.forwardRef(function(props, ref) {
   return React.createElement(
     'div',
     { className: 'hello' },

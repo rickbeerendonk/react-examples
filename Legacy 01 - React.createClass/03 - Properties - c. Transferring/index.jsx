@@ -4,7 +4,7 @@
 /* global createReactClass, React, ReactDOM */
 
 var ImportantAnchor = createReactClass({
-  render: function () {
+  render: function() {
     return <a {...this.props}>!!! {this.props.children} !!!</a>;
   }
 });

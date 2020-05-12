@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default function ({ onChange, value }) {
+export default function({ onChange, value }) {
   function handleChange(e) {
     onChange(e.target.value);
   }

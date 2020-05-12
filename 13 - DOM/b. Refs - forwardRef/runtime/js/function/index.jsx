@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM */
 
-const Greeting = React.forwardRef(function (props, ref) {
+const Greeting = React.forwardRef(function(props, ref) {
   return (
     <div className="hello">
       <h1 ref={ref}>Hello {props.name}!</h1>
