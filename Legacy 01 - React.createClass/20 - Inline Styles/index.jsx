@@ -4,7 +4,7 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  render: function() {
+  render: function () {
     return <h1 style={styles.header}>Hello World!</h1>;
   }
 });

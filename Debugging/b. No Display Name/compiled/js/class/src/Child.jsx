@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-export default function({ info }) {
+export default function ({ info }) {
   console.warn('Do you see a component stack?');
 
   return (

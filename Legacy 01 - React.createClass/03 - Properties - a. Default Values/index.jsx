@@ -4,10 +4,10 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return { name: 'World' };
   },
-  render: function() {
+  render: function () {
     return <h1>Hello {this.props.name}!</h1>;
   }
 });

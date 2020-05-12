@@ -4,10 +4,10 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  handleChange: function(e) {
+  handleChange: function (e) {
     alert('Event handled.\nTarget: ' + e.target + '\nValue: ' + e.target.value);
   },
-  render: function() {
+  render: function () {
     return <input onChange={this.handleChange} value="Hello World!" />;
   }
 });

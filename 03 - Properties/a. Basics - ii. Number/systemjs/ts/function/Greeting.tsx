@@ -9,13 +9,7 @@ interface IGreetingProps {
 }
 
 const Greeting: React.FC<IGreetingProps> = props => (
-  <h1>
-    Hello{' '}
-    {Array(props.count)
-      .fill(props.name)
-      .join(' ')}
-    !
-  </h1>
+  <h1>Hello {Array(props.count).fill(props.name).join(' ')}!</h1>
 );
 
 export default Greeting;

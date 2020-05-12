@@ -28,16 +28,16 @@ class PostListContainer extends React.Component {
     var self = this;
     self.setState({ isFetching: true });
     var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
+    xhr.onload = function () {
       self.setState({ isFetching: false });
     };
-    xhr.onerror = function() {
+    xhr.onerror = function () {
       self.setState({ error: 'An error occurred.' });
     };
-    xhr.ontimeout = function() {
+    xhr.ontimeout = function () {
       self.setState({ error: 'Timeout.' });
     };
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (this.readyState == XMLHttpRequest.DONE) {
         if (this.status == 200) {
           self.setState({ posts: JSON.parse(xhr.responseText) });

@@ -12,8 +12,10 @@ class Greeting extends React.Component<IGreetingProps> {
     return (
       <React.Fragment>
         <h3>Greeting:</h3>
-        {// Only render when a name is truthy:
-        this.props.name && <div>Hello {this.props.name}!</div>}
+        {
+          // Only render when a name is truthy:
+          this.props.name && <div>Hello {this.props.name}!</div>
+        }
       </React.Fragment>
     );
   }

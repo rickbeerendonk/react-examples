@@ -4,13 +4,13 @@
 /* global createReactClass, React, ReactDOM */
 
 var Greeting = createReactClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return { name: 'World' };
   },
-  handleChange: function(e) {
+  handleChange: function (e) {
     this.setState({ name: e.target.value });
   },
-  render: function() {
+  render: function () {
     return (
       <div>
         <input onChange={this.handleChange} value={this.state.name} />
