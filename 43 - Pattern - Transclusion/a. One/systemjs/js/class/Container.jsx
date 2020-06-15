@@ -3,22 +3,23 @@
 
 import React from 'react';
 
-const containerStyle = {
-  backgroundColor: 'lightgray',
-  padding: 10
-};
-
-const contentStyle = {
-  backgroundColor: 'white',
-  padding: 10
+const styles = {
+  container: {
+    backgroundColor: 'lightgray',
+    padding: 10
+  },
+  content: {
+    backgroundColor: 'white',
+    padding: 10
+  }
 };
 
 class Container extends React.Component {
   render() {
     return (
-      <div style={containerStyle}>
+      <div style={styles.container}>
         The only item:
-        <div style={contentStyle}>{this.props.children}</div>
+        <div style={styles.content}>{this.props.children}</div>
       </div>
     );
   }

@@ -3,21 +3,22 @@
 
 /* global React, ReactDOM */
 
-const containerStyle = {
-  backgroundColor: 'lightgray',
-  padding: 10
-};
-
-const contentStyle = {
-  backgroundColor: 'white',
-  padding: 10
+const styles = {
+  container: {
+    backgroundColor: 'lightgray',
+    padding: 10
+  },
+  content: {
+    backgroundColor: 'white',
+    padding: 10
+  }
 };
 
 function Container({ children }) {
   return (
-    <div style={containerStyle}>
+    <div style={styles.container}>
       The only item:
-      <div style={contentStyle}>{children}</div>
+      <div style={styles.content}>{children}</div>
     </div>
   );
 }
