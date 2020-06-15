@@ -1,20 +1,32 @@
 {
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 2020
+    }
   },
+  "plugins": ["react", "react-hooks"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
-    "indent": [2, 2],
-    "quotes": [2, "single"],
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "react/no-did-mount-set-state": 2,
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "no-debugger": 1,
     "semi": [2, "always"]
   },
-  "env": {
-    "es6": true,
-    "browser": true
-  },
-  "extends": "eslint:recommended",
-  "plugins": ["react"]
+  "settings": {
+    "react": {
+      "version": "16.13.1"
+    }
+  }
 }
