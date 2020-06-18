@@ -18,19 +18,19 @@ function GreetingEditor() {
     document.title = name;
   }, [name]);
 
-  function handleChange1(e) {
+  function handleChangeName(e) {
     setName(e.target.value);
   }
 
-  function handleChange2(e) {
+  function handleChangeOther(e) {
     setOther(e.target.value);
   }
 
   return (
     <React.Fragment>
-      <input autoFocus onChange={handleChange1} value={name} />
+      <input autoFocus onChange={handleChangeName} value={name} />
       <h1>Hello {name}!</h1>
-      <input autoFocus onChange={handleChange2} value={other} />
+      <input onChange={handleChangeOther} value={other} />
       <h2>Hello {other}!</h2>
     </React.Fragment>
   );
