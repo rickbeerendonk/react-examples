@@ -9,17 +9,17 @@ import ClickMe from './ClickMe';
 // is recreated, due to having a different key, with its initial state.
 
 function App() {
-  const [count, setCount] = React.useState(0);
+  const [id, setId] = React.useState(0);
 
   function handleClick() {
-    setCount(c => c + 1);
+    setId(i => i + 1);
   }
 
   return (
     <React.Fragment>
-      <button onClick={handleClick}>Click me!</button>
+      <button onClick={handleClick}>Change ID</button>
       <br />
-      <ClickMe key={count} />
+      <ClickMe key={id} />
     </React.Fragment>
   );
 }

@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <button onClick={this.handleClick}>Click me!</button>
+        <button onClick={this.handleClick}>Change visibility</button>
         <br />
         {this.state.showClickMe && <ClickMe />}
       </React.Fragment>

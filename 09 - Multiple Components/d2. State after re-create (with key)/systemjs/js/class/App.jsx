@@ -11,21 +11,21 @@ import ClickMe from './ClickMe';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = { id: 0 };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(state => ({ count: state.count + 1 }));
+    this.setState(state => ({ id: state.id + 1 }));
   }
 
   render() {
     return (
       <React.Fragment>
-        <button onClick={this.handleClick}>Click me!</button>
+        <button onClick={this.handleClick}>Change ID</button>
         <br />
-        <ClickMe key={this.state.count} />
+        <ClickMe key={this.state.id} />
       </React.Fragment>
     );
   }

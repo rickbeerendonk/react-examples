@@ -17,7 +17,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <button onClick={handleClick}>Click me!</button>
+      <button onClick={handleClick}>Change visibility</button>
       <br />
       {showClickMe && <ClickMe />}
     </React.Fragment>
