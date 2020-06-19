@@ -5,15 +5,8 @@ import React from 'react';
 
 import Three from './Three';
 
-class Two extends React.Component {
-  shouldComponentUpdate() {
-    // Prevents legacy context changes from reaching child components.
-    // New context API fixes this.
-    return false;
-  }
-  render() {
-    return <Three />;
-  }
+function Two() {
+  return <Three />;
 }
 
 export default Two;
