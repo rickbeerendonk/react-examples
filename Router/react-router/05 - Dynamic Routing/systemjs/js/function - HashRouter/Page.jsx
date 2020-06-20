@@ -8,6 +8,10 @@ import { useParams } from 'react-router-dom';
 // <= version 5
 
 export function PageLegacy({ match }) {
+  if (!match) {
+    return null;
+  }
+
   return <h2>Page Legacy {match.params.id}</h2>;
 }
 
@@ -16,5 +20,5 @@ export function PageLegacy({ match }) {
 
 export function Page() {
   const { id } = useParams();
-  return <h2>Page {id} </h2>;
+  return <h2>Page {id}</h2>;
 }
