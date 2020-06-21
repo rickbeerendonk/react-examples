@@ -10,7 +10,7 @@ class Hello extends React.Component {
     super(props);
 
     // Rerender every 2 seconds
-    setTimeout(() => this.forceUpdate(), 2000);
+    setInterval(() => this.forceUpdate(), 2000);
 
     this.setSecondCallbackRef = this.setSecondCallbackRef.bind(this);
   }
