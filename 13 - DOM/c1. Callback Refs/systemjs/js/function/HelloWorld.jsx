@@ -4,9 +4,11 @@
 import React from 'react';
 
 function HelloWorld() {
-  return (
-    <h1 ref={ref => (ref.innerHTML = 'Hello <u>React</u>!!!')}>Hello World!</h1>
-  );
+  function handleRef(ref) {
+    ref.innerHTML = 'Hello <u>React</u>!!!';
+  }
+
+  return <h1 ref={handleRef}>Hello World!</h1>;
 }
 
 export default HelloWorld;
