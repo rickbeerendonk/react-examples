@@ -16,13 +16,13 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/preset-env": "7.10.2",
-    "@babel/preset-react": "7.10.1",
-    "@babel/register": "7.10.1",
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "@babel/register": "7.10.5",
     "core-js": "3.6.5",
-    "expect": "26.0.1",
-    "mocha": "8.0.1",
+    "expect": "26.2.0",
+    "mocha": "8.1.1",
     "react-test-renderer": "16.13.1"
   }
 }
