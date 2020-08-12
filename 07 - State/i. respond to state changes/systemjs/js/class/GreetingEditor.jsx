@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
 
 import React from 'react';
 
@@ -11,7 +11,11 @@ class GreetingEditor extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    this.setState({ name: e.target.value }, () => alert('state changed'));
+    this.setState({ name: e.target.value }, function () {
+      if (this.state.name === 'React') {
+        alert('Name === React');
+      }
+    });
   }
   render() {
     return (
