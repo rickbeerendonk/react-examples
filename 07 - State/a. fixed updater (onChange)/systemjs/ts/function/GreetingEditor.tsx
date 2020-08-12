@@ -4,7 +4,7 @@
 import React from 'react';
 
 const GreetingEditor: React.FC = () => {
-  const [name, setName] = React.useState('World');
+  const [name, setName] = React.useState<string>('World');
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
