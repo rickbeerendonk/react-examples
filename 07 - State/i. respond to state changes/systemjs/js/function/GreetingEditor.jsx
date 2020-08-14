@@ -6,14 +6,11 @@ import React from 'react';
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
-  React.useEffect(
-    function () {
-      if (name === 'React') {
-        alert('Name === React');
-      }
-    },
-    [name]
-  );
+  React.useEffect(() => {
+    if (name === 'React') {
+      alert('Name === React');
+    }
+  }, [name]);
 
   function handleChange(e) {
     setName(e.target.value);
