@@ -10,7 +10,9 @@ module.exports = merge(commonConfig, {
   devServer: {
     inline: true,
     contentBase: './build',
-    port: 9100
+    overlay: true,
+    port: 9100,
+    stats: 'errors-only'
   },
   devtool: 'eval-source-map' /* fast, inline, no production */,
   mode: 'development'

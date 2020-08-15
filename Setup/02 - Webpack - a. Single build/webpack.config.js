@@ -12,12 +12,14 @@ module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'bundle.[hash:8].js'
+    filename: '[name].[hash:8].js'
   },
   devtool: 'source-map',
   devServer: {
     contentBase: './build',
-    port: 9100
+    overlay: true,
+    port: 9100,
+    stats: 'errors-only'
   },
   mode: 'development',
   module: {
