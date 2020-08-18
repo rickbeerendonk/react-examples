@@ -9,12 +9,12 @@ class App extends React.Component {
       React.Fragment,
       null,
       'This is the React App.',
-      React.createElement(Invisible)
+      React.createElement(Portal)
     );
   }
 }
 
-class Invisible extends React.Component {
+class Portal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       React.createElement(Visible),

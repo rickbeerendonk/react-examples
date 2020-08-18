@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 
 import Visible from './Visible';
 
-export default class Invisible extends React.Component {
+export default class Portal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       React.createElement(Visible),

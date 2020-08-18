@@ -6,8 +6,8 @@ import ReactDOM from 'react-dom';
 
 import Visible from './Visible';
 
-function Invisible() {
+function Portal() {
   return ReactDOM.createPortal(<Visible />, document.getElementById('portal'));
 }
 
-export default Invisible;
+export default Portal;

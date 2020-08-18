@@ -3,13 +3,13 @@
 
 import React from 'react';
 
-import Invisible from './Invisible';
+import Portal from './Portal';
 
 function App() {
   return (
     <React.Fragment>
       This is the React App.
-      <Invisible />
+      <Portal />
     </React.Fragment>
   );
 }

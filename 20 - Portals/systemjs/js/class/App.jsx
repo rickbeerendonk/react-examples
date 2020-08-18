@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-import Invisible from './Invisible';
+import Portal from './Portal';
 
 export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         This is the React App.
-        <Invisible />
+        <Portal />
       </React.Fragment>
     );
   }

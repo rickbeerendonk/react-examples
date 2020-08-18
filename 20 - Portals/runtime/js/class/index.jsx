@@ -8,13 +8,13 @@ class App extends React.Component {
     return (
       <React.Fragment>
         This is the React App.
-        <Invisible />
+        <Portal />
       </React.Fragment>
     );
   }
 }
 
-class Invisible extends React.Component {
+class Portal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       <Visible />,

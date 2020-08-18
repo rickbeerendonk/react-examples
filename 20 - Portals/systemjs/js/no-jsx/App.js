@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import Invisible from './Invisible';
+import Portal from './Portal';
 
 export default class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class App extends React.Component {
       React.Fragment,
       null,
       'This is the React App.',
-      React.createElement(Invisible)
+      React.createElement(Portal)
     );
   }
 }

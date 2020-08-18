@@ -7,12 +7,12 @@ function App() {
   return (
     <React.Fragment>
       This is the React App.
-      <Invisible />
+      <Portal />
     </React.Fragment>
   );
 }
 
-function Invisible() {
+function Portal() {
   return ReactDOM.createPortal(<Visible />, document.getElementById('portal'));
 }
 
