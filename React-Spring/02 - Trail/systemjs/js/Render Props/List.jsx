@@ -4,6 +4,8 @@
 import React from 'react';
 import { Trail, animated } from 'react-spring/renderprops';
 
+/* eslint react/display-name:"off" */
+
 function List({ items }) {
   return (
     <ul>
