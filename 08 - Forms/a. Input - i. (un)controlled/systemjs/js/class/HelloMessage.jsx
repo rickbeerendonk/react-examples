@@ -16,7 +16,7 @@ class HelloMessage extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div>
           Not controlled by React:
           <input
@@ -32,7 +32,7 @@ class HelloMessage extends React.Component {
         </div>
 
         <div style={{ color: 'darkgray' }}>State = {this.state.name}</div>
-      </div>
+      </React.Fragment>
     );
   }
 }

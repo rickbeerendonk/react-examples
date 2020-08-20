@@ -16,7 +16,7 @@ class HelloMessage extends React.Component {
   }
   render() {
     return React.createElement(
-      'div',
+      React.Fragment,
       null,
       React.createElement(
         'div',
