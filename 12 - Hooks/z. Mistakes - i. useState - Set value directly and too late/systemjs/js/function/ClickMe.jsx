@@ -19,6 +19,8 @@ function ClickMe() {
     console.log('count (after): ', count);
   }
 
+  console.log('render');
+
   return <a onClick={handleClick}>This link has been clicked {count} times</a>;
 }
 
