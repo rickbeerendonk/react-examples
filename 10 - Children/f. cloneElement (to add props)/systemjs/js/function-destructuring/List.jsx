@@ -13,7 +13,7 @@ function List({ children, greeting }) {
             : // child is readonly.
               // To changes props/children on the child, use React.cloneElement.
               // New props (2nd argument) will overwrite existing props.
-              React.cloneElement(child, { greeting: greeting })}
+              React.cloneElement(child, { greeting })}
         </li>
       ))}
     </ul>
