@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function EditBox({ onChange, value }) {
+export function EditBox({ onChange, value }) {
   return <input onChange={e => onChange(e.target.value)} value={value} />;
 }
 EditBox.propTypes = {

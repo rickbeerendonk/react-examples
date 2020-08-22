@@ -1,6 +1,6 @@
 {
   "name": "react-storybook-hmr-eslint-webpack-babel",
-  "description": "Using React with Storybook (Static), Hot Module Replacement, ESLint, Webpack & Babel",
+  "description": "Using React with Storybook (Dynamic), Hot Module Replacement, ESLint, Webpack & Babel",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -18,11 +18,9 @@
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
     "@hot-loader/react-dom": "16.13.0",
-    "@storybook/addon-actions": "5.3.19",
-    "@storybook/addon-docs": "5.3.19",
-    "@storybook/addon-info": "5.3.19",
-    "@storybook/addon-knobs": "5.3.19",
-    "@storybook/react": "5.3.19",
+    "@storybook/addon-essentials": "6.0.16",
+    "@storybook/addon-links": "6.0.16",
+    "@storybook/react": "6.0.16",
     "babel-loader": "8.1.0",
     "core-js": "3.6.5",
     "css-loader": "4.2.1",
@@ -31,7 +29,7 @@
     "eslint-plugin-react": "7.20.5",
     "html-webpack-plugin": "4.3.0",
     "prop-types": "15.7.2",
-    "react-is": "16.13.1",
+    "react-is": "^16.13.1",
     "rimraf": "3.0.2",
     "style-loader": "1.2.1",
     "webpack": "4.44.1",
@@ -44,7 +42,8 @@
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "start": "webpack-dev-server --hot --open",
-    "storybook": "start-storybook -p 9101 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o build-storybook"
+    "storybook": "start-storybook -p 6006",
+    "storybook-build": "build-storybook -c .storybook -o build-storybook",
+    "build-storybook": "build-storybook"
   }
 }
