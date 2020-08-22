@@ -2,7 +2,7 @@
 
 ## Addons
 
-Not all addons are supported for Angular. The current supported addons: https://github.com/storybookjs/storybook/blob/master/ADDONS_SUPPORT.md
+Not all addons are supported for React. The current supported addons: https://github.com/storybookjs/storybook/blob/master/ADDONS_SUPPORT.md
 
 ## Licence
 
