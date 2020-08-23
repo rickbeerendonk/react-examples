@@ -4,8 +4,8 @@
 
 ```zsh
 npm install -g @sitecore-jss/sitecore-jss-cli
-jss create my-first-jss-app react
-cd my-first-jss-app
+jss create my-app react
+cd my-app
 jss start
 ```
 
@@ -15,4 +15,4 @@ European Union Public Licence version 1.2
 
 ## Copyright
 
-Copyright © 2017-2020 Rick Beerendonk
+Copyright © 2020 Rick Beerendonk
