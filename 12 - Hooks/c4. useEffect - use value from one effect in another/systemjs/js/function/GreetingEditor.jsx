@@ -17,6 +17,9 @@ function GreetingEditor() {
     const input = document.createElement('input');
     inputRef.current = input;
     container.appendChild(inputRef.current);
+
+    console.log('Effect 1');
+
     return () => {
       container.removeChild(input);
     };
@@ -24,8 +27,11 @@ function GreetingEditor() {
 
   // Effect 2
   React.useEffect(() => {
+    // Use input created in Effect1 (proofs it is executed first)
     inputRef.current.value = name;
     //document.querySelector('#container input').value = name;
+
+    console.log('Effect 2');
   }, [name]);
 
   function handleChange(e) {
