@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
-      title: 'Pattern Container: GraphQL'
+      title: 'Pattern Container: Apollo Client - GraphQL'
     }),
     new webpack.NamedModulesPlugin()
   ],
