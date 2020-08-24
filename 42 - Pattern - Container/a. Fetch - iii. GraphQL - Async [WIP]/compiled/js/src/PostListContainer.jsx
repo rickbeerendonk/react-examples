@@ -1,8 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
 
 import React from 'react';
-import { fetch } from 'slow-fetch';
 
 import ErrorMessage from './ErrorMessage';
 import Fetching from './Fetching';
@@ -15,29 +14,29 @@ function PostListContainer() {
   const [error, setError] = React.useState(null);
   const [isFetching, setIsFetching] = React.useState(false);
 
-  React.useEffect(
-    fetchPosts,
-    [] /* Do effect only once. Set functions of useState never change. */
-  );
+  React.useEffect(fetchPosts, [posts.length]);
 
   function fetchPosts() {
-    setIsFetching(true);
-    fetch('posts.json')
-      .then(response => {
-        if (!response.ok) {
-          throw Error(response.statusText);
+    if (posts.length === 0) {
+      (async () => {
+        setIsFetching(true);
+        try {
+          const query = '{ allPosts { id title } }';
+          const response = await fetch(
+            `http://localhost:3000?query=${encodeURIComponent(query)}`
+          );
+          if (!response.ok) {
+            throw Error(response.statusText);
+          }
+          const json = await response.json();
+          setPosts(json.data.allPosts);
+        } catch (error) {
+          setError(error.message);
+        } finally {
+          setIsFetching(false);
         }
-        return response.json();
-      })
-      .then(json => {
-        setPosts(json);
-      })
-      .catch(error => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setIsFetching(false);
-      });
+      })();
+    }
   }
 
   return (
