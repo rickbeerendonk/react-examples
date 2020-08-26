@@ -14,8 +14,8 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'npm:': '../../../../../../node_modules/',
-    'utils:': '../../../../../../utils/'
+    'npm:': '../../../../../../../node_modules/',
+    'utils:': '../../../../../../../utils/'
   },
   map: {
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',

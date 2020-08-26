@@ -8,7 +8,7 @@ function Fetching() {
     React.Fragment,
     null,
     React.createElement('img', {
-      src: '../../../../../resources/oblicum-square.svg',
+      src: '../../../../../../../resources/oblicum-square.svg',
       className: 'oblicum-spinner',
       alt: 'Fetching...'
     }),
