@@ -8,7 +8,7 @@ import ErrorMessage from './ErrorMessage';
 import Fetching from './Fetching';
 import PostList from './PostList';
 
-function useFetchJson(url) {
+function useFetchJson(url, options) {
   const [json, setJson] = React.useState(undefined);
   const [error, setError] = React.useState(undefined);
   const [isFetching, setIsFetching] = React.useState(false);
@@ -19,7 +19,7 @@ function useFetchJson(url) {
       (async () => {
         setIsFetching(true);
         try {
-          const response = await fetch(url);
+          const response = await fetch(url, options);
           if (!response.ok) {
             throw Error(response.statusText);
           }
@@ -32,7 +32,7 @@ function useFetchJson(url) {
         }
       })();
     },
-    [url] /* Do effect only once. Set functions of useState never change.  */
+    [url, options]
   );
 
   return [json, error, isFetching];
