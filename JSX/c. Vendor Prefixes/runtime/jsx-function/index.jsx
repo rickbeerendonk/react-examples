@@ -6,9 +6,9 @@
 const Greeting = () => (
   <h1
     style={{
-      transform: 'rotate(10deg) translateY(100px)',
-      msTransform: 'rotate(10deg) translateY(100px)',
-      WebkitTransform: 'rotate(10deg) translateY(100px)'
+      transform: 'rotate(10deg) translate(50px, 100px)',
+      msTransform: 'rotate(10deg) translate(50px, 100px)',
+      WebkitTransform: 'rotate(10deg) translate(50px, 100px)'
     }}
   >
     Hello World!
