@@ -5,7 +5,7 @@ import React from 'react';
 
 class Child extends React.PureComponent {
   render() {
-    return <div onClick={() => this.props.onClick()}>Child</div>;
+    return <button onClick={() => this.props.onClick()}>Child</button>;
   }
 }
 

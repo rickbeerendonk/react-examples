@@ -20,10 +20,16 @@ class Child extends React.Component {
     console.log('Child rendered: ' + Date());
 
     return (
-      <a onClick={this.handleClick}>
-        <div>{`Parent count: ${this.props.count}`}</div>
-        <div>{`Child count: ${this.state.count}`}</div>
-      </a>
+      <React.Fragment>
+        <button onClick={this.handleClick}>
+          <div>{`Parent count: ${this.props.count}`}</div>
+          <div>{`Child count: ${this.state.count}`}</div>
+        </button>
+        <p>
+          Open console to see that a property and a state change in quick
+          succession only lead to one rerender.
+        </p>
+      </React.Fragment>
     );
   }
 }

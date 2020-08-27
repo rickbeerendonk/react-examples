@@ -21,7 +21,11 @@ function ClickMe() {
 
   console.log('render');
 
-  return <a onClick={handleClick}>This link has been clicked {count} times</a>;
+  return (
+    <button onClick={handleClick}>
+      This button has been clicked {count} times
+    </button>
+  );
 }
 
 export default ClickMe;

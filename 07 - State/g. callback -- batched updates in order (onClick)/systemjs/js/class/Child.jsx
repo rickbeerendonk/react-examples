@@ -40,10 +40,10 @@ class Child extends React.Component {
     console.log('render: Child');
 
     return (
-      <a onClick={this.handleClick}>
+      <button onClick={this.handleClick}>
         <div>{`Parent count: ${this.props.count}`}</div>
         <div>{`Child count: ${this.state.count}`}</div>
-      </a>
+      </button>
     );
   }
 }

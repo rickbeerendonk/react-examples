@@ -19,7 +19,7 @@ function App() {
     console.log('value (after): ', value);
   }
 
-  return <a onClick={handleClick}>Value: {String(value)}</a>;
+  return <button onClick={handleClick}>Value: {String(value)}</button>;
 }
 
 export default App;

@@ -3,6 +3,8 @@
 
 import React from 'react';
 
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 function App() {
   const ulRef = React.useRef();
   const liRef = React.useRef();
@@ -23,7 +25,13 @@ function App() {
   return (
     <ul ref={ulRef}>
       {[1, 2, 3].map(nr => (
-        <li key={nr} style={{ margin: 5 }} onClick={handleClick} ref={liRef}>
+        <li
+          key={nr}
+          style={{ margin: 5 }}
+          onClick={handleClick}
+          onKeyUp={handleClick}
+          ref={liRef}
+        >
           {nr}
         </li>
       ))}

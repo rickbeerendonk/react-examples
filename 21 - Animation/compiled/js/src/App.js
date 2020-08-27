@@ -50,7 +50,10 @@ class App extends React.Component {
               >
                 <div
                   onClick={this.handleRemove.bind(null, key)}
+                  onKeyUp={this.handleRemove.bind(null, key)}
                   className="item"
+                  role="button"
+                  tabIndex="0"
                 >
                   {key}
                 </div>

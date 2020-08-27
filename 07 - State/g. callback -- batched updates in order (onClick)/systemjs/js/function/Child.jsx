@@ -29,10 +29,10 @@ function Child(props) {
   console.log('render: Child');
 
   return (
-    <a onClick={handleClick}>
+    <button onClick={handleClick}>
       <div>{`Parent count: ${props.count}`}</div>
       <div>{`Child count: ${count}`}</div>
-    </a>
+    </button>
   );
 }
 

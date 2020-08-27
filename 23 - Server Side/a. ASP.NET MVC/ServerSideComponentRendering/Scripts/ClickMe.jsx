@@ -16,9 +16,9 @@ class ClickMe extends React.Component {
   }
   render() {
     return (
-      <a onClick={this.handleClick}>
-        {'This link has been clicked ' + this.state.count + ' times'}
-      </a>
+      <button onClick={this.handleClick}>
+        {'This button has been clicked ' + this.state.count + ' times'}
+      </button>
     );
   }
 }

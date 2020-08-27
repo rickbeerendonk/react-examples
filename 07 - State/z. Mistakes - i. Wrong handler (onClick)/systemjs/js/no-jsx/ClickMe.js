@@ -10,11 +10,11 @@ class ClickMe extends React.Component {
   }
   render() {
     return React.createElement(
-      'a',
+      'button',
       // setState is not called when the event takes place.
       // The result of setState() is called when the event takes place.
       { onClick: /* () => */ this.setState({ count: this.state.count + 1 }) },
-      'This link has been clicked ',
+      'This button has been clicked ',
       this.state.count,
       ' times'
     );

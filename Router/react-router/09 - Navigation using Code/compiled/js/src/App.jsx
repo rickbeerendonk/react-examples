@@ -21,15 +21,15 @@ function App() {
       <header>
         <h1>App</h1>
         <nav>
-          <a href="" onClick={navigate} data-url="/">
+          <button onClick={navigate} data-url="/">
             Home
-          </a>
-          <a href="" onClick={navigate} data-url="/page1">
+          </button>
+          <button onClick={navigate} data-url="/page1">
             Page 1
-          </a>
-          <a href="" onClick={navigate} data-url="/page2">
+          </button>
+          <button onClick={navigate} data-url="/page2">
             Page 2
-          </a>
+          </button>
         </nav>
       </header>
 

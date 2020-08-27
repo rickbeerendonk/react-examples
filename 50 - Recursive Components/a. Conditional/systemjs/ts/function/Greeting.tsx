@@ -12,7 +12,7 @@ const Greeting: React.FC = () => {
 
   return (
     <React.Fragment>
-      <h1 onClick={handleClick}>Hello World!</h1>
+      <button onClick={handleClick}>Hello World!</button>
       {recursive && <Greeting />}
     </React.Fragment>
   );

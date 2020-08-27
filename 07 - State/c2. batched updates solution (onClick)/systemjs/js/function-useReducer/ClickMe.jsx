@@ -31,7 +31,9 @@ function ClickMe() {
   }
 
   return (
-    <a onClick={handleClick}>This link has been clicked {state.count} times</a>
+    <button onClick={handleClick}>
+      This button has been clicked {state.count} times
+    </button>
   );
 }
 

@@ -7,9 +7,9 @@ function ClickMe() {
   const [count, setCount] = React.useState(0);
 
   return (
-    <a onClick={/* () => */ setCount(count + 1)}>
-      This link has been clicked {count} times
-    </a>
+    <button onClick={/* () => */ setCount(count + 1)}>
+      This button has been clicked {count} times
+    </button>
   );
 }
 

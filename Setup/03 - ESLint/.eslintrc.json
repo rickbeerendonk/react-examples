@@ -13,8 +13,12 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "react-hooks"],
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["jsx-a11y", "react", "react-hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
+  ],
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react/no-did-mount-set-state": 2,

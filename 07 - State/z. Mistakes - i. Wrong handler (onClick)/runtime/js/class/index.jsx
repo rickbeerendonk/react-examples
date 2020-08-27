@@ -10,9 +10,11 @@ class ClickMe extends React.Component {
   }
   render() {
     return (
-      <a onClick={/* () => */ this.setState({ count: this.state.count + 1 })}>
-        This link has been clicked {this.state.count} times
-      </a>
+      <button
+        onClick={/* () => */ this.setState({ count: this.state.count + 1 })}
+      >
+        This button has been clicked {this.state.count} times
+      </button>
     );
   }
 }

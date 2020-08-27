@@ -7,7 +7,7 @@ function Child({ name, onClick }) {
   /* eslint no-console:0 */
   console.log(name, ' is rendered.');
 
-  return <div onClick={() => onClick()}>Child: {name}</div>;
+  return <button onClick={() => onClick()}>Child: {name}</button>;
 }
 
 export default React.memo(Child);

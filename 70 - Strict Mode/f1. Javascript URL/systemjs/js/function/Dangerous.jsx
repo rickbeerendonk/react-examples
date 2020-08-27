@@ -3,6 +3,8 @@
 
 import React from 'react';
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 function Dangerous() {
   // Pull request: https://github.com/facebook/react/pull/15047
   /*

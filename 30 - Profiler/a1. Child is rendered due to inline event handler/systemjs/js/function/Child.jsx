@@ -4,7 +4,7 @@
 import React from 'react';
 
 function Child({ onClick }) {
-  return <div onClick={() => onClick()}>Child</div>;
+  return <button onClick={() => onClick()}>Child</button>;
 }
 
 export default React.memo(Child);

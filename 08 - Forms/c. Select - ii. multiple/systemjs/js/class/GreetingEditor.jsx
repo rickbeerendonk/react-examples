@@ -3,6 +3,8 @@
 
 import React from 'react';
 
+/* eslint-disable jsx-a11y/no-onchange */
+
 class GreetingEditor extends React.Component {
   constructor(props) {
     super(props);

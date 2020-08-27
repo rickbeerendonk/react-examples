@@ -3,6 +3,8 @@
 
 import React from 'react';
 
+/* eslint-disable jsx-a11y/no-onchange */
+
 function GreetingEditor() {
   const [selected, setSelected] = React.useState('train');
 
