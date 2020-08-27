@@ -8,6 +8,7 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "scripts": {
+    "start": "npm run build && serve .",
     "build": "babel site/src --out-dir site/build --source-maps",
     "watch": "babel site/src --out-dir site/build --watch --source-maps"
   },
@@ -20,6 +21,7 @@
     "@babel/core": "7.11.1",
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
-    "core-js": "3.6.5"
+    "core-js": "3.6.5",
+    "serve": "11.3.2"
   }
 }
