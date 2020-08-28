@@ -6,4 +6,4 @@
 const app = document.createElement('div');
 document.body.appendChild(app);
 
-ReactDOM.createRoot(app).render(<h1>Hello React {React.version}!</h1>);
+ReactDOM.unstable_createRoot(app).render(<h1>Hello React {React.version}!</h1>);

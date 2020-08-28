@@ -19,9 +19,9 @@
     <div id="app"></div>
 
     <script type="text/babel" data-presets="react">
-      ReactDOM.createBlockingRoot(document.getElementById('app')).render(
-        <h1>Hello React {React.version}!</h1>
-      );
+      ReactDOM.unstable_createBlockingRoot(
+        document.getElementById('app')
+      ).render(<h1>Hello React {React.version}!</h1>);
     </script>
   </body>
 </html>

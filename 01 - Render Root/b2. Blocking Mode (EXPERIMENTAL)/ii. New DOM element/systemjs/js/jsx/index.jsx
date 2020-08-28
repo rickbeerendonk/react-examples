@@ -7,4 +7,6 @@ import ReactDOM from 'react-dom';
 const app = document.createElement('div');
 document.body.appendChild(app);
 
-ReactDOM.createBlockingRoot(app).render(<h1>Hello React {React.version}!</h1>);
+ReactDOM.unstable_createBlockingRoot(app).render(
+  <h1>Hello React {React.version}!</h1>
+);

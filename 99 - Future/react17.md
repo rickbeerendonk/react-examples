@@ -9,7 +9,7 @@ Creating the root will change. Instead of having one function doing two things, 
 ..... why ????? .....
 
 ```js
-ReactDOM.createRoot(app).render(<h1>Hello React {React.version}!</h1>);
+ReactDOM.unstable_createRoot(app).render(<h1>Hello React {React.version}!</h1>);
 ```
 
 At the time of writing, createRoot() has a "unstable\_" prefix, so the name might change.

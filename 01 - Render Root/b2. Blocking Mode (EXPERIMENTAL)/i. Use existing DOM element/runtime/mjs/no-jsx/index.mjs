@@ -4,6 +4,6 @@
 import React from './react.development.mjs';
 import ReactDOM from './react-dom.development.mjs';
 
-ReactDOM.createBlockingRoot(document.getElementById('app')).render(
+ReactDOM.unstable_createBlockingRoot(document.getElementById('app')).render(
   React.createElement('h1', null, 'Hello React', React.version, '!')
 );

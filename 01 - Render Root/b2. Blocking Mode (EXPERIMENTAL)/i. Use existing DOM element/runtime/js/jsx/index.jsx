@@ -3,6 +3,6 @@
 
 /* global React, ReactDOM */
 
-ReactDOM.createBlockingRoot(document.getElementById('app')).render(
+ReactDOM.unstable_createBlockingRoot(document.getElementById('app')).render(
   <h1>Hello React {React.version}!</h1>
 );

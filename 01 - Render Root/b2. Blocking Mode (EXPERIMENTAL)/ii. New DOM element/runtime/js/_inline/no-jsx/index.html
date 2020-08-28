@@ -19,7 +19,7 @@
       const app = document.createElement('div');
       document.body.appendChild(app);
 
-      ReactDOM.createBlockingRoot(app).render(
+      ReactDOM.unstable_createBlockingRoot(app).render(
         React.createElement('h1', null, 'Hello React ', React.version, '!')
       );
     </script>

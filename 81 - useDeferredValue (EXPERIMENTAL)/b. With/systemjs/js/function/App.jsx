@@ -7,7 +7,9 @@ import Slow from './Slow';
 
 function App() {
   const [name, setName] = React.useState('World');
-  const deferredName = React.useDeferredValue(name, { timeoutMs: 2000 });
+  const deferredName = React.unstable_useDeferredValue(name, {
+    timeoutMs: 2000
+  });
 
   function handleChange(e) {
     setName(e.target.value);
