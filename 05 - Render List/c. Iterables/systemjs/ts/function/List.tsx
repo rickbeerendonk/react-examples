@@ -11,12 +11,9 @@ const List: React.FC<IListProps> = props => (
   <React.Fragment>
     <h1>List</h1>
     <ul>
-      {
-        // Prefer map (instead of for-loops):
-        Array.from(props.names, name => (
-          <li key={name}>{name}</li>
-        ))
-      }
+      {Array.from(props.names, name => (
+        <li key={name}>{name}</li>
+      ))}
     </ul>
   </React.Fragment>
 );

@@ -9,12 +9,9 @@ class List extends React.Component {
       <React.Fragment>
         <h1>List</h1>
         <ul>
-          {
-            // Prefer map (instead of for-loops):
-            Array.from(this.props.names, name => (
-              <li key={name}>{name}</li>
-            ))
-          }
+          {Array.from(this.props.names, name => (
+            <li key={name}>{name}</li>
+          ))}
         </ul>
       </React.Fragment>
     );

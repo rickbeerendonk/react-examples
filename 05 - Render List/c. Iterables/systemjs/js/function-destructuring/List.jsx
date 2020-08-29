@@ -8,12 +8,9 @@ function List({ names }) {
     <React.Fragment>
       <h1>List</h1>
       <ul>
-        {
-          // Prefer map (instead of for-loops):
-          Array.from(names, name => (
-            <li key={name}>{name}</li>
-          ))
-        }
+        {Array.from(names, name => (
+          <li key={name}>{name}</li>
+        ))}
       </ul>
     </React.Fragment>
   );
