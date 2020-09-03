@@ -51,6 +51,7 @@
     "create-react-class": "15.6.3",
     "fetch-mock": "9.10.7",
     "json-graphql-server": "2.1.3",
+    "htm": "3.0.4",
     "htmltojsx": "0.3.0",
     "mime-types": "2.1.27",
     "plugin-typescript": "8.0.0",
