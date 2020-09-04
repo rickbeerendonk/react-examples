@@ -9,7 +9,7 @@ import ImportantAnchor from './ImportantAnchor';
 ReactDOM.render(
   <ImportantAnchor
     href="http://www.reactjs.com"
-    rel="noopener noreferrer"
+    rel="noopener"
     target="_blank"
     title="Everything about React"
   >

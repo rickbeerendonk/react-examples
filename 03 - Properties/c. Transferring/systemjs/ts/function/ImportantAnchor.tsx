@@ -5,9 +5,6 @@ import React from 'react';
 
 const ImportantAnchor: React.FC<React.AnchorHTMLAttributes<
   HTMLAnchorElement
->> = props => {
-  const { children, ...otherProps } = props;
-  return <a {...otherProps}>!!! {children} !!!</a>;
-};
+>> = ({ children, ...otherProps }) => <a {...otherProps}>!!! {children} !!!</a>;
 
 export default ImportantAnchor;
