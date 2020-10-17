@@ -22,8 +22,8 @@
     }
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
@@ -46,7 +46,7 @@
     "eslint-plugin-react-hooks": "4.1.0",
     "html-webpack-plugin": "4.3.0",
     "jest": "26.4.0",
-    "react-test-renderer": "16.13.1",
+    "react-test-renderer": "16.14.0",
     "rimraf": "3.0.2",
     "style-loader": "1.2.1",
     "webpack": "4.44.1",

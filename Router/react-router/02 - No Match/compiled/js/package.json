@@ -5,8 +5,8 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "react-router-dom": "5.2.0"
   },
   "devDependencies": {
