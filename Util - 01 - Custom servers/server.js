@@ -7,15 +7,8 @@
 const childProcess = require('child_process');
 const path = require('path');
 
-const portHttp = process.argv[2] || 8080;
-//const portRest = +portHttp + 1;
-let filePath = process.argv[3];
+const [, , portHttp = 8080, filePath] = process.argv;
 const basePath = process.cwd();
-
-//console.log('portHttp: ' + portHttp);
-//console.log('portRest: ' + portRest);
-//console.log('filePath: ' + filePath);
-//console.log('basePath: ' + basePath);
 
 // If filePath is given, we'll open that path in the browser
 let extraUri = '';
@@ -27,12 +20,7 @@ if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
 const serverUri = `http://localhost:${portHttp}`;
 const totalUri = `${serverUri}${extraUri}${
   extraUri[extraUri.length - 1] !== '/' && '/'
-}`;
-
-//console.log('serverUri: ' + serverUri);
-//console.log('extraPath: ' + extraPath);
-//console.log('extraUri: ' + extraUri);
-//console.log('totalUri: ' + totalUri);
+}`.replace(/\s+/g, '%20');
 
 // Start server
 // See: https://www.npmjs.com/package/serve
@@ -49,10 +37,14 @@ const totalUri = `${serverUri}${extraUri}${
 );
 
 // Open browser
-const command =
+let command =
   process.platform === 'win32'
     ? `start "" "${totalUri}"`
     : /* process.platform === "darwin" */ `open "${totalUri}"`;
+
+console.log(command);
+//command = 'open "http://google.com test"';
+
 // Use timeout so the server is ready.
 setTimeout(function () {
   childProcess.spawn(command, {
