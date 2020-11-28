@@ -13,15 +13,15 @@
     "watch": "babel site/src --out-dir site/build --watch --source-maps"
   },
   "dependencies": {
-    "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
     "@babel/cli": "7.10.5",
-    "@babel/core": "7.11.1",
-    "@babel/preset-env": "7.11.0",
-    "@babel/preset-react": "7.10.4",
-    "core-js": "3.6.5",
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-react": "7.12.7",
+    "core-js": "3.8.0",
     "serve": "11.3.2"
   }
 }
