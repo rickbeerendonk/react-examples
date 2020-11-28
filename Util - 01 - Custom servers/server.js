@@ -26,31 +26,25 @@ const totalUri = `${serverUri}${extraUri}${
 // See: https://www.npmjs.com/package/serve
 /* const httpChild = */ childProcess.spawn(
   'serve',
-  [
-    '--listen',
-    portHttp,
-    '--config',
-    //'".\\Util - 01 - Custom servers\\serve.json"'
-    `"${path.join(__dirname, 'serve.json')}"`
-  ],
+  ['--listen', portHttp, '--config', `"${path.join(__dirname, 'serve.json')}"`],
   { shell: true, stdio: 'inherit' }
 );
 
 // Open browser
-let command =
-  process.platform === 'win32'
-    ? `start "" "${totalUri}"`
-    : /* process.platform === "darwin" */ `open "${totalUri}"`;
-
-console.log(command);
-//command = 'open "http://google.com test"';
-
 // Use timeout so the server is ready.
 setTimeout(function () {
-  childProcess.spawn(command, {
+  const command =
+    process.platform === 'win32'
+      ? `start "" "${totalUri}"`
+      : /* process.platform === "darwin" */ `open "${totalUri}"`;
+
+  /*const browserChild = */ childProcess.spawn(command, {
     shell: true,
     stdio: 'inherit'
   });
-}, 200);
 
-//childProcess.exec(command, () => { console.log('exit'); process.exit(); });
+  //browserChild.on('close', () => {
+  //  console.log('close');
+  //  process.exit();
+  //});
+}, 200);
