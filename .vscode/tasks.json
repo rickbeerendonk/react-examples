@@ -15,7 +15,8 @@
         "reevaluateOnRerun": true
       },
       "type": "shell",
-      "command": "npm start -- \"${fileDirname}\"",
+      "command": "npm",
+      "args": ["start", "--", "\"${fileDirname}\""],
       "problemMatcher": [],
       "group": {
         "kind": "build",
