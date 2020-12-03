@@ -35,13 +35,15 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    moduleIds: 'named'
+  },
   plugins: [
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       title: 'Setup Webpack & Babel'
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.json']
