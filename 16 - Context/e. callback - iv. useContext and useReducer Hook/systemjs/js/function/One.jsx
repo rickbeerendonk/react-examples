@@ -3,25 +3,27 @@
 
 import React from 'react';
 
-import ColorContext from './ColorContext';
+import StateContext from './StateContext';
 import Two from './Two';
 
 function reducer(state, action) {
   switch (action.type) {
     case 'SWITCH':
-      return state === 'red' ? 'green' : 'red';
+      return { ...state, color: state.color === 'red' ? 'green' : 'red' };
     default:
       return state;
   }
 }
 
 function One(props) {
-  const [color, dispatch] = React.useReducer(reducer, props.color);
+  const [state, dispatch] = React.useReducer(reducer, {
+    color: props.color
+  });
 
   return (
-    <ColorContext.Provider value={{ color, dispatch }}>
+    <StateContext.Provider value={{ state, dispatch }}>
       <Two />
-    </ColorContext.Provider>
+    </StateContext.Provider>
   );
 }
 

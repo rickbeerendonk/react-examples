@@ -3,10 +3,10 @@
 
 import React from 'react';
 
-import ColorContext from './ColorContext';
+import StateContext from './StateContext';
 
 function Switch() {
-  const { dispatch } = React.useContext(ColorContext);
+  const { dispatch } = React.useContext(StateContext);
 
   function handleSwitch() {
     dispatch({ type: 'SWITCH' });

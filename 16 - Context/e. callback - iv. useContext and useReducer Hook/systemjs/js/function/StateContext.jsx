@@ -3,9 +3,9 @@
 
 import React from 'react';
 
-const ColorContext = React.createContext({
-  color: 'orange',
+const StateContext = React.createContext({
+  state: { color: 'orange' },
   dispatch: () => {}
 });
 
-export default ColorContext;
+export default StateContext;

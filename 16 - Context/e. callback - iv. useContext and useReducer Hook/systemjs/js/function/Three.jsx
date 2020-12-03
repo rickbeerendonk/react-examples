@@ -3,10 +3,12 @@
 
 import React from 'react';
 
-import ColorContext from './ColorContext';
+import StateContext from './StateContext';
 
 function Three() {
-  const { color } = React.useContext(ColorContext);
+  const {
+    state: { color }
+  } = React.useContext(StateContext);
 
   return <h1 style={{ color }}>Three</h1>;
 }
