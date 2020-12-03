@@ -3,16 +3,16 @@
 
 /* global React, ReactDOM */
 
-function Three(props) {
-  return <h1 style={{ color: props.color }}>Three</h1>;
+function Bottom(props) {
+  return <h1 style={{ color: props.color }}>Bottom</h1>;
 }
 
-function Two({ color }) {
-  return <Three color={color} />;
+function Middle({ color }) {
+  return <Bottom color={color} />;
 }
 
-function One({ color }) {
-  return <Two color={color} />;
+function Top({ color }) {
+  return <Middle color={color} />;
 }
 
-ReactDOM.render(<One color="red" />, document.getElementById('app'));
+ReactDOM.render(<Top color="red" />, document.getElementById('app'));

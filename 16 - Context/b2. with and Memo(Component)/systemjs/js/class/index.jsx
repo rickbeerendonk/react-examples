@@ -4,6 +4,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import One from './One';
+import Top from './Top';
 
-ReactDOM.render(<One color="red" />, document.getElementById('app'));
+ReactDOM.render(<Top color="red" />, document.getElementById('app'));
