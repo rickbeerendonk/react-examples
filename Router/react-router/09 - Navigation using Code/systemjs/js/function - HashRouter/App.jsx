@@ -12,7 +12,6 @@ function App() {
   const history = useHistory();
 
   function navigate(e) {
-    e.preventDefault();
     history.push(e.target.dataset.url);
   }
 
