@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
 
 /* global SystemJS */
 
@@ -13,15 +13,16 @@ SystemJS.config({
   },
   paths: {
     // paths serve as alias
-    'npm:': '../../../../../node_modules/',
-    'npm-unstable:': '../../../../../node_modules_unstable/'
+    'npm:': '../../../../../node_modules/'
   },
   map: {
+    'object-assign': 'npm:object-assign/index.js',
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
-    react: 'npm-unstable:react/umd/react.development.js',
-    'react-dom': 'npm-unstable:react-dom/umd/react-dom.development.js'
+    react: 'npm:react/umd/react.development.js',
+    'react/jsx-runtime': 'npm:react/cjs/react-jsx-dev-runtime.development.js',
+    'react-dom': 'npm:react-dom/umd/react-dom.development.js'
   },
   packages: {
     '.': {
