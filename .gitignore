@@ -8,6 +8,7 @@ build-storybook/
 coverage/
 docs/
 Issues/
+temp/
 
 #################
 ## npm
