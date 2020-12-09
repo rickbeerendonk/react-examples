@@ -4,8 +4,6 @@
 //import * as React from 'react';
 //import * as ReactDOM from 'react-dom';
 
-function Greeting(): JSX.Element {
-  return <h1>Hello World!</h1>;
-}
+const Greeting: React.FC = () => <h1>Hello World!</h1>;
 
 ReactDOM.render(<Greeting />, document.getElementById('app'));
