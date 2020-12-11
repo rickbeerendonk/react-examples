@@ -4,4 +4,5 @@
 **/lib/**
 **/node_modules/**
 **/node_modules_unstable/**
+**/setup/**
 **/__mocks__/**
