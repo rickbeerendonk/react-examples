@@ -1,8 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import React from 'react';
-
 import './Greeting.css';
 
 function Greeting({ name }) {
