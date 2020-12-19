@@ -9,10 +9,10 @@ function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
   return (
-    <React.Fragment>
+    <>
       <EditBox onChange={setName} value={name} />
       <Greeting name={name} />
-    </React.Fragment>
+    </>
   );
 }
 
