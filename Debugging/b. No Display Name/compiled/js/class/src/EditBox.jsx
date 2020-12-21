@@ -3,8 +3,6 @@
 
 /* eslint react/display-name:"off" */
 
-import React from 'react';
-
 export default function ({ onChange, value }) {
   return <input onChange={e => onChange(e.target.value)} value={value} />;
 }

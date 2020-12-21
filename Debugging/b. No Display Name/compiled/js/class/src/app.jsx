@@ -3,7 +3,6 @@
 
 /* eslint react/display-name:"off" */
 
-import React from 'react';
 import GreetingEditor from './GreetingEditor';
 import useMousePosition from './mouse-position-hook';
 import Parent from './Parent';
@@ -13,7 +12,7 @@ export default function () {
   const mousePosition = useMousePosition();
 
   return (
-    <React.Fragment>
+    <>
       <GreetingEditor name="World" />
       <hr />
       <h1>Mouse Position</h1>
@@ -25,6 +24,6 @@ export default function () {
       <Parent>
         <Child />
       </Parent>
-    </React.Fragment>
+    </>
   );
 }
