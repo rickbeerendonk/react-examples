@@ -3,8 +3,6 @@
 
 /* eslint react/display-name:"off" */
 
-import React from 'react';
-
 export default function ({ onChange, value }) {
   function handleChange(e) {
     onChange(e.target.value);
