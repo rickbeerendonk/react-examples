@@ -4,7 +4,6 @@
 /* eslint-disable */
 
 const path = require('path');
-const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -35,9 +34,11 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
       title: 'Pattern Container: GraphQL Query Fetch Async'
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ],
+  optimization: {
+    moduleIds: 'named'
+  },
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'

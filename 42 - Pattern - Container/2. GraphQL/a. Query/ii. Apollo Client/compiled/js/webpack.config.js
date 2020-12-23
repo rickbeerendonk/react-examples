@@ -35,9 +35,11 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
       title: 'Pattern Container: GraphQL Query Apollo Client'
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ],
+  optimization: {
+    moduleIds: 'named'
+  },
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'
