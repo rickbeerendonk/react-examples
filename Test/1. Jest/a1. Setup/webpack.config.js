@@ -4,7 +4,6 @@
 /* eslint-disable */
 
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -43,9 +42,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Tests with Jest - Setup'
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ],
+  optimization: {
+    moduleIds: 'named'
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   }
