@@ -6,6 +6,8 @@ import React from 'react';
 function GreetingEditor({ children }) {
   const [name, setName] = React.useState('World');
 
+  // Pass state as properties to the render children.
+  // Because we don't "create" the children, we have to use React.cloneElement
   return React.Children.map(children, child =>
     React.cloneElement(child, {
       name,
