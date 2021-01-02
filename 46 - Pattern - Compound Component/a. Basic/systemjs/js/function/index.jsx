@@ -8,6 +8,7 @@ import GreetingEditor from './GreetingEditor';
 
 ReactDOM.render(
   <GreetingEditor>
+    {/* Children MUST be specified, because there is no default */}
     <GreetingEditor.Text />
     <GreetingEditor.Input />
   </GreetingEditor>,
