@@ -4,6 +4,7 @@
 import React from 'react';
 
 function GreetingEditor({
+  // Default Children
   children = [<GreetingEditor.Input key={0} />, <GreetingEditor.Text key={1} />]
 }) {
   const [name, setName] = React.useState('World');
