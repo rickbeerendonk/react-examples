@@ -8,8 +8,13 @@ import GreetingEditor from './GreetingEditor';
 
 ReactDOM.render(
   <GreetingEditor>
-    <GreetingEditor.Text />
-    <GreetingEditor.Input />
+    {/* 
+      // - Children can optionally be specified, because there is a default
+      // - f.e. If you want a different order than the default
+      
+      <GreetingEditor.Text />
+      <GreetingEditor.Input />
+      */}
   </GreetingEditor>,
   document.getElementById('app')
 );
