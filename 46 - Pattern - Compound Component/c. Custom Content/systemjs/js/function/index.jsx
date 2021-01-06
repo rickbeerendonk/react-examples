@@ -9,6 +9,11 @@ import GreetingEditor from './GreetingEditor';
 
 ReactDOM.render(
   <GreetingEditor>
+    {/* 
+      Custom content should support the same properties
+      as the standard content in order to receive data
+      or event handlers.
+    */}
     <CustomContent />
     <GreetingEditor.Input />
   </GreetingEditor>,
