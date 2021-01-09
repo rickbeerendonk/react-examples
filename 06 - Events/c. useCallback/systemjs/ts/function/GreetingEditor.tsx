@@ -13,10 +13,10 @@ const GreetingEditor: React.FC = () => {
   };
 
   // const changeHandler = React.useCallback(
-  // function (e: React.ChangeEvent<HTMLInputElement>) {
-  // setName(e.target.value);
-  // },
-  // [setName]
+  //   function (e: React.ChangeEvent<HTMLInputElement>) {
+  //     setName(e.target.value);
+  //   },
+  //   []
   // );
 
   // Add handler to the set

@@ -18,7 +18,7 @@ function MousePosition() {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [setMousePosition]);
+  }, []);
 
   return (
     <h1>

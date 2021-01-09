@@ -8,7 +8,7 @@ function useBoolean(initialValue) {
 
   const toggle = React.useCallback(() => {
     setValue(v => !v);
-  }, [setValue]);
+  }, []);
 
   // DevTools state
   React.useDebugValue(value);

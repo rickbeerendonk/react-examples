@@ -23,7 +23,7 @@ function useIsOnLine() {
       window.removeEventListener('online', handleOnLine);
       window.removeEventListener('offline', handleOffLine);
     };
-  }, [setIsOnLine]);
+  }, []);
 
   // Return current state
   return isOnLine;

@@ -16,7 +16,7 @@ function GreetingEditor() {
   //   function(e) {
   //     setName(e.target.value);
   //   },
-  //   [setName]
+  //   []
   // );
 
   // Add handler to the set

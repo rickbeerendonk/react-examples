@@ -20,7 +20,7 @@ function useMousePosition() {
     return () => {
       document.removeEventListener('mousemove', handleMouseOver);
     };
-  }, [setMousePosition]);
+  }, []);
 
   // Return current state
   return mousePosition;

@@ -8,13 +8,10 @@ import LocationForm from './LocationForm';
 function App() {
   const [list, setList] = React.useState([]);
 
-  const add = React.useCallback(
-    location => {
-      // Create a new list by coping the old and adding the new item
-      setList(l => [...l, location]);
-    },
-    [setList]
-  );
+  const add = React.useCallback(location => {
+    // Create a new list by coping the old and adding the new item
+    setList(l => [...l, location]);
+  }, []);
 
   return (
     <React.Fragment>
