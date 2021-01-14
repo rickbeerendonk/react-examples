@@ -9,17 +9,17 @@ import React from 'react';
 import Child from './Child';
 
 function Parent() {
-  const handleCapturing = event => {
+  function handleCapturing(event) {
     console.log(
       `${event.currentTarget.id} (NativeEvent: ${event.nativeEvent.currentTarget.id}) received event for ${event.target.id} in capturing phase.`
     );
-  };
+  }
 
-  const handleBubbling = event => {
+  function handleBubbling(event) {
     console.log(
       `${event.currentTarget.id} (NativeEvent: ${event.nativeEvent.currentTarget.id}) received event for ${event.target.id} in bubbling phase.`
     );
-  };
+  }
 
   return (
     <div id="parent" onClickCapture={handleCapturing} onClick={handleBubbling}>

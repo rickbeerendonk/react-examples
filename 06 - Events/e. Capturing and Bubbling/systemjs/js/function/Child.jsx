@@ -7,9 +7,9 @@
 import React from 'react';
 
 function Child() {
-  const handleTarget = event => {
+  function handleTarget(event) {
     console.log(`${event.target.id} received event in atTarget phase.`);
-  };
+  }
 
   return (
     <div id="child" onClick={handleTarget}>
