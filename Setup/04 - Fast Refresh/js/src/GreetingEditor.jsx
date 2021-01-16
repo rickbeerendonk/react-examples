@@ -1,8 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2017 Rick Beerendonk          !*/
+/*! Copyright © 2021 Rick Beerendonk          !*/
 
 import { Component } from 'react';
-import { hot } from 'react-hot-loader/root';
 
 import EditBox from './EditBox';
 import Greeting from './Greeting';
@@ -27,4 +26,4 @@ class GreetingEditor extends Component {
   }
 }
 
-export default hot(GreetingEditor);
+export default GreetingEditor;
