@@ -9,7 +9,7 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "dependencies": {
-    "next": "9.5.2"
+    "next": "10.0.5"
   },
   "scripts": {
     "start": "next"

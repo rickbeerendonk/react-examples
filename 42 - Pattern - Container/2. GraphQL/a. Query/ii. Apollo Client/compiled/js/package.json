@@ -25,10 +25,10 @@
     "babel-loader": "8.1.0",
     "copy-webpack-plugin": "6.0.3",
     "core-js": "3.8.0",
-    "eslint": "7.14.0",
+    "eslint": "7.18.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "html-webpack-plugin": "4.3.0",
+    "html-webpack-plugin": "next",
     "prop-types": "15.7.2",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
@@ -38,7 +38,7 @@
     "build": "webpack",
     "eslint": "eslint . --ext .js,.jsx",
     "start": "run-p -c start-graphql-server start-webpack-dev-server",
-    "start-webpack-dev-server": "webpack-dev-server --hot --open",
+    "start-webpack-dev-server": "webpack serve --hot --open",
     "start-graphql-server": "json-graphql-server /data/posts.js"
   }
 }

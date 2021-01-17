@@ -4,6 +4,7 @@
 /* eslint-disable */
 
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require('webpack');
@@ -12,7 +13,7 @@ module.exports = {
   entry: ['./src/app.jsx'],
   output: {
     path: path.join(__dirname, '/build'),
-    filename: '[name].[hash:8].js'
+    filename: '[name].[fullhash:8].js'
   },
   devtool: 'source-map',
   devServer: {
@@ -24,12 +25,6 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/i,
-        exclude: /node_modules|packages/,
-        use: 'eslint-loader'
-      },
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules|packages/,
@@ -49,15 +44,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({ extensions: ['js', 'jsx'] }),
     new HtmlWebpackPlugin({
       title: 'Setup Fast Refresh, Webpack, ESLint & Babel'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin()
   ],
-  optimization: {
-    moduleIds: 'named'
-  },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   }

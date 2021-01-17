@@ -12,20 +12,20 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.12.9",
-    "@babel/plugin-transform-react-jsx": "7.12.7",
-    "@babel/preset-env": "7.12.7",
-    "@babel/preset-react": "7.12.7",
-    "babel-loader": "8.1.0",
-    "core-js": "3.8.0",
-    "html-webpack-plugin": "4.3.0",
-    "webpack": "4.44.1",
-    "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0"
+    "@babel/core": "7.12.10",
+    "@babel/plugin-transform-react-jsx": "7.12.12",
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-react": "7.12.10",
+    "babel-loader": "8.2.2",
+    "core-js": "3.8.2",
+    "html-webpack-plugin": "next",
+    "webpack": "5.15.0",
+    "webpack-cli": "4.3.1",
+    "webpack-dev-server": "3.11.2"
   },
   "scripts": {
     "build": "webpack -d --progress",
     "watch": "webpack -d --progress --watch",
-    "start": "webpack-dev-server --open"
+    "start": "webpack serve --open"
   }
 }

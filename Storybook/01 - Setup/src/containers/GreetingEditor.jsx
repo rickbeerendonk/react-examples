@@ -2,7 +2,6 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 import React, { useState } from 'react';
-import { hot } from 'react-hot-loader/root';
 
 import EditBox from '../components/EditBox';
 import Greeting from '../components/Greeting';
@@ -18,4 +17,4 @@ export function GreetingEditor() {
   );
 }
 
-export default hot(GreetingEditor);
+export default GreetingEditor;

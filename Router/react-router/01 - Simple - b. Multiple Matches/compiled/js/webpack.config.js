@@ -10,7 +10,7 @@ module.exports = {
   entry: ['./src/index.jsx'],
   output: {
     path: path.join(__dirname, '/build'),
-    filename: '[name].[hash:8].js'
+    filename: '[name].[fullhash:8].js'
   },
   devtool: 'source-map',
   devServer: {
@@ -38,9 +38,6 @@ module.exports = {
       title: 'Router - Simple - Multiple Matches'
     })
   ],
-  optimization: {
-    moduleIds: 'named'
-  },
   resolve: {
     extensions: ['.js', '.jsx']
   }

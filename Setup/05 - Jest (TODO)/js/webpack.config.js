@@ -4,13 +4,14 @@
 /* eslint-disable */
 
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['./src/app.jsx'],
   output: {
     path: path.join(__dirname, '/build'),
-    filename: '[name].[hash:8].js'
+    filename: '[name].[fullhash:8].js'
   },
   devtool: 'source-map',
   devServer: {
@@ -23,12 +24,6 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.jsx?$/i,
-        use: 'eslint-loader',
-        exclude: /node_modules|packages/
-      },
-      {
         test: /\.jsx?$/i,
         use: 'babel-loader',
         exclude: /node_modules|packages/
@@ -40,13 +35,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({ extensions: ['js', 'jsx'] }),
     new HtmlWebpackPlugin({
       title: 'Setup Hot Module Replacement, Webpack, ESLint & Babel'
     })
   ],
-  optimization: {
-    moduleIds: 'named'
-  },
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'

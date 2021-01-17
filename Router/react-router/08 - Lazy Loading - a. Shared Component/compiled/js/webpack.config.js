@@ -12,7 +12,7 @@ module.exports = {
   entry: ['./src/index.jsx'],
   output: {
     path: path.join(__dirname, '/build'),
-    filename: '[name].[hash:8].js'
+    filename: '[name].[fullhash:8].js'
   },
   devtool: 'source-map',
   devServer: {

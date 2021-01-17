@@ -22,11 +22,11 @@
     "copy-webpack-plugin": "6.0.3",
     "core-js": "3.8.0",
     "css-loader": "4.2.1",
-    "eslint": "7.14.0",
-    "eslint-loader": "4.0.2",
+    "eslint": "7.18.0",
+    "eslint-webpack-plugin": "2.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "html-webpack-plugin": "4.3.0",
+    "html-webpack-plugin": "next",
     "react-refresh": "0.9.0",
     "rimraf": "3.0.2",
     "style-loader": "1.2.1",
@@ -39,6 +39,6 @@
     "clean": "rimraf build",
     "eslint": "eslint . --ext .js,.jsx --cache",
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
-    "start": "webpack-dev-server --hot --open"
+    "start": "webpack serve --hot --open"
   }
 }

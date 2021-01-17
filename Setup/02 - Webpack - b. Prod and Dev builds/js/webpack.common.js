@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'bundle.[hash:8].js'
+    filename: 'bundle.[fullhash:8].js'
   },
   module: {
     rules: [
@@ -30,9 +30,6 @@ module.exports = {
       title: 'Setup Webpack & Babel'
     })
   ],
-  optimization: {
-    moduleIds: 'named'
-  },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   }
