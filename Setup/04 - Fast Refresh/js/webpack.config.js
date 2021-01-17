@@ -8,8 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require('webpack');
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
-
 module.exports = {
   entry: ['./src/app.jsx'],
   output: {
@@ -23,7 +21,7 @@ module.exports = {
     port: 9100,
     stats: 'errors-only'
   },
-  mode: isDevelopment ? 'development' : 'production',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -37,11 +35,9 @@ module.exports = {
         exclude: /node_modules|packages/,
         use: [
           {
-            loader: require.resolve('babel-loader'),
+            loader: 'babel-loader',
             options: {
-              plugins: [
-                isDevelopment && require.resolve('react-refresh/babel')
-              ].filter(Boolean)
+              plugins: ['react-refresh/babel']
             }
           }
         ]
@@ -56,9 +52,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Setup Fast Refresh, Webpack, ESLint & Babel'
     }),
-    isDevelopment && new webpack.HotModuleReplacementPlugin(),
-    isDevelopment && new ReactRefreshWebpackPlugin()
-  ].filter(Boolean),
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin()
+  ],
   optimization: {
     moduleIds: 'named'
   },
