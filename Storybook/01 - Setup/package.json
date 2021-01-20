@@ -40,7 +40,6 @@
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "start": "webpack serve --hot --open",
     "storybook": "start-storybook -p 6006",
-    "storybook-build": "build-storybook -c .storybook -o build-storybook",
-    "build-storybook": "build-storybook"
+    "storybook-build": "build-storybook -c .storybook -o build-storybook"
   }
 }
