@@ -37,7 +37,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './src/template.ejs',
       title: 'Setup Webpack & Babel'
     })
   ],
