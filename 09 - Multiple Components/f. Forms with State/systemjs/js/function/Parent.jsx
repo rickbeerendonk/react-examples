@@ -8,14 +8,14 @@ import ChildWithForm from './ChildWithForm';
 function Parent() {
   const [list, setList] = React.useState([]);
 
-  const add = React.useCallback(item => {
+  const handleAdd = React.useCallback(item => {
     // Create a new list by coping the old and adding the new item
     setList(l => [...l, item]);
   }, []);
 
   return (
     <React.Fragment>
-      <ChildWithForm onAdd={add} />
+      <ChildWithForm onAdd={handleAdd} />
       <ul>
         {list.map((item, idx) => (
           <li key={idx}>{item}</li>
