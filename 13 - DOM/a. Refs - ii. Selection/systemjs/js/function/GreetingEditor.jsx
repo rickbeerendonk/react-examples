@@ -6,7 +6,11 @@ import React from 'react';
 function GreetingEditor() {
   const inputRef = React.useRef(null);
   const [name, setName] = React.useState('World');
-  React.useEffect(() => inputRef.current.select(), [] /* Only run on mount */);
+
+  React.useLayoutEffect(
+    () => inputRef.current.select(),
+    [] /* Only run on mount */
+  );
 
   function handleChange(e) {
     setName(e.target.value);
