@@ -10,6 +10,7 @@ function useIsDocumentHidden() {
   React.useEffect(() => {
     // Function to change state
     function handleVisibilityChange() {
+      //console.log('Hook: ', document.hidden);
       setIsHidden(document.hidden);
     }
 
