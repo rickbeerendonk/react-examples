@@ -9,8 +9,12 @@ function GreetingEditor() {
   const [other /*, setOther */] = React.useState('More state');
 
   function handleChange(e) {
+    // React 16:
     // First update doesn't do anything because obj is still the same.
     // Internally React uses Object.is() to check this (on 1st update only!)
+    //
+    // React 17:
+    // All updates don't do anything because obj remains the same.
     obj.name = e.target.value;
     setObj(obj);
 
