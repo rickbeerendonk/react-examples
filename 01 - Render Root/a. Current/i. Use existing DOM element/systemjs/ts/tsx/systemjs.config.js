@@ -33,6 +33,7 @@ SystemJS.config({
   },
   transpiler: 'ts',
   typescriptOptions: {
-    tsconfig: true
+    jsx: 'react',
+    noImplicitAny: true
   }
 });
