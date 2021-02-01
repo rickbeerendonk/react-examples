@@ -4,6 +4,7 @@
 import React from 'react';
 
 function App() {
+  // Keep form data in state
   const [name, setName] = React.useState('');
 
   function handleChange(e) {
