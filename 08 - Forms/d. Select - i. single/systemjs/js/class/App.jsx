@@ -5,7 +5,7 @@ import React from 'react';
 
 /* eslint-disable jsx-a11y/no-onchange */
 
-class GreetingEditor extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { selected: 'train' };
@@ -26,4 +26,4 @@ class GreetingEditor extends React.Component {
   }
 }
 
-export default GreetingEditor;
+export default App;

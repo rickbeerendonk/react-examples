@@ -5,15 +5,15 @@ import React from 'react';
 
 /* eslint-disable jsx-a11y/no-onchange */
 
-function GreetingEditor() {
-  const [selected, setSelected] = React.useState('train');
+function App() {
+  const [selected, setSelected] = React.useState(['bike', 'train']);
 
   function handleChange(e) {
-    setSelected(e.target.value);
+    setSelected([...e.target.selectedOptions].map(o => o.value));
   }
 
   return (
-    <select onChange={handleChange} value={selected}>
+    <select multiple onChange={handleChange} value={selected}>
       <option value="bike">Bike</option>
       <option value="car">Car</option>
       <option value="train">Train</option>
@@ -21,4 +21,4 @@ function GreetingEditor() {
   );
 }
 
-export default GreetingEditor;
+export default App;
