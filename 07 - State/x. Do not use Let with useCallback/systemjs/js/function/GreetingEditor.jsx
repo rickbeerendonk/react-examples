@@ -6,17 +6,17 @@ import React from 'react';
 /* eslint-disable react-hooks/exhaustive-deps */
 
 function GreetingEditor() {
-  let v = 0;
+  let mutable = 0;
 
   // 1. Initial state is either static, or a prop value
-  const [vNew, setVNew] = React.useState(v);
+  const [immutable, setImmutable] = React.useState(mutable);
 
   function handleClick() {
     // 2a. Don't update variables that come from outside the handler...
-    v -= 1;
+    mutable += 1;
 
     // 2b. ...Let alone base new state on this
-    setVNew(v);
+    setImmutable(mutable);
   }
 
   const handleClickCallback = React.useCallback(handleClick, []);
@@ -27,7 +27,7 @@ function GreetingEditor() {
       <br />
       <button onClick={handleClickCallback}>Change with callback</button>
       <ul>
-        <li>v = {vNew}</li>
+        <li>v = {immutable}</li>
       </ul>
     </React.Fragment>
   );
