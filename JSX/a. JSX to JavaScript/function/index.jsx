@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2017-2020 Rick Beerendonk          !*/
+/*! Copyright © 2017-2020 Rick Beerendonk     !*/
 
 /* global Babel, React, ReactDOM */
 
