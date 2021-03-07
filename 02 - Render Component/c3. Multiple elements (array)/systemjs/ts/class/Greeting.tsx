@@ -3,8 +3,8 @@
 
 import React from 'react';
 
-class Greeting extends React.Component<undefined, undefined> {
-  render(): (string | JSX.Element)[] {
+class Greeting extends React.Component {
+  render() {
     return [
       <h1 key="heading">Hello World!</h1>,
       'What do you think about React?',

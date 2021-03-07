@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-class Greeting extends React.Component<undefined, undefined> {
+class Greeting extends React.Component {
   render() {
     return (
       <React.Fragment>
