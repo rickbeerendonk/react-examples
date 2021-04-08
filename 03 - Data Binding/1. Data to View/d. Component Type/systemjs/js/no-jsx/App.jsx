@@ -3,9 +3,9 @@
 
 import React from 'react';
 
-function Greeting() {
+function App() {
   const type = 'h1';
   return React.createElement(type, undefined, 'Hello World!');
 }
 
-export default Greeting;
+export default App;
