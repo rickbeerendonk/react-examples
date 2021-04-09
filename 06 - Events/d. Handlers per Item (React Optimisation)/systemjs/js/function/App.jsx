@@ -4,8 +4,8 @@
 import React from 'react';
 
 function App() {
-  function handleMouseDown(nr) {
-    alert(`Button ${nr} mouse down!`);
+  function handleMouseDown(e) {
+    alert(`Button ${e.target.innerText} mouse down!`);
   }
 
   return (
