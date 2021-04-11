@@ -4,6 +4,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Parent from './Parent';
+import App from './App';
 
-ReactDOM.render(<Parent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
