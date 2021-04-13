@@ -20,6 +20,9 @@ function App() {
 
     // Clear data
     setName('');
+
+    // Remember, cannot be used in React (use e.preventDefault() instead):
+    //return false;
   }
 
   return (
