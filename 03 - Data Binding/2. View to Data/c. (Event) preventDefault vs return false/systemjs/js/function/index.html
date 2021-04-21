@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Data Binding - View to Data - preventDefault vs return false</title>
+    <title>
+      Data Binding - View to Data - (Event) preventDefault vs return false
+    </title>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
   </head>
   <body>
@@ -18,7 +20,18 @@
       >HTML: oblicum.com</a
     >
 
-    <script src="../../../../../../node_modules/typescript/lib/typescript.js"></script>
+    <script>
+      function handleClick(e) {
+        alert('Go to Oblicum...');
+
+        // Can be used in HTML:
+        //e.preventDefault();
+
+        // Can also be used in HTML:
+        return false;
+      }
+    </script>
+
     <script src="../../../../../../node_modules/systemjs-0.21.6/dist/system.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
