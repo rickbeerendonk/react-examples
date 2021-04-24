@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function Greeting() {
+function App() {
   return (
     <h1
       style={{
@@ -17,4 +17,4 @@ function Greeting() {
   );
 }
 
-export default Greeting;
+export default App;

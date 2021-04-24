@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM */
 
-const Greeting = () => (
+const App = () => (
   <h1
     style={{
       transform: 'rotate(10deg) translate(50px, 100px)',
@@ -15,4 +15,4 @@ const Greeting = () => (
   </h1>
 );
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

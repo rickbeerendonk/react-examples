@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+/* global React, ReactDOM */
 
-class Greeting extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <h1
@@ -19,4 +19,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default Greeting;
+ReactDOM.render(<App />, document.getElementById('app'));
