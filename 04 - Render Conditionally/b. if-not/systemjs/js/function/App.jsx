@@ -3,16 +3,18 @@
 
 import React from 'react';
 
-function Greeting({ name }) {
+function App() {
+  const hide = true;
+
   return (
     <React.Fragment>
-      <h3>Greeting:</h3>
+      <h3>Conditional:</h3>
       {
-        // Only render when a not-name is falsy:
-        !name || <div>Hello {name}!</div>
+        // Only render when a name is truthy:
+        !hide || <div>Visible</div>
       }
     </React.Fragment>
   );
 }
 
-export default Greeting;
+export default App;

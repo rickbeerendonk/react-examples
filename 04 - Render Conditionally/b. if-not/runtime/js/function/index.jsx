@@ -1,25 +1,20 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2014 Rick Beerendonk          !*/
+/*! Copyright © 2016 Rick Beerendonk          !*/
 
 /* global React, ReactDOM */
 
-function Greeting(props) {
+function App() {
+  const hide = true;
+
   return (
     <React.Fragment>
-      <h3>Greeting:</h3>
+      <h3>Conditional:</h3>
       {
-        // Only render when a not-name is falsy:
-        !props.name || <div>Hello {props.name}!</div>
+        // Only render when a name is truthy:
+        !hide || <div>Visible</div>
       }
     </React.Fragment>
   );
 }
 
-ReactDOM.render(
-  <React.Fragment>
-    <Greeting name="Alexandra" />
-    <Greeting />
-    <Greeting name="Benjamin" />
-  </React.Fragment>,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));

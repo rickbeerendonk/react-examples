@@ -3,18 +3,20 @@
 
 import React from 'react';
 
-class Greeting extends React.Component {
+class App extends React.Component {
   render() {
+    const hide = true;
+
     return (
       <React.Fragment>
-        <h3>Greeting:</h3>
+        <h3>Conditional:</h3>
         {
-          // Only render when a not-name is falsy:
-          !this.props.name || <div>Hello {this.props.name}!</div>
+          // Only render when a name is truthy:
+          !hide || <div>Visible</div>
         }
       </React.Fragment>
     );
   }
 }
 
-export default Greeting;
+export default App;
