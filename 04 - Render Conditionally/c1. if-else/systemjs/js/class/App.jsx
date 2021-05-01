@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2016 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* global React, ReactDOM */
+import React from 'react';
 
 class App extends React.Component {
   render() {
@@ -16,4 +16,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

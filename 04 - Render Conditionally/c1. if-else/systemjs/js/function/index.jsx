@@ -4,13 +4,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Greeting from './Greeting';
+import App from './App';
 
-ReactDOM.render(
-  <React.Fragment>
-    <Greeting name="Alexandra" />
-    <Greeting />
-    <Greeting name="Benjamin" />
-  </React.Fragment>,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
