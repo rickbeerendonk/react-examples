@@ -9,10 +9,7 @@ function App() {
   return (
     <React.Fragment>
       <h3>Conditional:</h3>
-      {
-        // Only render when a name is truthy:
-        show && <div>Visible</div>
-      }
+      {show && <div>Visible</div>}
     </React.Fragment>
   );
 }

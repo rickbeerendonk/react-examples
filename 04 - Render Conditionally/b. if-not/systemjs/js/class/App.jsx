@@ -10,10 +10,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h3>Conditional:</h3>
-        {
-          // Only render when a name is truthy:
-          !hide || <div>Visible</div>
-        }
+        {!hide || <div>Visible</div>}
       </React.Fragment>
     );
   }
