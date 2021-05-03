@@ -17,7 +17,7 @@ SystemJS.config({
   },
   packages: {
     '.': {
-      defaultExtension: 'tsx'
+      defaultExtension: 'jsx'
     },
     ts: {
       main: 'lib/plugin.js'

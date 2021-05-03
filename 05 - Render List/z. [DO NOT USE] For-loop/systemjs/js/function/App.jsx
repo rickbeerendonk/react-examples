@@ -3,9 +3,11 @@
 
 import React from 'react';
 
-function Greetings({ names }) {
+function App() {
+  const names = ['Alexandra', 'Benjamin', 'Charlotte'];
+
   return (
-    <React.Fragment>
+    <>
       <h1>Greetings</h1>
       <ul>
         {
@@ -19,8 +21,8 @@ function Greetings({ names }) {
           })()
         }
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 
-export default Greetings;
+export default App;
