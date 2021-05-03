@@ -4,12 +4,12 @@
 import React from 'react';
 
 function App() {
-  const hide = true;
+  const show = false;
 
   return (
     <>
       <h3>Conditional:</h3>
-      {!hide || <div>Visible</div>}
+      {show ? <div>Invisible</div> : <div>Visible</div>}
     </>
   );
 }
