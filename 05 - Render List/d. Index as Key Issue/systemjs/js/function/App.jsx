@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <p style={{ color: 'gray' }}>
         Add some text in an input and observe what happens if you click the
         button.
@@ -29,7 +29,7 @@ function App() {
           ))
         }
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 
