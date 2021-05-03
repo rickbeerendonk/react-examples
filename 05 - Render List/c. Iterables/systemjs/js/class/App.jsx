@@ -3,17 +3,15 @@
 
 import React from 'react';
 
-interface IListProps {
-  names: Set<string>;
-}
-
-class List extends React.Component<IListProps> {
+class App extends React.Component {
   render() {
+    const names = new Set(['A', 'B', 'C']);
+
     return (
       <>
         <h1>List</h1>
         <ul>
-          {Array.from(this.props.names, name => (
+          {Array.from(names, name => (
             <li key={name}>{name}</li>
           ))}
         </ul>
@@ -22,4 +20,4 @@ class List extends React.Component<IListProps> {
   }
 }
 
-export default List;
+export default App;

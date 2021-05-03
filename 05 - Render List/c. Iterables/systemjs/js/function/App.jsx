@@ -3,17 +3,19 @@
 
 import React from 'react';
 
-function List(props) {
+function App() {
+  const names = new Set(['A', 'B', 'C']);
+
   return (
-    <React.Fragment>
+    <>
       <h1>List</h1>
       <ul>
-        {Array.from(props.names, name => (
+        {Array.from(names, name => (
           <li key={name}>{name}</li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 
-export default List;
+export default App;
