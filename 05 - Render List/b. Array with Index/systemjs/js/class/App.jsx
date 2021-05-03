@@ -3,19 +3,17 @@
 
 import React from 'react';
 
-interface IGreetingsProps {
-  names: Array<string>;
-}
-
-class Greetings extends React.Component<IGreetingsProps> {
+class App extends React.Component {
   render() {
+    const names = ['Alexandra', 'Benjamin', 'Charlotte'];
+
     return (
       <>
         <h1>Greetings</h1>
         <ol>
           {
             // Prefer map (instead of for-loops):
-            this.props.names.map((name, index) => (
+            names.map((name, index) => (
               <li key={name} value={index}>
                 Hello {name}
               </li>
@@ -27,4 +25,4 @@ class Greetings extends React.Component<IGreetingsProps> {
   }
 }
 
-export default Greetings;
+export default App;

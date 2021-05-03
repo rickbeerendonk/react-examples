@@ -4,9 +4,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Greetings from './Greetings';
+import App from './App';
 
-ReactDOM.render(
-  <Greetings names={['Alexandra', 'Benjamin', 'Charlotte']} />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
