@@ -1,13 +1,20 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2020 Rick Beerendonk          !*/
-
-/* global module */
+/*! Copyright © 2021 Rick Beerendonk          !*/
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { GreetingEditor } from './GreetingEditor';
 
-storiesOf('Containers/GreetingEditor', module).add('Default', () => (
-  <GreetingEditor />
-));
+const Template = args => <GreetingEditor {...args} />;
+
+// Stories
+
+export const Default = Template.bind({});
+Default.args = {};
+
+// Define title + info for add-ons
+
+export default {
+  title: 'Containers/GreetingEditor',
+  component: GreetingEditor
+};

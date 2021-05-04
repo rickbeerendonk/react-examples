@@ -1,14 +1,21 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
-
-/* global module */
+/*! Copyright © 2021 Rick Beerendonk          !*/
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 import EditBox from './EditBox';
 
-storiesOf('Components/EditBox', module)
-  .add('with value', () => <EditBox onChange={() => {}} value="Test" />)
-  .add('with onChange', () => <EditBox onChange={action('editbox-change')} />);
+const Template = args => <EditBox {...args} />;
+
+// Stories
+
+export const WithValue = Template.bind({});
+WithValue.args = { value: 'Storybook' };
+
+// Define title + info for add-ons
+
+export default {
+  title: 'Components/EditBox',
+  component: EditBox,
+  argTypes: { onChange: { action: 'changed' } }
+};
