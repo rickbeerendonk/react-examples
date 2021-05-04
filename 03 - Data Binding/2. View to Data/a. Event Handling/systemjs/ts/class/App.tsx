@@ -7,7 +7,8 @@ class App extends React.Component {
   handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
-Value: ${e.currentTarget.value}`);
+Value: ${e.currentTarget.value}
+Data: ${e.nativeEvent.data}`);
   }
   render() {
     return <input onChange={this.handleChange} value="Hello React!" />;

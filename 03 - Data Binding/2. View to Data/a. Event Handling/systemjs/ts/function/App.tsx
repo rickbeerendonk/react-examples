@@ -7,7 +7,8 @@ const App: React.FC = () => {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.currentTarget}
-Value: ${e.currentTarget.value}`);
+Value: ${e.currentTarget.value}
+Data: ${e.nativeEvent.data}`);
   }
 
   return <input onChange={handleChange} value="Hello React!" />;

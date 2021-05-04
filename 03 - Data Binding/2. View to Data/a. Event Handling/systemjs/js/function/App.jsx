@@ -7,7 +7,8 @@ function App() {
   function handleChange(e) {
     alert(`Event handled.
 Target: ${e.target}
-Value: ${e.target.value}`);
+Value: ${e.target.value}
+Data: ${e.nativeEvent.data}`);
   }
 
   return <input onChange={handleChange} value="Hello React!" />;

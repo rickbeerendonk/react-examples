@@ -7,7 +7,8 @@ class App extends React.Component {
   changed(e) {
     alert(`Event handled.
 Target: ${e.target}
-Value: ${e.target.value}`);
+Value: ${e.target.value}
+Data: ${e.nativeEvent.data}`);
   }
   render() {
     return <input onChange={this.changed} value="Hello React!" />;
