@@ -29,6 +29,8 @@ function App() {
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
       <input id="name" onChange={handleChange} value={name} />
+
+      <input type="submit" />
     </form>
   );
 }
