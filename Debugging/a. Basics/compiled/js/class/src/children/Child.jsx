@@ -6,8 +6,6 @@
 import React from 'react';
 
 function Child() {
-  console.warn('Component stack:');
-
   return (
     <>
       <h3>Child: The parent is not the owner.</h3>

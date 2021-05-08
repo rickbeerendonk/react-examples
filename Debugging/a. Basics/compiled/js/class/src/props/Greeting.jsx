@@ -2,7 +2,7 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 function Greeting({ name }) {
-  return <h1>Hello {name}!</h1>;
+  return <h2>Hello {name}!</h2>;
 }
 
 export default Greeting;
