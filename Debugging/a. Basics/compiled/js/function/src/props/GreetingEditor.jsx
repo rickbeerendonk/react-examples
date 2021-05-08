@@ -1,12 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
+
 import Greeting from './Greeting';
 import EditBox from './EditBox';
 
 function GreetingEditor() {
-  const [name, setName] = React.useState('World');
+  const [name, setName] = useState('World');
 
   return (
     <>

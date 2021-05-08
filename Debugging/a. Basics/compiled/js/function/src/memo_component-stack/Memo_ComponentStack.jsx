@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import React from 'react';
+import { memo } from 'react';
 
 function Memo_ComponentStack() {
   console.log('[log] Component stack not visible!');
@@ -16,4 +16,4 @@ function Memo_ComponentStack() {
   );
 }
 
-export default React.memo(Memo_ComponentStack);
+export default memo(Memo_ComponentStack);

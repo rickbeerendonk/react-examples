@@ -4,7 +4,6 @@
 import { /*useDebugValue,*/ useEffect, useState } from 'react';
 
 export default function () {
-  // Hidden state variable
   const [mousePosition, setMousePosition] = useState({
     X: undefined,
     Y: undefined
@@ -23,6 +22,5 @@ export default function () {
   // No debug value
   //useDebugValue(null, () => 'No value');
 
-  // Return current state
   return mousePosition;
 }

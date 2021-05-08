@@ -1,16 +1,15 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useDebugValue, useEffect, useState } from 'react';
 
 export default function useMousePosition() {
-  // Hidden state variable
-  const [mousePosition, setMousePosition] = React.useState({
+  const [mousePosition, setMousePosition] = useState({
     X: undefined,
     Y: undefined
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleMouseOver(e) {
       setMousePosition({ X: e.pageX, Y: e.pageY });
     }
@@ -20,11 +19,7 @@ export default function useMousePosition() {
     };
   }, []);
 
-  React.useDebugValue(
-    /* value: */ mousePosition,
-    /* format: */ mp => `(${mp.X}, ${mp.Y})`
-  );
+  useDebugValue(mousePosition, mp => `(${mp.X}, ${mp.Y})`);
 
-  // Return current state
   return mousePosition;
 }
