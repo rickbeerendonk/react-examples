@@ -4,5 +4,6 @@
 import React from 'react';
 
 const BackgroundContext = React.createContext({ color: 'white' });
+BackgroundContext.displayName = 'BackgroundContext'; // DevTools
 
 export default BackgroundContext;
