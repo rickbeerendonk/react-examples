@@ -3,8 +3,14 @@
 
 import React from 'react';
 
+// Render 1: name = 'World'
+// Render 1: handleClick()
+// Render 2: name = 'React'
+// Render 1: [After 3s] alert 'React'
+
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
+
   const liveName = React.useRef();
   liveName.current = name;
 
