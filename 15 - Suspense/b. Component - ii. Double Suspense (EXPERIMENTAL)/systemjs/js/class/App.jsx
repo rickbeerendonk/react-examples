@@ -29,8 +29,8 @@ class App extends React.Component {
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
           <div>
-            <React.Suspense fallback={<Spinner />}>
-              <React.Suspense>
+            <React.Suspense fallback={<Spinner name="Outer" />}>
+              <React.Suspense fallback={<Spinner name="Inner" />}>
                 <AsyncResult />
               </React.Suspense>
             </React.Suspense>
