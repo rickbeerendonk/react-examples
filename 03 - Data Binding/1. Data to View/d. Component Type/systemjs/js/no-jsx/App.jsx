@@ -4,8 +4,8 @@
 import React from 'react';
 
 function App() {
-  const type = 'h1';
-  return React.createElement(type, undefined, 'Hello World!');
+  const elem = 'h1';
+  return React.createElement(elem, undefined, 'Hello World!');
 }
 
 export default App;
