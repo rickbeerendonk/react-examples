@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
           <ol>
@@ -53,7 +53,7 @@ class App extends React.Component {
             </React.unstable_SuspenseList>
           </ol>
         )}
-      </React.Fragment>
+      </>
     );
   }
 }
