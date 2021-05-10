@@ -22,7 +22,7 @@
     "copy-webpack-plugin": "8.1.1",
     "core-js": "3.11.2",
     "css-loader": "5.2.4",
-    "eslint": "7.25.0",
+    "eslint": "7.26.0",
     "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-webpack-plugin": "2.5.4",

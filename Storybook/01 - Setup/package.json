@@ -22,7 +22,7 @@
     "babel-loader": "8.2.2",
     "core-js": "3.11.2",
     "css-loader": "5.2.4",
-    "eslint": "7.25.0",
+    "eslint": "7.26.0",
     "eslint-plugin-react": "7.23.2",
     "eslint-webpack-plugin": "2.5.4",
     "html-webpack-plugin": "5.3.1",
