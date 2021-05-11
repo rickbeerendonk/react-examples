@@ -4,5 +4,6 @@
 import React from 'react';
 
 const ColorContext = React.createContext({ color: 'orange' });
+ColorContext.displayName = 'ColorContext';
 
 export default ColorContext;
