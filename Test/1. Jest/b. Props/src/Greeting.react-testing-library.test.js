@@ -7,36 +7,44 @@ import Greeting from './Greeting';
 /// React Testing Library: https://testing-library.com/docs/react-testing-library/intro ///
 
 describe('Greeting', () => {
-  it('throws when no name is provided (enzyme)', () => {
+  it('throws when no name is provided (@testing-library/react)', () => {
     expect(() => {
       render(<Greeting />);
     }).toThrow();
   });
 
-  /////// TODO ////////
+  it('renders hello world message when name is world [1] (@testing-library/react)', () => {
+    const { getByText } = render(<Greeting name="World" />);
 
-  /*
-  it('renders hello world message when name is world (enzyme)', () => {
-    const wrapper = render(<Greeting name="World" />);
-
-    expect(wrapper.type()).toEqual('h1');
-
-    // Use the children...
-    expect(wrapper.children().length).toEqual(3);
-    expect(wrapper.childAt(0).text()).toEqual('Hello ');
-    expect(wrapper.childAt(1).text()).toEqual('World');
-    expect(wrapper.childAt(2).text()).toEqual('!');
-
-    // ...or simply the text
-    expect(wrapper.text()).toEqual('Hello World!');
-
-    // ...or the whole node
-    expect(wrapper.html()).toEqual('<h1 class="greeting">Hello World!</h1>');
+    getByText(/hello world!/i);
   });
 
-  it('renders hello world snapshot when name is world (enzyme)', () => {
-    const wrapper = render(<Greeting name="World" />);
-    expect(toJson(wrapper)).toMatchSnapshot();
+  it('renders hello world message when name is world [2] (@testing-library/react)', () => {
+    const { container } = render(<Greeting name="World" />);
+
+    const h1 = container.querySelector('h1');
+
+    expect(h1).toBeDefined;
+    expect(h1).toContainHTML('<h1 class="greeting">Hello World!</h1>');
   });
-  */
+
+  it('renders hello world snapshot when name is world (@testing-library/react)', () => {
+    const { container } = render(<Greeting name="World" />);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders hello world inline-snapshot when name is world (@testing-library/react)', () => {
+    const { container } = render(<Greeting name="World" />);
+
+    expect(container.firstChild).toMatchInlineSnapshot(`
+      <h1
+        class="greeting"
+      >
+        Hello 
+        World
+        !
+      </h1>
+    `);
+  });
 });
