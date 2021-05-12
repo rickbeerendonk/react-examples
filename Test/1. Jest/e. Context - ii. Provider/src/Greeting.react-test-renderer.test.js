@@ -6,7 +6,7 @@ import ColorContext from './color-context';
 /// React Test Renderer ///
 
 describe('Greeting', () => {
-  it('renders hello world snapshot with default context color (react-test-renderer)', () => {
+  it('renders hello world snapshot with context color (react-test-renderer)', () => {
     const component = renderer.create(
       <ColorContext.Provider value={{ color: 'red' }}>
         <Greeting name="World" />
