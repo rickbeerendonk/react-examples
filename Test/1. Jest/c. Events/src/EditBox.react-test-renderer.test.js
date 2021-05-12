@@ -37,7 +37,7 @@ describe('EditBox', () => {
 
   /// -- Event -- ///
 
-  it('raises onChange event when changed (enzyme)', () => {
+  it('raises onChange event when changed (react-test-renderer)', () => {
     const handleChange = jest.fn();
     const component = renderer.create(
       <EditBox onChange={handleChange} name="World" />
