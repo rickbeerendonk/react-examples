@@ -8,13 +8,13 @@ import EditBox from './EditBox';
 describe('EditBox', () => {
   /// -- Property -- ///
 
-  it('does not throw when no name is provided (react-test-renderer)', () => {
+  it('does not throw when no name is provided (@testing-library/react)', () => {
     expect(() => {
       render(<EditBox />);
     }).not.toThrow();
   });
 
-  it('renders world inline snapshot when value is world (react-test-renderer)', () => {
+  it('renders world inline snapshot when value is world (@testing-library/react)', () => {
     const { container } = render(<EditBox value="World" />);
 
     expect(container.firstChild).toMatchInlineSnapshot(`
@@ -24,14 +24,14 @@ describe('EditBox', () => {
     `);
   });
 
-  it('renders world snapshot when value is world (react-test-renderer)', () => {
+  it('renders world snapshot when value is world (@testing-library/react)', () => {
     const { container } = render(<EditBox value="World" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   /// -- Event -- ///
 
-  it('raises onChange event when changed (react-test-renderer)', () => {
+  it('raises onChange event when changed (@testing-library/react)', () => {
     const handleChange = jest.fn();
     const { container } = render(
       <EditBox onChange={handleChange} name="World" />
