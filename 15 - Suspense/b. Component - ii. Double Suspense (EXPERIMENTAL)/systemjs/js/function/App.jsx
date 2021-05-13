@@ -23,7 +23,9 @@ function App() {
       {buttonClicked && (
         <div>
           <React.Suspense fallback={<Spinner name="Outer" />}>
+            <h3>First</h3>
             <React.Suspense fallback={<Spinner name="Inner" />}>
+              <h3>Second</h3>
               <AsyncResult />
             </React.Suspense>
           </React.Suspense>
