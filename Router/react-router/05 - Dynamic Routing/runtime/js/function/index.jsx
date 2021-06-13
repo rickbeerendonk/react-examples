@@ -34,6 +34,10 @@ function App() {
 // Without hooks
 // <= version 5
 function PageLegacy({ match }) {
+  if (!match) {
+    return null;
+  }
+
   return <h2>Page Legacy {match.params.id}</h2>;
 }
 
