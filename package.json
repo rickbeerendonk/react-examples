@@ -24,7 +24,7 @@
     "install-experimental": "npm install react@experimental react-dom@experimental",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
-    "start": "node \"./Util - 01 - Custom servers/server.js\" 8040",
+    "start": "node ./server/server.js",
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
@@ -73,7 +73,6 @@
     "redux": "4.1.0",
     "scheduler": "0.20.2",
     "scheduler-0.0.0-experimental": "npm:scheduler@0.0.0-experimental-dc27b5aaa",
-    "serve": "11.3.2",
     "styled-components": "5.2.3",
     "systemjs-0.21.6": "npm:systemjs@0.21.6",
     "systemjs-plugin-babel": "0.0.25",
