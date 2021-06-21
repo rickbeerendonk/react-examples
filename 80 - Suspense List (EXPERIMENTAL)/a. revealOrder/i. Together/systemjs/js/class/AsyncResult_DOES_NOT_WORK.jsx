@@ -8,12 +8,15 @@ function AsyncResult({ name, time }) {
 
   // Initialize data with Promise
   if (data.current === undefined) {
+    // eslint-disable-next-line no-debugger
     debugger;
     data.current = new Promise(function (resolve) {
       setTimeout(() => resolve(`Result ${name}!`), time);
     }).then(value => {
+      // eslint-disable-next-line no-debugger
       debugger;
       data.current = value;
+      // eslint-disable-next-line no-debugger
       debugger;
     });
   }

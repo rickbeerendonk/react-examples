@@ -4,8 +4,7 @@
 /* global Babel, createReactClass, React, ReactDOM */
 
 var JsxCompiler = createReactClass({
-  jsx:
-    'var HelloMessage = React.createClass({\n\
+  jsx: 'var HelloMessage = React.createClass({\n\
   render: function() {\n\
     return <div>Hello {this.props.name}</div>;\n\
   }\n\
