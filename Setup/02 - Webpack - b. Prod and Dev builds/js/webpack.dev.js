@@ -3,7 +3,7 @@
 
 /* global module */
 
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
@@ -14,6 +14,6 @@ module.exports = merge(commonConfig, {
     port: 9100,
     stats: 'errors-only'
   },
-  devtool: 'eval-source-map' /* fast, inline, no production */,
+  devtool: 'eval-cheap-source-map' /* fast, inline, no production */,
   mode: 'development'
 });

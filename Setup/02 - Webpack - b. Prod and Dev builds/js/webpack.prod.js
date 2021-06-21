@@ -3,11 +3,10 @@
 
 /* global module */
 
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
-  devtool: 'source-maps' /* slow, external, production */,
-  mode:
-    'production' /* use prod-version of libs, minification (option: tree-shaking) */
+  devtool: 'source-map' /* slow, external, production */,
+  mode: 'production' /* use prod-version of libs, minification (option: tree-shaking) */
 });
