@@ -46,6 +46,7 @@ module.exports = {
   plugins: [
     new ESLintPlugin({ extensions: ['js', 'jsx'] }),
     new HtmlWebpackPlugin({
+      template: './src/template.ejs',
       title: 'Setup Fast Refresh, Webpack, ESLint & Babel'
     }),
     new webpack.HotModuleReplacementPlugin(),
