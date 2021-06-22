@@ -49,6 +49,5 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.json']
-  },
-  target: process.env.NODE_ENV !== 'production' ? 'web' : 'browserslist'
+  }
 };
