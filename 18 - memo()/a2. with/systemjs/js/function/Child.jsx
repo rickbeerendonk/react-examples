@@ -12,6 +12,7 @@ function Child() {
   return <h2 ref={useFlashRef()}>Child</h2>;
 }
 
+// Prevent renders when there are no new property values
 const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
 
 export default ChildMemo;
