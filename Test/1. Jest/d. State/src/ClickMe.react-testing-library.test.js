@@ -23,7 +23,7 @@ describe('ClickMe', () => {
     getByText(/this link has been clicked 0 times/i);
   });
 
-  it('renders 0 (@testing-library/react)', () => {
+  it('renders 1 after click (@testing-library/react)', () => {
     const { container, getByText } = render(<ClickMe />);
     // trigger the onChange event for the select box
     fireEvent.click(container.firstChild);
