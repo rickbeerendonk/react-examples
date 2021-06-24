@@ -8,4 +8,4 @@ import EditBox from './EditBox';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<EditBox value="World" />, root);
+ReactDOM.render(<EditBox value="World" onChange={() => {}} />, root);
