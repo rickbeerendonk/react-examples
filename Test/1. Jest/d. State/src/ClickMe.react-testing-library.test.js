@@ -17,4 +17,16 @@ describe('ClickMe', () => {
     fireEvent.click(container.firstChild);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('renders 0 (@testing-library/react)', () => {
+    const { getByText } = render(<ClickMe />);
+    getByText(/this link has been clicked 0 times/i);
+  });
+
+  it('renders 0 (@testing-library/react)', () => {
+    const { container, getByText } = render(<ClickMe />);
+    // trigger the onChange event for the select box
+    fireEvent.click(container.firstChild);
+    getByText(/this link has been clicked 1 times/i);
+  });
 });
