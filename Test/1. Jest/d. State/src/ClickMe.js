@@ -2,25 +2,18 @@ import React from 'react';
 
 import './ClickMe.css';
 
-class ClickMe extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
+function ClickMe() {
+  const [count, setCount] = React.useState(0);
 
-    // Bind all non-react methods to this.
-    this.handleClick = this.handleClick.bind(this);
+  function handleClick() {
+    setCount(c => c + 1);
   }
-  handleClick() {
-    // this.state may be updated asynchronously:
-    this.setState(state => ({ count: state.count + 1 }));
-  }
-  render() {
-    return (
-      <a className="clickme" href="#" onClick={this.handleClick}>
-        This link has been clicked {this.state.count} times
-      </a>
-    );
-  }
+
+  return (
+    <a className="clickme" href="#" onClick={handleClick}>
+      This link has been clicked {count} times
+    </a>
+  );
 }
 
 export default ClickMe;
