@@ -16,7 +16,8 @@ function GreetingEditor() {
     return () => {
       // IMPORTANT: Can't use inputRef.current here,
       //            because it value might have been changed already
-      console.log('Remove ref: ', currentRef);
+      //console.log('Remove ref (wrong): ', inputRef.current);
+      console.log('Remove ref (right): ', currentRef);
     };
   }, [count]);
 
