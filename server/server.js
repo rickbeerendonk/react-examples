@@ -4,10 +4,11 @@
 /* eslint-disable no-console */
 
 const childProcess = require('child_process');
-var http = require('http');
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
-var mime = require('../node_modules/mime-types');
+const mime = require('../node_modules/mime-types');
+const ip = require('./ip');
 
 const [, , filePath] = process.argv;
 
@@ -175,8 +176,11 @@ const server = http.createServer(function (request, response) {
 });
 
 server.listen().on('listening', () => {
-  const serverUri = `http://localhost:${server.address().port}`;
-  const totalUri = `${serverUri}${extraUri}${
+  const localServerUri = `http://localhost:${server.address().port}`;
+  const serverUri =
+    ip['en0']?.[0] && `http://${ip['en0']?.[0]}:${server.address().port}`;
+
+  const totalUri = `${localServerUri}${extraUri}${
     extraUri[extraUri.length - 1] !== '/' && '/'
   }`.replace(/\s+/g, '%20');
 
@@ -184,7 +188,8 @@ server.listen().on('listening', () => {
     '\x1b[35m' /* Foreground Magenta */,
     'Server listening at',
     '\x1b[1m' /* bold */,
-    serverUri,
+    localServerUri,
+    serverUri ? `(${serverUri})` : '',
     '\x1b[0m' /* reset */
   );
 
