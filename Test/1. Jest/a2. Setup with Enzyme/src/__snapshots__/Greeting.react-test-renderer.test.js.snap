@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Greeting renders hello world snapshot (react-test-renderer) 1`] = `
-<h1
-  className="greeting"
->
-  Hello World!
-</h1>
-`;

@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 /// Enzyme ///
 
 describe('Greeting', () => {
-  it('renders hello world snapshot (react-test-renderer)', () => {
+  it('renders hello world snapshot', () => {
     const component = shallow(<Greeting />);
     let tree = toJson(component);
     expect(tree).toMatchSnapshot();

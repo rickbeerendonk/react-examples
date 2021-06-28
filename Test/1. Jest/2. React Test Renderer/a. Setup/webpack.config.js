@@ -37,7 +37,7 @@ module.exports = {
   plugins: [
     new ESLintPlugin({ extensions: ['js', 'jsx'] }),
     new HtmlWebpackPlugin({
-      title: 'React Tests with Jest - Setup with Enzyme'
+      title: 'React Tests with Jest - Setup'
     })
   ],
   resolve: {

@@ -1,6 +1,6 @@
 {
-  "name": "react-test-jest-setup-with-enzyme",
-  "description": "React Tests with Jest - Setup with Enzyme",
+  "name": "react-test-jest-setup",
+  "description": "React Tests with Jest - Setup",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
     "eslint-webpack-plugin": "2.5.4",
     "html-webpack-plugin": "5.3.1",
     "jest": "27.0.4",
-    "react-test-renderer": "17.0.2",
     "regenerator-runtime": "0.13.7",
     "rimraf": "3.0.2",
     "style-loader": "2.0.0",
