@@ -1,6 +1,6 @@
 {
-  "name": "react-test-jest-setup-with-testing-library",
-  "description": "React Tests with Jest - Setup with Testing Library",
+  "name": "react-test-jest-setup",
+  "description": "React Tests with Jest - Setup",
   "version": "1.0.0",
   "repository": {
     "type": "git",
