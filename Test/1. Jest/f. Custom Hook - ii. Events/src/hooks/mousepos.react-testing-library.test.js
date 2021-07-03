@@ -19,11 +19,10 @@ describe('useMousePosition', () => {
 
     // Mouse move
     act(() => {
-      const doc = window.document;
       let mouseMove = new Event('mousemove');
       mouseMove.pageX = 10;
       mouseMove.pageY = 20;
-      doc.dispatchEvent(mouseMove);
+      window.document.dispatchEvent(mouseMove);
     });
 
     expect(result.current).toEqual({ x: 10, y: 20 });
