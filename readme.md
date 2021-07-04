@@ -25,6 +25,11 @@ Install dependencies first:
 1. Run `npm start`. Now the server will run and the browser will open. Server path will be written in the console.
 2. In the browser, browse to the folder of the example you want to run and it will open automatically.
 
+### Alternative
+
+1. Run `npx serve`.
+2. In the browser, browse to the folder of the example you want to run and it will open automatically.
+
 ## Licence
 
 European Union Public Licence version 1.2
