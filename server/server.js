@@ -86,30 +86,23 @@ const server = http.createServer(function (request, response) {
   let isDirPath = isDirectory(filePath);
 
   if (isDirPath) {
-    // Redirect to prevent issues when requesting files
-    if (filePath.substr(-1) != '/') {
-      response.writeHead(302, { Location: request.url.replace(/\/?$/, '/') });
+    // Go to parent if it contains 'index.html'
+    if (
+      !fs.existsSync(path.join(filePath, 'index.html')) &&
+      findFileInPath(filePath, 'index.html')
+    ) {
+      response.writeHead(302, { Location: `${request.url}..` });
       response.end();
       return;
     } else {
-      // Go to parent if it contains 'index.html'
-      if (
-        !fs.existsSync(path.join(filePath, 'index.html')) &&
-        findFileInPath(filePath, 'index.html')
-      ) {
-        response.writeHead(302, { Location: `${request.url}..` });
-        response.end();
-        return;
-      } else {
-        // Get default files in directories:
-        if (fs.existsSync(path.join(filePath, 'index.html'))) {
-          filePath = path.join(filePath, 'index.html');
-          isDirPath = false;
-        }
-        if (fs.existsSync(path.join(filePath, 'index.js'))) {
-          filePath = path.join(filePath, 'index.js');
-          isDirPath = false;
-        }
+      // Get default files in directories:
+      if (fs.existsSync(path.join(filePath, 'index.html'))) {
+        filePath = path.join(filePath, 'index.html');
+        isDirPath = false;
+      }
+      if (fs.existsSync(path.join(filePath, 'index.js'))) {
+        filePath = path.join(filePath, 'index.js');
+        isDirPath = false;
       }
     }
   }
@@ -140,6 +133,7 @@ const server = http.createServer(function (request, response) {
                   'server'
                 ].includes(dirent.name)
             )
+            .sort((a, b) => (a.name > b.name ? 1 : -1))
             .map(
               dirent =>
                 `<li><a href="${encodeURI(`./${dirent.name}/`)}">${
