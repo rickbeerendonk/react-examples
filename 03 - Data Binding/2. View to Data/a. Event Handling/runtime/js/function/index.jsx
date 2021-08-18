@@ -14,4 +14,4 @@ Data: ${e.nativeEvent.data}`);
   return <input onChange={changed} value="Hello React!" />;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

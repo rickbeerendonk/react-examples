@@ -14,5 +14,5 @@ ReactDOM.render(
     </div>
     <GreetingEditor.Input />
   </GreetingEditor>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

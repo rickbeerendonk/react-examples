@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Top from './Top';
 
-ReactDOM.render(<Top color="red" />, document.getElementById('app'));
+ReactDOM.render(<Top color="red" />, document.getElementById('root'));

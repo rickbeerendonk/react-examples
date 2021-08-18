@@ -50,5 +50,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
-ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.unmountComponentAtNode(document.getElementById('root'));

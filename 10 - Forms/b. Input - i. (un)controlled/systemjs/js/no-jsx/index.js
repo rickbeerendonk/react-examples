@@ -8,5 +8,5 @@ import HelloMessage from './HelloMessage';
 
 ReactDOM.render(
   React.createElement(HelloMessage),
-  document.getElementById('app')
+  document.getElementById('root')
 );

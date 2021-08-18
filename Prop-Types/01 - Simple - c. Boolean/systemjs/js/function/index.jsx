@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Check from './Check';
 
-ReactDOM.render(<Check checked={true} />, document.getElementById('app'));
+ReactDOM.render(<Check checked={true} />, document.getElementById('root'));

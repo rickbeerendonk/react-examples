@@ -10,4 +10,4 @@ Greeting.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));
+ReactDOM.render(<Greeting name="World" />, document.getElementById('root'));

@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import MousePosition from './MousePosition';
 
-ReactDOM.render(<MousePosition />, document.getElementById('app'));
+ReactDOM.render(<MousePosition />, document.getElementById('root'));

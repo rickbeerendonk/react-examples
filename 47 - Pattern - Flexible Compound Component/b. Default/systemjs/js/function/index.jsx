@@ -8,5 +8,5 @@ import GreetingEditor from './GreetingEditor';
 
 ReactDOM.render(
   <GreetingEditor></GreetingEditor>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

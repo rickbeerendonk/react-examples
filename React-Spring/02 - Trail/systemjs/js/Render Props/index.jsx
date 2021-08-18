@@ -14,5 +14,5 @@ ReactDOM.render(
       { key: 3, text: 'Three' }
     ]}
   />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

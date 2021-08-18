@@ -27,5 +27,5 @@ ReactDOM.render(
   React.createElement(Greeting, {
     style: { background: 'orange', color: 'blue' }
   }),
-  document.getElementById('app')
+  document.getElementById('root')
 );

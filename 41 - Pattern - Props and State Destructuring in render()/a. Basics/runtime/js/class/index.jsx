@@ -31,5 +31,5 @@ class GreetingEditor extends React.Component {
 
 ReactDOM.render(
   <GreetingEditor greeting="Hello" />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

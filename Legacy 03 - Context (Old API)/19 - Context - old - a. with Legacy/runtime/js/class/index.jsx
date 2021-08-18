@@ -30,4 +30,4 @@ One.childContextTypes = {
   color: PropTypes.string
 };
 
-ReactDOM.render(<One color="red" />, document.getElementById('app'));
+ReactDOM.render(<One color="red" />, document.getElementById('root'));

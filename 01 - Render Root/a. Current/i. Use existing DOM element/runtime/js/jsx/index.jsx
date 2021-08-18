@@ -5,5 +5,5 @@
 
 ReactDOM.render(
   <h1>Hello React {React.version}!</h1>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

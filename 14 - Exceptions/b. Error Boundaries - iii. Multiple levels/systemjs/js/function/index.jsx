@@ -14,5 +14,5 @@ ReactDOM.render(
       <GreetingEditor />
     </Other>
   </ErrorBoundary>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

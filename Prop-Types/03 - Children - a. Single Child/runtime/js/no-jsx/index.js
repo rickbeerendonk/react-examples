@@ -23,5 +23,5 @@ ReactDOM.render(
     React.createElement('span', null, 'Legal'),
     React.createElement('span', null, 'Illegal')
   ),
-  document.getElementById('app')
+  document.getElementById('root')
 );

@@ -18,4 +18,4 @@ const styles = {
   }
 };
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));
+ReactDOM.render(React.createElement(Greeting), document.getElementById('root'));

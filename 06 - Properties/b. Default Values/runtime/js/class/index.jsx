@@ -10,4 +10,4 @@ class Greeting extends React.Component {
 }
 Greeting.defaultProps = { name: 'World' };
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));

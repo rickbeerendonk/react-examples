@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 
 import Parent from './Parent';
 
-const node = document.getElementById('app');
+const node = document.getElementById('root');
 
 ReactDOM.render(<Parent />, node);
 

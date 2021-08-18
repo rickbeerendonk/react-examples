@@ -7,4 +7,4 @@ function Greeting({ name = 'World' }) {
   return <h1>Hello {name}!</h1>;
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));

@@ -46,4 +46,4 @@ class Parent extends React.Component {
   }
 }
 
-ReactDOM.render(<Parent />, document.getElementById('app'));
+ReactDOM.render(<Parent />, document.getElementById('root'));

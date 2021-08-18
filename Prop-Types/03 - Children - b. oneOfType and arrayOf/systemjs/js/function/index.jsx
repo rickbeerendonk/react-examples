@@ -21,5 +21,5 @@ ReactDOM.render(
 
     <List>{123 /* problem */}</List>
   </div>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

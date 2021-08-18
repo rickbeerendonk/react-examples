@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import One from './One';
 
-ReactDOM.render(<One color="red" />, document.getElementById('app'));
+ReactDOM.render(<One color="red" />, document.getElementById('root'));

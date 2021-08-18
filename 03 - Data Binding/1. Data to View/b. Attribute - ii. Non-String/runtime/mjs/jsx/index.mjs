@@ -8,4 +8,4 @@ function App() {
   return <input type="button" value="Action" disabled={true} />;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

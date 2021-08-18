@@ -6,5 +6,5 @@ import ReactDOM from './react-dom.development.mjs';
 
 ReactDOM.render(
   React.createElement('h1', null, 'Hello React ', React.version, '!'),
-  document.getElementById('app')
+  document.getElementById('root')
 );

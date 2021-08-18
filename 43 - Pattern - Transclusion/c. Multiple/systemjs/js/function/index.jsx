@@ -8,5 +8,5 @@ import Container from './Container';
 
 ReactDOM.render(
   <Container slot1={<em>First</em>} slot2={<b>Second</b>} />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

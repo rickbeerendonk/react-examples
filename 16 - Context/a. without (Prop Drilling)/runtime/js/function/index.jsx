@@ -15,4 +15,4 @@ function Top({ color }) {
   return <Middle color={color} />;
 }
 
-ReactDOM.render(<Top color="red" />, document.getElementById('app'));
+ReactDOM.render(<Top color="red" />, document.getElementById('root'));

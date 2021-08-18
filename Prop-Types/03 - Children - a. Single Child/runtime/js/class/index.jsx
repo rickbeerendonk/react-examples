@@ -23,5 +23,5 @@ ReactDOM.render(
     <span>Legal</span>
     <span>Illegal</span>
   </List>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

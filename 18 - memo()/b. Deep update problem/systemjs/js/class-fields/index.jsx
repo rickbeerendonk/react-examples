@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Parent from './Parent';
 
-ReactDOM.render(<Parent />, document.getElementById('app'));
+ReactDOM.render(<Parent />, document.getElementById('root'));

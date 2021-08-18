@@ -21,4 +21,4 @@ Value: ${e.target.value}`);
   return <input onChange={handleChange} value="Hello World!" />;
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));

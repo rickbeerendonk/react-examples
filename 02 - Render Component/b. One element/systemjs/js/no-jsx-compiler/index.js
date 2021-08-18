@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Greeting from './Greeting';
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));
+ReactDOM.render(React.createElement(Greeting), document.getElementById('root'));

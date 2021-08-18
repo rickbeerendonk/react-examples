@@ -8,5 +8,5 @@ import Greeting from './Greeting';
 
 ReactDOM.render(
   <Greeting name="World" default />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

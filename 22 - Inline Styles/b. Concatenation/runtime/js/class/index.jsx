@@ -23,5 +23,5 @@ const styles = {
 
 ReactDOM.render(
   <Greeting style={{ background: 'orange', color: 'blue' }} />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

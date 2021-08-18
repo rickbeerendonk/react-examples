@@ -35,4 +35,4 @@ var Posts = createReactClass({
   }
 });
 
-ReactDOM.render(<Posts />, document.getElementById('app'));
+ReactDOM.render(<Posts />, document.getElementById('root'));

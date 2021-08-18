@@ -53,5 +53,5 @@ class HelloMessage extends React.Component {
 
 ReactDOM.render(
   React.createElement(HelloMessage),
-  document.getElementById('app')
+  document.getElementById('root')
 );

@@ -37,4 +37,4 @@ class HelloMessage extends React.Component {
   }
 }
 
-ReactDOM.render(<HelloMessage />, document.getElementById('app'));
+ReactDOM.render(<HelloMessage />, document.getElementById('root'));

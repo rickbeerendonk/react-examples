@@ -7,7 +7,7 @@ Use an existing DOM element as the root for the React application.
 ### HTML
 
 ```HTML
-<div id="app"></div>
+<div id="root"></div>
 ```
 
 ### Concurrent Rendering
@@ -16,7 +16,7 @@ Use an existing DOM element as the root for the React application.
 
 ```JSX
 ReactDOM
-  .createRoot(document.getElementById('app'))
+  .createRoot(document.getElementById('root'))
   .render(<h1>Hello World!</h1>);
 ```
 

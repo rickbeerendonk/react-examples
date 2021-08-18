@@ -12,4 +12,4 @@ function Greeting() {
   return <StyledH1>Hello World!</StyledH1>;
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));

@@ -32,4 +32,4 @@ class ClickMe extends React.Component {
   }
 }
 
-ReactDOM.render(React.createElement(ClickMe), document.getElementById('app'));
+ReactDOM.render(React.createElement(ClickMe), document.getElementById('root'));

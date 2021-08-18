@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import HelloMessage from './HelloMessage';
 
-ReactDOM.render(<HelloMessage />, document.getElementById('app'));
+ReactDOM.render(<HelloMessage />, document.getElementById('root'));

@@ -82,4 +82,4 @@ class PostListContainer extends React.Component {
   }
 }
 
-ReactDOM.render(<PostListContainer />, document.getElementById('app'));
+ReactDOM.render(<PostListContainer />, document.getElementById('root'));

@@ -23,4 +23,4 @@ Value: ${e.target.value}`);
   }
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));

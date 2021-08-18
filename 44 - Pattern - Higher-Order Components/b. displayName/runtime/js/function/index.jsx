@@ -36,4 +36,4 @@ function App() {
   return <GreetingWithExtras extraColor="red" name="World" />;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

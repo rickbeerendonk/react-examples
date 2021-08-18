@@ -19,4 +19,4 @@ Sum.propTypes = {
   second: PropTypes.number // Optional
 };
 
-ReactDOM.render(<Sum first={2} />, document.getElementById('app'));
+ReactDOM.render(<Sum first={2} />, document.getElementById('root'));

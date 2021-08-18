@@ -13,5 +13,5 @@ function HelloWorld() {
 
 ReactDOM.render(
   React.createElement(HelloWorld),
-  document.getElementById('app')
+  document.getElementById('root')
 );

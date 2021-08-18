@@ -16,5 +16,5 @@ ReactDOM.render(
     <Greeting name="Charlotte" />
     */}
   </List>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

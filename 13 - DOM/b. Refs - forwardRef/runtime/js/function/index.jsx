@@ -23,4 +23,4 @@ function App() {
   return <Greeting name="World" ref={myGreeting} />;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

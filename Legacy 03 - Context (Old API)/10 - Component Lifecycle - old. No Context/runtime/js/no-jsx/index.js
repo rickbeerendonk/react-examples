@@ -107,7 +107,7 @@ class App extends React.Component {
 }
 
 logEvent('-- add component --', 'action');
-ReactDOM.render(React.createElement(App), document.getElementById('app'));
+ReactDOM.render(React.createElement(App), document.getElementById('root'));
 
 logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+ReactDOM.unmountComponentAtNode(document.getElementById('root'));

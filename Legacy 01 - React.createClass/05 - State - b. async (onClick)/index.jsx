@@ -20,4 +20,4 @@ var ClickMe = createReactClass({
   }
 });
 
-ReactDOM.render(<ClickMe />, document.getElementById('app'));
+ReactDOM.render(<ClickMe />, document.getElementById('root'));

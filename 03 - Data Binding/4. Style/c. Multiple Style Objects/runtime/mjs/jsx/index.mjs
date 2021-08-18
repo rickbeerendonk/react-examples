@@ -19,4 +19,4 @@ function App() {
   return <h1 style={{ ...style1, ...style2 }}>Hello React!</h1>;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

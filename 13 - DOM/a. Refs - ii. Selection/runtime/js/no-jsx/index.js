@@ -26,5 +26,5 @@ function GreetingEditor() {
 
 ReactDOM.render(
   React.createElement(GreetingEditor),
-  document.getElementById('app')
+  document.getElementById('root')
 );

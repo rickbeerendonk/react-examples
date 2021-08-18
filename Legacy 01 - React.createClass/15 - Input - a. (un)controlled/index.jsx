@@ -27,4 +27,4 @@ var HelloMessage = createReactClass({
   }
 });
 
-ReactDOM.render(<HelloMessage />, document.getElementById('app'));
+ReactDOM.render(<HelloMessage />, document.getElementById('root'));

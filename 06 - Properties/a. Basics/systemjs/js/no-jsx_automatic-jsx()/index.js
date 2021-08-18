@@ -9,5 +9,5 @@ import Greeting from './Greeting';
 ReactDOM.render(
   // See: https://github.com/reactjs/rfcs/pull/107
   React.jsx(Greeting, { name: 'World' }),
-  document.getElementById('app')
+  document.getElementById('root')
 );

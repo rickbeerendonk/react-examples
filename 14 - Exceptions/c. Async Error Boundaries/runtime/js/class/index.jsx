@@ -88,5 +88,5 @@ ReactDOM.render(
   <ErrorBoundary>
     <GreetingEditor />
   </ErrorBoundary>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

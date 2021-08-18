@@ -17,5 +17,5 @@ ReactDOM.render(
   <React.StrictMode>
     <HelloWorld />
   </React.StrictMode>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

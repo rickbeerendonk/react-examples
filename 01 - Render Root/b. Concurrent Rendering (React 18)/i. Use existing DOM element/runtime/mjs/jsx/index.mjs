@@ -4,6 +4,6 @@
 import React from './react.development.mjs';
 import ReactDOM from './react-dom.development.mjs';
 
-ReactDOM.createRoot(document.getElementById('app')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <h1>Hello React {React.version}!</h1>
 );

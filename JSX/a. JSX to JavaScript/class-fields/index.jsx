@@ -74,4 +74,4 @@ const styles = {
   }
 };
 
-ReactDOM.render(<JsxCompiler />, document.getElementById('app'));
+ReactDOM.render(<JsxCompiler />, document.getElementById('root'));

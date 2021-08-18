@@ -11,5 +11,5 @@ ReactDOM.render(
   <BrowserRouter basename="Router/react-router/08%20-%20Navigation%20using%20Code/systemjs/js/function%20-%20BrowserRouter">
     <App />
   </BrowserRouter>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

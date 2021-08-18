@@ -8,7 +8,7 @@ import App from './App';
 import { logEvent } from 'utils';
 
 logEvent('-- add component --', 'action');
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+ReactDOM.unmountComponentAtNode(document.getElementById('root'));

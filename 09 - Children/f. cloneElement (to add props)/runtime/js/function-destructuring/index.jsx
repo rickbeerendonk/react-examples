@@ -34,5 +34,5 @@ ReactDOM.render(
     <Greeting name="Benjamin" />
     <Greeting name="Charlotte" greeting="Good morning" />
   </List>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

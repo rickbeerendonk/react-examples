@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Bars from './Bars';
 
-ReactDOM.render(<Bars />, document.getElementById('app'));
+ReactDOM.render(<Bars />, document.getElementById('root'));

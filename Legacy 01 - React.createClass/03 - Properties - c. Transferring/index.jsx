@@ -17,5 +17,5 @@ ReactDOM.render(
   >
     React website
   </ImportantAnchor>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

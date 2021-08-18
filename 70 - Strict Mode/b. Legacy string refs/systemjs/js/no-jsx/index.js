@@ -8,5 +8,5 @@ import HelloWorld from './HelloWorld';
 
 ReactDOM.render(
   React.createElement(React.StrictMode, null, React.createElement(HelloWorld)),
-  document.getElementById('app')
+  document.getElementById('root')
 );

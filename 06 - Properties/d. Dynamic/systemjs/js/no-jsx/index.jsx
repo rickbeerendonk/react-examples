@@ -13,5 +13,5 @@ const props = {
 
 ReactDOM.render(
   React.createElement(Greeting, props),
-  document.getElementById('app')
+  document.getElementById('root')
 );

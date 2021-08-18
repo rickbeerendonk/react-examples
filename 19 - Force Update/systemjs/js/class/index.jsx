@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import LastUpdate from './LastUpdate';
 
-ReactDOM.render(<LastUpdate />, document.getElementById('app'));
+ReactDOM.render(<LastUpdate />, document.getElementById('root'));

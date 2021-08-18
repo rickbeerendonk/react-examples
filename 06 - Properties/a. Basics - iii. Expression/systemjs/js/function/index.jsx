@@ -11,5 +11,5 @@ ReactDOM.render(
     greeting={new Date().getHours() < 12 ? 'Good morning' : 'Hello'}
     name="World"
   />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

@@ -77,5 +77,5 @@ var styles = {
 
 ReactDOM.render(
   React.createElement(JsxCompiler),
-  document.getElementById('app')
+  document.getElementById('root')
 );

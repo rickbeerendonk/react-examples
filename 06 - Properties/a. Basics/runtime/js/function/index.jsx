@@ -7,4 +7,4 @@ function Greeting(props) {
   return <h1>Hello {props.name}!</h1>;
 }
 
-ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));
+ReactDOM.render(<Greeting name="World" />, document.getElementById('root'));

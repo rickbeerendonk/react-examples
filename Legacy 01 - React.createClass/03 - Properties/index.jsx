@@ -9,4 +9,4 @@ var Greeting = createReactClass({
   }
 });
 
-ReactDOM.render(<Greeting name="World" />, document.getElementById('app'));
+ReactDOM.render(<Greeting name="World" />, document.getElementById('root'));

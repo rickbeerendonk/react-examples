@@ -20,4 +20,4 @@ var GreetingEditor = createReactClass({
   }
 });
 
-ReactDOM.render(<GreetingEditor />, document.getElementById('app'));
+ReactDOM.render(<GreetingEditor />, document.getElementById('root'));

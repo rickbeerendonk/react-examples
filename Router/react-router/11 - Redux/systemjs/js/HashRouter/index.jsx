@@ -21,5 +21,5 @@ ReactDOM.render(
       <App />
     </HashRouter>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

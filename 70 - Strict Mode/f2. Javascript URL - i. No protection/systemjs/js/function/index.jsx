@@ -10,5 +10,5 @@ ReactDOM.render(
   <React.StrictMode>
     <Dangerous />
   </React.StrictMode>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

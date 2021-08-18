@@ -10,5 +10,5 @@ ReactDOM.render(
   <Container>
     <em>First</em>
   </Container>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

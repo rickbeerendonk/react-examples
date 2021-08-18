@@ -13,4 +13,4 @@ var HelloWorld = createReactClass({
   }
 });
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<HelloWorld />, document.getElementById('root'));

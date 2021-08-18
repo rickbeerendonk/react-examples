@@ -11,4 +11,4 @@ const props = {
   name: 'React'
 };
 
-ReactDOM.render(<Greeting {...props} />, document.getElementById('app'));
+ReactDOM.render(<Greeting {...props} />, document.getElementById('root'));

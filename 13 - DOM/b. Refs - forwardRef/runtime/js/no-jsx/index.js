@@ -26,4 +26,4 @@ function App() {
   });
 }
 
-ReactDOM.render(React.createElement(App), document.getElementById('app'));
+ReactDOM.render(React.createElement(App), document.getElementById('root'));

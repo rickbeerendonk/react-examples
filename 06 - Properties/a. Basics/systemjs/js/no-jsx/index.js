@@ -8,5 +8,5 @@ import Greeting from './Greeting';
 
 ReactDOM.render(
   React.createElement(Greeting, { name: 'World' }),
-  document.getElementById('app')
+  document.getElementById('root')
 );

@@ -27,5 +27,5 @@ ReactDOM.render(
     },
     'React website'
   ),
-  document.getElementById('app')
+  document.getElementById('root')
 );

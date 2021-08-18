@@ -14,4 +14,4 @@ function HelloWorld() {
   return <h1 ref={myH1}>Hello World!</h1>;
 }
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<HelloWorld />, document.getElementById('root'));

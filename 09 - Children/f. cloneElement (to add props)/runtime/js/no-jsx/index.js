@@ -50,5 +50,5 @@ ReactDOM.render(
       greeting: 'Good Morning'
     })
   ),
-  document.getElementById('app')
+  document.getElementById('root')
 );

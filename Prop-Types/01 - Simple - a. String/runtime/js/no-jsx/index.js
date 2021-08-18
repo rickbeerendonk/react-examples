@@ -12,5 +12,5 @@ Greeting.propTypes = {
 
 ReactDOM.render(
   React.createElement(Greeting, { name: 'World' }),
-  document.getElementById('app')
+  document.getElementById('root')
 );

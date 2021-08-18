@@ -8,5 +8,5 @@ import PostListContainer from './PostListContainer';
 
 ReactDOM.render(
   React.createElement(PostListContainer),
-  document.getElementById('app')
+  document.getElementById('root')
 );

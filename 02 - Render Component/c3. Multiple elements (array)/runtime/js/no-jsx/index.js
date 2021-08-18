@@ -11,4 +11,4 @@ function Greeting() {
   ];
 }
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('app'));
+ReactDOM.render(React.createElement(Greeting), document.getElementById('root'));

@@ -3,6 +3,6 @@
 
 /* global React, ReactDOM */
 
-ReactDOM.createRoot(document.getElementById('app')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <h1>Hello React {React.version}!</h1>
 );

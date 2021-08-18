@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 
 import Sum from './Sum';
 
-ReactDOM.render(<Sum first={2} />, document.getElementById('app'));
+ReactDOM.render(<Sum first={2} />, document.getElementById('root'));

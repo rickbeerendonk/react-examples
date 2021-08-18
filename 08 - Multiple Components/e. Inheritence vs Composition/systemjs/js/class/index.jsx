@@ -20,5 +20,5 @@ ReactDOM.render(
       <Greeting name="World" />
     </Important>
   </React.Fragment>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

@@ -34,5 +34,5 @@ ReactDOM.render(
   <React.StrictMode>
     <One color="red" />
   </React.StrictMode>,
-  document.getElementById('app')
+  document.getElementById('root')
 );

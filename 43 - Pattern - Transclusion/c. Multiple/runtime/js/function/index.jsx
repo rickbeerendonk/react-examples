@@ -26,5 +26,5 @@ function Container({ slot1, slot2 }) {
 
 ReactDOM.render(
   <Container slot1={<em>First</em>} slot2={<b>Second</b>} />,
-  document.getElementById('app')
+  document.getElementById('root')
 );

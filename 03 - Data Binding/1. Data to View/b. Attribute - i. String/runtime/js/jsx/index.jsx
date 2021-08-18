@@ -7,4 +7,4 @@ function App() {
   return <img alt="React" />;
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('root'));

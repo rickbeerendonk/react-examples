@@ -15,5 +15,5 @@ ReactDOM.render(
     React.createElement(Greeting, { name: 'Benjamin' }),
     React.createElement(Greeting, { name: 'Charlotte' })
   ),
-  document.getElementById('app')
+  document.getElementById('root')
 );

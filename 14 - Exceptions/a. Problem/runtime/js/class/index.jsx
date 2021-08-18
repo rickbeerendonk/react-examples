@@ -43,4 +43,4 @@ class GreetingEditor extends React.Component {
   }
 }
 
-ReactDOM.render(<GreetingEditor />, document.getElementById('app'));
+ReactDOM.render(<GreetingEditor />, document.getElementById('root'));

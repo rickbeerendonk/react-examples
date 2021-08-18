@@ -18,4 +18,4 @@ var styles = {
   }
 };
 
-ReactDOM.render(<Greeting />, document.getElementById('app'));
+ReactDOM.render(<Greeting />, document.getElementById('root'));
