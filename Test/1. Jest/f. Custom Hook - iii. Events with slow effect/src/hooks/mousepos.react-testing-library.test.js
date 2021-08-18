@@ -24,8 +24,7 @@ describe('useMousePosition', () => {
       window.document.dispatchEvent(mouseMove);
     });
 
-    waitForNextUpdate().then(() =>
-      expect(result.current).toEqual({ x: 10, y: 20 })
-    );
+    await waitForNextUpdate();
+    expect(result.current).toEqual({ x: 10, y: 20 });
   });
 });

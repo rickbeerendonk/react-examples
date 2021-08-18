@@ -11,12 +11,9 @@ function useMousePosition() {
 
   React.useEffect(() => {
     function handleMouseOver(e) {
-      setMousePosition({ x: e.pageX, y: e.pageY });
+      setTimeout(() => setMousePosition({ x: e.pageX, y: e.pageY }), 500);
     }
-    setTimeout(
-      () => document.addEventListener('mousemove', handleMouseOver),
-      2000
-    );
+    document.addEventListener('mousemove', handleMouseOver);
     return () => {
       document.removeEventListener('mousemove', handleMouseOver);
     };
