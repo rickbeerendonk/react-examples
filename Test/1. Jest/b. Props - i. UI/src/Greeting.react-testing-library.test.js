@@ -16,7 +16,7 @@ describe('Greeting', () => {
   it('renders hello world message when name is world [1] (@testing-library/react)', () => {
     const { getByText } = render(<Greeting name="World" />);
 
-    getByText(/hello world!/i);
+    getByText('Hello World!');
   });
 
   it('renders hello world message when name is world [2] (@testing-library/react)', () => {
