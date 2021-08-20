@@ -35,7 +35,7 @@ class App extends React.Component {
             >
               <li value="1">
                 <React.Suspense fallback={<Spinner name="one" />}>
-                  <AsyncResult name="one" time={1000} />
+                  <AsyncResult name="one" time={2000} />
                 </React.Suspense>
               </li>
               <li value="2">
@@ -45,7 +45,7 @@ class App extends React.Component {
               </li>
               <li value="3">
                 <React.Suspense fallback={<Spinner name="three" />}>
-                  <AsyncResult name="three" time={2000} />
+                  <AsyncResult name="three" time={1000} />
                 </React.Suspense>
               </li>
             </React.unstable_SuspenseList>
