@@ -3,16 +3,20 @@
 
 /* global module */
 
+const path = require('path');
 const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   devServer: {
-    inline: true,
-    contentBase: './build',
-    overlay: true,
+    client: {
+      logging: 'error',
+      overlay: true
+    },
     port: 9100,
-    stats: 'errors-only'
+    static: {
+      directory: path.join(__dirname, '/build')
+    }
   },
   devtool: 'eval-cheap-source-map' /* fast, inline, no production */,
   mode: 'development'

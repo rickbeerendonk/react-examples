@@ -14,10 +14,14 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './build',
-    overlay: true,
+    client: {
+      logging: 'error',
+      overlay: true
+    },
     port: 9100,
-    stats: 'errors-only'
+    static: {
+      directory: path.join(__dirname, '/build')
+    }
   },
   mode: 'development',
   module: {
