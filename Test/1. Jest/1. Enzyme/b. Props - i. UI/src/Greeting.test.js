@@ -9,13 +9,13 @@ configure({ adapter: new Adapter() });
 /// Enzyme ///
 
 describe('Greeting', () => {
-  it('throws when no name is provided (enzyme)', () => {
+  it('throws when no name is provided', () => {
     expect(() => {
       shallow(<Greeting />);
     }).toThrow();
   });
 
-  it('renders hello world message when name is world (enzyme)', () => {
+  it('renders hello world message when name is world', () => {
     const wrapper = shallow(<Greeting name="World" />);
 
     expect(wrapper.type()).toEqual('h1');
