@@ -5,16 +5,17 @@ import React from 'react';
 
 function MousePosition() {
   const [mousePosition, setMousePosition] = React.useState({
-    X: undefined,
-    Y: undefined
+    x: undefined,
+    y: undefined
   });
 
   React.useEffect(() => {
     // Default: Handler inside
     function handleMouseMove(e) {
-      setMousePosition({ X: e.pageX, Y: e.pageY });
+      setMousePosition({ x: e.pageX, y: e.pageY });
     }
     document.addEventListener('mousemove', handleMouseMove);
+
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
@@ -22,7 +23,7 @@ function MousePosition() {
 
   return (
     <h1>
-      Mouse is at ({mousePosition.X}, {mousePosition.Y})
+      Mouse is at ({mousePosition.x}, {mousePosition.y})
     </h1>
   );
 }

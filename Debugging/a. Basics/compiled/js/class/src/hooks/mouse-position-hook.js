@@ -5,13 +5,13 @@ import { useDebugValue, useEffect, useState } from 'react';
 
 export default function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({
-    X: undefined,
-    Y: undefined
+    x: undefined,
+    y: undefined
   });
 
   useEffect(() => {
     function handleMouseOver(e) {
-      setMousePosition({ X: e.pageX, Y: e.pageY });
+      setMousePosition({ x: e.pageX, y: e.pageY });
     }
     document.addEventListener('mousemove', handleMouseOver);
     return () => {
@@ -19,7 +19,7 @@ export default function useMousePosition() {
     };
   }, []);
 
-  useDebugValue(mousePosition, mp => `(${mp.X}, ${mp.Y})`);
+  useDebugValue(mousePosition, mp => `(${mp.x}, ${mp.y})`);
 
   return mousePosition;
 }

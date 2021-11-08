@@ -5,13 +5,13 @@ import { /*useDebugValue,*/ useEffect, useState } from 'react';
 
 export default function () {
   const [mousePosition, setMousePosition] = useState({
-    X: undefined,
-    Y: undefined
+    x: undefined,
+    y: undefined
   });
 
   useEffect(() => {
     function handleMouseOver(e) {
-      setMousePosition({ X: e.pageX, Y: e.pageY });
+      setMousePosition({ x: e.pageX, y: e.pageY });
     }
     document.addEventListener('mousemove', handleMouseOver);
     return () => {

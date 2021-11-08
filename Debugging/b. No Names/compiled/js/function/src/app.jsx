@@ -24,8 +24,8 @@ export default function () {
       <h1>Custom Hooks</h1>
       <h2>Mouse Position</h2>
       <p>
-        X: {mousePosition.X} <br />
-        Y: {mousePosition.Y}
+        X: {mousePosition.x} <br />
+        Y: {mousePosition.y}
       </p>
       <hr />
       <h1>Context</h1>
