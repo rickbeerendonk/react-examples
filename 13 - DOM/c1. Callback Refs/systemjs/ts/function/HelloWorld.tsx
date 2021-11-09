@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const HelloWorld: React.FC<> = () => {
+const HelloWorld: React.FC = () => {
   function handleRef(ref) {
     ref.innerHTML = 'Hello <u>React</u>!!!';
   }
