@@ -2,15 +2,11 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import React from 'react';
-import { HashRouter, Route, Routes, Link } from 'react-router-dom';
-
-import Home from './Home';
-import Page1 from './Page1';
-import Page2 from './Page2';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
+    <>
       <header>
         <h1>App</h1>
         <nav>
@@ -21,15 +17,11 @@ function App() {
       </header>
 
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="page1/*" element={<Page1 />} />
-          <Route path="page2/*" element={<Page2 />} />
-        </Routes>
+        <Outlet />
       </main>
 
       <footer>My copyright</footer>
-    </HashRouter>
+    </>
   );
 }
 

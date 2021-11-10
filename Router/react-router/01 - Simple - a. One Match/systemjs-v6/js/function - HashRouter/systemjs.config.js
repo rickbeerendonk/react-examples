@@ -4,14 +4,6 @@
 /* global SystemJS */
 
 SystemJS.config({
-  meta: {
-    '*.jsx': {
-      babelOptions: {
-        es2015: true,
-        react: true
-      }
-    }
-  },
   paths: {
     // paths serve as alias
     'npm:': '../../../../../../node_modules/'
@@ -25,12 +17,29 @@ SystemJS.config({
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
     'react-router': 'npm:react-router-6/umd/react-router.development.js',
     'react-router-dom':
-      'npm:react-router-dom-6/umd/react-router-dom.development.js'
+      'npm:react-router-dom-6/umd/react-router-dom.development.js',
+
+    ts: 'npm:plugin-typescript',
+    typescript: 'npm:typescript'
   },
   packages: {
     '.': {
       defaultExtension: 'jsx'
+    },
+    ts: {
+      main: 'lib/plugin.js'
+    },
+    typescript: {
+      main: 'lib/typescript.js',
+      meta: {
+        'lib/typescript.js': {
+          exports: 'ts'
+        }
+      }
     }
   },
-  transpiler: 'plugin-babel'
+  transpiler: 'ts',
+  typescriptOptions: {
+    tsconfig: true
+  }
 });
