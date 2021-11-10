@@ -17,15 +17,15 @@ SystemJS.config({
     'npm:': '../../../../../../node_modules/'
   },
   map: {
-    history: 'npm:history/umd/history.js',
+    history: 'npm:history/umd/history.development.js',
     'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
     'systemjs-babel-build':
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-router': 'npm:react-router-6.0.0/umd/react-router.development.js',
+    'react-router': 'npm:react-router-6/umd/react-router.development.js',
     'react-router-dom':
-      'npm:react-router-dom-6.0.0/umd/react-router-dom.development.js'
+      'npm:react-router-dom-6/umd/react-router-dom.development.js'
   },
   packages: {
     '.': {
