@@ -8,7 +8,7 @@ import Middle from './Middle';
 
 function Top({ color }) {
   return (
-    <StateProvider color={color}>
+    <StateProvider state={{ color }}>
       <Middle />
     </StateProvider>
   );

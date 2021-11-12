@@ -18,11 +18,12 @@ function stateReducer(state, action) {
   }
 }
 
-export function StateProvider({ children, color }) {
-  const [state, dispatch] = React.useReducer(stateReducer, { color });
-  const value = { state, dispatch };
+export function StateProvider(props) {
+  const [state, dispatch] = React.useReducer(stateReducer, props.state);
   return (
-    <StateContext.Provider value={value}>{children}</StateContext.Provider>
+    <StateContext.Provider value={{ state, dispatch }}>
+      {props.children}
+    </StateContext.Provider>
   );
 }
 
