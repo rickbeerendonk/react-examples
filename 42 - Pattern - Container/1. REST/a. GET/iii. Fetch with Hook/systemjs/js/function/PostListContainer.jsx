@@ -15,7 +15,7 @@ function useFetchJson(url, options) {
 
   React.useEffect(
     /* Wrap async call so no Promise is returned */
-    function fetchPosts() {
+    function () {
       (async () => {
         setIsFetching(true);
         try {
@@ -44,10 +44,10 @@ function PostListContainer() {
   const [posts = [], error, isFetching] = useFetchJson('posts.json');
 
   return (
-    <React.Fragment>
+    <>
       {isFetching && <Fetching />}
       {error ? <ErrorMessage message={error} /> : <PostList posts={posts} />}
-    </React.Fragment>
+    </>
   );
 }
 
