@@ -4,7 +4,7 @@
 import React from 'react';
 import { HashRouter, Route, Link } from 'react-router-dom';
 
-import { Page, PageLegacy } from './Page';
+import { Page } from './Page';
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
       </header>
 
       <main>
-        <Route path="/:id">{props => <PageLegacy {...props} />}</Route>
         <Route path="/:id">
           <Page />
         </Route>

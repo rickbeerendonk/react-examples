@@ -20,7 +20,6 @@ function App() {
       </header>
 
       <main>
-        <Route path="/:id">{props => <PageLegacy {...props} />}</Route>
         <Route path="/:id">
           <Page />
         </Route>
@@ -31,18 +30,6 @@ function App() {
   );
 }
 
-// Without hooks
-// <= version 5
-function PageLegacy({ match }) {
-  if (!match) {
-    return null;
-  }
-
-  return <h2>Page Legacy {match.params.id}</h2>;
-}
-
-// With hooks
-// >= version 5.1
 function Page() {
   const { id } = useParams();
   return <h2>Page {id} </h2>;
