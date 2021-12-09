@@ -9,7 +9,6 @@
   "trailingComma": "none",
   "bracketSpacing": true,
   "jsxSingleQuote": false,
-  "jsxBracketSameLine": false,
   "overrides": [
     {
       "files": ["*.json"],
