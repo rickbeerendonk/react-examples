@@ -7,7 +7,7 @@ import MyText from './MyText.js';
 function Index() {
   return (
     <h1>
-      Hello <MyText text="world" />!
+      Hello <MyText text="Next.js" />!
     </h1>
   );
 }
