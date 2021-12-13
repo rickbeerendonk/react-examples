@@ -1,7 +1,7 @@
 {
-  "name": "zeit-next-demo",
+  "name": "server_side-nextjs-basics",
   "version": "1.0.0",
-  "description": "Server Side Rendering with Zeit Next",
+  "description": "Server Side - Next.js Basics",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
