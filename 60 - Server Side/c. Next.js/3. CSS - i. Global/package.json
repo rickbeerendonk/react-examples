@@ -1,7 +1,7 @@
 {
-  "name": "server_side-nextjs-head_title",
+  "name": "server_side-nextjs-css-global",
   "version": "1.0.0",
-  "description": "Server Side - Next.js - Head Title",
+  "description": "Server Side - Next.js - CSS - Global",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
