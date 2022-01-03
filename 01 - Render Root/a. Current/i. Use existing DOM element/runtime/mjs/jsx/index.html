@@ -8,8 +8,6 @@
 
     <title>Render Root - Use Existing DOM Element</title>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
-    <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
-    <script src="../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../../../../../../node_modules/@babel/standalone/babel.js"></script>
   </head>
   <body>
@@ -18,8 +16,8 @@
     <script type="importmap">
       {
         "imports": {
-          "react": "./react.development.mjs",
-          "react-dom": "./react-dom.development.mjs"
+          "react": "../../../../../../node_modules/@esm-bundle/react/esm/react.development.js",
+          "react-dom": "../../../../../../node_modules/@esm-bundle/react-dom/esm/react-dom.development.js"
         }
       }
     </script>

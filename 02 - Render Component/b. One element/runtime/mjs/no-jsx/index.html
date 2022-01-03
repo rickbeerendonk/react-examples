@@ -8,12 +8,18 @@
 
     <title>Render Component - One element</title>
     <link rel="stylesheet" href="../../../../../resources/oblicum.css" />
-    <script src="../../../../../node_modules/react/umd/react.development.js"></script>
-    <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
   </head>
   <body>
     <div id="root"></div>
 
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "../../../../../node_modules/@esm-bundle/react/esm/react.development.js",
+          "react-dom": "../../../../../node_modules/@esm-bundle/react-dom/esm/react-dom.development.js"
+        }
+      }
+    </script>
     <script src="index.mjs" type="module"></script>
   </body>
 </html>
