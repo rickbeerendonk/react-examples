@@ -8,13 +8,14 @@ coverage/
 docs/
 lib/
 Issues/
-node_modules_unstable/
+temp/
 
 #################
 ## npm
 #################
 
 node_modules/
+node_modules_unstable/
 
 #################
 ## bower

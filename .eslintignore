@@ -5,4 +5,5 @@
 **/node_modules/**
 **/node_modules_unstable/**
 **/setup/**
+**/temp/**
 **/__mocks__/**
