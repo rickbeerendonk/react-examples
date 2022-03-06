@@ -1,24 +1,27 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2019-2021 Rick Beerendonk     !*/
 
-let promise = null;
-let result = null;
-
-function AsyncResult() {
-  // Return result if we already have one
-  if (result) {
-    return result;
+function AsyncResult({ name, time }) {
+  AsyncResult.Data[name];
+  if (!AsyncResult.Data[name]) {
+    AsyncResult.Data[name] = {
+      result: null,
+      promise: new Promise(function (resolve) {
+        setTimeout(() => resolve(`Result ${name}!`), time);
+      }).then(value => {
+        AsyncResult.Data[name].result = value;
+      })
+    };
   }
 
-  // Create a promise if it doesn't exist yet
-  if (!promise) {
-    promise = new Promise(function (resolve) {
-      setTimeout(() => resolve('Result!'), 3000);
-    }).then(value => (result = value));
+  if (AsyncResult.Data[name].result) {
+    // Return result if we already have one
+    return AsyncResult.Data[name].result;
+  } else {
+    // "Return" the promise
+    throw AsyncResult.Data[name].promise;
   }
-
-  // "Return" the promise
-  throw promise;
 }
+AsyncResult.Data = new Map();
 
 export default AsyncResult;
