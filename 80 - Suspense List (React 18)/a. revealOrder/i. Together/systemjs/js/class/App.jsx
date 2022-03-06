@@ -29,7 +29,7 @@ class App extends React.Component {
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
           <ol>
-            <React.unstable_SuspenseList revealOrder="together">
+            <React.SuspenseList revealOrder="together">
               <li value="1">
                 <React.Suspense fallback={<Spinner name="one" />}>
                   <AsyncResult name="one" time={2000} />
@@ -45,7 +45,7 @@ class App extends React.Component {
                   <AsyncResult name="three" time={1000} />
                 </React.Suspense>
               </li>
-            </React.unstable_SuspenseList>
+            </React.SuspenseList>
           </ol>
         )}
       </>

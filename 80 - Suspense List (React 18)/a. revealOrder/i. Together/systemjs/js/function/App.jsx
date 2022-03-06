@@ -18,7 +18,7 @@ function App() {
       <button onClick={load}>Load</button>
       {buttonClicked && (
         <ol>
-          <React.unstable_SuspenseList revealOrder="together">
+          <React.SuspenseList revealOrder="together">
             <li value="1">
               <React.Suspense fallback={<Spinner name="one" />}>
                 <AsyncResult name="one" time={2000} />
@@ -34,7 +34,7 @@ function App() {
                 <AsyncResult name="three" time={1000} />
               </React.Suspense>
             </li>
-          </React.unstable_SuspenseList>
+          </React.SuspenseList>
         </ol>
       )}
     </>

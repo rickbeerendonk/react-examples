@@ -17,7 +17,7 @@
 ### async
 
 - ReactDOM.unstable_batchedUpdates
-- ReactDOM.unstable_createRoot
+- ReactDOM.createRoot
 - ReactDOM.unstable_deferredUpdates
 - ReactDOM.unstable_flushControlled
 - ReactDOM.unstable_interactiveUpdates
