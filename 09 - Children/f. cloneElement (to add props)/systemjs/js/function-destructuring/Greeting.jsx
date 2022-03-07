@@ -3,10 +3,10 @@
 
 import React from 'react';
 
-function Greeting({ greeting, name }) {
+function Greeting({ greet, name }) {
   return (
     <i>
-      {greeting} {name}
+      {greet} {name}
     </i>
   );
 }

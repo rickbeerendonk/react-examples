@@ -8,10 +8,10 @@ import Greeting from './Greeting';
 import List from './List';
 
 ReactDOM.render(
-  <List greeting="Hello">
+  <List greet="Hello">
     <Greeting name="Alexandra" />
     <Greeting name="Benjamin" />
-    <Greeting name="Charlotte" greeting="Good morning" />
+    <Greeting name="Charlotte" greet="Good morning" />
   </List>,
   document.getElementById('root')
 );

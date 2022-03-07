@@ -7,7 +7,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <i>
-        {this.props.greeting} {this.props.name}
+        {this.props.greet} {this.props.name}
       </i>
     );
   }

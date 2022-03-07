@@ -8,7 +8,7 @@ class Greeting extends React.Component {
     return React.createElement(
       'i',
       null,
-      this.props.greeting,
+      this.props.greet,
       ' ',
       this.props.name,
       '!'
@@ -27,12 +27,12 @@ class List extends React.Component {
         return React.createElement(
           'li',
           { key: i },
-          child.props.greeting
+          child.props.greet
             ? child
             : // child is readonly.
               // To changes props/children on the child, use React.cloneElement.
               // New props (2nd argument) will overwrite existing props.
-              React.cloneElement(child, { greeting: self.props.greeting })
+              React.cloneElement(child, { greet: self.props.greet })
         );
       })
     );
@@ -42,12 +42,12 @@ class List extends React.Component {
 ReactDOM.render(
   React.createElement(
     List,
-    { greeting: 'Hello' },
+    { greet: 'Hello' },
     React.createElement(Greeting, { name: 'Alexandra' }),
     React.createElement(Greeting, { name: 'Benjamin' }),
     React.createElement(Greeting, {
       name: 'Charlotte',
-      greeting: 'Good Morning'
+      greet: 'Good Morning'
     })
   ),
   document.getElementById('root')

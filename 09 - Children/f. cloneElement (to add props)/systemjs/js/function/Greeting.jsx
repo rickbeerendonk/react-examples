@@ -6,7 +6,7 @@ import React from 'react';
 function Greeting(props) {
   return (
     <i>
-      {props.greeting} {props.name}
+      {props.greet} {props.name}
     </i>
   );
 }

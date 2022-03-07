@@ -3,25 +3,25 @@
 
 /* global React, ReactDOM */
 
-function Greeting({ greeting, name }) {
+function Greeting({ greet, name }) {
   return (
     <i>
-      {greeting} {name}
+      {greet} {name}
     </i>
   );
 }
 
-function List({ children, greeting }) {
+function List({ children, greet }) {
   return (
     <ul>
       {React.Children.map(children, (child, i) => (
         <li key={i}>
-          {child.props.greeting
+          {child.props.greet
             ? child
             : // child is readonly.
               // To changes props/children on the child, use React.cloneElement.
               // New props (2nd argument) will overwrite existing props.
-              React.cloneElement(child, { greeting: greeting })}
+              React.cloneElement(child, { greet })}
         </li>
       ))}
     </ul>
@@ -29,10 +29,10 @@ function List({ children, greeting }) {
 }
 
 ReactDOM.render(
-  <List greeting="Hello">
+  <List greet="Hello">
     <Greeting name="Alexandra" />
     <Greeting name="Benjamin" />
-    <Greeting name="Charlotte" greeting="Good morning" />
+    <Greeting name="Charlotte" greet="Good morning" />
   </List>,
   document.getElementById('root')
 );
