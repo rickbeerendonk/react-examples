@@ -11,10 +11,7 @@ function App() {
   const [buttonClicked, setButtonClicked] = React.useState(false);
 
   function load() {
-    // Async
-    Scheduler.unstable_scheduleCallback(1, () => {
-      setButtonClicked(true);
-    });
+    setButtonClicked(true);
   }
 
   return (
