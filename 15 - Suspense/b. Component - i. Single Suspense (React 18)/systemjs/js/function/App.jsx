@@ -2,7 +2,6 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import React from 'react';
-import Scheduler from 'scheduler';
 
 import Spinner from './Spinner';
 import AsyncResult from './AsyncResult';
