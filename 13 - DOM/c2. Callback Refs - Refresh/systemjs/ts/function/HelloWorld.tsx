@@ -6,8 +6,8 @@ import React from 'react';
 const HelloWorld: React.FC = () => {
   const [id, setId] = React.useState(0);
 
-  function handleRef(ref) {
-    console.log(ref);
+  function handleRef(ref: HTMLHeadingElement) {
+    console.log('handleRef: ', ref);
     if (ref) {
       ref.innerHTML = 'Hello <u>React</u>!!!';
     }

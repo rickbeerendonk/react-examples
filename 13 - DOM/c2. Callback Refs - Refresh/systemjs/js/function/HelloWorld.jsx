@@ -7,7 +7,7 @@ function HelloWorld() {
   const [id, setId] = React.useState(0);
 
   function handleRef(ref) {
-    console.log(ref);
+    console.log('handleRef: ', ref);
     if (ref) {
       ref.innerHTML = 'Hello <u>React</u>!!!';
     }
