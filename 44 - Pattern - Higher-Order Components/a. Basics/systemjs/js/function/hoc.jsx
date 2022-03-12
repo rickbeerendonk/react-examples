@@ -5,11 +5,13 @@ import React from 'react';
 
 // HOC
 export function withExtras(WrappedComponent) {
-  const WithExtras = ({ extraColor, ...passThroughProps }) => (
-    <div style={{ color: extraColor }}>
-      <WrappedComponent {...passThroughProps} />
-    </div>
-  );
+  function WithExtras({ extraColor, ...passThroughProps }) {
+    return (
+      <div style={{ color: extraColor }}>
+        <WrappedComponent {...passThroughProps} />
+      </div>
+    );
+  }
 
   return WithExtras;
 }
