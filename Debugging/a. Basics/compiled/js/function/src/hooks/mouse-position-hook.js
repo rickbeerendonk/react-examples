@@ -10,12 +10,12 @@ export default function useMousePosition() {
   });
 
   useEffect(() => {
-    function handleMouseOver(e) {
+    function handleMouseMove(e) {
       setMousePosition({ x: e.pageX, y: e.pageY });
     }
-    document.addEventListener('mousemove', handleMouseOver);
+    document.addEventListener('mousemove', handleMouseMove);
     return () => {
-      document.removeEventListener('mousemove', handleMouseOver);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
