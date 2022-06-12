@@ -9,7 +9,8 @@ body > :first-child::after {
   position: fixed;
 
   color: white;
-  background: black;
+  background: linear-gradient(90deg, black 10%, red 30%);
+  background: red;
   border-width: 0.2rem;
   border-style: solid;
   border-radius: 2rem;
