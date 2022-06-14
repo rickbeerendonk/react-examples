@@ -10,7 +10,9 @@ const path = require('path');
 const mime = require('../node_modules/mime-types');
 const ip = require('./ip');
 
-const [, , filePath] = process.argv;
+let [, , ...filePath] = process.argv;
+// Windows fix:
+filePath = filePath.join(' ').replaceAll('\\\\', '\\');
 
 /*** Helper functions ***/
 
