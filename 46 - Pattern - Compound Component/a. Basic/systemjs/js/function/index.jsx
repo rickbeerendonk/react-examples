@@ -6,11 +6,11 @@ import ReactDOM from 'react-dom';
 
 import GreetingEditor from './GreetingEditor';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <GreetingEditor>
     {/* Children MUST be specified, because there is no default */}
     <GreetingEditor.Text />
     <GreetingEditor.Input />
-  </GreetingEditor>,
-  document.getElementById('root')
+  </GreetingEditor>
 );

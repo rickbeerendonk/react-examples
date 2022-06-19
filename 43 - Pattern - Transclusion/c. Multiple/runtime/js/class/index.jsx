@@ -26,7 +26,5 @@ class Container extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Container slot1={<em>First</em>} slot2={<b>Second</b>} />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Container slot1={<em>First</em>} slot2={<b>Second</b>} />);

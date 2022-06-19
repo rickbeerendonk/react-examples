@@ -21,11 +21,11 @@ var List = createReactClass({
   }
 });
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <List>
     <Greeting name="Alexandra" />
     <Greeting name="Benjamin" />
     <Greeting name="Charlotte" />
-  </List>,
-  document.getElementById('root')
+  </List>
 );

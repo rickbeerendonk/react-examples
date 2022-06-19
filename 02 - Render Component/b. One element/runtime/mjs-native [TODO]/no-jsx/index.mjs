@@ -6,4 +6,5 @@ import ReactDOM from './react-dom.development.mjs';
 
 import Greeting from './Greeting.mjs';
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Greeting));

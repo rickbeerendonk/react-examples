@@ -197,7 +197,8 @@ var App = createReactClass({
 });
 
 logEvent('-- add component --', 'action');
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
 logEvent('-- remove component --', 'action');
 ReactDOM.unmountComponentAtNode(document.getElementById('root'));

@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 
 import One from './One';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <One color="red" />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

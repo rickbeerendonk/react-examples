@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 
 import Dangerous from './Dangerous';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <Dangerous />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

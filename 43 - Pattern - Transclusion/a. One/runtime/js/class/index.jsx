@@ -25,9 +25,9 @@ class Container extends React.Component {
   }
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <Container>
     <em>First</em>
-  </Container>,
-  document.getElementById('root')
+  </Container>
 );

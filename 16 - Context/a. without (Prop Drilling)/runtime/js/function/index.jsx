@@ -15,4 +15,5 @@ function Top({ color }) {
   return <Middle color={color} />;
 }
 
-ReactDOM.render(<Top color="red" />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Top color="red" />);

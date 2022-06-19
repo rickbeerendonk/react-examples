@@ -27,7 +27,5 @@ class GreetingEditor extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <GreetingEditor greeting="Hello" />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<GreetingEditor greeting="Hello" />);

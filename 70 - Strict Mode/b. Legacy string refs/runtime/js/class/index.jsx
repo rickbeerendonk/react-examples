@@ -13,9 +13,9 @@ class HelloWorld extends React.Component {
   }
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <HelloWorld />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

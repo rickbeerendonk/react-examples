@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import Greeting from './Greeting';
 
-ReactDOM.render(<Greeting />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Greeting />);

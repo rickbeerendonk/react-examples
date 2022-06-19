@@ -23,9 +23,9 @@ function Container({ children }) {
   );
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <Container>
     <em>First</em>
-  </Container>,
-  document.getElementById('root')
+  </Container>
 );

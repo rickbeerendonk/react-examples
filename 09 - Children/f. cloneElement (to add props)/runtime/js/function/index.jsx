@@ -28,11 +28,11 @@ function List(props) {
   );
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <List greet="Hello">
     <Greeting name="Alexandra" />
     <Greeting name="Benjamin" />
     <Greeting name="Charlotte" greet="Good morning" />
-  </List>,
-  document.getElementById('root')
+  </List>
 );

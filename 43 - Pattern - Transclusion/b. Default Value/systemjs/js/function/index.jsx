@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import Container from './Container';
 
-ReactDOM.render(<Container></Container>, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Container />);

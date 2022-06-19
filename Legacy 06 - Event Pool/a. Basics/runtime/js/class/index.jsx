@@ -23,4 +23,5 @@ Value: ${e.target.value}`);
   }
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Greeting />);

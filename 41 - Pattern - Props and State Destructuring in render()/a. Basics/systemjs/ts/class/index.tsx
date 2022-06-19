@@ -6,7 +6,5 @@ import ReactDOM from 'react-dom';
 
 import GreetingEditor from './GreetingEditor';
 
-ReactDOM.render(
-  <GreetingEditor greeting="Hello" />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<GreetingEditor greeting="Hello" />);

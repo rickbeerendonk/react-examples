@@ -7,12 +7,12 @@ import ReactDOM from 'react-dom';
 import CustomContent from './CustomContent';
 import GreetingEditor from './GreetingEditor';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <GreetingEditor>
     <div style={{ backgroundColor: 'lightgray' }}>
       <CustomContent />
     </div>
     <GreetingEditor.Input />
-  </GreetingEditor>,
-  document.getElementById('root')
+  </GreetingEditor>
 );

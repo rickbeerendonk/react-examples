@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import Parent from './Parent';
 
-ReactDOM.render(<Parent />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Parent />);

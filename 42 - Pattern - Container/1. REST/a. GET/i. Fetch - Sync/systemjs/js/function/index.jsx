@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import PostListContainer from './PostListContainer';
 
-ReactDOM.render(<PostListContainer />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<PostListContainer />);

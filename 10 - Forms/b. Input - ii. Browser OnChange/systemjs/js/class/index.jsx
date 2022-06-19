@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import HelloMessage from './HelloMessage';
 
-ReactDOM.render(<HelloMessage />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<HelloMessage />);

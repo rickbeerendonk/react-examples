@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import MousePosition from './MousePosition';
 
-ReactDOM.render(<MousePosition />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<MousePosition />);

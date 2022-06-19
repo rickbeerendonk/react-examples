@@ -8,4 +8,5 @@ function Greeting(props) {
 }
 Greeting.defaultProps = { name: 'World' };
 
-ReactDOM.render(React.createElement(Greeting), document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Greeting));

@@ -14,4 +14,5 @@ function App() {
   return <animated.h1>{props.number}</animated.h1>;
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

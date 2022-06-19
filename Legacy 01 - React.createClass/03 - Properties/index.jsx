@@ -9,4 +9,5 @@ var Greeting = createReactClass({
   }
 });
 
-ReactDOM.render(<Greeting name="World" />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Greeting name="World" />);

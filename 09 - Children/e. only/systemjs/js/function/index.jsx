@@ -7,7 +7,8 @@ import ReactDOM from 'react-dom';
 import Greeting from './Greeting';
 import List from './List';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <List>
     <Greeting name="Alexandra" />
     {/*
@@ -15,6 +16,5 @@ ReactDOM.render(
     <Greeting name="Benjamin" />
     <Greeting name="Charlotte" />
     */}
-  </List>,
-  document.getElementById('root')
+  </List>
 );

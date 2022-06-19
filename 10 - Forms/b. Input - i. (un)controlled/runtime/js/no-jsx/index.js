@@ -51,7 +51,5 @@ class HelloMessage extends React.Component {
   }
 }
 
-ReactDOM.render(
-  React.createElement(HelloMessage),
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(HelloMessage));

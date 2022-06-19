@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 
 import Container from './Container';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <Container>
     <em>First</em>
-  </Container>,
-  document.getElementById('root')
+  </Container>
 );

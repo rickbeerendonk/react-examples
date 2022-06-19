@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom';
 
 import ClickMe from './ClickMe';
 
-ReactDOM.render(<ClickMe />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ClickMe />);
