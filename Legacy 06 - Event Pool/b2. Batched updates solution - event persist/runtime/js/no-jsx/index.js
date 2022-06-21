@@ -27,5 +27,4 @@ class App extends React.Component {
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(React.createElement(App));
+ReactDOM.render(React.createElement(App), document.getElementById('root'));
