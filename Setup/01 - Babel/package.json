@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
-    "@babel/core": "7.18.2",
+    "@babel/core": "7.18.5",
     "@babel/preset-env": "7.18.2",
     "@babel/preset-react": "7.17.12",
-    "core-js": "3.22.8",
+    "core-js": "3.23.2",
     "serve": "13.0.2"
   }
 }

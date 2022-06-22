@@ -15,14 +15,14 @@
     "styled-components": "5.3.5"
   },
   "devDependencies": {
-    "@babel/core": "7.18.2",
+    "@babel/core": "7.18.5",
     "@babel/preset-env": "7.18.2",
     "@babel/preset-react": "7.17.12",
     "@hot-loader/react-dom": "17.0.1",
     "babel-loader": "8.2.5",
     "babel-plugin-styled-components": "2.0.2",
-    "core-js": "3.22.8",
-    "eslint": "8.17.0",
+    "core-js": "3.23.2",
+    "eslint": "8.18.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-webpack-plugin": "3.1.1",
     "html-webpack-plugin": "5.5.0",
