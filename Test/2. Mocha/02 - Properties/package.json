@@ -12,8 +12,8 @@
     "test": "mocha --require @babel/register"
   },
   "dependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.2",

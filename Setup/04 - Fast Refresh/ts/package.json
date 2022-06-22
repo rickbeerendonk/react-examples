@@ -9,12 +9,12 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "dependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.7",
-    "@types/react": "18.0.12",
+    "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "copy-webpack-plugin": "11.0.0",
     "core-js": "3.22.8",
