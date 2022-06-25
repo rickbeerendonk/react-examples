@@ -15,47 +15,49 @@ function PostListContainer() {
 
   const [post, setPost] = React.useState(null);
   const [error, setError] = React.useState(null);
-  const [isFetching, setIsFetching] = React.useState(false);
+  const [isFetchingCount, setIsFetchingCount] = React.useState(0);
 
-  React.useEffect(fetchPost, [id] /* Do effect when ID changes. */);
+  React.useEffect(
+    () => {
+      // 1. Create an Abort Controller
+      const abortController = new AbortController();
 
-  function fetchPost() {
-    // 1. Creat an Abort Controller
-    const abortController = new AbortController();
-
-    (async () => {
-      setIsFetching(true);
-      try {
-        const response = await fetch(
-          `http://jsonplaceholder.typicode.com/posts/${id}`,
-          {
-            // 2. Pass the Signal
-            signal: abortController.signal
+      (async () => {
+        setIsFetchingCount(c => c + 1);
+        try {
+          const response = await fetch(
+            `http://jsonplaceholder.typicode.com/posts/${id}`,
+            {
+              // 2. Pass the Signal
+              signal: abortController.signal
+            }
+          );
+          if (!response.ok) {
+            throw Error(response.statusText);
           }
-        );
-        if (!response.ok) {
-          throw Error(response.statusText);
+          const json = await response.json();
+          setPost(json);
+          setError(null);
+        } catch (error) {
+          // 3. Ignore the error thrown when Aborting the fetch
+          if (error.name === 'AbortError') {
+            console.log(error.message);
+          } else {
+            // Other errors
+            setError(error.message);
+          }
+        } finally {
+          setIsFetchingCount(c => c - 1);
         }
-        const json = await response.json();
-        setPost(json);
-      } catch (error) {
-        // 3. Ignore the error thrown when Aborting the fetch
-        if (error.name === 'AbortError') {
-          console.log(error.message);
-        } else {
-          // Other errors
-          setError(error.message);
-        }
-      } finally {
-        setIsFetching(false);
-      }
-    })();
+      })();
 
-    // 4. Return the Abort Controller cleanup (for useEffect)
-    return () => {
-      abortController.abort();
-    };
-  }
+      // 4. Return the Abort Controller cleanup (for useEffect)
+      return () => {
+        abortController.abort();
+      };
+    },
+    [id] /* Do effect when ID changes. */
+  );
 
   return (
     <React.Fragment>
@@ -67,13 +69,15 @@ function PostListContainer() {
           value={id}
         />
       </label>
-      {isFetching && (
+      {isFetchingCount ? (
         <div>
           <Fetching />
         </div>
+      ) : error ? (
+        <ErrorMessage message={error} />
+      ) : (
+        post && <Post key={post.id} title={post.title} body={post.body} />
       )}
-      {error && <ErrorMessage message={error} />}
-      {post && <Post key={post.id} title={post.title} body={post.body} />}
     </React.Fragment>
   );
 }
