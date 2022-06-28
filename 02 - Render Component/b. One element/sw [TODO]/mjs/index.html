@@ -13,6 +13,14 @@
     <script>
       navigator.serviceWorker.register('sw.js');
     </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "../../../../node_modules/@esm-bundle/react/esm/react.development.js",
+          "react-dom": "../../../../node_modules/@esm-bundle/react-dom/esm/react-dom.development.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

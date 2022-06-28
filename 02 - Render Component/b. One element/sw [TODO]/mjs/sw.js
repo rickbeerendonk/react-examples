@@ -1,7 +1,8 @@
 // European Union Public License version 1.2
 // Copyright © 2022 Rick Beerendonk
 
-//import
+// eslint-disable-next-line no-undef
+importScripts('../../../../node_modules/@babel/standalone/babel.min.js');
 
 self.addEventListener('install', () => {
   // Force update

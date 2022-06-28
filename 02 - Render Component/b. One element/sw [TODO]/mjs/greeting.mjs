@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2014 Rick Beerendonk          !*/
 
-import { version } from './react.development.mjs';
+import { version } from 'react';
 
 function Greeting() {
   return <h1>Hello React {version}!</h1>;
