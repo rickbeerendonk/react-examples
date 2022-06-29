@@ -171,7 +171,8 @@ const server = http.createServer(function (request, response) {
   }
 });
 
-server.listen().on('listening', () => {
+const port = undefined; //3000;
+server.listen(port).on('listening', () => {
   const localServerUri = `http://localhost:${server.address().port}`;
   const serverUri =
     ip['en0']?.[0] && `http://${ip['en0']?.[0]}:${server.address().port}`;
