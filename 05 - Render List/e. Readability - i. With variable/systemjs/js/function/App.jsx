@@ -6,18 +6,15 @@ import React from 'react';
 function App() {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
-  function getNameListItems() {
-    let result = [];
-    for (const name of names) {
-      result.push(<li key={name}>Hello {name}</li>);
-    }
-    return result;
+  let nameListItems = [];
+  for (const name of names) {
+    nameListItems.push(<li key={name}>Hello {name}</li>);
   }
 
   return (
     <>
       <h1>Greetings</h1>
-      <ul>{getNameListItems()}</ul>
+      <ul>{nameListItems}</ul>
     </>
   );
 }
