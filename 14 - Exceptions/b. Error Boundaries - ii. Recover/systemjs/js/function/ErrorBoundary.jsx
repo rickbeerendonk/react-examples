@@ -9,8 +9,6 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { error: null };
-
-    this.handleReload = this.handleReload.bind(this);
   }
 
   static getDerivedStateFromError(error) {
@@ -33,9 +31,9 @@ class ErrorBoundary extends React.Component {
     );
   }
 
-  handleReload() {
+  handleReload = () => {
     this.setState({ error: null });
-  }
+  };
 
   render() {
     if (this.state.error) {
