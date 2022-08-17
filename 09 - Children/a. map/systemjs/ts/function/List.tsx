@@ -3,7 +3,11 @@
 
 import React from 'react';
 
-const List: React.FC = props => (
+interface IList {
+  children: React.ReactNode;
+}
+
+const List: React.FC<IList> = props => (
   <ul>
     {React.Children.map(props.children, (child, i) => (
       <li key={i}>{child}</li>
