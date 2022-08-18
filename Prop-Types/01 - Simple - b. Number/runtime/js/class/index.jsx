@@ -18,4 +18,6 @@ Sum.propTypes = {
   second: PropTypes.number.isRequired
 };
 
-ReactDOM.render(<Sum first={1} second={2} />, document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Sum first={1} second={2} />
+);
