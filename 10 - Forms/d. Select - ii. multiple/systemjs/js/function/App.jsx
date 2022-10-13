@@ -13,11 +13,14 @@ function App() {
   }
 
   return (
-    <select multiple onChange={handleChange} value={selected}>
-      <option value="bike">Bike</option>
-      <option value="car">Car</option>
-      <option value="train">Train</option>
-    </select>
+    <React.Fragment>
+      <select multiple onChange={handleChange} value={selected}>
+        <option value="bike">Bike</option>
+        <option value="car">Car</option>
+        <option value="train">Train</option>
+      </select>
+      <p>{JSON.stringify(selected)}</p>
+    </React.Fragment>
   );
 }
 
