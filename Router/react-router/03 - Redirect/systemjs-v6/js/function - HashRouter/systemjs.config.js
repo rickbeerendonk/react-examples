@@ -15,9 +15,10 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
-    'react-router': 'npm:react-router-6/umd/react-router.development.js',
+    'react-router': 'npm:react-router-6/dist/umd/react-router.development.js',
     'react-router-dom':
-      'npm:react-router-dom-6/umd/react-router-dom.development.js',
+      'npm:react-router-dom-6/dist/umd/react-router-dom.development.js',
+    '@remix-run/router': 'npm:@remix-run/router/dist/router.js',
 
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'

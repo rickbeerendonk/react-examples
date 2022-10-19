@@ -9,7 +9,8 @@ import App from './App';
 import Home from './routes/Home';
 import Page from './routes/Page';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -17,6 +18,5 @@ ReactDOM.render(
         <Route path="page/:id" element={<Page />} />
       </Route>
     </Routes>
-  </HashRouter>,
-  document.getElementById('root')
+  </HashRouter>
 );

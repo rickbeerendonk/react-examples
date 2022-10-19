@@ -10,7 +10,8 @@ import Home from './routes/Home';
 const Page1 = React.lazy(() => import('./routes/Page1'));
 const Page2 = React.lazy(() => import('./routes/Page2'));
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -33,6 +34,5 @@ ReactDOM.render(
         />
       </Route>
     </Routes>
-  </HashRouter>,
-  document.getElementById('root')
+  </HashRouter>
 );

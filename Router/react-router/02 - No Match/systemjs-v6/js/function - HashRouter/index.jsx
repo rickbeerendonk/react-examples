@@ -11,7 +11,8 @@ import Page1 from './routes/Page1';
 import Page2 from './routes/Page2';
 import NoMatch from './routes/NoMatch';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -21,6 +22,5 @@ ReactDOM.render(
         <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
-  </HashRouter>,
-  document.getElementById('root')
+  </HashRouter>
 );

@@ -10,7 +10,8 @@ import Home from './routes/Home';
 import Page1 from './routes/Page1';
 import Page2 from './routes/Page2';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -22,6 +23,5 @@ ReactDOM.render(
         <Route path="oldpage2/*" element={<Navigate replace to="/page2" />} />
       </Route>
     </Routes>
-  </HashRouter>,
-  document.getElementById('root')
+  </HashRouter>
 );
