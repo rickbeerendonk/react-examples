@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import 'regenerator-runtime/runtime.js';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
 import { act } from 'react-test-renderer';
 
 import useMousePosition from './mousepos';
