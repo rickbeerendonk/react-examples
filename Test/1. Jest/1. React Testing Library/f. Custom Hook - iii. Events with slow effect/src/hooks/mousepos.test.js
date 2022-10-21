@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import 'regenerator-runtime/runtime.js';
-import { renderHook } from '@testing-library/react';
+import { renderHook, waitFor } from '@testing-library/react';
 import { act } from 'react-test-renderer';
 
 import useMousePosition from './mousepos';
@@ -11,7 +11,7 @@ import useMousePosition from './mousepos';
 
 describe('useMousePosition', () => {
   it('mouse move should update the value', async () => {
-    const { result, waitForNextUpdate } = renderHook(() => useMousePosition());
+    const { result } = renderHook(() => useMousePosition());
 
     expect(result.current).toEqual({ x: undefined, y: undefined });
 
@@ -24,7 +24,6 @@ describe('useMousePosition', () => {
       window.document.dispatchEvent(mouseMove);
     });
 
-    await waitForNextUpdate();
-    expect(result.current).toEqual({ x: 10, y: 20 });
+    await waitFor(() => expect(result.current).toEqual({ x: 10, y: 20 }));
   });
 });
