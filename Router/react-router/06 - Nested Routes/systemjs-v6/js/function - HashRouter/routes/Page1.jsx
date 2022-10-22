@@ -24,6 +24,9 @@ function Page1() {
           <li>
             <Link to="sub3">Subpage 3</Link>
           </li>
+          <li>
+            <Link to="../">[One level up]</Link>
+          </li>
         </ul>
       </nav>
 
