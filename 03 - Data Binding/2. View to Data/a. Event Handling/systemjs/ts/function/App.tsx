@@ -5,9 +5,10 @@ import React from 'react';
 
 const App: React.FC = () => {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    debugger;
     alert(`Event handled.
-Target: ${e.currentTarget}
-Value: ${e.currentTarget.value}
+Target: ${e.target}
+Value: ${e.target.value}
 Data: ${e.nativeEvent.data}`);
   }
 

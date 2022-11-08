@@ -6,8 +6,8 @@ import React from 'react';
 class App extends React.Component {
   handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
-Target: ${e.currentTarget}
-Value: ${e.currentTarget.value}
+Target: ${e.target}
+Value: ${e.target.value}
 Data: ${e.nativeEvent.data}`);
   }
   render() {

@@ -22,7 +22,7 @@ class GreetingEditor extends React.Component<
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({ name: e.currentTarget.value });
+    this.setState({ name: e.target.value });
   }
   componentDidMount() {
     this.inputRef.current.select();
