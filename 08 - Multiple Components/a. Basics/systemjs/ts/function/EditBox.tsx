@@ -17,10 +17,10 @@ const EditBox: React.FC<IEditBoxProps> = ({ onChange, value }) => (
 /* Arrow */
 
 /*
-const EditBox: React.FC<IEditBoxProps> = ({ onChange, value }) {
+const EditBox: React.FC<IEditBoxProps> = ({ onChange, value }) => {
   const handleChange = e => onChange(e.target.value);
   return (
-    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
+    <input autoFocus onChange={handleChange} value={value} />
   );
 }
 */
