@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function App() {
+const App = () => {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
   return (
@@ -19,6 +19,6 @@ function App() {
       </ul>
     </>
   );
-}
+};
 
 export default App;
