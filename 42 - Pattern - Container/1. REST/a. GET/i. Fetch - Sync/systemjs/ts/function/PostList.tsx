@@ -3,10 +3,11 @@
 
 import React from 'react';
 
+import { Post } from './Post';
 import PostComponent from './PostComponent';
 
 interface PostListProps {
-  posts: any;
+  posts: Post[];
 }
 
 const PostList: React.FC<PostListProps> = ({ posts }) => (
