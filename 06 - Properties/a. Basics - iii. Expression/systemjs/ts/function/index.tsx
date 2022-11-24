@@ -6,10 +6,10 @@ import ReactDOM from 'react-dom';
 
 import Greeting from './Greeting';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <Greeting
     greeting={new Date().getHours() < 12 ? 'Good morning' : 'Hello'}
     name="World"
-  />,
-  document.getElementById('root')
+  />
 );
