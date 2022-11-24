@@ -7,8 +7,8 @@ interface PostComponentProps {
   title: string;
 }
 
-const PostComponent: React.FC<PostComponentProps> = ({ title }) => (
-  <li>{title}</li>
-);
+function PostComponent({ title }: PostComponentProps) {
+  return <li>{title}</li>;
+}
 
 export default PostComponent;

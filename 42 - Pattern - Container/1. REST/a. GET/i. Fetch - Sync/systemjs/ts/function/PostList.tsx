@@ -10,12 +10,14 @@ interface PostListProps {
   posts: Post[];
 }
 
-const PostList: React.FC<PostListProps> = ({ posts }) => (
-  <ul>
-    {posts.map(post => (
-      <PostComponent key={post.id} title={post.title} />
-    ))}
-  </ul>
-);
+function PostList({ posts }: PostListProps) {
+  return (
+    <ul>
+      {posts.map(post => (
+        <PostComponent key={post.id} title={post.title} />
+      ))}
+    </ul>
+  );
+}
 
 export default PostList;

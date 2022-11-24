@@ -3,10 +3,12 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   name: string;
 }
 
-const Greeting: React.FC<IGreetingProps> = props => <i>Hello {props.name}</i>;
+function Greeting(props: GreetingProps) {
+  return <i>Hello {props.name}</i>;
+}
 
 export default Greeting;

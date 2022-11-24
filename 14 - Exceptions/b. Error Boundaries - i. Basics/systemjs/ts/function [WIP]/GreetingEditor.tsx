@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 
-const GreetingEditor: React.FC = () => {
+function GreetingEditor() {
   const [name, setName] = React.useState('World');
   React.useLayoutEffect(() => {
     if (name === 'layoutEffectError') {
@@ -29,7 +29,7 @@ const GreetingEditor: React.FC = () => {
     };
   });
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
 
@@ -50,6 +50,6 @@ const GreetingEditor: React.FC = () => {
       </ul>
     </React.Fragment>
   );
-};
+}
 
 export default GreetingEditor;

@@ -3,12 +3,12 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   name: string;
   ref: React.Ref<HTMLHeadingElement>;
 }
 
-const Greeting: React.FC<IGreetingProps> = React.forwardRef((props, ref) => (
+const Greeting = React.forwardRef<any, GreetingProps>((props, ref) => (
   <div className="hello">
     <h1 ref={ref}>Hello {props.name}!</h1>
   </div>

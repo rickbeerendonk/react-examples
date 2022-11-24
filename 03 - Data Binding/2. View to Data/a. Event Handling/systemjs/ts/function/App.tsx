@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const App: React.FC = () => {
+function App() {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     debugger;
     alert(`Event handled.
@@ -13,6 +13,6 @@ Data: ${e.nativeEvent.data}`);
   }
 
   return <input onChange={handleChange} value="Hello React!" />;
-};
+}
 
 export default App;

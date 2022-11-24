@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const App: React.FC = () => {
+function App() {
   // Use "useState()" instead of "let"
   // Why? React needs to know something has change
   // Here:
@@ -22,6 +22,6 @@ const App: React.FC = () => {
       <h1>Hello {name}!</h1>
     </>
   );
-};
+}
 
 export default App;

@@ -3,18 +3,18 @@
 
 import React from 'react';
 
-interface IGreetingEditorProps {}
+interface GreetingEditorProps {}
 
-interface IGreetingEditorState {
+interface GreetingEditorState {
   name: string;
   other: string;
 }
 
 class GreetingEditor extends React.Component<
-  IGreetingEditorProps,
-  IGreetingEditorState
+  GreetingEditorProps,
+  GreetingEditorState
 > {
-  state: IGreetingEditorState = { name: 'World', other: 'More state' };
+  state: GreetingEditorState = { name: 'World', other: 'More state' };
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ name: e.target.value });
   };

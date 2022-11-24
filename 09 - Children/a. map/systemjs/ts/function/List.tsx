@@ -3,16 +3,18 @@
 
 import React from 'react';
 
-interface IList {
+interface ListProps {
   children: React.ReactNode;
 }
 
-const List: React.FC<IList> = props => (
-  <ul>
-    {React.Children.map(props.children, (child, i) => (
-      <li key={i}>{child}</li>
-    ))}
-  </ul>
-);
+function List(props: ListProps) {
+  return (
+    <ul>
+      {React.Children.map(props.children, (child, i) => (
+        <li key={i}>{child}</li>
+      ))}
+    </ul>
+  );
+}
 
 export default List;

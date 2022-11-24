@@ -3,11 +3,13 @@
 
 import React from 'react';
 
-const Greeting: React.FC = () => (
-  <React.Fragment>
-    <h1>Hello World!</h1>
-    <Greeting />
-  </React.Fragment>
-);
+function Greeting() {
+  return (
+    <React.Fragment>
+      <h1>Hello World!</h1>
+      <Greeting />
+    </React.Fragment>
+  );
+}
 
 export default Greeting;

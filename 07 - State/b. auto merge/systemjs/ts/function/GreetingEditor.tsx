@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const GreetingEditor: React.FC = () => {
+function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
   const [other, setOther] = React.useState('More state');
@@ -19,6 +19,6 @@ const GreetingEditor: React.FC = () => {
       <h2>{other}</h2>
     </React.Fragment>
   );
-};
+}
 
 export default GreetingEditor;

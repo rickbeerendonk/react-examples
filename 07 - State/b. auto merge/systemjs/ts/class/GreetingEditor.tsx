@@ -3,18 +3,18 @@
 
 import React from 'react';
 
-interface IGreetingEditorProps {}
+interface GreetingEditorProps {}
 
-interface IGreetingEditorState {
+interface GreetingEditorState {
   name: string;
   other: string;
 }
 
 class GreetingEditor extends React.Component<
-  IGreetingEditorProps,
-  IGreetingEditorState
+  GreetingEditorProps,
+  GreetingEditorState
 > {
-  constructor(props: IGreetingEditorProps) {
+  constructor(props: GreetingEditorProps) {
     super(props);
     this.state = { name: 'World', other: 'More state' };
 

@@ -3,7 +3,11 @@
 
 import React from 'react';
 
-function ErrorMessage({ message }) {
+interface ErrorMessageProps {
+  message: string;
+}
+
+function ErrorMessage({ message }: ErrorMessageProps) {
   return <div style={{ color: 'red' }}>{message}</div>;
 }
 

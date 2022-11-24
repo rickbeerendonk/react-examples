@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-interface IEditBoxProps {
+interface EditBoxProps {
   onChange: (value: string) => void;
   name: string;
 }
 
-const EditBox: React.FC<IEditBoxProps> = ({ onChange, name }) => (
-  <input onChange={e => onChange(e.target.value)} value={name} />
-);
+function EditBox({ onChange, name }: EditBoxProps) {
+  return <input onChange={e => onChange(e.target.value)} value={name} />;
+}
 
 export default EditBox;

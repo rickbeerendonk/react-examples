@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-interface IAppProps {}
+interface AppProps {}
 
-interface IAppState {
+interface AppState {
   name: string;
 }
 
-class App extends React.Component<IAppProps, IAppState> {
-  constructor(props: IAppProps) {
+class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps) {
     super(props);
     this.state = { name: 'React' };
 

@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-interface IClickMeProps {}
+interface ClickMeProps {}
 
-interface IClickMeState {
+interface ClickMeState {
   count: number;
 }
 
-class ClickMe extends React.Component<IClickMeProps, IClickMeState> {
-  state: IClickMeState = { count: 0 };
+class ClickMe extends React.Component<ClickMeProps, ClickMeState> {
+  state: ClickMeState = { count: 0 };
   handleClick = () => {
     // Updates are batched for performance reasons.
     // Therefore a callback should be used:

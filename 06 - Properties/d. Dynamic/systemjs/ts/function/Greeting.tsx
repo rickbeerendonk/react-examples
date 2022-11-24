@@ -3,13 +3,13 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   count: number;
   name: string;
 }
 
-const Greeting: React.FC<IGreetingProps> = props => (
-  <h1>Hello {Array(props.count).fill(props.name).join(' ')}!</h1>
-);
+function Greeting(props: GreetingProps) {
+  return <h1>Hello {Array(props.count).fill(props.name).join(' ')}!</h1>;
+}
 
 export default Greeting;

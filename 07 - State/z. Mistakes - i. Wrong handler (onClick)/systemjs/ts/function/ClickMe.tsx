@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const ClickMe: React.FC = () => {
+function ClickMe() {
   const [count, setCount]: [
     number,
     React.Dispatch<React.SetStateAction<number>>
@@ -16,6 +16,6 @@ const ClickMe: React.FC = () => {
       This button has been clicked {count} times
     </button>
   );
-};
+}
 
 export default ClickMe;

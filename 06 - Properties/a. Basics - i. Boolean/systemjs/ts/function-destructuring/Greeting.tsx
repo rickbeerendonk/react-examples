@@ -3,32 +3,30 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   dark?: boolean;
   default: boolean;
   name: string;
 }
 
-const Greeting: React.FC<IGreetingProps> = ({
-  dark,
-  default: defaultProp,
-  name
-}) => (
-  <>
-    <h1
-      style={{
-        color: defaultProp ? 'red' : 'black',
-        backgroundColor: dark ? 'gray' : 'white'
-      }}
-    >
-      Hello {name}!
-    </h1>
-    <p>
-      props.default: {JSON.stringify(defaultProp)}
-      <br />
-      props.dark: {JSON.stringify(dark)}
-    </p>
-  </>
-);
+function Greeting({ dark, default: defaultProp, name }: GreetingProps) {
+  return (
+    <>
+      <h1
+        style={{
+          color: defaultProp ? 'red' : 'black',
+          backgroundColor: dark ? 'gray' : 'white'
+        }}
+      >
+        Hello {name}!
+      </h1>
+      <p>
+        props.default: {JSON.stringify(defaultProp)}
+        <br />
+        props.dark: {JSON.stringify(dark)}
+      </p>
+    </>
+  );
+}
 
 export default Greeting;

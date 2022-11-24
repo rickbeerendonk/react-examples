@@ -3,19 +3,21 @@
 
 import React from 'react';
 
-interface IImportantAnchorProps
+interface ImportantAnchorProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   highlight: string;
 }
 
-const ImportantAnchor: React.FC<IImportantAnchorProps> = ({
+function ImportantAnchor({
   highlight,
   children,
   ...otherProps
-}) => (
-  <a {...otherProps}>
-    {highlight} {children} {highlight}
-  </a>
-);
+}: ImportantAnchorProps) {
+  return (
+    <a {...otherProps}>
+      {highlight} {children} {highlight}
+    </a>
+  );
+}
 
 export default ImportantAnchor;

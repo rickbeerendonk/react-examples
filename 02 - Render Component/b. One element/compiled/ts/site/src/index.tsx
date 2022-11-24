@@ -4,7 +4,9 @@
 //import * as React from 'react';
 //import * as ReactDOM from 'react-dom';
 
-const Greeting: React.FC = () => <h1>Hello World!</h1>;
+function Greeting() {
+  return <h1>Hello World!</h1>;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Greeting />);

@@ -3,12 +3,12 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   name?: string;
 }
 
-class Greeting extends React.Component<IGreetingProps> {
-  static defaultProps: IGreetingProps = {
+class Greeting extends React.Component<GreetingProps> {
+  static defaultProps: GreetingProps = {
     name: 'World'
   };
   render() {

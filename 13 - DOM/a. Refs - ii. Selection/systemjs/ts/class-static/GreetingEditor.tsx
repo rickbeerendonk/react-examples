@@ -3,15 +3,15 @@
 
 import React from 'react';
 
-interface IGreetingEditorProps {}
+interface GreetingEditorProps {}
 
-interface IGreetingEditorState {
+interface GreetingEditorState {
   name: string;
 }
 
 class GreetingEditor extends React.Component<
-  IGreetingEditorProps,
-  IGreetingEditorState
+  GreetingEditorProps,
+  GreetingEditorState
 > {
   inputRef = React.createRef<HTMLInputElement>();
   state = { name: 'World' };

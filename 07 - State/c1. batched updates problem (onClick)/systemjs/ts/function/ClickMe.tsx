@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const ClickMe: React.FC = () => {
+function ClickMe() {
   const [count, setCount] = React.useState(0);
 
   function handleClick() {
@@ -18,6 +18,6 @@ const ClickMe: React.FC = () => {
       This button has been clicked {count} times
     </button>
   );
-};
+}
 
 export default ClickMe;

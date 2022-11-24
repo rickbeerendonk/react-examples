@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const Greeting: React.FC = () => {
+function Greeting() {
   const [recursive, setRecursive] = React.useState(false);
 
   function handleClick() {
@@ -18,6 +18,6 @@ const Greeting: React.FC = () => {
       {recursive && <Greeting />}
     </React.Fragment>
   );
-};
+}
 
 export default Greeting;

@@ -5,29 +5,29 @@
 
 import * as React from 'react';
 
-interface IError {
+interface Error {
   message?: string;
   stack?: string;
 }
 
-interface IErrorBoundaryState {
+interface ErrorBoundaryState {
   error: Error;
 }
 
-interface IErrorBoundaryProps {
+interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
 
 class ErrorBoundary extends React.Component<
-  IErrorBoundaryProps,
-  IErrorBoundaryState
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
-  constructor(props: IErrorBoundaryProps) {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { error: null };
   }
 
-  static getDerivedStateFromError(error: IError) {
+  static getDerivedStateFromError(error: Error) {
     // Called during "render" phase: No side-effects are allowed.
     // Use to render a fallback UI (setState -> render()).
     // See: https://github.com/reactjs/reactjs.org/pull/1223/files
@@ -35,7 +35,7 @@ class ErrorBoundary extends React.Component<
     return { error };
   }
 
-  componentDidCatch(error: IError, info: React.ErrorInfo) {
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
     // Called during "commit" phase: Side-effects are allowed.
     // Use for side-effects like logging.
     // See: https://github.com/reactjs/reactjs.org/pull/1223/files

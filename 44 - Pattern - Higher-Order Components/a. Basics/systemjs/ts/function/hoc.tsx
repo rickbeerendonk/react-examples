@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-interface IWithExtrasProps {
+interface WithExtrasProps {
   extraColor: string;
 }
 
@@ -11,7 +11,7 @@ interface IWithExtrasProps {
 const withExtras = <P extends object>(
   WrappedComponent: React.ComponentType<P>
 ) => {
-  const WithExtras: React.FC<IWithExtrasProps & P> = ({
+  const WithExtras: React.FC<WithExtrasProps & P> = ({
     extraColor,
     ...passThroughProps
   }) => (

@@ -3,15 +3,17 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   greeting: string;
   name: string;
 }
 
-const Greeting: React.FC<IGreetingProps> = ({ greeting, name }) => (
-  <h1>
-    {greeting} {name}!
-  </h1>
-);
+function Greeting({ greeting, name }: GreetingProps) {
+  return (
+    <h1>
+      {greeting} {name}!
+    </h1>
+  );
+}
 
 export default Greeting;

@@ -3,11 +3,11 @@
 
 import React from 'react';
 
-interface IGreetingProps {
+interface GreetingProps {
   name: string;
 }
 
-class Greeting extends React.Component<IGreetingProps> {
+class Greeting extends React.Component<GreetingProps> {
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }

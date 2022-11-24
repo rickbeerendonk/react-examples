@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-interface IClickMeProps {}
+interface ClickMeProps {}
 
-interface IClickMeState {
+interface ClickMeState {
   count: number;
 }
 
-class ClickMe extends React.Component<IClickMeProps, IClickMeState> {
-  constructor(props: IClickMeProps) {
+class ClickMe extends React.Component<ClickMeProps, ClickMeState> {
+  constructor(props: ClickMeProps) {
     super(props);
     this.state = { count: 0 };
   }

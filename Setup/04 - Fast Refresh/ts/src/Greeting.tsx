@@ -3,11 +3,12 @@
 
 import './Greeting.css';
 
-interface IGreetingProps {
+interface GreetingProps {
   name: string;
 }
 
-const Greeting: React.FC<IGreetingProps> = ({ name }) =>
-  name ? <h1 className="greeting">Hello {name}!</h1> : null;
+function Greeting({ name }: GreetingProps) {
+  return name ? <h1 className="greeting">Hello {name}!</h1> : null;
+}
 
 export default Greeting;

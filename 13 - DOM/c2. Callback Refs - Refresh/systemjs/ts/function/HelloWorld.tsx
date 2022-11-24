@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const HelloWorld: React.FC = () => {
+function HelloWorld() {
   const [id, setId] = React.useState(0);
 
   function handleRef(ref: HTMLHeadingElement) {
@@ -21,6 +21,6 @@ const HelloWorld: React.FC = () => {
       <button onClick={() => setId(v => v + 1)}>Refresh</button>
     </>
   );
-};
+}
 
 export default HelloWorld;

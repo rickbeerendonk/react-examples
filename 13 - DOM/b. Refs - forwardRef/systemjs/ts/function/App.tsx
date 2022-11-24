@@ -5,7 +5,7 @@ import React from 'react';
 
 import Greeting from './Greeting';
 
-const App: React.FC = () => {
+function App() {
   const myGreeting = React.useRef(null);
 
   React.useLayoutEffect(() => {
@@ -14,6 +14,6 @@ const App: React.FC = () => {
   });
 
   return <Greeting name="World" ref={myGreeting} />;
-};
+}
 
 export default App;

@@ -5,7 +5,7 @@ import React from 'react';
 
 const handlers = new Set();
 
-const GreetingEditor: React.FC = () => {
+function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
   const changeHandler = function (e: React.ChangeEvent<HTMLInputElement>) {
@@ -29,6 +29,6 @@ const GreetingEditor: React.FC = () => {
       <div>Number of handlers used: {handlers.size}</div>
     </React.Fragment>
   );
-};
+}
 
 export default GreetingEditor;

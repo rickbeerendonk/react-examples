@@ -1,24 +1,29 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
-/* Inline function */
-
-interface IEditBoxProps {
+interface EditBoxProps {
   onChange: (value: string) => void;
   value: string;
 }
 
-const EditBox: React.FC<IEditBoxProps> = ({ onChange, value }) => (
-  <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
-);
+/* Inline function */
 
-/* Arrow */
+function EditBox({ onChange, value }: EditBoxProps) {
+  return (
+    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
+  );
+}
+
+/* Separate function */
 
 /*
-const EditBox: React.FC<IEditBoxProps> = ({ onChange, value }) => {
-  const handleChange = e => onChange(e.target.value);
+function EditBox({ onChange, value }: EditBoxProps) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    onChange(e.target.value);
+  }
+
   return (
     <input autoFocus onChange={handleChange} value={value} />
   );

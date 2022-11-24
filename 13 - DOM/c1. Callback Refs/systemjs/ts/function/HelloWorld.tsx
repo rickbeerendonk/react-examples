@@ -3,12 +3,12 @@
 
 import React from 'react';
 
-const HelloWorld: React.FC = () => {
+function HelloWorld() {
   function handleRef(ref) {
     ref.innerHTML = 'Hello <u>React</u>!!!';
   }
 
   return <h1 ref={handleRef}>Hello World!</h1>;
-};
+}
 
 export default HelloWorld;
