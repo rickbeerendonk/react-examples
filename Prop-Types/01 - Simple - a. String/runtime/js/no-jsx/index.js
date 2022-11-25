@@ -10,7 +10,5 @@ Greeting.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-ReactDOM.render(
-  React.createElement(Greeting, { name: 'World' }),
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Greeting, { name: 'World' }));

@@ -7,7 +7,5 @@ function Greeting(props) {
   return React.createElement('h1', null, 'Hello ', props.name, '!');
 }
 
-ReactDOM.render(
-  React.createElement(Greeting, { name: 'World' }),
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Greeting, { name: 'World' }));
