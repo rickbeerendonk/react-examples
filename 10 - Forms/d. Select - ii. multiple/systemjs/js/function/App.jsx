@@ -9,7 +9,12 @@ function App() {
   const [selected, setSelected] = React.useState(['bike', 'train']);
 
   function handleChange(e) {
-    setSelected([...e.target.selectedOptions].map(o => o.value));
+    setSelected(
+      Array.from(
+        e.target.selectedOptions,
+        selectedOption => selectedOption.value
+      )
+    );
   }
 
   return (
