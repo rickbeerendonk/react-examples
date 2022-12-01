@@ -11,5 +11,7 @@ logEvent('-- add component --', 'action');
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-logEvent('-- remove component --', 'action');
-ReactDOM.unmountComponentAtNode(document.getElementById('root'));
+setTimeout(() => {
+  logEvent('-- remove component --', 'action');
+  ReactDOM.unmountComponentAtNode(document.getElementById('root'));
+}, 200);
