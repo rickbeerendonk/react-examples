@@ -9,8 +9,12 @@ import GreetingEditor from './GreetingEditor';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GreetingEditor>
-    {/* Children MUST be specified, because there is no default */}
-    <GreetingEditor.Text />
-    <GreetingEditor.Input />
+    {/* 
+      // - Children can optionally be specified, because there is a default
+      // - f.e. If you want a different order than the default
+      
+      <GreetingEditor.Text />
+      <GreetingEditor.Input />
+      */}
   </GreetingEditor>
 );

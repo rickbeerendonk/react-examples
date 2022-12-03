@@ -7,7 +7,10 @@ type GreetingEditorProps = {
   children: React.ReactNode;
 };
 
-function GreetingEditor({ children }: GreetingEditorProps) {
+function GreetingEditor({
+  // Default Children
+  children = [<GreetingEditor.Input key={0} />, <GreetingEditor.Text key={1} />]
+}: GreetingEditorProps) {
   const [name, setName] = React.useState('World');
 
   return React.Children.map(children, child =>

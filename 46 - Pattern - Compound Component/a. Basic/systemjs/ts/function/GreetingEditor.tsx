@@ -7,10 +7,10 @@ type GreetingEditorProps = {
   children: React.ReactNode;
 };
 
-function GreetingEditor(props: GreetingEditorProps) {
+function GreetingEditor({ children }: GreetingEditorProps) {
   const [name, setName] = React.useState('World');
 
-  return React.Children.map(props.children, child =>
+  return React.Children.map(children, child =>
     React.cloneElement(child, {
       name,
       setName
@@ -23,15 +23,12 @@ type GreetingEditorInputProps = {
   setName?: (name: string) => void;
 };
 
-GreetingEditor.Input = function GreetingEditor_Input(
-  props: GreetingEditorInputProps
-) {
+GreetingEditor.Input = function GreetingEditor_Input({
+  name,
+  setName
+}: GreetingEditorInputProps) {
   return (
-    <input
-      autoFocus
-      onChange={e => props.setName(e.target.value)}
-      value={props.name}
-    />
+    <input autoFocus onChange={e => setName(e.target.value)} value={name} />
   );
 };
 
@@ -39,10 +36,10 @@ type GreetingEditorTextProps = {
   name?: string;
 };
 
-GreetingEditor.Text = function GreetingEditor_Text(
-  props: GreetingEditorTextProps
-) {
-  return <h1>Hello {props.name}!</h1>;
+GreetingEditor.Text = function GreetingEditor_Text({
+  name
+}: GreetingEditorTextProps) {
+  return <h1>Hello {name}!</h1>;
 };
 
 export default GreetingEditor;
