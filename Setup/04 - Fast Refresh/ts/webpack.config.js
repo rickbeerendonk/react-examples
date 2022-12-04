@@ -48,7 +48,6 @@ module.exports = {
       template: './src/template.ejs',
       title: 'Setup Fast Refresh, Webpack & TypeScript'
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin()
   ],
   resolve: {

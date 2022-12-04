@@ -53,7 +53,6 @@ module.exports = {
       template: './src/template.ejs',
       title: 'Setup Fast Refresh, Webpack, ESLint & Babel'
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin()
   ],
   resolve: {
