@@ -1,0 +1,23 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import Greeting from './Greeting';
+
+<Meta title="Components (MDX)/Greeting" component={Greeting} />
+
+# Greeting
+
+Allows you to greet a name.
+
+<Canvas>
+  <Story name="With name">
+    <Greeting name="World" />
+  </Story>
+</Canvas>
+
+If you don't provide a name, the greet will not appear:
+
+<Canvas>
+  <Story name="Without name">
+    <Greeting />
+  </Story>
+</Canvas>
