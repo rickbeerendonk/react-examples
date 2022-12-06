@@ -6,6 +6,8 @@ import React from 'react';
 import { slowEcho } from './utils/index';
 
 function GreetingEditor() {
+  // Pass a function instead of a value to useState().
+  // useState() will only execute the function on the first render.
   const [name, setName] = React.useState(() => slowEcho('World'));
 
   function handleChange(e) {
