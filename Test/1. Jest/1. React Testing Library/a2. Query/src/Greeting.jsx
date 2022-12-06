@@ -11,6 +11,8 @@ function Greeting() {
       <h1 className="greeting" data-testid="greeting-testid">
         Hello World!
       </h1>
+      <label htmlFor="editbox">Name:</label>
+      <input id="editbox" />
     </>
   );
 }

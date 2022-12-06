@@ -6,7 +6,7 @@ import Greeting from './Greeting';
 /// React Test Renderer ///
 
 describe('Greeting', () => {
-  it('Query examples', () => {
+  it('Query examples - h1', () => {
     const { container, getByRole, getByText, getByTestId } = render(
       <Greeting name="World" />
     );
@@ -25,5 +25,13 @@ describe('Greeting', () => {
         Hello World!
       </h1>
     `);
+  });
+
+  it('Query examples - input', () => {
+    const { getByRole, getByLabelText } = render(<Greeting name="World" />);
+
+    expect(getByRole('textbox')).toBeInTheDocument();
+
+    expect(getByLabelText('Name:')).toBeInTheDocument();
   });
 });
