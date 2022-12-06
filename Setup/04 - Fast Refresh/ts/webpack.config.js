@@ -4,6 +4,7 @@
 /* eslint-disable */
 
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require('webpack');
@@ -25,7 +26,7 @@ module.exports = {
       directory: path.join(__dirname, '/build')
     }
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -44,6 +45,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
       template: './src/template.ejs',
       title: 'Setup Fast Refresh, Webpack & TypeScript'
