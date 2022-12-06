@@ -4,8 +4,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EditBox from './EditBox';
+import MyButton from './MyButton';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<EditBox value="World" onChange={() => {}} />, root);
+ReactDOM.render(
+  <>
+    <EditBox value="World" onChange={() => {}} />
+    <MyButton onClick={() => {}} />
+  </>,
+  root
+);
