@@ -38,7 +38,8 @@ describe('EditBox', () => {
     );
 
     // trigger the onChange event for the select box
-    fireEvent.change(container.firstChild, { target: { value: 'React' } });
+    const input = container.firstChild;
+    fireEvent.change(input, { target: { value: 'React' } });
 
     expect(handleChange).toHaveBeenCalledTimes(1);
     expect(handleChange).toHaveBeenCalledWith('React');

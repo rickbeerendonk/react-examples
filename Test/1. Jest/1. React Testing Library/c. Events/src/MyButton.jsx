@@ -4,8 +4,8 @@
 import React from 'react';
 
 function MyButton({ onClick }) {
-  function handleClick(e) {
-    return onClick(e.target.value);
+  function handleClick() {
+    return onClick();
   }
 
   return <button onClick={handleClick}>Click me!</button>;
