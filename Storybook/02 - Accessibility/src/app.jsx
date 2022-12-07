@@ -2,10 +2,11 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import GreetingEditor from './containers/GreetingEditor';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
+const rootElem = document.createElement('div');
+document.body.appendChild(rootElem);
 
-ReactDOM.render(<GreetingEditor />, root);
+const root = ReactDOM.createRoot(rootElem);
+root.render(<GreetingEditor />);
