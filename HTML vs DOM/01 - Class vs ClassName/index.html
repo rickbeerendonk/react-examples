@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2022 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>HTML vs DOM - Class vs ClassName</title>
+    <link rel="stylesheet" href="../../resources/oblicum.css" />
+
+    <style>
+      .myClass {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="htmlClass" class="myClass">Class in HTML</h1>
+
+    <h1 id="domClass">Class in DOM</h1>
+
+    <script>
+      document.getElementById('domClass').className = 'myClass';
+    </script>
+  </body>
+</html>
