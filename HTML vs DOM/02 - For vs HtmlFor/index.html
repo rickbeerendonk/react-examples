@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2022 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>HTML vs DOM - For vs HtmlFor</title>
+    <link rel="stylesheet" href="../../resources/oblicum.css" />
+  </head>
+  <body>
+    <input id="usingHTML" type="checkbox" />
+    <label id="labelHTML" for="usingHTML">HTML</label>
+
+    <br />
+
+    <input id="usingDOM" type="checkbox" />
+    <label id="labelDOM">DOM</label>
+
+    <script>
+      document.getElementById('labelDOM').htmlFor = 'usingDOM';
+    </script>
+  </body>
+</html>
