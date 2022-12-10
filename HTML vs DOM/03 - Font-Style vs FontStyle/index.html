@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2022 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>HTML vs DOM - Font-Style vs FontStyle</title>
+    <link rel="stylesheet" href="../../resources/oblicum.css" />
+  </head>
+  <body>
+    <h1 id="htmlStyle" style="font-style: italic">Font Style in HTML</h1>
+
+    <h1 id="domStyle">Font Style in DOM</h1>
+
+    <script>
+      document.getElementById('domStyle').style.fontStyle = 'italic';
+    </script>
+  </body>
+</html>
