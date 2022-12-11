@@ -72,7 +72,6 @@
     "react-transition-group": "4.4.5",
     "redux": "4.2.0",
     "scheduler": "0.23.0",
-    "scheduler-0.21.0": "npm:scheduler@0.21.0-rc.1",
     "styled-components": "5.3.6",
     "systemjs-0.21.6": "npm:systemjs@0.21.6",
     "systemjs-plugin-babel": "0.0.25",

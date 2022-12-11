@@ -12,8 +12,8 @@ SystemJS.config({
     react: 'npm:react-0.0.0-experimental/umd/react.development.js',
     'react-dom':
       'npm:react-dom-0.0.0-experimental/umd/react-dom.development.js',
-    //scheduler: 'npm:scheduler-0.21.0/umd/scheduler.development.js'
-    scheduler: 'npm:scheduler-0.21.0/cjs/scheduler.development.js',
+    //scheduler: 'npm:scheduler/umd/scheduler.development.js'
+    scheduler: 'npm:scheduler/cjs/scheduler.development.js',
 
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'

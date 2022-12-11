@@ -22,8 +22,8 @@ SystemJS.config({
       'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
     react: 'npm:react-18/umd/react.development.js',
     'react-dom': 'npm:react-dom-18/umd/react-dom.development.js',
-    //scheduler: 'npm:scheduler-0.21.0/umd/scheduler.development.js'
-    scheduler: 'npm:scheduler-0.21.0/cjs/scheduler.development.js'
+    //scheduler: 'npm:scheduler/umd/scheduler.development.js'
+    scheduler: 'npm:scheduler/cjs/scheduler.development.js'
   },
   packages: {
     '.': {
