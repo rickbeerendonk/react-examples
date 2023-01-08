@@ -15,7 +15,6 @@ temp/
 #################
 
 node_modules/
-node_modules_unstable/
 
 #################
 ## bower
