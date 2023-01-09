@@ -11,7 +11,7 @@ More than 100 examples for [React](http://facebook.github.io/react).
 Install dependencies first:
 
 1. Open command line (Windows) or terminal (macOS) in the root folder
-2. Run `npm install --legacy-peer-deps`
+2. Run `npm install` (maybe `npm install --legacy-peer-deps`)
 
 ## Visual Studio Code
 
