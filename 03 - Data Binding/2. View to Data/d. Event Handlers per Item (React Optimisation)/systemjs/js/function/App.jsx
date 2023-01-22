@@ -21,13 +21,13 @@ function App() {
           Open console, tab &quot;Elements&quot;, sub-tab &quot;Event
           Listeners&quot;.
         </p>
-        <p>
+        <div>
           Observe:
           <ul>
             <li>Buttons don&apos;t have event handlers.</li>
             <li>All event handlers are on the React root.</li>
           </ul>
-        </p>
+        </div>
         <p>
           Remove the MouseDown event listeners on the React root and observe the
           clicks no longer work.
