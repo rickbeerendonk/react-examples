@@ -14,7 +14,7 @@ function GreetingEditor() {
   // - []: Only updates first time (wrong)
   // - [name]: Only updates if name changes
   React.useEffect(() => {
-    console.log('effect');
+    console.count('effect');
     document.title = name;
   }, [name]);
 
