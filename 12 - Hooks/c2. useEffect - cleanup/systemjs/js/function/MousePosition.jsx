@@ -18,6 +18,7 @@ function MousePosition() {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      console.log('Cleanup Effect MousePosition');
     };
   }, []);
 
