@@ -9,17 +9,8 @@ const StateContext = React.createContext({
 });
 StateContext.displayName = 'StateContext'; // For DevTools
 
-function stateReducer(state, action) {
-  switch (action.type) {
-    case 'SWITCH':
-      return { ...state, color: state.color === 'red' ? 'green' : 'red' };
-    default:
-      return state;
-  }
-}
-
 export function StateProvider(props) {
-  const [state, dispatch] = React.useReducer(stateReducer, props.state);
+  const [state, dispatch] = React.useReducer(props.reducer, props.initialState);
   return (
     <StateContext.Provider value={{ state, dispatch }}>
       {props.children}

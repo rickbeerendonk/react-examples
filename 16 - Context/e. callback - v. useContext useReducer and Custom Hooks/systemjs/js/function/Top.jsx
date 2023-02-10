@@ -6,9 +6,16 @@ import React from 'react';
 import { StateProvider } from './StateContext';
 import Middle from './Middle';
 
+function reducer(state, action) {
+  switch (action.type) {
+    case 'SWITCH':
+      return { ...state, color: state.color === 'red' ? 'green' : 'red' };
+  }
+}
+
 function Top({ color }) {
   return (
-    <StateProvider state={{ color }}>
+    <StateProvider reducer={reducer} initialState={{ color }}>
       <Middle />
     </StateProvider>
   );
