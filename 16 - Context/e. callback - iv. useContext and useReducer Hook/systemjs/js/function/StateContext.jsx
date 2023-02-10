@@ -4,7 +4,7 @@
 import React from 'react';
 
 const StateContext = React.createContext({
-  state: { color: 'orange' },
+  state: {},
   dispatch: () => {}
 });
 
