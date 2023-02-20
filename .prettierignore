@@ -17,12 +17,6 @@ temp/
 node_modules/
 
 #################
-## bower
-#################
-
-bower_components/
-
-#################
 ## zeit next
 #################
 

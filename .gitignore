@@ -26,12 +26,6 @@ yarn.lock
 yarn-error.log
 
 #################
-## bower
-#################
-
-bower_components/
-
-#################
 ## ESLint
 #################
 
