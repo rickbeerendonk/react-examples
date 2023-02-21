@@ -17,7 +17,7 @@ temp/
 node_modules/
 
 #################
-## zeit next
+## Vercel NEXT.js
 #################
 
 .next/

@@ -32,7 +32,7 @@ yarn-error.log
 .eslintcache
 
 #################
-## zeit next
+## Vercel NEXT.js
 #################
 
 .next/
