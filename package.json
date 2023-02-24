@@ -1,7 +1,7 @@
 {
   "name": "react-examples",
   "version": "1.0.0",
-  "description": "Examples for [React](http://reactjs.com) and [ReactJS.NET](http://reactjs.net/).",
+  "description": "Examples for [React](https://reactjs.org) and [ReactJS.NET](https://reactjs.net/).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
