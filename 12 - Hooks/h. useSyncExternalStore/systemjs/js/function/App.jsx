@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2023 Rick Beerendonk          !*/
 
 import React from 'react';
 
-import MousePosition from './MousePosition';
+import DocumentHidden from './DocumentHidden';
 
 function App() {
   const [visible, setVisible] = React.useState(true);
@@ -15,7 +15,7 @@ function App() {
   return (
     <React.Fragment>
       <button onClick={handleShowHide}>{visible ? 'Hide' : 'Show'}</button>
-      {visible && <MousePosition />}
+      {visible && <DocumentHidden />}
     </React.Fragment>
   );
 }
