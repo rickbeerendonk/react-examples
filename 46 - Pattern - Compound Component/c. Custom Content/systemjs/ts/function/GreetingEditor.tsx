@@ -4,7 +4,7 @@
 import React from 'react';
 
 type GreetingEditorProps = {
-  children: React.ReactNode;
+  children: JSX.Element[];
 };
 
 function GreetingEditor({
