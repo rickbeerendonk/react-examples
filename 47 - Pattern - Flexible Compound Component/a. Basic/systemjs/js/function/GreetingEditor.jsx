@@ -3,10 +3,7 @@
 
 import React from 'react';
 
-const GreetingContext = React.createContext({
-  name: null,
-  setName: () => {}
-});
+const GreetingContext = React.createContext();
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
 function GreetingEditor({ children }) {

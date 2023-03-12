@@ -1,13 +1,11 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2020 Rick Beerendonk          !*/
+/*! Copyright © 2023 Rick Beerendonk          !*/
 
 import React from 'react';
 
-export const GreetingContext = React.createContext({
-  name: null,
-  setName: () => {}
-});
-GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
+// Create empty context
+const GreetingContext = React.createContext();
+GreetingContext.displayName = 'GreetingContext';
 
 function GreetingEditor({ children }) {
   const [name, setName] = React.useState('World');
@@ -21,6 +19,13 @@ function GreetingEditor({ children }) {
 GreetingEditor.Input = function GreetingEditor_Input() {
   const context = React.useContext(GreetingContext);
 
+  // Check context
+  if (!context) {
+    throw new Error(
+      'Compound component GreetingEditor_Input rendered outside GreetingEditor'
+    );
+  }
+
   return (
     <input
       autoFocus
@@ -31,6 +36,13 @@ GreetingEditor.Input = function GreetingEditor_Input() {
 };
 GreetingEditor.Text = function GreetingEditor_Text() {
   const context = React.useContext(GreetingContext);
+
+  // Check context
+  if (!context) {
+    throw new Error(
+      'Compound component GreetingEditor_Text rendered outside GreetingEditor'
+    );
+  }
 
   return <h1>Hello {context.name}!</h1>;
 };

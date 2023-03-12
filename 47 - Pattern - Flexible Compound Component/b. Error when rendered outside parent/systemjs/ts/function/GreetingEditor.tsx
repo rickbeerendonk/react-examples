@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2020 Rick Beerendonk          !*/
+/*! Copyright © 2023 Rick Beerendonk          !*/
 
 import React from 'react';
 
@@ -8,10 +8,11 @@ type GreetingContext = {
   setName: (value: string) => void;
 };
 
+// Create empty context
 const GreetingContext = React.createContext<GreetingContext | undefined>(
   undefined
 );
-GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
+GreetingContext.displayName = 'GreetingContext';
 
 type GreetingEditorProps = {
   children: JSX.Element[];
@@ -29,6 +30,13 @@ function GreetingEditor({ children }: GreetingEditorProps) {
 GreetingEditor.Input = function GreetingEditor_Input() {
   const context = React.useContext(GreetingContext);
 
+  // Check context
+  if (!context) {
+    throw new Error(
+      'Compound component GreetingEditor_Input rendered outside GreetingEditor'
+    );
+  }
+
   return (
     <input
       autoFocus
@@ -39,6 +47,13 @@ GreetingEditor.Input = function GreetingEditor_Input() {
 };
 GreetingEditor.Text = function GreetingEditor_Text() {
   const context = React.useContext(GreetingContext);
+
+  // Check context
+  if (!context) {
+    throw new Error(
+      'Compound component GreetingEditor_Text rendered outside GreetingEditor'
+    );
+  }
 
   return <h1>Hello {context.name}!</h1>;
 };

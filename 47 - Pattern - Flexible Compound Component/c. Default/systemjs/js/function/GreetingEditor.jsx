@@ -3,21 +3,12 @@
 
 import React from 'react';
 
-type GreetingContext = {
-  name: string;
-  setName: (value: string) => void;
-};
-
-const GreetingContext = React.createContext<GreetingContext | undefined>(
-  undefined
-);
+const GreetingContext = React.createContext();
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
-type GreetingEditorProps = {
-  children: JSX.Element[];
-};
-
-function GreetingEditor({ children }: GreetingEditorProps) {
+function GreetingEditor({
+  children = [<GreetingEditor.Input key={0} />, <GreetingEditor.Text key={1} />]
+}) {
   const [name, setName] = React.useState('World');
 
   return (

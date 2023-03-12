@@ -3,15 +3,10 @@
 
 import React from 'react';
 
-const GreetingContext = React.createContext({
-  name: null,
-  setName: () => {}
-});
+export const GreetingContext = React.createContext();
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
-function GreetingEditor({
-  children = [<GreetingEditor.Input key={0} />, <GreetingEditor.Text key={1} />]
-}) {
+function GreetingEditor({ children }) {
   const [name, setName] = React.useState('World');
 
   return (
