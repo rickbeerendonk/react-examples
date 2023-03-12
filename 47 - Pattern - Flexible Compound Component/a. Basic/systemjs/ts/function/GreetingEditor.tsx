@@ -10,7 +10,7 @@ type GreetingContextType = {
 
 const GreetingContext = React.createContext<GreetingContextType>({
   name: null,
-  setName: (value: string) => {}
+  setName: () => {}
 });
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
