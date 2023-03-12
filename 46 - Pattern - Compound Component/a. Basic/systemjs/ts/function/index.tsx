@@ -2,7 +2,7 @@
 /*! Copyright © 2018-2022 Rick Beerendon      !*/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import GreetingEditor from './GreetingEditor';
 

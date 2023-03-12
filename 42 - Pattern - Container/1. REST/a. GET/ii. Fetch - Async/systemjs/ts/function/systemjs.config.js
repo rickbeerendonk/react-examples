@@ -13,6 +13,7 @@ SystemJS.config({
     'slow-fetch': 'utils:slow-fetch.js',
     react: 'npm:react/umd/react.development.js',
     'react-dom': 'npm:react-dom/umd/react-dom.development.js',
+    'react-dom/client': 'npm:react-dom/umd/react-dom.development.js',
 
     ts: 'npm:plugin-typescript',
     typescript: 'npm:typescript'
