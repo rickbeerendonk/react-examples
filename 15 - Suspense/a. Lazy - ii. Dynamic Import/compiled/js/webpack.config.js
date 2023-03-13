@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Suspense - Lazy'
+      title: 'Suspense - Lazy - Dynamic Import'
     })
   ],
   resolve: {
