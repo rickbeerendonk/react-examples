@@ -6,3 +6,5 @@
 **/setup/**
 **/temp/**
 **/__mocks__/**
+
+**/function-do-expression/**
