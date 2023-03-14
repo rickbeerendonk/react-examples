@@ -84,9 +84,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <ErrorBoundary>
     <GreetingEditor />
-  </ErrorBoundary>,
-  document.getElementById('root')
+  </ErrorBoundary>
 );

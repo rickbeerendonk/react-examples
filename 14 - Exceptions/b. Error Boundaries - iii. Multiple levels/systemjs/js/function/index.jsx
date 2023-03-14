@@ -8,11 +8,11 @@ import ErrorBoundary from './ErrorBoundary';
 import GreetingEditor from './GreetingEditor';
 import Other from './Other';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <ErrorBoundary>
     <Other>
       <GreetingEditor />
     </Other>
-  </ErrorBoundary>,
-  document.getElementById('root')
+  </ErrorBoundary>
 );

@@ -7,9 +7,9 @@ import ReactDOM from 'react-dom';
 import ErrorBoundary from './ErrorBoundary';
 import GreetingEditor from './GreetingEditor';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <ErrorBoundary>
     <GreetingEditor />
-  </ErrorBoundary>,
-  document.getElementById('root')
+  </ErrorBoundary>
 );
