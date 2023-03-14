@@ -3,8 +3,8 @@
 
 import React from 'react';
 
-interface GreetingProps {
-  greet: string;
+export interface GreetingProps {
+  greet?: string;
   name: string;
 }
 

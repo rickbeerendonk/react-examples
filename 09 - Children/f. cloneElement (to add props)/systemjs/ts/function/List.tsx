@@ -3,8 +3,10 @@
 
 import React from 'react';
 
+import { GreetingProps } from './Greeting';
+
 interface ListProps {
-  children: JSX.Element[];
+  children: React.ReactElement<GreetingProps>[];
   greet?: string;
 }
 
