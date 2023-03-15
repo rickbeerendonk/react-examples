@@ -4,7 +4,6 @@
 import React from 'react';
 
 function Child({ name, onClick }) {
-  /* eslint no-console:0 */
   console.log(name, ' is rendered.');
 
   return <button onClick={() => onClick()}>Child: {name}</button>;
