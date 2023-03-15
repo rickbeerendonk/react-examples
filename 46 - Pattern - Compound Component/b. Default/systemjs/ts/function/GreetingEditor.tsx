@@ -13,11 +13,15 @@ function GreetingEditor({
 }: GreetingEditorProps) {
   const [name, setName] = React.useState('World');
 
-  return React.Children.map(children, child =>
-    React.cloneElement(child, {
-      name,
-      setName
-    })
+  return (
+    <>
+      {React.Children.map(children, child =>
+        React.cloneElement(child, {
+          name,
+          setName
+        })
+      )}
+    </>
   );
 }
 

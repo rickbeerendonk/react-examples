@@ -8,11 +8,15 @@ function GreetingEditor({ children }) {
 
   // Pass state as properties to the render children.
   // Because we don't "create" the children, we have to use React.cloneElement
-  return React.Children.map(children, child =>
-    React.cloneElement(child, {
-      name,
-      setName
-    })
+  return (
+    <>
+      {React.Children.map(children, child =>
+        React.cloneElement(child, {
+          name,
+          setName
+        })
+      )}
+    </>
   );
 }
 GreetingEditor.Input = function GreetingEditor_Input({ name, setName }) {

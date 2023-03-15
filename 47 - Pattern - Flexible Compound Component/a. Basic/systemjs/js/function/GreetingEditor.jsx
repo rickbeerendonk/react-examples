@@ -10,9 +10,14 @@ function GreetingEditor({ children }) {
   const [name, setName] = React.useState('World');
 
   return (
-    <GreetingContext.Provider value={{ name, setName }}>
-      {children}
-    </GreetingContext.Provider>
+    <>
+      {React.Children.map(children, child =>
+        React.cloneElement(child, {
+          name,
+          setName
+        })
+      )}
+    </>
   );
 }
 GreetingEditor.Input = function GreetingEditor_Input() {
