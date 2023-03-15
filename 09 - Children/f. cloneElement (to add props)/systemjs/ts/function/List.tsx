@@ -6,7 +6,9 @@ import React from 'react';
 import { GreetingProps } from './Greeting';
 
 interface ListProps {
-  children: React.ReactElement<GreetingProps>[];
+  children:
+    | React.ReactElement<GreetingProps>
+    | React.ReactElement<GreetingProps>[];
   greet?: string;
 }
 
