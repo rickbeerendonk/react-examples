@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom/client';
 
 import ImportantAnchor from './ImportantAnchor';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <ImportantAnchor
     href="http://www.reactjs.com"
     rel="noopener"
@@ -14,6 +15,5 @@ ReactDOM.render(
     title="Everything about React"
   >
     React website
-  </ImportantAnchor>,
-  document.getElementById('root')
+  </ImportantAnchor>
 );

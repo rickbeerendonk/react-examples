@@ -6,4 +6,5 @@ import ReactDOM from 'react-dom/client';
 
 import HelloWorld from './HelloWorld';
 
-ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<HelloWorld />);
