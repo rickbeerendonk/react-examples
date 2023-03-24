@@ -11,7 +11,7 @@ ReactDOM.render(
   React.createElement(
     ImportantAnchor,
     {
-      href: 'http://www.reactjs.com',
+      href: 'https://react.dev',
       rel: 'noopener',
       target: '_blank',
       title: 'Everything about React'

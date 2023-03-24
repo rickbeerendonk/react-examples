@@ -9,7 +9,7 @@ function ImportantAnchor({ children, ...otherProps }) {
 
 ReactDOM.render(
   <ImportantAnchor
-    href="http://www.reactjs.com"
+    href="https://react.dev"
     rel="noopener noreferrer"
     target="_blank"
     title="Everything about React"

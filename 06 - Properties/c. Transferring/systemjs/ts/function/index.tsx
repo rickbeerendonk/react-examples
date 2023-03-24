@@ -9,7 +9,7 @@ import ImportantAnchor from './ImportantAnchor';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ImportantAnchor
-    href="http://www.reactjs.com"
+    href="https://react.dev"
     rel="noopener"
     target="_blank"
     title="Everything about React"

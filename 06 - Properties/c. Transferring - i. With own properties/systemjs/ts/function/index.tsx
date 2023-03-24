@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ImportantAnchor
     highlight="!!!"
-    href="http://www.reactjs.com"
+    href="https://react.dev"
     rel="noopener"
     target="_blank"
     title="Everything about React"
