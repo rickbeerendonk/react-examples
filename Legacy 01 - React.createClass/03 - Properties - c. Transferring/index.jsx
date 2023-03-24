@@ -11,7 +11,7 @@ var ImportantAnchor = createReactClass({
 
 ReactDOM.render(
   <ImportantAnchor
-    href="http://www.reactjs.com"
+    href="https://react.dev"
     target="_blank"
     title="Everything about React"
   >
