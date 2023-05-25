@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2021 Rick Beerendonk     !*/
+/*! Copyright © 2023 Rick Beerendonk     !*/
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './ChildWithForm';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

@@ -14,14 +14,14 @@ function App() {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <ChildWithForm onAdd={handleAdd} />
       <ul>
         {list.map((item, idx) => (
           <li key={idx}>{item}</li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 

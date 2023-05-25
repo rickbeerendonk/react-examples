@@ -1,5 +1,5 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2022 Rick Beerendonk          !*/
+/*! Copyright © 2023 Rick Beerendonk          !*/
 
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
