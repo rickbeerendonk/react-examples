@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 
 interface EditBoxProps {
   onChange: (value: string) => void;
