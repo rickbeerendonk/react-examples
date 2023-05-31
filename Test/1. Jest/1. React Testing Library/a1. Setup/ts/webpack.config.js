@@ -48,7 +48,7 @@ module.exports = {
     new CopyWebpackPlugin({ patterns: [{ from: 'public' }] }),
     new HtmlWebpackPlugin({
       template: './src/template.ejs',
-      title: 'Setup Fast Refresh, Webpack & TypeScript'
+      title: 'React Tests with Jest - Setup'
     }),
     new ReactRefreshWebpackPlugin()
   ],
