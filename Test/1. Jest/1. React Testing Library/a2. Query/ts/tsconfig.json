@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "module": "commonjs",
+    "sourceMap": true,
+    "target": "es2022",
+    "jsx": "react-jsxdev",
+    "allowJs": true
+  }
+}
