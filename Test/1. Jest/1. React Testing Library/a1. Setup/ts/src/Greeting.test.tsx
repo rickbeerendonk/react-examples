@@ -1,3 +1,6 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2021 Rick Beerendonk          !*/
+
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Greeting from './Greeting';
