@@ -10,8 +10,7 @@ function App() {
 
   function handleClick() {
     // Slow operation, but we don't use useTransition() to prevent blocking UI
-    // (although old result is displayed):
-
+    // (although old result is displayed)
     setCount(c => slowAdd(c));
   }
 

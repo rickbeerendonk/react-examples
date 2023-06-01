@@ -10,9 +10,7 @@ function App() {
   const [isPending, startTransition] = React.useTransition();
 
   function handleClick() {
-    // Slow operation, but we don't use useTransition() to prevent blocking UI
-    // (although old result is displayed):
-
+    // Slow operation, but useTransition() prevents blocking the UI
     startTransition(() => setCount(c => slowAdd(c)));
   }
 
