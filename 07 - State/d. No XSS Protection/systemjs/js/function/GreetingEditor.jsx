@@ -4,7 +4,9 @@
 import React from 'react';
 
 function GreetingEditor() {
-  const [name, setName] = React.useState('World');
+  const [name, setName] = React.useState(
+    '<u onmouseover="alert(\'XSS testing!\')">World</u>'
+  );
 
   function handleChange(e) {
     setName(e.target.value);
@@ -12,7 +14,7 @@ function GreetingEditor() {
 
   return (
     <React.Fragment>
-      <input autoFocus onChange={handleChange} value={name} />
+      <input autoFocus onChange={handleChange} value={name} size="50" />
       <h1>
         Hello <span dangerouslySetInnerHTML={{ __html: name }} />!
       </h1>
