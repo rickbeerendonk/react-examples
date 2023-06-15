@@ -9,9 +9,13 @@ import Greeting from './Greeting';
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
 
+  function handleChange(newName) {
+    setName(newName);
+  }
+
   return (
     <React.Fragment>
-      <EditBox onChange={setName} value={name} />
+      <EditBox onChange={handleChange} value={name} />
       <Greeting name={name} />
     </React.Fragment>
   );
