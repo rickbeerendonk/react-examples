@@ -20,6 +20,7 @@ function App() {
       <button onClick={handleClick}>Change ID</button>
       <br />
       <ClickMe key={id} />
+      <ClickMe key={id + 1} />
     </React.Fragment>
   );
 }
