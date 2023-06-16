@@ -7,7 +7,7 @@ import { logEvent } from 'utils';
 
 function Hello(props) {
   const [count, setCount] = React.useState(1);
-  const h1Ref = React.useRef(null);
+  const h1Ref = React.useRef();
 
   React.useLayoutEffect(() => {
     const currentH1 = h1Ref.current;

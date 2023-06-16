@@ -4,7 +4,7 @@
 import React from 'react';
 
 function ClickMe({ value, setValue }) {
-  const latestValue = React.useRef(null);
+  const latestValue = React.useRef();
   latestValue.current = value;
 
   const [count, setCount] = React.useState(0);

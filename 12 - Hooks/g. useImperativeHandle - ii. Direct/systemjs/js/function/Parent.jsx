@@ -6,7 +6,7 @@ import React from 'react';
 import Child from './Child';
 
 function App() {
-  const myChild = React.useRef(null);
+  const myChild = React.useRef();
 
   React.useLayoutEffect(() => {
     // myChild.current is a handle to do real DOM interactions.

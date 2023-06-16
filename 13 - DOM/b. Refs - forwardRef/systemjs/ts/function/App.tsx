@@ -6,7 +6,7 @@ import React from 'react';
 import Greeting from './Greeting';
 
 function App() {
-  const myGreeting = React.useRef(null);
+  const myGreeting = React.useRef();
 
   React.useLayoutEffect(() => {
     // myH1.current contains a reference to the real DOM node.

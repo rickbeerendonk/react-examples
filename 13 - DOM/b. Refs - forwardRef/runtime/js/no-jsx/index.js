@@ -13,7 +13,7 @@ const Greeting = React.forwardRef(function (props, ref) {
 Greeting.displayName = 'Greeting';
 
 function App() {
-  const myGreeting = React.useRef(null);
+  const myGreeting = React.useRef();
 
   React.useLayoutEffect(() => {
     // myH1.current contains a reference to the real DOM node.

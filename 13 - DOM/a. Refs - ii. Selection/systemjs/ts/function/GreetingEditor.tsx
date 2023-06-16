@@ -4,7 +4,7 @@
 import React from 'react';
 
 function GreetingEditor(): JSX.Element {
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef();
   const [name, setName] = React.useState('World');
   React.useEffect(() => inputRef.current.select(), [] /* Only run on mount */);
 
