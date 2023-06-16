@@ -18,7 +18,7 @@ function PostList({ posts }) {
 }
 
 function ErrorMessage({ message }) {
-  return <div style={{ color: 'red' }}>{message}</div>;
+  return <div style={{ color: 'red' }}>Error: {message}</div>;
 }
 
 function Fetching() {
