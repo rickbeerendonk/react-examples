@@ -22,7 +22,5 @@ function GreetingEditor() {
   );
 }
 
-ReactDOM.render(
-  React.createElement(GreetingEditor),
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(GreetingEditor));
