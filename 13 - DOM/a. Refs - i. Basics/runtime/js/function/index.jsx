@@ -14,4 +14,5 @@ function HelloWorld() {
   return <h1 ref={myH1}>Hello World!</h1>;
 }
 
-ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<HelloWorld />);
