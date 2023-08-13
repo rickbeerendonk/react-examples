@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import * as React from 'react';
+import React from 'react';
 
 function GreetingEditor() {
   const [name, setName] = React.useState('World');
