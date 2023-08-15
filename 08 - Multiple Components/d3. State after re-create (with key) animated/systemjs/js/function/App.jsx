@@ -24,11 +24,10 @@ function App() {
     <React.Fragment>
       <button onClick={handleClick}>Change ID</button>
       <hr />
-      <ClickMe key={id} id={id} />
-      <br />
-      <br />
-      &nbsp; &nbsp; &nbsp;
-      <ClickMe key={id + 1} id={id + 1} />
+      <div className="keygroup">
+        <ClickMe key={id} id={id} />
+        <ClickMe key={id + 1} id={id + 1} />
+      </div>
     </React.Fragment>
   );
 }
