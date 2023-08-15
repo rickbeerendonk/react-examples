@@ -13,10 +13,10 @@ function GreetingEditor(): JSX.Element {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} ref={inputRef} value={name} />
       {name && <h1>Hello {name}!</h1>}
-    </React.Fragment>
+    </>
   );
 }
 

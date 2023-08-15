@@ -5,10 +5,10 @@ import React from 'react';
 
 function Greeting() {
   return (
-    <React.Fragment>
+    <>
       <h1>Hello World!</h1>
       <Greeting />
-    </React.Fragment>
+    </>
   );
 }
 

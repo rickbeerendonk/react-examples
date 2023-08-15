@@ -24,7 +24,7 @@ class GreetingEditor extends React.Component<
   }
   render() {
     return (
-      <React.Fragment>
+      <>
         <input
           autoFocus
           onChange={this.handleChange}
@@ -32,7 +32,7 @@ class GreetingEditor extends React.Component<
           value={this.state.name}
         />
         {this.state.name && <h1>Hello {this.state.name}!</h1>}
-      </React.Fragment>
+      </>
     );
   }
 }

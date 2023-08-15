@@ -40,10 +40,10 @@ function PostListContainer() {
   }
 
   return (
-    <React.Fragment>
+    <>
       {isFetching && <Fetching />}
       {error ? <ErrorMessage message={error} /> : <PostList posts={posts} />}
-    </React.Fragment>
+    </>
   );
 }
 

@@ -39,10 +39,10 @@ function GreetingEditor() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={state.name} />
       <h1>Hello {state.name}!</h1>
-    </React.Fragment>
+    </>
   );
 }
 

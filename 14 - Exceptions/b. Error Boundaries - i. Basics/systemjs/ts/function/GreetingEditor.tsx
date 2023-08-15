@@ -38,7 +38,7 @@ function GreetingEditor() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={name} />
       <h1>Hello {name}!</h1>
       <ul style={{ color: 'darkgrey' }}>
@@ -48,7 +48,7 @@ function GreetingEditor() {
         <li>cleanEffectError [during next render]</li>
         <li>renderException</li>
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 

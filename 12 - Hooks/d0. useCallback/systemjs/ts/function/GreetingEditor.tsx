@@ -23,11 +23,11 @@ function GreetingEditor() {
   handlers.add(changeHandler);
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={changeHandler} value={name} />
       <h1>Hello {name}!</h1>
       <div>Number of handlers used: {handlers.size}</div>
-    </React.Fragment>
+    </>
   );
 }
 

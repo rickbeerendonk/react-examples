@@ -11,12 +11,12 @@ function Greeting() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <button onClick={handleClick} disabled={recursive}>
         Hello World!
       </button>
       {recursive && <Greeting />}
-    </React.Fragment>
+    </>
   );
 }
 

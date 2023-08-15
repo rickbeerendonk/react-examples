@@ -22,7 +22,7 @@ function App() {
   const [visible, setVisible] = React.useState(false);
 
   return (
-    <React.Fragment>
+    <>
       <button onClick={() => setVisible(v => !v)}>
         {visible ? 'Hide' : 'Show'}
       </button>
@@ -31,7 +31,7 @@ function App() {
           <Greeting />
         </React.Suspense>
       )}
-    </React.Fragment>
+    </>
   );
 }
 

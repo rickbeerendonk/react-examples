@@ -13,10 +13,10 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <button onClick={handleShowHide}>{visible ? 'Hide' : 'Show'}</button>
       {visible && <DocumentHidden />}
-    </React.Fragment>
+    </>
   );
 }
 

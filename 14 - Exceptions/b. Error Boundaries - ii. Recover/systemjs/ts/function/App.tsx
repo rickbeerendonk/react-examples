@@ -8,12 +8,12 @@ import ErrorBoundary from './ErrorBoundary';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <h1>Error Boundaries</h1>
       <ErrorBoundary>
         <Divider />
       </ErrorBoundary>
-    </React.Fragment>
+    </>
   );
 }
 
