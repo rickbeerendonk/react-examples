@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './ClickMe.css';
-
 function ClickMe() {
   const [count, setCount] = React.useState(0);
 
@@ -10,9 +8,9 @@ function ClickMe() {
   }
 
   return (
-    <a className="clickme" href="#" onClick={handleClick}>
-      This link has been clicked {count} times
-    </a>
+    <button onClick={handleClick}>
+      This button has been clicked {count} times
+    </button>
   );
 }
 
