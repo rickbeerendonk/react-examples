@@ -8,13 +8,21 @@
 
     <title>Data Binding - Data to View - Content - Expression</title>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
+
     <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
-    <script src="../../../../../../node_modules/@babel/standalone/babel.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "../../../../../../resources/react.development.mjs",
+          "react-dom": "../../../../../../resources/react-dom.development.mjs"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
 
-    <script src="index.jsx" type="text/babel" data-presets="react"></script>
+    <script src="index.jsx" type="module"></script>
   </body>
 </html>
