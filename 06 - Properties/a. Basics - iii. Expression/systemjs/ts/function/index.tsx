@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 
 import Greeting from './Greeting';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
   <Greeting
     greeting={new Date().getHours() < 12 ? 'Good morning' : 'Hello'}

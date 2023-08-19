@@ -8,5 +8,5 @@ function Greeting() {
   return <h1>Hello World!</h1>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(<Greeting />);

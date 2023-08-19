@@ -6,5 +6,5 @@ import ReactDOM from 'react-dom/client';
 
 import Top from './Top';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(<Top color="red" />);

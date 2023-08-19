@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client';
 import Greeting from './Greeting';
 import List from './List';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
   <List>
     <Greeting name="Alexandra" />
