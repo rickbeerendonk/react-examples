@@ -1,7 +1,7 @@
 /*! Copyright © 2018 Rick Beerendonk !*/
 
 body > :first-child::after {
-  content: 'React 18';
+  content: 'React 19';
   font-family: Comfortaa;
   font-size: 1.7rem;
   font-weight: bold;
