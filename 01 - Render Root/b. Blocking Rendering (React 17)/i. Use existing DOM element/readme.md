@@ -1,4 +1,4 @@
-# Render Root (React 18+)
+# Render Root (React 17-)
 
 ## Existing DOM Element
 
@@ -10,14 +10,12 @@ Use an existing DOM element as the root for the React application.
 <div id="root"></div>
 ```
 
-### Concurrent Rendering
+### Blocking Rendering
 
 #### JSX
 
 ```JSX
-ReactDOM
-  .createRoot(document.getElementById('root'))
-  .render(<h1>Hello World!</h1>);
+ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('root'));
 ```
 
 ## License
@@ -26,4 +24,4 @@ European Union Public Licence version 1.2
 
 ## Copyright
 
-Copyright © 2014-2023 Rick Beerendonk
+Copyright © 2014 Rick Beerendonk

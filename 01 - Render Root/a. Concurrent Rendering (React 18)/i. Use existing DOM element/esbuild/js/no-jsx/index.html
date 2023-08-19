@@ -9,13 +9,21 @@
     <title>Render Root - Concurrent Rendering - Use Existing DOM Element</title>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
     <link rel="stylesheet" href="../../../../../../resources/oblicum-18.css" />
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
+    <script src="../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "../../../../../../resources/react.development.mjs",
+          "react-dom/client": "../../../../../../resources/react-dom.development.mjs"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
 
-    <script src="index.jsx" type="text/babel" data-presets="react"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
