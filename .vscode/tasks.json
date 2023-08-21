@@ -17,6 +17,9 @@
       "type": "shell",
       "command": "npm",
       "args": ["start", "--", "\"${fileDirname}\""],
+      "windows": {
+        "args": ["start", "--", "'${fileDirname}'"]
+      },
       "problemMatcher": [],
       "group": {
         "kind": "build",
