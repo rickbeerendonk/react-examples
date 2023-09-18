@@ -1,6 +1,6 @@
 {
   "name": "react-test-jest-events",
-  "description": "React Tests with Jest - Events",
+  "description": "React Tests with Jest - Events - FireEvent",
   "version": "1.0.0",
   "repository": {
     "type": "git",
