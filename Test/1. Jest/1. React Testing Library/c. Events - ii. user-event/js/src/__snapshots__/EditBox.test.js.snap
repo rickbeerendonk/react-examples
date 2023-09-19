@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditBox renders world snapshot when value is world (@testing-library/react) 1`] = `
+<input
+  value="World"
+/>
+`;

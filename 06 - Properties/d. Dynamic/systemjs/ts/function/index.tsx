@@ -11,5 +11,5 @@ const props = {
   name: 'React'
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(<Greeting {...props} />);

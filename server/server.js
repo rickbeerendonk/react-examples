@@ -10,6 +10,8 @@ const path = require('path');
 const mime = require('../node_modules/mime-types');
 const ip = require('./ip');
 
+const esbuild = require('esbuild');
+
 let [, , ...filePath] = process.argv;
 // Windows fix:
 filePath = filePath.join(' ').replaceAll('\\\\', '\\');
@@ -162,10 +164,68 @@ const server = http.createServer(function (request, response) {
           );
         }
       } else {
-        response.writeHead(200, {
-          'Content-Type': mime.contentType(mime.lookup(filePath))
-        });
-        response.end(content, 'utf-8');
+        if (filePath.includes('esbuild')) {
+          const { name, ext } = path.parse(filePath);
+          const fileName = name + ext;
+
+          let result;
+
+          switch (path.extname(filePath)) {
+            case '.js':
+            case '.mjs':
+            case '.jsx':
+              result = esbuild.transformSync(content.toString(), {
+                sourcemap: 'inline',
+                sourcefile: fileName,
+                loader: 'jsx',
+                jsx: 'transform' // 'automatic'
+              });
+              content = result.code;
+
+              if (result.warnings.length)
+                console.warn(
+                  `ESBuild Transform Warnings (${fileName}): ${result.warnings}`
+                );
+
+              response.writeHead(200, {
+                'Content-Type': mime.contentType('_.js')
+              });
+              break;
+
+            case '.ts':
+            case '.tsx':
+              result = esbuild.transformSync(content.toString(), {
+                sourcemap: 'inline',
+                sourcefile: fileName,
+                loader: 'tsx',
+                jsx: 'transform' // 'automatic'
+              });
+              content = result.code;
+
+              if (result.warnings.length)
+                console.warn(
+                  `ESBuild Transform Warnings (${fileName}): ${result.warnings}`
+                );
+
+              response.writeHead(200, {
+                'Content-Type': mime.contentType('_.js')
+              });
+              break;
+
+            default:
+              response.writeHead(200, {
+                'Content-Type': mime.contentType(mime.lookup(filePath))
+              });
+              break;
+          }
+
+          response.end(content, 'utf-8');
+        } else {
+          response.writeHead(200, {
+            'Content-Type': mime.contentType(mime.lookup(filePath))
+          });
+          response.end(content, 'utf-8');
+        }
       }
     });
   }
