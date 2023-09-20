@@ -45,6 +45,7 @@
     "start": "webpack serve --hot --open",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "test-watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "test-watch-all": "jest --watchAll"
   }
 }
