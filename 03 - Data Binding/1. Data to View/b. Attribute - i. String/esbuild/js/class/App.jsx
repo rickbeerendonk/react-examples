@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-function App() {
-  return <img alt="React" />;
+class App extends Component {
+  render() {
+    return <img alt="React" />;
+  }
 }
 
 export default App;
