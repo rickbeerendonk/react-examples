@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2021 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Data Binding - View to Data - (Event) Stop Propagation</title>
+    <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
+
+    <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
+    <script src="../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "../../../../../../resources/react.development.mjs",
+          "react-dom/client": "../../../../../../resources/react-dom.development.mjs"
+        }
+      }
+    </script>
+
+    <style>
+      div {
+        padding: 20px;
+      }
+
+      #parent {
+        background: #444;
+        color: white;
+      }
+
+      #child {
+        background: #d676ff;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div style="color: gray">Open console</div>
+
+    <script src="index.tsx" type="module"></script>
+  </body>
+</html>
