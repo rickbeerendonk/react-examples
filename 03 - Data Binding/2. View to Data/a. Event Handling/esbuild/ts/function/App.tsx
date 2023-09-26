@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { ChangeEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 
-function App() {
+const App = () => {
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     alert(`Event handled.
 Target: ${e.target}
@@ -12,6 +12,6 @@ Data: ${e.nativeEvent.data}`);
   }
 
   return <input onChange={handleChange} value="Hello React!" />;
-}
+};
 
 export default App;
