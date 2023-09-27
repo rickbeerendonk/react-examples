@@ -7,10 +7,6 @@ function App() {
   // Keep form data in state
   const [name, setName] = React.useState('');
 
-  function handleChange(e) {
-    setName(e.target.value);
-  }
-
   function handleSubmit(e) {
     // Prevent the browser from doing the default action (and navigating away from our page/app)
     e.preventDefault();
@@ -20,15 +16,12 @@ function App() {
 
     // Clear data
     setName('');
-
-    // Remember, cannot be used in React (use e.preventDefault() instead):
-    //return false;
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
-      <input id="name" onChange={handleChange} value={name} />
+      <input id="name" onChange={e => setName(e.target.value)} value={name} />
       <button>Submit</button>
     </form>
   );
