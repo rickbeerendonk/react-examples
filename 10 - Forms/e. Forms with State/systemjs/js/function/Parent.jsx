@@ -10,7 +10,7 @@ function Parent() {
 
   const handleAdd = React.useCallback(item => {
     // Create a new list by coping the old and adding the new item
-    setList(l => [...l, item]);
+    setList(lst => [...lst, item]);
   }, []);
 
   return (
