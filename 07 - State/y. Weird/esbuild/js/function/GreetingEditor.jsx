@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 function GreetingEditor() {
-  const [obj, setObj] = React.useState({ name: 'World' });
+  const [obj, setObj] = useState({ name: 'World' });
 
-  const [other /*, setOther */] = React.useState('More state');
+  const [other /*, setOther */] = useState('More state');
 
   function handleChange(e) {
     // React 16:
@@ -23,11 +23,11 @@ function GreetingEditor() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={obj.name} />
       <h1>Name: {obj.name}</h1>
       <h2>Other: {other}</h2>
-    </React.Fragment>
+    </>
   );
 }
 
