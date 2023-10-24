@@ -1,9 +1,16 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2016 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* global React, ReactDOM */
+import { Component } from 'react';
+import { flushSync } from 'react-dom';
 
-class ClickMe extends React.Component {
+interface ClickMeProps {}
+
+interface ClickMeState {
+  count: number;
+}
+
+class ClickMe extends Component<ClickMeProps, ClickMeState> {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -14,10 +21,10 @@ class ClickMe extends React.Component {
   handleClick() {
     // Updates are batched for performance reasons.
     // Use ReactDOM.flushSync():
-    ReactDOM.flushSync(() => {
+    flushSync(() => {
       this.setState({ count: this.state.count + 0.4 });
     });
-    ReactDOM.flushSync(() => {
+    flushSync(() => {
       this.setState({ count: this.state.count + 0.6 });
     });
   }
@@ -30,5 +37,4 @@ class ClickMe extends React.Component {
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<ClickMe />);
+export default ClickMe;

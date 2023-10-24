@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { Component } from 'react';
+import { flushSync } from 'react-dom';
 
-class ClickMe extends React.Component {
+class ClickMe extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
@@ -15,10 +15,10 @@ class ClickMe extends React.Component {
   handleClick() {
     // Updates are batched for performance reasons.
     // Use ReactDOM.flushSync():
-    ReactDOM.flushSync(() => {
+    flushSync(() => {
       this.setState({ count: this.state.count + 0.4 });
     });
-    ReactDOM.flushSync(() => {
+    flushSync(() => {
       this.setState({ count: this.state.count + 0.6 });
     });
   }
@@ -30,5 +30,4 @@ class ClickMe extends React.Component {
     );
   }
 }
-
 export default ClickMe;
