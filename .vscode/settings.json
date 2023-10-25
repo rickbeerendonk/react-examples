@@ -5,8 +5,5 @@
   // Enable ESLint
   "eslint.enable": true,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "javascript.validate.enable": false,
-
-  // Disable CSpell
-  "cSpell.enabled": false
+  "javascript.validate.enable": false
 }
