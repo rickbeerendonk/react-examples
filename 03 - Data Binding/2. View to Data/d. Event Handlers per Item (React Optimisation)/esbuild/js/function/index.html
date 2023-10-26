@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>
-      Data Binding - View to Data - Event Handlers per Item (React Optimisation)
-    </title>
+    <script src="../../../../../../utils/document-title.js"></script>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
 
     <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
@@ -28,5 +26,28 @@
     <div id="root"></div>
 
     <script src="index.jsx" type="module"></script>
+
+    <script>
+      function formatUrl(url) {
+        // Dynamically find the start of the path after the domain and port
+        const protocolEndIndex = url.indexOf('//') + 2;
+        const pathStartIndex = url.indexOf('/', protocolEndIndex);
+
+        // Find the end of the relevant part, marked by '/esbuild'
+        const endPath = '/esbuild';
+        const pathEndIndex = url.indexOf(endPath, pathStartIndex);
+
+        // Extract, decode, and optionally format the relevant part of the URL
+        let relevantPart = url.slice(pathStartIndex + 1, pathEndIndex);
+        relevantPart = decodeURIComponent(relevantPart);
+
+        // Replace slashes with ' | '
+        relevantPart = relevantPart.replace(/\//g, ' | ');
+
+        return relevantPart;
+      }
+
+      document.title = formatUrl(document.URL);
+    </script>
   </body>
 </html>
