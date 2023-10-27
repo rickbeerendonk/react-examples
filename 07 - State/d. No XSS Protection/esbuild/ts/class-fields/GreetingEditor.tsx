@@ -1,20 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-class GreetingEditor extends React.Component {
+class GreetingEditor extends Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
-  state = { name: 'World' };
-  handleChange = e => {
+  state = { name: '<u onmouseover=alert("Hacked!")>Dangerous</u>' };
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ name: e.target.value });
   };
 
   render() {
     return (
       <div>
-        <input autoFocus onChange={this.handleChange} value={this.state.name} />
+        <input onChange={this.handleChange} value={this.state.name} size={50} />
         <h1>
           Hello <span dangerouslySetInnerHTML={{ __html: this.state.name }} />!
         </h1>
