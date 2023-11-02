@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
-function App() {
+function Root() {
   return (
     <>
       <header>
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Root;
