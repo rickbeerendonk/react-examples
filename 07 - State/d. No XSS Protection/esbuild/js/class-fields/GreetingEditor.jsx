@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-class GreetingEditor extends React.Component {
+class GreetingEditor extends Component {
   // Proposal: https://github.com/tc39/proposal-class-fields
   // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { name: '<u onmouseover=alert("Hacked!")>Dangerous</u>' };
