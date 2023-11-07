@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component, createElement } from 'react';
 
-export default class Visible extends React.Component {
+export default class Visible extends Component {
   render() {
-    return React.createElement(
+    return createElement(
       'h3',
       null,
       'I am a visible portal, shown outside the react root by an invisible component!'

@@ -4,7 +4,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import Visible from './Visible.tsx';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+function Portal() {
+  return ReactDOM.createPortal(<Visible />, document.getElementById('portal'));
+}
+
+export default Portal;

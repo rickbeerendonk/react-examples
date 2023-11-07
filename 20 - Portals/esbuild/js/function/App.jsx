@@ -3,14 +3,14 @@
 
 import React from 'react';
 
-import Portal from './Portal';
+import Portal from './Portal.jsx';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       This is the React App.
       <Portal />
-    </React.Fragment>
+    </>
   );
 }
 

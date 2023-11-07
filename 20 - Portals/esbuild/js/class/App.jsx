@@ -1,17 +1,17 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-import Portal from './Portal';
+import Portal from './Portal.jsx';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         This is the React App.
         <Portal />
-      </React.Fragment>
+      </>
     );
   }
 }
