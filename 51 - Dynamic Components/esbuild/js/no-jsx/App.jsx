@@ -2,7 +2,7 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 import React from 'react';
-import DynamicComponent from './DynamicComponent';
+import DynamicComponent from './DynamicComponent.jsx';
 
 let production = true;
 
