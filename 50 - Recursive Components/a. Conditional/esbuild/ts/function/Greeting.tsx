@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 function Greeting() {
-  const [recursive, setRecursive] = React.useState(false);
+  const [recursive, setRecursive] = useState(false);
 
   function handleClick() {
     setRecursive(true);
