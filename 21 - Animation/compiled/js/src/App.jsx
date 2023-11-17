@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -36,7 +36,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <button onClick={this.handleAdd}>Add</button>
         <hr />
         <TransitionGroup>
@@ -61,7 +61,7 @@ class App extends React.Component {
             );
           })}
         </TransitionGroup>
-      </React.Fragment>
+      </>
     );
   }
 }
