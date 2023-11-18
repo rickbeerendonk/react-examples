@@ -5,8 +5,6 @@ import { Component } from 'react';
 import { flushSync } from 'react-dom';
 
 class ClickMe extends Component {
-  // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { count: 0 };
   handleClick = () => {
     // Updates are batched for performance reasons.

@@ -4,8 +4,6 @@
 import { Component } from 'react';
 
 class GreetingEditor extends Component {
-  // Proposal: https://github.com/tc39/proposal-class-fields
-  // Support: http://kangax.github.io/compat-table/esnext/#test-instance_class_fields
   state = { name: 'World', other: 'More state' };
   handleChange = e => {
     this.setState({ name: e.target.value });
