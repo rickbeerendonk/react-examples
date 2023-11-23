@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-class LastUpdate extends React.Component {
+class LastUpdate extends Component {
   componentDidMount() {
     setInterval(() => {
       this.forceUpdate();

@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 function useForceUpdate() {
-  const [, setState] = React.useState(0);
-  const forceUpdate = React.useCallback(() => {
+  const [, setState] = useState(0);
+  const forceUpdate = useCallback(() => {
     setState({});
   }, []);
 
@@ -15,7 +15,7 @@ function useForceUpdate() {
 function LastUpdate() {
   const forceUpdate = useForceUpdate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const intervalID = setInterval(forceUpdate, 2000);
 
     return () => clearInterval(intervalID);
