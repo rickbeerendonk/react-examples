@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import React, { useState } from 'react';
 
 function ClickMe() {
   const [count, setCount]: [
     number,
     React.Dispatch<React.SetStateAction<number>>
-  ] = React.useState(0);
+  ] = useState(0);
 
   return (
     // setState is not called when the event takes place.

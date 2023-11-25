@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 interface ClickMeProps {}
 
