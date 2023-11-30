@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-class GreetingEditor extends React.Component {
+class GreetingEditor extends Component {
   constructor(props) {
     super(props);
     this.state = { name: 'World' };
@@ -15,7 +15,7 @@ class GreetingEditor extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <>
         <input autoFocus onChange={this.handleChange} value={this.state.name} />
         {this.props.languages.includes('dk') && this.state.name && (
           <h1>DK: Hej {this.state.name}!</h1>
@@ -29,7 +29,7 @@ class GreetingEditor extends React.Component {
         {this.props.languages.includes('no') && this.state.name && (
           <h1>NO: Hallo {this.state.name}!</h1>
         )}
-      </React.Fragment>
+      </>
     );
   }
 }

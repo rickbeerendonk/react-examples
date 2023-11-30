@@ -24,13 +24,13 @@ function GreetingEditor({ languages }) {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={name} />
       {renderDK()}
       {renderEN()}
       {renderNL()}
       {renderNO()}
-    </React.Fragment>
+    </>
   );
 }
 

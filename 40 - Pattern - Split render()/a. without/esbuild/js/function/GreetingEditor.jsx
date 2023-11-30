@@ -11,13 +11,13 @@ function GreetingEditor({ languages }) {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={name} />
       {languages.includes('dk') && name && <h1>DK: Hej {name}!</h1>}
       {languages.includes('en') && name && <h1>EN: Hello {name}!</h1>}
       {languages.includes('nl') && name && <h1>NL: Hallo {name}!</h1>}
       {languages.includes('no') && name && <h1>NO: Hallo {name}!</h1>}
-    </React.Fragment>
+    </>
   );
 }
 
