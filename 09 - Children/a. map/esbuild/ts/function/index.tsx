@@ -1,13 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
-import Greeting from './Greeting';
-import List from './List';
+import Greeting from './Greeting.tsx';
+import List from './List.tsx';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as Element);
+const root = createRoot(document.getElementById('root') as Element);
 root.render(
   <List>
     <Greeting name="Alexandra" />

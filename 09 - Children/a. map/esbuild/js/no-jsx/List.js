@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { createElement, Children } from 'react';
 
 const List = props =>
-  React.createElement(
+  createElement(
     'ul',
     null,
-    React.Children.map(props.children, function (child, i) {
-      return React.createElement('li', { key: i }, child);
+    Children.map(props.children, function (child, i) {
+      return createElement('li', { key: i }, child);
     })
   );
 
