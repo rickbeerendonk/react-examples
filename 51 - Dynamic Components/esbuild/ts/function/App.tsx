@@ -5,11 +5,19 @@ import DynamicComponent from './DynamicComponent.tsx';
 
 let production = true;
 
-function Comp1({ children }) {
+interface Comp1Props {
+  children: React.ReactNode;
+}
+
+function Comp1({ children }: Comp1Props) {
   return <h1>{children}</h1>;
 }
 
-function Comp3({ children }) {
+interface Comp3Props {
+  children: React.ReactNode;
+}
+
+function Comp3({ children }: Comp3Props) {
   return <h3>{children}</h3>;
 }
 
