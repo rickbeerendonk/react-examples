@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2016 Rick Beerendonk          !*/
 
-import React from 'react';
+import { createElement } from 'react';
 
 function Greeting() {
   return [
-    React.createElement('h1', { key: 'heading' }, 'Hello World!'),
+    createElement('h1', { key: 'heading' }, 'Hello World!'),
     'What do you think about React?',
-    React.createElement('div', { key: 'enthusiasm' }, 'It looks amazing.')
+    createElement('div', { key: 'enthusiasm' }, 'It looks amazing.')
   ];
 }
 
