@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 function GreetingEditor() {
-  const [name, setName] = React.useState('World');
+  const [name, setName] = useState('World');
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (name === 'React') {
       alert('Name === React');
     }

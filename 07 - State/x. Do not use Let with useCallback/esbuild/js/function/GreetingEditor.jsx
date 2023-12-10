@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import React from 'react';
-
 /* eslint-disable react-hooks/exhaustive-deps */
+
+import { useCallback, useState } from 'react';
 
 function GreetingEditor() {
   let mutable = 0;
 
-  const [immutable, setImmutable] = React.useState(mutable);
+  const [immutable, setImmutable] = useState(mutable);
 
   function handleClick() {
     // Don't update variables that come from outside the handler...
@@ -18,7 +18,7 @@ function GreetingEditor() {
     setImmutable(mutable);
   }
 
-  const handleClickCallback = React.useCallback(handleClick, []);
+  const handleClickCallback = useCallback(handleClick, []);
 
   return (
     <>

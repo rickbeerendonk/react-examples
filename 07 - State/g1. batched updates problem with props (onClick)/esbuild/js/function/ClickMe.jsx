@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 function ClickMe({ value, setValue }) {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   function handleClick() {
     // Updates are batched for performance reasons.
