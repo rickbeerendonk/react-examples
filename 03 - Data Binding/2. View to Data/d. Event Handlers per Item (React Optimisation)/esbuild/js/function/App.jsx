@@ -1,8 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020-2021 Rick Beerendonk          !*/
 
-import React from 'react';
-
 function App() {
   function handleMouseDown(e) {
     alert(`Button ${e.target.innerText} mouse down!`);
