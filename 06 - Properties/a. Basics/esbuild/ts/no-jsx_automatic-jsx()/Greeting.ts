@@ -3,7 +3,11 @@
 
 import { jsx } from 'react/jsx-runtime';
 
-function Greeting(props) {
+interface GreetingProps {
+  name: string;
+}
+
+function Greeting(props: GreetingProps) {
   return jsx('h1', {
     children: ['Hello ', props.name, '!']
   });
