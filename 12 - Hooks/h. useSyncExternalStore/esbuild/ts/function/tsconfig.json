@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": true
+  }
+}
