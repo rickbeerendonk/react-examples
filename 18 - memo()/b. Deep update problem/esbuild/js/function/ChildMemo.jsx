@@ -3,10 +3,10 @@
 
 /* eslint react/prop-types:"off", no-console:"off" */
 
-import React from 'react';
+import { memo } from 'react';
 
 import Child from './Child.jsx';
 
-const ChildMemo = React.memo(Child);
+const ChildMemo = memo(Child);
 
 export default ChildMemo;

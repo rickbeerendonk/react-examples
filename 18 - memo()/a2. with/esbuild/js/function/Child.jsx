@@ -3,7 +3,7 @@
 
 /* eslint react/prop-types:"off", no-console:"off" */
 
-import React from 'react';
+import { memo } from 'react';
 
 import useFlashRef from './hooks/flash-ref.js';
 
@@ -13,6 +13,6 @@ function Child() {
 }
 
 // Prevent renders when there are no new property values
-const ChildMemo = React.memo(Child /* no custom comparison (2nd parameter) */);
+const ChildMemo = memo(Child /* no custom comparison (2nd parameter) */);
 
 export default ChildMemo;

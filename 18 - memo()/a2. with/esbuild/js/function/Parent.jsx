@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 import Child from './Child.jsx';
 
 function Parent() {
-  const [name, setName] = React.useState('');
+  const [name, setName] = useState('');
 
   function nameChanged(e) {
     setName(e.target.value);
