@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import Bottom from './Bottom';
+import Bottom from './Bottom.jsx';
 
 function Middle() {
   return <Bottom />;

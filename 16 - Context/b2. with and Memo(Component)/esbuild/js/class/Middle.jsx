@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { PureComponent } from 'react';
 
-import Bottom from './Bottom';
+import Bottom from './Bottom.jsx';
 
-class Middle extends React.PureComponent {
+class Middle extends PureComponent {
   render() {
     return <Bottom />;
   }

@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { PureComponent } from 'react';
 
-import ColorContext from './ColorContext';
+import ColorContext from './ColorContext.jsx';
 
-class Bottom extends React.PureComponent {
+class Bottom extends PureComponent {
   render() {
     return (
       <ColorContext.Consumer>
