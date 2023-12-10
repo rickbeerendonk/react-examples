@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import React from 'react';
+import { memo } from 'react';
 
 import ColorContext from './ColorContext.jsx';
 
@@ -13,4 +13,4 @@ function Bottom() {
   );
 }
 
-export default React.memo(Bottom);
+export default memo(Bottom);
