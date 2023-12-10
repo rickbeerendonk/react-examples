@@ -3,7 +3,7 @@
 
 import styled from 'styled-components';
 
-import Greeting from './Greeting';
+import Greeting from './Greeting.jsx';
 
 export const StyledGreeting = styled(Greeting)`
   color: blue;

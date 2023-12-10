@@ -1,18 +1,18 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
 
 import { StyledButton } from './styled';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <StyledButton>Enabled</StyledButton>
         <StyledButton disabled={true}>Disabled</StyledButton>
-      </React.Fragment>
+      </>
     );
   }
 }
