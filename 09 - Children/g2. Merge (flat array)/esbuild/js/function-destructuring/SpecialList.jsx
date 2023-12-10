@@ -1,8 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
-
 import Greeting from './Greeting.jsx';
 import List from './List.jsx';
 
