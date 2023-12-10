@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
 const styles = {
   header: {
@@ -12,9 +12,10 @@ const styles = {
   }
 };
 
-function Greeting({ style }) {
-  return <h1 style={{ ...styles.header, ...style }}>Hello World!</h1>;
-  /* React Native: <h1 style={[styles.header, style]}>Hello World!</h1> */
+class Greeting extends Component {
+  render() {
+    return <h1 style={styles.header}>Hello World!</h1>;
+  }
 }
 
 export default Greeting;

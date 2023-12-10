@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component, createElement } from 'react';
 
 const styles = {
   header: {
@@ -12,14 +12,14 @@ const styles = {
   }
 };
 
-class Greeting extends React.Component {
+class Greeting extends Component {
   render() {
-    return React.createElement(
+    return createElement(
       'h1',
       { style: { ...styles.header, ...this.props.style } },
       'Hello World!'
     );
-    /* React Native: return React.createElement('h1', {style: [styles.header, this.props.style]}, 'Hello World!'); */
+    /* React Native: return createElement('h1', {style: [styles.header, this.props.style]}, 'Hello World!'); */
   }
 }
 
