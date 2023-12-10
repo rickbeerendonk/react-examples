@@ -3,8 +3,6 @@
 
 /* eslint react/prop-types:"off", no-console:"off" */
 
-import React from 'react';
-
 import Greeting from './Greeting.jsx';
 
 function Child(props) {

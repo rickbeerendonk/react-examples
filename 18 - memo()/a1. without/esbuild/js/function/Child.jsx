@@ -3,8 +3,6 @@
 
 /* eslint react/prop-types:"off", no-console:"off" */
 
-import React from 'react';
-
 import useFlashRef from './hooks/flash-ref.js';
 
 function Child() {
