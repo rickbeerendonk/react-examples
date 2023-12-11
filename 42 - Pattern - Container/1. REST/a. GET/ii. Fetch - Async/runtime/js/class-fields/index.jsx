@@ -25,7 +25,7 @@ function Fetching() {
   return (
     <React.Fragment>
       <img
-        src="../../../../../resources/oblicum-square.svg"
+        src="../../../../../../../resources/oblicum-square.svg"
         className="oblicum-spinner"
         alt="Fetching..."
       />
