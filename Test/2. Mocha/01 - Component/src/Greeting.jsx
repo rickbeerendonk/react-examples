@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-class Greeting extends React.Component {
+class Greeting extends Component {
   render() {
     return <h1>Hello World!</h1>;
   }
