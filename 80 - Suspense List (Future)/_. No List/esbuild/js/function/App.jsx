@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Suspense, useState } from 'react';
 
-import Spinner from './Spinner';
-import AsyncResult from './AsyncResult';
+import Spinner from './Spinner.jsx';
+import AsyncResult from './AsyncResult.jsx';
 
 function App() {
-  const [buttonClicked, setButtonClicked] = React.useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   function load() {
     setButtonClicked({ buttonClicked: true });
@@ -19,19 +19,19 @@ function App() {
       {buttonClicked && (
         <ol>
           <li value="1">
-            <React.Suspense fallback={<Spinner name="one" />}>
+            <Suspense fallback={<Spinner name="one" />}>
               <AsyncResult name="one" time={2000} />
-            </React.Suspense>
+            </Suspense>
           </li>
           <li value="2">
-            <React.Suspense fallback={<Spinner name="two" />}>
+            <Suspense fallback={<Spinner name="two" />}>
               <AsyncResult name="two" time={3000} />
-            </React.Suspense>
+            </Suspense>
           </li>
           <li value="3">
-            <React.Suspense fallback={<Spinner name="three" />}>
+            <Suspense fallback={<Spinner name="three" />}>
               <AsyncResult name="three" time={1000} />
-            </React.Suspense>
+            </Suspense>
           </li>
         </ol>
       )}

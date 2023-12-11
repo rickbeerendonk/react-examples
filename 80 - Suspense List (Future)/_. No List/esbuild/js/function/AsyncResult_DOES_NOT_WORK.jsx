@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019-2021 Rick Beerendonk     !*/
 
-import React from 'react';
+import { useRef } from 'react';
 
 function AsyncResult({ name, time }) {
-  const data = React.useRef();
+  const data = useRef();
 
   // Initialize data with Promise
   if (data.current === undefined) {
