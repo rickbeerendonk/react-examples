@@ -46,7 +46,6 @@
     "core-js": "3.30.2",
     "create-react-class": "15.7.0",
     "esbuild": "0.19.2",
-    "fetch-mock": "9.11.0",
     "formik": "2.2.9",
     "mime-types": "2.1.35",
     "plugin-typescript": "8.0.0",
