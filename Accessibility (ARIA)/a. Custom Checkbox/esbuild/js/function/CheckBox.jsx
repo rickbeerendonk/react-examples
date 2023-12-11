@@ -1,10 +1,10 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 function CheckBox(props) {
-  const [checked, setChecked] = React.useState(props.checked);
+  const [checked, setChecked] = useState(props.checked);
 
   function handleClick() {
     props.onChange && props.onChange(!checked);
