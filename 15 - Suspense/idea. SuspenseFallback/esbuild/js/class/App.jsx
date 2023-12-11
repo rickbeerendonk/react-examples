@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 import { unstable_scheduleCallback as scheduleCallback } from 'scheduler';
 
-import Spinner from './Spinner';
-import AsyncResult from './AsyncResult';
-import SuspenseFallback from './SuspenseFallback';
+import Spinner from './Spinner.jsx';
+import AsyncResult from './AsyncResult.jsx';
+import SuspenseFallback from './SuspenseFallback.jsx';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = { buttonClicked: false };
@@ -26,7 +26,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <button onClick={this.load}>Load</button>
         {this.state.buttonClicked && (
           <div>
@@ -40,7 +40,7 @@ class App extends React.Component {
             </SuspenseFallback>
           </div>
         )}
-      </React.Fragment>
+      </>
     );
   }
 }

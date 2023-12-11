@@ -2,10 +2,10 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 function FallbackDummy({ onShow }) {
-  React.useEffect(() => {
+  useEffect(() => {
     onShow && onShow();
   }, [onShow]);
   return <div />;
@@ -20,7 +20,7 @@ function SuspenseFallback({
   fallbackDuration,
   children
 }) {
-  const [showFallback, setShowFallback] = React.useState(false);
+  const [showFallback, setShowFallback] = useState(false);
 
   function handleFallbackShown() {
     setShowFallback(true);
@@ -28,18 +28,18 @@ function SuspenseFallback({
   }
 
   return (
-    <React.Fragment>
+    <>
       {showFallback && fallback}
       {/* prevent reloading of children */}
       <div hidden={showFallback}>
-        <React.Suspense
+        <Suspense
           maxDuration={maxDuration}
           fallback={<FallbackDummy onShow={handleFallbackShown} />}
         >
           {children}
-        </React.Suspense>
+        </Suspense>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 SuspenseFallback.propTypes = {
