@@ -17,7 +17,7 @@ function jsxTransformSafe(source) {
 }
 
 function JsxCompiler() {
-  const jsx = `class HelloMessageClass extends React.Component {
+  const jsx = `class HelloMessageClass extends Component {
   render() {
     return <div>Hello {this.props.name}</div>;
   }

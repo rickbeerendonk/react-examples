@@ -20,7 +20,7 @@ class JsxCompiler extends React.Component {
   constructor(props) {
     super(props);
 
-    this.jsx = `class HelloMessageClass extends React.Component {
+    this.jsx = `class HelloMessageClass extends Component {
   render() {
     return <div>Hello {this.props.name}</div>;
   }
