@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useDeferredValue, useState } from 'react';
 
-import Slow from './Slow';
+import Slow from './Slow.jsx';
 
 function App() {
-  const [name, setName] = React.useState('World');
-  const deferredName = React.useDeferredValue(name, {
+  const [name, setName] = useState('World');
+  const deferredName = useDeferredValue(name, {
     timeoutMs: 2000
   });
 
@@ -16,10 +16,10 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <input autoFocus onChange={handleChange} value={name} />
       <Slow name={deferredName} />
-    </React.Fragment>
+    </>
   );
 }
 
