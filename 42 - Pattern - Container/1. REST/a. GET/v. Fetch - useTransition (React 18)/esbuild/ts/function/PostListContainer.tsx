@@ -4,14 +4,15 @@
 import React from 'react';
 import { fetch } from 'slow-fetch';
 
-import ErrorMessage from './ErrorMessage';
-import Fetching from './Fetching';
-import PostList from './PostList';
+import ErrorMessage from './ErrorMessage.tsx';
+import Fetching from './Fetching.tsx';
+import { Post } from './Post.tsx';
+import PostList from './PostList.tsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts, setPosts] = React.useState(null);
+  const [posts, setPosts] = React.useState<Post[]>(null);
   const [error, setError] = React.useState(null);
   const [isPending, startTransition] = React.useTransition();
 

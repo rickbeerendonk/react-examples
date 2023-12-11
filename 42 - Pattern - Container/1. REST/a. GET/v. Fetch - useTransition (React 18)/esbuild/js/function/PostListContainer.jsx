@@ -1,22 +1,21 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { fetch } from 'slow-fetch';
 
-import ErrorMessage from './ErrorMessage';
-import Fetching from './Fetching';
-import { Post } from './Post';
-import PostList from './PostList';
+import ErrorMessage from './ErrorMessage.jsx';
+import Fetching from './Fetching.jsx';
+import PostList from './PostList.jsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts, setPosts] = React.useState<Post[]>(null);
-  const [error, setError] = React.useState(null);
-  const [isPending, startTransition] = React.useTransition();
+  const [posts, setPosts] = useState(null);
+  const [error, setError] = useState(null);
+  const [isPending, startTransition] = useTransition();
 
-  React.useEffect(
+  useEffect(
     () => {
       startTransition(() => {
         async function fetchData() {

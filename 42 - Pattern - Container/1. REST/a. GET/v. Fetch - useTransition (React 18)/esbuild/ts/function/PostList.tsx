@@ -1,10 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
-
-import { Post } from './Post';
-import PostComponent from './PostComponent';
+import { Post } from './Post.tsx';
+import PostComponent from './PostComponent.tsx';
 
 interface PostListProps {
   posts: Post[];
