@@ -3,11 +3,11 @@
 
 /* eslint react/prop-types:"off", react/no-did-mount-set-state:"off" */
 
-import React from 'react';
+import { createElement, Component, StrictMode } from 'react';
 
-import Hello from './Hello';
+import Hello from './Hello.js';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = { name: 'One' };
@@ -16,10 +16,10 @@ class App extends React.Component {
     this.setState({ name: 'Two' });
   }
   render() {
-    return (
-      <React.StrictMode>
-        <Hello name={this.state.name} />
-      </React.StrictMode>
+    return createElement(
+      StrictMode,
+      null,
+      createElement(Hello, { name: this.state.name })
     );
   }
 }

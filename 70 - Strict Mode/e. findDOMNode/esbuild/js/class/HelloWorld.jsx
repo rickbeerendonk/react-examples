@@ -3,12 +3,12 @@
 
 /* eslint react/no-find-dom-node:"off" */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { Component } from 'react';
+import { findDOMNode } from 'react-dom';
 
-class HelloWorld extends React.Component {
+class HelloWorld extends Component {
   componentDidMount() {
-    ReactDOM.findDOMNode(this).innerHTML = 'Hello <u>React</u>!!!';
+    findDOMNode(this).innerHTML = 'Hello <u>React</u>!!!';
   }
   render() {
     return <h1>Hello World!</h1>;

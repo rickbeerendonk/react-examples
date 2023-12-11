@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-import { logEvent } from 'utils';
+import { logEvent } from './utils.js';
 
-class Hello extends React.Component {
+class Hello extends Component {
   render() {
     return <h1>Hello {this.props.name}!</h1>;
   }

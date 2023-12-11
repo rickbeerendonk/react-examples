@@ -3,14 +3,14 @@
 
 /* eslint react/no-string-refs: off */
 
-import React from 'react';
+import { Component, createElement } from 'react';
 
-class HelloWorld extends React.Component {
+class HelloWorld extends Component {
   componentDidMount() {
     this.refs.myH1.innerHTML = 'Hello <u>React</u>!!!';
   }
   render() {
-    return <h1 ref="myH1">Hello World!</h1>;
+    return createElement('h1', { ref: 'myH1' }, 'Hello World!');
   }
 }
 
