@@ -1,23 +1,24 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useEffect, useState } from 'react';
+
 import { fetch } from 'slow-fetch';
 
-import ErrorMessage from './ErrorMessage';
-import Fetching from './Fetching';
-import Post from './Post';
+import ErrorMessage from './ErrorMessage.jsx';
+import Fetching from './Fetching.jsx';
+import Post from './Post.jsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [id, setId] = React.useState(1);
+  const [id, setId] = useState(1);
 
-  const [post, setPost] = React.useState(null);
-  const [error, setError] = React.useState(null);
-  const [isFetchingCount, setIsFetchingCount] = React.useState(0);
+  const [post, setPost] = useState(null);
+  const [error, setError] = useState(null);
+  const [isFetchingCount, setIsFetchingCount] = useState(0);
 
-  React.useEffect(
+  useEffect(
     () => {
       // 1. Create an Abort Controller
       const abortController = new AbortController();
@@ -59,7 +60,7 @@ function PostListContainer() {
   );
 
   return (
-    <React.Fragment>
+    <>
       <label>
         Post id:
         <input
@@ -77,7 +78,7 @@ function PostListContainer() {
       ) : (
         post && <Post key={post.id} title={post.title} body={post.body} />
       )}
-    </React.Fragment>
+    </>
   );
 }
 
