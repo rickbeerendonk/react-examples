@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component, createElement } from 'react';
 
-import { logEvent } from './utils';
+import { logEvent } from './utils.js';
 
-export default class Hello extends React.Component {
+export default class Hello extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 1 };
@@ -22,7 +22,7 @@ export default class Hello extends React.Component {
       )}`,
       'rendering'
     );
-    return React.createElement(
+    return createElement(
       'h1',
       null,
       'Hello ',

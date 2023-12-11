@@ -3,12 +3,12 @@
 
 /* eslint react/prop-types:"off", react/no-did-mount-set-state:"off" */
 
-import React from 'react';
+import { Component } from 'react';
 
-import Hello from './Hello';
-import { logEvent } from 'utils';
+import Hello from './Hello.jsx';
+import { logEvent } from './utils.js';
 
-export default class App extends React.Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { name: 'A' };
