@@ -2,9 +2,9 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import { Component } from 'react';
 
-class Three extends React.Component {
+class Three extends Component {
   render() {
     return <h1 style={{ color: this.context.color }}>Three</h1>;
   }

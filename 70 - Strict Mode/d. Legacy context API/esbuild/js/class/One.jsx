@@ -2,11 +2,11 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import { Component } from 'react';
 
-import Two from './Two';
+import Two from './Two.jsx';
 
-class One extends React.Component {
+class One extends Component {
   getChildContext() {
     return { color: this.props.color };
   }

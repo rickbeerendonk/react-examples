@@ -1,11 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { Component } from 'react';
 
-import Three from './Three';
+import Three from './Three.jsx';
 
-class Two extends React.Component {
+class Two extends Component {
   render() {
     return <Three />;
   }
