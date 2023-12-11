@@ -1,42 +1,16 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2016 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
-/* global React, ReactDOM */
+import { Component } from 'react';
+import { fetch } from 'slow-fetch';
 
-function Post({ title }) {
-  return <li>{title}</li>;
-}
-
-function PostList({ posts }) {
-  return (
-    <ul>
-      {posts.map(post => (
-        <Post key={post.id} title={post.title} />
-      ))}
-    </ul>
-  );
-}
-
-function ErrorMessage({ message }) {
-  return <div style={{ color: 'red' }}>Error: {message}</div>;
-}
-
-function Fetching() {
-  return (
-    <React.Fragment>
-      <img
-        src="../../../../../../../resources/oblicum-square.svg"
-        className="oblicum-spinner"
-        alt="Fetching..."
-      />
-      Fetching...
-    </React.Fragment>
-  );
-}
+import ErrorMessage from './ErrorMessage.jsx';
+import Fetching from './Fetching.jsx';
+import PostList from './PostList.jsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
-class PostListContainer extends React.Component {
+class PostListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,7 +43,7 @@ class PostListContainer extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <>
         {this.state.isFetching && <Fetching />}
 
         {this.state.error ? (
@@ -77,10 +51,9 @@ class PostListContainer extends React.Component {
         ) : (
           <PostList posts={this.state.posts} />
         )}
-      </React.Fragment>
+      </>
     );
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<PostListContainer />);
+export default PostListContainer;
