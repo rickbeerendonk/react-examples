@@ -3,8 +3,6 @@
 
 /* eslint react/display-name:"off" */
 
-import React from 'react';
-
 function HelloWorld() {
   return {
     state: { value: 'World' },
