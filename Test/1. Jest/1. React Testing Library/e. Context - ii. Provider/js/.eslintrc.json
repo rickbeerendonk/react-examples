@@ -17,6 +17,7 @@
   "rules": {
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react/no-did-mount-set-state": 2,
+    "react/no-deprecated": 1,
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 2,

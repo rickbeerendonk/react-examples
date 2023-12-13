@@ -1,12 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
+import { useEffect, useState } from 'react';
+
 function useIsOnLine() {
   // OnLine state variable
-  const [isOnLine, setIsOnLine] = React.useState(navigator.onLine);
+  const [isOnLine, setIsOnLine] = useState(navigator.onLine);
 
   // Connect event handlers (side-effects)
-  React.useEffect(() => {
+  useEffect(() => {
     // Functions to change state
     function handleOnLine() {
       setIsOnLine(true);

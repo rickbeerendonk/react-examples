@@ -24,58 +24,45 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "@types/systemjs": "0.20.6",
-    "eslint": "8.41.0",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-react": "7.32.2",
+    "@types/react": "18.2.45",
+    "@types/react-dom": "18.2.17",
+    "eslint": "8.55.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
-    "prettier": "2.8.8",
-    "rimraf": "5.0.1"
+    "prettier": "3.1.1",
+    "rimraf": "5.0.5"
   },
   "dependencies": {
-    "@babel/core": "7.21.8",
-    "@babel/preset-env": "7.21.5",
-    "@babel/preset-react": "7.22.3",
-    "@babel/standalone": "7.21.9",
-    "@esm-bundle/react": "17.0.2-fix.1",
-    "@esm-bundle/react-dom": "17.0.2-fix.0",
+    "@babel/core": "7.23.6",
+    "@babel/preset-env": "7.23.6",
+    "@babel/preset-react": "7.23.3",
+    "@babel/standalone": "7.23.6",
     "@react-spring/web": "9.7.3",
     "axios": "1.6.2",
-    "core-js": "3.30.2",
-    "create-react-class": "15.7.0",
-    "esbuild": "0.19.2",
-    "formik": "2.2.9",
+    "core-js": "3.34.0",
+    "esbuild": "0.19.9",
+    "formik": "2.4.5",
     "mime-types": "2.1.35",
-    "plugin-typescript": "8.0.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-experimental": "npm:react@experimental",
     "react-dom": "18.2.0",
     "react-dom-experimental": "npm:react-dom@experimental",
-    "react-hook-form": "7.43.9",
-    "react-redux": "8.0.5",
-    "react-router-6": "npm:react-router@6.11.2",
+    "react-hook-form": "7.49.2",
+    "react-redux": "9.0.4",
+    "react-router-6": "6.20.1",
     "react-router-dom": "npm:react-router-dom@5.3.4",
-    "react-router-dom-6": "npm:react-router-dom@6.11.2",
+    "react-router-dom-6": "6.20.1",
     "react-transition-group": "4.4.5",
-    "redux": "4.2.1",
+    "redux": "5.0.0",
     "scheduler": "0.23.0",
-    "styled-components": "5.3.9",
-    "systemjs-0.21.6": "npm:systemjs@0.21.6",
-    "systemjs-plugin-babel": "0.0.25",
-    "typescript": "5.0.4"
+    "styled-components": "6.1.1",
+    "typescript": "5.3.3"
   },
   "overrides": {
-    "plugin-typescript": {
-      "typescript": "^5.0.0"
-    },
     "react-dom-experimental": {
-      "react": "^18.0.0"
-    },
-    "react-dom-16": {
       "react": "^18.0.0"
     },
     "react-konva": {

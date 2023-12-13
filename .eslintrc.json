@@ -23,6 +23,7 @@
     "jsx-a11y/no-autofocus": 0,
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react/no-did-mount-set-state": 2,
+    "react/no-deprecated": 1,
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": 2,

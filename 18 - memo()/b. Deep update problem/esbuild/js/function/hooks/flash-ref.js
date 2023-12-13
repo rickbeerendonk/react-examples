@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-export default function useFlashRef() {
-  const ref = React.useRef();
+import { useEffect, useRef } from 'react';
 
-  React.useEffect(() => {
+export default function useFlashRef() {
+  const ref = useRef();
+
+  useEffect(() => {
     ref.current.style.transition = 'none';
     ref.current.style.backgroundColor = '#d676ff';
 
