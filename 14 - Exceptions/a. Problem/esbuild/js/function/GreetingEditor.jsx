@@ -1,9 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
+import { useLayoutEffect, useState } from 'react';
+
 function GreetingEditor() {
-  const [name, setName] = React.useState('World');
-  React.useLayoutEffect(() => {
+  const [name, setName] = useState('World');
+  useLayoutEffect(() => {
     if (name === 'Error') {
       throw new Error('Error');
     }

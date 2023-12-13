@@ -1,14 +1,16 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
+import { useEffect, useRef } from 'react';
+
 export default function MyInput({
   onBrowserChanged,
   children,
   ...passthroughProps
 }) {
-  const inputRef = React.useRef();
+  const inputRef = useRef();
 
-  React.useEffect(
+  useEffect(
     function () {
       const input = inputRef.current;
 

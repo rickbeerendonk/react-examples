@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
+import { useCallback, useState } from 'react';
+
 import Child from './Child.jsx';
 
 function Parent() {
-  const setCount = React.useState(0)[1];
+  const setCount = useState(0)[1];
   const handleRerenderClick = () => {
     // Force rerender
     setCount(c => c + 1);
@@ -14,7 +16,7 @@ function Parent() {
     alert('Method handler');
   };
 
-  const handleChildClickWithHook = React.useCallback(() => {
+  const handleChildClickWithHook = useCallback(() => {
     alert('Method handler');
   }, []);
 

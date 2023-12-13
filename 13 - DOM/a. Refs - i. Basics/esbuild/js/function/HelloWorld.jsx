@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-function HelloWorld() {
-  const myH1 = React.useRef();
+import { useLayoutEffect, useRef } from 'react';
 
-  React.useLayoutEffect(() => {
+function HelloWorld() {
+  const myH1 = useRef();
+
+  useLayoutEffect(() => {
     // myH1.current contains a reference to the real DOM node.
     myH1.current.innerHTML = 'Hello <u>React</u>!!!';
   }, []);

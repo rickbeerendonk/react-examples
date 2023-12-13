@@ -1,9 +1,12 @@
-import React from 'react';
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
+
+import { useState } from 'react';
 
 import MousePosition from './MousePosition.jsx';
 
 function App() {
-  const [visible, setVisible] = React.useState(true);
+  const [visible, setVisible] = useState(true);
 
   function handleShowHide() {
     setVisible(v => !v);

@@ -1,14 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-function GreetingEditor() {
-  const inputRef = React.useRef();
-  const [name, setName] = React.useState('World');
+import { useLayoutEffect, useRef, useState } from 'react';
 
-  React.useLayoutEffect(
-    () => inputRef.current.select(),
-    [] /* Only run on mount */
-  );
+function GreetingEditor() {
+  const inputRef = useRef();
+  const [name, setName] = useState('World');
+
+  useLayoutEffect(() => inputRef.current.select(), [] /* Only run on mount */);
 
   function handleChange(e) {
     setName(e.target.value);

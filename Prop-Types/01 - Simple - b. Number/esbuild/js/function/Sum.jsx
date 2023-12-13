@@ -2,6 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import PropTypes from 'prop-types';
+
 function Sum({ first, second }) {
   return (
     <h1>
