@@ -21,9 +21,7 @@ class EditBox extends Component {
   render() {
     /***/ console.log('EditBox - render()');
 
-    return (
-      <input autoFocus onChange={this.handleChange} value={this.props.value} />
-    );
+    return <input onChange={this.handleChange} value={this.props.value} />;
   }
 }
 

@@ -21,7 +21,7 @@ class GreetingEditor extends Component<
   render() {
     return (
       <>
-        <input autoFocus onChange={this.handleChange} value={this.state.name} />
+        <input onChange={this.handleChange} value={this.state.name} />
         <h1>Hello {this.state.name}!</h1>
         <h2>{this.state.other}</h2>
       </>

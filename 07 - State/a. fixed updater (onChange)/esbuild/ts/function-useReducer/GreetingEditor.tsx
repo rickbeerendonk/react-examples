@@ -40,7 +40,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={state.name} />
+      <input onChange={handleChange} value={state.name} />
       <h1>Hello {state.name}!</h1>
     </>
   );

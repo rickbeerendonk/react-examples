@@ -14,7 +14,7 @@ function HelloMessage() {
     <>
       <div>
         Not controlled by React:
-        <input autoFocus onChange={handleChange} defaultValue={name} />
+        <input onChange={handleChange} defaultValue={name} />
       </div>
       <div>
         Controlled by React:

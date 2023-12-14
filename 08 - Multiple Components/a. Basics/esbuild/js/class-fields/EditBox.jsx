@@ -2,9 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 function EditBox({ onChange, value }) {
-  return (
-    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
-  );
+  return <input onChange={e => onChange(e.target.value)} value={value} />;
 }
 
 export default EditBox;

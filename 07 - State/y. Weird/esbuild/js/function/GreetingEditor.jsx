@@ -24,7 +24,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={obj.name} />
+      <input onChange={handleChange} value={obj.name} />
       <h1>Name: {obj.name}</h1>
       <h2>Other: {other}</h2>
     </>

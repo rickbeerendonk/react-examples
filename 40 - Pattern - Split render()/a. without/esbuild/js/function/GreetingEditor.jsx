@@ -12,7 +12,7 @@ function GreetingEditor({ languages }) {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={name} />
+      <input onChange={handleChange} value={name} />
       {languages.includes('dk') && name && <h1>DK: Hej {name}!</h1>}
       {languages.includes('en') && name && <h1>EN: Hello {name}!</h1>}
       {languages.includes('nl') && name && <h1>NL: Hallo {name}!</h1>}

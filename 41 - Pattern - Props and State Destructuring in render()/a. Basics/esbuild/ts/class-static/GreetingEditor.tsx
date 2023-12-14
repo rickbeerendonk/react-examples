@@ -26,7 +26,7 @@ class GreetingEditor extends Component<
 
     return (
       <>
-        <input autoFocus onChange={this.handleChange} value={name} />
+        <input onChange={this.handleChange} value={name} />
         <h1>
           {greeting} {name}!
         </h1>

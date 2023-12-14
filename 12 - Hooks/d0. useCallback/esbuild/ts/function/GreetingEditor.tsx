@@ -24,7 +24,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={changeHandler} value={name} />
+      <input onChange={changeHandler} value={name} />
       <h1>Hello {name}!</h1>
       <div>Number of handlers used: {handlers.size}</div>
     </>

@@ -21,7 +21,7 @@ function ChildWithForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input autoFocus name="name" />
+      <input name="name" />
       <button type="submit">Add</button>
     </form>
   );

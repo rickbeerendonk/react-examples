@@ -20,7 +20,7 @@ function ChildWithForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input autoFocus onChange={e => setName(e.target.value)} value={name} />
+      <input onChange={e => setName(e.target.value)} value={name} />
       <button type="submit">Add</button>
     </form>
   );

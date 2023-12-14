@@ -40,7 +40,7 @@ class GreetingEditor extends Component {
   render() {
     return (
       <>
-        <input autoFocus onChange={this.handleChange} value={this.state.name} />
+        <input onChange={this.handleChange} value={this.state.name} />
         {this.renderDK()}
         {this.renderEN()}
         {this.renderNL()}

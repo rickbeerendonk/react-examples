@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={name} />
+      <input onChange={handleChange} value={name} />
       <Slow name={name} />
     </>
   );

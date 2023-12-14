@@ -19,7 +19,7 @@ function Parent() {
         Open the console and observe the number of Child renders when typing.
       </div>
       <div>
-        <input autoFocus onChange={nameChanged} value={name} />
+        <input onChange={nameChanged} value={name} />
       </div>
       <Child />
     </>

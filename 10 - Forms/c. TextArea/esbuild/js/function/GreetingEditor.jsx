@@ -12,7 +12,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <textarea autoFocus onChange={handleChange} value={name} />
+      <textarea onChange={handleChange} value={name} />
       <pre>Hello {name}!</pre>
     </>
   );

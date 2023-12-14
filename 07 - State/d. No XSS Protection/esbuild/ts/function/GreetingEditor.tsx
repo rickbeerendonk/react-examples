@@ -14,7 +14,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={name} size={50} />
+      <input onChange={handleChange} value={name} size={50} />
       <h1>
         Hello <span dangerouslySetInnerHTML={{ __html: name }} />!
       </h1>

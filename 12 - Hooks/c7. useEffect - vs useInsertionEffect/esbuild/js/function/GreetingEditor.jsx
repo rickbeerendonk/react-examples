@@ -38,7 +38,7 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={name} />
+      <input onChange={handleChange} value={name} />
       <h1>{name}</h1>
     </>
   );

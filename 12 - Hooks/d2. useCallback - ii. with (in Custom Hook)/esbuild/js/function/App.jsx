@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <input type="checkbox" autoFocus onChange={toggle} checked={value} />
+      <input type="checkbox" onChange={toggle} checked={value} />
       {` => ${value}`}
     </>
   );

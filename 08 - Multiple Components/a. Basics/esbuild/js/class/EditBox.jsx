@@ -4,9 +4,7 @@
 /* Inline function */
 
 function EditBox({ onChange, value }) {
-  return (
-    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
-  );
+  return <input onChange={e => onChange(e.target.value)} value={value} />;
 }
 
 /* method */
@@ -23,7 +21,7 @@ class EditBox extends Component {
   }
   render() {
     return (
-      <input autoFocus onChange={this.handleChange} value={this.props.value} />
+      <input onChange={this.handleChange} value={this.props.value} />
     );
   }
 }

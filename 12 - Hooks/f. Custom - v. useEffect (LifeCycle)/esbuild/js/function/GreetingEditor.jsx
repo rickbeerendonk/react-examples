@@ -24,9 +24,9 @@ function GreetingEditor() {
 
   return (
     <>
-      <input autoFocus onChange={handleChange1} value={name} />
+      <input onChange={handleChange1} value={name} />
       <h1>Hello {name}!</h1>
-      <input autoFocus onChange={handleChange2} value={other} />
+      <input onChange={handleChange2} value={other} />
       <h2>Hello {other}!</h2>
     </>
   );

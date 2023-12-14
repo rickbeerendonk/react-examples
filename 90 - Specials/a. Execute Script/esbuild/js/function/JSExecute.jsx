@@ -22,7 +22,7 @@ alert(foo('abc', 'def'));`);
 
   return (
     <>
-      <textarea autoFocus onChange={handleChange} value={script} />
+      <textarea onChange={handleChange} value={script} />
       <pre>{script}</pre>
     </>
   );

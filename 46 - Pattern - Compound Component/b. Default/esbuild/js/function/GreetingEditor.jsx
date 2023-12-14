@@ -21,9 +21,7 @@ function GreetingEditor({
   );
 }
 GreetingEditor.Input = function GreetingEditor_Input({ name, setName }) {
-  return (
-    <input autoFocus onChange={e => setName(e.target.value)} value={name} />
-  );
+  return <input onChange={e => setName(e.target.value)} value={name} />;
 };
 GreetingEditor.Text = function GreetingEditor_Text({ name }) {
   return <h1>Hello {name}!</h1>;

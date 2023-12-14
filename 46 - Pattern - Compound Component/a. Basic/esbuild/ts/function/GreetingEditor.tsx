@@ -31,9 +31,7 @@ GreetingEditor.Input = function GreetingEditor_Input({
   name,
   setName
 }: GreetingEditorInputProps) {
-  return (
-    <input autoFocus onChange={e => setName(e.target.value)} value={name} />
-  );
+  return <input onChange={e => setName(e.target.value)} value={name} />;
 };
 
 type GreetingEditorTextProps = {

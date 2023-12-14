@@ -16,7 +16,7 @@ class GreetingEditor extends Component {
   render() {
     return (
       <>
-        <input autoFocus onChange={this.handleChange} value={this.state.name} />
+        <input onChange={this.handleChange} value={this.state.name} />
         {this.props.languages.includes('dk') && this.state.name && (
           <h1>DK: Hej {this.state.name}!</h1>
         )}

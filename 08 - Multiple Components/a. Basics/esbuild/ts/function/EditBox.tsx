@@ -9,9 +9,7 @@ interface EditBoxProps {
 /* Inline function */
 
 function EditBox({ onChange, value }: EditBoxProps) {
-  return (
-    <input autoFocus onChange={e => onChange(e.target.value)} value={value} />
-  );
+  return <input onChange={e => onChange(e.target.value)} value={value} />;
 }
 
 /* Separate function */
@@ -23,7 +21,7 @@ function EditBox({ onChange, value }: EditBoxProps) {
   }
 
   return (
-    <input autoFocus onChange={handleChange} value={value} />
+    <input onChange={handleChange} value={value} />
   );
 }
 */

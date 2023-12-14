@@ -25,7 +25,7 @@ function GreetingEditor({ languages }) {
 
   return (
     <>
-      <input autoFocus onChange={handleChange} value={name} />
+      <input onChange={handleChange} value={name} />
       {renderDK()}
       {renderEN()}
       {renderNL()}
