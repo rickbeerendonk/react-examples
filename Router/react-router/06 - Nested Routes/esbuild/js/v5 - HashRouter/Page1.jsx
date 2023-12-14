@@ -2,9 +2,9 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
 
-import SubPage1 from './SubPage1';
-import SubPage2 from './SubPage2';
-import SubPage3 from './SubPage3';
+import SubPage1 from './SubPage1.jsx';
+import SubPage2 from './SubPage2.jsx';
+import SubPage3 from './SubPage3.jsx';
 
 function Page1() {
   const { path } = useRouteMatch();

@@ -2,7 +2,9 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 import { HashRouter, Route, Link } from 'react-router-dom';
 
-import { Page } from './Page';
+import Home from './Home.jsx';
+import Page1 from './Page1.jsx';
+import Page2 from './Page2.jsx';
 
 function App() {
   return (
@@ -10,17 +12,21 @@ function App() {
       <header>
         <h1>App</h1>
         <nav>
-          {Array.from([1, 2, 3, 4, 5], i => (
-            <Link key={i} to={`/${i}`}>
-              Page {i}
-            </Link>
-          ))}
+          <Link to="/">Home</Link>
+          <Link to="/page1">Page 1</Link>
+          <Link to="/page2">Page 2</Link>
         </nav>
       </header>
 
       <main>
-        <Route path="/:id">
-          <Page />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
         </Route>
       </main>
 

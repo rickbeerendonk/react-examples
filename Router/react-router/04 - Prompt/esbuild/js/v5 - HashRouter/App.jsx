@@ -2,9 +2,9 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 import { HashRouter, Route, Link } from 'react-router-dom';
 
-import Home from './Home';
-import Page1 from './Page1';
-import Page2 from './Page2';
+import Home from './Home.jsx';
+import Page1 from './Page1.jsx';
+import Page2 from './Page2.jsx';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <h1>App</h1>
         <nav>
           <Link to="/">Home</Link>
-          <Link to="/page1">Page 1</Link>
+          <Link to="/page1">Page 1 (with prompt)</Link>
           <Link to="/page2">Page 2</Link>
         </nav>
       </header>

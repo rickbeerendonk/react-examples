@@ -4,9 +4,9 @@
 import { lazy, Suspense } from 'react';
 import { HashRouter, Route, Link } from 'react-router-dom';
 
-import Home from './Home';
-const Page1 = lazy(() => import('./Page1'));
-const Page2 = lazy(() => import('./Page2'));
+import Home from './Home.jsx';
+const Page1 = lazy(() => import('./Page1.jsx'));
+const Page2 = lazy(() => import('./Page2.jsx'));
 
 function App() {
   return (

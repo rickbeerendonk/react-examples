@@ -10,6 +10,7 @@
 
     <script src="../../../../../../utils/document-title.js"></script>
     <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
+    <link rel="stylesheet" href="index.css" />
 
     <script>
       process = {
@@ -19,6 +20,19 @@
       };
     </script>
     <script src="../../../../../../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.js"></script>
+    <script>
+      module = {
+        exports: null
+      };
+    </script>
+    <script src="../../../../../../node_modules/isarray/index.js"></script>
+    <script>
+      function require(value) {
+        if (value === 'isarray') {
+          return module.exports;
+        }
+      }
+    </script>
     <script src="../../../../../../node_modules/path-to-regexp/index.js"></script>
     <script src="../../../../../../node_modules/prop-types/prop-types.js"></script>
     <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
