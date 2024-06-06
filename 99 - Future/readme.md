@@ -99,7 +99,6 @@ unstable_Profiler: REACT_PROFILER_TYPE,
 
 createElement: createElementWithValidation,
 cloneElement: cloneElementWithValidation,
-createFactory: createFactoryWithValidation,
 isValidElement: isValidElement,
 
 version: ReactVersion,

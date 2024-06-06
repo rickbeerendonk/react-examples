@@ -4,7 +4,7 @@
 import Greeting from '../src/Greeting.jsx';
 
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import ShallowRenderer from 'react-shallow-renderer';
 import expect from 'expect';
 
 describe('Greeting', () => {
