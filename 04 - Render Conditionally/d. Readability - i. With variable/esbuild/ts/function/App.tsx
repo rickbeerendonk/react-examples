@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-import React from 'react';
+import { JSX } from 'react/jsx-dev-runtime';
 
 function App() {
   const show = false;
 
-  let component;
+  let component: JSX.Element;
   if (show) {
     component = <Invisible />;
   } else {

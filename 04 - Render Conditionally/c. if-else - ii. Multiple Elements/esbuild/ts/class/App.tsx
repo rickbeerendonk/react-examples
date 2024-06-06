@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class App extends Component {
   render() {
