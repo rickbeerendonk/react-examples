@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React, { ChangeEvent } from 'react';
+import { ChangeEvent } from 'react';
 
 const App = () => {
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
