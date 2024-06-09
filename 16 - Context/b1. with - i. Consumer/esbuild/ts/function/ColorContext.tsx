@@ -3,7 +3,11 @@
 
 import { createContext } from 'react';
 
-const ColorContext = createContext({ color: 'orange' });
+interface ColorContextIntf {
+  color: string;
+}
+
+const ColorContext = createContext<ColorContextIntf>({ color: 'orange' });
 ColorContext.displayName = 'ColorContext';
 
 export default ColorContext;
