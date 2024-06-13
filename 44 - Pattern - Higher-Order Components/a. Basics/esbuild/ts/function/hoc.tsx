@@ -11,14 +11,16 @@ interface WithExtrasProps {
 const withExtras = <P extends object>(
   WrappedComponent: React.ComponentType<P>
 ) => {
-  const WithExtras: React.FC<WithExtrasProps & P> = ({
+  function WithExtras({
     extraColor,
     ...passThroughProps
-  }) => (
-    <div style={{ color: extraColor }}>
-      <WrappedComponent {...(passThroughProps as P)} />
-    </div>
-  );
+  }: WithExtrasProps & P) {
+    return (
+      <div style={{ color: extraColor }}>
+        <WrappedComponent {...(passThroughProps as P)} />
+      </div>
+    );
+  }
 
   return WithExtras;
 };
