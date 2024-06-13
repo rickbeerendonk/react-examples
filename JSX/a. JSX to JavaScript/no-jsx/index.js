@@ -75,7 +75,6 @@ var styles = {
   }
 };
 
-ReactDOM.render(
-  React.createElement(JsxCompiler),
-  document.getElementById('root')
+ReactDOM.createRoot(document.getElementById('root')).render(
+  React.createElement(JsxCompiler)
 );

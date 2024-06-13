@@ -6,4 +6,4 @@ class HelloReact extends React.Component {
   }
 }
 
-ReactDOM.render(<HelloReact />, document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root')).render(<HelloReact />);

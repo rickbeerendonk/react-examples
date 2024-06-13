@@ -8,4 +8,4 @@ import ClickMe from './ClickMe';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<ClickMe />, root);
+ReactDOM.createRoot(root).render(<ClickMe />);

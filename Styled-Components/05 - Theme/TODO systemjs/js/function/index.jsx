@@ -12,9 +12,8 @@ const theme = {
   disabled: 'lightblue'
 };
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
     <App />
-  </ThemeProvider>,
-  document.getElementById('root')
+  </ThemeProvider>
 );

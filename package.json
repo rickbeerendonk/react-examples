@@ -30,9 +30,9 @@
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "husky": "8.0.3",
-    "prettier": "3.1.1",
-    "rimraf": "5.0.5"
+    "husky": "9.0.11",
+    "prettier": "3.3.2",
+    "rimraf": "5.0.7"
   },
   "dependencies": {
     "@babel/core": "7.23.6",
@@ -59,9 +59,9 @@
     "react-strict-dom": "0.0.1",
     "react-transition-group": "4.4.5",
     "redux": "5.0.1",
-    "scheduler": "0.23.0",
-    "styled-components": "6.1.1",
-    "@stylexjs/stylex": "0.5.1",
+    "scheduler": "0.23.2",
+    "styled-components": "6.1.11",
+    "@stylexjs/stylex": "0.6.1",
     "typescript": "5.4.5"
   },
   "overrides": {

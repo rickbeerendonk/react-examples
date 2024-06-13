@@ -23,7 +23,8 @@ const styles = {
   }
 };
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   React.createElement(Greeting, {
     style: { background: 'orange', color: 'blue' }
   }),

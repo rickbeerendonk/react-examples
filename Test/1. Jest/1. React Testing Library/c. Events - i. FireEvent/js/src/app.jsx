@@ -9,10 +9,9 @@ import MyButton from './MyButton';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(
+ReactDOM.createRoot(root).render(
   <>
     <EditBox value="World" onChange={() => {}} />
     <MyButton onClick={() => {}} />
-  </>,
-  root
+  </>
 );

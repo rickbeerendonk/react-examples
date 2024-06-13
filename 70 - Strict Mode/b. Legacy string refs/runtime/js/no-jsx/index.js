@@ -13,7 +13,6 @@ class HelloWorld extends React.Component {
   }
 }
 
-ReactDOM.render(
-  React.createElement(React.StrictMode, null, React.createElement(HelloWorld)),
-  document.getElementById('root')
+ReactDOM.createRoot(document.getElementById('root')).render(
+  React.createElement(React.StrictMode, null, React.createElement(HelloWorld))
 );

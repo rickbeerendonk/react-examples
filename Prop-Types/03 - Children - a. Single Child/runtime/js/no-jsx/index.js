@@ -16,12 +16,11 @@ List.propTypes = {
   children: PropTypes.element.isRequired
 };
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   React.createElement(
     List,
     null,
     React.createElement('span', null, 'Legal'),
     React.createElement('span', null, 'Illegal')
-  ),
-  document.getElementById('root')
+  )
 );

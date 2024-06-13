@@ -18,10 +18,9 @@ List.propTypes = {
   children: PropTypes.element.isRequired
 };
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <List>
     <span>Legal</span>
     <span>Illegal</span>
-  </List>,
-  document.getElementById('root')
+  </List>
 );

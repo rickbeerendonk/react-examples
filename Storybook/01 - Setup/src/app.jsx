@@ -8,4 +8,4 @@ import GreetingEditor from './containers/GreetingEditor';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<GreetingEditor />, root);
+ReactDOM.createRoot(root).render(<GreetingEditor />);

@@ -8,4 +8,4 @@ import Greeting from './Greeting';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.render(<Greeting />, root);
+ReactDOM.createRoot(root).render(<Greeting />);
