@@ -3,7 +3,7 @@
 
 import { Component } from 'react';
 
-import ColorContext from './ColorContext.jsx';
+import ColorContext from './ColorContext.js';
 
 class Bottom extends Component {
   static contextType = ColorContext; // Alternative to using Consumer

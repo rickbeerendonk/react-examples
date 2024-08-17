@@ -3,29 +3,18 @@
 
 import { Component } from 'react';
 
-import ColorContext from './ColorContext.jsx';
+import ColorContext from './ColorContext.js';
 import Middle from './Middle.jsx';
 import Bottom from './Bottom.jsx';
 
 class Top extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { color: this.props.color };
-
-    this.handleSwitch = this.handleSwitch.bind(this);
-  }
-  handleSwitch() {
-    this.setState(state => ({
-      color: state.color === 'red' ? 'green' : 'red'
-    }));
-  }
   render() {
     return (
+      // React 19+: <ColorContext> is enough, no Provider needed.
       <>
         <ColorContext.Provider value={{ color: 'blue' }}>
-          <ColorContext.Provider value={{ color: this.state.color }}>
+          <ColorContext.Provider value={{ color: this.props.color }}>
             <Middle />
-            <button onClick={this.handleSwitch}>Switch color</button>
           </ColorContext.Provider>
 
           <Bottom />

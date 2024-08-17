@@ -6,11 +6,9 @@ import { useContext } from 'react';
 import StateContext from './StateContext.js';
 
 function Bottom() {
-  const {
-    state: { color }
-  } = useContext(StateContext);
+  const ctx = useContext(StateContext);
 
-  return <h1 style={{ color }}>Bottom</h1>;
+  return <h1 style={{ color: ctx.state.color }}>Bottom</h1>;
 }
 
 export default Bottom;

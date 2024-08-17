@@ -1,22 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { useState } from 'react';
-
-import ColorContext from './ColorContext.jsx';
+import ColorContext from './ColorContext.js';
 import Middle from './Middle.jsx';
 
-function Top(props) {
-  const [color, setColor] = useState(props.color);
-
-  function handleSwitch() {
-    setColor(c => (c === 'red' ? 'green' : 'red'));
-  }
-
+function Top({ color }) {
   return (
     <ColorContext.Provider value={{ color }}>
       <Middle />
-      <button onClick={handleSwitch}>Switch color</button>
     </ColorContext.Provider>
   );
 }

@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 
-import ColorContext from './ColorContext.tsx';
+import ColorContext from './ColorContext.ts';
 
 function Bottom() {
   const { color } = useContext(ColorContext);

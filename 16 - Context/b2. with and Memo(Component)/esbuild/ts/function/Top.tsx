@@ -3,8 +3,8 @@
 
 import { useState } from 'react';
 
-import ColorContext from './ColorContext.js';
-import Middle from './Middle.jsx';
+import ColorContext from './ColorContext.ts';
+import Middle from './Middle.tsx';
 
 function Top(props) {
   const [color, setColor] = useState(props.color);

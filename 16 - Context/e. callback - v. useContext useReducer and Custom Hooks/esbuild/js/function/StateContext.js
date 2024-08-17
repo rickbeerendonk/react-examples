@@ -12,6 +12,7 @@ StateContext.displayName = 'StateContext'; // For DevTools
 export function StateProvider(props) {
   const [state, dispatch] = useReducer(props.reducer, props.initialState);
   return (
+    // React 19+: <ColorContext> is enough, no Provider needed.
     <StateContext.Provider value={{ state, dispatch }}>
       {props.children}
     </StateContext.Provider>

@@ -7,7 +7,7 @@ import Middle from './Middle.jsx';
 function reducer(state, action) {
   switch (action.type) {
     case 'SWITCH':
-      return { ...state, color: state.color === 'red' ? 'green' : 'red' };
+      return { ...state, color: state.color === 'red' ? 'blue' : 'red' };
   }
 }
 

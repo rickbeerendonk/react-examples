@@ -3,7 +3,7 @@
 
 import { Component } from 'react';
 
-import BackgroundContext from './BackgroundContext.jsx';
+import BackgroundContext from './BackgroundContext.js';
 import Bottom from './Bottom.jsx';
 
 class Middle extends Component {
@@ -14,6 +14,7 @@ class Middle extends Component {
   }
   render() {
     return (
+      // React 19+: <ColorContext> is enough, no Provider needed.
       <BackgroundContext.Provider value={{ color: 'lightgray' }}>
         <Bottom />
       </BackgroundContext.Provider>

@@ -3,8 +3,8 @@
 
 import { Component } from 'react';
 
-import BackgroundContext from './BackgroundContext.jsx';
-import ColorContext from './ColorContext.jsx';
+import BackgroundContext from './BackgroundContext.js';
+import ColorContext from './ColorContext.js';
 
 class Bottom extends Component {
   render() {

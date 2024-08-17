@@ -10,27 +10,11 @@ interface TopProps {
   color: string;
 }
 
-interface TopState {
-  color: string;
-}
-
-class Top extends Component<TopProps, TopState> {
-  constructor(props) {
-    super(props);
-    this.state = { color: this.props.color };
-
-    this.handleSwitch = this.handleSwitch.bind(this);
-  }
-  handleSwitch() {
-    this.setState(state => ({
-      color: state.color === 'red' ? 'green' : 'red'
-    }));
-  }
+class Top extends Component<TopProps> {
   render() {
     return (
-      <ColorContext.Provider value={{ color: this.state.color }}>
+      <ColorContext.Provider value={{ color: this.props.color }}>
         <Middle />
-        <button onClick={this.handleSwitch}>Switch color</button>
       </ColorContext.Provider>
     );
   }

@@ -3,7 +3,7 @@
 
 import { useContext, memo } from 'react';
 
-import ColorContext from './ColorContext.js';
+import ColorContext from './ColorContext.ts';
 
 function Bottom() {
   const { color } = useContext(ColorContext);

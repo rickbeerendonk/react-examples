@@ -1,25 +1,17 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import { useState } from 'react';
-
-import ColorContext from './ColorContext.jsx';
+import ColorContext from './ColorContext.js';
 import Middle from './Middle.jsx';
 import Bottom from './Bottom.jsx';
 
-function Top(props) {
-  const [color, setColor] = useState(props.color);
-
-  function handleSwitch() {
-    setColor(c => (c === 'red' ? 'green' : 'red'));
-  }
-
+function Top({ color }) {
   return (
+    // React 19+: <ColorContext> is enough, no Provider needed.
     <>
       <ColorContext.Provider value={{ color: 'blue' }}>
         <ColorContext.Provider value={{ color }}>
           <Middle />
-          <button onClick={handleSwitch}>Switch color</button>
         </ColorContext.Provider>
 
         <Bottom />

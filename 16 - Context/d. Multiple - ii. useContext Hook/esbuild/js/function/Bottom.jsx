@@ -3,14 +3,18 @@
 
 import { useContext } from 'react';
 
-import BackgroundContext from './BackgroundContext.jsx';
-import ColorContext from './ColorContext.jsx';
+import BackgroundContext from './BackgroundContext.js';
+import ColorContext from './ColorContext.js';
 
 function Bottom() {
-  const { color: background } = useContext(BackgroundContext);
-  const { color } = useContext(ColorContext);
+  const ctxBackground = useContext(BackgroundContext);
+  const ctxColor = useContext(ColorContext);
 
-  return <h1 style={{ background, color }}>Bottom</h1>;
+  return (
+    <h1 style={{ background: ctxBackground.color, color: ctxColor.color }}>
+      Bottom
+    </h1>
+  );
 }
 
 export default Bottom;

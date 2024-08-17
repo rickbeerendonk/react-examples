@@ -3,17 +3,18 @@
 
 import { useState } from 'react';
 
-import ColorContext from './ColorContext.jsx';
+import ColorContext from './ColorContext.js';
 import Middle from './Middle.jsx';
 
 function Top(props) {
   const [color, setColor] = useState(props.color);
 
   function handleSwitch() {
-    setColor(c => (c === 'red' ? 'green' : 'red'));
+    setColor(c => (c === 'red' ? 'blue' : 'red'));
   }
 
   return (
+    // React 19+: <ColorContext> is enough, no Provider needed.
     <ColorContext.Provider value={{ color, handleSwitch }}>
       <Middle />
     </ColorContext.Provider>

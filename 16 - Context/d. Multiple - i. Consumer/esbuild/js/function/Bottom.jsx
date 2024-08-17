@@ -1,8 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import BackgroundContext from './BackgroundContext.jsx';
-import ColorContext from './ColorContext.jsx';
+import BackgroundContext from './BackgroundContext.js';
+import ColorContext from './ColorContext.js';
 
 function Bottom() {
   return (

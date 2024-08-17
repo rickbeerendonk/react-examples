@@ -1,11 +1,15 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2020 Rick Beerendonk          !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
-import ColorContext from './ColorContext.js';
-import Middle from './Middle.jsx';
-import Bottom from './Bottom.jsx';
+import ColorContext from './ColorContext.ts';
+import Bottom from './Bottom.tsx';
+import Middle from './Middle.tsx';
 
-function Top({ color }) {
+interface TopProps {
+  color: string;
+}
+
+function Top({ color }: TopProps) {
   return (
     // React 19+: <ColorContext> is enough, no Provider needed.
     <>
