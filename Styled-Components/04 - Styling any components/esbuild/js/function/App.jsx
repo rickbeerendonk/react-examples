@@ -2,7 +2,7 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 import Greeting from './Greeting.jsx';
-import { StyledGreeting } from './StyledGreeting';
+import { StyledGreeting } from './StyledGreeting.jsx';
 
 function App() {
   return (

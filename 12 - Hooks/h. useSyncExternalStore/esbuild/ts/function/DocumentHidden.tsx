@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useSyncExternalStore } from 'react';
 
 function getSnapshot() {
   return document.hidden;
@@ -19,7 +19,7 @@ function subscribe(callback: () => void) {
 }
 
 function DocumentHidden() {
-  const isHidden = React.useSyncExternalStore(subscribe, getSnapshot);
+  const isHidden = useSyncExternalStore(subscribe, getSnapshot);
 
   console.log('Hidden: ', isHidden);
 

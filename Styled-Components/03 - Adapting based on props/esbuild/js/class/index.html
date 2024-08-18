@@ -13,11 +13,36 @@
 
     <script src="../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script>
+      const process = { env: { NODE_ENV: 'development' } };
+      let global = window;
+      let exports = {};
+      function require() {
+        return global.React;
+      }
+    </script>
+    <script src="../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
+    <!-- Capture shallowEqual function -->
+    <script>
+      module = { exports };
+    </script>
+    <script src="../../../../../node_modules/shallowequal/index.js"></script>
+    <script>
+      shallowEqual = module.exports;
+    </script>
     <script type="importmap">
       {
         "imports": {
           "react": "../../../../../resources/react.development.mjs",
-          "react-dom/client": "../../../../../resources/react-dom.development.mjs"
+          "react/jsx-runtime": "../../../../../resources/react-jsx-runtime.development.mjs",
+          "react-dom/client": "../../../../../resources/react-dom.development.mjs",
+          "styled-components": "../../../../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+          "tslib": "../../../../../node_modules/tslib/tslib.es6.mjs",
+          "@emotion/is-prop-valid": "../../../../../node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js",
+          "@emotion/memoize": "../../../../../node_modules/@emotion/memoize/dist/emotion-memoize.esm.js",
+          "@emotion/unitless": "../../../../../node_modules/@emotion/unitless/dist/emotion-unitless.esm.js",
+          "shallowequal": "../../../../../resources/shallowequal.mjs",
+          "stylis": "../../../../../node_modules/stylis/dist/stylis.mjs"
         }
       }
     </script>

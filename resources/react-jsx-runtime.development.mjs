@@ -3,4 +3,4 @@
 
 export default exports;
 
-export const { jsxDEV: jsx } = exports;
+export const { Fragment, jsx, jsxs } = exports;

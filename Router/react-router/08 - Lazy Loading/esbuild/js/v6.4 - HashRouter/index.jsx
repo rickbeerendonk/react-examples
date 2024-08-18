@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React from 'react';
+import { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import Root from './Root.jsx';
 import Home from './routes/Home.jsx';
-const Page1 = React.lazy(() => import('./routes/Page1.jsx'));
-const Page2 = React.lazy(() => import('./routes/Page2.jsx'));
+const Page1 = lazy(() => import('./routes/Page1.jsx'));
+const Page2 = lazy(() => import('./routes/Page2.jsx'));
 
 const router = createHashRouter([
   {
@@ -22,17 +22,17 @@ const router = createHashRouter([
       {
         path: 'page1',
         element: (
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Page1 />
-          </React.Suspense>
+          </Suspense>
         )
       },
       {
         path: 'page2',
         element: (
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Page2 />
-          </React.Suspense>
+          </Suspense>
         )
       }
     ]

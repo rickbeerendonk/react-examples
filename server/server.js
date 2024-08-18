@@ -178,7 +178,7 @@ const server = http.createServer(function (request, response) {
                 sourcemap: 'inline',
                 sourcefile: fileName,
                 loader: 'jsx',
-                jsx: 'transform' // 'automatic'
+                jsx: 'automatic' // 'transform'
               });
               content = result.code;
 
@@ -198,7 +198,7 @@ const server = http.createServer(function (request, response) {
                 sourcemap: 'inline',
                 sourcefile: fileName,
                 loader: 'tsx',
-                jsx: 'transform' // 'automatic'
+                jsx: 'automatic' // 'transform'
               });
               content = result.code;
 

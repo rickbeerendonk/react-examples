@@ -1,7 +1,6 @@
 /*! Copyright © 2020 Rick Beerendonk !*/
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import React from 'react';
 import ReactDOM from 'react-dom';
 
 import PostListContainer from './PostListContainer';

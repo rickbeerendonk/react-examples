@@ -2,7 +2,6 @@
 /*! Copyright © 2020 Rick Beerendonk !*/
 
 import { useQuery, gql } from '@apollo/client';
-import React from 'react';
 import { hot } from 'react-hot-loader/root';
 
 import ErrorMessage from './ErrorMessage';

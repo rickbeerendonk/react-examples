@@ -13,10 +13,20 @@
 
     <script src="../../../../../../node_modules/react-experimental/umd/react.development.js"></script>
     <script src="../../../../../../node_modules/react-dom-experimental/umd/react-dom.development.js"></script>
+    <script>
+      const process = { env: { NODE_ENV: 'development' } };
+      let global = window;
+      let exports = {};
+      function require() {
+        return global.React;
+      }
+    </script>
+    <script src="../../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
     <script type="importmap">
       {
         "imports": {
           "react": "../../../../../../resources/react-experimental.development.mjs",
+          "react/jsx-runtime": "../../../../../../resources/react-jsx-runtime.development.mjs",
           "react-dom/client": "../../../../../../resources/react-dom-experimental.development.mjs"
         }
       }

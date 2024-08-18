@@ -31,9 +31,21 @@
 
     <script src="../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script>
+      process = { env: { NODE_ENV: 'development' } };
+      let global = window;
+      let exports = {};
+      function require() {
+        return global.React;
+      }
+    </script>
+    <script src="../../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
     <script type="importmap">
       {
         "imports": {
+          "react": "../../../../../resources/react.development.mjs",
+          "react/jsx-runtime": "../../../../../../resources/react-jsx-runtime.development.mjs",
+          "react-dom/client": "../../../../../resources/react-dom.development.mjs",
           "deepmerge": "../../../../../node_modules/deepmerge/dist/es.js",
           "formik": "../../../../../node_modules/formik/dist/formik.esm.js",
           "hoist-non-react-statics": "../../../../../resources/hoist-non-react-statics.mjs",
@@ -41,8 +53,6 @@
           "lodash-es/clone": "../../../../../node_modules/lodash-es/clone.js",
           "lodash-es/isPlainObject": "../../../../../node_modules/lodash-es/isPlainObject.js",
           "lodash-es/toPath": "../../../../../node_modules/lodash-es/toPath.js",
-          "react": "../../../../../resources/react.development.mjs",
-          "react-dom/client": "../../../../../resources/react-dom.development.mjs",
           "react-fast-compare": "../../../../../resources/react-fast-compare.mjs",
           "tiny-warning": "../../../../../node_modules/tiny-warning/dist/tiny-warning.esm.js"
         }

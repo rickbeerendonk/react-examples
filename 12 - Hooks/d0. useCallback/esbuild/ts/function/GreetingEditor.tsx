@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { useState } from 'react';
 
 const handlers = new Set();
 
 function GreetingEditor() {
-  const [name, setName] = React.useState('World');
+  const [name, setName] = useState('World');
 
   const changeHandler = function (e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);

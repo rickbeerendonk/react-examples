@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React from 'react';
+import { memo } from 'react';
 
 interface ChildProps {
   name: string;
@@ -14,4 +14,4 @@ const Child = ({ name, onClick }: ChildProps) => {
   return <button onClick={() => onClick()}>Child: {name}</button>;
 };
 
-export default React.memo(Child);
+export default memo(Child);

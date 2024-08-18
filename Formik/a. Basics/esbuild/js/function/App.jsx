@@ -19,7 +19,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name: </label>
           <Field id="name" name="name" />
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       )}
     </Formik>
