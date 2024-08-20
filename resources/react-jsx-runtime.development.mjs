@@ -1,6 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-export default exports;
+/* global ReactJSXRuntime */
 
-export const { Fragment, jsx, jsxs } = exports;
+export default ReactJSXRuntime;
+
+export const { Fragment, jsx, jsxs } = ReactJSXRuntime;
