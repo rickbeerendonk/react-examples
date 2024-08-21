@@ -22,7 +22,7 @@ function App() {
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name: </label>
       <input id="name" onChange={e => setName(e.target.value)} value={name} />
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
