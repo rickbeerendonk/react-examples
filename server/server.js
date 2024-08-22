@@ -164,7 +164,7 @@ const server = http.createServer(function (request, response) {
           );
         }
       } else {
-        if (filePath.includes('esbuild')) {
+        if (filePath.includes('esbuild') || filePath.includes('esm')) {
           const { name, ext } = path.parse(filePath);
           const fileName = name + ext;
 
