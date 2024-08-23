@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2024 Rick Beerendonk          !*/
 
 import { createRoot } from 'react-dom/client';
 
-import Top from './Top.jsx';
+import App from './App.jsx';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<Top color="red" />);
+root.render(<App />);
