@@ -13,6 +13,19 @@
 
     <script src="../../../../../node_modules/react/umd/react.development.js"></script>
     <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script>
+      const process = { env: { NODE_ENV: 'development' } };
+      let global = window;
+      let exports = {};
+      function require() {
+        return global.React;
+      }
+    </script>
+    <script src="../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
+    <script>
+      ReactJSXRuntime = exports;
+      exports = {};
+    </script>
     <script type="importmap">
       {
         "imports": {
@@ -22,6 +35,7 @@
           "@react-spring/shared": "../../../../../node_modules/@react-spring/shared/dist/react-spring_shared.modern.mjs",
           "@react-spring/types": "../../../../../node_modules/@react-spring/types/dist/react-spring_types.modern.mjs",
           "react": "../../../../../resources/react.development.mjs",
+          "react/jsx-runtime": "../../../../../resources/react-jsx-runtime.development.mjs",
           "react-dom": "../../../../../resources/react-dom.development.mjs",
           "react-dom/client": "../../../../../resources/react-dom.development.mjs",
           "react-spring": "../../../../../node_modules/@react-spring/web/dist/react-spring_web.modern.mjs"
