@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <GreetingWithExtras extraColor="red" name="World" />
-      <FooWithExtras extraColor="green" />
+      <FooWithExtras extraColor="blue" />
     </>
   );
 }
