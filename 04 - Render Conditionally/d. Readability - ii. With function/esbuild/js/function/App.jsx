@@ -4,7 +4,7 @@
 function App() {
   const show = false;
 
-  function component() {
+  function renderComponent() {
     if (show) {
       return <Invisible />;
     }
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <h3>Conditional:</h3>
-      {component()}
+      {renderComponent()}
     </>
   );
 }
