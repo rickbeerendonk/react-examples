@@ -10,9 +10,10 @@ function App() {
     async (previousState, formData) => {
       setList(lst => [...lst, formData.get('name')]);
 
-      // handle success
+      // Handle success
       return null;
     },
+    // Initial state
     null
   );
 
