@@ -3,8 +3,11 @@
 
 import { lazy, Suspense, useState } from 'react';
 
-const Greeting = lazy(() =>
-  Promise.resolve({ default: () => <p>Greeting!</p> })
+const Greeting = lazy(
+  () =>
+    new Promise(resolve =>
+      setTimeout(() => resolve({ default: () => <p>Greeting!</p> }), 1000)
+    )
 );
 
 function App() {
