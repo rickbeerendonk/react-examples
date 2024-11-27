@@ -2,6 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import PropTypes from 'prop-types';
+
 function Greeting(props) {
   return <h1>Hello {props.name}!</h1>;
 }
