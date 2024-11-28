@@ -15,6 +15,10 @@ function useIsDocumentHidden() {
     }
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Prevent race condition:
+    setIsHidden(document.hidden);
+
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
