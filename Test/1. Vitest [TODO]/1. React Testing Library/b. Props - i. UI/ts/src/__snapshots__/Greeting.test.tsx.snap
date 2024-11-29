@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Greeting > renders hello world snapshot when name is world 1`] = `
+<h1
+  class="greeting"
+>
+  Hello 
+  World
+  !
+</h1>
+`;
