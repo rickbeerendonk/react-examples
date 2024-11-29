@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "start": "vite --open",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test-coverage": "vitest run --coverage"
   },
   "dependencies": {
     "react": "^18.3.1",
