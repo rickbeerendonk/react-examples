@@ -3,7 +3,7 @@
 
 import { createRoot } from 'react-dom/client';
 
-import Top from './Top.jsx';
+import Top from './Top.tsx';
 
 const root = createRoot(document.getElementById('root'));
 root.render(<Top color="red" />);
