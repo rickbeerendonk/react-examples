@@ -77,7 +77,13 @@ function PostListContainer() {
       ) : error ? (
         <ErrorMessage message={error} />
       ) : (
-        post && <Post key={post.id} title={post.title} body={post.body} />
+        post && (
+          <Post
+            key={post.id}
+            title={`${post.id}. ${post.title}`}
+            body={post.body}
+          />
+        )
       )}
     </>
   );
