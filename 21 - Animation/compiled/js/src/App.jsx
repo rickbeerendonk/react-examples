@@ -1,69 +1,72 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import { Component } from 'react';
+import React, { useReducer, useCallback } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      items: [0, 1, 2],
-      lastId: 2
-    };
+const initialState = {
+  items: [0, 1, 2],
+  lastId: 2
+};
 
-    this.handleAdd = this.handleAdd.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
-  }
-
-  handleAdd() {
-    let newLastId = this.state.lastId + 1;
-    this.setState(state => ({
-      items: [...state.items, newLastId],
-      lastId: newLastId
-    }));
-  }
-
-  handleRemove(key) {
-    let items = this.state.items;
-    let keyIndex = items.indexOf(+key);
-    if (keyIndex !== -1) {
-      items.splice(keyIndex, 1);
-      this.setState({ items });
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_ITEM': {
+      const newLastId = state.lastId + 1;
+      return {
+        ...state,
+        items: [...state.items, newLastId],
+        lastId: newLastId
+      };
     }
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        items: state.items.filter(item => item !== action.payload)
+      };
+    default:
+      return state;
   }
+};
 
-  render() {
-    return (
-      <>
-        <button onClick={this.handleAdd}>Add</button>
-        <hr />
-        <TransitionGroup>
-          {this.state.items.map(key => {
-            return (
-              <CSSTransition
-                key={key}
-                classNames="item"
-                timeout={{ enter: 500, exit: 500 }}
-                unmountOnExit
-              >
-                <div
-                  onClick={this.handleRemove.bind(null, key)}
-                  onKeyUp={this.handleRemove.bind(null, key)}
-                  className="item"
-                  role="button"
-                  tabIndex="0"
-                >
-                  {key}
-                </div>
-              </CSSTransition>
-            );
-          })}
-        </TransitionGroup>
-      </>
-    );
-  }
-}
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleAdd = useCallback(() => {
+    dispatch({ type: 'ADD_ITEM' });
+  }, []);
+
+  const handleRemove = useCallback(key => {
+    dispatch({ type: 'REMOVE_ITEM', payload: key });
+  }, []);
+
+  return (
+    <>
+      <button onClick={handleAdd}>Add</button>
+      <hr />
+      <TransitionGroup>
+        {state.items.map(key => (
+          <CSSTransition
+            key={key}
+            classNames="item"
+            timeout={{ enter: 500, exit: 500 }}
+            unmountOnExit
+          >
+            <div
+              onClick={() => handleRemove(key)}
+              onKeyUp={() => handleRemove(key)}
+              className="item"
+              role="button"
+              tabIndex="0"
+            >
+              {key}
+            </div>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
+    </>
+  );
+};
 
 export default App;
