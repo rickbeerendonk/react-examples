@@ -12,7 +12,7 @@ function List(props: ListProps) {
   return (
     <ul>
       {Children.toArray(props.children)
-        .reverse()
+        .toReversed()
         .map((child, i) => (
           <li key={i}>{child}</li>
         ))}
