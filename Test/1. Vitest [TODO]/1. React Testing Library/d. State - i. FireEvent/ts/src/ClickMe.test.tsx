@@ -1,3 +1,6 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
+
 import { describe, expect, it } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';

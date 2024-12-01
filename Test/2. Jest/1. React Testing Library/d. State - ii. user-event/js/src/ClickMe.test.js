@@ -4,8 +4,6 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import ClickMe from './ClickMe';
 
-/// React Test Renderer ///
-
 describe('ClickMe', () => {
   it('renders 0 snapshot (@testing-library/react)', () => {
     const { getByRole } = render(<ClickMe />);
