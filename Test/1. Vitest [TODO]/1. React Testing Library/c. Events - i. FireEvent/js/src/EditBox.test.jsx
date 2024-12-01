@@ -1,9 +1,10 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
+
 import { describe, expect, it, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 import { fireEvent, render } from '@testing-library/react';
 import EditBox from './EditBox';
-
-/// React Test Renderer ///
 
 describe('EditBox', () => {
   /// -- Property -- ///
