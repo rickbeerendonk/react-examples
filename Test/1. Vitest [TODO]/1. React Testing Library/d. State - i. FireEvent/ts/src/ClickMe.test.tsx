@@ -1,6 +1,6 @@
-import React from 'react';
+import { describe, expect, it } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import ClickMe from './ClickMe';
 
 describe('ClickMe', () => {

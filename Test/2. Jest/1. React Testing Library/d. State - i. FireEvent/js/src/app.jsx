@@ -2,10 +2,10 @@
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ClickMe from './ClickMe';
+import { createRoot } from 'react-dom/client';
+import ClickMe from './ClickMe.jsx';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.createRoot(root).render(<ClickMe />);
+createRoot(root).render(<ClickMe />);

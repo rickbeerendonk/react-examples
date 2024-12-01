@@ -5,10 +5,7 @@ import { createRoot } from 'react-dom/client';
 import EditBox from './EditBox';
 import MyButton from './MyButton';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
-
-createRoot(root).render(
+createRoot(document.getElementById('root')).render(
   <>
     <EditBox value="World" onChange={() => {}} />
     <MyButton onClick={() => {}} />

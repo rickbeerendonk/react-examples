@@ -4,7 +4,4 @@
 import { createRoot } from 'react-dom/client';
 import ClickMe from './ClickMe.jsx';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
-
-createRoot(root).render(<ClickMe />);
+createRoot(document.getElementById('root')).render(<ClickMe />);
