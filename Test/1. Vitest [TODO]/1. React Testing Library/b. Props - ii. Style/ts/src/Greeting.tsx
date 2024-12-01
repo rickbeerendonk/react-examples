@@ -1,18 +1,13 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2017 Rick Beerendonk          !*/
-
-import './Greeting.css';
+/*! Copyright © 2021 Rick Beerendonk          !*/
 
 interface GreetingProps {
-  name?: string;
+  name: string;
+  selected?: boolean;
 }
 
-function Greeting({ name }: GreetingProps) {
-  if (!name) {
-    throw new Error('No name provided');
-  }
-
-  return <h1 className="greeting">Hello {name}!</h1>;
+function Greeting({ name, selected }: GreetingProps) {
+  return <h1 style={{ color: selected ? 'red' : 'black' }}>Hello {name}!</h1>;
 }
 
 export default Greeting;
