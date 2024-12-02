@@ -1,18 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
+import { useEffect, useRef } from 'react';
 import useToggle from './hooks/toggle.js';
-
-let oldToggle = undefined;
 
 function App() {
   const [value, toggle] = useToggle();
+  const oldToggle = useRef(undefined);
 
-  if (oldToggle && oldToggle !== toggle) {
-    throw new Error('toggle function is recreated.');
-  }
+  useEffect(() => {
+    if (oldToggle.current && oldToggle.current !== toggle) {
+      throw new Error('toggle function is recreated.');
+    }
 
-  oldToggle = toggle;
+    oldToggle.current = toggle;
+  }, [toggle]);
 
   return (
     <>

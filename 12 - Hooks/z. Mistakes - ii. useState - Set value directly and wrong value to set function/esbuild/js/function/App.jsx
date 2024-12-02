@@ -1,9 +1,10 @@
-/* eslint no-console: 0 */
-
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk, Oblicum !*/
 
 import { useState } from 'react';
+
+/* eslint no-console: off */
+/* eslint react-compiler/react-compiler: off */
 
 function App() {
   let [value, setValue] = useState(false);

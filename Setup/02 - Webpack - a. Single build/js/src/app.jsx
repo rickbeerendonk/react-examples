@@ -1,10 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Greeting from './Greeting';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
+const rootElement = document.createElement('div');
+document.body.appendChild(rootElement);
 
-ReactDOM.render(<Greeting />, root);
+const root = createRoot(rootElement);
+root.render(<Greeting />);

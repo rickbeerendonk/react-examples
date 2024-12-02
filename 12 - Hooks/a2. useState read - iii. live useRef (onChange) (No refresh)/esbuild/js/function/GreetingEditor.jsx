@@ -3,6 +3,8 @@
 
 import { useRef } from 'react';
 
+/* eslint react-compiler/react-compiler: off */
+
 // Render 1: name = 'World'
 // Render 1: handleClick()
 // Render 2: name = 'React'

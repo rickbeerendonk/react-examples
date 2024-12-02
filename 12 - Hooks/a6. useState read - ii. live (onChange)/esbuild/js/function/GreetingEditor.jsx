@@ -1,12 +1,15 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function GreetingEditor() {
   const [name, setName] = useState('World');
   const liveName = useRef();
-  liveName.current = name;
+
+  useEffect(() => {
+    liveName.current = name;
+  }, [name]);
 
   function handleChange(e) {
     setName(e.target.value);

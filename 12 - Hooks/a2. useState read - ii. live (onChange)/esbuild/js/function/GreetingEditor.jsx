@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 // Render 1: name = 'World'
 // Render 1: handleClick()
@@ -12,7 +12,10 @@ function GreetingEditor() {
   const [name, setName] = useState('World');
 
   const liveName = useRef();
-  liveName.current = name;
+
+  useEffect(() => {
+    liveName.current = name;
+  }, [name]);
 
   function handleChange(e) {
     setName(e.target.value);

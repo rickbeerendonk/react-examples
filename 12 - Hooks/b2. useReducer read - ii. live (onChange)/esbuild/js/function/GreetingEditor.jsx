@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { useRef, useReducer } from 'react';
+import { useEffect, useRef, useReducer } from 'react';
 
 const CHANGE_NAME = 'CHANGE_NAME';
 
@@ -17,7 +17,10 @@ function reducer(state, action) {
 function GreetingEditor() {
   const [state, dispatch] = useReducer(reducer, { name: 'World' });
   const liveName = useRef(name);
-  liveName.current = state.name;
+
+  useEffect(() => {
+    liveName.current = state.name;
+  }, [state.name]);
 
   function handleChange(e) {
     dispatch({

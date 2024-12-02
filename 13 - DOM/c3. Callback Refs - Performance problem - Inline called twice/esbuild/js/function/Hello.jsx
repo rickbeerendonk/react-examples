@@ -4,6 +4,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 /* eslint no-console:"off" */
+/* eslint react-compiler/react-compiler: off */
 
 function Hello() {
   const [, forceUpdate] = useState(0);

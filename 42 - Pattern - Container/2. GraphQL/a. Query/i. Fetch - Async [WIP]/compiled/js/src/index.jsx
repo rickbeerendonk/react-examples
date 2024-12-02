@@ -1,11 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import PostListContainer from './PostListContainer';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
+const rootDiv = document.createElement('div');
+document.body.appendChild(rootDiv);
 
-ReactDOM.render(<PostListContainer />, root);
+const root = createRoot(rootDiv);
+root.render(<PostListContainer />);

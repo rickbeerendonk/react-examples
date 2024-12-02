@@ -3,6 +3,8 @@
 
 /* global React, ReactDOM */
 
+/* eslint-disable react-compiler/react-compiler */
+
 function ClickMe() {
   const [count, setCount] = React.useState(0);
 
