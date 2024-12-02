@@ -1,8 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-/* eslint-disable */
-
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');

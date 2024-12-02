@@ -3,8 +3,6 @@
 
 import { Component } from 'react';
 
-/* eslint-disable jsx-a11y/no-onchange */
-
 class App extends Component {
   constructor(props) {
     super(props);

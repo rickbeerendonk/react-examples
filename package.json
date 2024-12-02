@@ -14,8 +14,8 @@
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
   "scripts": {
     "clean": "rimraf node_modules",
-    "eslint": "eslint . --ext .js,.jsx,.mjs --cache",
-    "eslint-fix": "eslint . --ext .js,.jsx,.mjs --cache --fix",
+    "eslint": "eslint --cache",
+    "eslint-fix": "eslint --cache --fix",
     "install-experimental": "npm install react@experimental react-dom@experimental",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
-    "eslint": "8.55.0",
+    "eslint": "9.16.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-hooks": "5.0.0",

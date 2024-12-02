@@ -3,8 +3,6 @@
 
 /* global ReactDOM */
 
-/* eslint-disable react/no-deprecated */
-
 export default ReactDOM;
 
 export const {
