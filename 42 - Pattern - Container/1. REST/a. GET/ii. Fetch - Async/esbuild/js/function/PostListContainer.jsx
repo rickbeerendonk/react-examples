@@ -37,7 +37,7 @@ function PostListContainer() {
       } finally {
         setIsFetching(false);
       }
-    })();
+    })(); // IIFE = Immediately Invoked Function Expression
   }
 
   return (
