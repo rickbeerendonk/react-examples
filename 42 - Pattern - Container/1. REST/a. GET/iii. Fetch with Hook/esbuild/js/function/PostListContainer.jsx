@@ -36,18 +36,18 @@ function useFetchJson(url, options) {
     [url, options]
   );
 
-  return [json, error, isFetching];
+  return { json, error, isFetching };
 }
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts = [], error, isFetching] = useFetchJson('posts.json');
+  const { json = [], error, isFetching } = useFetchJson('posts.json');
 
   return (
     <>
       {isFetching && <Fetching />}
-      {error ? <ErrorMessage message={error} /> : <PostList posts={posts} />}
+      {error ? <ErrorMessage message={error} /> : <PostList posts={json} />}
     </>
   );
 }

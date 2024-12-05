@@ -19,6 +19,7 @@ function useFetchJson(url, options, retries = 0) {
     /* Wrap async call so no Promise is returned */
     function () {
       (async () => {
+        // TODO: Reset retries, JSON and error when URL changes.
         setIsFetching(true);
         try {
           const response = await fetch(url, options);
@@ -44,18 +45,18 @@ function useFetchJson(url, options, retries = 0) {
     [url, options, retries, retried]
   );
 
-  return [json, error, isFetching];
+  return { json, error, isFetching };
 }
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts = [], error, isFetching] = useFetchJson('posts2.json', null, 3);
+  const { json = [], error, isFetching } = useFetchJson('posts2.json', null, 3);
 
   return (
     <>
       {isFetching && <Fetching />}
-      {error ? <ErrorMessage message={error} /> : <PostList posts={posts} />}
+      {error ? <ErrorMessage message={error} /> : <PostList posts={json} />}
     </>
   );
 }
