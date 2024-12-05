@@ -5,11 +5,11 @@ import Post from './Post.jsx';
 
 function PostList({ posts }) {
   return (
-    <ul>
+    <ol>
       {posts.map(post => (
-        <Post key={post.id} title={post.title} />
+        <Post key={post.id} id={id} title={post.title} />
       ))}
-    </ul>
+    </ol>
   );
 }
 
