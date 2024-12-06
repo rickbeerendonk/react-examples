@@ -11,14 +11,20 @@ function valueFunc() {
   });
 }
 
-function App() {
-  const value = use(valueFunc);
+const valuePromise = valueFunc();
 
+function Value() {
+  const value = use(valuePromise);
+  return <h1>{value}</h1>;
+}
+
+function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>} />
-      <h1>{value}</h1>
-      <Suspense />
+      <h1>Demo</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Value />
+      </Suspense>
     </>
   );
 }
