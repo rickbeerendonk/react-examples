@@ -26,69 +26,50 @@
   "devDependencies": {
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "9.16.0",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-react": "7.37.2",
+    "eslint": "^9",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react": "^7",
     "eslint-plugin-react-compiler": "latest",
-    "eslint-plugin-react-hooks": "5.1.0",
+    "eslint-plugin-react-hooks": "^5",
     "husky": "9.1.7",
-    "prettier": "3.4.2",
-    "rimraf": "6.0.1"
+    "prettier": "^3",
+    "rimraf": "^6"
   },
   "dependencies": {
-    "@babel/core": "7.26.0",
-    "@babel/preset-env": "7.26.0",
-    "@babel/preset-react": "7.26.3",
-    "@babel/standalone": "7.26.4",
-    "@react-spring/web": "9.7.5",
-    "@stylexjs/stylex": "0.9.3",
-    "axios": "1.7.7",
-    "core-js": "3.39.0",
-    "esbuild": "0.24.0",
-    "formik": "2.4.6",
-    "mime-types": "2.1.35",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@babel/standalone": "^7",
+    "@react-spring/web": "^9",
+    "@stylexjs/stylex": "0.11.0",
+    "axios": "^1",
+    "core-js": "^3",
+    "esbuild": "0.25.0",
+    "formik": "^2",
+    "mime-types": "^2",
     "prop-types": "15.8.1",
     "react": "^19",
     "react-dom": "^19",
     "react-dom-experimental": "npm:react-dom@experimental",
     "react-experimental": "npm:react@experimental",
-    "react-hook-form": "7.53.2",
-    "react-redux": "9.1.2",
-    "react-router": "6.28.0",
-    "react-router-5": "npm:react-router@5.3.4",
-    "react-router-dom": "6.28.0",
-    "react-router-dom-5": "npm:react-router-dom@5.3.4",
-    "react-transition-group": "4.4.5",
-    "redux": "5.0.1",
+    "react-hook-form": "^7",
+    "react-redux": "^9",
+    "react-router": "^7",
+    "react-router-dom": "^7",
+    "react-transition-group": "^4",
+    "redux": "^5",
     "scheduler": "0.25.0",
     "scheduler-next": "npm:scheduler@next",
-    "styled-components": "6.1.13",
-    "typescript": "5.7.2"
+    "styled-components": "^6",
+    "typescript": "^5"
   },
   "overrides": {
     "react-dom-experimental": {
-      "react": "^19.0.0"
-    },
-    "react-dom-next": {
-      "react": "^19.0.0"
-    },
-    "react-konva": {
-      "react": "^19.0.0",
-      "react-dom": "^19.0.0"
-    },
-    "react-native": {
-      "react": "^19.0.0"
-    },
-    "react-redux": {
-      "react": "^19.0.0",
-      "@types/react": "^19.0.0"
+      "react": "^19"
     },
     "@react-spring/web": {
-      "react": "^19.0.0",
-      "react-dom": "^19.0.0"
-    },
-    "react-reconciler": {
-      "react": "^19.0.0"
+      "react": "^19",
+      "react-dom": "^19"
     }
   }
 }
