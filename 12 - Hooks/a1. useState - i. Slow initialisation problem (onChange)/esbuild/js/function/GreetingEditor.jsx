@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { slowEcho } from './utils/index.js';
 
 function GreetingEditor() {
-  const [name, setName] = useState(slowEcho('World'));
+  const [name, setName] = useState(() => slowEcho('World'));
 
   function handleChange(e) {
     setName(e.target.value);

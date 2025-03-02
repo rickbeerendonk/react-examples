@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- European Union Public License version 1.2 -->
-<!-- Copyright © 2018 Rick Beerendonk -->
+<!-- Copyright © 2024 Rick Beerendonk -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script src="../../../../../../utils/document-title.js"></script>
-    <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
+    <script src="../../../../../../../../../utils/document-title.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../../../../../../../resources/oblicum.css"
+    />
     <link rel="stylesheet" href="index.css" />
 
     <script>
@@ -19,13 +22,13 @@
         }
       };
     </script>
-    <script src="../../../../../../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.js"></script>
+    <script src="../../../../../../../../../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.js"></script>
     <script>
       module = {
         exports: null
       };
     </script>
-    <script src="../../../../../../node_modules/isarray/index.js"></script>
+    <script src="../../../../../../../../../node_modules/isarray/index.js"></script>
     <script>
       function require(value) {
         if (value === 'isarray') {
@@ -33,11 +36,11 @@
         }
       }
     </script>
-    <script src="../../../../../../node_modules/path-to-regexp/index.js"></script>
-    <script src="../../../../../../node_modules/prop-types/prop-types.js"></script>
-    <script src="../../../../../../node_modules/react/umd/react.development.js"></script>
-    <script src="../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
-    <script src="../../../../../../node_modules/react-is/umd/react-is.development.js"></script>
+    <script src="../../../../../../../../../node_modules/path-to-regexp/index.js"></script>
+    <script src="../../../../../../../../../node_modules/prop-types/prop-types.js"></script>
+    <script src="../../../../../../../../../node_modules/react/umd/react.development.js"></script>
+    <script src="../../../../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../../../../../../../../../node_modules/react-is/umd/react-is.development.js"></script>
     <script>
       const process = { env: { NODE_ENV: 'development' } };
       let global = window;
@@ -46,7 +49,7 @@
         return global.React;
       }
     </script>
-    <script src="../../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
+    <script src="../../../../../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
     <script>
       ReactJSXRuntime = exports;
       exports = {};
@@ -61,7 +64,7 @@
           "hoist-non-react-statics": "../../../../../../resources/hoist-non-react-statics.mjs",
           "path-to-regexp": "../../../../../../resources/path-to-regexp.mjs",
           "prop-types": "../../../../../../resources/prop-types.mjs",
-          "react": "../../../../../../resources/react.development.mjs",
+          "react": "../../../../../../../resources/react.development.mjs",
           "react/jsx-runtime": "../../../../../../resources/react-jsx-runtime.development.mjs",
           "react-dom/client": "../../../../../../resources/react-dom.development.mjs",
           "react-is": "../../../../../../resources/react-is.development.mjs",
@@ -74,10 +77,9 @@
         }
       }
     </script>
+    <script src="main.jsx" type="module"></script>
   </head>
   <body>
     <div id="root"></div>
-
-    <script src="index.jsx" type="module"></script>
   </body>
 </html>

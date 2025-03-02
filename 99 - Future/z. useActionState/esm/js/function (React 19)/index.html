@@ -1,29 +1,34 @@
 <!doctype html>
 <!-- European Union Public License version 1.2 -->
-<!-- Copyright © 2014 Rick Beerendonk -->
+<!-- Copyright © 2024 Rick Beerendonk -->
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <script src="../../../../../../utils/document-title.js"></script>
-    <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
-    <link rel="stylesheet" href="../../../../../../resources/oblicum-19.css" />
+    <script src="../../../../../../../../../utils/document-title.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../../../../../../../resources/oblicum.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../../../../../resources/oblicum-19.css"
+    />
 
     <script type="importmap">
       {
         "imports": {
-          "react": "https://esm.sh/stable/react",
-          "react/jsx-runtime": "https://esm.sh/stable/react/jsx-runtime",
-          "react-dom/client": "https://esm.sh/stable/react-dom/client",
+          "react": "https://esm.sh/stable/react?dev",
+          "react/jsx-runtime": "https://esm.sh/stable/react/jsx-runtime?dev",
+          "react-dom/client": "https://esm.sh/stable/react-dom/client?dev",
           "slow-fetch": "../../../../../../../utils/slow-fetch.js"
         }
       }
     </script>
+    <script src="main.jsx" type="module"></script>
   </head>
   <body>
     <div id="root"></div>
-
-    <script src="index.jsx" type="module"></script>
   </body>
 </html>

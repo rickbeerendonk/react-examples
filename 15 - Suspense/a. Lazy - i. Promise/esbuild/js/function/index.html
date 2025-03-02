@@ -1,44 +1,30 @@
 <!doctype html>
 <!-- European Union Public License version 1.2 -->
-<!-- Copyright © 2023 Rick Beerendonk -->
-<html lang="en">
+<!-- Copyright © 2025 Rick Beerendonk -->
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script src="../../../../../../utils/document-title.js"></script>
-    <link rel="stylesheet" href="../../../../../../resources/oblicum.css" />
+    <script src="../../../../../../../../../utils/document-title.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../../../../../../../resources/oblicum.css"
+    />
+    <link rel="stylesheet" href="index.css" />
 
-    <script src="../../../../../node_modules/react/umd/react.development.js"></script>
-    <script src="../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
-    <script>
-      const process = { env: { NODE_ENV: 'development' } };
-      let global = window;
-      let exports = {};
-      function require() {
-        return global.React;
-      }
-    </script>
-    <script src="../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
-    <script>
-      ReactJSXRuntime = exports;
-      exports = {};
-    </script>
     <script type="importmap">
       {
         "imports": {
-          "react": "../../../../../resources/react.development.mjs",
-          "react/jsx-runtime": "../../../../../resources/react-jsx-runtime.development.mjs",
-          "react-dom/client": "../../../../../resources/react-dom.development.mjs"
+          "react": "https://esm.sh/stable/react?dev",
+          "react/jsx-runtime": "https://esm.sh/stable/react/jsx-runtime?dev",
+          "react-dom/client": "https://esm.sh/stable/react-dom/client?dev"
         }
       }
     </script>
+    <script src="main.jsx" type="module"></script>
   </head>
   <body>
     <div id="root"></div>
-
-    <script src="index.jsx" type="module"></script>
   </body>
 </html>
