@@ -1,0 +1,13 @@
+div {
+  padding: 20px;
+}
+
+#parent {
+  background: #444;
+  color: white;
+}
+
+#child {
+  background: #d676ff;
+  color: black;
+}
