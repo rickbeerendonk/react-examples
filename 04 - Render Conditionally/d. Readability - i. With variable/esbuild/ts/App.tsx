@@ -3,7 +3,7 @@
 
 import { JSX } from 'react/jsx-dev-runtime';
 
-function App() {
+export default function App() {
   const show = false;
 
   let component: JSX.Element;
@@ -28,5 +28,3 @@ function Invisible() {
 function Visible() {
   return <div>Visible</div>;
 }
-
-export default App;

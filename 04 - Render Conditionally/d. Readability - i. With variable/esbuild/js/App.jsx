@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   const show = false;
 
   let component;
@@ -26,5 +26,3 @@ function Invisible() {
 function Visible() {
   return <div>Visible</div>;
 }
-
-export default App;
