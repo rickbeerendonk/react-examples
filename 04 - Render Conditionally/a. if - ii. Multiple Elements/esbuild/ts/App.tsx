@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   const show = true;
 
   return (
@@ -16,5 +16,3 @@ function App() {
     </>
   );
 }
-
-export default App;
