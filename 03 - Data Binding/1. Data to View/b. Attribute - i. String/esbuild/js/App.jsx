@@ -2,5 +2,7 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 export default function App() {
-  return <img alt="React" />;
+  const name = 'React';
+
+  return <img alt={name} />;
 }
