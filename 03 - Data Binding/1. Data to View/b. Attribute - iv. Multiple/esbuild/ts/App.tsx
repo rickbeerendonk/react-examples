@@ -8,5 +8,6 @@ export default function App() {
     type: 'number',
     defaultValue: 25
   };
+
   return <input {...attr}></input>;
 }
