@@ -2,7 +2,7 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 export default function App() {
-  return (
-    <input type="date" value={new Date().toISOString().substring(0, 10)} />
-  );
+  const today = new Date();
+
+  return <input type="date" value={today.toISOString().substring(0, 10)} />;
 }
