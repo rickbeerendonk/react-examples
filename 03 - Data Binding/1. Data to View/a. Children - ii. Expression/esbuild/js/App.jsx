@@ -2,5 +2,9 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 export default function App() {
-  return <h1>{'hello '.toUpperCase() + 2021}!</h1>;
+  const today = new Date();
+
+  return (
+    <h1>{'Today = '.toUpperCase() + today.toISOString().substring(0, 10)}!</h1>
+  );
 }
