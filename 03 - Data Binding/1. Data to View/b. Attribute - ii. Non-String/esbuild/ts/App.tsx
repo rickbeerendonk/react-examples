@@ -2,5 +2,7 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 export default function App() {
-  return <input type="button" value="Action" disabled={true} />;
+  const disabled = true;
+
+  return <input type="button" value="Action" disabled={disabled} />;
 }
