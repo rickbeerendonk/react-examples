@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function App() {
+export default function App() {
   // Use "useState()" instead of "let"
   // Why? React needs to know something has change
   // Here:
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

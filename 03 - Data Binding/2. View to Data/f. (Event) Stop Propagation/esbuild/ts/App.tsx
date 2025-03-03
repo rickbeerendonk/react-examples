@@ -3,7 +3,7 @@
 
 import { MouseEvent } from 'react';
 
-function App() {
+export default function App() {
   function handleCapturing(event: MouseEvent<HTMLDivElement>) {
     const target = event.target as HTMLElement;
     console.group(target.id);
@@ -38,5 +38,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

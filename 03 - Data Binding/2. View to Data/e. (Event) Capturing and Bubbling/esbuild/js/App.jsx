@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   function handleCapturing(event) {
     console.group(event.target.id);
     console.log(
@@ -29,5 +29,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
