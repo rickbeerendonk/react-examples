@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
   return (
@@ -18,5 +18,3 @@ function App() {
     </>
   );
 }
-
-export default App;

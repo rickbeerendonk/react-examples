@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
   let nameListItems = [];
@@ -16,5 +16,3 @@ function App() {
     </>
   );
 }
-
-export default App;

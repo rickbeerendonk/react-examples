@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-function App() {
+export default function App() {
   const [items, setItems] = useState(['one', 'two', 'three']);
 
   function insertTop() {
@@ -32,5 +32,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function App() {
+export default function App() {
   const [items, setItems] = useState(['one', 'two', 'three']);
 
   function insertTop() {
@@ -32,5 +32,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -3,7 +3,7 @@
 
 /* global React, ReactDOM */
 
-function App() {
+export default function App() {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
   return (
