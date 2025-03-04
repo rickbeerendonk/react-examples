@@ -3,7 +3,7 @@
 
 import { useRef } from 'react';
 
-function App() {
+export default function App() {
   const myRef = useRef();
   const id = 1;
   return (
@@ -15,5 +15,3 @@ function App() {
     </>
   );
 }
-
-export default App;

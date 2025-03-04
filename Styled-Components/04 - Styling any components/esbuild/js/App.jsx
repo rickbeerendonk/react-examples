@@ -4,7 +4,7 @@
 import Greeting from './Greeting.jsx';
 import { StyledGreeting } from './StyledGreeting.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <Greeting name={'Standard'} />
@@ -12,5 +12,3 @@ function App() {
     </>
   );
 }
-
-export default App;

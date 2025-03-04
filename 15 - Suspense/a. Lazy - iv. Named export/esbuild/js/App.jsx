@@ -16,7 +16,7 @@ function superLazy(moduleName, exportName) {
 const Greeting = superLazy('./Greeting', 'Greeting');
 */
 
-function App() {
+export default function App() {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -32,5 +32,3 @@ function App() {
     </>
   );
 }
-
-export default App;

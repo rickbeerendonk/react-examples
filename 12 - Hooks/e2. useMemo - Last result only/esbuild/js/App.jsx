@@ -5,7 +5,7 @@ import { useState, useMemo } from 'react';
 
 import { slowDivision } from './utils/index.js';
 
-function App() {
+export default function App() {
   const [numerator, setNumerator] = useState(3);
   const [denominator, setDenominator] = useState(2);
 
@@ -46,5 +46,3 @@ function App() {
     </>
   );
 }
-
-export default App;

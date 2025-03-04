@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   return (
     <>
       <title>Title1</title>
@@ -10,5 +10,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -8,7 +8,7 @@ import ClickMe from './ClickMe.tsx';
 // Observe that after clicking the button twice,
 // the ClickMe component is recreated with its initial state.
 
-function App() {
+export default function App() {
   const [showClickMe, setShowClickMe] = useState<boolean>(true);
 
   function handleClick() {
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -3,7 +3,7 @@
 
 import { Formik, Field } from 'formik';
 
-function App() {
+export default function App() {
   return (
     <Formik
       initialValues={{ name: '' }}
@@ -25,5 +25,3 @@ function App() {
     </Formik>
   );
 }
-
-export default App;

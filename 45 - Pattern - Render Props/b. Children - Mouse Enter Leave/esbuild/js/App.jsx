@@ -4,7 +4,7 @@
 import Greeting from './Greeting.jsx';
 import MouseOver from './MouseOver.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <MouseOver>
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;

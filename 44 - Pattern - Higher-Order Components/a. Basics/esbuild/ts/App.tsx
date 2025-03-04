@@ -3,8 +3,6 @@
 
 import GreetingWithExtras from './GreetingWithExtras.tsx';
 
-function App() {
+export default function App() {
   return <GreetingWithExtras extraColor="red" name="World" />;
 }
-
-export default App;

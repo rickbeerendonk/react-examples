@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function App() {
+export default function App() {
   // Keep form data in state
   const [name, setName] = useState('');
 
@@ -26,5 +26,3 @@ function App() {
     </form>
   );
 }
-
-export default App;

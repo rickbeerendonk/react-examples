@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   return (
     <>
       <h1>Meta element with description added</h1>
@@ -12,5 +12,3 @@ function App() {
     </>
   );
 }
-
-export default App;

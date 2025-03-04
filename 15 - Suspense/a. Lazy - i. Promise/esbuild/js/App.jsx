@@ -10,7 +10,7 @@ const Greeting = lazy(
     )
 );
 
-function App() {
+export default function App() {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -26,5 +26,3 @@ function App() {
     </>
   );
 }
-
-export default App;

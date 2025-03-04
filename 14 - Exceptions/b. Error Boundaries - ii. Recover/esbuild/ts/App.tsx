@@ -4,7 +4,7 @@
 import Divider from './Divider.tsx';
 import ErrorBoundary from './ErrorBoundary.tsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <h1>Error Boundaries</h1>
@@ -14,5 +14,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import MousePosition from './MousePosition.jsx';
 
-function App() {
+export default function App() {
   const [visible, setVisible] = useState(true);
 
   function handleShowHide() {
@@ -19,5 +19,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -5,7 +5,7 @@ import { useOptimistic, useState, useRef } from 'react';
 
 import GreetingEditor from './GreetingEditor.jsx';
 
-function App() {
+export default function App() {
   const [name, setName] = useState('World');
 
   async function sendName(newName) {
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;

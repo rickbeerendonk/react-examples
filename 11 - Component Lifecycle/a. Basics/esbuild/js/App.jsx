@@ -23,5 +23,3 @@ class App extends Component {
     return <Hello name={this.state.name} />;
   }
 }
-
-export default App;

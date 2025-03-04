@@ -4,7 +4,7 @@
 import { useCallback, useState } from 'react';
 import ChildWithForm from './ChildWithForm.jsx';
 
-function App() {
+export default function App() {
   const [list, setList] = useState([]);
 
   const handleAdd = useCallback(item => {
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

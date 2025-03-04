@@ -13,9 +13,7 @@ function Comp3({ children }) {
   return <h3>{children}</h3>;
 }
 
-function App() {
+export default function App() {
   const elem = production ? Comp3 : Comp1;
   return <DynamicComponent type={elem}>Hello World!</DynamicComponent>;
 }
-
-export default App;

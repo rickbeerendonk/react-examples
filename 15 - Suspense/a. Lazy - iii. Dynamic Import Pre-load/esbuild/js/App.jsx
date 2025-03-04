@@ -7,7 +7,7 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 const getGreeting = () => import('./Greeting.jsx');
 const Greeting = lazy(getGreeting);
 
-function App() {
+export default function App() {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     // Preload Greeting
@@ -27,5 +27,3 @@ function App() {
     </>
   );
 }
-
-export default App;

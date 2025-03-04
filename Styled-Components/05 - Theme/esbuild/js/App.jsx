@@ -3,7 +3,7 @@
 
 import { StyledButton } from './styled.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <StyledButton>Enabled</StyledButton>
@@ -11,5 +11,3 @@ function App() {
     </>
   );
 }
-
-export default App;

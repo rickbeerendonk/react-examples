@@ -9,7 +9,7 @@ import ClickMe from './ClickMe.jsx';
 // Observe that after clicking the button, the ClickMe component
 // is recreated, due to having a different key, with its initial state.
 
-function App() {
+export default function App() {
   const [id, setId] = useState(0);
 
   function handleClick() {
@@ -31,5 +31,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -4,7 +4,7 @@
 import Bar from './Bar.jsx';
 import Custom from './Custom.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <Bar configName="default" />
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

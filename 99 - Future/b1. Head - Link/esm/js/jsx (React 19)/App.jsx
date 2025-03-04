@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
-function App() {
+export default function App() {
   return (
     <>
       <h1>Title should be red (stylesheet added in component)</h1>
@@ -9,5 +9,3 @@ function App() {
     </>
   );
 }
-
-export default App;

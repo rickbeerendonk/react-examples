@@ -4,7 +4,7 @@
 import GreetingWithExtras from './GreetingWithExtras.jsx';
 import FooWithExtras from './FooWithExtras.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <GreetingWithExtras extraColor="red" name="World" />
@@ -12,5 +12,3 @@ function App() {
     </>
   );
 }
-
-export default App;

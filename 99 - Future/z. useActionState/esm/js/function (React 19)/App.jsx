@@ -3,7 +3,7 @@
 
 import { useActionState, useState } from 'react';
 
-function App() {
+export default function App() {
   const [list, setList] = useState([]);
 
   const [, /* error */ submitAction /* isPending */] = useActionState(
@@ -32,5 +32,3 @@ function App() {
     </>
   );
 }
-
-export default App;

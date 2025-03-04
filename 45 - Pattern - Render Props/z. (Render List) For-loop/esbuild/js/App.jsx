@@ -3,7 +3,7 @@
 
 import For from './For.js';
 
-function App() {
+export default function App() {
   const names = ['Alexandra', 'Benjamin', 'Charlotte'];
 
   return (
@@ -15,5 +15,3 @@ function App() {
     </>
   );
 }
-
-export default App;

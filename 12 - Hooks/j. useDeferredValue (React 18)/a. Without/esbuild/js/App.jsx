@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import Slow from './Slow.jsx';
 
-function App() {
+export default function App() {
   const [name, setName] = useState('World');
 
   function handleChange(e) {
@@ -19,5 +19,3 @@ function App() {
     </>
   );
 }
-
-export default App;

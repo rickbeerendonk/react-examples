@@ -5,7 +5,7 @@ import { useLayoutEffect, useRef } from 'react';
 
 import Child from './Child.jsx';
 
-function App() {
+export default function App() {
   const myChild = useRef();
 
   useLayoutEffect(() => {
@@ -15,5 +15,3 @@ function App() {
 
   return <Child name="Imperative Handle" ref={myChild} />;
 }
-
-export default App;

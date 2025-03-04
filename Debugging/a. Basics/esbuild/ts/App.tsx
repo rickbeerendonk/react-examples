@@ -8,7 +8,7 @@ import useMousePosition from './hooks/mouse-position-hook.ts';
 import Top from './context/Top.tsx';
 import Memo_ComponentStack from './memo_component-stack/Memo_ComponentStack.tsx';
 
-function App() {
+export default function App() {
   const mousePosition = useMousePosition();
 
   return (
@@ -36,5 +36,3 @@ function App() {
     </>
   );
 }
-
-export default App;

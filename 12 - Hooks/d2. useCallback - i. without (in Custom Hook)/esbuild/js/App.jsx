@@ -4,7 +4,7 @@
 import { useEffect, useRef } from 'react';
 import useToggle from './hooks/toggle.js';
 
-function App() {
+export default function App() {
   const [value, toggle] = useToggle();
   const oldToggle = useRef(undefined);
 
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

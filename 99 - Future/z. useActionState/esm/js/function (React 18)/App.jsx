@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function App() {
+export default function App() {
   const [name, setName] = useState('');
   const [list, setList] = useState([]);
 
@@ -33,5 +33,3 @@ function App() {
     </>
   );
 }
-
-export default App;

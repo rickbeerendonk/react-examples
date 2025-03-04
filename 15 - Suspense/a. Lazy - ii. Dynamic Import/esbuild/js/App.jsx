@@ -6,7 +6,7 @@ import { lazy, Suspense, useState } from 'react';
 //import Greeting from './Greeting.jsx';
 const Greeting = lazy(() => import('./Greeting.jsx'));
 
-function App() {
+export default function App() {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;

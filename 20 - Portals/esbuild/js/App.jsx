@@ -3,7 +3,7 @@
 
 import Portal from './Portal.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       This is the React App.
@@ -11,5 +11,3 @@ function App() {
     </>
   );
 }
-
-export default App;

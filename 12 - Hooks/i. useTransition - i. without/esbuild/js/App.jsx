@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { slowAdd } from './utils/index.js';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   function handleClick() {
@@ -16,5 +16,3 @@ function App() {
 
   return <button onClick={handleClick}>Change count {count}</button>;
 }
-
-export default App;

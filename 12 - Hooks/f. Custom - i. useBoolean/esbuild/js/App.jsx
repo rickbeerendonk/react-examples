@@ -3,7 +3,7 @@
 
 import useBoolean from './hooks/boolean-hook.js';
 
-function App() {
+export default function App() {
   const [value, toggleValue] = useBoolean(true);
 
   function handleClick() {
@@ -17,5 +17,3 @@ function App() {
     </>
   );
 }
-
-export default App;

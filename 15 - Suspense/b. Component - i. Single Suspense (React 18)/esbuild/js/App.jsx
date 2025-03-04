@@ -6,7 +6,7 @@ import { Suspense, useState } from 'react';
 import Spinner from './Spinner.jsx';
 import AsyncResult from './AsyncResult.jsx';
 
-function App() {
+export default function App() {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   function load() {
@@ -26,5 +26,3 @@ function App() {
     </>
   );
 }
-
-export default App;

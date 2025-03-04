@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function App() {
+export default function App() {
   const [selected, setSelected] = useState('train');
 
   function handleChange(e) {
@@ -18,5 +18,3 @@ function App() {
     </select>
   );
 }
-
-export default App;

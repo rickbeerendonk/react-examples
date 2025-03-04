@@ -6,7 +6,7 @@ import { useState } from 'react';
 /* eslint no-console: off */
 /* eslint react-compiler/react-compiler: off */
 
-function App() {
+export default function App() {
   let [value, setValue] = useState(false);
 
   function handleClick() {
@@ -22,5 +22,3 @@ function App() {
 
   return <button onClick={handleClick}>Value: {String(value)}</button>;
 }
-
-export default App;

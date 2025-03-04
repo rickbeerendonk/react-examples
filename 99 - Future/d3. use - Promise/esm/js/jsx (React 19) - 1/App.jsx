@@ -18,7 +18,7 @@ function Value() {
   return <h1>{value}</h1>;
 }
 
-function App() {
+export default function App() {
   return (
     <>
       <h1>Demo</h1>
@@ -28,5 +28,3 @@ function App() {
     </>
   );
 }
-
-export default App;

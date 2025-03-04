@@ -5,7 +5,7 @@ import { useDeferredValue, useState } from 'react';
 
 import Slow from './Slow.jsx';
 
-function App() {
+export default function App() {
   const [name, setName] = useState('World');
   const deferredName = useDeferredValue(name, {
     timeoutMs: 2000
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;

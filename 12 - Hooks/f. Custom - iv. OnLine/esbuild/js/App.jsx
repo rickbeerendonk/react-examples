@@ -3,9 +3,7 @@
 
 import useIsOnLine from './hooks/online.js';
 
-function App() {
+export default function App() {
   const isOnLine = useIsOnLine();
   return <h1>Browser is {isOnLine ? 'OnLine' : 'OffLine'}!</h1>;
 }
-
-export default App;

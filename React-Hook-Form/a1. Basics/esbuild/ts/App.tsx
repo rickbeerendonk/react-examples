@@ -7,7 +7,7 @@ type Inputs = {
   name: string;
 };
 
-function App() {
+export default function App() {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit: SubmitHandler<Inputs> = data => {
@@ -29,5 +29,3 @@ function App() {
     </form>
   );
 }
-
-export default App;

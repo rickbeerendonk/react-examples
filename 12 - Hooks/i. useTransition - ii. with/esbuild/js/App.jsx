@@ -5,7 +5,7 @@ import { useState, useTransition } from 'react';
 
 import { slowAdd } from './utils/index.js';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
   const [isPending, startTransition] = useTransition();
 
@@ -20,5 +20,3 @@ function App() {
     </button>
   );
 }
-
-export default App;

@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import CheckBox from './CheckBox.jsx';
 
-function App() {
+export default function App() {
   const [checked, setChecked] = useState(false);
 
   function handleCheck(value) {
@@ -18,5 +18,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -6,7 +6,7 @@ import React from 'react';
 //import Greeting from './Greeting';
 const Greeting = React.lazy(() => import('./Greeting'));
 
-function App() {
+export default function App() {
   const [visible, setVisible] = React.useState(false);
 
   return (
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;

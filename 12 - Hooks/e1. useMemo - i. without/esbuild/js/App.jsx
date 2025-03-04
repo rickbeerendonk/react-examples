@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { slowDivision } from './utils/index.js';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   const numerator = Math.round(count / 3);
@@ -35,5 +35,3 @@ function App() {
     </>
   );
 }
-
-export default App;

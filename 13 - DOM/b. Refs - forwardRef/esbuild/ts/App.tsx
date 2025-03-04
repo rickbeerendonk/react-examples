@@ -5,7 +5,7 @@ import { useLayoutEffect, useRef } from 'react';
 
 import Greeting from './Greeting.tsx';
 
-function App() {
+export default function App() {
   const myGreeting = useRef();
 
   useLayoutEffect(() => {
@@ -15,5 +15,3 @@ function App() {
 
   return <Greeting name="World" ref={myGreeting} />;
 }
-
-export default App;
