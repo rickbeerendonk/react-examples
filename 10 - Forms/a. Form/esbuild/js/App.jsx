@@ -8,13 +8,13 @@ export default function App() {
   const [name, setName] = useState('');
 
   function handleSubmit(e) {
-    // Prevent the browser from doing the default action (and navigating away from our page/app)
+    // 1. Prevent the browser from doing the default action (and navigating away from our page/app)
     e.preventDefault();
 
-    // Handle data
+    // 2. Handle data
     alert(`Name = ${name}`);
 
-    // Clear data
+    // 3. Clear data
     setName('');
   }
 
