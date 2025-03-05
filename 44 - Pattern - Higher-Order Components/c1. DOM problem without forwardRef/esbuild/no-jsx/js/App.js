@@ -5,7 +5,7 @@ import { Component, createElement, createRef } from 'react';
 
 import GreetingWithExtras from './GreetingWithExtras.js';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.myGreeting = createRef();

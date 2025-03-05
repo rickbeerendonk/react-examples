@@ -7,7 +7,7 @@ import Scheduler from 'scheduler';
 import Spinner from './Spinner.jsx';
 import AsyncResult from './AsyncResult.jsx';
 
-class App extends Component {
+export default class App extends Component {
   state = { buttonClicked: false };
   load = () => {
     // Async

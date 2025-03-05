@@ -7,7 +7,7 @@ import Scheduler from 'scheduler';
 import Spinner from './Spinner.jsx';
 import AsyncResult from './AsyncResult.jsx';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { buttonClicked: false };

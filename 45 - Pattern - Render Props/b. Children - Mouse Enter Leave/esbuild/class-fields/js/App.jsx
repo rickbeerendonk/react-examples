@@ -6,7 +6,7 @@ import { Component } from 'react';
 import Greeting from './Greeting.jsx';
 import MouseOver from './MouseOver.jsx';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <>

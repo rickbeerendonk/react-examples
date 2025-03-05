@@ -5,7 +5,7 @@ import { Component } from 'react';
 
 import GreetingWithExtras from './GreetingWithExtras.jsx';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return <GreetingWithExtras extraColor="red" name="World" />;
   }

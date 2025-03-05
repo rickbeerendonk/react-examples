@@ -5,7 +5,7 @@ import { Component } from 'react';
 
 import { StyledButton } from './styled.jsx';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <>

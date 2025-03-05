@@ -7,7 +7,7 @@ import { Component, lazy, Suspense } from 'react';
 const getGreeting = () => import('./Greeting.jsx');
 const Greeting = lazy(getGreeting);
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { visible: false };
