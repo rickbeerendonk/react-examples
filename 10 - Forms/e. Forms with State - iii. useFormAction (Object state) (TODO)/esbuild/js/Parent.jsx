@@ -10,7 +10,7 @@ function Parent() {
 
   function handleAdd(item) {
     // Create a new list by coping the old and adding the new item
-    setList(lst => [...lst, item.name]);
+    setList(lst => [...lst, item]);
   }
 
   return (
