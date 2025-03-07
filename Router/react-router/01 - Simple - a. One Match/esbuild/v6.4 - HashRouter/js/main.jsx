@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import Root from './Root.jsx';
@@ -30,5 +30,5 @@ const router = createHashRouter([
   }
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router} />);

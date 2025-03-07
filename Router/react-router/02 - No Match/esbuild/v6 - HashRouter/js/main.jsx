@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
@@ -10,7 +10,7 @@ import Page1 from './routes/Page1.jsx';
 import Page2 from './routes/Page2.jsx';
 import NoMatch from './routes/NoMatch.jsx';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
     <Routes>

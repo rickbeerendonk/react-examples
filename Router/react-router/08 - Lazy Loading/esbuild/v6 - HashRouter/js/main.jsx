@@ -2,7 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { lazy, Suspense } from 'react';
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';

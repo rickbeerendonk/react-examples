@@ -2,7 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { lazy, Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import Root from './Root.jsx';
@@ -39,5 +39,5 @@ const router = createHashRouter([
   }
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router} />);
