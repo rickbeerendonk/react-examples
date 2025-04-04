@@ -30,4 +30,19 @@ describe('useBoolean', () => {
 
     expect(result.current[0]).toEqual(true);
   });
+
+  it('toggle should always remain the same', async () => {
+    // Check useCallback is used for toggle()
+
+    const { result /*, waitForNextUpdate */ } = renderHook(() =>
+      useBoolean(false)
+    );
+
+    const toggleOriginal = result.current[1];
+
+    // toggle()
+    act(() => result.current[1]());
+
+    expect(result.current[1]).toEqual(toggleOriginal);
+  });
 });
