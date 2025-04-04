@@ -7,7 +7,12 @@ const GreetingContext = createContext();
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
 function GreetingEditor({
-  children = [<GreetingEditor.Input key={0} />, <GreetingEditor.Text key={1} />]
+  children = (
+    <>
+      <GreetingEditor.Input />
+      <GreetingEditor.Text />
+    </>
+  )
 }) {
   const [name, setName] = useState('World');
 
