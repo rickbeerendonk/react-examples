@@ -8,6 +8,11 @@ import { GreetingContext } from './GreetingEditor.jsx';
 function CustomContent() {
   const context = useContext(GreetingContext);
 
+  // Error when used outside of GreetingEditor.
+  if (!context) {
+    throw new Error('CustomContent must be used within a GreetingEditor');
+  }
+
   return (
     <h2>
       <u>Hi {context.name}</u>
