@@ -9,7 +9,7 @@ import MyButton from './MyButton';
 describe('MyButton', () => {
   /// -- Event -- ///
 
-  it('raises onClick event when changed (@testing-library/react)', () => {
+  it('raises onClick event when clicked (@testing-library/react)', () => {
     const handleClick = vi.fn();
     const { getByRole } = render(<MyButton onClick={handleClick} />);
 
