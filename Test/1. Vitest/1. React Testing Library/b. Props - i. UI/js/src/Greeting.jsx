@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017 Rick Beerendonk          !*/
 
-import React from 'react';
+/* eslint-disable react/prop-types */
 
 import './Greeting.css';
 
