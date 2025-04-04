@@ -5,10 +5,10 @@ import React from 'react';
 
 import ColorContext from './color-context';
 
-function Greeting() {
+function Greeting({ name }) {
   return (
     <ColorContext.Consumer>
-      {context => <h1 style={{ color: context.color }}>Hello World!</h1>}
+      {context => <h1 style={{ color: context.color }}>Hello {name}!</h1>}
     </ColorContext.Consumer>
   );
 }
