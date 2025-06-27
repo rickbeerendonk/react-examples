@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import StateContext from './StateContext.js';
 
 function Switch() {
-  const { dispatch } = useContext(StateContext);
+  const { dispatch } = use(StateContext);
 
   function handleSwitch() {
     dispatch({ type: 'SWITCH' });

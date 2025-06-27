@@ -10,10 +10,9 @@ interface TopProps {
 
 function Top({ color }: TopProps) {
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
-    <ColorContext.Provider value={{ color }}>
+    <ColorContext value={{ color }}>
       <Middle />
-    </ColorContext.Provider>
+    </ColorContext>
   );
 }
 

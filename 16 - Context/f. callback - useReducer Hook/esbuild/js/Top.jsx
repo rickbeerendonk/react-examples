@@ -19,10 +19,9 @@ function Top(props) {
   });
 
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
-    <StateContext.Provider value={{ state, dispatch }}>
+    <StateContext value={{ state, dispatch }}>
       <Middle />
-    </StateContext.Provider>
+    </StateContext>
   );
 }
 

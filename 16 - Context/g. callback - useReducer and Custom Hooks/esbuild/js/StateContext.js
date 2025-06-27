@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, use, useReducer } from 'react';
 
 const StateContext = createContext({
   state: {},
@@ -12,20 +12,17 @@ StateContext.displayName = 'StateContext'; // For DevTools
 export function StateProvider(props) {
   const [state, dispatch] = useReducer(props.reducer, props.initialState);
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
-    <StateContext.Provider value={{ state, dispatch }}>
-      {props.children}
-    </StateContext.Provider>
+    <StateContext value={{ state, dispatch }}>{props.children}</StateContext>
   );
 }
 
 export function useState() {
-  const { state } = useContext(StateContext);
+  const { state } = use(StateContext);
   return state;
 }
 
 export function useDispatch() {
-  const { dispatch } = useContext(StateContext);
+  const { dispatch } = use(StateContext);
   return dispatch;
 }
 

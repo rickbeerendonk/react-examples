@@ -7,7 +7,6 @@ import Bottom from './Bottom.tsx';
 
 function Top({ color }) {
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
     <>
       <ColorContext value={{ color: 'blue' }}>
         <ColorContext value={{ color }}>
