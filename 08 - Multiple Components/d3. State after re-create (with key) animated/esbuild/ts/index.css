@@ -1,0 +1,8 @@
+.keygroup :nth-child(2) {
+  transform: translate(-200px, 40px);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0s;
+}
