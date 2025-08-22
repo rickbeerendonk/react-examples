@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 export default function App() {
   function handleClick(e: MouseEvent<HTMLAnchorElement>) {

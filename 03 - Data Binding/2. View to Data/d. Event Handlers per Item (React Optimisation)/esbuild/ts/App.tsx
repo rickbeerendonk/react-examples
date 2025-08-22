@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020-2021 Rick Beerendonk          !*/
 
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 export default function App() {
   function handleMouseDown(e: MouseEvent<HTMLButtonElement>) {

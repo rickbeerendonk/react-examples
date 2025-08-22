@@ -3,7 +3,9 @@
 
 import { createContext } from 'react';
 
-const ColorContext = createContext({ color: 'orange' });
+const ColorContext = createContext<{
+  color: string;
+}>({ color: 'orange' });
 ColorContext.displayName = 'ColorContext';
 
 export default ColorContext;

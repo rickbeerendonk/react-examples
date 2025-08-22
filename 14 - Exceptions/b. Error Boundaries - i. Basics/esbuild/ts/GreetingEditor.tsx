@@ -1,7 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import type { ChangeEvent } from 'react';
 
 function GreetingEditor() {
   const [name, setName] = useState('World');
@@ -29,7 +30,7 @@ function GreetingEditor() {
     };
   });
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
 

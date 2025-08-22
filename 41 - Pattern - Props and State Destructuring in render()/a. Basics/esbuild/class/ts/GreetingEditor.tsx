@@ -2,6 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import React, { Component } from 'react';
+import type { ChangeEvent } from 'react';
 
 interface GreetingEditorProps {
   greeting: string;
@@ -21,7 +22,7 @@ class GreetingEditor extends Component<
 
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  handleChange(e: ChangeEvent<HTMLInputElement>) {
     this.setState({ name: e.target.value });
   }
   render() {

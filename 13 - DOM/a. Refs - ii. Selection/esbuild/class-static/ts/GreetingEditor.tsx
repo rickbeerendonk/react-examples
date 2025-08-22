@@ -1,7 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import React, { Component, createRef } from 'react';
+import { Component, createRef } from 'react';
+import type { ChangeEvent } from 'react';
 
 interface GreetingEditorProps {}
 
@@ -15,7 +16,7 @@ class GreetingEditor extends Component<
 > {
   inputRef = createRef<HTMLInputElement>();
   state = { name: 'World' };
-  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     this.setState({ name: e.target.value });
   };
 

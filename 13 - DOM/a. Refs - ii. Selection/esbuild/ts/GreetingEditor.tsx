@@ -2,13 +2,14 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { useEffect, useRef, useState } from 'react';
+import type { ChangeEvent, JSX } from 'react';
 
 function GreetingEditor(): JSX.Element {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [name, setName] = useState('World');
   useEffect(() => inputRef.current.select(), [] /* Only run on mount */);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
 

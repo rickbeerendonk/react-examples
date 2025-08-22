@@ -1,7 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { Component } from 'react';
+import { Component, createRef } from 'react';
+import type { ChangeEvent } from 'react';
 
 interface GreetingEditorProps {}
 
@@ -13,7 +14,7 @@ class GreetingEditor extends Component<
   GreetingEditorProps,
   GreetingEditorState
 > {
-  inputRef = React.createRef<HTMLInputElement>();
+  inputRef = createRef<HTMLInputElement>();
 
   constructor(props: GreetingEditorProps) {
     super(props);
@@ -21,7 +22,7 @@ class GreetingEditor extends Component<
 
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  handleChange(e: ChangeEvent<HTMLInputElement>) {
     this.setState({ name: e.target.value });
   }
   componentDidMount() {

@@ -2,6 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import { useReducer } from 'react';
+import type { ChangeEvent } from 'react';
 
 enum ReducerActionKind {
   CHANGE_NAME = 'CHANGE_NAME'
@@ -31,7 +32,7 @@ function GreetingEditor() {
     name: 'World'
   });
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     dispatch({
       type: ReducerActionKind.CHANGE_NAME,
       payload: e.target.value

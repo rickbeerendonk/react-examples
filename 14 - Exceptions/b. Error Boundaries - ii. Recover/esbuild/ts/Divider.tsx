@@ -1,17 +1,18 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { ChangeEvent } from 'react';
 
 function Divider() {
   const [numerator, setNumerator] = useState(3);
   const [denominator, setDenominator] = useState(2);
 
-  function handleNumeratorChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleNumeratorChange(e: ChangeEvent<HTMLInputElement>) {
     setNumerator(Number(e.target.value));
   }
 
-  function handleDenominatorChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleDenominatorChange(e: ChangeEvent<HTMLInputElement>) {
     setDenominator(Number(e.target.value));
   }
 
