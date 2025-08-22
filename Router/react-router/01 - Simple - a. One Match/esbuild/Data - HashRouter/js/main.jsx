@@ -8,6 +8,7 @@ import Root from './Root.jsx';
 import Home from './routes/Home.jsx';
 import Page1 from './routes/Page1.jsx';
 import Page2 from './routes/Page2.jsx';
+import { basename } from 'path';
 
 const router = createHashRouter([
   {

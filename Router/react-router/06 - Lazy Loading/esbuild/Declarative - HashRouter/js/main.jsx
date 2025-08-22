@@ -12,7 +12,7 @@ const Page2 = lazy(() => import('./routes/Page2.jsx'));
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  <HashRouter basename="/">
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
