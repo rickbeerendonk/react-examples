@@ -24,6 +24,13 @@ function GreetingEditor() {
     <>
       <input onChange={handleChange} value={name} />
       <h1>Hello {name}!</h1>
+      <ul style={{ color: 'darkgrey' }}>
+        <li>layoutEffectError</li>
+        <li>cleanLayoutEffectError [during next render]</li>
+        <li>effectError</li>
+        <li>cleanEffectError [during next render]</li>
+        <li>renderException</li>
+      </ul>
     </>
   );
 }
