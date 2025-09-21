@@ -18,7 +18,7 @@ function Bottom() {
   return (
     <>
       <button onClick={() => setShow(s => !s)}>
-        {show ? 'Hide context' : 'Show context'}
+        {show ? "Don't use context" : 'Use context'}
       </button>
       <h1 style={{ color }}>Bottom</h1>
     </>
