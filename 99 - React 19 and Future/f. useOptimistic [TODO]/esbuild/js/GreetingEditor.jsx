@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
-import { useOptimistic, useState, useRef } from 'react';
+import { useOptimistic, useRef } from 'react';
 
 function GreetingEditor({ name, sendName }) {
   const formRef = useRef();
@@ -22,7 +22,7 @@ function GreetingEditor({ name, sendName }) {
   return (
     <>
       <form action={formAction} ref={formRef}>
-        <input type="name" name="name" placeholder="Name" />
+        <input name="name" placeholder="Name" />
         <button type="submit">Send</button>
       </form>
       <p>
