@@ -2,19 +2,16 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 import React from 'react';
-
 import { GreetingEditor } from './GreetingEditor';
-
-const Template = args => <GreetingEditor {...args} />;
-
-// Stories
-
-export const Default = Template.bind({});
-Default.args = {};
-
-// Define title + info for add-ons
 
 export default {
   title: 'Containers/GreetingEditor',
-  component: GreetingEditor
+  component: GreetingEditor,
+  tags: ['autodocs']
+};
+
+// Stories (CSF3)
+
+export const Default = {
+  args: {}
 };

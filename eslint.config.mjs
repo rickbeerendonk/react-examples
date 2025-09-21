@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
+
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactCompiler from 'eslint-plugin-react-compiler';
@@ -57,5 +60,6 @@ export default [
         version: 'detect'
       }
     }
-  }
+  },
+  ...storybook.configs['flat/recommended']
 ];

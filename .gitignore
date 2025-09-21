@@ -53,3 +53,6 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+*storybook.log
+storybook-static

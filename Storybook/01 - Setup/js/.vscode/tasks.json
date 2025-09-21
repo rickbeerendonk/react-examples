@@ -12,7 +12,7 @@
     },
     {
       "args": ["run", "build-watch"],
-      "taskName": "build watch",
+      "taskName": "build",
       "suppressTaskName": true,
       "isBuildCommand": false,
       "isBackground": true
