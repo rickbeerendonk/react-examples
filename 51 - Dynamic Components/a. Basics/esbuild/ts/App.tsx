@@ -5,21 +5,8 @@ import { useEffect, useState } from 'react';
 
 import DynamicComponent from './DynamicComponent.tsx';
 
-interface Comp1Props {
-  children: React.ReactNode;
-}
-
-function Comp1({ children }: Comp1Props) {
-  return <h1>{children}</h1>;
-}
-
-interface Comp3Props {
-  children: React.ReactNode;
-}
-
-function Comp3({ children }: Comp3Props) {
-  return <h3>{children}</h3>;
-}
+import Comp1 from './components/Comp1.tsx';
+import Comp3 from './components/Comp3.tsx';
 
 export default function App() {
   const [elem, setElem] = useState<React.ElementType>(() => Comp1);

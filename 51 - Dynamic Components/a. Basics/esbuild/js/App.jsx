@@ -5,13 +5,8 @@ import { useEffect, useState } from 'react';
 
 import DynamicComponent from './DynamicComponent.jsx';
 
-function Comp1({ children }) {
-  return <h1>{children}</h1>;
-}
-
-function Comp3({ children }) {
-  return <h3>{children}</h3>;
-}
+import Comp1 from './components/Comp1.jsx';
+import Comp3 from './components/Comp3.jsx';
 
 export default function App() {
   const [elem, setElem] = useState(() => Comp1);
