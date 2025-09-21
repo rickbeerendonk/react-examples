@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import { createElement } from 'react';
+import { forwardRef } from 'react';
+import { jsx } from 'react/jsx-runtime';
 
-function DynamicComponent({ type, children, ...otherProps }) {
-  return createElement(type, otherProps, children);
-}
+// Key is not available in props
+const DynamicComponent = forwardRef(({ as, ...otherProps }, ref) => {
+  return jsx(as, { ref, ...otherProps });
+});
 
 export default DynamicComponent;

@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import DynamicComponent from './DynamicComponent.tsx';
+import { useEffect, useState } from 'react';
 
-let production = true;
+import DynamicComponent from './DynamicComponent.tsx';
 
 interface Comp1Props {
   children: React.ReactNode;
@@ -22,6 +22,17 @@ function Comp3({ children }: Comp3Props) {
 }
 
 export default function App() {
-  const elem = production ? Comp3 : Comp1;
-  return <DynamicComponent type={elem}>Hello World!</DynamicComponent>;
+  const [elem, setElem] = useState<React.ElementType>(() => Comp1);
+
+  useEffect(
+    function changeElem() {
+      const id = setTimeout(() => {
+        setElem(prev => (prev === Comp1 ? 'h2' : Comp3));
+      }, 2000);
+      return () => clearTimeout(id);
+    },
+    [elem]
+  );
+
+  return <DynamicComponent as={elem}>Hello World!</DynamicComponent>;
 }
