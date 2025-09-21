@@ -1,14 +1,32 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 function GreetingEditor() {
   const [name, setName] = useState('World');
-  useLayoutEffect(() => {
-    if (name === 'Error') {
-      throw new Error('Error');
+  useLayoutEffect(function LayoutEffectError() {
+    if (name === 'layoutEffectError') {
+      throw new Error('layoutEffectError');
     }
+
+    return () => {
+      if (name === 'cleanLayoutEffectError') {
+        throw new Error('cleanLayoutEffectError');
+      }
+    };
+  });
+
+  useEffect(function EffectError() {
+    if (name === 'effectError') {
+      throw new Error('effectError');
+    }
+
+    return () => {
+      if (name === 'cleanEffectError') {
+        throw new Error('cleanEffectError');
+      }
+    };
   });
 
   function handleChange(e) {

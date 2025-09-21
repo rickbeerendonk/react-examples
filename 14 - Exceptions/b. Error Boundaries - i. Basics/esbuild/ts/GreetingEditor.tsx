@@ -6,7 +6,7 @@ import type { ChangeEvent } from 'react';
 
 function GreetingEditor() {
   const [name, setName] = useState('World');
-  useLayoutEffect(() => {
+  useLayoutEffect(function LayoutEffectError() {
     if (name === 'layoutEffectError') {
       throw new Error('layoutEffectError');
     }
@@ -18,7 +18,7 @@ function GreetingEditor() {
     };
   });
 
-  useEffect(() => {
+  useEffect(function EffectError() {
     if (name === 'effectError') {
       throw new Error('effectError');
     }
@@ -31,6 +31,7 @@ function GreetingEditor() {
   });
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    //throw Error('wrong!');
     setName(e.target.value);
   }
 
