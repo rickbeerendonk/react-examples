@@ -11,7 +11,6 @@ interface TopProps {
 
 function Top({ color }: TopProps) {
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
     <>
       <ColorContext.Provider value={{ color: 'blue' }}>
         <ColorContext.Provider value={{ color }}>

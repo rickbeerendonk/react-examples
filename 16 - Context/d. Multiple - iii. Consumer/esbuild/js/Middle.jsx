@@ -6,7 +6,6 @@ import Bottom from './Bottom.jsx';
 
 function Middle() {
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
     <BackgroundContext.Provider value={{ color: 'lightgray' }}>
       <Bottom />
     </BackgroundContext.Provider>

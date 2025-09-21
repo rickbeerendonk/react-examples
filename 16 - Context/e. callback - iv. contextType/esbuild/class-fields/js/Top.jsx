@@ -20,7 +20,6 @@ class Top extends Component {
   }
   render() {
     return (
-      // React 19+: <ColorContext> is enough, no Provider needed.
       <ColorContext.Provider
         value={{ color: this.state.color, handleSwitch: this.handleSwitch }}
       >

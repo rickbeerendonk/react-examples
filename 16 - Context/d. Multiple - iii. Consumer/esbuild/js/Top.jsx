@@ -6,7 +6,6 @@ import Middle from './Middle.jsx';
 
 function Top({ color }) {
   return (
-    // React 19+: <ColorContext> is enough, no Provider needed.
     <ColorContext.Provider value={{ color }}>
       <Middle />
     </ColorContext.Provider>
