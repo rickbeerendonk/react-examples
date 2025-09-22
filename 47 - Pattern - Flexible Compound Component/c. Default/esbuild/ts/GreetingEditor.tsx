@@ -1,6 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
+import type { JSX } from 'react';
 import { createContext, useContext, useState } from 'react';
 
 type GreetingContext = {
