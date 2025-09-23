@@ -4,6 +4,8 @@ exports[`Greeting > renders hello world snapshot with context color (@testing-li
 <h1
   style="color: red;"
 >
-  Hello World!
+  Hello 
+  World
+  !
 </h1>
 `;
