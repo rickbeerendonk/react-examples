@@ -6,7 +6,7 @@ import { use } from 'react';
 function valueFunc() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject('Hello, world!');
+      reject(new Error('Promise rejected!'));
     }, 2000);
   });
 }
