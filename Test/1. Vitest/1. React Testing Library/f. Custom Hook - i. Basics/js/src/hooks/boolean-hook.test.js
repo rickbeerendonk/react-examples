@@ -1,7 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import 'regenerator-runtime/runtime.js';
 import { renderHook } from '@testing-library/react';
 import { act } from 'react-test-renderer';
 
