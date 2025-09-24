@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, use, useState } from 'react';
 
 // Create empty context
 const GreetingContext = createContext();
@@ -17,7 +17,7 @@ function GreetingEditor({ children }) {
   );
 }
 GreetingEditor.Input = function GreetingEditor_Input() {
-  const context = useContext(GreetingContext);
+  const context = use(GreetingContext);
 
   // Check context
   if (!context) {
@@ -35,7 +35,7 @@ GreetingEditor.Input = function GreetingEditor_Input() {
   );
 };
 GreetingEditor.Text = function GreetingEditor_Text() {
-  const context = useContext(GreetingContext);
+  const context = use(GreetingContext);
 
   // Check context
   if (!context) {

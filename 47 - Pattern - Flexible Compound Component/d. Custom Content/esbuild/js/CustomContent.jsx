@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import { useContext } from 'react';
+import { use } from 'react';
 
 import { GreetingContext } from './GreetingEditor.jsx';
 
 function CustomContent() {
-  const context = useContext(GreetingContext);
+  const context = use(GreetingContext);
 
   // Error when used outside of GreetingEditor.
   if (!context) {

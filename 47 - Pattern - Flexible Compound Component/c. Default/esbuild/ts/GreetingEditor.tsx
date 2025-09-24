@@ -2,7 +2,7 @@
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
 import type { JSX } from 'react';
-import { createContext, useContext, useState } from 'react';
+import { createContext, use, useState } from 'react';
 
 type GreetingContext = {
   name: string;
@@ -22,13 +22,11 @@ function GreetingEditor({
   const [name, setName] = useState('World');
 
   return (
-    <GreetingContext.Provider value={{ name, setName }}>
-      {children}
-    </GreetingContext.Provider>
+    <GreetingContext value={{ name, setName }}>{children}</GreetingContext>
   );
 }
 GreetingEditor.Input = function GreetingEditor_Input() {
-  const context = useContext(GreetingContext);
+  const context = use(GreetingContext);
 
   return (
     <input
@@ -39,7 +37,7 @@ GreetingEditor.Input = function GreetingEditor_Input() {
   );
 };
 GreetingEditor.Text = function GreetingEditor_Text() {
-  const context = useContext(GreetingContext);
+  const context = use(GreetingContext);
 
   return <h1>Hello {context.name}!</h1>;
 };
