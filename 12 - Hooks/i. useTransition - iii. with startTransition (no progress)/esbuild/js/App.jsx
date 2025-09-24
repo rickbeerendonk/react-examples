@@ -9,7 +9,7 @@ export default function App() {
   const [count, setCount] = useState(0);
 
   function handleClick() {
-    // Slow operation, but useTransition() prevents blocking the UI
+    // Slow operation, but startTransition() prevents blocking the UI
     startTransition(() => setCount(c => slowAdd(c)));
   }
 
