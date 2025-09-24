@@ -9,6 +9,7 @@ const StateContext = createContext({
 });
 StateContext.displayName = 'StateContext'; // For DevTools
 
+// Component
 export function StateProvider(props) {
   const [state, dispatch] = useReducer(props.reducer, props.initialState);
   return (
@@ -16,11 +17,13 @@ export function StateProvider(props) {
   );
 }
 
+// Custom Hook
 export function useState() {
   const { state } = use(StateContext);
   return state;
 }
 
+// Custom Hook
 export function useDispatch() {
   const { dispatch } = use(StateContext);
   return dispatch;
