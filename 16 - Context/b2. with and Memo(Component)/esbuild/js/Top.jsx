@@ -14,10 +14,10 @@ function Top(props) {
   }
 
   return (
-    <ColorContext.Provider value={{ color }}>
+    <ColorContext value={{ color }}>
       <Middle />
       <button onClick={handleSwitch}>Switch color</button>
-    </ColorContext.Provider>
+    </ColorContext>
   );
 }
 
