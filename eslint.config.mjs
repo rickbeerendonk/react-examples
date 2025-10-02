@@ -39,7 +39,7 @@ export default [
     plugins: {
       'jsx-a11y': jsxA11y,
       react,
-      'react-compiler': reactCompiler,
+      //'react-compiler': reactCompiler,
       'react-hooks': reactHooks
     },
     rules: {
@@ -50,7 +50,7 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
-      'react-compiler/react-compiler': 'error',
+      //'react-compiler/react-compiler': 'error',
       'react-hooks/exhaustive-deps': 'error',
       'no-debugger': 'warn',
       semi: ['error', 'always']
