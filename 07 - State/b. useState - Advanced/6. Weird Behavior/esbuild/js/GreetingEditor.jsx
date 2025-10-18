@@ -3,8 +3,6 @@
 
 import { useState } from 'react';
 
-/* eslint-disable react-compiler/react-compiler */
-
 function GreetingEditor() {
   const [obj, setObj] = useState({ name: 'World' });
 
