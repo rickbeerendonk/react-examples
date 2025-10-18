@@ -1,9 +1,9 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { createRoot } from 'react-dom/client';
 
-import HelloMessage from './HelloMessage.jsx';
+import App from './App.jsx';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<HelloMessage />);
+root.render(<App />);
