@@ -3,8 +3,6 @@
 
 import { useState } from 'react';
 
-/* eslint-disable react-compiler/react-compiler */
-
 function ClickMe() {
   const [count, setCount] = useState(0);
 
