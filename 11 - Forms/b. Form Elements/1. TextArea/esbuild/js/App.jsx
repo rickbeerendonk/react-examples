@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 
-function GreetingEditor() {
+function App() {
   const [name, setName] = useState('Europe\nWorld');
 
   function handleChange(e) {
@@ -18,4 +18,4 @@ function GreetingEditor() {
   );
 }
 
-export default GreetingEditor;
+export default App;
