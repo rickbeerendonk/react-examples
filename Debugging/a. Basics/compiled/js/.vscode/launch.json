@@ -5,6 +5,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
+      "preLaunchTask": "npm: dev",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}"
     }
