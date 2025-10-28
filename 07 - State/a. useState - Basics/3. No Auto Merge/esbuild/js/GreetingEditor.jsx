@@ -10,8 +10,15 @@ function GreetingEditor() {
   });
 
   function handleChange(e) {
-    setState({ ...state, name: e.target.value });
+    // Wrong approach:
+    //setState({ name: e.target.value });
+
+    // Correct approach:
+    // Copy the old state and update the properties that changed
+    setState({ ...state, name: e.target.value }); // Wrong (see Batched Updates section)
   }
+
+  console.log('render');
 
   return (
     <>
