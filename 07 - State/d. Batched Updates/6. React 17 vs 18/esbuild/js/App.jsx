@@ -17,6 +17,7 @@ export default function App() {
     setTimeout(() => {
       // Other code is not batched in React 17
       //               but batched in React 18
+      // Therefore in React 18 both values will change only once, not twice (as in React 17).
       setValue1(v1 => v1 + 1);
       setValue2(v2 => !v2);
     }, 1);
