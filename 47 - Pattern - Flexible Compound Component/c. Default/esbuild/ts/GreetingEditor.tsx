@@ -13,7 +13,7 @@ const GreetingContext = createContext<GreetingContext | undefined>(undefined);
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
 type GreetingEditorProps = {
-  children?: JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 };
 
 function GreetingEditor({

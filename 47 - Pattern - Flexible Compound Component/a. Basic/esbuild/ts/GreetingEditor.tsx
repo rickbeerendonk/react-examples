@@ -9,11 +9,11 @@ type GreetingContext = {
   setName: (value: string) => void;
 };
 
-const GreetingContext = createContext<GreetingContext | undefined>(undefined);
+const GreetingContext = createContext<GreetingContext>(undefined);
 GreetingContext.displayName = 'GreetingContext'; // Unique name in DevTools
 
 type GreetingEditorProps = {
-  children: JSX.Element[];
+  children: JSX.Element | JSX.Element[];
 };
 
 function GreetingEditor({ children }: GreetingEditorProps) {
