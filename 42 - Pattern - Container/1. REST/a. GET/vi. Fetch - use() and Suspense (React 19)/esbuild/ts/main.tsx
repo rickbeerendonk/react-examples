@@ -4,9 +4,9 @@
 import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import ErrorBoundary from './ErrorBoundary.jsx';
-import Fetching from './Fetching.jsx';
-import PostListContainer from './PostListContainer.jsx';
+import ErrorBoundary from './ErrorBoundary.tsx';
+import Fetching from './Fetching.tsx';
+import PostListContainer from './PostListContainer.tsx';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
