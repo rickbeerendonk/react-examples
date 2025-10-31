@@ -6,7 +6,11 @@ function sleep(delay) {
   while (new Date().getTime() < start + delay);
 }
 
+let wait = 2000;
+
 export function slowAdd(value) {
-  sleep(1000);
+  const oldWait = wait;
+  wait = wait === 1000 ? 2000 : 1000;
+  sleep(oldWait);
   return value + 1;
 }

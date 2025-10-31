@@ -12,7 +12,9 @@ export default function App() {
   function handleClick() {
     // Async function supported since React 19
     startTransition(async () => {
+      //console.log('Adding 1 to', count);
       const newCount = await slowAddAsync(count);
+      //console.log('Added 1 to', count, 'result:', newCount);
       setCount(newCount);
     });
   }
