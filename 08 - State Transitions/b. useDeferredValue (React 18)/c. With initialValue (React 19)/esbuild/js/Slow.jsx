@@ -8,7 +8,7 @@ function Slow({ name }) {
 
   // Simulate slow rendering
   const startTime = performance.now();
-  while (performance.now() - startTime < 500) {
+  while (performance.now() - startTime < 1500) {
     // Artificial delay
   }
 
