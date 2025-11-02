@@ -16,7 +16,7 @@ function AsyncResult({ name, time }) {
 
   if (AsyncResult.Data[name].result) {
     // Return result if we already have one
-    return AsyncResult.Data[name].result;
+    return <u>{AsyncResult.Data[name].result}</u>;
   } else {
     // "Return" the promise
     throw AsyncResult.Data[name].promise;
