@@ -34,6 +34,12 @@ export default function Comments({ initialComments }: CommentsProps) {
       setComments([...comments, { text: newComment }]);
     } catch {
       alert('Failed to save comment');
+    } finally {
+      // Uncommented to show when addOptimisticComment
+      // does the internal rollback
+      //console.log('Before delay in finally');
+      //await delay(3000);
+      //console.log('Finished delay in finally');
     }
   }
 
