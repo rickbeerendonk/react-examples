@@ -4,6 +4,8 @@ exports[`Greeting renders hello world snapshot with default context color (@test
 <h1
   style="color: rgb(214, 118, 255);"
 >
-  Hello World!
+  Hello 
+  World
+  !
 </h1>
 `;
