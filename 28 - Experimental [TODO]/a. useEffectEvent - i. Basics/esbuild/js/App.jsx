@@ -1,25 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-/*
- * EXPERIMENTAL FEATURE
- * useEffectEvent is not yet stable in React 19
- * This example shows the intended API for when it becomes stable
- */
+/* useEffectEvent is now available in React 19.2+ */
 
-import { useEffect, useState } from 'react';
-
-// Simulating useEffectEvent (not available in stable React 19 yet)
-// In the future, you would import: import { useEffectEvent } from 'react';
-function useEffectEvent<T extends (...args: any[]) => any>(fn: T): T {
-  const ref = { current: fn };
-
-  useEffect(() => {
-    ref.current = fn;
-  });
-
-  return ((...args: any[]) => ref.current(...args)) as T;
-}
+import { useEffect, useEffectEvent, useState } from 'react';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -27,7 +11,7 @@ export default function App() {
 
   // useEffectEvent creates a stable function that can access latest props/state
   // without causing the effect to re-run
-  const onVisit = useEffectEvent((url: string) => {
+  const onVisit = useEffectEvent(url => {
     // This function can access the latest `count` and `text`
     // without being a dependency of the effect
     console.log(`Visited ${url} - Count: ${count}, Text: ${text}`);
@@ -41,16 +25,13 @@ export default function App() {
 
     // Note: In a real useEffect, you'd typically have some
     // subscription or event listener here
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty deps - only runs once, but onVisit has latest values!
 
   return (
     <div>
-      <h2>useEffectEvent (Experimental)</h2>
-      <p style={{ color: 'red' }}>
-        ⚠️ WARNING: useEffectEvent is EXPERIMENTAL and not yet in stable React
-        19
-      </p>
-      <p>This example simulates the proposed API</p>
+      <h2>useEffectEvent</h2>
+      <p>Available in React 19.2+</p>
 
       <div>
         <button onClick={() => setCount(c => c + 1)}>Count: {count}</button>

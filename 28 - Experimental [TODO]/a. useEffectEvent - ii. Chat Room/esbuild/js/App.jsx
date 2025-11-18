@@ -2,23 +2,12 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 /*
- * EXPERIMENTAL FEATURE - Chat Room Example
- * useEffectEvent is not yet stable in React 19
+ * useEffectEvent - Chat Room Example
+ * Available in React 19.2+
  * This shows a practical use case: connecting to a chat with latest theme
  */
 
-import { useEffect, useState } from 'react';
-
-// Simulating useEffectEvent
-function useEffectEvent(fn) {
-  const ref = { current: fn };
-
-  useEffect(() => {
-    ref.current = fn;
-  });
-
-  return (...args) => ref.current(...args);
-}
+import { useEffect, useEffectEvent, useState } from 'react';
 
 // Simulated chat connection
 function createConnection(roomId) {
@@ -65,7 +54,7 @@ export default function ChatRoom() {
   return (
     <div>
       <h2>useEffectEvent - Chat Room Example</h2>
-      <p style={{ color: 'red' }}>⚠️ EXPERIMENTAL - Not in stable React 19</p>
+      <p>Available in React 19.2+</p>
 
       <div>
         <label>
