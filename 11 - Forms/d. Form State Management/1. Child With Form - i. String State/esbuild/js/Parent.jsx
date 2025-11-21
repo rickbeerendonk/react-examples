@@ -8,10 +8,10 @@ import ChildWithForm from './ChildWithForm.jsx';
 function Parent() {
   const [list, setList] = useState([]);
 
-  const handleAdd = useCallback(item => {
+  function handleAdd(item) {
     // Create a new list by coping the old and adding the new item
     setList(lst => [...lst, item]);
-  }, []);
+  }
 
   return (
     <>
