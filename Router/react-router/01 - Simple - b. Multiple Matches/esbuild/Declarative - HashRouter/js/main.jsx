@@ -2,37 +2,23 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { createRoot } from 'react-dom/client';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import Root from './Root.jsx';
+import App from './App.jsx';
 import Home from './routes/Home.jsx';
 import Page1 from './routes/Page1.jsx';
 import Page2 from './routes/Page2.jsx';
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <Root />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: 'page1',
-        element: <Page1 />
-      },
-      {
-        path: 'page-one',
-        element: <Page1 />
-      },
-      {
-        path: 'page2',
-        element: <Page2 />
-      }
-    ]
-  }
-]);
-
 const root = createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={router} />);
+root.render(
+  <HashRouter basename="/">
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="page1/*" element={<Page1 />} />
+        <Route path="page-one/*" element={<Page1 />} />
+        <Route path="page2/*" element={<Page2 />} />
+      </Route>
+    </Routes>
+  </HashRouter>
+);

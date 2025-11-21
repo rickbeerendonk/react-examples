@@ -2,12 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 function Home() {
-  return (
-    <>
-      <title>Home</title>
-      <h2>Home</h2>
-    </>
-  );
+  return <h2>Home</h2>;
 }
 
 export default Home;
