@@ -11,7 +11,7 @@
     {
       "label": "Start",
       "runOptions": {
-        "instanceLimit": 3,
+        "instanceLimit": 1,
         "reevaluateOnRerun": true
       },
       "type": "shell",
