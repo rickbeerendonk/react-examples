@@ -1,8 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-interface ImportantAnchorProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ImportantAnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   highlight: string;
 }
 
