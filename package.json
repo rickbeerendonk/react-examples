@@ -30,8 +30,8 @@
     "eslint-plugin-jsx-a11y": "^6",
     "eslint-plugin-react": "^7",
     "eslint-plugin-react-compiler": "latest",
-    "eslint-plugin-react-hooks": "^5",
-    "eslint-plugin-storybook": "^9",
+    "eslint-plugin-react-hooks": "^7",
+    "eslint-plugin-storybook": "^10",
     "husky": "^9",
     "prettier": "^3",
     "rimraf": "^6"
@@ -59,7 +59,7 @@
     "react-router-dom": "^7",
     "react-transition-group": "^4",
     "redux": "^5",
-    "scheduler": "0.26.0",
+    "scheduler": "^0",
     "scheduler-next": "npm:scheduler@next",
     "styled-components": "^6",
     "typescript": "^5"
@@ -71,6 +71,7 @@
     "@react-spring/web": {
       "react": "^19",
       "react-dom": "^19"
-    }
+    },
+    "zod-validation-error": "^5.0.0"
   }
 }
