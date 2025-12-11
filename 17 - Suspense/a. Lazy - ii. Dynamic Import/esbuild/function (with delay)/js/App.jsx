@@ -4,13 +4,7 @@
 import { lazy, Suspense, useState } from 'react';
 
 //import Greeting from './Greeting.jsx';
-const Greeting = lazy(() => {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      import('./Greeting.jsx').then(r => resolve(r));
-    }, 2000);
-  });
-});
+const Greeting = lazy(() => import('./Greeting.jsx'));
 
 export default function App() {
   const [visible, setVisible] = useState(false);
