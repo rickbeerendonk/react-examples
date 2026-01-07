@@ -1,14 +1,11 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-const childProcess = require('child_process');
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const mime = require('../node_modules/mime-types');
-const ip = require('./ip');
-
-const esbuild = require('esbuild');
+import { spawn, spawnSync } from 'child_process';
+import { createServer } from 'http';
+import { existsSync, lstatSync, statSync, readdirSync, readFile } from 'fs';
+import { join, dirname } from 'path';
+import { contentType, lookup } from 'mime-types';
 
 let [, , ...filePath] = process.argv;
 // Windows fix:
@@ -17,11 +14,11 @@ filePath = filePath.join(' ').replaceAll('\\\\', '\\');
 /*** Helper functions ***/
 
 function findFileInPath(directory, file) {
-  const filename = path.join(directory, file);
-  if (fs.existsSync(filename)) {
+  const filename = join(directory, file);
+  if (existsSync(filename)) {
     return filename;
   } else {
-    const basename = path.dirname(directory);
+    const basename = dirname(directory);
     return basename && basename !== directory
       ? findFileInPath(basename, file)
       : null;
@@ -29,14 +26,14 @@ function findFileInPath(directory, file) {
 }
 
 function isDirectory(dirPath) {
-  return fs.existsSync(dirPath) && fs.lstatSync(dirPath).isDirectory();
+  return existsSync(dirPath) && lstatSync(dirPath).isDirectory();
 }
 
 function openBrowser(uri) {
   const command =
     process.platform === 'win32' ? `start "" "${uri}"` : `open "${uri}"`;
 
-  childProcess.spawn(command, {
+  spawn(command, {
     shell: true,
     stdio: 'inherit'
   });
@@ -44,33 +41,51 @@ function openBrowser(uri) {
 
 /*** Main functions ***/
 
-/// Is Webpack project? ///
+/// Is Angular project? ///
 
-if (filePath && fs.statSync(filePath).isDirectory()) {
-  const webpackConfigNames = ['webpack.config.js', 'webpack.dev.js'];
-  const webpackConfigPath = webpackConfigNames.reduce(
+if (filePath && statSync(filePath).isDirectory()) {
+  const angularConfigNames = ['angular.json'];
+  const angularConfigPath = angularConfigNames.reduce(
     (path, name) => path || findFileInPath(filePath, name),
     null
   );
-  if (webpackConfigPath) {
-    // Webpack config exists, so execute webpack
-    console.log('webpack');
-    console.log('webpack config: ' + webpackConfigPath);
-    childProcess.spawnSync(
-      'webpack-dev-server',
-      ['--config', `"${webpackConfigPath}"`, '--open'],
-      {
-        cwd: path.dirname(webpackConfigPath),
-        shell: true,
-        stdio: 'inherit'
-      }
-    );
-    console.log('webpack done');
+  if (angularConfigPath) {
+    // Angular config exists, so execute npm start
+    console.log('angular');
+    console.log('angular config: ' + angularConfigPath);
+    spawnSync('npm', ['start'], {
+      cwd: dirname(angularConfigPath),
+      shell: true,
+      stdio: 'inherit'
+    });
+    console.log('angular done');
     process.exit();
   }
 }
 
-/// No Webpack ///
+/// Is Vite project? ///
+
+if (filePath && statSync(filePath).isDirectory()) {
+  const viteConfigNames = ['vite.config.js', 'vite.config.ts'];
+  const viteConfigPath = viteConfigNames.reduce(
+    (path, name) => path || findFileInPath(filePath, name),
+    null
+  );
+  if (viteConfigPath) {
+    // Vite config exists, so execute npm start
+    console.log('vite');
+    console.log('vite config: ' + viteConfigPath);
+    spawnSync('npm', ['run', 'dev', '--', '--open'], {
+      cwd: dirname(viteConfigPath),
+      shell: true,
+      stdio: 'inherit'
+    });
+    console.log('vite done');
+    process.exit();
+  }
+}
+
+/// Other ///
 
 const basePath = process.cwd();
 
@@ -80,31 +95,38 @@ if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
   extraUri = filePath.substring(basePath.length).split('\\').join('/');
 }
 
-const server = http.createServer(function (request, response) {
+const server = createServer(function (request, response) {
   // Log request
   //console.log('Request:', request.url);
 
-  let filePath = path.join(basePath, decodeURI(request.url));
+  let filePath = join(basePath, decodeURI(request.url));
   let isDirPath = isDirectory(filePath);
 
   if (isDirPath) {
-    // Go to parent if it contains 'index.html'
-    if (
-      !fs.existsSync(path.join(filePath, 'index.html')) &&
-      findFileInPath(filePath, 'index.html')
-    ) {
-      response.writeHead(302, { Location: `${request.url}..` });
+    // Redirect to prevent issues when requesting files
+    if (filePath.substr(-1) != '/') {
+      response.writeHead(302, { Location: request.url.replace(/\/?$/, '/') });
       response.end();
       return;
     } else {
-      // Get default files in directories:
-      if (fs.existsSync(path.join(filePath, 'index.html'))) {
-        filePath = path.join(filePath, 'index.html');
-        isDirPath = false;
-      }
-      if (fs.existsSync(path.join(filePath, 'index.js'))) {
-        filePath = path.join(filePath, 'index.js');
-        isDirPath = false;
+      // Go to parent if it contains 'index.html'
+      if (
+        !existsSync(join(filePath, 'index.html')) &&
+        findFileInPath(filePath, 'index.html')
+      ) {
+        response.writeHead(302, { Location: `${request.url}..` });
+        response.end();
+        return;
+      } else {
+        // Get default files in directories:
+        if (existsSync(join(filePath, 'index.html'))) {
+          filePath = join(filePath, 'index.html');
+          isDirPath = false;
+        }
+        if (existsSync(join(filePath, 'index.js'))) {
+          filePath = join(filePath, 'index.js');
+          isDirPath = false;
+        }
       }
     }
   }
@@ -122,8 +144,7 @@ const server = http.createServer(function (request, response) {
         }
         ${
           // Links to: Directories
-          fs
-            .readdirSync(filePath, { withFileTypes: true })
+          readdirSync(filePath, { withFileTypes: true })
             .filter(
               dirent =>
                 dirent.isDirectory() &&
@@ -135,7 +156,6 @@ const server = http.createServer(function (request, response) {
                   'server'
                 ].includes(dirent.name)
             )
-            .sort((a, b) => (a.name > b.name ? 1 : -1))
             .map(
               dirent =>
                 `<li><a href="${encodeURI(`./${dirent.name}/`)}">${
@@ -148,7 +168,7 @@ const server = http.createServer(function (request, response) {
       'utf-8'
     );
   } else {
-    fs.readFile(filePath, function (error, content) {
+    readFile(filePath, function (error, content) {
       if (error) {
         if (error.code === 'ENOENT') {
           response.writeHead(404, { 'Content-Type': 'text/html' });
@@ -162,80 +182,18 @@ const server = http.createServer(function (request, response) {
           );
         }
       } else {
-        if (filePath.includes('esbuild') || filePath.includes('esm')) {
-          const { name, ext } = path.parse(filePath);
-          const fileName = name + ext;
-
-          let result;
-
-          switch (path.extname(filePath)) {
-            case '.js':
-            case '.mjs':
-            case '.jsx':
-              result = esbuild.transformSync(content.toString(), {
-                sourcemap: 'inline',
-                sourcefile: fileName,
-                loader: 'jsx',
-                jsx: 'automatic' // 'transform'
-              });
-              content = result.code;
-
-              if (result.warnings.length)
-                console.warn(
-                  `ESBuild Transform Warnings (${fileName}): ${result.warnings}`
-                );
-
-              response.writeHead(200, {
-                'Content-Type': mime.contentType('_.js')
-              });
-              break;
-
-            case '.ts':
-            case '.tsx':
-              result = esbuild.transformSync(content.toString(), {
-                sourcemap: 'inline',
-                sourcefile: fileName,
-                loader: 'tsx',
-                jsx: 'automatic' // 'transform'
-              });
-              content = result.code;
-
-              if (result.warnings.length)
-                console.warn(
-                  `ESBuild Transform Warnings (${fileName}): ${result.warnings}`
-                );
-
-              response.writeHead(200, {
-                'Content-Type': mime.contentType('_.js')
-              });
-              break;
-
-            default:
-              response.writeHead(200, {
-                'Content-Type': mime.contentType(mime.lookup(filePath))
-              });
-              break;
-          }
-
-          response.end(content, 'utf-8');
-        } else {
-          response.writeHead(200, {
-            'Content-Type': mime.contentType(mime.lookup(filePath))
-          });
-          response.end(content, 'utf-8');
-        }
+        response.writeHead(200, {
+          'Content-Type': contentType(lookup(filePath))
+        });
+        response.end(content, 'utf-8');
       }
     });
   }
 });
 
-const port = undefined; //3000;
-server.listen(port).on('listening', () => {
-  const localServerUri = `http://localhost:${server.address().port}`;
-  const serverUri =
-    ip['en0']?.[0] && `http://${ip['en0']?.[0]}:${server.address().port}`;
-
-  const totalUri = `${localServerUri}${extraUri}${
+server.listen().on('listening', () => {
+  const serverUri = `http://localhost:${server.address().port}`;
+  const totalUri = `${serverUri}${extraUri}${
     extraUri[extraUri.length - 1] !== '/' && '/'
   }`.replace(/\s+/g, '%20');
 
@@ -243,8 +201,7 @@ server.listen(port).on('listening', () => {
     '\x1b[35m' /* Foreground Magenta */,
     'Server listening at',
     '\x1b[1m' /* bold */,
-    localServerUri,
-    serverUri ? `(${serverUri})` : '',
+    serverUri,
     '\x1b[0m' /* reset */
   );
 
