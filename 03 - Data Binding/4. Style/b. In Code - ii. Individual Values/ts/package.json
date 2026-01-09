@@ -1,7 +1,5 @@
 {
-  "name": "lab",
-  "private": true,
-  "version": "0.0.0",
+  "name": "demo",
   "type": "module",
   "scripts": {
     "dev": "vite",
