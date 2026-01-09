@@ -47,6 +47,7 @@
     "@babel/standalone": "^7",
     "formik": "^2",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "react-transition-group": "^4"
   }
 }
