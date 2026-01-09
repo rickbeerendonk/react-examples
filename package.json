@@ -44,6 +44,8 @@
     "zod-validation-error": "^5.0.0"
   },
   "dependencies": {
+    "@babel/standalone": "^7",
+    "formik": "^2",
     "react": "^19",
     "react-dom": "^19"
   }
