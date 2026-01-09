@@ -21,8 +21,8 @@
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "start": "node ./server/server.js",
-    "test": "npm run eslint && npm run prettier",
-    "prepare": "husky"
+    "prepare": "husky",
+    "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
     "@eslint/js": "^9",

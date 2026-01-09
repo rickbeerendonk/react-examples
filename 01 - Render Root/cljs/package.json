@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "build": "shadow-cljs release app",
+    "lint": "clj-kondo --lint src",
+    "preview": "serve -l 9100 public",
+    "start": "concurrently \"npm run dev\" \"npm run preview\""
+  },
+  "dependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "clj-kondo": "^2025",
+    "concurrently": "^8",
+    "shadow-cljs": "^3",
+    "serve": "^14"
+  }
+}
