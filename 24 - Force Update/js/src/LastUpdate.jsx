@@ -1,16 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-function useForceUpdate() {
-  const [, setState] = useState(0);
-  const forceUpdate = useCallback(() => {
-    setState({});
-  }, []);
-
-  return forceUpdate;
-}
+import useForceUpdate from './hooks/useForceUpdate.js';
 
 function LastUpdate() {
   const forceUpdate = useForceUpdate();
