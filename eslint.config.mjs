@@ -18,8 +18,7 @@ export default [
       '**/temp/**',
       '**/__mocks__/**',
       '**/function-do-expression/**',
-      '**/cljs/**',
-      '**/kt/**'
+      '**/cljs/**'
     ] // Define any patterns to ignore
   },
   {
