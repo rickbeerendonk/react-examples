@@ -3,7 +3,8 @@
 
 import { createRoot } from 'react-dom/client';
 
-import App from './App.tsx';
+import App from './App.jsx';
+import './oblicum.css';
 
-const root = createRoot(document.getElementById('root') as Element);
+const root = createRoot(document.getElementById('root'));
 root.render(<App />);
