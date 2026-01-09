@@ -1,10 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2017-2020 Rick Beerendonk     !*/
 
-/* global Babel, React, ReactDOM */
+import React, { Component, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { transform } from '@babel/standalone';
 
 function jsxTransform(source) {
-  return Babel.transform(source, { presets: ['react'] }).code;
+  return transform(source, { presets: [['react', { runtime: 'automatic' }]] })
+    .code;
 }
 
 function jsxTransformSafe(source) {
@@ -17,17 +20,13 @@ function jsxTransformSafe(source) {
 }
 
 function JsxCompiler() {
-  const jsx = `class HelloMessageClass extends Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
+  const jsx = `function Greeting ({name}) {
+  return <h1>Hello {name}</h1>;
 }
 
-const HelloMessageFunctional = ({name}) => <div>Hello {name}</div>;
+createRoot(document.getElementById('root')).render(<Greeting name="React" />);`;
 
-React.renderComponent(<HelloMessageClass name="John" />, mountNode);`;
-
-  const [transformedJSX, setTransformedJSX] = React.useState(() =>
+  const [transformedJSX, setTransformedJSX] = useState(() =>
     jsxTransformSafe(jsx)
   );
 
@@ -68,4 +67,4 @@ const styles = {
   }
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<JsxCompiler />);
+createRoot(document.getElementById('root')).render(<JsxCompiler />);
