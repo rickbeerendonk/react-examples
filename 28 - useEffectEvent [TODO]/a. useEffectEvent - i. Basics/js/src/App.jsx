@@ -25,7 +25,6 @@ export default function App() {
 
     // Note: In a real useEffect, you'd typically have some
     // subscription or event listener here
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty deps - only runs once, but onVisit has latest values!
 
   return (

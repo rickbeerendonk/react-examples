@@ -48,7 +48,6 @@ export default function ChatRoom() {
     return () => connection.disconnect();
 
     // Only reconnect when roomId changes, NOT when theme changes!
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]); // theme is NOT in dependencies!
 
   return (
