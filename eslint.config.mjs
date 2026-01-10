@@ -18,7 +18,8 @@ export default [
       '**/temp/**',
       '**/__mocks__/**',
       '**/function-do-expression/**',
-      '**/cljs/**'
+      '**/cljs/**',
+      '**/05 - Render Conditionally/y. [do-expression] if-else/**'
     ] // Define any patterns to ignore
   },
   {
