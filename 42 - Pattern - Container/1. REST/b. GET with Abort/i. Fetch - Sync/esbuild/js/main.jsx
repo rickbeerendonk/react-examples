@@ -4,6 +4,7 @@
 import { createRoot } from 'react-dom/client';
 
 import PostContainer from './PostContainer.jsx';
+import './index.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(<PostContainer />);
