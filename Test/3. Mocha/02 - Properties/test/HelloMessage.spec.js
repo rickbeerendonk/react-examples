@@ -4,16 +4,35 @@
 import HelloMessage from '../src/HelloMessage.jsx';
 
 import React from 'react';
-import ShallowRenderer from 'react-shallow-renderer';
+import { JSDOM } from 'jsdom';
+import ReactDOM from 'react-dom/client';
+import { flushSync } from 'react-dom';
 import expect from 'expect';
 
-describe('HelloMessage', () => {
-  it('should render name in message', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<HelloMessage name="React" />);
-    const actual = renderer.getRenderOutput();
+const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+global.document = dom.window.document;
+global.window = dom.window;
 
-    expect(actual.type).toBe('h1');
-    expect(actual.props.children).toEqual(['Hello ', 'React', '!']);
+describe('HelloMessage', () => {
+  let container;
+
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(container);
+  });
+
+  it('should render name in message', () => {
+    const root = ReactDOM.createRoot(container);
+    flushSync(() => {
+      root.render(<HelloMessage name="React" />);
+    });
+
+    const heading = container.querySelector('h1');
+    expect(heading).toBeTruthy();
+    expect(heading.textContent).toEqual('Hello React!');
   });
 });

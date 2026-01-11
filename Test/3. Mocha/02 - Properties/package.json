@@ -12,18 +12,18 @@
     "test": "mocha --require @babel/register"
   },
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
-    "@babel/core": "7.24.4",
-    "@babel/preset-env": "7.24.4",
-    "@babel/preset-react": "7.22.3",
-    "@babel/register": "7.21.0",
-    "core-js": "3.30.2",
-    "expect": "29.5.0",
-    "mocha": "10.2.0",
-    "react-test-renderer": "18.3.1",
-    "react-shallow-renderer": "16.15.0"
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@babel/register": "^7",
+    "core-js": "^3",
+    "expect": "^30",
+    "jsdom": "^27",
+    "mocha": "^11",
+    "react-test-renderer": "^19"
   }
 }
