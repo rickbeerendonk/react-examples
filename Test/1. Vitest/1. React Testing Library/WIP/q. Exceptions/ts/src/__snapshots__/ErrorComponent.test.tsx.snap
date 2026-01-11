@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ErrorComponent > renders component snapshot when no error 1`] = `
+<div
+  data-testid="error-component"
+>
+  <p>
+    Content
+  </p>
+</div>
+`;

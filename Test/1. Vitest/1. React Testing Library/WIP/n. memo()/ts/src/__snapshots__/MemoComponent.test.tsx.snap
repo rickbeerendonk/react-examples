@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MemoComponent > renders component snapshot 1`] = `
+<div>
+  <h2>
+    Memo Component Demo
+  </h2>
+  <p
+    data-testid="parent-counter"
+  >
+    Parent Counter: 
+    0
+  </p>
+  <button
+    data-testid="increment-parent-btn"
+  >
+    Increment Parent
+  </button>
+  <button
+    data-testid="update-message-btn"
+  >
+    Update Message
+  </button>
+  <div
+    data-testid="memo-component"
+  >
+    <p>
+      Hello Memo
+    </p>
+    <p
+      data-testid="render-count"
+    >
+      Render Count: 
+      0
+    </p>
+  </div>
+</div>
+`;
