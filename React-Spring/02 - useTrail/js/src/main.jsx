@@ -11,6 +11,7 @@ const items = [
   { key: 2, text: 'Two' },
   { key: 3, text: 'Three' }
 ];
+import './oblicum.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(

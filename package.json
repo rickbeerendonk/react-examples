@@ -50,6 +50,13 @@
     "react": "^19",
     "react-dom": "^19",
     "react-hook-form": "^7",
+    "react-spring": "^10",
     "react-transition-group": "^4"
+  },
+  "overrides": {
+    "@react-spring/zdog": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }

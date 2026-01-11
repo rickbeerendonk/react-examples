@@ -6,7 +6,8 @@ import { useSpring, animated } from 'react-spring';
 export default function App() {
   const contentProps = useSpring({
     from: { opacity: 0 },
-    to: { opacity: 1 }
+    to: { opacity: 1 },
+    config: { duration: 1000 }
   });
   return <animated.h1 style={contentProps}>Hello World!</animated.h1>;
 }
