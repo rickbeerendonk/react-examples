@@ -2,6 +2,7 @@
 /*! Copyright © 2016 Rick Beerendonk          !*/
 
 import { createRoot } from 'react-dom/client';
+import './oblicum.css';
 
 import App from './App.jsx';
 
