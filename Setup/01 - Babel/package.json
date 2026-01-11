@@ -13,8 +13,8 @@
     "watch": "babel site/src --out-dir site/build --watch --source-maps"
   },
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
     "@babel/cli": "7.16.0",
