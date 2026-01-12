@@ -6,6 +6,7 @@ import Greeting from './Greeting';
 
 const rootElem = document.createElement('div');
 document.body.appendChild(rootElem);
+import './index.css';
 
 const root = createRoot(rootElem);
 root.render(<Greeting />);

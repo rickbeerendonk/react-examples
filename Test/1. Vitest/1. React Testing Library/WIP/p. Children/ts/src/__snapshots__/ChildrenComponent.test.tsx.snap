@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChildrenComponent > renders component snapshot 1`] = `
+<div
+  data-testid="wrapper"
+>
+  <h2>
+    Test
+  </h2>
+  <div
+    data-testid="children-container"
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;

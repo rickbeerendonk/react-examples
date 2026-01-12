@@ -6,9 +6,22 @@
 build/
 build-storybook/
 coverage/
+dist/
 docs/
 Issues/
 temp/
+
+#################
+## ClojureScript
+#################
+
+# Compiler cache (all cljs projects)
+.shadow-cljs/
+cljs-runtime/
+
+# Generated output (cljs projects only)
+**/cljs/public/js/
+**/cljs/manifest.edn
 
 #################
 ## npm

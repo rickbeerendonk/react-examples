@@ -15,6 +15,7 @@ const client = new ApolloClient({
   uri: 'http://localhost:3000',
   cache: new InMemoryCache()
 });
+import './index.css';
 
 const root = createRoot(rootDiv);
 root.render(

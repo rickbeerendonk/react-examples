@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PortalComponent > renders component snapshot with modal open 1`] = `
+<div
+  data-testid="portal-demo"
+>
+  <h2>
+    Portal Demo
+  </h2>
+  <button
+    data-testid="open-modal-btn"
+  >
+    Open Modal
+  </button>
+</div>
+`;

@@ -9,8 +9,8 @@
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
     "@babel/core": "7.22.1",
@@ -32,7 +32,7 @@
     "jest-environment-jsdom": "29.5.0",
     "react-test-renderer": "18.2.0",
     "regenerator-runtime": "0.13.11",
-    "rimraf": "5.0.1",
+    "rimraf": "^6",
     "style-loader": "3.3.3",
     "webpack": "5.84.1",
     "webpack-cli": "5.1.1",

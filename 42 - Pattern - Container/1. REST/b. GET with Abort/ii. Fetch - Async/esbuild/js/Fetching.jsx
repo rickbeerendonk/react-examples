@@ -5,7 +5,7 @@ function Fetching() {
   return (
     <>
       <img
-        src="../../../../../../resources/oblicum-square.svg"
+        src="oblicum-square.svg"
         className="oblicum-spinner"
         alt="Fetching..."
       />

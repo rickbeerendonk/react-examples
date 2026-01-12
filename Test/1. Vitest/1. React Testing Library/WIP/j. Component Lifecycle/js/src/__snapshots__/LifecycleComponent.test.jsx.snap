@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LifecycleComponent > renders component snapshot 1`] = `
+<div>
+  <h2>
+    Test
+  </h2>
+  <p
+    data-testid="mounted-status"
+  >
+    Component is mounted
+  </p>
+  <p
+    data-testid="count-display"
+  >
+    Count: 
+    0
+  </p>
+  <button
+    data-testid="increment-button"
+  >
+    Increment
+  </button>
+</div>
+`;

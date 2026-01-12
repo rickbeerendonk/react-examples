@@ -7,6 +7,7 @@ import PostListContainer from './PostListContainer';
 
 const rootDiv = document.createElement('div');
 document.body.appendChild(rootDiv);
+import './index.css';
 
 const root = createRoot(rootDiv);
 root.render(<PostListContainer />);

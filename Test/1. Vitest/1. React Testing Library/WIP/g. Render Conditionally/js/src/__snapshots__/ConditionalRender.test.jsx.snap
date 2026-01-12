@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ConditionalRender > renders snapshot when show is true 1`] = `
+<div>
+  <h2>
+    Conditional Rendering
+  </h2>
+  <p
+    data-testid="conditional-message"
+  >
+    Snapshot Test
+  </p>
+</div>
+`;

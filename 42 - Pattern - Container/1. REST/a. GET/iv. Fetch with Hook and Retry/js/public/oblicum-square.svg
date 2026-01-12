@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="10 10 140 140" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <desc>
+    Oblicum Logo Square
+  </desc>
+
+  <!-- O -->
+  <path d="M 35.8855973 25.65002781
+        A 70 70 0 1 0 116.3164712 20.15759095
+        L 100.7522692 45.8043377
+        A 40 40 0 1 1 54.7917699 48.942873
+        A 15 15 0 0 0 35.8855973 25.65002781
+        z"
+    fill="#444" />
+
+  <path d="M 80 10
+    a 15 15 0 0 1 0 30
+    a 40 40 0 0 0 -20.75226925 5.804337686
+    a 15 15 0 0 0 -15.56420193 -25.64674674
+    a 70 70 0 0 1 36.31647118 -10.15759095
+    z"
+    fill="#d676ff" /> 
+
+</svg>
