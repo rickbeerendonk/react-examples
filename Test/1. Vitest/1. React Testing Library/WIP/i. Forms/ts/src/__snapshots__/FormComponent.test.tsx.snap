@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormComponent > renders form snapshot 1`] = `
+<div>
+  <h2>
+    Simple Form
+  </h2>
+  <form>
+    <div>
+      <label
+        for="name"
+      >
+        Name:
+      </label>
+      <input
+        data-testid="name-input"
+        id="name"
+        name="name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        for="email"
+      >
+        Email:
+      </label>
+      <input
+        data-testid="email-input"
+        id="email"
+        name="email"
+        type="email"
+        value=""
+      />
+    </div>
+    <button
+      data-testid="submit-button"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

@@ -16,19 +16,13 @@ Install dependencies first:
 ## Visual Studio Code
 
 1. Open de root folder in Visual Studio Code.
-2. Open a file from and example (`index.html` or a file in the same folder).
+2. Open a file from and example.
 3. On Windows press `ctrl + shift + b` and on macOS press `cmd + shift + b` to open the web server and the browser in that folder.
 4. When done, close the web server: On Windows `ctrl + shift + p` and on macOs `cmd + shift + p`, in both cases followed by choosing `Terminate Task`.
 
 ## Command Line / Terminal
 
-1. Run `npm start`. Now the server will run and the browser will open. Server path will be written in the console.
-2. In the browser, browse to the folder of the example you want to run and it will open automatically.
-
-### Alternative
-
-1. Run `npx serve`.
-2. In the browser, browse to the folder of the example you want to run and it will open automatically.
+1. Run `npm run dev` or `npm run dev -- --open` (to also open the browser). Server path will be written in the console.
 
 ## Licence
 
@@ -36,4 +30,4 @@ European Union Public Licence version 1.2
 
 ## Copyright
 
-Copyright © 2014-2023 Rick Beerendonk
+Copyright © 2014-2026 Rick Beerendonk

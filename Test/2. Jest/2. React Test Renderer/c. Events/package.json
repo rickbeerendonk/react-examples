@@ -1,0 +1,55 @@
+{
+  "name": "react-test-jest-events",
+  "description": "React Tests with Jest - Events",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "EUPL-1.2",
+  "dependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@babel/core": "7.22.1",
+    "@babel/preset-env": "7.22.4",
+    "@babel/preset-react": "7.22.3",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "13.5.0",
+    "babel-jest": "27.4.2",
+    "babel-loader": "9.1.2",
+    "core-js": "3.30.2",
+    "css-loader": "6.8.1",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.6",
+    "enzyme-to-json": "3.6.2",
+    "eslint": "8.33.0",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-webpack-plugin": "4.0.1",
+    "html-webpack-plugin": "5.5.1",
+    "jest": "27.4.3",
+    "react-test-renderer": "18.2.0",
+    "regenerator-runtime": "0.13.9",
+    "rimraf": "^6",
+    "style-loader": "3.3.3",
+    "webpack": "5.84.1",
+    "webpack-cli": "5.1.1",
+    "webpack-dev-server": "4.15.0"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack --progress",
+    "clean": "rimraf build",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "start": "webpack serve --open",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-watch": "jest --watch",
+    "test-watch-all": "jest --watchAll"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "react-test-jest-query",
+  "description": "React Tests with Jest - Query",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "EUPL-1.2",
+  "dependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@testing-library/jest-dom": "^6",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.4.3",
+    "@vitejs/plugin-react": "^5",
+    "babel-jest": "^30",
+    "eslint": "8.41.0",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "^30",
+    "jest-environment-jsdom": "^30",
+    "react-test-renderer": "18.2.0",
+    "rimraf": "^6",
+    "vite": "^7"
+  },
+  "scripts": {
+    "build": "vite build",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "start": "vite --open",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-watch": "jest --watch",
+    "test-watch-all": "jest --watchAll"
+  }
+}

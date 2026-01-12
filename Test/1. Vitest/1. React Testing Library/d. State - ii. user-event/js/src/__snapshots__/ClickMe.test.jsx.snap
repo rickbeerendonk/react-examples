@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ClickMe > renders 0 snapshot (@testing-library/react) 1`] = `
+<button>
+  This button has been clicked 
+  0
+   times
+</button>
+`;
+
+exports[`ClickMe > renders 1 after click snapshot (@testing-library/react) 1`] = `
+<button>
+  This button has been clicked 
+  1
+   times
+</button>
+`;

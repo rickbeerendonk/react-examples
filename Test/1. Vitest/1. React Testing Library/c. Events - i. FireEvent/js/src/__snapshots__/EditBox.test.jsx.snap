@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EditBox > renders world snapshot when value is world (@testing-library/react) 1`] = `
+<input
+  value="World"
+/>
+`;

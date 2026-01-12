@@ -9,10 +9,10 @@ import { StyledGreeting } from './StyledGreeting';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Greeting name={'Standard'} />
       <StyledGreeting name={'Styled'} />
-    </React.Fragment>
+    </>
   );
 }
 

@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Greeting > renders hello world snapshot with context color (@testing-library/react) 1`] = `
+<h1
+  style="color: red;"
+>
+  Hello 
+  World
+  !
+</h1>
+`;

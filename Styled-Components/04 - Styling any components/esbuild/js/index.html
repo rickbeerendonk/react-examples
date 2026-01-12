@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2024 Rick Beerendonk -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="../../../../../../../../../utils/document-title.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../../../../../../../../resources/oblicum.css"
+    />
+
+    <script src="../../../../../../../../../node_modules/react/umd/react.development.js"></script>
+    <script src="../../../../../../../../../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script>
+      const process = { env: { NODE_ENV: 'development' } };
+      let global = window;
+      let exports = {};
+      function require() {
+        return global.React;
+      }
+    </script>
+    <script src="../../../../../../../../../node_modules/react/cjs/react-jsx-runtime.development.js"></script>
+    <script>
+      ReactJSXRuntime = exports;
+      exports = {};
+    </script>
+    <!-- Capture shallowEqual function -->
+    <script>
+      module = { exports };
+    </script>
+    <script src="../../../../../../../../../node_modules/shallowequal/index.js"></script>
+    <script>
+      shallowEqual = module.exports;
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/stable/react@19.2.0?dev",
+          "react/jsx-runtime": "https://esm.sh/stable/react@19.2.0/jsx-runtime?dev",
+          "react-dom/client": "https://esm.sh/stable/react-dom@19.2.0/client?dev",
+          "styled-components": "../../../../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+          "tslib": "../../../../../node_modules/tslib/tslib.es6.mjs",
+          "@emotion/is-prop-valid": "../../../../../node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js",
+          "@emotion/memoize": "../../../../../node_modules/@emotion/memoize/dist/emotion-memoize.esm.js",
+          "@emotion/unitless": "../../../../../node_modules/@emotion/unitless/dist/emotion-unitless.esm.js",
+          "shallowequal": "../../../../../resources/shallowequal.mjs",
+          "stylis": "../../../../../node_modules/stylis/dist/stylis.mjs"
+        }
+      }
+    </script>
+    <script src="main.jsx" type="module"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

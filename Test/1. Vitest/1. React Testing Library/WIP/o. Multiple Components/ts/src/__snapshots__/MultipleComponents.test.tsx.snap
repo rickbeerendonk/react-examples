@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MultipleComponents > renders component snapshot 1`] = `
+<div
+  data-testid="parent"
+>
+  <h2>
+    Parent Component
+  </h2>
+  <button
+    data-testid="child-button"
+  >
+    Child 1
+  </button>
+  <button
+    data-testid="child-button"
+  >
+    Child 2
+  </button>
+</div>
+`;

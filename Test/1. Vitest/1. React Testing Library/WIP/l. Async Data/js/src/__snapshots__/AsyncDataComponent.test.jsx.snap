@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AsyncDataComponent > renders component snapshot after data loads 1`] = `
+<div>
+  <div
+    data-testid="data-container"
+  >
+    <h2>
+      Async Data
+    </h2>
+    <ul>
+      <li
+        data-testid="item-1"
+      >
+        Item 1
+      </li>
+      <li
+        data-testid="item-2"
+      >
+        Item 2
+      </li>
+    </ul>
+  </div>
+</div>
+`;

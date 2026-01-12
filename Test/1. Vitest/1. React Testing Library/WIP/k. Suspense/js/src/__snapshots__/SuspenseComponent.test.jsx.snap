@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SuspenseComponent > renders component snapshot after loading 1`] = `
+<div
+  data-testid="suspense-wrapper"
+>
+  <h2>
+    Suspense Demo
+  </h2>
+  <div
+    data-testid="lazy-content"
+  >
+    Lazy Loaded Content
+  </div>
+</div>
+`;

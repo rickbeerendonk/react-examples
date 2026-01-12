@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
-    "module": "commonjs",
-    "sourceMap": true,
-    "target": "es2022",
-    "jsx": "react-jsxdev",
-    "allowImportingTsExtensions": true,
-    "allowJs": true
-  }
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }

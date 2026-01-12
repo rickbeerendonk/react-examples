@@ -1,0 +1,16 @@
+header h1 {
+  color: blue;
+}
+
+main {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+main ol {
+  background-color: lightblue;
+}
+
+footer #year {
+  font-style: italic;
+}

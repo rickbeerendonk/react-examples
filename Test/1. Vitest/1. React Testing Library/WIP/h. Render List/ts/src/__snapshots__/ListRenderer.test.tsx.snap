@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ListRenderer > renders snapshot with empty list 1`] = `
+<div>
+  <h2>
+    Item List
+  </h2>
+  <p
+    data-testid="empty-list"
+  >
+    No items available
+  </p>
+</div>
+`;
+
+exports[`ListRenderer > renders snapshot with items 1`] = `
+<div>
+  <h2>
+    Item List
+  </h2>
+  <ul>
+    <li
+      data-testid="item-1"
+    >
+      Item 1
+    </li>
+    <li
+      data-testid="item-2"
+    >
+      Item 2
+    </li>
+    <li
+      data-testid="item-3"
+    >
+      Item 3
+    </li>
+  </ul>
+</div>
+`;
