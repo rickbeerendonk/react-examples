@@ -3,7 +3,19 @@
 
 import { useReducer } from 'react';
 
-function reducer1(state, action) {
+type State = {
+  value1: number;
+  value2: number;
+  sum: number;
+  subtract: boolean;
+};
+
+type Action =
+  | { type: 'SET_VALUE1'; payload: number }
+  | { type: 'SET_VALUE2'; payload: number }
+  | { type: 'TOGGLE_SUBTRACT' };
+
+function reducer1(state: State, action: Action) {
   switch (action.type) {
     case 'SET_VALUE1':
       return {
@@ -41,15 +53,15 @@ function GreetingEditor() {
     sum: 3,
     subtract: false
   });
-  function handleChange1(e) {
+  function handleChange1(e: React.ChangeEvent<HTMLInputElement>) {
     dispatch({ type: 'SET_VALUE1', payload: Number(e.target.value) });
   }
 
-  function handleChange2(e) {
+  function handleChange2(e: React.ChangeEvent<HTMLInputElement>) {
     dispatch({ type: 'SET_VALUE2', payload: Number(e.target.value) });
   }
 
-  function handleAddSubtract(e) {
+  function handleAddSubtract(e: React.ChangeEvent<HTMLInputElement>) {
     dispatch({ type: 'TOGGLE_SUBTRACT' });
   }
 
