@@ -2,7 +2,7 @@
   "type": "module",
   "name": "react-examples",
   "version": "1.0.0",
-  "description": "Examples for [React](https://react.dev) and [ReactJS.NET](https://reactjs.net/).",
+  "description": "Examples for [React](https://react.dev).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/react-examples.git"
