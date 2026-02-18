@@ -41,7 +41,7 @@
     "prettier": "^3",
     "rimraf": "^6",
     "vite": "^7",
-    "zod-validation-error": "^5.0.0"
+    "zod-validation-error": "^5"
   },
   "dependencies": {
     "@babel/standalone": "^7",
