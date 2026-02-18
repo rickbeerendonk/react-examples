@@ -3,7 +3,7 @@
 #################
 
 build/
-build-storybook/
+storybook-static/
 coverage/
 docs/
 lib/

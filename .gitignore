@@ -4,7 +4,7 @@
 
 .cache/
 build/
-build-storybook/
+storybook-static/
 coverage/
 dist/
 docs/

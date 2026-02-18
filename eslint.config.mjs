@@ -10,7 +10,7 @@ export default [
   {
     ignores: [
       '** /build/ **',
-      '**/build-storybook/**',
+      '**/storybook-static/**',
       '**/coverage/**',
       '**/lib/**',
       '**/node_modules/**',
