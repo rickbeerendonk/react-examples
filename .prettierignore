@@ -5,6 +5,7 @@
 build/
 storybook-static/
 coverage/
+dist/
 docs/
 lib/
 Issues/

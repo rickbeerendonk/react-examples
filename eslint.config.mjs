@@ -12,6 +12,7 @@ export default [
       '** /build/ **',
       '**/storybook-static/**',
       '**/coverage/**',
+      '**/dist/**',
       '**/lib/**',
       '**/node_modules/**',
       '**/setup/**',
