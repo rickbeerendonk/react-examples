@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9",
+    "@react-router/dev": "^7",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5",
@@ -34,6 +35,7 @@
     "eslint-plugin-react": "^7",
     "eslint-plugin-react-compiler": "latest",
     "eslint-plugin-react-hooks": "^7",
+    "eslint-plugin-react-refresh": "^0",
     "eslint-plugin-storybook": "^10",
     "globals": "^16",
     "husky": "^9",
@@ -45,11 +47,15 @@
   },
   "dependencies": {
     "@babel/standalone": "^7",
+    "@react-router/node": "^7",
+    "@react-router/serve": "^7",
     "formik": "^2",
+    "isbot": "^5",
     "prop-types": "^15",
     "react": "^19",
     "react-dom": "^19",
     "react-hook-form": "^7",
+    "react-router": "^7",
     "react-router-dom": "^7",
     "react-spring": "^10",
     "react-transition-group": "^4"
