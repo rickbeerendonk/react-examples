@@ -3,6 +3,7 @@
 
 import { Suspense } from 'react';
 
+import ErrorBoundary from './ErrorBoundary.jsx';
 import Value from './Value.jsx';
 
 export default function App() {
@@ -10,7 +11,9 @@ export default function App() {
     <>
       <h1>Demo</h1>
       <Suspense fallback={<div>Loading...</div>}>
-        <Value />
+        <ErrorBoundary>
+          <Value />
+        </ErrorBoundary>
       </Suspense>
     </>
   );
