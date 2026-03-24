@@ -6,10 +6,7 @@ import { useState } from 'react';
 export default function App() {
   const [messages, setMessages] = useState([]);
 
-  async function handleSubmit(formData) {
-    // Simulate async operation
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
+  function handleSubmit(formData) {
     const name = formData.get('name');
     const message = formData.get('message');
 
