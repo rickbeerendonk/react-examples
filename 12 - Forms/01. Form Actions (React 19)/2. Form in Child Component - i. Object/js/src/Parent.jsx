@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 import ChildWithForm from './ChildWithForm.jsx';
 
