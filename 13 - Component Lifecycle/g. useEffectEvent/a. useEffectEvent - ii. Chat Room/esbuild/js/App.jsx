@@ -9,25 +9,10 @@
 
 import { useEffect, useEffectEvent, useState } from 'react';
 
-// Simulated chat connection
-function createConnection(roomId) {
-  return {
-    connect() {
-      console.log(`✅ Connecting to "${roomId}" room...`);
-    },
-    disconnect() {
-      console.log(`❌ Disconnecting from "${roomId}" room...`);
-    },
-    on(event, callback) {
-      console.log(`📩 Listening for ${event} events in "${roomId}"`);
-      // In real app, this would set up an event listener
-      setTimeout(() => callback('Test message'), 1000);
-    }
-  };
-}
+import { createConnection } from './chat-connection.js';
 
 export default function ChatRoom() {
-  const [roomId, setRoomId] = useState('general');
+  const [roomId, setRoomId] = useState('amsterdam');
   const [theme, setTheme] = useState('dark');
 
   // WITHOUT useEffectEvent, you'd have to include `theme` in dependencies
@@ -59,9 +44,9 @@ export default function ChatRoom() {
         <label>
           Choose room:{' '}
           <select value={roomId} onChange={e => setRoomId(e.target.value)}>
-            <option value="general">General</option>
-            <option value="travel">Travel</option>
-            <option value="music">Music</option>
+            <option value="amsterdam">Amsterdam</option>
+            <option value="keukenhof">Keukenhof</option>
+            <option value="kinderdijk">Kinderdijk</option>
           </select>
         </label>
       </div>
