@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 function Root() {
   return (
@@ -9,9 +9,9 @@ function Root() {
       <header>
         <h1>App</h1>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="page1">Page 1</Link>
-          <Link to="page2">Page 2</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="page1">Page 1</NavLink>
+          <NavLink to="page2">Page 2</NavLink>
         </nav>
       </header>
 

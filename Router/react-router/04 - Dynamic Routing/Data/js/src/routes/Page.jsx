@@ -4,8 +4,14 @@
 import { useParams } from 'react-router-dom';
 
 function Page() {
-  const { id } = useParams();
-  return <h2>Page {id}</h2>;
+  const params = useParams();
+  return (
+    <>
+      <title>Page {params.id}</title>
+      <h2>Page {params.id}</h2>
+      <pre>{JSON.stringify(params, null, 2)}</pre>
+    </>
+  );
 }
 
 export default Page;
