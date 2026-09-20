@@ -1,27 +1,23 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2018-2026 Rick Beerendonk     !*/
 
-import React from 'react';
+import { useEffect, useState } from 'react';
+
 import { fetch } from './slow-fetch.js';
-
 import ErrorMessage from './ErrorMessage.tsx';
 import Fetching from './Fetching.tsx';
-import { Post } from './Post.tsx';
+import type { Post } from './Post.tsx';
 import PostList from './PostList.tsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts, setPosts] = React.useState<Post[]>([]);
-  const [error, setError] = React.useState(null);
-  const [isFetching, setIsFetching] = React.useState(false);
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [isFetching, setIsFetching] = useState(false);
 
-  React.useEffect(
-    fetchPosts,
-    [] /* Do effect only once. Set functions of useState never change. */
-  );
-
-  function fetchPosts() {
+  useEffect(() => {
+    // Wrap async call so no Promise is returned from the effect callback.
     (async () => {
       setIsFetching(true);
       try {
@@ -29,15 +25,15 @@ function PostListContainer() {
         if (!response.ok) {
           throw Error(response.statusText);
         }
-        const json = await response.json();
+        const json: Post[] = await response.json();
         setPosts(json);
-      } catch (error) {
-        setError(error.message);
+      } catch (error: unknown) {
+        setError(error instanceof Error ? error.message : String(error));
       } finally {
         setIsFetching(false);
       }
     })();
-  }
+  }, []);
 
   return (
     <>

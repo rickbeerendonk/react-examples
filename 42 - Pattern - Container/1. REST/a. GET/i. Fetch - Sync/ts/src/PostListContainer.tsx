@@ -1,27 +1,22 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2018-2026 Rick Beerendonk     !*/
 
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 import { fetch } from './slow-fetch.js';
 import ErrorMessage from './ErrorMessage.tsx';
 import Fetching from './Fetching.tsx';
-import { Post } from './Post.tsx';
+import type { Post } from './Post.ts';
 import PostList from './PostList.tsx';
 
 // Container pattern:
 // Container fetches data, then renders the sub-component.
 function PostListContainer() {
-  const [posts, setPosts] = React.useState<Post[]>([]);
-  const [error, setError] = React.useState(null);
-  const [isFetching, setIsFetching] = React.useState(false);
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [isFetching, setIsFetching] = useState(false);
 
-  React.useEffect(
-    fetchPosts,
-    [] /* Do effect only once. Set functions of useState never change. */
-  );
-
-  function fetchPosts() {
+  useEffect(() => {
     setIsFetching(true);
     fetch('posts.json')
       .then(response => {
@@ -30,16 +25,16 @@ function PostListContainer() {
         }
         return response.json();
       })
-      .then(json => {
+      .then((json: Post[]) => {
         setPosts(json);
       })
-      .catch(error => {
-        setError(error.message);
+      .catch((error: unknown) => {
+        setError(error instanceof Error ? error.message : String(error));
       })
       .finally(() => {
         setIsFetching(false);
       });
-  }
+  }, []);
 
   return (
     <>
