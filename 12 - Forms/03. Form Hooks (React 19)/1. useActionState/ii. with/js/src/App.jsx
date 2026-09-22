@@ -7,7 +7,7 @@ export default function App() {
   const [list, setList] = useState([]);
 
   const [error, submitAction, isPending] = useActionState(
-    async (previousState, formData) => {
+    async function (previousState, formData) {
       const name = formData.get('name');
 
       // Simulate async operation
@@ -42,6 +42,7 @@ export default function App() {
         </button>
         {error?.error && <div style={{ color: 'red' }}>{error.error}</div>}
       </form>
+
       <ul>
         {list.map((item, index) => (
           <li key={index}>{item}</li>
