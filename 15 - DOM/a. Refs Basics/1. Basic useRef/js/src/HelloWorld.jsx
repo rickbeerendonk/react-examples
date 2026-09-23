@@ -4,7 +4,7 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 
 function HelloWorld() {
-  const myH1 = useRef();
+  const myH1 = useRef(); // { current: ... }
 
   useLayoutEffect(() => {
     // myH1.current contains a reference to the real DOM node.
