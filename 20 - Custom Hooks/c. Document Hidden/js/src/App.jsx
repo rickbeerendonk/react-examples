@@ -5,7 +5,7 @@ import useIsDocumentHidden from './hooks/document-hidden.js';
 
 export default function App() {
   const isHidden = useIsDocumentHidden();
-  //console.log('App: ', isHidden);
+
   return (
     <>
       <title>{isHidden ? 'Hidden' : 'Visible'}</title>
