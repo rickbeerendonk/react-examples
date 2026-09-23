@@ -9,6 +9,7 @@ function Switch() {
   const { handleSwitch } = use(ColorContext);
 
   function handleClick() {
+    // Do not pass the event object
     handleSwitch();
   }
 

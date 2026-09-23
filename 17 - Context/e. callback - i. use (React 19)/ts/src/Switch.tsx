@@ -6,9 +6,14 @@ import { useContext } from 'react';
 import ColorContext from './ColorContext.ts';
 
 function Switch() {
-  const context = useContext(ColorContext);
+  const { handleSwitch } = useContext(ColorContext);
 
-  return <button onClick={context.handleSwitch}>Switch color</button>;
+  function handleClick() {
+    // Do not pass the event object
+    handleSwitch();
+  }
+
+  return <button onClick={handleClick}>Switch color</button>;
 }
 
 export default Switch;
